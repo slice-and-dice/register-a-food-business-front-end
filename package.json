@@ -5,11 +5,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "lint": "eslint"
   },
   "dependencies": {
     "@zeit/next-css": "0.2.0",
-    "babel-core": "7.0.0-bridge.0",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^22.4.3",
     "babel-plugin-emotion": "9.1.2",
     "emotion": "9.1.3",
@@ -17,15 +19,21 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.8.2",
     "jest": "^22.4.3",
     "jest-emotion": "^9.1.3",
-    "next": "6.0.2",
+    "next": "6.0.3",
     "normalize.css": "8.0.0",
     "prop-types": "15.6.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-emotion": "9.1.3",
-    "react-test-renderer": "^16.3.2"
+    "react-test-renderer": "^16.3.2",
+    "webpack": "^3.1.0"
   },
   "license": "ISC"
 }
