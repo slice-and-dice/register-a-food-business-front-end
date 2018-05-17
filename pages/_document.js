@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Register a food establishment</title>
+          <title>Register a food business</title>
           <link rel="stylesheet" href="/_next/static/style.css" />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
