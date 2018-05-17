@@ -1,1 +1,1 @@
-# Register a food establishment (front end)
+# Register a food business front end
