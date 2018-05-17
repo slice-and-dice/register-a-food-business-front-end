@@ -6,9 +6,11 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
+    "test/prod": "jest",
     "lint": "eslint ./"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0-0",
     "@zeit/next-css": "0.2.0",
     "babel-core": "^7.0.0-0",
     "babel-eslint": "^7.2.3",
