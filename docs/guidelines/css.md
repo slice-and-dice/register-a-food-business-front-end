@@ -8,9 +8,7 @@ Follow the [tutorial](https://emotion.sh) to learn the basics.
 
 ### Styled elements using Emotion
 
-Emotion supports the creation of HTML elements with baked-in styling. This is useful as this project will make regular re-use of element styling for consistency. `src/styles/elements` contains `.js` files that should generally export multiple styled elements to minimise the number of files that components then need to import.
-
-As a naming convention, prefix all styled elements with `Fsa`.
+Emotion supports the creation of HTML elements with baked-in styling. This is useful as this project will make regular re-use of element styling for consistency. When required, a directory called `/elements` should contain `.js` files that export styled elements for re-use.
 
 ```jsx
 // styled-elements-example.js
@@ -87,10 +85,10 @@ const bigText = css`
 
 ### Global variables using Emotion
 
-`src/vars.js` exports multiple objects, one example being `primary`. These objects contain one entry per variable, or alternatively nested objects for further categorisation of variables. Each variable is stored as a simple string, and can be anything from a Hex colour code to an animation. These variables are then imported into both the styled elements files and component files wherever they are needed, e.g.
+`vars.js` can exports multiple objects, one example being `primary`. These objects contain one entry per variable, or alternatively nested objects for further categorisation of variables. Each variable is stored as a simple string, and can be anything from a Hex colour code to an animation. These variables are then imported into both the styled elements files and component files wherever they are needed, e.g.
 
 ```jsx
-// vars.js
+// vars.js example
 
 export const primary = {
   foodGreen: "#00823b",
@@ -112,17 +110,11 @@ export const FsaExampleContainer = styled("div")`
 
 ### Global styles using Emotion
 
-Treat the `injectGlobal` object in `src/index.js` as a stylesheet that is injected globally. Use this for basics such as fonts and font sizes, etc.
+Treat the `injectGlobal` object in `pages/index.js` as a stylesheet that is injected globally. Use this for basics such as fonts and font sizes, etc.
 
 ## CSS reset (no action required)
 
-Consistency of basic styling (such as fonts, sizes, default element spacing etc.) is ensured across browsers with the `normalize.css` NPM dependency, imported into `src/index.js`.
-
-## Global CSS styles
-
-These should be stored in the top-level `src/index.scss` file and imported into index.js.
-
-(E.g. `body`, `p`, or a class that will be used across multiple components such as `.container` or `.--bold`).
+Consistency of basic styling (such as fonts, sizes, default element spacing etc.) is ensured across browsers with the `normalize.css` NPM dependency, imported into `pages/index.js`.
 
 ## Use camelCase for CSS class names
 
@@ -217,23 +209,3 @@ E.g. `-webpack` or `-moz`. This is automatically added during the `yarn build` p
 ## Put `<script async/>` tags before `<link>` tags in `<head>`
 
 E.g. Google Analytics scripts. When adding these to `<head>` in `index.html`, add above the `<link>` tags to increase page load performance. If the `<script>` tags are lacking the `async` attribute, find out whether adding it is an acceptable practice for the script in question.
-
----
-
-# SCSS fallback
-
-Creating `.scss` files and importing them into components will still work. However, the current view is that CSS-in-JS should be used across the app.
-
-## SCSS Variables (per component)
-
-Define the variable in the appropriate `.scss` file: `$variableName: blue;`
-
-Use the variable within the same file: `color: $variableName;`
-
-## SCSS Variables (global)
-
-`src/styles/_vars.scss` - this file is prefixed with an underscore to show that it is a 'partial', which prevents it from being compiled as a standalone file.
-
-Webpack is configured to auto-import this file into every SCSS file, so `@import "vars";` is not required.
-
-This makes the variables in `_vars.scss` available globally, but does not take up additional space in the compiled CSS.
