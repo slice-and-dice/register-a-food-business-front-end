@@ -1,6 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Index /> matches the previous snapshot 1`] = `
+.emotion-0 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-0:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-0 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 20px;
+  }
+}
+
 <div>
   <div>
     <h1>
@@ -10,5 +60,10 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   <p>
     Hello world!
   </p>
+  <button
+    className="emotion-0"
+  >
+    GOV.UK styled button
+  </button>
 </div>
 `;

@@ -2,6 +2,7 @@ import React from "react";
 import { hydrate, injectGlobal } from "react-emotion";
 import "normalize.css/normalize.css";
 import Layout from "../components/Layout";
+import { Button } from "govuk-react";
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -19,6 +20,7 @@ export default () => {
   return (
     <Layout>
       <p>Hello world!</p>
+      <Button>GOV.UK styled button</Button>
     </Layout>
   );
 };
