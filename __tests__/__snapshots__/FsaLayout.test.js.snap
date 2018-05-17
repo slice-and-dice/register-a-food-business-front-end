@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Index /> matches the previous snapshot 1`] = `
+exports[`<FsaLayout /> matches the previous snapshot 1`] = `
 .emotion-2 {
   padding: 10px;
   min-width: 320px;
@@ -84,11 +84,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
     >
       <div
         className="emotion-0"
-      >
-        <div>
-          Index
-        </div>
-      </div>
+      />
     </div>
   </div>
 </div>

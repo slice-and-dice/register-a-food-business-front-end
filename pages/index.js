@@ -1,8 +1,8 @@
 import React from "react";
 import { hydrate, injectGlobal } from "react-emotion";
 import "normalize.css/normalize.css";
-import Layout from "../components/Layout";
-import { Button } from "govuk-react";
+import FsaLayout from "../components/FsaLayout";
+// import { Button } from "govuk-react";
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -16,11 +16,10 @@ injectGlobal`
   }
 `;
 
-export default () => {
-  return (
-    <Layout>
-      <p>Hello world!</p>
-      <Button>GOV.UK styled button</Button>
-    </Layout>
-  );
-};
+const Index = () => (
+  <FsaLayout>
+    <div>Index</div>
+  </FsaLayout>
+);
+
+export default Index;

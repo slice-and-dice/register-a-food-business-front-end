@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FsaHeader /> matches the previous snapshot 1`] = `
+<div>
+  <h1>
+    Header
+  </h1>
+</div>
+`;
