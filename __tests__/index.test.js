@@ -9,7 +9,7 @@ expect.addSnapshotSerializer(createSerializer(emotion));
 describe("<Index />", () => {
   it('shows "Hello world!"', () => {
     const wrapper = shallow(<Index />);
-    expect(wrapper.find("p").text()).toEqual("Hello World!");
+    expect(wrapper.find("p").text()).toEqual("Hello world!");
   });
 
   it("matches the previous snapshot", () => {

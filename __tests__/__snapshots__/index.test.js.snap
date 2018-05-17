@@ -2,11 +2,13 @@
 
 exports[`<Index /> matches the previous snapshot 1`] = `
 <div>
-  <h1>
-    Testing
-  </h1>
+  <div>
+    <h1>
+      Header
+    </h1>
+  </div>
   <p>
-    Hello World!
+    Hello world!
   </p>
 </div>
 `;

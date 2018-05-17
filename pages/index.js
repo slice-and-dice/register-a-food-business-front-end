@@ -1,6 +1,7 @@
 import React from "react";
-import styled, { hydrate, css, injectGlobal } from "react-emotion";
+import { hydrate, injectGlobal } from "react-emotion";
 import "normalize.css/normalize.css";
+import Layout from "../components/Layout";
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -16,9 +17,8 @@ injectGlobal`
 
 export default () => {
   return (
-    <div>
-      <h1>Testing</h1>
-      <p>Hello World!</p>
-    </div>
+    <Layout>
+      <p>Hello world!</p>
+    </Layout>
   );
 };
