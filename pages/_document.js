@@ -22,6 +22,11 @@ export default class MyDocument extends Document {
         <Head>
           <title>Register a food business</title>
           <link rel="stylesheet" href="/_next/static/style.css" />
+          {/* TODO: remove Libre Franklin, replace with official GOV.UK font */}
+          <link
+            href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700"
+            rel="stylesheet"
+          />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
