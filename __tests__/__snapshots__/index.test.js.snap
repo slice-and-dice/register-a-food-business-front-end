@@ -163,14 +163,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-24 {
+.emotion-16 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-16 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -185,14 +185,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-23 {
+.emotion-15 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-15 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -202,7 +202,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-22 {
+.emotion-14 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -212,22 +212,22 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-14 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-22:first-child {
+  .emotion-14:first-child {
     margin-left: 0;
   }
 
-  .emotion-22:last-child {
+  .emotion-14:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-14 {
     width: 66.6667%;
   }
 }
@@ -263,11 +263,6 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 .emotion-11 {
-  margin: 5px 0 20px 0;
-  line-height: 25px;
-}
-
-.emotion-15 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -278,7 +273,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-11 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -286,18 +281,18 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-15 {
+  .emotion-11 {
     font-size: 16px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-11 {
     margin-bottom: 0;
   }
 }
 
-.emotion-21 {
+.emotion-13 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -332,17 +327,17 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-21:focus {
+.emotion-13:focus {
   outline: 3px solid #ffbf47;
 }
 
-.emotion-21 svg {
+.emotion-13 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-13 {
     margin-bottom: 20px;
   }
 }
@@ -416,13 +411,13 @@ exports[`<Index /> matches the previous snapshot 1`] = `
     className="emotion-9"
   />
   <div
-    className="emotion-24"
+    className="emotion-16"
   >
     <div
-      className="emotion-23"
+      className="emotion-15"
     >
       <div
-        className="emotion-22"
+        className="emotion-14"
       >
         <h1
           className="emotion-10"
@@ -430,9 +425,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
         >
           Register a food business
         </h1>
-        <p
-          className="emotion-11 emotion-12"
-        >
+        <p>
           All food businesses which regularly produce or serve food to the public need to be registered with their Local Authority. This service will send your registration to the correct local authority based on your trading location. Food businesses should only register
            
           <span
@@ -442,35 +435,29 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           </span>
            before they begin trading. If you are not sure when this food business will open, it may be too early to be registering this business.
         </p>
-        <p
-          className="emotion-11 emotion-12"
-        >
+        <p>
           During this registration, you may come across a few specialist terms, which we have described below:
         </p>
         <h3
-          className="emotion-15"
+          className="emotion-11"
           size={undefined}
         >
           Food business operator
         </h3>
-        <p
-          className="emotion-11 emotion-12"
-        >
+        <p>
           The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
         </p>
         <h3
-          className="emotion-15"
+          className="emotion-11"
           size={undefined}
         >
           Establishment
         </h3>
-        <p
-          className="emotion-11 emotion-12"
-        >
+        <p>
           The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
         </p>
         <button
-          className="emotion-21"
+          className="emotion-13"
         >
           Begin registration
           <svg

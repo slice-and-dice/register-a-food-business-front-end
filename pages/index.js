@@ -4,9 +4,6 @@ import "normalize.css/normalize.css";
 import FsaLayout from "../components/FsaLayout";
 import { Header, Button } from "govuk-react";
 import { ButtonArrow } from "@govuk-react/icons";
-// TODO: remove dependency on @storybook/addon-knobs, remove from Package.json
-// import { boolean } from "@storybook/addon-knobs/react";
-import { P } from "../elements/P.element";
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -30,7 +27,7 @@ const Index = () => (
   <FsaLayout>
     <Header level={1}>Register a food business</Header>
     {/* TODO: all paragraphs in this section need to be replaced with govuk-react components when ready */}
-    <P>
+    <p>
       All food businesses which regularly produce or serve food to the public
       need to be registered with their Local Authority. This service will send
       your registration to the correct local authority based on your trading
@@ -38,23 +35,23 @@ const Index = () => (
       <span className="bold">28 days</span> before they begin trading. If you
       are not sure when this food business will open, it may be too early to be
       registering this business.
-    </P>
+    </p>
     {/* TODO: the below paragraph needs to be the 'inset'/'panel' component. Govuk-react does not provide this yet. */}
-    <P>
+    <p>
       During this registration, you may come across a few specialist terms,
       which we have described below:
-    </P>
+    </p>
     <Header level={3}>Food business operator</Header>
-    <P>
+    <p>
       The operator is the person, charity or company who makes the decisions
       about the food business, what it serves and how it operates.
-    </P>
+    </p>
     <Header level={3}>Establishment</Header>
-    <P>
+    <p>
       The establishment is the location or site of your food business. If it is
       a mobile food business, please use the location where it is normally
       stored overnight.
-    </P>
+    </p>
     <Button icon={<ButtonArrow />}>Begin registration</Button>
   </FsaLayout>
 );
