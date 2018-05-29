@@ -1,0 +1,10 @@
+{
+  "/index": {
+    "on": true,
+    "switches": {}
+  },
+  "/submit": {
+    "on": true,
+    "switches": {}
+  }
+}
