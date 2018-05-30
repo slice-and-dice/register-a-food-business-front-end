@@ -7,6 +7,10 @@
       "A3": [{ "/mock-page-2": true }]
     }
   },
+  "/mock-page-off": {
+    "on": false,
+    "switches": {}
+  },
   "/mock-page-1": {
     "on": true,
     "switches": {

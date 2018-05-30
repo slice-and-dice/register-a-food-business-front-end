@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 const winston = require("winston");
+const { moveAlongPath } = require("./services/path.service");
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -46,6 +47,16 @@ const startServer = async () => {
   ////////////////////////////////////////////////////////////
 
   await Next.prepare();
+
+  app.get("/continue/:originator", (req, res) => {
+    const currentPage = `/${req.params.originator}`;
+    res.redirect(moveAlongPath(currentPage, 1));
+  });
+
+  app.get("/back/:originator", (req, res) => {
+    const currentPage = `/${req.params.originator}`;
+    res.redirect(moveAlongPath(currentPage, -1));
+  });
 
   app.get("*", (req, res) => {
     handle(req, res);

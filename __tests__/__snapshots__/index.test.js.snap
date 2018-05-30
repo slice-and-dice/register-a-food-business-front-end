@@ -323,6 +323,10 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   -webkit-font-smoothing: antialiased;
   opacity: 1;
   pointer-events: auto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  padding: .36842em .84211em .21053em;
   padding-right: .54211em;
   margin-bottom: 15px;
 }
@@ -458,6 +462,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
         </p>
         <button
           className="emotion-13"
+          start={true}
         >
           Begin registration
           <svg

@@ -52,7 +52,9 @@ const Index = () => (
       a mobile food business, please use the location where it is normally
       stored overnight.
     </p>
-    <Button icon={<ButtonArrow />}>Begin registration</Button>
+    <Button icon={<ButtonArrow />} start={true}>
+      Begin registration
+    </Button>
   </FsaLayout>
 );
 
