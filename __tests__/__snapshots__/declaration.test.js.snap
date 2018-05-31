@@ -159,14 +159,14 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-23 {
+.emotion-24 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-24 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,14 +181,14 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-22 {
+.emotion-23 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-23 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -198,7 +198,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-21 {
+.emotion-22 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -208,22 +208,22 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-22 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-21:first-child {
+  .emotion-22:first-child {
     margin-left: 0;
   }
 
-  .emotion-21:last-child {
+  .emotion-22:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-22 {
     width: 66.6667%;
   }
 }
@@ -360,6 +360,56 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
+.emotion-21 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-21:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-21 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-21 {
+    margin-bottom: 20px;
+  }
+}
+
 <div>
   <div
     className="emotion-8"
@@ -429,64 +479,78 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
     className="emotion-9"
   />
   <div
-    className="emotion-23"
+    className="emotion-24"
   >
     <div
-      className="emotion-22"
+      className="emotion-23"
     >
       <div
-        className="emotion-21"
+        className="emotion-22"
       >
-        <h2
-          className="emotion-10"
-          size={undefined}
+        <form
+          action="http://foo.com"
+          method="post"
         >
-          Declaration
-        </h2>
-        <p
-          className="emotion-11"
-        >
-          Before submitting this food business registration, please review these statements. Tick each box to agree.
-        </p>
-        <label
-          className="emotion-14"
-        >
-          <input
-            className="emotion-12"
-            type="checkbox"
-          />
-          <span
-            className="emotion-13"
+          <h2
+            className="emotion-10"
+            size={undefined}
           >
-            I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief.
-          </span>
-        </label>
-        <label
-          className="emotion-14"
-        >
-          <input
-            className="emotion-12"
-            type="checkbox"
-          />
-          <span
-            className="emotion-13"
+            Declaration
+          </h2>
+          <p
+            className="emotion-11"
           >
-            I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening.
-          </span>
-        </label>
-        <label
-          className="emotion-14"
-        >
-          <input
-            className="emotion-12"
-            type="checkbox"
-          />
-          <span
-            className="emotion-13"
+            Before submitting this food business registration, please review these statements. Tick each box to agree.
+          </p>
+          <label
+            className="emotion-14"
           >
-            I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment.
-          </span>
-        </label>
+            <input
+              className="emotion-12"
+              name="checkBox1"
+              type="checkbox"
+            />
+            <span
+              className="emotion-13"
+            >
+              I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief.
+            </span>
+          </label>
+          <label
+            className="emotion-14"
+          >
+            <input
+              className="emotion-12"
+              name="checkBox2"
+              type="checkbox"
+            />
+            <span
+              className="emotion-13"
+            >
+              I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening.
+            </span>
+          </label>
+          <label
+            className="emotion-14"
+          >
+            <input
+              className="emotion-12"
+              name="checkBox3"
+              type="checkbox"
+            />
+            <span
+              className="emotion-13"
+            >
+              I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment.
+            </span>
+          </label>
+          <button
+            className="emotion-21"
+            type="submit"
+          >
+             Submit
+          </button>
+        </form>
       </div>
     </div>
   </div>
