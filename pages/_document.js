@@ -1,5 +1,25 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import { extractCritical } from "emotion-server";
+import { hydrate, injectGlobal } from "react-emotion";
+import "normalize.css/normalize.css";
+
+// Adds server generated styles to emotion cache.
+// '__NEXT_DATA__.ids' is set in '_document.js'
+if (typeof window !== "undefined" && typeof __NEXT_DATA__ !== "undefined") {
+  hydrate(window.__NEXT_DATA__.ids);
+}
+
+injectGlobal`
+  html, body {
+    font-family: sans-serif;
+    font-size: 19px;
+    color: #0b0c0c;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+`;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -22,11 +42,6 @@ export default class MyDocument extends Document {
         <Head>
           <title>Register a food business</title>
           <link rel="stylesheet" href="/_next/static/style.css" />
-          {/* TODO: remove Libre Franklin, replace with official GOV.UK font */}
-          <link
-            href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700"
-            rel="stylesheet"
-          />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>

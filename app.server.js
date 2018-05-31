@@ -1,7 +1,10 @@
 const express = require("express");
+const session = require("express-session");
 const next = require("next");
 const winston = require("winston");
-const { moveAlongPath } = require("./services/path.service");
+const querystring = require("querystring");
+const pathJSON = require("./services/path.json");
+const { moveAlongPath, editPath } = require("./services/path.service");
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -12,50 +15,74 @@ const port = process.env.PORT || 3000;
 const startServer = async () => {
   const app = express();
 
-  ////////////////////////////////////////////////////////////
-  // WARNING: this session implementation is not production-ready.
-  // It uses in-memory session storage and a plaintext secret.
-  // It must be replaced before any production use.
-  // Upon replacement, run `yarn remove body-parser express-session`
-  // Ensure that all tests still pass after this step.
-  const bodyParser = require("body-parser");
-  app.use(bodyParser.json());
-
-  const session = require("express-session");
+  ////////////////
+  // WARNING: the below uses in-memory session storage and must be replaced.
   app.use(
-    "/session",
     session({
       secret: "TEMPORARYSECRET",
       resave: false,
       saveUninitialized: true
     })
   );
+  ////////////////
 
-  app.get("/session", (req, res) => {
-    if (req.session.data) {
-      res.send(JSON.stringify(req.session.data));
-    } else {
-      res.send(null);
-    }
-  });
-
-  app.post("/session", (req, res) => {
-    req.session.data = JSON.stringify(req.body);
-    res.send(JSON.stringify("Data written to session"));
-  });
-  // END WARNING
-  ////////////////////////////////////////////////////////////
+  const bodyParser = require("body-parser");
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded());
 
   await Next.prepare();
 
-  app.get("/continue/:originator", (req, res) => {
+  app.post("/continue/:originator", (req, res) => {
     const currentPage = `/${req.params.originator}`;
-    res.redirect(moveAlongPath(currentPage, 1));
+    const formData = req.body;
+    let sessionData = {};
+    if (formData.sessionData) {
+      sessionData = JSON.parse(formData.sessionData);
+    }
+    const previousAnswers = sessionData.answers || {};
+    const previousPathAnswers = Object.values(previousAnswers).filter(answer =>
+      answer.startsWith("answer-")
+    );
+
+    let newAnswers = Object.assign({}, formData);
+    delete newAnswers["sessionData"];
+    const pathAnswers = Object.values(newAnswers).filter(answer =>
+      answer.startsWith("answer-")
+    );
+
+    const currentPath = sessionData.path || pathJSON;
+
+    for (answer in previousPathAnswers) {
+      if (previousPathAnswers[answer] !== pathAnswers[answer]) {
+        const previousSwitches =
+          currentPath[currentPage]["switches"][previousPathAnswers[answer]];
+        const newSwitches =
+          currentPath[currentPage]["switches"][pathAnswers[answer]];
+
+        for (pageToSwitch in previousSwitches) {
+          if (
+            !newSwitches ||
+            typeof newSwitches[pageToSwitch] === "undefined"
+          ) {
+            currentPath[pageToSwitch].on = !currentPath[pageToSwitch].on;
+          }
+        }
+      }
+    }
+
+    const newPath = editPath(currentPath, currentPage, pathAnswers);
+    const cumulativeSessionAnswers = Object.assign(previousAnswers, newAnswers);
+
+    req.session.data = JSON.stringify({
+      answers: cumulativeSessionAnswers,
+      path: newPath
+    });
+
+    res.redirect(moveAlongPath(newPath, currentPage, 1));
   });
 
-  app.get("/back/:originator", (req, res) => {
-    const currentPage = `/${req.params.originator}`;
-    res.redirect(moveAlongPath(currentPage, -1));
+  app.post("/back/:originator", (req, res) => {
+    // TODO
   });
 
   app.get("*", (req, res) => {

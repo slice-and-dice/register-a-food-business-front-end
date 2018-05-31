@@ -2,9 +2,9 @@
   "/index": {
     "on": true,
     "switches": {
-      "A1": [{ "/mock-page-1": false }],
-      "A2": [{ "/mock-page-1": false }, { "/mock-page-2": false }],
-      "A3": [{ "/mock-page-2": true }]
+      "A1": { "/mock-page-1": false },
+      "A2": { "/mock-page-1": false, "/mock-page-2": false },
+      "A3": { "/mock-page-2": true }
     }
   },
   "/mock-page-off": {
@@ -14,14 +14,15 @@
   "/mock-page-1": {
     "on": true,
     "switches": {
-      "A4": [{ "/mock-page-2": false }],
-      "A5": [{ "/mock-page-3": false }]
+      "A6": { "/mock-page-2": false },
+      "A4": { "/mock-page-2": true },
+      "A5": { "/mock-page-3": false }
     }
   },
   "/mock-page-2": {
     "on": true,
     "switches": {
-      "A6": [{ "/mock-page-3": false }]
+      "A7": { "/mock-page-3": false }
     }
   },
   "/mock-page-3": {

@@ -3,6 +3,26 @@
     "on": true,
     "switches": {}
   },
+  "/example-page": {
+    "on": true,
+    "switches": {
+      "answer-foodType-Beef": { "/beef": true },
+      "answer-foodType-Chicken": { "/chicken": true },
+      "answer-foodType-Lamb": { "/lamb": true }
+    }
+  },
+  "/chicken": {
+    "on": false,
+    "switches": {}
+  },
+  "/beef": {
+    "on": false,
+    "switches": {}
+  },
+  "/lamb": {
+    "on": false,
+    "switches": {}
+  },
   "/submit": {
     "on": true,
     "switches": {}
