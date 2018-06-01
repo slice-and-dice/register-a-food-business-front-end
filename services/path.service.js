@@ -5,21 +5,25 @@ module.exports.moveAlongPath = (path, currentPage, movement) => {
   return nextPage;
 };
 
-module.exports.editPath = (currentPath, currentPage, answerArray) => {
-  const newPath = JSON.parse(JSON.stringify(currentPath));
+module.exports.editPath = (originalPath, answerArray) => {
+  const newPath = JSON.parse(JSON.stringify(originalPath));
   let pagesToSwitch = {};
 
   if (answerArray) {
-    const referenceOrder = Object.keys(currentPath[currentPage].switches);
+    const allSwitches = {};
+    for (let page in originalPath) {
+      Object.assign(allSwitches, originalPath[page].switches);
+    }
+    // const referenceOrder = Object.keys(originalPath[currentPage].switches);
     answerArray.sort((a, b) => {
-      return referenceOrder.indexOf(a) - referenceOrder.indexOf(b);
+      return (
+        Object.keys(allSwitches).indexOf(a) -
+        Object.keys(allSwitches).indexOf(b)
+      );
     });
 
     answerArray.forEach(answerID => {
-      pagesToSwitch = Object.assign(
-        pagesToSwitch,
-        currentPath[currentPage].switches[answerID]
-      );
+      pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[answerID]);
     });
 
     Object.keys(pagesToSwitch).forEach(eachPage => {

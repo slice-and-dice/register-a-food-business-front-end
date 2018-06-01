@@ -40,42 +40,18 @@ const startServer = async () => {
       sessionData = JSON.parse(formData.sessionData);
     }
     const previousAnswers = sessionData.answers || {};
-    const previousPathAnswers = Object.values(previousAnswers).filter(answer =>
-      answer.startsWith("answer-")
-    );
 
     let newAnswers = Object.assign({}, formData);
     delete newAnswers["sessionData"];
-    const pathAnswers = Object.values(newAnswers).filter(answer =>
-      answer.startsWith("answer-")
+
+    const cumulativeAnswers = Object.assign(previousAnswers, newAnswers);
+    const cumulativePathAnswers = Object.values(cumulativeAnswers).filter(
+      answer => answer.startsWith("answer-")
     );
-
-    const currentPath = sessionData.path || pathJSON;
-
-    for (answer in previousPathAnswers) {
-      if (previousPathAnswers[answer] !== pathAnswers[answer]) {
-        const previousSwitches =
-          currentPath[currentPage]["switches"][previousPathAnswers[answer]];
-        const newSwitches =
-          currentPath[currentPage]["switches"][pathAnswers[answer]];
-
-        for (pageToSwitch in previousSwitches) {
-          if (
-            !newSwitches ||
-            typeof newSwitches[pageToSwitch] === "undefined"
-          ) {
-            currentPath[pageToSwitch].on = !currentPath[pageToSwitch].on;
-          }
-        }
-      }
-    }
-
-    const newPath = editPath(currentPath, currentPage, pathAnswers);
-    const cumulativeSessionAnswers = Object.assign(previousAnswers, newAnswers);
+    const newPath = editPath(pathJSON, cumulativePathAnswers);
 
     req.session.data = JSON.stringify({
-      answers: cumulativeSessionAnswers,
-      path: newPath
+      answers: cumulativeAnswers
     });
 
     res.redirect(moveAlongPath(newPath, currentPage, 1));

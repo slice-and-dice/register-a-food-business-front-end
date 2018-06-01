@@ -36,12 +36,12 @@ describe("path.service moveAlongPath()", () => {
 describe("path.service editPath()", () => {
   describe("Given valid input", () => {
     it("returns a valid JavaScipt object", () => {
-      const result = editPath(pathJSON, "/index");
+      const result = editPath(pathJSON);
       expect(typeof result).toBe("object");
     });
 
     it("does not change any of the object keys", () => {
-      const result = editPath(pathJSON, "/index");
+      const result = editPath(pathJSON);
       const getObjectKeys = json => {
         const arrayOfKeys = Object.keys(json);
         arrayOfKeys.forEach(key => {
@@ -62,33 +62,33 @@ describe("path.service editPath()", () => {
     });
 
     it("deactivates and re-activates pages based on the input from the given page", () => {
-      const result1 = editPath(pathJSON, "/index", ["A1"]);
+      const result1 = editPath(pathJSON, ["A1"]);
       expect(result1["/mock-page-1"]["on"]).toBe(false);
 
-      const result2 = editPath(pathJSON, "/index", ["A1", "A2"]);
+      const result2 = editPath(pathJSON, ["A1", "A2"]);
       expect(result2["/mock-page-1"]["on"]).toBe(false);
       expect(result2["/mock-page-2"]["on"]).toBe(false);
 
-      const result3 = editPath(pathJSON, "/mock-page-1", ["A5", "A6"]);
+      const result3 = editPath(pathJSON, ["A5", "A6"]);
       expect(result3["/mock-page-2"]["on"]).toBe(false);
       expect(result3["/mock-page-3"]["on"]).toBe(false);
     });
 
     it("re-activates pages based on the input from the given page", () => {
       // deactivate
-      const result1 = editPath(pathJSON, "/index", ["A2"]);
+      const result1 = editPath(pathJSON, ["A2"]);
       expect(result1["/mock-page-2"]["on"]).toBe(false);
       // reactivate
-      const result2 = editPath(result1, "/mock-page-1", ["A4"]);
+      const result2 = editPath(result1, ["A4"]);
       expect(result2["/mock-page-2"]["on"]).toBe(true);
     });
 
     it("prioritises switches in the order that they appear in the JSON", () => {
-      const result1 = editPath(pathJSON, "/mock-page-1", ["A4", "A6"]);
+      const result1 = editPath(pathJSON, ["A4", "A6"]);
       expect(result1["/mock-page-2"]["on"]).toBe(true);
 
       // same test but with array order reversed
-      const result2 = editPath(pathJSON, "/mock-page-1", ["A6", "A4"]);
+      const result2 = editPath(pathJSON, ["A6", "A4"]);
       expect(result2["/mock-page-2"]["on"]).toBe(true);
     });
   });

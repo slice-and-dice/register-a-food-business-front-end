@@ -1,9 +1,10 @@
 import SessionWrapper from "../components/SessionWrapper";
+import SessionInput from "../components/SessionInput";
 import FsaLayout from "../components/FsaLayout";
 import { Header, Button } from "govuk-react";
 import { ButtonArrow } from "@govuk-react/icons";
 
-const Index = () => (
+const Index = props => (
   <FsaLayout>
     <Header level={1}>Register a food business</Header>
     {/* TODO: all paragraphs in this section need to be replaced with govuk-react components when ready */}
@@ -32,7 +33,12 @@ const Index = () => (
       a mobile food business, please use the location where it is normally
       stored overnight.
     </p>
-    <Button icon={<ButtonArrow />}>Begin registration</Button>
+    <form action="/continue/index" method="post">
+      <SessionInput {...props} />
+      <Button type="submit" icon={<ButtonArrow />}>
+        Begin registration
+      </Button>
+    </form>
   </FsaLayout>
 );
 

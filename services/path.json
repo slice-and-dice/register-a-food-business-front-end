@@ -11,6 +11,14 @@
       "answer-foodType-Lamb": { "/lamb": true }
     }
   },
+  "/example-page-2": {
+    "on": true,
+    "switches": {
+      "answer-foodType-Beef2": { "/beef": true },
+      "answer-foodType-Chicken2": { "/chicken": true },
+      "answer-foodType-Lamb2": { "/lamb": true }
+    }
+  },
   "/chicken": {
     "on": false,
     "switches": {}
