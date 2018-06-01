@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Index /> matches the previous snapshot 1`] = `
-.bold {
-  font-weight: bold;
-}
-
 .emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -456,36 +452,50 @@ exports[`<Index /> matches the previous snapshot 1`] = `
         <p>
           The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
         </p>
-        <button
-          className="emotion-13"
+        <form
+          action="/continue/index"
+          method="post"
         >
-          Begin registration
-          <svg
-            fill="currentColor"
-            height="100%"
-            style={
-              Object {
-                "display": "block",
-              }
-            }
-            version="1.1"
-            viewBox="0 0 706 860"
-            width="100%"
+          <input
+            className="sessionDataInput"
+            hidden={true}
+            name="sessionData"
+            readOnly={true}
+            type="text"
+            value={undefined}
+          />
+          <button
+            className="emotion-13"
+            type="submit"
           >
-            <title>
-              ButtonArrow
-            </title>
-            <g>
-              <path
-                d="M.152 0h252.993l452.108 430H452.261z"
-              />
-              <path
-                d="M0 860h252.993L705.1 430H452.108z"
-                fillOpacity="0.5"
-              />
-            </g>
-          </svg>
-        </button>
+            Begin registration
+            <svg
+              fill="currentColor"
+              height="100%"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
+              version="1.1"
+              viewBox="0 0 706 860"
+              width="100%"
+            >
+              <title>
+                ButtonArrow
+              </title>
+              <g>
+                <path
+                  d="M.152 0h252.993l452.108 430H452.261z"
+                />
+                <path
+                  d="M0 860h252.993L705.1 430H452.108z"
+                  fillOpacity="0.5"
+                />
+              </g>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </div>
