@@ -5,6 +5,17 @@ const ExamplePage = props => (
   <div>
     <form action="/continue/example-page" method="post">
       <SessionInput {...props} />
+      <p>{props.validatorErrors["validationDemo"] || null}</p>
+      <input
+        type="text"
+        name="validationDemo"
+        placeholder="Enter an email here"
+        style={
+          props.validatorErrors["validationDemo"]
+            ? { border: "3px solid red" }
+            : null
+        }
+      />
       <label>
         Chicken<input
           type="radio"
