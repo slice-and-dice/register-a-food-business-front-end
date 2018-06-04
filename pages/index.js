@@ -1,29 +1,10 @@
-import React from "react";
-import { hydrate, injectGlobal } from "react-emotion";
-import "normalize.css/normalize.css";
+import SessionWrapper from "../components/SessionWrapper";
+import SessionInput from "../components/SessionInput";
 import FsaLayout from "../components/FsaLayout";
 import { Header, Button } from "govuk-react";
 import { ButtonArrow } from "@govuk-react/icons";
 
-// Adds server generated styles to emotion cache.
-// '__NEXT_DATA__.ids' is set in '_document.js'
-if (typeof window !== "undefined" && typeof __NEXT_DATA__ !== "undefined") {
-  hydrate(window.__NEXT_DATA__.ids);
-}
-
-injectGlobal`
-  html, body {
-    font-family: nta, 'Libre Franklin', sans-serif;
-    font-size: 19px;
-    color: #0b0c0c;
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-`;
-
-const Index = () => (
+const Index = props => (
   <FsaLayout>
     <Header level={1}>Register a food business</Header>
     {/* TODO: all paragraphs in this section need to be replaced with govuk-react components when ready */}
@@ -52,8 +33,13 @@ const Index = () => (
       a mobile food business, please use the location where it is normally
       stored overnight.
     </p>
-    <Button icon={<ButtonArrow />}>Begin registration</Button>
+    <form action="/continue/index" method="post">
+      <SessionInput {...props} />
+      <Button type="submit" icon={<ButtonArrow />}>
+        Begin registration
+      </Button>
+    </form>
   </FsaLayout>
 );
 
-export default Index;
+export default SessionWrapper(Index);
