@@ -5,6 +5,7 @@ const winston = require("winston");
 const querystring = require("querystring");
 const pathJSON = require("./services/path.json");
 const { moveAlongPath, editPath } = require("./services/path.service");
+const { validate } = require("./services/validator.service");
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -54,7 +55,14 @@ const startServer = async () => {
       answers: cumulativeAnswers
     });
 
-    res.redirect(moveAlongPath(newPath, currentPage, 1));
+    const validatorErrors = validate(currentPage, newAnswers);
+    req.session.validatorErrors = validatorErrors;
+
+    if (validatorErrors) {
+      res.redirect(currentPage);
+    } else {
+      res.redirect(moveAlongPath(newPath, currentPage, 1));
+    }
   });
 
   app.post("/back/:originator", (req, res) => {

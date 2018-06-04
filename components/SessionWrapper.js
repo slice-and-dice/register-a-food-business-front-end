@@ -2,7 +2,10 @@ const SessionWrapper = Page => {
   const wrapper = props => <Page {...props} />;
 
   wrapper.getInitialProps = ({ req }) => {
-    return { sessionData: req.session.data };
+    return {
+      sessionData: req.session.data,
+      validatorErrors: req.session.validatorErrors || {}
+    };
   };
 
   return wrapper;
