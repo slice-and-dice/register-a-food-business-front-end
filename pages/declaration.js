@@ -1,7 +1,13 @@
 import FsaLayout from "../components/FsaLayout";
 import SessionWrapper from "../components/SessionWrapper";
 import SessionInput from "../components/SessionInput";
-import { Header, Checkbox, LeadParagraph, Button } from "govuk-react";
+import {
+  Header,
+  Checkbox,
+  LeadParagraph,
+  Button,
+  InputField
+} from "govuk-react";
 
 const Declaration = props => (
   <FsaLayout>
@@ -16,6 +22,7 @@ const Declaration = props => (
         name="declaration1"
         value="I declare that the information I have given on this form is correct and
         complete to the best of my knowledge and belief."
+        error={props.validatorErrors["declaration1"]}
       >
         I declare that the information I have given on this form is correct and
         complete to the best of my knowledge and belief.
@@ -25,6 +32,7 @@ const Declaration = props => (
         value="I, or the operator, will notify food authorities of any significant
         changes to the business activity, including closure, within 28 days of
         the change happening."
+        error={props.validatorErrors["declaration2"]}
       >
         I, or the operator, will notify food authorities of any significant
         changes to the business activity, including closure, within 28 days of
@@ -35,6 +43,7 @@ const Declaration = props => (
         value="I, or the operator, understands the operator is legally responsible for
         the safety and authenticity of the food being produced or served at this
         establishment."
+        error={props.validatorErrors["declaration3"]}
       >
         I, or the operator, understands the operator is legally responsible for
         the safety and authenticity of the food being produced or served at this
