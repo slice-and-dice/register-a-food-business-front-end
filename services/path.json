@@ -3,32 +3,8 @@
     "on": true,
     "switches": {}
   },
-  "/example-page": {
+  "/establishment-address": {
     "on": true,
-    "switches": {
-      "answer-foodType-Beef": { "/beef": true },
-      "answer-foodType-Chicken": { "/chicken": true },
-      "answer-foodType-Lamb": { "/lamb": true }
-    }
-  },
-  "/example-page-2": {
-    "on": true,
-    "switches": {
-      "answer-foodType-Beef2": { "/beef": true },
-      "answer-foodType-Chicken2": { "/chicken": true },
-      "answer-foodType-Lamb2": { "/lamb": true }
-    }
-  },
-  "/chicken": {
-    "on": false,
-    "switches": {}
-  },
-  "/beef": {
-    "on": false,
-    "switches": {}
-  },
-  "/lamb": {
-    "on": false,
     "switches": {}
   },
   "/submit": {
