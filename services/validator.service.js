@@ -39,15 +39,15 @@ const validationRules = {
   "/declaration": {
     declaration1: {
       test: isTruthy,
-      error: "You must tick the first declaration before continuing"
+      error: "You must tick all the declarations before continuing"
     },
     declaration2: {
       test: isTruthy,
-      error: "You must tick the second declaration before continuing"
+      error: "You must tick all the declarations before continuing"
     },
     declaration3: {
       test: isTruthy,
-      error: "You must tick the third declaration before continuing"
+      error: "You must tick all the declarations before continuing"
     }
   },
   "/example-page": {
