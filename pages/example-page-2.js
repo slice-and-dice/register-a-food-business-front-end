@@ -1,10 +1,8 @@
 import SessionWrapper from "../components/SessionWrapper";
-import SessionInput from "../components/SessionInput";
 
 const ExamplePage = props => (
   <div>
     <form action="/continue/example-page-2" method="post">
-      <SessionInput {...props} />
       <label>
         Chicken<input
           type="radio"

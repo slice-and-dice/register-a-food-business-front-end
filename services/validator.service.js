@@ -16,9 +16,10 @@ module.exports.validate = (originator, answers) => {
     for (let answerKey in validationRules[originator]) {
       let errorValue = null;
       if (validationRules[originator][answerKey]) {
-        const passOrFail = validationRules[originator][answerKey].test(
-          answers[answerKey]
-        );
+        const validatorRuleArgs =
+          validationRules[originator][answerKey].args || [];
+        const args = [answers[answerKey], ...validatorRuleArgs];
+        const passOrFail = validationRules[originator][answerKey].test(...args);
         errorValue = passOrFail
           ? null
           : validationRules[originator][answerKey].error;
@@ -54,6 +55,17 @@ const validationRules = {
     validationDemo: {
       test: validator.isEmail,
       error: "Not a valid email address"
+    }
+  },
+  "/establishment-address": {
+    establishment_postcode: {
+      test: validator.isPostalCode,
+      args: ["GB"],
+      error: "Not a valid Postcode"
+    },
+    establishment_first_line: {
+      test: validator.isAscii,
+      error: "Not a valid First Line of address"
     }
   }
 };

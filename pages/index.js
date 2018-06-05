@@ -1,5 +1,4 @@
 import SessionWrapper from "../components/SessionWrapper";
-import SessionInput from "../components/SessionInput";
 import FsaLayout from "../components/FsaLayout";
 import { Header, Button } from "govuk-react";
 import { ButtonArrow } from "@govuk-react/icons";
@@ -34,7 +33,6 @@ const Index = props => (
       stored overnight.
     </p>
     <form action="/continue/index" method="post">
-      <SessionInput {...props} />
       <Button type="submit" icon={<ButtonArrow />}>
         Begin registration
       </Button>
