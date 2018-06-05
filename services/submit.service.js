@@ -10,11 +10,16 @@ const sendRequest = async body => {
   return res.json();
 };
 
-module.exports.submit = async data => {
+module.exports.submit = async cumulativeAnswers => {
+  const mutationStringArray = [];
+  for (answer in cumulativeAnswers) {
+    mutationStringArray.push(`${answer}: "${cumulativeAnswers[answer]}"`);
+  }
+  const mutationString = mutationStringArray.reduce((a, b) => a + ", " + b);
+
   const requestBody = JSON.stringify({
-    query: `mutation { createEstablishment(id: 1, establishment_postcode: "${
-      data.establishment_postcode
-    }") {id} }`
+    // TODO JMB: change hardcoded id input
+    query: `mutation { createEstablishment(id: 1, ${mutationString}) {id} }`
   });
 
   const response = await sendRequest(requestBody);

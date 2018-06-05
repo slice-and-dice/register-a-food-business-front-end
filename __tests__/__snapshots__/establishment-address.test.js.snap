@@ -504,6 +504,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
             </span>
             <input
               className="emotion-12"
+              defaultValue={undefined}
               name="establishment_first_line"
               onChange={undefined}
               type="text"
@@ -521,6 +522,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
             </span>
             <input
               className="emotion-12"
+              defaultValue={undefined}
               name="establishment_street"
               onChange={undefined}
               type="text"
@@ -538,6 +540,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
             </span>
             <input
               className="emotion-12"
+              defaultValue={undefined}
               name="establishment_town"
               onChange={undefined}
               type="text"
@@ -555,6 +558,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
             </span>
             <input
               className="emotion-12"
+              defaultValue={undefined}
               name="establishment_postcode"
               onChange={undefined}
               type="text"

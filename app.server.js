@@ -66,13 +66,7 @@ const startServer = async () => {
   });
 
   app.post("/submit", async (req, res) => {
-    const formData = req.body;
-    let sessionData = {};
-    if (formData.sessionData) {
-      sessionData = JSON.parse(formData.sessionData);
-    }
-
-    submissionData = sessionData.answers || {};
+    const submissionData = req.session.cumulativeAnswers;
 
     if (
       submissionData &&
@@ -80,6 +74,7 @@ const startServer = async () => {
     ) {
       const graphQlResponse = await submit(submissionData);
       console.log("graphQlResponse: ", graphQlResponse);
+
       if (graphQlResponse.errors) {
         // TODO JMB: add errors to the original page via session
         res.redirect("back");
