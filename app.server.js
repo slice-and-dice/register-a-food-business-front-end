@@ -6,6 +6,7 @@ const querystring = require("querystring");
 const pathJSON = require("./services/path.json");
 const { moveAlongPath, editPath } = require("./services/path.service");
 const { validate } = require("./services/validator.service");
+const { submit } = require("./services/submit.service");
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -66,7 +67,33 @@ const startServer = async () => {
   });
 
   app.post("/back/:originator", (req, res) => {
-    // TODO
+    // TODO JMB
+  });
+
+  app.post("/submit", async (req, res) => {
+    const formData = req.body;
+    let sessionData = {};
+    if (formData.sessionData) {
+      sessionData = JSON.parse(formData.sessionData);
+    }
+
+    submissionData = sessionData.answers || {};
+
+    if (
+      submissionData &&
+      Object.getOwnPropertyNames(submissionData).length > 0
+    ) {
+      const graphQlResponse = await submit(submissionData);
+      console.log("graphQlResponse: ", graphQlResponse);
+      if (graphQlResponse.errors) {
+        // TODO JMB: add errors to the original page via session
+        res.redirect("back");
+      } else {
+        res.redirect("/application-complete");
+      }
+    } else {
+      res.redirect("back");
+    }
   });
 
   app.get("*", (req, res) => {
