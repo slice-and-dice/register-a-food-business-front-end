@@ -3,6 +3,10 @@
     "on": true,
     "switches": {}
   },
+  "/establishment-address": {
+    "on": true,
+    "switches": {}
+  },
   "/declaration": {
     "on": true,
     "switches": {}

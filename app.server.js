@@ -6,6 +6,7 @@ const querystring = require("querystring");
 const pathJSON = require("./services/path.json");
 const { moveAlongPath, editPath } = require("./services/path.service");
 const { validate } = require("./services/validator.service");
+const { submit } = require("./services/submit.service");
 
 const dev = process.env.NODE_ENV !== "production";
 
@@ -35,27 +36,22 @@ const startServer = async () => {
 
   app.post("/continue/:originator", (req, res) => {
     const currentPage = `/${req.params.originator}`;
+    const sessionData = req.session || {};
     const formData = req.body;
-    let sessionData = {};
-    if (formData.sessionData) {
-      sessionData = JSON.parse(formData.sessionData);
-    }
-    const previousAnswers = sessionData.answers || {};
 
+    const previousAnswers = sessionData.cumulativeAnswers || {};
     let newAnswers = Object.assign({}, formData);
-    delete newAnswers["sessionData"];
 
     const cumulativeAnswers = Object.assign(previousAnswers, newAnswers);
     const cumulativePathAnswers = Object.values(cumulativeAnswers).filter(
       answer => answer.startsWith("answer-")
     );
+
     const newPath = editPath(pathJSON, cumulativePathAnswers);
 
-    req.session.data = JSON.stringify({
-      answers: cumulativeAnswers
-    });
-
     const validatorErrors = validate(currentPage, newAnswers);
+
+    req.session.cumulativeAnswers = cumulativeAnswers;
     req.session.validatorErrors = validatorErrors;
 
     if (validatorErrors) {
@@ -66,7 +62,28 @@ const startServer = async () => {
   });
 
   app.post("/back/:originator", (req, res) => {
-    // TODO
+    // TODO JMB
+  });
+
+  app.post("/submit", async (req, res) => {
+    const submissionData = req.session.cumulativeAnswers;
+
+    if (
+      submissionData &&
+      Object.getOwnPropertyNames(submissionData).length > 0
+    ) {
+      const graphQlResponse = await submit(submissionData);
+      console.log("graphQlResponse: ", graphQlResponse);
+
+      if (graphQlResponse.errors) {
+        // TODO JMB: add errors to the original page via session
+        res.redirect("back");
+      } else {
+        res.redirect("/application-complete");
+      }
+    } else {
+      res.redirect("back");
+    }
   });
 
   app.get("*", (req, res) => {
