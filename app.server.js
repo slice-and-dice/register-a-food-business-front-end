@@ -35,27 +35,23 @@ const startServer = async () => {
 
   app.post("/continue/:originator", (req, res) => {
     const currentPage = `/${req.params.originator}`;
+    const sessionData = req.session || {};
     const formData = req.body;
-    let sessionData = {};
-    if (formData.sessionData) {
-      sessionData = JSON.parse(formData.sessionData);
-    }
-    const previousAnswers = sessionData.answers || {};
 
+    const previousAnswers = sessionData.cumulativeAnswers || {};
     let newAnswers = Object.assign({}, formData);
-    delete newAnswers["sessionData"];
 
     const cumulativeAnswers = Object.assign(previousAnswers, newAnswers);
     const cumulativePathAnswers = Object.values(cumulativeAnswers).filter(
       answer => answer.startsWith("answer-")
     );
+
     const newPath = editPath(pathJSON, cumulativePathAnswers);
 
-    req.session.data = JSON.stringify({
-      answers: cumulativeAnswers
-    });
-
     const validatorErrors = validate(currentPage, newAnswers);
+
+    req.session.cumulativeAnswers = cumulativeAnswers;
+
     req.session.validatorErrors = validatorErrors;
 
     if (validatorErrors) {

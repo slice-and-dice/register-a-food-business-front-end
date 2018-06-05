@@ -3,7 +3,7 @@ const SessionWrapper = Page => {
 
   wrapper.getInitialProps = ({ req }) => {
     return {
-      sessionData: req.session.data,
+      cumulativeAnswers: req.session.cumulativeAnswers || {},
       validatorErrors: req.session.validatorErrors || {}
     };
   };

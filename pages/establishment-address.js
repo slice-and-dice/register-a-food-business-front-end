@@ -1,17 +1,16 @@
-import React from "react";
 import FsaLayout from "../components/FsaLayout";
 import { Header, Button, InputField } from "govuk-react";
 import SessionWrapper from "../components/SessionWrapper";
-import SessionInput from "../components/SessionInput";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
     <Header level={2}>Establishment address</Header>
     <form action="/continue/establishment-address" method="post">
-      <SessionInput {...props} />
-      <br />
       <InputField
-        input={{ name: "establishment_first_line" }}
+        input={{
+          name: "establishment_first_line",
+          value: props.cumulativeAnswers.establishment_first_line
+        }}
         id="establishment_first_line"
         // TODO APM: Decide on and implement validation for first line of address
         //Work out why validator errors fails in test
@@ -24,7 +23,10 @@ const EstablishmentAddress = props => (
       </InputField>
       <br />
       <InputField
-        input={{ name: "establishment_street" }}
+        input={{
+          name: "establishment_street",
+          value: props.cumulativeAnswers.establishment_street
+        }}
         id="establishment_street"
         meta={{
           touched: true,
@@ -35,7 +37,10 @@ const EstablishmentAddress = props => (
       </InputField>
       <br />
       <InputField
-        input={{ name: "establishment_town" }}
+        input={{
+          name: "establishment_town",
+          value: props.cumulativeAnswers.establishment_town
+        }}
         id="establishment_town"
         meta={{
           touched: true,
@@ -46,7 +51,10 @@ const EstablishmentAddress = props => (
       </InputField>
       <br />
       <InputField
-        input={{ name: "establishment_postcode" }}
+        input={{
+          name: "establishment_postcode",
+          value: props.cumulativeAnswers.establishment_postcode
+        }}
         id="establishment_postcode"
         meta={{
           touched: true,

@@ -13,7 +13,9 @@ describe("<EstablishmentAddress />", () => {
   });
 
   it("matches the previous snapshot", () => {
-    const tree = renderer.create(<EstablishmentAddress />).toJSON();
+    const tree = renderer
+      .create(<EstablishmentAddress validatorErrors cumulativeAnswers />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

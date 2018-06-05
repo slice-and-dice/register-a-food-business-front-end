@@ -1,10 +1,8 @@
 import SessionWrapper from "../components/SessionWrapper";
-import SessionInput from "../components/SessionInput";
 
 const ExamplePage = props => (
   <div>
     <form action="/continue/example-page" method="post">
-      <SessionInput {...props} />
       <p>{props.validatorErrors["validationDemo"] || null}</p>
       <input
         type="text"
