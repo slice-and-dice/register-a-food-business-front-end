@@ -55,8 +55,17 @@ const startServer = async () => {
     req.session.validatorErrors = validatorErrors;
 
     if (validatorErrors) {
+      // if there are errors, redirect back to the current page
       res.redirect(currentPage);
+    } else if (
+      !Object.keys(pathJSON)[
+        Object.keys(pathJSON).findIndex(page => page === currentPage) + 1
+      ]
+    ) {
+      // else if the current page is at the end of the path, redirect to the submit route
+      res.redirect("/submit");
     } else {
+      // else move to the next page in the path
       res.redirect(moveAlongPath(newPath, currentPage, 1));
     }
   });
@@ -65,8 +74,12 @@ const startServer = async () => {
     // TODO JMB
   });
 
-  app.post("/submit", async (req, res) => {
+  app.get("/submit", async (req, res) => {
     const submissionData = req.session.cumulativeAnswers;
+    // TODO JMB: design a way to remove non-submission answers such as declarations
+    delete submissionData.declaration1;
+    delete submissionData.declaration2;
+    delete submissionData.declaration3;
 
     if (
       submissionData &&
@@ -82,7 +95,9 @@ const startServer = async () => {
         res.redirect("/application-complete");
       }
     } else {
-      res.redirect("back");
+      winston.error(
+        "Error: app.server.js /submit was called with an empty submission data object"
+      );
     }
   });
 

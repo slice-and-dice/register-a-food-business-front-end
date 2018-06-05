@@ -51,12 +51,6 @@ const validationRules = {
       error: "You must tick all the declarations before continuing"
     }
   },
-  "/example-page": {
-    validationDemo: {
-      test: validator.isEmail,
-      error: "Not a valid email address"
-    }
-  },
   "/establishment-address": {
     establishment_postcode: {
       test: validator.isPostalCode,

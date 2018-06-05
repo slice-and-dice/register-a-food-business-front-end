@@ -10,9 +10,5 @@
   "/declaration": {
     "on": true,
     "switches": {}
-  },
-  "/application-complete": {
-    "on": true,
-    "switches": {}
   }
 }

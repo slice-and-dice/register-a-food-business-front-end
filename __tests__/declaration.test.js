@@ -13,7 +13,9 @@ describe("<Declaration />", () => {
   });
 
   it("matches the previous snapshot", () => {
-    const tree = renderer.create(<Declaration />).toJSON();
+    const tree = renderer
+      .create(<Declaration validatorErrors cumulativeAnswers />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -13,14 +13,14 @@ const ApplicationComplete = props => (
     />
     <Paragraph>We have sent you a confirmation email.</Paragraph>
     <Header level={3}>What happens next</Header>
-    <Paragraph mb="0">
+    <Paragraph mb={0}>
       We've sent your application to **Islington Borough Council**.
     </Paragraph>
-    <Paragraph mb="0">
+    <Paragraph mb={0}>
       They will contact you either to confirm your registration, or to ask for
       more information.
     </Paragraph>
-    <Paragraph mb="0">
+    <Paragraph mb={0}>
       [What did you think of this
       service?](https://www.gov.uk/service-manual/design/feedback-pages) (takes
       30 seconds)
