@@ -76,10 +76,7 @@ const startServer = async () => {
 
   app.get("/submit", async (req, res) => {
     const submissionData = req.session.cumulativeAnswers;
-    // TODO JMB: design a way to remove non-submission answers such as declarations
-    delete submissionData.declaration1;
-    delete submissionData.declaration2;
-    delete submissionData.declaration3;
+    // TODO JMB: design a way to remove non-submission answers
 
     if (
       submissionData &&
