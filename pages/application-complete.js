@@ -5,11 +5,13 @@ import Paragraph from "@govuk-react/paragraph";
 
 const ApplicationComplete = props => (
   <FsaLayout>
-    <Header level={2}>Application Complete</Header>
-    <br />
     <Panel
       panelTitle="Application complete"
-      panelBody={["Your reference number", <br />, <strong>HDJ2123F</strong>]}
+      panelBody={[
+        "Your reference number",
+        <br />,
+        <strong>{props.referenceNumber}</strong>
+      ]}
     />
     <Paragraph>We have sent you a confirmation email.</Paragraph>
     <Header level={3}>What happens next</Header>
