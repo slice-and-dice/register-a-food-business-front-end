@@ -16,9 +16,10 @@ module.exports.validate = (originator, answers) => {
     for (let answerKey in validationRules[originator]) {
       let errorValue = null;
       if (validationRules[originator][answerKey]) {
-        const passOrFail = validationRules[originator][answerKey].test(
-          answers[answerKey]
-        );
+        const validatorRuleArgs =
+          validationRules[originator][answerKey].args || [];
+        const args = [answers[answerKey], ...validatorRuleArgs];
+        const passOrFail = validationRules[originator][answerKey].test(...args);
         errorValue = passOrFail
           ? null
           : validationRules[originator][answerKey].error;
@@ -39,21 +40,26 @@ const validationRules = {
   "/declaration": {
     declaration1: {
       test: isTruthy,
-      error: "You must tick the first declaration before continuing"
+      error: "You must tick all the declarations before continuing"
     },
     declaration2: {
       test: isTruthy,
-      error: "You must tick the second declaration before continuing"
+      error: "You must tick all the declarations before continuing"
     },
     declaration3: {
       test: isTruthy,
-      error: "You must tick the third declaration before continuing"
+      error: "You must tick all the declarations before continuing"
     }
   },
-  "/example-page": {
-    validationDemo: {
-      test: validator.isEmail,
-      error: "Not a valid email address"
+  "/establishment-address": {
+    establishment_postcode: {
+      test: validator.isPostalCode,
+      args: ["GB"],
+      error: "Not a valid Postcode"
+    },
+    establishment_first_line: {
+      test: validator.isAscii,
+      error: "Not a valid First Line of address"
     }
   }
 };

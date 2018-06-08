@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Index /> matches the previous snapshot 1`] = `
+exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 .emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -159,14 +159,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-22 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-22 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,14 +181,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-21 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-21 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -198,7 +198,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-14 {
+.emotion-20 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -208,22 +208,22 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-20 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-14:first-child {
+  .emotion-20:first-child {
     margin-left: 0;
   }
 
-  .emotion-14:last-child {
+  .emotion-20:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-20 {
     width: 66.6667%;
   }
 }
@@ -232,17 +232,17 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
-  font-size: 32px;
-  line-height: 1.09375;
-  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 1.0416666666666667;
+  margin-bottom: 15px;
   margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-10 {
-    font-size: 48px;
-    line-height: 1.0416666666666667;
-    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.1111111111111112;
+    margin-bottom: 20px;
   }
 }
 
@@ -258,7 +258,76 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-13 {
+  background-color: #28a197;
+  color: #ffffff;
+  padding: 30px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    margin-bottom: 15px;
+  }
+}
+
 .emotion-11 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+  line-height: 35px;
+  margin-top: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-11 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+.emotion-12 {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-12 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.emotion-14 {
+  font-family: "nta",Arial,sans-serif;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 45px;
+  }
+}
+
+.emotion-15 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -269,7 +338,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-15 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -277,65 +346,48 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-11 {
+  .emotion-15 {
     font-size: 16px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-15 {
     margin-bottom: 0;
   }
 }
 
-.emotion-13 {
-  background-color: #00823b;
-  border: none;
-  box-shadow: 0 2px 0 #003618;
-  color: #ffffff;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.emotion-16 {
   font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  font-size: 1em;
+  margin-top: 0;
+  font-size: 16px;
   line-height: 1.25;
-  outline-offset: -1px;
-  outline: 1px solid transparent;
-  padding: .526315em .789473em .263157em;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -webkit-font-smoothing: antialiased;
-  opacity: 1;
-  pointer-events: auto;
-  padding-right: .54211em;
-  margin-bottom: 15px;
-}
-
-.emotion-13:focus {
-  outline: 3px solid #ffbf47;
-}
-
-.emotion-13 svg {
-  max-width: 15px;
-  margin-left: 20px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
-    margin-bottom: 20px;
+  .emotion-16 {
+    font-size: 19px;
+    line-height: 1.3;
   }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-18 {
+  color: #005ea5;
+}
+
+.emotion-18:hover {
+  color: #2b8cc4;
+}
+
+.emotion-18:visited {
+  color: #4c2c92;
 }
 
 <div>
@@ -407,87 +459,91 @@ exports[`<Index /> matches the previous snapshot 1`] = `
     className="emotion-9"
   />
   <div
-    className="emotion-16"
+    className="emotion-22"
   >
     <div
-      className="emotion-15"
+      className="emotion-21"
     >
       <div
-        className="emotion-14"
+        className="emotion-20"
       >
-        <h1
+        <h2
           className="emotion-10"
           size={undefined}
         >
-          Register a food business
-        </h1>
-        <p>
-          All food businesses which regularly produce or serve food to the public need to be registered with their Local Authority. This service will send your registration to the correct local authority based on your trading location. Food businesses should only register
-           
-          <span
-            className="bold"
+          Application Complete
+        </h2>
+        <br />
+        <div
+          className="emotion-13"
+        >
+          <h2
+            className="emotion-11"
           >
-            28 days
-          </span>
-           before they begin trading. If you are not sure when this food business will open, it may be too early to be registering this business.
-        </p>
-        <p>
-          During this registration, you may come across a few specialist terms, which we have described below:
-        </p>
+            Application complete
+          </h2>
+          <div
+            className="emotion-12"
+          >
+            Your reference number
+            <br />
+            <strong>
+              HDJ2123F
+            </strong>
+          </div>
+        </div>
+        <div
+          className="emotion-14"
+        >
+          <div>
+            <p>
+              We have sent you a confirmation email.
+            </p>
+          </div>
+        </div>
         <h3
-          className="emotion-11"
+          className="emotion-15"
           size={undefined}
         >
-          Food business operator
+          What happens next
         </h3>
-        <p>
-          The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
-        </p>
-        <h3
-          className="emotion-11"
-          size={undefined}
+        <div
+          className="emotion-16"
         >
-          Establishment
-        </h3>
-        <p>
-          The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
-        </p>
-        <form
-          action="/continue/index"
-          method="post"
+          <div>
+            <p>
+              We've sent your application to 
+              <strong>
+                Islington Borough Council
+              </strong>
+              .
+            </p>
+          </div>
+        </div>
+        <div
+          className="emotion-16"
         >
-          <button
-            className="emotion-13"
-            type="submit"
-          >
-            Begin registration
-            <svg
-              fill="currentColor"
-              height="100%"
-              style={
-                Object {
-                  "display": "block",
-                }
-              }
-              version="1.1"
-              viewBox="0 0 706 860"
-              width="100%"
-            >
-              <title>
-                ButtonArrow
-              </title>
-              <g>
-                <path
-                  d="M.152 0h252.993l452.108 430H452.261z"
-                />
-                <path
-                  d="M0 860h252.993L705.1 430H452.108z"
-                  fillOpacity="0.5"
-                />
-              </g>
-            </svg>
-          </button>
-        </form>
+          <div>
+            <p>
+              They will contact you either to confirm your registration, or to ask for more information.
+            </p>
+          </div>
+        </div>
+        <div
+          className="emotion-16"
+        >
+          <div>
+            <p>
+              <a
+                className="emotion-18"
+                href="https://www.gov.uk/service-manual/design/feedback-pages"
+              >
+                What did you think of this service?
+              </a>
+               (takes 30 seconds)
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
