@@ -1,7 +1,6 @@
 import SessionWrapper from "../components/SessionWrapper";
 import FsaLayout from "../components/FsaLayout";
-import { Header, Panel } from "govuk-react";
-import Paragraph from "@govuk-react/paragraph";
+import { Header, Panel, Paragraph } from "govuk-react";
 
 const ApplicationComplete = props => (
   <FsaLayout>
@@ -15,14 +14,14 @@ const ApplicationComplete = props => (
     />
     <Paragraph>We have sent you a confirmation email.</Paragraph>
     <Header level={3}>What happens next</Header>
-    <Paragraph mb={0}>
+    <Paragraph>
       We've sent your application to **Islington Borough Council**.
     </Paragraph>
-    <Paragraph mb={0}>
+    <Paragraph>
       They will contact you either to confirm your registration, or to ask for
       more information.
     </Paragraph>
-    <Paragraph mb={0}>
+    <Paragraph>
       [What did you think of this
       service?](https://www.gov.uk/service-manual/design/feedback-pages) (takes
       30 seconds)

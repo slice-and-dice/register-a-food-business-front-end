@@ -193,7 +193,6 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 960px;
     margin-bottom: 30px;
   }
 }
@@ -235,7 +234,6 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   font-size: 24px;
   line-height: 1.0416666666666667;
   margin-bottom: 15px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -249,12 +247,6 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
 @media print {
   .emotion-10 {
     font-size: 18px;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-10 {
-    margin-bottom: 0;
   }
 }
 
@@ -276,12 +268,6 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-13 {
-    max-width: 960px;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -392,8 +378,25 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
+.emotion-23:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
 .emotion-23:focus {
+  color: #ffffff;
+  background-color: #00692f;
   outline: 3px solid #ffbf47;
+}
+
+.emotion-23:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-23:visited {
+  color: #00823b;
 }
 
 .emotion-23 svg {
@@ -496,6 +499,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
         >
           <label
             className="emotion-13"
+            id="establishment_first_line"
           >
             <span
               className="emotion-11"
@@ -506,14 +510,13 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               className="emotion-12"
               defaultValue={undefined}
               name="establishment_first_line"
-              onChange={undefined}
               type="text"
-              value={undefined}
             />
           </label>
           <br />
           <label
             className="emotion-13"
+            id="establishment_street"
           >
             <span
               className="emotion-11"
@@ -524,14 +527,13 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               className="emotion-12"
               defaultValue={undefined}
               name="establishment_street"
-              onChange={undefined}
               type="text"
-              value={undefined}
             />
           </label>
           <br />
           <label
             className="emotion-13"
+            id="establishment_town"
           >
             <span
               className="emotion-11"
@@ -542,14 +544,13 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               className="emotion-12"
               defaultValue={undefined}
               name="establishment_town"
-              onChange={undefined}
               type="text"
-              value={undefined}
             />
           </label>
           <br />
           <label
             className="emotion-13"
+            id="establishment_postcode"
           >
             <span
               className="emotion-11"
@@ -560,14 +561,14 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               className="emotion-12"
               defaultValue={undefined}
               name="establishment_postcode"
-              onChange={undefined}
               type="text"
-              value={undefined}
             />
           </label>
           <br />
           <button
             className="emotion-23"
+            disabled={false}
+            start={false}
             type="submit"
           >
             Continue

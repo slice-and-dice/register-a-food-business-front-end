@@ -193,7 +193,6 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 960px;
     margin-bottom: 30px;
   }
 }
@@ -235,7 +234,6 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   font-size: 24px;
   line-height: 1.0416666666666667;
   margin-bottom: 15px;
-  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
@@ -252,12 +250,6 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-10 {
-    margin-bottom: 0;
-  }
-}
-
 .emotion-21 {
   padding: 0;
   margin: 0;
@@ -271,12 +263,6 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   content: '';
   display: table;
   clear: both;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-21 {
-    max-width: 960px;
-  }
 }
 
 @media only screen and (min-width:641px) {
@@ -435,8 +421,25 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
+.emotion-22:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
 .emotion-22:focus {
+  color: #ffffff;
+  background-color: #00692f;
   outline: 3px solid #ffbf47;
+}
+
+.emotion-22:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-22:visited {
+  color: #00823b;
 }
 
 .emotion-22 svg {
@@ -550,6 +553,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
             >
               <input
                 className="emotion-12"
+                defaultChecked={undefined}
                 name="declaration1"
                 type="checkbox"
                 value="I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief."
@@ -565,6 +569,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
             >
               <input
                 className="emotion-12"
+                defaultChecked={undefined}
                 name="declaration2"
                 type="checkbox"
                 value="I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening."
@@ -580,6 +585,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
             >
               <input
                 className="emotion-12"
+                defaultChecked={undefined}
                 name="declaration3"
                 type="checkbox"
                 value="I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment."
@@ -594,6 +600,8 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
           <br />
           <button
             className="emotion-22"
+            disabled={false}
+            start={false}
             type="submit"
           >
             Submit
