@@ -989,7 +989,7 @@
     "@govuk-react/hoc" "^0.2.2"
     govuk-colours "^1.0.3"
 
-"@govuk-react/paragraph@0.2.3", "@govuk-react/paragraph@^0.2.3":
+"@govuk-react/paragraph@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@govuk-react/paragraph/-/paragraph-0.2.3.tgz#8903d7596b5d1e0f74d68ee4bb4cd325441b3219"
   dependencies:
