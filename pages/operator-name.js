@@ -4,9 +4,9 @@ import SessionWrapper from "../components/SessionWrapper";
 
 const OperatorName = props => (
   <FsaLayout>
-    <Header level={2}>What is a food buisness operator</Header>
+    <Header level={2}>What is the operator's name?</Header>
     <form action="/continue/operator-name" method="post">
-      <HiddenText summaryText={"Help with nationality"}>
+      <HiddenText summaryText={"What is a food buisness operator"}>
         <Paragraph mb={0}>
           The food business operator is the person, charity or company who makes
           the decisions about the food business, what it serves and how it

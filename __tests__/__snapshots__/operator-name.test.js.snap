@@ -557,7 +557,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
           className="emotion-10"
           size={undefined}
         >
-          What is a food buisness operator
+          What is the operator's name?
         </h2>
         <form
           action="/continue/operator-name"
@@ -572,7 +572,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
               <span
                 className="emotion-11"
               >
-                Help with nationality
+                What is a food buisness operator
               </span>
             </summary>
             <div
