@@ -61,5 +61,11 @@ const validationRules = {
       test: validator.isAscii,
       error: "Not a valid First Line of address"
     }
+  },
+  "/establishment-trading-name": {
+    establishment_trading_name: {
+      test: validator.isAscii,
+      error: "Not a valid Establishment Trading Name"
+    }
   }
 };
