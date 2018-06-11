@@ -61,5 +61,15 @@ const validationRules = {
       test: validator.isAscii,
       error: "Not a valid First Line of address"
     }
+  },
+  "/operator-name": {
+    operator_first_name: {
+      test: validator.isAscii,
+      error: "Not a valid First Name"
+    },
+    operator_last_name: {
+      test: validator.isAscii,
+      error: "Not a valid Last Name"
+    }
   }
 };
