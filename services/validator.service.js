@@ -61,5 +61,11 @@ const validationRules = {
       test: validator.isAscii,
       error: "Not a valid First Line of address"
     }
+  },
+  "/operator-contact-details": {
+    operator_contact_email: {
+      test: validator.isEmail,
+      error: "Not a valid e-mail address"
+    }
   }
 };
