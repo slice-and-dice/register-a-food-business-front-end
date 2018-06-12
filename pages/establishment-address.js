@@ -1,10 +1,18 @@
 import FsaLayout from "../components/FsaLayout";
-import { Header, Button, InputField } from "govuk-react";
+import { Header, Button, InputField, HiddenText, Paragraph } from "govuk-react";
 import SessionWrapper from "../components/SessionWrapper";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
     <Header level={2}>Establishment address</Header>
+    <HiddenText summaryText={"What is an establishment?"}>
+      <Paragraph mb={0}>
+        An establishment is the location of your food business, and the food
+        activities taking place there. If it is a mobile food business, please
+        use the location where it is normally stored overnight.
+      </Paragraph>
+    </HiddenText>
+
     <form action="/continue/establishment-address" method="post">
       <InputField
         input={{
