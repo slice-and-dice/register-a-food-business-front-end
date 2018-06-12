@@ -43,11 +43,12 @@ const startServer = async () => {
     let newAnswers = Object.assign({}, formData);
 
     const cumulativeAnswers = Object.assign(previousAnswers, newAnswers);
+
     const cumulativePathAnswers = Object.values(cumulativeAnswers).filter(
       answer => answer.startsWith("answer-")
     );
 
-    const newPath = editPath(pathJSON, cumulativePathAnswers);
+    const newPath = editPath(pathJSON, cumulativePathAnswers, currentPage);
 
     const validatorErrors = validate(currentPage, newAnswers);
 
