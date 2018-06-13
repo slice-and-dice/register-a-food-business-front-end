@@ -10,7 +10,7 @@ const EstablishmentTradingName = props => (
         <Paragraph mb={0}>
           An establishment is the location of your food business, and the food
           activities taking place there. If it is a mobile food business, please
-          use the location where it is normally stored overnight..
+          use the location where it is normally stored overnight.
         </Paragraph>
       </HiddenText>
       <br />
