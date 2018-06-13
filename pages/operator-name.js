@@ -16,7 +16,7 @@ const OperatorName = props => (
       <InputField
         input={{
           name: "operator_first_name",
-          defaultValue: props.cumulativeAnswers.oerator_first_name
+          defaultValue: props.cumulativeAnswers.operator_first_name
         }}
         id="operator_first_name"
         meta={{
