@@ -1,15 +1,14 @@
-import { validate } from "../services/validator.service";
-import { error } from "util";
+import { validate } from "../services/validation.service";
 
 describe("validator.service validate()", () => {
   describe("Given a correctly formatted input", () => {
-    it("returns null", () => {
+    it("returns default errors object", () => {
       const result = validate("/declaration", {
         declaration1: "This is a truthy value",
         declaration2: "This is a truthy value",
         declaration3: "This is a truthy value"
       });
-      expect(result).toBe(null);
+      expect(result).toEqual({ errors: {}, pageNotFound: "" });
     });
   });
 
@@ -18,24 +17,24 @@ describe("validator.service validate()", () => {
       const result = validate("/declaration", {
         declaration1: undefined
       });
-      expect(Object.values(result)[2] ? true : false).toBe(true);
-      expect(
-        Object.values(result).every(value => typeof value === "string")
-      ).toBe(true);
+      expect(typeof result.errors.declaration1).toBe("string");
+      expect(typeof result.errors.declaration2).toBe("string");
+      expect(typeof result.errors.declaration3).toBe("string");
     });
   });
 
-  describe("Given an invalid input type", () => {
-    it("throws an error", () => {
-      const invalidInputs = [
-        ["", {}],
-        [null, null],
-        [({}, "")],
-        ["/pageThatDoesNotExist", {}]
-      ];
-      invalidInputs.forEach(invalidInput => {
-        expect(validate(...invalidInput)).toBe(null);
+  describe("When given a page that doesn't exist in the schema", () => {
+    it("should return an error", () => {
+      // Arrange
+      const page = "/random-page";
+
+      // Act
+      const result = validate(page, {
+        randomFields: "blah"
       });
+
+      // Assert
+      expect(result.pageNotFound).toBe("/random-page");
     });
   });
 });
