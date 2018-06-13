@@ -35,34 +35,31 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
   const newPath = JSON.parse(JSON.stringify(originalPath));
   let pagesToSwitch = {};
 
-  if (answerArray) {
-    const allSwitches = {};
-    for (let page in originalPath) {
-      Object.assign(allSwitches, originalPath[page].switches);
-    }
-    // const referenceOrder = Object.keys(originalPath[currentPage].switches);
-    answerArray.sort((a, b) => {
-      return (
-        Object.keys(allSwitches).indexOf(a) -
-        Object.keys(allSwitches).indexOf(b)
-      );
-    });
-    answerArray.forEach(answerID => {
-      if (allSwitches[answerID]) {
-        pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[answerID]);
-      } else {
-        throw new Error(`
+  const allSwitches = {};
+  for (let page in originalPath) {
+    Object.assign(allSwitches, originalPath[page].switches);
+  }
+  // const referenceOrder = Object.keys(originalPath[currentPage].switches);
+  answerArray.sort((a, b) => {
+    return (
+      Object.keys(allSwitches).indexOf(a) - Object.keys(allSwitches).indexOf(b)
+    );
+  });
+  answerArray.forEach(answerID => {
+    if (allSwitches[answerID]) {
+      pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[answerID]);
+    } else {
+      throw new Error(`
           path.service.js editPath(): The answer "${answerID}" does not exist in the path JSON.
           If "${answerID}" is intended to change the path of the registration form, update the path JSON.
           Else, remove the prefix from the name to make it a non-path answer ID.
         `);
-      }
-    });
+    }
+  });
 
-    for (let eachPage in pagesToSwitch) {
-      if (eachPage !== currentPage) {
-        newPath[eachPage].on = pagesToSwitch[eachPage];
-      }
+  for (let eachPage in pagesToSwitch) {
+    if (eachPage !== currentPage) {
+      newPath[eachPage].on = pagesToSwitch[eachPage];
     }
   }
 
