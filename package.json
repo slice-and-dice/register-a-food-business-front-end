@@ -8,8 +8,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./",
-    "format:verify": "prettier --list-different '{./components,./pages,./__tests__,./docs}/**/*.js'",
-    "format": "prettier --write '{./components,./pages,./__tests__,./docs}/**/*.js'"
+    "format:verify": "prettier --list-different '{./services,./components,./pages,./__tests__,./docs}/**/*.js'",
+    "format": "prettier --write '{./services,./components,./pages,./__tests__,./docs}/**/*.js'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
