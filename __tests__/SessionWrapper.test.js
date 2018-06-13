@@ -67,7 +67,7 @@ describe("<SessionWrapper />", () => {
     });
 
     describe("given that req.session.cumulativeAnswers is defined", () => {
-      it("props.cumulativeAnswers is an empty object", () => {
+      it("props.cumulativeAnswers is the same as the session.cumulativeAnswers", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
         const exampleCumulativeAnswers = { test: "value" };
         const initialProps = WrappedComponent.getInitialProps({
@@ -79,7 +79,7 @@ describe("<SessionWrapper />", () => {
     });
 
     describe("given that req.session.validatorErrors is defined", () => {
-      it("props.validatorErrors is an empty object", () => {
+      it("props.validatorErrors is the same as the session.validatorErrors", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
         const exampleValidatorErrors = { test: "value" };
         const initialProps = WrappedComponent.getInitialProps({
