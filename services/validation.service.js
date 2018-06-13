@@ -14,10 +14,10 @@ const errorMessages = {
   declaration1: "You must tick all the declarations before continuing",
   declaration2: "You must tick all the declarations before continuing",
   declaration3: "You must tick all the declarations before continuing",
-  establishment_first_line: "Not a valid First Line of address",
-  establishment_street: "Not a valid Street name",
-  establishment_town: "Not a valid Town name",
-  establishment_postcode: "Not a valid Postcode",
+  establishment_first_line: "Not a valid first line of address",
+  establishment_street: "Not a valid street name",
+  establishment_town: "Not a valid town name",
+  establishment_postcode: "Not a valid postcode",
   establishment_trading_name: "Not a valid establishment trading name"
 };
 
