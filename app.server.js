@@ -5,7 +5,7 @@ const winston = require("winston");
 const querystring = require("querystring");
 const pathJSON = require("./services/path.json");
 const { moveAlongPath, editPath } = require("./services/path.service");
-const { validate } = require("./services/validator.service");
+const { validate } = require("./services/validation.service");
 const { submit } = require("./services/submit.service");
 
 const dev = process.env.NODE_ENV !== "production";
@@ -47,14 +47,14 @@ const startServer = async () => {
       answer => answer.startsWith("answer-")
     );
 
-    const newPath = editPath(pathJSON, cumulativePathAnswers);
+    const newPath = editPath(pathJSON, cumulativePathAnswers, currentPage);
 
     const validatorErrors = validate(currentPage, newAnswers);
 
     req.session.cumulativeAnswers = cumulativeAnswers;
-    req.session.validatorErrors = validatorErrors;
+    req.session.validatorErrors = validatorErrors.errors;
 
-    if (validatorErrors) {
+    if (Object.keys(validatorErrors.errors).length > 0) {
       // if there are errors, redirect back to the current page
       res.redirect(currentPage);
     } else if (
