@@ -109,9 +109,9 @@ describe("path.service editPath()", () => {
     });
 
     it("throws an error if a sent answer ID does not exist within that page in the JSON", () => {
-      expect(() => editPath(pathJSON, ["example-Invalid-Answer"])).toThrow(
-        Error
-      );
+      expect(() =>
+        editPath(pathJSON, ["example-Invalid-Answer"], "/index")
+      ).toThrow(Error);
     });
 
     it("does not deactivate or reactivate the current page", () => {
