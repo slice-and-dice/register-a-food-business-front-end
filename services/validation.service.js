@@ -5,7 +5,8 @@ const {
   validateDeclaration,
   validatePostCode,
   validateEstablishmentFirstLine,
-  validateStreet
+  validateStreet,
+  validateName
 } = require("./validationFunctions");
 
 const errorMessages = {
@@ -14,7 +15,9 @@ const errorMessages = {
   declaration3: "You must tick all the declarations before continuing",
   establishment_postcode: "Not a valid Postcode",
   establishment_first_line: "Not a valid First Line of address",
-  establishment_street: "Not a valid street name"
+  establishment_street: "Not a valid street name",
+  operator_first_name: "Not a valid first name",
+  operator_last_name: "Not a valid last name"
 };
 
 const schema = {
@@ -37,6 +40,19 @@ const schema = {
       establishment_street: {
         type: "string",
         validation: validateStreet
+      }
+    }
+  },
+  "/operator-name": {
+    type: "object",
+    properties: {
+      operator_first_name: {
+        type: "string",
+        validation: validateName
+      },
+      operator_last_name: {
+        type: "string",
+        validation: validateName
       }
     }
   }

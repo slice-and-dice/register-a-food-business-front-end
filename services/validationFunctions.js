@@ -19,6 +19,14 @@ const validateEstablishmentFirstLine = firstLine => {
   return false;
 };
 
+const validateName = name => {
+  if (typeof name === "string") {
+    if (isEmpty(trim(name))) return false;
+    return isAscii(name) ? true : false;
+  }
+  return false;
+};
+
 const validateStreet = street => {
   if (typeof street === "string") {
     if (isEmpty(street)) return true;
@@ -32,5 +40,6 @@ module.exports = {
   validateDeclaration,
   validatePostCode,
   validateEstablishmentFirstLine,
-  validateStreet
+  validateStreet,
+  validateName
 };
