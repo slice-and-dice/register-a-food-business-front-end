@@ -159,14 +159,14 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-14 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-14 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,14 +181,14 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
+  .emotion-13 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -197,7 +197,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-11 {
+.emotion-12 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -207,22 +207,22 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-12 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-11:first-child {
+  .emotion-12:first-child {
     margin-left: 0;
   }
 
-  .emotion-11:last-child {
+  .emotion-12:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-12 {
     width: 66.6667%;
   }
 }
@@ -247,6 +247,73 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 @media print {
   .emotion-10 {
     font-size: 16px;
+  }
+}
+
+.emotion-11 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-11:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-11:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-11:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-11:visited {
+  color: #00823b;
+}
+
+.emotion-11 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-11 {
+    margin-bottom: 20px;
   }
 }
 
@@ -319,13 +386,13 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
     className="emotion-9"
   />
   <div
-    className="emotion-13"
+    className="emotion-14"
   >
     <div
-      className="emotion-12"
+      className="emotion-13"
     >
       <div
-        className="emotion-11"
+        className="emotion-12"
       >
         <h3
           className="emotion-10"
@@ -333,6 +400,19 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
         >
           Registration summary
         </h3>
+        <form
+          action="/continue/registration-summary"
+          method="post"
+        >
+          <button
+            className="emotion-11"
+            disabled={false}
+            start={false}
+            type="submit"
+          >
+            Continue
+          </button>
+        </form>
       </div>
     </div>
   </div>
