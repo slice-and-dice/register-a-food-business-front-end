@@ -1,6 +1,6 @@
 {
   "name": "register_a_food_business_front_end",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "scripts": {
     "dev": "node app.server.js",
     "build": "next build",
