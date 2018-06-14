@@ -31,31 +31,85 @@ describe("<SummaryTable />", () => {
   });
 
   describe("establishment address table row", () => {
-    const testEstablishmentAddressAnswers = {
-      establishment_first_line: "Example first line"
+    const testEstablishmentAddressAnswersMinimum = {
+      establishment_first_line: "Example first line",
+      establishment_postcode: "AA11 1AA"
+    };
+
+    const testEstablishmentAddressAnswersComprehensive = {
+      establishment_first_line: "Example first line",
+      establishment_street: "Street name",
+      establishment_town: "Town",
+      establishment_postcode: "AA11 1AA"
     };
 
     it("renders when the establishment_first_line answer is provided", () => {
       const wrapper = mount(
-        <SummaryTable {...testEstablishmentAddressAnswers} />
+        <SummaryTable {...testEstablishmentAddressAnswersMinimum} />
       );
-      const row = wrapper.find("div#establishmentAddress");
+      const row = wrapper.find("Row#establishmentAddress");
       expect(row.length).toBe(1);
     });
 
     it("does not render when the establishment_first_line answer is not provided", () => {
       const wrapper = mount(<SummaryTable {...testMissingAnswers} />);
-      const row = wrapper.find("div#establishmentAddress");
+      const row = wrapper.find("Row#establishmentAddress");
       expect(row.length).toBe(0);
     });
 
-    it("contains all of the establishment address information", () => {
-      const wrapper = mount(
-        <SummaryTable {...testEstablishmentAddressAnswers} />
-      );
-      // const text = wrapper.find("div#establishmentAddress");
+    describe("when the minimum information is provided", () => {
+      it("contains the establishment address first line", () => {
+        const wrapper = mount(
+          <SummaryTable {...testEstablishmentAddressAnswersMinimum} />
+        );
+        const firstLine = wrapper.find("div#establishmentFirstLine").text();
+        expect(firstLine).not.toBe("");
+      });
 
-      // expect(text).toBe(0);
+      it("contains the establishment address postcode", () => {
+        const wrapper = mount(
+          <SummaryTable {...testEstablishmentAddressAnswersMinimum} />
+        );
+
+        const postcode = wrapper.find("div#establishmentPostcode").text();
+        expect(postcode).not.toBe("");
+      });
+
+      it("does not contain the establishment address street", () => {
+        const wrapper = mount(
+          <SummaryTable {...testEstablishmentAddressAnswersMinimum} />
+        );
+        const street = wrapper.find("div#establishmentStreet").text();
+        expect(street).toBe("");
+      });
+
+      it("does not contain the establishment address town", () => {
+        const wrapper = mount(
+          <SummaryTable {...testEstablishmentAddressAnswersMinimum} />
+        );
+
+        const town = wrapper.find("div#establishmentTown").text();
+        expect(town).toBe("");
+      });
+    });
+
+    describe("when comprehensive information is provided", () => {
+      it("contains the establishment address street", () => {
+        const wrapper = mount(
+          <SummaryTable {...testEstablishmentAddressAnswersComprehensive} />
+        );
+        const street = wrapper.find("div#establishmentStreet").text();
+        expect(street).not.toBe("");
+      });
+
+      it("contains the establishment address town", () => {
+        const wrapper = mount(
+          <SummaryTable {...testEstablishmentAddressAnswersComprehensive} />
+        );
+
+        const town = wrapper.find("div#establishmentTown").text();
+        expect(town).not.toBe("");
+      });
     });
   });
 });

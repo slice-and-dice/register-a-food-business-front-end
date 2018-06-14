@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,13 +19,13 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,7 +40,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-9 {
     padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -86,22 +86,22 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 .emotion-3 {
-  color: #005ea5;
-  padding: 3px;
-  margin: -3px;
-  outline-color: transparent;
-  display: inline-block;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-3:hover {
+  border-bottom-color: #ffffff;
 }
 
 .emotion-3:focus {
-  background-color: #ffbf47;
   outline: 3px solid #ffbf47;
-}
-
-.emotion-3:visited {
-  color: #2e358b;
 }
 
 .emotion-2 {
@@ -119,7 +119,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   display: inline-block;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,7 +135,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-8 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -146,7 +146,66 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-7 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-7:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-7:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus {
+  color: #0b0c0c;
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus:hover {
+  border-bottom-color: #0b0c0c;
+}
+
+.emotion-6 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+}
+
+@media print {
+  .emotion-6 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-11 {
   border-bottom: 10px solid #005ea5;
   max-width: 960px;
   margin: 0 auto;
@@ -154,19 +213,19 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-11 {
     width: calc(100% - 60px);
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-23 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,14 +240,14 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-20 {
+.emotion-22 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-20 {
+  .emotion-22 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -197,7 +256,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-19 {
+.emotion-21 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -207,27 +266,27 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-21 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-19:first-child {
+  .emotion-21:first-child {
     margin-left: 0;
   }
 
-  .emotion-19:last-child {
+  .emotion-21:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-21 {
     width: 66.6667%;
   }
 }
 
-.emotion-12 {
+.emotion-14 {
   background-color: #28a197;
   color: #ffffff;
   padding: 30px;
@@ -235,12 +294,12 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
+  .emotion-14 {
     margin-bottom: 15px;
   }
 }
 
-.emotion-10 {
+.emotion-12 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -251,13 +310,13 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 48px;
     line-height: 50px;
   }
 }
 
-.emotion-11 {
+.emotion-13 {
   font-family: "nta",Arial,sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -269,13 +328,13 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-13 {
     font-size: 36px;
     line-height: 40px;
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -283,24 +342,24 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-13 > p {
+.emotion-15 > p {
   margin: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-15 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-15 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -310,7 +369,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-16 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -318,30 +377,30 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-14 {
+  .emotion-16 {
     font-size: 16px;
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   color: #005ea5;
 }
 
-.emotion-17:hover {
+.emotion-19:hover {
   color: #2b8cc4;
 }
 
-.emotion-17:visited {
+.emotion-19:visited {
   color: #4c2c92;
 }
 
 <div>
   <div
-    className="emotion-8"
+    className="emotion-10"
     color="#ffffff"
   >
     <div
-      className="emotion-7"
+      className="emotion-9"
     >
       <div
         className="emotion-5"
@@ -351,9 +410,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
         >
           <a
             className="emotion-3"
-            disabled={undefined}
             href="https://gov.uk"
-            onClick={undefined}
             target="new"
           >
             <div
@@ -396,32 +453,46 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
         </div>
       </div>
       <div
-        className="emotion-6"
-      />
+        className="emotion-8"
+      >
+        <a
+          className="emotion-7"
+          href="https://gov.uk"
+          target="new"
+        >
+          <h3
+            className="emotion-6"
+            mb={0}
+            size={undefined}
+          >
+            Register a food business
+          </h3>
+        </a>
+      </div>
     </div>
   </div>
   <div
-    className="emotion-9"
+    className="emotion-11"
   />
   <div
-    className="emotion-21"
+    className="emotion-23"
   >
     <div
-      className="emotion-20"
+      className="emotion-22"
     >
       <div
-        className="emotion-19"
+        className="emotion-21"
       >
         <div
-          className="emotion-12"
+          className="emotion-14"
         >
           <h2
-            className="emotion-10"
+            className="emotion-12"
           >
             Application complete
           </h2>
           <div
-            className="emotion-11"
+            className="emotion-13"
           >
             Your reference number
             <br />
@@ -429,20 +500,20 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           </div>
         </div>
         <div
-          className="emotion-13"
+          className="emotion-15"
         >
           <p>
             We have sent you a confirmation email.
           </p>
         </div>
         <h3
-          className="emotion-14"
+          className="emotion-16"
           size={undefined}
         >
           What happens next
         </h3>
         <div
-          className="emotion-13"
+          className="emotion-15"
         >
           <p>
             We've sent your application to 
@@ -453,18 +524,18 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           </p>
         </div>
         <div
-          className="emotion-13"
+          className="emotion-15"
         >
           <p>
             They will contact you either to confirm your registration, or to ask for more information.
           </p>
         </div>
         <div
-          className="emotion-13"
+          className="emotion-15"
         >
           <p>
             <a
-              className="emotion-17"
+              className="emotion-19"
               href="https://www.gov.uk/service-manual/design/feedback-pages"
             >
               What did you think of this service?
