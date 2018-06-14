@@ -6,18 +6,22 @@ const {
   validatePostCode,
   validateEstablishmentFirstLine,
   validateStreet,
-  validateName
+  validateName,
+  validateTown,
+  validateEstablishmentTradingName
 } = require("./validationFunctions");
 
 const errorMessages = {
   declaration1: "You must tick all the declarations before continuing",
   declaration2: "You must tick all the declarations before continuing",
   declaration3: "You must tick all the declarations before continuing",
-  establishment_postcode: "Not a valid Postcode",
-  establishment_first_line: "Not a valid First Line of address",
-  establishment_street: "Not a valid street name",
   operator_first_name: "Not a valid first name",
-  operator_last_name: "Not a valid last name"
+  operator_last_name: "Not a valid last name",
+  establishment_first_line: "Not a valid first line of address",
+  establishment_street: "Not a valid street name",
+  establishment_town: "Not a valid town name",
+  establishment_postcode: "Not a valid postcode",
+  establishment_trading_name: "Not a valid establishment trading name"
 };
 
 const schema = {
@@ -32,7 +36,10 @@ const schema = {
   "/establishment-address": {
     type: "object",
     properties: {
-      establishment_postcode: { type: "string", validation: validatePostCode },
+      establishment_postcode: {
+        type: "string",
+        validation: validatePostCode
+      },
       establishment_first_line: {
         type: "string",
         validation: validateEstablishmentFirstLine
@@ -40,6 +47,19 @@ const schema = {
       establishment_street: {
         type: "string",
         validation: validateStreet
+      },
+      establishment_town: {
+        type: "string",
+        validation: validateTown
+      }
+    }
+  },
+  "/establishment-trading-name": {
+    type: "object",
+    properties: {
+      establishment_trading_name: {
+        type: "string",
+        validation: validateEstablishmentTradingName
       }
     }
   },
@@ -57,7 +77,6 @@ const schema = {
     }
   }
 };
-
 const validator = new Validator();
 
 // Set validation rules on validator

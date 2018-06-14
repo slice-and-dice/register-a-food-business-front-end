@@ -3,6 +3,8 @@ const {
   validateDeclaration,
   validateEstablishmentFirstLine,
   validateStreet,
+  validateTown,
+  validateEstablishmentTradingName,
   validateName
 } = require("../services/validationFunctions");
 
@@ -126,7 +128,6 @@ describe("Function: validateStreet", () => {
   it("Should return false when type is not string", () => {
     // Arrange
     const badStreetName = [[], {}, null, undefined];
-
     // Act
     badStreetName.forEach(streetName => {
       // Assert
@@ -180,16 +181,67 @@ describe("Function: validateStreet", () => {
   });
 });
 
+describe("Function: validateTown", () => {
+  it("Should return false when type is not string", () => {
+    // Arrange
+    const badTownName = [[], {}, null, undefined];
+    // Act
+    badTownName.forEach(townName => {
+      // Assert
+      const valid = validateTown(townName);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return true when input is empty", () => {
+    // Arrange
+    const town = "";
+    // Act
+    const valid = validateTown(town);
+    //Assert
+    expect(valid).toBe(true);
+  });
+
+  it("Should return false when input is blank string", () => {
+    // Arrange
+    const town = "    ";
+    // Act
+    const valid = validateTown(town);
+    // Assert
+    expect(valid).toBe(false);
+  });
+
+  it("Should return false if string contains non Ascii chars", () => {
+    // Arrange
+    const badTowns = ["§", "¥", "«® ¢"];
+    // Act
+    badTowns.forEach(town => {
+      // Assert
+      const valid = validateTown(town);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return true when input is Ascii string", () => {
+    // Arrange
+    const goodTowns = ["London", "Lazy Town", "Joe's Jardin"];
+    // Act
+    goodTowns.forEach(town => {
+      // Assert
+      const valid = validateTown(town);
+      expect(valid).toBe(true);
+    });
+  });
+});
+
 describe("Function: validate first & last name", () => {
   it("Should return false when type is not string", () => {
     // Arrange
     const badName = [[], {}, null, undefined];
-
     // Act
     badName.forEach(name => {
       // Assert
       const valid = validateName(name);
-      expect(valid).toBe(false);
     });
   });
 
@@ -220,9 +272,63 @@ describe("Function: validate first & last name", () => {
     const badNames = ["§", "¥", "«® ¢"];
     //Act
     badNames.forEach(name => {
+      //Assert
       const valid = validateName(name);
       expect(valid).toBe(false);
     });
-    //Assert
+  });
+});
+
+describe("Function: validateEstablishmentTradingName", () => {
+  it("Should return false if type is not string", () => {
+    // Arrange
+    const badTradingName = [[], {}, undefined, null];
+
+    // Act
+    badTradingName.forEach(tradingName => {
+      // Assert
+      const valid = validateEstablishmentTradingName(tradingName);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return false if string is empty or contains only blank chars", () => {
+    // Arrange
+    const badTradingNames = ["", " ", "       "];
+
+    // Act
+    badTradingNames.forEach(tradingName => {
+      // Assert
+      const valid = validateEstablishmentTradingName(tradingName);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return false if string contains non Ascii chars", () => {
+    // Arrange
+    const badTradingNames = ["§", "¥", "«® ¢"];
+
+    // Act
+    badTradingNames.forEach(tradingName => {
+      // Assert
+      const valid = validateEstablishmentTradingName(tradingName);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return true if is non empty and Ascii", () => {
+    // Arrange
+    const goodTradingNames = [
+      "Anisha's awesome avacado place",
+      "Joe's Jolly Javahouse",
+      "Django's Disasterous Dump"
+    ];
+
+    // Act
+    goodTradingNames.forEach(tradingName => {
+      // Assert
+      const valid = validateEstablishmentTradingName(tradingName);
+      expect(valid).toBe(true);
+    });
   });
 });
