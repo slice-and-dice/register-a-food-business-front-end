@@ -4,7 +4,7 @@ import SessionWrapper from "../components/SessionWrapper";
 
 const EstablishmentTradingName = props => (
   <FsaLayout>
-    <Header level={2}>New food buisness establishment</Header>
+    <Header level={2}>New food business establishment</Header>
     <form action="/continue/establishment-trading-name" method="post">
       <HiddenText summaryText={"What is an establishment?"}>
         <Paragraph mb={0}>
