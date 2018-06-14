@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SummaryTable /> matches the previous snapshot 1`] = `
+<div>
+  <div
+    id="establishmentAddress"
+  >
+    <p>
+      Establishment address:
+    </p>
+    <p>
+      Example first line
+    </p>
+  </div>
+</div>
+`;
