@@ -3,7 +3,15 @@
     "on": true,
     "switches": {}
   },
+  "/operator-name": {
+    "on": true,
+    "switches": {}
+  },
   "/operator-contact-details": {
+    "on": true,
+    "switches": {}
+  },
+  "/establishment-trading-name": {
     "on": true,
     "switches": {}
   },

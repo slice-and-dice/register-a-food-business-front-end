@@ -12,7 +12,7 @@ const sendRequest = async body => {
 
 module.exports.submit = async cumulativeAnswers => {
   const mutationStringArray = [];
-  for (answer in cumulativeAnswers) {
+  for (let answer in cumulativeAnswers) {
     mutationStringArray.push(`${answer}: "${cumulativeAnswers[answer]}"`);
   }
   const mutationString = mutationStringArray.reduce((a, b) => a + ", " + b);

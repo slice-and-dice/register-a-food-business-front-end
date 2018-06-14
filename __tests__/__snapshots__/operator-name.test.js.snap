@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
+exports[`<OperatorName /> matches the previous snapshot 1`] = `
 .emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -159,14 +159,14 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-24 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-24 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,14 +181,14 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-23 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-23 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -197,7 +197,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-22 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -207,22 +207,22 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-22 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-28:first-child {
+  .emotion-22:first-child {
     margin-left: 0;
   }
 
-  .emotion-28:last-child {
+  .emotion-22:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-22 {
     width: 66.6667%;
   }
 }
@@ -409,7 +409,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
+.emotion-21 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -444,34 +444,34 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-27:hover {
+.emotion-21:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-27:focus {
+.emotion-21:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-27:active {
+.emotion-21:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-27:visited {
+.emotion-21:visited {
   color: #00823b;
 }
 
-.emotion-27 svg {
+.emotion-21 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-21 {
     margin-bottom: 20px;
   }
 }
@@ -545,127 +545,90 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
     className="emotion-9"
   />
   <div
-    className="emotion-30"
+    className="emotion-24"
   >
     <div
-      className="emotion-29"
+      className="emotion-23"
     >
       <div
-        className="emotion-28"
+        className="emotion-22"
       >
         <h2
           className="emotion-10"
           size={undefined}
         >
-          Establishment address
+          What is the operator's name?
         </h2>
-        <details
-          open={true}
-        >
-          <summary
-            className="emotion-12"
-          >
-            <span
-              className="emotion-11"
-            >
-              What is an establishment?
-            </span>
-          </summary>
-          <div
-            className="emotion-14"
-          >
-            <div
-              className="emotion-13"
-            >
-              <p>
-                An establishment is the location of your food business, and the food activities taking place there. If it is a mobile food business, please use the location where it is normally stored overnight.
-              </p>
-            </div>
-          </div>
-        </details>
         <form
-          action="/continue/establishment-address"
+          action="/continue/operator-name"
           method="post"
         >
+          <details
+            open={true}
+          >
+            <summary
+              className="emotion-12"
+            >
+              <span
+                className="emotion-11"
+              >
+                What is a food business operator
+              </span>
+            </summary>
+            <div
+              className="emotion-14"
+            >
+              <div
+                className="emotion-13"
+              >
+                <p>
+                  The food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
+                </p>
+              </div>
+            </div>
+          </details>
           <label
             className="emotion-17"
-            id="establishment_first_line"
+            id="operator_first_name"
           >
             <span
               className="emotion-15"
             >
-              First Line of address
+              First and middle names
             </span>
             <input
               className="emotion-16"
               defaultValue={undefined}
-              name="establishment_first_line"
+              name="operator_first_name"
               type="text"
             />
           </label>
           <br />
           <label
             className="emotion-17"
-            id="establishment_street"
+            id="operator_last_name"
           >
             <span
               className="emotion-15"
             >
-              Street
+              Last name
             </span>
             <input
               className="emotion-16"
               defaultValue={undefined}
-              name="establishment_street"
-              type="text"
-            />
-          </label>
-          <br />
-          <label
-            className="emotion-17"
-            id="establishment_town"
-          >
-            <span
-              className="emotion-15"
-            >
-              Town or city
-            </span>
-            <input
-              className="emotion-16"
-              defaultValue={undefined}
-              name="establishment_town"
-              type="text"
-            />
-          </label>
-          <br />
-          <label
-            className="emotion-17"
-            id="establishment_postcode"
-          >
-            <span
-              className="emotion-15"
-            >
-              Postcode
-            </span>
-            <input
-              className="emotion-16"
-              defaultValue={undefined}
-              name="establishment_postcode"
+              name="operator_last_name"
               type="text"
             />
           </label>
           <br />
           <button
-            className="emotion-27"
+            className="emotion-21"
             disabled={false}
             start={false}
             type="submit"
           >
             Continue
           </button>
-          <p>
-            If you are registering a mobile food business, please use the location where it is normally stored overnight.
-          </p>
         </form>
       </div>
     </div>
