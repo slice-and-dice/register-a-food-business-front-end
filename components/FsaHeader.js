@@ -1,7 +1,8 @@
-import { TopNav, asAnchor } from "govuk-react";
 import CrownIcon from "@govuk-react/icon-crown";
+import { Header } from "govuk-react";
+import TopNav, { asNavLinkAnchor, asTopNavAnchor } from "@govuk-react/top-nav";
 
-const AnchorTag = asAnchor("a");
+const AnchorTag = asTopNavAnchor("a");
 const link = "https://gov.uk";
 
 const Company = (
@@ -12,8 +13,17 @@ const Company = (
   </AnchorTag>
 );
 
-// TODO: links in the TopNav component need to be white rather than purple when visited.
-// TODO: decide whether to add the service name "Register a food business" here as per the prototype.
-const FsaHeader = () => <TopNav company={Company} />;
+const NavAnchor = asNavLinkAnchor("a");
+const ServiceTitle = (
+  <NavAnchor href={link} target="new">
+    <Header mb="0" level={3}>
+      Register a food business
+    </Header>
+  </NavAnchor>
+);
+
+const FsaHeader = () => (
+  <TopNav company={Company} serviceTitle={ServiceTitle} />
+);
 
 export default FsaHeader;
