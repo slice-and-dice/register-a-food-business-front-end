@@ -242,6 +242,7 @@ describe("Function: validate first & last name", () => {
     badName.forEach(name => {
       // Assert
       const valid = validateName(name);
+      expect(valid).toBe(false);
     });
   });
 
