@@ -28,7 +28,7 @@ describe("<OperatorName />", () => {
 
     it("gets given the correct error prop", () => {
       const validatorErrors = {
-        operatorFirstName: "test error"
+        operator_first_name: "test error"
       };
       const wrapper = mount(
         <OperatorName validatorErrors={validatorErrors} cumulativeAnswers />
@@ -46,6 +46,36 @@ describe("<OperatorName />", () => {
       );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
       expect(operatorFirstName.props().input.defaultValue).toBe("default");
+    });
+  });
+
+  describe("operator last name input field", () => {
+    it("renders", () => {
+      const wrapper = mount(<OperatorName validatorErrors cumulativeAnswers />);
+      const operatorLastName = wrapper.find("InputField#operator_last_name");
+      expect(operatorLastName.length).toBe(1);
+    });
+
+    it("gets given the correct error prop", () => {
+      const validatorErrors = {
+        operator_last_name: "test error"
+      };
+      const wrapper = mount(
+        <OperatorName validatorErrors={validatorErrors} cumulativeAnswers />
+      );
+      const operatorLastName = wrapper.find("InputField#operator_last_name");
+      expect(operatorLastName.props().meta.error).toBe("test error");
+    });
+
+    it("gets given the correct default value", () => {
+      const cumulativeAnswers = {
+        operator_last_name: "default"
+      };
+      const wrapper = mount(
+        <OperatorName validatorErrors cumulativeAnswers={cumulativeAnswers} />
+      );
+      const operatorLastName = wrapper.find("InputField#operator_last_name");
+      expect(operatorLastName.props().input.defaultValue).toBe("default");
     });
   });
 });
