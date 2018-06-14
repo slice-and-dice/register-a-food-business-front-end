@@ -1,4 +1,12 @@
-const { isPostalCode, isAscii, isEmpty, trim } = require("validator");
+const {
+  isPostalCode,
+  isAscii,
+  isEmpty,
+  isEmail,
+  trim,
+  isNumeric,
+  blacklist
+} = require("validator");
 
 const validateDeclaration = declaration => {
   return declaration ? true : false;
@@ -53,6 +61,26 @@ const validateEstablishmentTradingName = tradingName => {
   return false;
 };
 
+const validateEmail = email => {
+  if (typeof email === "string") {
+    if (isEmpty(trim(email))) return false;
+    return isEmail(email) ? true : false;
+  }
+  return false;
+};
+
+const validatePhoneNumber = phoneNumber => {
+  if (typeof phoneNumber === "string") {
+    // let validNumber = blacklist(phoneNumber, "-()");
+    phoneNumber = phoneNumber.split(' ').join('');
+    if (phoneNumber.startsWith("+")) {
+      phoneNumber = phoneNumber.substring(1);
+    }
+    return isNumeric(phoneNumber) ? true : false;
+  }
+  return false;
+};
+
 module.exports = {
   validateDeclaration,
   validateName,
@@ -60,5 +88,7 @@ module.exports = {
   validateStreet,
   validateTown,
   validatePostCode,
-  validateEstablishmentTradingName
+  validateEstablishmentTradingName,
+  validateEmail,
+  validatePhoneNumber
 };

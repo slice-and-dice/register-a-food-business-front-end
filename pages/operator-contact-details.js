@@ -15,16 +15,44 @@ const OperatorContactDetails = props => (
       </HiddenText>
       <InputField
         input={{
-          name: "operator_contact_email",
-          defaultValue: props.cumulativeAnswers.operator_contact_email
+          name: "operator_primary_number",
+          defaultValue: props.cumulativeAnswers.operator_primary_number
         }}
-        id="operator_contact_email"
+        id="operator_primary_number"
+        meta={{
+          touched: true,
+          error: props.validatorErrors["operator_primary_number"]
+        }}
+      >
+        Primary phone number
+      </InputField>
+      <br />
+      <InputField
+        input={{
+          name: "operator_secondary_number",
+          defaultValue: props.cumulativeAnswers.operator_secondary_number
+        }}
+        id="operator_secondary_number"
+        meta={{
+          touched: true,
+          error: props.validatorErrors["operator_secondary_number"]
+        }}
+      >
+        Secondary phone number (optional)
+      </InputField>
+      <br />
+      <InputField
+        input={{
+          name: "operator_email",
+          defaultValue: props.cumulativeAnswers.operator_email
+        }}
+        id="operator_email"
         hint={[
           "Your email address will be used to update you regarding policy or legal changes which could affect your food business."
         ]}
         meta={{
           touched: true,
-          error: props.validatorErrors["operator_contact_email"]
+          error: props.validatorErrors["operator_email"]
         }}
       >
         Email address

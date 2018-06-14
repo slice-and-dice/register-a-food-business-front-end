@@ -8,7 +8,9 @@ const {
   validateStreet,
   validateName,
   validateTown,
-  validateEstablishmentTradingName
+  validateEstablishmentTradingName,
+  validatePhoneNumber,
+  validateEmail
 } = require("./validationFunctions");
 
 const errorMessages = {
@@ -17,6 +19,9 @@ const errorMessages = {
   declaration3: "You must tick all the declarations before continuing",
   operator_first_name: "Not a valid first name",
   operator_last_name: "Not a valid last name",
+  operator_primary_number: "Not a valid phone number",
+  operator_secondary_number: "Not a valid phone number",
+  operator_email: "Not a valid email address",
   establishment_first_line: "Not a valid first line of address",
   establishment_street: "Not a valid street name",
   establishment_town: "Not a valid town name",
@@ -73,6 +78,23 @@ const schema = {
       operator_last_name: {
         type: "string",
         validation: validateName
+      }
+    }
+  },
+  "/operator-contact-details": {
+    type: "object",
+    properties: {
+      operator_primary_number: {
+        type: "string",
+        validation: validatePhoneNumber
+      },
+      operator_secondary_number: {
+        type: "string",
+        validation: validatePhoneNumber
+      },
+      operator_email: {
+        type: "string",
+        validation: validateEmail
       }
     }
   }
