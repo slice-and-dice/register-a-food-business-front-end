@@ -398,8 +398,9 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
           className="emotion-10"
           size={undefined}
         >
-          Registration summary
+          Please check that the details you entered are correct.
         </h3>
+        <div />
         <form
           action="/continue/registration-summary"
           method="post"
