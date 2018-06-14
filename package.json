@@ -8,7 +8,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "node server.js",
-    "prod-start": "NODE_ENV=production node app.server.js",
+    "prod-start": "NODE_ENV=production node server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./",
