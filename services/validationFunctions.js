@@ -81,6 +81,19 @@ const validatePhoneNumber = phoneNumber => {
   return false;
 };
 
+const validatePhoneNumberOptional = phoneNumber => {
+  if (typeof phoneNumber === "string") {
+    if (isEmpty(phoneNumber)) return true;
+    // let validNumber = blacklist(phoneNumber, "-()");
+    phoneNumber = phoneNumber.split(' ').join('');
+    if (phoneNumber.startsWith("+")) {
+      phoneNumber = phoneNumber.substring(1);
+    }
+    return isNumeric(phoneNumber) ? true : false;
+  }
+  return false;
+};
+
 module.exports = {
   validateDeclaration,
   validateName,
@@ -90,5 +103,6 @@ module.exports = {
   validatePostCode,
   validateEstablishmentTradingName,
   validateEmail,
-  validatePhoneNumber
+  validatePhoneNumber,
+  validatePhoneNumberOptional
 };

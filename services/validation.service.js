@@ -10,6 +10,7 @@ const {
   validateTown,
   validateEstablishmentTradingName,
   validatePhoneNumber,
+  validatePhoneNumberOptional,
   validateEmail
 } = require("./validationFunctions");
 
@@ -90,7 +91,7 @@ const schema = {
       },
       operator_secondary_number: {
         type: "string",
-        validation: validatePhoneNumber
+        validation: validatePhoneNumberOptional
       },
       operator_email: {
         type: "string",
