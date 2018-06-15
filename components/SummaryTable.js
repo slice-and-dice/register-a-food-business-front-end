@@ -6,19 +6,19 @@ const SummaryTable = props => (
     body={
       <React.Fragment>
         {props.establishment_first_line ? (
-          <Table.Row id="establishmentAddress">
+          <Table.Row id="establishmentAddressRow">
             <Table.CellHeader>Establishment address</Table.CellHeader>
             <Table.Cell>
-              <div id="establishmentFirstLine">
+              <div id="establishment_first_line">
                 {props.establishment_first_line}
               </div>
-              <div id="establishmentStreet">
+              <div id="establishment_street">
                 {props.establishment_street || null}
               </div>
-              <div id="establishmentTown">
+              <div id="establishment_town">
                 {props.establishment_town || null}
               </div>
-              <div id="establishmentPostcode">
+              <div id="establishment_postcode">
                 {props.establishment_postcode}
               </div>
             </Table.Cell>
