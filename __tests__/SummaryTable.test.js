@@ -71,7 +71,11 @@ describe("<SummaryTable />", () => {
 
   describe("when given a comprehensive set of answers", () => {
     it("the number of table rows matches the allTableRows array", () => {
-      const rows = wrapperComprehensive.find(`Row`);
+      const rows = wrapperComprehensive
+        .find("Row")
+        .findWhere(row => row.prop("TITLE") !== true)
+        .find("Row");
+
       expect(rows.length).toEqual(allTableRows.length);
     });
 
