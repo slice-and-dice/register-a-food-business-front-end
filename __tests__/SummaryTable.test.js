@@ -7,12 +7,19 @@ import { createSerializer } from "jest-emotion";
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 // a complete list of the summary table row IDs
-const allTableRows = ["establishmentAddressRow"];
+const allTableRows = [
+  "establishmentAddressRow",
+  "establishmentTradingNameRow",
+  "operatorNameRow"
+];
 
 // the complete set of possible mandatory answer fields with example data
 const testMandatoryAnswers = {
   establishment_first_line: "Example first line",
-  establishment_postcode: "AA11 1AA"
+  establishment_postcode: "AA11 1AA",
+  establishment_trading_name: "Example trading name",
+  operator_first_name: "John",
+  operator_last_name: "Appleseed"
 };
 
 // a supplementary set of all optional answer fields with example data
@@ -63,6 +70,11 @@ describe("<SummaryTable />", () => {
   });
 
   describe("when given a comprehensive set of answers", () => {
+    it("the number of table rows matches the allTableRows array", () => {
+      const rows = wrapperComprehensive.find(`Row`);
+      expect(rows.length).toEqual(allTableRows.length);
+    });
+
     it("renders all table rows", () => {
       allTableRows.forEach(tableRowName => {
         const row = wrapperComprehensive.find(`Row#${tableRowName}`);
