@@ -5,7 +5,9 @@ const {
   validateStreet,
   validateTown,
   validateEstablishmentTradingName,
-  validateName
+  validateName,
+  validatePhoneNumber,
+  validateEmail
 } = require("../services/validationFunctions");
 
 describe("Function: validateDeclaration", () => {
@@ -280,6 +282,53 @@ describe("Function: validate first & last name", () => {
   });
 });
 
+describe("Function: validate primary and secondary contact number", () => {
+  it("Should return false when type is not string", () => {
+    // Arrange
+    const badNumber = [[], {}, null, undefined];
+    // Act
+    badNumber.forEach(number => {
+      // Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return true when the input is non-empty and numeric", () => {
+    //Arrange
+    const goodNumber = ["447462458575", "2874827482", "110248940242920"];
+    //Act
+    goodNumber.forEach(number => {
+      //Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(true);
+    });
+  });
+
+  it("Should return false if string is empty or contains only blank chars", () => {
+    //Arrange
+    const badNumbers = ["", " ", "       "];
+    //Act
+    badNumbers.forEach(number => {
+      //Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(false);
+    });
+
+  });
+
+  it("Should return false if string contains non numeric characters", () => {
+    //Arrange
+    const badNumbers = ["djdheiu7373", "wuyewixx@$", ".+()-9w"];
+    //Act
+    badNumbers.forEach(number => {
+      //Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(false);
+    });
+  });
+});
+
 describe("Function: validateEstablishmentTradingName", () => {
   it("Should return false if type is not string", () => {
     // Arrange
@@ -329,6 +378,58 @@ describe("Function: validateEstablishmentTradingName", () => {
     goodTradingNames.forEach(tradingName => {
       // Assert
       const valid = validateEstablishmentTradingName(tradingName);
+      expect(valid).toBe(true);
+    });
+  });
+});
+
+describe("Function: validateEmail", () => {
+  it("Should return false if type is not string", () => {
+    // Arrange
+    const badEmails = [[], {}, undefined, null];
+
+    // Act
+    badEmails.forEach(email => {
+      // Assert
+      const valid = validateEmail(email);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return false if string is empty or contains only blank chars", () => {
+    // Arrange
+    const badEmails = ["", " ", "       "];
+
+    // Act
+    badEmails.forEach(email => {
+      // Assert
+      const valid = validateEmail(email);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return false if string is not a valid e-mail", () => {
+    // Arrange
+    const badEmails = ["bademail.com", "bademail@bademail", "iama bademail1"];
+    // Act
+    badEmails.forEach(email => {
+      // Assert
+      const valid = validateEmail(email);
+      expect(valid).toBe(false);
+    });
+  });
+
+  it("Should return true if is non empty and valid email address", () => {
+    // Arrange
+    const goodEmails = [
+      "anishasawesome@avacado.com",
+      "joejolly1@gmail.co.uk",
+      "django123@hotmail.com"
+    ];
+    // Act
+    goodEmails.forEach(email => {
+      // Assert
+      const valid = validateEmail(email);
       expect(valid).toBe(true);
     });
   });
