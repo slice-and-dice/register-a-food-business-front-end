@@ -106,9 +106,9 @@ describe("<SummaryTable />", () => {
     });
 
     it("contains empty strings for every optional answer", () => {
-      for (let answerID in testMandatoryAnswers) {
+      for (let answerID in testOptionalAnswers) {
         const text = wrapperMinimum.find(`#${answerID}`).text();
-        expect(text).not.toBe("");
+        expect(text).toBe("");
       }
     });
   });
