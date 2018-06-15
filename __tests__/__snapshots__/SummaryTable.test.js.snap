@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-8 {
+.emotion-5 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-5 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -62,7 +62,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 <table
-  className="emotion-8"
+  className="emotion-5"
 >
   <caption
     className="emotion-0"
@@ -101,35 +101,6 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           id="establishment_postcode"
         >
           AA11 1AA
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="emotion-3"
-      id="declarationsRow"
-    >
-      <th
-        className="emotion-1"
-      >
-        Declarations
-      </th>
-      <td
-        className="emotion-1"
-      >
-        <div
-          id="declaration1"
-        >
-          I declare that 1
-        </div>
-        <div
-          id="declaration2"
-        >
-          I declare that 2
-        </div>
-        <div
-          id="declaration3"
-        >
-          I declare that 3
         </div>
       </td>
     </tr>

@@ -7,15 +7,12 @@ import { createSerializer } from "jest-emotion";
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 // a complete list of the summary table row IDs
-const allTableRows = ["establishmentAddressRow", "declarationsRow"];
+const allTableRows = ["establishmentAddressRow"];
 
 // the complete set of possible mandatory answer fields with example data
 const testMandatoryAnswers = {
   establishment_first_line: "Example first line",
-  establishment_postcode: "AA11 1AA",
-  declaration1: "I declare that 1",
-  declaration2: "I declare that 2",
-  declaration3: "I declare that 3"
+  establishment_postcode: "AA11 1AA"
 };
 
 // a supplementary set of all optional answer fields with example data
