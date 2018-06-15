@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Index /> matches the previous snapshot 1`] = `
-.emotion-8 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,13 +19,13 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,15 +33,15 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(100% - 15px);
+  width: calc(100% - 30px);
   max-width: 960px;
-  padding: 10px 15px;
+  padding: calc(10px * 0.8) 15px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
-    padding: 10px 0;
+  .emotion-9 {
+    padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -86,22 +86,22 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 .emotion-3 {
-  color: #005ea5;
-  padding: 3px;
-  margin: -3px;
-  outline-color: transparent;
-  display: inline-block;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-3:hover {
+  border-bottom-color: #ffffff;
 }
 
 .emotion-3:focus {
-  background-color: #ffbf47;
   outline: 3px solid #ffbf47;
-}
-
-.emotion-3:visited {
-  color: #2e358b;
 }
 
 .emotion-2 {
@@ -119,7 +119,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   display: inline-block;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,7 +135,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-8 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -146,27 +146,86 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-9 {
-  border-bottom: 10px solid #005ea5;
-  max-width: 960px;
-  margin: 0 auto;
-  width: calc(100% - 15px);
+.emotion-7 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-7:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-7:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus {
+  color: #0b0c0c;
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus:hover {
+  border-bottom-color: #0b0c0c;
+}
+
+.emotion-6 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-9 {
+  .emotion-6 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+}
+
+@media print {
+  .emotion-6 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-11 {
+  border-bottom: 10px solid #005ea5;
+  max-width: 960px;
+  margin: 0 auto;
+  width: calc(100% - 30px);
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-11 {
     width: calc(100% - 60px);
   }
 }
 
-.emotion-16 {
+.emotion-18 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-18 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -181,14 +240,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-17 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-17 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -197,7 +256,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -207,27 +266,27 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-16 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-14:first-child {
+  .emotion-16:first-child {
     margin-left: 0;
   }
 
-  .emotion-14:last-child {
+  .emotion-16:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-16 {
     width: 66.6667%;
   }
 }
 
-.emotion-10 {
+.emotion-12 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -237,7 +296,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 48px;
     line-height: 1.0416666666666667;
     margin-bottom: 30px;
@@ -245,12 +304,12 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-10 {
+  .emotion-12 {
     font-size: 18px;
   }
 }
 
-.emotion-11 {
+.emotion-13 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -260,7 +319,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-11 {
+  .emotion-13 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -268,12 +327,12 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-11 {
+  .emotion-13 {
     font-size: 16px;
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -308,45 +367,45 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-13:hover {
+.emotion-15:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-13:focus {
+.emotion-15:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-13:active {
+.emotion-15:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-13:visited {
+.emotion-15:visited {
   color: #00823b;
 }
 
-.emotion-13 svg {
+.emotion-15 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-15 {
     margin-bottom: 20px;
   }
 }
 
 <div>
   <div
-    className="emotion-8"
+    className="emotion-10"
     color="#ffffff"
   >
     <div
-      className="emotion-7"
+      className="emotion-9"
     >
       <div
         className="emotion-5"
@@ -356,9 +415,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
         >
           <a
             className="emotion-3"
-            disabled={undefined}
             href="https://gov.uk"
-            onClick={undefined}
             target="new"
           >
             <div
@@ -401,24 +458,38 @@ exports[`<Index /> matches the previous snapshot 1`] = `
         </div>
       </div>
       <div
-        className="emotion-6"
-      />
+        className="emotion-8"
+      >
+        <a
+          className="emotion-7"
+          href="https://gov.uk"
+          target="new"
+        >
+          <h3
+            className="emotion-6"
+            mb={0}
+            size={undefined}
+          >
+            Register a food business
+          </h3>
+        </a>
+      </div>
     </div>
   </div>
   <div
-    className="emotion-9"
+    className="emotion-11"
   />
   <div
-    className="emotion-16"
+    className="emotion-18"
   >
     <div
-      className="emotion-15"
+      className="emotion-17"
     >
       <div
-        className="emotion-14"
+        className="emotion-16"
       >
         <h1
-          className="emotion-10"
+          className="emotion-12"
           size={undefined}
         >
           Register a food business
@@ -437,7 +508,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           During this registration, you may come across a few specialist terms, which we have described below:
         </p>
         <h3
-          className="emotion-11"
+          className="emotion-13"
           size={undefined}
         >
           Food business operator
@@ -446,7 +517,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
         </p>
         <h3
-          className="emotion-11"
+          className="emotion-13"
           size={undefined}
         >
           Establishment
@@ -459,7 +530,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           method="post"
         >
           <button
-            className="emotion-13"
+            className="emotion-15"
             disabled={false}
             start={false}
             type="submit"
