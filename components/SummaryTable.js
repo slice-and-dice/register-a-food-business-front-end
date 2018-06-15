@@ -24,6 +24,17 @@ const SummaryTable = props => (
             </Table.Cell>
           </Table.Row>
         ) : null}
+
+        {props.declaration1 ? (
+          <Table.Row id="declarationsRow">
+            <Table.CellHeader>Declarations</Table.CellHeader>
+            <Table.Cell>
+              <div id="declaration1">{props.declaration1}</div>
+              <div id="declaration2">{props.declaration2}</div>
+              <div id="declaration3">{props.declaration3}</div>
+            </Table.Cell>
+          </Table.Row>
+        ) : null}
       </React.Fragment>
     }
   />

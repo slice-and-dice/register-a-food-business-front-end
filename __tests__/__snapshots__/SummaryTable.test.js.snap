@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-2 {
+.emotion-8 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -38,14 +38,101 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-1 {
+  border: 0;
+  border-bottom: 1px solid #bfc1c3;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 0.63158em 1.05263em 0.47368em 0;
+  text-align: left;
+  text-transform: none;
+}
+
+.emotion-1:last-child {
+  padding-right: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-1 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
 <table
-  className="emotion-2"
+  className="emotion-8"
 >
   <caption
     className="emotion-0"
   />
   <tbody
-    className="emotion-1"
-  />
+    className="emotion-3"
+  >
+    <tr
+      className="emotion-3"
+      id="establishmentAddressRow"
+    >
+      <th
+        className="emotion-1"
+      >
+        Establishment address
+      </th>
+      <td
+        className="emotion-1"
+      >
+        <div
+          id="establishment_first_line"
+        >
+          Example first line
+        </div>
+        <div
+          id="establishment_street"
+        >
+          Street name
+        </div>
+        <div
+          id="establishment_town"
+        >
+          Town
+        </div>
+        <div
+          id="establishment_postcode"
+        >
+          AA11 1AA
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-3"
+      id="declarationsRow"
+    >
+      <th
+        className="emotion-1"
+      >
+        Declarations
+      </th>
+      <td
+        className="emotion-1"
+      >
+        <div
+          id="declaration1"
+        >
+          I declare that 1
+        </div>
+        <div
+          id="declaration2"
+        >
+          I declare that 2
+        </div>
+        <div
+          id="declaration3"
+        >
+          I declare that 3
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 `;

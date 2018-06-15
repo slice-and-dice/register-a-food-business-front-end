@@ -6,38 +6,46 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
-// the complete set of possible answer fields with example data
-const testComprehensiveAnswers = {
+// a complete list of the summary table row IDs
+const allTableRows = ["establishmentAddressRow", "declarationsRow"];
+
+// the complete set of possible mandatory answer fields with example data
+const testMandatoryAnswers = {
   establishment_first_line: "Example first line",
-  establishment_street: "Street name",
-  establishment_town: "Town",
-  establishment_postcode: "AA11 1AA"
+  establishment_postcode: "AA11 1AA",
+  declaration1: "I declare that 1",
+  declaration2: "I declare that 2",
+  declaration3: "I declare that 3"
 };
 
-// the complete set of possible non-optional answer fields with example data
-const testMinimumAnswers = {
-  establishment_first_line: "Example first line",
-  establishment_postcode: "AA11 1AA"
+// a supplementary set of all optional answer fields with example data
+const testOptionalAnswers = {
+  establishment_street: "Street name",
+  establishment_town: "Town"
 };
+
+// the complete set of possible answer fields with example data
+const testComprehensiveAnswers = Object.assign(
+  {},
+  testMandatoryAnswers,
+  testOptionalAnswers
+);
 
 // an invalid answer field
 const testMissingAnswers = {
   not_expected_on_page: "This should never be rendered"
 };
 
+// the summary table mounted with the complete set of non-optional answers
+const wrapperMinimum = mount(<SummaryTable {...testMandatoryAnswers} />);
+
 // the summary table mounted with the complete set of possible answers
 const wrapperComprehensive = mount(
   <SummaryTable {...testComprehensiveAnswers} />
 );
 
-// the summary table mounted with the complete set of non-optional answers
-const wrapperMinimum = mount(<SummaryTable {...testMinimumAnswers} />);
-
 // the summary table mounted without any valid answers
 const wrapperMissing = mount(<SummaryTable {...testMissingAnswers} />);
-
-// a complete list of the summary table row IDs
-const allTableRows = ["establishmentAddressRow"];
 
 describe("<SummaryTable />", () => {
   it("renders without crashing", () => {
@@ -47,7 +55,7 @@ describe("<SummaryTable />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<SummaryTable {...wrapperComprehensive} />)
+      .create(<SummaryTable {...testComprehensiveAnswers} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -85,7 +93,7 @@ describe("<SummaryTable />", () => {
     });
 
     it("contains empty strings for every optional answer", () => {
-      for (let answerID in testMinimumAnswers) {
+      for (let answerID in testMandatoryAnswers) {
         const text = wrapperMinimum.find(`#${answerID}`).text();
         expect(text).not.toBe("");
       }
