@@ -84,12 +84,7 @@ const validatePhoneNumber = phoneNumber => {
 const validatePhoneNumberOptional = phoneNumber => {
   if (typeof phoneNumber === "string") {
     if (isEmpty(phoneNumber)) return true;
-    // let validNumber = blacklist(phoneNumber, "-()");
-    phoneNumber = phoneNumber.split(' ').join('');
-    if (phoneNumber.startsWith("+")) {
-      phoneNumber = phoneNumber.substring(1);
-    }
-    return isNumeric(phoneNumber) ? true : false;
+    return validatePhoneNumber(phoneNumber);
   }
   return false;
 };
