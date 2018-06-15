@@ -2,7 +2,7 @@
 
 exports[`<FsaHeader /> matches the previous snapshot 1`] = `
 Array [
-  .emotion-8 {
+  .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,13 +20,13 @@ Array [
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-8 {
+  .emotion-10 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,7 +41,7 @@ Array [
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-9 {
     padding: calc(10px * 0.8) 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -87,22 +87,22 @@ Array [
 }
 
 .emotion-3 {
-  color: #005ea5;
-  padding: 3px;
-  margin: -3px;
-  outline-color: transparent;
-  display: inline-block;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-3:hover {
+  border-bottom-color: #ffffff;
 }
 
 .emotion-3:focus {
-  background-color: #ffbf47;
   outline: 3px solid #ffbf47;
-}
-
-.emotion-3:visited {
-  color: #2e358b;
 }
 
 .emotion-2 {
@@ -120,7 +120,7 @@ Array [
   display: inline-block;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,7 +136,7 @@ Array [
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-8 {
     -webkit-align-items: flex-start;
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
@@ -147,12 +147,71 @@ Array [
   }
 }
 
+.emotion-7 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid transparent;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.emotion-7:hover {
+  border-bottom-color: #ffffff;
+}
+
+.emotion-7:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus {
+  color: #0b0c0c;
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-7:focus:hover {
+  border-bottom-color: #0b0c0c;
+}
+
+.emotion-6 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+}
+
+@media print {
+  .emotion-6 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    margin-bottom: 0;
+  }
+}
+
 <div
-    className="emotion-8"
+    className="emotion-10"
     color="#ffffff"
   >
     <div
-      className="emotion-7"
+      className="emotion-9"
     >
       <div
         className="emotion-5"
@@ -162,9 +221,7 @@ Array [
         >
           <a
             className="emotion-3"
-            disabled={undefined}
             href="https://gov.uk"
-            onClick={undefined}
             target="new"
           >
             <div
@@ -207,8 +264,22 @@ Array [
         </div>
       </div>
       <div
-        className="emotion-6"
-      />
+        className="emotion-8"
+      >
+        <a
+          className="emotion-7"
+          href="https://gov.uk"
+          target="new"
+        >
+          <h3
+            className="emotion-6"
+            mb={0}
+            size={undefined}
+          >
+            Register a food business
+          </h3>
+        </a>
+      </div>
     </div>
   </div>,
   .emotion-0 {

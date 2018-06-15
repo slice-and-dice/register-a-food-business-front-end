@@ -30,3 +30,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * SDB-34 - Submit a registration
 * SDB-49 - Establishment address (without info drop down)
 * SDB-58 - Landing page
+* SDB-8 - Registration summary

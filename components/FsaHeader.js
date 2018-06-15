@@ -16,7 +16,7 @@ const Company = (
 const NavAnchor = asNavLinkAnchor("a");
 const ServiceTitle = (
   <NavAnchor href={link} target="new">
-    <Header mb="0" level={3}>
+    <Header mb={0} level={3}>
       Register a food business
     </Header>
   </NavAnchor>

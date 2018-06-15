@@ -15,6 +15,10 @@
     "on": true,
     "switches": {}
   },
+  "/registration-summary": {
+    "on": true,
+    "switches": {}
+  },
   "/declaration": {
     "on": true,
     "switches": {}
