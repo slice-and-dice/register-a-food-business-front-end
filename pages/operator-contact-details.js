@@ -6,7 +6,7 @@ const OperatorContactDetails = props => (
   <FsaLayout>
     <Header level={2}>Operator contact details</Header>
     <form action="/continue/operator-contact-details" method="post">
-      <HiddenText summaryText={"What is a food buisness operator"}>
+      <HiddenText summaryText={"What is a food business operator"}>
         <Paragraph mb={0}>
           The food business operator is the person, charity or company who makes
           the decisions about the food business, what it serves and how it
