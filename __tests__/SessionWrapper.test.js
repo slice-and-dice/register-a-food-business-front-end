@@ -41,6 +41,13 @@ describe("<SessionWrapper />", () => {
       });
       expect(typeof initialProps.validatorErrors).toBe("object");
     });
+
+    it("returns 'validatorErrors' and 'cumulativeAnswers' even if req is undefined", () => {
+      const WrappedComponent = SessionWrapper(ExampleComponent);
+      const initialProps = WrappedComponent.getInitialProps({});
+      expect(typeof initialProps.validatorErrors).toBe("object");
+      expect(typeof initialProps.cumulativeAnswers).toBe("object");
+    });
   });
 
   describe("the resulting child component", () => {
