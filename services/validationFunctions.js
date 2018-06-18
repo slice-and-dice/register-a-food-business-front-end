@@ -71,7 +71,6 @@ const validateEmail = email => {
 
 const validatePhoneNumber = phoneNumber => {
   if (typeof phoneNumber === "string") {
-    // let validNumber = blacklist(phoneNumber, "-()");
     phoneNumber = phoneNumber.split(' ').join('');
     if (phoneNumber.startsWith("+")) {
       phoneNumber = phoneNumber.substring(1);

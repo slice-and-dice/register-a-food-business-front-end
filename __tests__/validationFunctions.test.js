@@ -295,6 +295,15 @@ describe("Function: validate secondary contact", () => {
     });
   });
 
+  it("Should remove the plus from the beginning of a number", () => {
+    //Arrange
+    const goodNumber = "+54875875";
+    //Act
+    const valid = validatePhoneNumberOptional(goodNumber);
+    //Assert
+    expect(valid).toBe(true);
+  });
+
   it("Should return true when the input is non-empty and numeric", () => {
     //Arrange
     const goodNumber = ["447462458575", "2874827482", "110248940242920"];
@@ -328,7 +337,7 @@ describe("Function: validate secondary contact", () => {
   });
 });
 
-describe("Function: validate primary and secondary contact number", () => {
+describe("Function: validate primary contact", () => {
   it("Should return false when type is not string", () => {
     // Arrange
     const badNumber = [[], {}, null, undefined];
@@ -338,6 +347,15 @@ describe("Function: validate primary and secondary contact number", () => {
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(false);
     });
+  });
+
+  it("Should remove the plus from the beginning of a number", () => {
+    //Arrange
+    const goodNumber = "+54875875";
+    //Act
+    const valid = validatePhoneNumber(goodNumber);
+    //Assert
+    expect(valid).toBe(true);
   });
 
   it("Should return true when the input is non-empty and numeric", () => {
