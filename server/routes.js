@@ -2,10 +2,10 @@ const router = require("express").Router();
 const winston = require("winston");
 const Next = require("./next");
 
-const pathJSON = require("./services/path.json");
-const { moveAlongPath, editPath } = require("./services/path.service");
-const { validate } = require("./services/validation.service");
-const { submit } = require("./services/submit.service");
+const pathJSON = require("../services/path.json");
+const { moveAlongPath, editPath } = require("../services/path.service");
+const { validate } = require("../services/validation.service");
+const { submit } = require("../services/submit.service");
 
 const handle = Next.getRequestHandler();
 
@@ -66,7 +66,7 @@ router.get("/submit", async (req, res) => {
     }
   } else {
     winston.error(
-      "Error: app.server.js /submit was called with an empty submission data object"
+      "Error: /submit route was called with an empty submission data object"
     );
   }
 });

@@ -5,15 +5,17 @@
     "node": "8.9.0"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server/server.js",
     "build": "next build",
-    "start": "node server.js",
-    "prod-start": "NODE_ENV=production node server.js",
+    "start": "node server/server.js",
+    "prod-start": "NODE_ENV=production node server/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./",
-    "format:verify": "prettier --list-different '{./services,./components,./pages,./__tests__,./docs}/**/*.js'",
-    "format": "prettier --write '{./services,./components,./pages,./__tests__,./docs}/**/*.js'"
+    "format:verify":
+      "prettier --list-different '{./services,./components,./pages,./__tests__,./docs}/**/*.js'",
+    "format":
+      "prettier --write '{./services,./components,./pages,./__tests__,./docs}/**/*.js'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
