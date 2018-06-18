@@ -7,7 +7,9 @@ const OperatorDetailsTable = props => (
       <Table.CellHeader>
         <Paragraph mb={0}>**Operator details**</Paragraph>
       </Table.CellHeader>
-      <Table.Cell />
+      <Table.Cell>
+        <div />
+      </Table.Cell>
     </Table.Row>
 
     {props.operator_first_name ? (
@@ -30,7 +32,9 @@ const EstablishmentDetailsTable = props => (
       <Table.CellHeader>
         <Paragraph mb={0}>**Establishment details**</Paragraph>
       </Table.CellHeader>
-      <Table.Cell />
+      <Table.Cell>
+        <div />
+      </Table.Cell>
     </Table.Row>
 
     {props.establishment_trading_name ? (
@@ -68,7 +72,9 @@ const FoodActivitiesTable = props => (
       <Table.CellHeader>
         <Paragraph mb={0}>**Food activities**</Paragraph>
       </Table.CellHeader>
-      <Table.Cell />
+      <Table.Cell>
+        <div />
+      </Table.Cell>
     </Table.Row>
   </React.Fragment>
 );

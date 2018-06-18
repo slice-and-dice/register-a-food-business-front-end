@@ -113,7 +113,9 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       </th>
       <td
         className="emotion-2"
-      />
+      >
+        <div />
+      </td>
     </tr>
     <tr
       className="emotion-4"
@@ -160,7 +162,9 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       </th>
       <td
         className="emotion-2"
-      />
+      >
+        <div />
+      </td>
     </tr>
     <tr
       className="emotion-4"
@@ -233,7 +237,9 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       </th>
       <td
         className="emotion-2"
-      />
+      >
+        <div />
+      </td>
     </tr>
   </tbody>
 </table>
