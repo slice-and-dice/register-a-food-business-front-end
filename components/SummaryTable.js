@@ -14,7 +14,7 @@ const OperatorDetailsTable = props => (
       <Table.Row id="operatorNameRow">
         <Table.CellHeader>Name</Table.CellHeader>
         <Table.Cell>
-          <div>
+          <div className="bold">
             <span id="operator_first_name">{props.operator_first_name}</span>{" "}
             <span id="operator_last_name">{props.operator_last_name}</span>
           </div>
@@ -37,7 +37,7 @@ const EstablishmentDetailsTable = props => (
       <Table.Row id="establishmentTradingNameRow">
         <Table.CellHeader>Establishment name</Table.CellHeader>
         <Table.Cell>
-          <div id="establishment_trading_name">
+          <div className="bold" id="establishment_trading_name">
             {props.establishment_trading_name}
           </div>
         </Table.Cell>
@@ -48,14 +48,20 @@ const EstablishmentDetailsTable = props => (
       <Table.Row id="establishmentAddressRow">
         <Table.CellHeader>Establishment address</Table.CellHeader>
         <Table.Cell>
-          <div id="establishment_first_line">
-            {props.establishment_first_line}
+          <div className="bold">
+            <div id="establishment_first_line">
+              {props.establishment_first_line}
+            </div>
+            <div id="establishment_street">
+              {props.establishment_street || null}
+            </div>
+            <div id="establishment_town">
+              {props.establishment_town || null}
+            </div>
+            <div id="establishment_postcode">
+              {props.establishment_postcode}
+            </div>
           </div>
-          <div id="establishment_street">
-            {props.establishment_street || null}
-          </div>
-          <div id="establishment_town">{props.establishment_town || null}</div>
-          <div id="establishment_postcode">{props.establishment_postcode}</div>
         </Table.Cell>
       </Table.Row>
     ) : null}

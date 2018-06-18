@@ -127,7 +127,9 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       <td
         className="emotion-2"
       >
-        <div>
+        <div
+          className="bold"
+        >
           <span
             id="operator_first_name"
           >
@@ -175,6 +177,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         className="emotion-2"
       >
         <div
+          className="bold"
           id="establishment_trading_name"
         >
           Example trading name
@@ -194,24 +197,28 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         className="emotion-2"
       >
         <div
-          id="establishment_first_line"
+          className="bold"
         >
-          Example first line
-        </div>
-        <div
-          id="establishment_street"
-        >
-          Street name
-        </div>
-        <div
-          id="establishment_town"
-        >
-          Town
-        </div>
-        <div
-          id="establishment_postcode"
-        >
-          AA11 1AA
+          <div
+            id="establishment_first_line"
+          >
+            Example first line
+          </div>
+          <div
+            id="establishment_street"
+          >
+            Street name
+          </div>
+          <div
+            id="establishment_town"
+          >
+            Town
+          </div>
+          <div
+            id="establishment_postcode"
+          >
+            AA11 1AA
+          </div>
         </div>
       </td>
     </tr>
