@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.5.0 - 15th June 2018 (unreleased)
+
+### Added
+
+* SDB-146 - Simple Contact Details
+
 ## v1.4.0 - 15th June 2018 (unreleased)
 
 ### Added
