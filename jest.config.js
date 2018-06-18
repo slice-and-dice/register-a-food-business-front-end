@@ -13,6 +13,7 @@ module.exports = {
     "!**/jest.setup.js",
     "!**/next.config.js",
     "!**/coverage/**/*.{js}",
+    "!**/pages/_document.js",
     "!**/.next/**/*.{js}",
     "!**/vars.js"
   ],
