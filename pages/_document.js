@@ -1,3 +1,10 @@
+//////// IMPORTANT ///////////////////////////////////////////////
+// This custom _document file is based on the official Zeit (Next.js) example of Next with Emotion:
+// https://github.com/zeit/next.js/blob/master/examples/with-emotion/pages/_document.js
+// The injectGlobal CSS styles can be edited if required, as well as the page title.
+// Any other changes should not be undertaken without an understanding of how the custom _document.js file works.
+//////// IMPORTANT ///////////////////////////////////////////////
+
 import Document, { Head, Main, NextScript } from "next/document";
 import { extractCritical } from "emotion-server";
 import { hydrate, injectGlobal } from "react-emotion";
