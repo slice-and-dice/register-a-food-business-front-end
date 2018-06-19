@@ -1,4 +1,4 @@
-import RegistrationSummary from "../pages/registration-summary";
+import RegistrationSummary from "../../pages/registration-summary";
 import { shallow, mount } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";

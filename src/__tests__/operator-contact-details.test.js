@@ -1,4 +1,4 @@
-import OperatorContactDetails from "../pages/operator-contact-details";
+import OperatorContactDetails from "../../pages/operator-contact-details";
 import { shallow, mount } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";

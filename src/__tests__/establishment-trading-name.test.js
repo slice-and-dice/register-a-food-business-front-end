@@ -1,4 +1,4 @@
-import EstablishmentTradingName from "../pages/establishment-trading-name";
+import EstablishmentTradingName from "../../pages/establishment-trading-name";
 import { shallow, mount } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";

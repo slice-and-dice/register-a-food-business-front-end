@@ -1,4 +1,4 @@
-import Declaration from "../pages/declaration";
+import Declaration from "../../pages/declaration";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";

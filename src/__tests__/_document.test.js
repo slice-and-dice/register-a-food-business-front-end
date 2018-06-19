@@ -1,4 +1,4 @@
-import Document from "../pages/_document";
+import Document from "../../pages/_document";
 import { shallow } from "enzyme";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";

@@ -1,4 +1,4 @@
-import Index from "../pages/index";
+import Index from "../../pages/index";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";
