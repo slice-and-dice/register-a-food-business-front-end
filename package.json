@@ -5,10 +5,10 @@
     "node": "8.9.0"
   },
   "scripts": {
-    "dev": "node src/server/server.js",
+    "dev": "node src/server/index.js",
     "build": "next build",
-    "start": "node src/server/server.js",
-    "start:prod": "NODE_ENV=production node src/server/server.js",
+    "start": "node src/server/index.js",
+    "start:prod": "NODE_ENV=production node src/server/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./src",
