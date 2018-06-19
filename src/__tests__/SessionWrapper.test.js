@@ -1,5 +1,4 @@
 import SessionWrapper from "../components/SessionWrapper";
-import { mount } from "enzyme";
 import renderer from "react-test-renderer";
 
 const ExampleComponent = () => (

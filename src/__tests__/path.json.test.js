@@ -1,7 +1,7 @@
-jest.unmock("../server/services/path.json");
-
 import pathJSON from "../server/services/path.json";
 import { Validator } from "jsonschema";
+
+jest.unmock("../server/services/path.json");
 
 var v = new Validator();
 

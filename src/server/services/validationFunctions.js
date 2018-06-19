@@ -4,8 +4,7 @@ const {
   isEmpty,
   isEmail,
   trim,
-  isNumeric,
-  blacklist
+  isNumeric
 } = require("validator");
 
 const validateDeclaration = declaration => {
@@ -71,12 +70,11 @@ const validateEmail = email => {
 
 const validatePhoneNumber = phoneNumber => {
   if (typeof phoneNumber === "string") {
-    // let validNumber = blacklist(phoneNumber, "-()");
-    phoneNumber = phoneNumber.split(' ').join('');
-    if (phoneNumber.startsWith("+")) {
-      phoneNumber = phoneNumber.substring(1);
+    let phoneNumberNoSpaces = phoneNumber.split(" ").join("");
+    if (phoneNumberNoSpaces.startsWith("+")) {
+      phoneNumberNoSpaces = phoneNumberNoSpaces.substring(1);
     }
-    return isNumeric(phoneNumber) ? true : false;
+    return isNumeric(phoneNumberNoSpaces) ? true : false;
   }
   return false;
 };

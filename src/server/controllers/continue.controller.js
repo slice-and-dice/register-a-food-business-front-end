@@ -6,8 +6,8 @@ const continueController = (emptyResponse, req) => {
   const controllerResponse = Object.assign({}, emptyResponse);
 
   const currentPage = `/${req.params.originator}`;
-  const sessionData = req.session || {};
-  const formData = req.body;
+  const sessionData = Object.assign({}, req.session);
+  const formData = Object.assign({}, req.body);
 
   const previousAnswers = sessionData.cumulativeAnswers || {};
   let newAnswers = Object.assign({}, formData);
@@ -22,8 +22,10 @@ const continueController = (emptyResponse, req) => {
 
   const validatorErrors = validate(currentPage, newAnswers);
 
+  /* eslint no-param-reassign: 0 */
   req.session.cumulativeAnswers = cumulativeAnswers;
   req.session.validatorErrors = validatorErrors.errors;
+  /* eslint no-param-reassign: 2 */
 
   if (Object.keys(validatorErrors.errors).length > 0) {
     // if there are errors, redirect back to the current page
