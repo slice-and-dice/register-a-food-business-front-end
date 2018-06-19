@@ -2,7 +2,8 @@
   "extends": "react-app",
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "no-param-reassign": [2, { "props": true }]
   },
   "plugins": ["prettier"]
 }

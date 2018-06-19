@@ -1,4 +1,4 @@
-const { submit } = require("../../services/submit.service");
+const { submit } = require("../services/submit.service");
 
 const submitController = async (emptyResponse, req) => {
   const controllerResponse = Object.assign({}, emptyResponse);

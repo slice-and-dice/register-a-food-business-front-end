@@ -6,6 +6,7 @@
 
 # production
 .next
+/src/.next
 
 # misc
 .DS_Store

@@ -1,6 +1,6 @@
-const pathJSON = require("../../services/path.json");
-const { moveAlongPath, editPath } = require("../../services/path.service");
-const { validate } = require("../../services/validation.service");
+const pathJSON = require("../services/path.json");
+const { moveAlongPath, editPath } = require("../services/path.service");
+const { validate } = require("../services/validation.service");
 
 const continueController = (emptyResponse, req) => {
   const controllerResponse = Object.assign({}, emptyResponse);
