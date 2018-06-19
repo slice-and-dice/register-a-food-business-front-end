@@ -1,4 +1,4 @@
-import { submit } from "../server/services/submit.service";
+import { submit } from "./submit.service";
 import fetch from "node-fetch";
 jest.mock("node-fetch");
 

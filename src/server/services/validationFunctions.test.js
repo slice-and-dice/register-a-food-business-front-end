@@ -9,7 +9,7 @@ const {
   validatePhoneNumber,
   validatePhoneNumberOptional,
   validateEmail
-} = require("../server/services/validationFunctions");
+} = require("./validationFunctions");
 
 describe("Function: validateDeclaration", () => {
   it("should return false if declaration is empty", () => {

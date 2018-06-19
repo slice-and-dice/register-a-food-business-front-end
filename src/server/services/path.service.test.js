@@ -1,5 +1,5 @@
-import { moveAlongPath, editPath } from "../server/services/path.service";
-import pathJSON from "../__mocks__/pathMock.json";
+import { moveAlongPath, editPath } from "./path.service";
+import pathJSON from "../../__mocks__/pathMock.json";
 
 describe("path.service moveAlongPath()", () => {
   describe("Given valid input", () => {

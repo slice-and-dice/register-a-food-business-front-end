@@ -1,4 +1,4 @@
-import { validate } from "../server/services/validation.service";
+import { validate } from "./validation.service";
 
 describe("validator.service validate()", () => {
   describe("Given a correctly formatted input", () => {
