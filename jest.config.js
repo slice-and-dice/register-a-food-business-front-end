@@ -2,8 +2,8 @@ module.exports = {
   setupFiles: ["<rootDir>/jest.setup.js"],
   testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
   moduleNameMapper: {
-    "\\.(css)$": "<rootDir>/__mocks__/styleMock.js",
-    "path.json": "<rootDir>/__mocks__/pathMock.json"
+    "\\.(css)$": "<rootDir>/src/__mocks__/styleMock.js",
+    "path.json": "<rootDir>/src/__mocks__/pathMock.json"
   },
   collectCoverage: true,
   collectCoverageFrom: [

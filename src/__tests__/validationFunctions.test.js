@@ -9,7 +9,7 @@ const {
   validatePhoneNumber,
   validatePhoneNumberOptional,
   validateEmail
-} = require("../services/validationFunctions");
+} = require("../server/services/validationFunctions");
 
 describe("Function: validateDeclaration", () => {
   it("should return false if declaration is empty", () => {
@@ -315,7 +315,6 @@ describe("Function: validate secondary contact", () => {
     expect(valid).toBe(true);
   });
 
-
   it("Should return false if string contains non numeric characters", () => {
     //Arrange
     const badNumbers = ["djdheiu7373", "wuyewixx@$", ".+()-9w"];
@@ -360,7 +359,6 @@ describe("Function: validate primary and secondary contact number", () => {
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(false);
     });
-
   });
 
   it("Should return false if string contains non numeric characters", () => {

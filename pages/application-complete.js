@@ -1,5 +1,5 @@
-import SessionWrapper from "../components/SessionWrapper";
-import FsaLayout from "../components/FsaLayout";
+import SessionWrapper from "../src/components/SessionWrapper";
+import FsaLayout from "../src/components/FsaLayout";
 import { Header, Panel, Paragraph } from "govuk-react";
 
 const ApplicationComplete = props => (

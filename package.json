@@ -8,7 +8,7 @@
     "dev": "node src/server/server.js",
     "build": "next build",
     "start": "node src/server/server.js",
-    "prod-start": "NODE_ENV=production node src/server/server.js",
+    "start:prod": "NODE_ENV=production node src/server/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./src",

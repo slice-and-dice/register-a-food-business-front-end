@@ -1,5 +1,5 @@
-import SessionWrapper from "../components/SessionWrapper";
-import FsaLayout from "../components/FsaLayout";
+import SessionWrapper from "../src/components/SessionWrapper";
+import FsaLayout from "../src/components/FsaLayout";
 import { Header, Button } from "govuk-react";
 import { ButtonArrow } from "@govuk-react/icons";
 

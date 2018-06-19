@@ -1,6 +1,6 @@
-import FsaLayout from "../components/FsaLayout";
-import SummaryTable from "../components/SummaryTable";
-import SessionWrapper from "../components/SessionWrapper";
+import FsaLayout from "../src/components/FsaLayout";
+import SummaryTable from "../src/components/SummaryTable";
+import SessionWrapper from "../src/components/SessionWrapper";
 import { Header, Button } from "govuk-react";
 
 const RegistrationSummary = props => (

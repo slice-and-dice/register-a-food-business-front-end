@@ -1,5 +1,5 @@
-import FsaLayout from "../components/FsaLayout";
-import SessionWrapper from "../components/SessionWrapper";
+import FsaLayout from "../src/components/FsaLayout";
+import SessionWrapper from "../src/components/SessionWrapper";
 import { Header, Checkbox, Button, MultiChoice } from "govuk-react";
 
 const Declaration = props => (

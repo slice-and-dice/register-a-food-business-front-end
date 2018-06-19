@@ -1,4 +1,4 @@
-import { moveAlongPath, editPath } from "../services/path.service";
+import { moveAlongPath, editPath } from "../server/services/path.service";
 import pathJSON from "../__mocks__/pathMock.json";
 
 describe("path.service moveAlongPath()", () => {
