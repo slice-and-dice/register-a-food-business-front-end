@@ -1,30 +1,34 @@
-const router = require("express").Router();
-const handle = require("./next").getRequestHandler();
+const { Router } = require("express");
+const { handle } = require("./next");
 
-const { runController } = require("./controllers/run.controller");
-const { continueController } = require("./controllers/continue.controller");
-const { submitController } = require("./controllers/submit.controller");
+const runController = require("./controllers/run.controller");
+const continueController = require("./controllers/continue.controller");
+const submitController = require("./controllers/submit.controller");
 
-router.post("/continue/:originator", (req, res) => {
-  const data = {
-    session: req.session,
-    body: req.body,
-    originator: req.params.originator
-  };
-  runController(continueController, data, res);
-});
+module.exports = () => {
+  const router = Router();
 
-router.post("/back/:originator", (req, res) => {
-  // TODO JMB
-});
+  router.post("/continue/:originator", (req, res) => {
+    const data = {
+      session: req.session,
+      body: req.body,
+      originator: req.params.originator
+    };
+    runController(continueController, data, res);
+  });
 
-router.get("/submit", async (req, res) => {
-  const data = { session: req.session, body: req.body };
-  await runController(submitController, data, res);
-});
+  router.post("/back/:originator", (req, res) => {
+    // TODO JMB
+  });
 
-router.get("*", (req, res) => {
-  handle(req, res);
-});
+  router.get("/submit", async (req, res) => {
+    const data = { session: req.session, body: req.body };
+    await runController(submitController, data, res);
+  });
 
-module.exports = router;
+  router.get("*", (req, res) => {
+    handle(req, res);
+  });
+
+  return router;
+};

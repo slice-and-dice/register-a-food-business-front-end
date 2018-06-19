@@ -1,4 +1,4 @@
-import { runController } from "./run.controller";
+import runController from "./run.controller";
 
 const res = {
   redirect: jest.fn()

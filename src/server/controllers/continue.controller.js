@@ -2,7 +2,7 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 
-module.exports.continueController = (emptyResponse, data) => {
+const continueController = (emptyResponse, data) => {
   const controllerResponse = Object.assign({}, emptyResponse);
 
   const currentPage = `/${data.originator}`;
@@ -45,3 +45,5 @@ module.exports.continueController = (emptyResponse, data) => {
 
   return controllerResponse;
 };
+
+module.exports = continueController;

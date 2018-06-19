@@ -1,6 +1,6 @@
 const { submit } = require("../services/submit.service");
 
-module.exports.submitController = async (emptyResponse, data) => {
+const submitController = async (emptyResponse, data) => {
   const controllerResponse = Object.assign({}, emptyResponse);
 
   const submissionData = data.session.cumulativeAnswers;
@@ -23,3 +23,5 @@ module.exports.submitController = async (emptyResponse, data) => {
 
   return controllerResponse;
 };
+
+module.exports = submitController;

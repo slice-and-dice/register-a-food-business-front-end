@@ -1,6 +1,6 @@
 const winston = require("winston");
 
-module.exports.runController = async (controllerFunction, data, res) => {
+const runController = async (controllerFunction, data, res) => {
   const emptyResponse = { errors: [], redirectRoute: null };
 
   const controllerResponse = await controllerFunction(emptyResponse, data);
@@ -27,3 +27,5 @@ module.exports.runController = async (controllerFunction, data, res) => {
     res.redirect("/error");
   }
 };
+
+module.exports = runController;

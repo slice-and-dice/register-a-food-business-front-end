@@ -17,6 +17,7 @@ module.exports = {
     "!**/.next/**/*.{js}",
     "!**/vars.js"
   ],
+  coveragePathIgnorePatterns: ["src/server/index.js"],
   coverageThreshold: {
     global: {
       branches: 100,
