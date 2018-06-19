@@ -2,12 +2,12 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 
-const continueController = (emptyResponse, req) => {
+module.exports.continueController = (emptyResponse, data) => {
   const controllerResponse = Object.assign({}, emptyResponse);
 
-  const currentPage = `/${req.params.originator}`;
-  const sessionData = Object.assign({}, req.session);
-  const formData = Object.assign({}, req.body);
+  const currentPage = `/${data.originator}`;
+  const sessionData = Object.assign({}, data.session);
+  const formData = Object.assign({}, data.body);
 
   const previousAnswers = sessionData.cumulativeAnswers || {};
   let newAnswers = Object.assign({}, formData);
@@ -23,8 +23,8 @@ const continueController = (emptyResponse, req) => {
   const validatorErrors = validate(currentPage, newAnswers);
 
   /* eslint no-param-reassign: 0 */
-  req.session.cumulativeAnswers = cumulativeAnswers;
-  req.session.validatorErrors = validatorErrors.errors;
+  data.session.cumulativeAnswers = cumulativeAnswers;
+  data.session.validatorErrors = validatorErrors.errors;
   /* eslint no-param-reassign: 2 */
 
   if (Object.keys(validatorErrors.errors).length > 0) {
@@ -45,5 +45,3 @@ const continueController = (emptyResponse, req) => {
 
   return controllerResponse;
 };
-
-module.exports = continueController;

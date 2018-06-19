@@ -1,9 +1,9 @@
 const { submit } = require("../services/submit.service");
 
-const submitController = async (emptyResponse, req) => {
+module.exports.submitController = async (emptyResponse, data) => {
   const controllerResponse = Object.assign({}, emptyResponse);
 
-  const submissionData = req.session.cumulativeAnswers;
+  const submissionData = data.session.cumulativeAnswers;
   // TODO JMB: design a way to remove non-submission answers
 
   if (submissionData && Object.getOwnPropertyNames(submissionData).length > 0) {
@@ -23,5 +23,3 @@ const submitController = async (emptyResponse, req) => {
 
   return controllerResponse;
 };
-
-module.exports = submitController;

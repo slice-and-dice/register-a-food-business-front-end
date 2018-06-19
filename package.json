@@ -11,9 +11,9 @@
     "start:prod": "NODE_ENV=production node src/server/server.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint ./src",
-    "format:verify": "prettier --list-different './src/**/*.js'",
-    "format": "prettier --write './src/**/*.js'"
+    "lint": "eslint ./src ./pages",
+    "format:verify": "prettier --list-different '{./src,./pages,./docs}/**/*'",
+    "format": "prettier --write '{./src,./pages,./docs}/**/*'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",

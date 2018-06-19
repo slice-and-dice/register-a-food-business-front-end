@@ -1,11 +1,11 @@
 const winston = require("winston");
 
-const runController = async (controllerFunction, req, res) => {
-  const emptyResponse = { errors: [], redirectRoute: null, sendObject: null };
+module.exports.runController = async (controllerFunction, data, res) => {
+  const emptyResponse = { errors: [], redirectRoute: null };
 
-  const controllerResponse = await controllerFunction(emptyResponse, req);
+  const controllerResponse = await controllerFunction(emptyResponse, data);
 
-  const { errors, redirectRoute, sendObject } = controllerResponse;
+  const { errors, redirectRoute } = controllerResponse;
 
   if (errors.length > 0) {
     winston.error(
@@ -17,8 +17,6 @@ const runController = async (controllerFunction, req, res) => {
 
   if (redirectRoute) {
     res.redirect(redirectRoute);
-  } else if (sendObject) {
-    res.send(sendObject);
   } else {
     winston.error(
       "routes.js runController(): the following empty or invalid response was returned by the following controller function: ",
@@ -29,5 +27,3 @@ const runController = async (controllerFunction, req, res) => {
     res.redirect("/error");
   }
 };
-
-module.exports = runController;
