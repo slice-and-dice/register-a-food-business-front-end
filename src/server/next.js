@@ -4,4 +4,4 @@ const dev = process.env.NODE_ENV !== "production";
 
 const Next = next({ dev });
 
-module.exports = Next;
+module.exports = { Next, handle: Next.getRequestHandler() };
