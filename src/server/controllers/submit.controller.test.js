@@ -1,7 +1,7 @@
 jest.mock("../services/submit.service");
 
 const { submit } = require("../services/submit.service");
-const submitController = require('./submit.controller');
+const submitController = require("./submit.controller");
 
 describe("Function: submitController: ", () => {
   let response;
