@@ -37,4 +37,19 @@ describe("validator.service validate()", () => {
       expect(result.pageNotFound).toBe("/random-page");
     });
   });
+
+  describe("When given a page that doesn't need to be validated", () => {
+    it("should do nothing", () => {
+      // Arrange
+      const page = "/index";
+
+      // Act
+      const result = validate(page, {
+        randomFields: "blah"
+      });
+
+      // Assert
+      expect(result).toEqual({ errors: {}, pageNotFound: ""});
+    });
+  });
 });

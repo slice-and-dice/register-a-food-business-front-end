@@ -327,7 +327,7 @@ describe("Function: validate secondary contact", () => {
   });
 });
 
-describe("Function: validate primary and secondary contact number", () => {
+describe("Function: validate primary contact number", () => {
   it("Should return false when type is not string", () => {
     // Arrange
     const badNumber = [[], {}, null, undefined];
@@ -347,6 +347,28 @@ describe("Function: validate primary and secondary contact number", () => {
       //Assert
       const valid = validatePhoneNumber(number);
       expect(valid).toBe(true);
+    });
+  });
+
+  it("Should return true when the input starts with + and isnumeric", () => {
+    //Arrange
+    const goodNumber = ["+447462458575", "+2874827482", "+110248940242920"];
+    //Act
+    goodNumber.forEach(number => {
+      //Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(true);
+    });
+  });
+
+  it("Should return false when the input contains + and isnumeric", () => {
+    //Arrange
+    const goodNumber = ["44746+2458575", "287482+7482", "+11024894+0242920"];
+    //Act
+    goodNumber.forEach(number => {
+      //Assert
+      const valid = validatePhoneNumber(number);
+      expect(valid).toBe(false);
     });
   });
 
