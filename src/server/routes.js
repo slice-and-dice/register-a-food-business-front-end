@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const { handle } = require("./next");
 
-const runController = require("./controllers/run.controller");
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 
