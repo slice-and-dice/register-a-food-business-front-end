@@ -58,7 +58,9 @@ const OperatorContactDetails = props => (
         Email address
       </InputField>
       <br />
-      <Button type="submit">Continue</Button>
+      <Button id="next-button" type="submit">
+        Next step
+      </Button>
     </form>
   </FsaLayout>
 );
