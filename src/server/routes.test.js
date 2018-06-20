@@ -111,25 +111,36 @@ describe("Router: ", () => {
   });
 
   describe("GET to /submit", () => {
+    let res, req;
     beforeEach(async () => {
+      submitController.mockImplementation(() => ({
+        submissionErrors: {},
+        redirectRoute: "/application-complete"
+      }));
+
       handler = router.get.mock.calls[0][1];
-      const req = {
-        session: "session",
-        body: "body"
+
+      req = {
+        session: {
+          cumulativeAnswers: {
+            some: "answers"
+          }
+        }
       };
-      handler(req, "response");
+      res = {
+        redirect: jest.fn()
+      };
+      handler(req, res);
     });
 
-    it("Should call runController with submitController, data, res", () => {
-      const data = {
-        session: "session",
-        body: "body"
-      };
-      expect(runController).toHaveBeenCalledWith(
-        submitController,
-        data,
-        "response"
-      );
+    it("Should call submitController with cumulativeAnswers", () => {
+      expect(submitController).toHaveBeenCalledWith({
+        some: "answers"
+      });
+    });
+
+    it("Should set redirect to resoinse", () => {
+      expect(res.redirect).toBeCalledWith("/application-complete");
     });
   });
 

@@ -26,8 +26,9 @@ module.exports = () => {
   });
 
   router.get("/submit", async (req, res) => {
-    const data = { session: req.session, body: req.body };
-    await runController(submitController, data, res);
+    const response = await submitController(req.session.cumulativeAnswers);
+
+    res.redirect(response.redirectRoute);
   });
 
   router.get("*", (req, res) => {
