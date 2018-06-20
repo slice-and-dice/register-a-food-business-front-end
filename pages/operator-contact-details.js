@@ -1,6 +1,6 @@
-import FsaLayout from "../components/FsaLayout";
+import FsaLayout from "../src/components/FsaLayout";
+import SessionWrapper from "../src/components/SessionWrapper";
 import { Header, Button, InputField, Paragraph, HiddenText } from "govuk-react";
-import SessionWrapper from "../components/SessionWrapper";
 
 const OperatorContactDetails = props => (
   <FsaLayout>
