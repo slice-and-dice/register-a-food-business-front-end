@@ -9,12 +9,10 @@ jest.mock("express", () => ({
   }))
 }));
 
-jest.mock("./controllers/run.controller");
 jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/submit.controller");
 
 const { handle } = require("./next");
-const runController = require("./controllers/run.controller");
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const routes = require("./routes");
@@ -105,9 +103,7 @@ describe("Router: ", () => {
       handler("request", "response");
     });
 
-    it("Should do nothing", () => {
-      expect(runController).not.toHaveBeenCalled();
-    });
+    it("Should do nothing", () => {});
   });
 
   describe("GET to /submit", () => {
