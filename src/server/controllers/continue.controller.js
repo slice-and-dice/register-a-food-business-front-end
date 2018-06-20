@@ -2,32 +2,25 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 
-const continueController = (emptyResponse, data) => {
-  const controllerResponse = Object.assign({}, emptyResponse);
+const continueController = (currentPage, previousAnswers, newAnswers) => {
+  const controllerResponse = {
+    validatorErrors: {},
+    redirectRoute: null,
+    cumulativeAnswers: {}
+  };
 
-  const currentPage = `/${data.originator}`;
-  const sessionData = Object.assign({}, data.session);
-  const formData = Object.assign({}, data.body);
-
-  const previousAnswers = sessionData.cumulativeAnswers || {};
-  let newAnswers = Object.assign({}, formData);
-
-  const cumulativeAnswers = Object.assign(previousAnswers, newAnswers);
-
-  const cumulativePathAnswers = Object.values(cumulativeAnswers).filter(
-    answer => answer.startsWith("answer-")
+  controllerResponse.cumulativeAnswers = Object.assign(
+    {},
+    previousAnswers,
+    newAnswers
   );
 
-  const newPath = editPath(pathJSON, cumulativePathAnswers, currentPage);
+  controllerResponse.validatorErrors = Object.assign(
+    {},
+    validate(currentPage, newAnswers).errors
+  );
 
-  const validatorErrors = validate(currentPage, newAnswers);
-
-  /* eslint no-param-reassign: 0 */
-  data.session.cumulativeAnswers = cumulativeAnswers;
-  data.session.validatorErrors = validatorErrors.errors;
-  /* eslint no-param-reassign: 2 */
-
-  if (Object.keys(validatorErrors.errors).length > 0) {
+  if (Object.keys(controllerResponse.validatorErrors).length > 0) {
     // if there are errors, redirect back to the current page
     controllerResponse.redirectRoute = currentPage;
   } else if (
@@ -39,7 +32,12 @@ const continueController = (emptyResponse, data) => {
     controllerResponse.redirectRoute = "/submit";
   } else {
     // else move to the next page in the path
+    const cumulativePathAnswers = Object.values(
+      controllerResponse.cumulativeAnswers
+    ).filter(answer => answer.startsWith("answer-"));
+    const newPath = editPath(pathJSON, cumulativePathAnswers, currentPage);
     const nextPage = moveAlongPath(newPath, currentPage, 1);
+
     controllerResponse.redirectRoute = nextPage;
   }
 
