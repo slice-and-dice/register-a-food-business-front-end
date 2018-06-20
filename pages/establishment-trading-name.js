@@ -31,8 +31,8 @@ const EstablishmentTradingName = props => (
         What is the trading name of this establishment?
       </InputField>
       <br />
-      <Button id="next-button" type="submit">
-        Next step
+      <Button id="continue-button" type="submit">
+        Continue
       </Button>
     </form>
   </FsaLayout>

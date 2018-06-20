@@ -12,8 +12,8 @@ const RegistrationSummary = props => (
     <SummaryTable {...props.cumulativeAnswers} />
 
     <form action="/continue/registration-summary" method="post">
-      <Button id="next-button" type="submit">
-        Next step
+      <Button id="continue-button" type="submit">
+        Continue
       </Button>
     </form>
   </FsaLayout>

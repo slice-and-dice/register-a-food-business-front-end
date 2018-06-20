@@ -72,8 +72,8 @@ const EstablishmentAddress = props => (
         Postcode
       </InputField>
       <br />
-      <Button id="next-button" type="submit">
-        Next step
+      <Button id="continue-button" type="submit">
+        Continue
       </Button>
       <p>
         If you are registering a mobile food business, please use the location

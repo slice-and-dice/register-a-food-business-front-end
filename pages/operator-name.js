@@ -41,8 +41,8 @@ const OperatorName = props => (
         Last name
       </InputField>
       <br />
-      <Button id="next-button" type="submit">
-        Next step
+      <Button id="continue-button" type="submit">
+        Continue
       </Button>
     </form>
   </FsaLayout>
