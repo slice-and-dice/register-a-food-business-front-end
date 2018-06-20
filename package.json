@@ -1,6 +1,6 @@
 {
   "name": "register_a_food_business_front_end",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "engines": {
     "node": "8.9.0"
   },
@@ -12,8 +12,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./",
-    "format:verify": "prettier --list-different '{./services,./components,./pages,./__tests__,./docs}/**/*.js'",
-    "format": "prettier --write '{./services,./components,./pages,./__tests__,./docs}/**/*.js'"
+    "format:verify":
+      "prettier --list-different '{./services,./components,./pages,./__tests__,./docs}/**/*.js'",
+    "format":
+      "prettier --write '{./services,./components,./pages,./__tests__,./docs}/**/*.js'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
