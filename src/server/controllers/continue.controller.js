@@ -19,7 +19,7 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     {},
     validate(currentPage, newAnswers).errors
   );
-  
+
   if (Object.keys(controllerResponse.validatorErrors).length > 0) {
     // if there are errors, redirect back to the current page
     controllerResponse.redirectRoute = currentPage;
