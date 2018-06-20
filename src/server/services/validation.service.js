@@ -30,6 +30,8 @@ const errorMessages = {
   establishment_trading_name: "Not a valid establishment trading name"
 };
 
+const nonValidatedPages = ["/index"];
+
 const schema = {
   "/declaration": {
     type: "object",
@@ -123,7 +125,7 @@ module.exports.validate = (page, answers) => {
       const key = error.property.split(".")[1];
       result.errors[key] = error.message;
     });
-  } else {
+  } else if (nonValidatedPages.indexOf(page) === -1) {
     winston.error(`Could not find schema for page: ${[page]}`);
     result.pageNotFound = page;
   }
