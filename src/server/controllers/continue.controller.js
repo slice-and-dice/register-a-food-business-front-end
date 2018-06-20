@@ -19,14 +19,13 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     {},
     validate(currentPage, newAnswers).errors
   );
-
+  
   if (Object.keys(controllerResponse.validatorErrors).length > 0) {
     // if there are errors, redirect back to the current page
     controllerResponse.redirectRoute = currentPage;
   } else if (
-    !Object.keys(pathJSON)[
-      Object.keys(pathJSON).findIndex(page => page === currentPage) + 1
-    ]
+    Object.keys(pathJSON).indexOf(currentPage) ===
+    Object.keys(pathJSON).length - 1
   ) {
     // else if the current page is at the end of the path, redirect to the submit route
     controllerResponse.redirectRoute = "/submit";
