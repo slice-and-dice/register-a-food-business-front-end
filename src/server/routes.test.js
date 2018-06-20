@@ -36,7 +36,6 @@ describe("Router: ", () => {
 
     it("should set up continue route", () => {
       expect(router.post.mock.calls[0][0]).toBe("/continue/:originator");
-      console.log(router.post("/continue/:originator"));
     });
 
     it("should set up back route", () => {
@@ -53,17 +52,50 @@ describe("Router: ", () => {
   });
 
   describe("POST to /continue/:originator", () => {
+    let req, res;
+
     beforeEach(async () => {
+      continueController.mockImplementation(() => ({
+        validatorErrors: {},
+        redirectRoute: "/newPage",
+        cumulativeAnswers: {
+          new: "answers"
+        }
+      }));
+
       handler = router.post.mock.calls[0][1];
-      handler("request", "response");
+
+      req = {
+        session: {
+          cumulativeAnswers: {}
+        },
+        body: "body",
+        params: {
+          originator: "originator"
+        }
+      };
+
+      res = {
+        redirect: jest.fn()
+      };
+
+      handler(req, res);
     });
 
-    it("Should call runController with continueController, data, res", () => {
-      expect(runController).toHaveBeenCalledWith(
-        continueController,
-        "request",
-        "response"
+    it("Should call continueController with currentPage, cumulativeAnswers, body", () => {
+      expect(continueController).toHaveBeenCalledWith(
+        "/originator",
+        {},
+        "body"
       );
+    });
+
+    it("Should update session", () => {
+      expect(req.session.cumulativeAnswers).toEqual({ new: "answers" });
+    });
+
+    it("Should redirect to next page", () => {
+      expect(res.redirect).toBeCalledWith("/newPage");
     });
   });
 
@@ -81,13 +113,21 @@ describe("Router: ", () => {
   describe("GET to /submit", () => {
     beforeEach(async () => {
       handler = router.get.mock.calls[0][1];
-      handler("request", "response");
+      const req = {
+        session: "session",
+        body: "body"
+      };
+      handler(req, "response");
     });
 
     it("Should call runController with submitController, data, res", () => {
+      const data = {
+        session: "session",
+        body: "body"
+      };
       expect(runController).toHaveBeenCalledWith(
         submitController,
-        "request",
+        data,
         "response"
       );
     });

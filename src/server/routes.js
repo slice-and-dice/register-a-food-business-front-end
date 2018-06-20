@@ -9,12 +9,16 @@ module.exports = () => {
   const router = Router();
 
   router.post("/continue/:originator", (req, res) => {
-    const data = {
-      session: req.session,
-      body: req.body,
-      originator: req.params.originator
-    };
-    runController(continueController, data, res);
+    const response = continueController(
+      `/${req.params.originator}`,
+      req.session.cumulativeAnswers,
+      req.body
+    );
+
+    req.session.cumulativeAnswers = response.cumulativeAnswers;
+    req.session.validatorErrors = response.validatorErrors;
+
+    res.redirect(response.redirectRoute);
   });
 
   router.post("/back/:originator", (req, res) => {
