@@ -640,6 +640,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
           <button
             className="emotion-28"
             disabled={false}
+            id="continue-button"
             start={false}
             type="submit"
           >

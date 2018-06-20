@@ -727,6 +727,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
           <button
             className="emotion-29"
             disabled={false}
+            id="continue-button"
             start={false}
             type="submit"
           >

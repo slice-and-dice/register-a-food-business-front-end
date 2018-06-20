@@ -532,6 +532,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           <button
             className="emotion-15"
             disabled={false}
+            id="begin-button"
             start={false}
             type="submit"
           >
