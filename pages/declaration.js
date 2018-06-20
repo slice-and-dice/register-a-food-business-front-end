@@ -53,7 +53,9 @@ const Declaration = props => (
         </Checkbox>
       </MultiChoice>
       <br />
-      <Button type="submit">Submit</Button>
+      <Button id="submit-button" type="submit">
+        Submit
+      </Button>
     </form>
   </FsaLayout>
 );

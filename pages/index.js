@@ -33,7 +33,7 @@ const Index = props => (
       stored overnight.
     </p>
     <form action="/continue/index" method="post">
-      <Button type="submit" icon={<ButtonArrow />}>
+      <Button id="begin-button" type="submit" icon={<ButtonArrow />}>
         Begin registration
       </Button>
     </form>

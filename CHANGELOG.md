@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.6.0 - 20th June 2018 (unreleased)
+
+### Added
+
+* Added IDs to all buttons for QA
+
 ## v1.5.0 - 15th June 2018 (unreleased)
 
 ### Added
