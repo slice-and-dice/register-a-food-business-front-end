@@ -49,7 +49,7 @@ describe("validator.service validate()", () => {
       });
 
       // Assert
-      expect(result).toEqual({ errors: {}, pageNotFound: ""});
+      expect(result).toEqual({ errors: {}, pageNotFound: "" });
     });
   });
 });
