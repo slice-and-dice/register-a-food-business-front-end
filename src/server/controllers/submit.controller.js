@@ -8,8 +8,7 @@ const submitController = async submissionData => {
 
   if (submissionData && Object.getOwnPropertyNames(submissionData).length > 0) {
     const response = await submit(submissionData);
-
-    if (Object.keys(response.errors).length > 0) {
+    if (response.errors && Object.keys(response.errors).length > 0) {
       // TODO JMB: add errors to the original page via session
       controllerResponse.redirectRoute = "back";
     } else {
