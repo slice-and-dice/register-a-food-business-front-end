@@ -710,7 +710,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               Secondary phone number (optional)
             </span>
             <input
-              autoComplete="tel"
+              autoComplete="off"
               className="emotion-18"
               defaultValue={undefined}
               name="operator_secondary_number"

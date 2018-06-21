@@ -32,7 +32,7 @@ const OperatorContactDetails = props => (
         input={{
           name: "operator_secondary_number",
           defaultValue: props.cumulativeAnswers.operator_secondary_number,
-          autoComplete: "tel"
+          autoComplete: "off"
         }}
         id="operator_secondary_number"
         meta={{
