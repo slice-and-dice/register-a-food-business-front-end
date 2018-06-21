@@ -8,8 +8,8 @@ const ApplicationComplete = props => (
       panelTitle="Application complete"
       panelBody={[
         "Your reference number",
-        ,
-        <strong>{props.referenceNumber}</strong>
+        <br />,
+        <span className="bold">{props.referenceNumber}</span>
       ]}
     />
     <Paragraph>We have sent you a confirmation email.</Paragraph>
