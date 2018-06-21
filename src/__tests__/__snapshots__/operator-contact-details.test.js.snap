@@ -692,6 +692,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               Primary phone number
             </span>
             <input
+              autoComplete="tel"
               className="emotion-18"
               defaultValue={undefined}
               name="operator_primary_number"
@@ -709,6 +710,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               Secondary phone number (optional)
             </span>
             <input
+              autoComplete="tel"
               className="emotion-18"
               defaultValue={undefined}
               name="operator_secondary_number"
@@ -731,6 +733,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               Your email address will be used to update you regarding policy or legal changes which could affect your food business.
             </span>
             <input
+              autoComplete="email"
               className="emotion-18"
               defaultValue={undefined}
               name="operator_email"

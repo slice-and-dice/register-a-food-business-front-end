@@ -17,7 +17,8 @@ const EstablishmentAddress = props => (
       <InputField
         input={{
           name: "establishment_first_line",
-          defaultValue: props.cumulativeAnswers.establishment_first_line
+          defaultValue: props.cumulativeAnswers.establishment_first_line,
+          autoComplete: "address-line1"
         }}
         id="establishment_first_line"
         // TODO APM: Decide on and implement validation for first line of address
@@ -33,7 +34,8 @@ const EstablishmentAddress = props => (
       <InputField
         input={{
           name: "establishment_street",
-          defaultValue: props.cumulativeAnswers.establishment_street
+          defaultValue: props.cumulativeAnswers.establishment_street,
+          autoComplete: "address-line2"
         }}
         id="establishment_street"
         meta={{
@@ -47,7 +49,8 @@ const EstablishmentAddress = props => (
       <InputField
         input={{
           name: "establishment_town",
-          defaultValue: props.cumulativeAnswers.establishment_town
+          defaultValue: props.cumulativeAnswers.establishment_town,
+          autoComplete: "locality"
         }}
         id="establishment_town"
         meta={{
@@ -61,7 +64,8 @@ const EstablishmentAddress = props => (
       <InputField
         input={{
           name: "establishment_postcode",
-          defaultValue: props.cumulativeAnswers.establishment_postcode
+          defaultValue: props.cumulativeAnswers.establishment_postcode,
+          autoComplete: "postal-code"
         }}
         id="establishment_postcode"
         meta={{

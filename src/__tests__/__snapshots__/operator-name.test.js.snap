@@ -666,6 +666,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
               First and middle names
             </span>
             <input
+              autoComplete="given-name"
               className="emotion-18"
               defaultValue={undefined}
               name="operator_first_name"
@@ -683,6 +684,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
               Last name
             </span>
             <input
+              autoComplete="family-name"
               className="emotion-18"
               defaultValue={undefined}
               name="operator_last_name"
