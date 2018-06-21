@@ -8,7 +8,7 @@ const ApplicationComplete = props => (
       panelTitle="Application complete"
       panelBody={[
         "Your reference number",
-        <br />,
+        ,
         <strong>{props.referenceNumber}</strong>
       ]}
     />

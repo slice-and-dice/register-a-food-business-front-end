@@ -682,7 +682,7 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
               </div>
             </div>
           </details>
-          <br />
+          
           <label
             className="emotion-20"
             id="establishment_trading_name"
@@ -704,7 +704,7 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <button
             className="emotion-21"
             disabled={false}

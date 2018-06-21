@@ -668,7 +668,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
               </span>
             </label>
           </div>
-          <br />
+          
           <button
             className="emotion-24"
             disabled={false}

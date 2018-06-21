@@ -699,7 +699,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <label
             className="emotion-19"
             id="operator_secondary_number"
@@ -717,7 +717,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <label
             className="emotion-19"
             id="operator_email"
@@ -740,7 +740,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <button
             className="emotion-27"
             disabled={false}

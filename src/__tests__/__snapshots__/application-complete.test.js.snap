@@ -495,7 +495,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
             className="emotion-13"
           >
             Your reference number
-            <br />
+            
             <strong />
           </div>
         </div>

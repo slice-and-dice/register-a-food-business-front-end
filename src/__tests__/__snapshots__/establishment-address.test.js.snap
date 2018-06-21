@@ -673,7 +673,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <label
             className="emotion-19"
             id="establishment_street"
@@ -691,7 +691,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <label
             className="emotion-19"
             id="establishment_town"
@@ -709,7 +709,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <label
             className="emotion-19"
             id="establishment_postcode"
@@ -727,7 +727,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <button
             className="emotion-29"
             disabled={false}

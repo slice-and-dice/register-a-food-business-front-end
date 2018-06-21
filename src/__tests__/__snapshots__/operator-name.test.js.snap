@@ -673,7 +673,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <label
             className="emotion-19"
             id="operator_last_name"
@@ -691,7 +691,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
               type="text"
             />
           </label>
-          <br />
+          
           <button
             className="emotion-23"
             disabled={false}

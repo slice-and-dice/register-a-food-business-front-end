@@ -1,6 +1,7 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SummaryTable from "../src/components/SummaryTable";
 import SessionWrapper from "../src/components/SessionWrapper";
+import ContentItem from "../src/components/ContentItem";
 import { Header, Button } from "govuk-react";
 
 const RegistrationSummary = props => (
@@ -9,7 +10,9 @@ const RegistrationSummary = props => (
       Please check that the details you entered are correct.
     </Header>
 
-    <SummaryTable {...props.cumulativeAnswers} />
+    <ContentItem.B_30_15>
+      <SummaryTable {...props.cumulativeAnswers} />
+    </ContentItem.B_30_15>
 
     <form action="/continue/registration-summary" method="post">
       <Button id="continue-button" type="submit">
