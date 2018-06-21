@@ -218,14 +218,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-18 {
+.emotion-29 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-18 {
+  .emotion-29 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-28 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-17 {
+  .emotion-28 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-27 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-27 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-16:first-child {
+  .emotion-27:first-child {
     margin-left: 0;
   }
 
-  .emotion-16:last-child {
+  .emotion-27:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-27 {
     width: 66.6667%;
   }
 }
@@ -309,17 +309,93 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-15 {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-15 {
+    padding-bottom: 15px;
+  }
+}
+
 .emotion-13 {
+  font-family: "nta",Arial,sans-serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.emotion-13 > p {
+  margin: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    margin-bottom: 20px;
+  }
+}
+
+.emotion-14 {
+  font-family: "nta",Arial,sans-serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.emotion-14 > p {
+  margin: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+  border-left-style: solid;
+  border-left-width: 10px;
+  border-color: #bfc1c3;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-18 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
   font-size: 18px;
   line-height: 1.2;
   margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-18 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -327,12 +403,18 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-13 {
+  .emotion-18 {
     font-size: 16px;
   }
 }
 
-.emotion-15 {
+@media only screen and (min-width:641px) {
+  .emotion-18 {
+    margin-bottom: 5px;
+  }
+}
+
+.emotion-26 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -367,34 +449,34 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-15:hover {
+.emotion-26:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-15:focus {
+.emotion-26:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-15:active {
+.emotion-26:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-15:visited {
+.emotion-26:visited {
   color: #00823b;
 }
 
-.emotion-15 svg {
+.emotion-26 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-26 {
     margin-bottom: 20px;
   }
 }
@@ -480,13 +562,13 @@ exports[`<Index /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-18"
+    className="emotion-29"
   >
     <div
-      className="emotion-17"
+      className="emotion-28"
     >
       <div
-        className="emotion-16"
+        className="emotion-27"
       >
         <h1
           className="emotion-12"
@@ -494,43 +576,75 @@ exports[`<Index /> matches the previous snapshot 1`] = `
         >
           Register a food business
         </h1>
-        <p>
-          All food businesses which regularly produce or serve food to the public need to be registered with their Local Authority. This service will send your registration to the correct local authority based on your trading location. Food businesses should only register
-           
-          <span
-            className="bold"
+        <div
+          className="emotion-15 emotion-16"
+        >
+          <div
+            className="emotion-13"
           >
-            28 days
-          </span>
-           before they begin trading. If you are not sure when this food business will open, it may be too early to be registering this business.
-        </p>
-        <p>
+            <p>
+              All food businesses which regularly produce or serve food to the public need to be registered with their Local Authority. This service will send your registration to the correct local authority based on your trading location.
+            </p>
+          </div>
+          <div
+            className="emotion-14"
+          >
+            <p>
+              Food businesses should only register 
+              <strong>
+                28 days
+              </strong>
+               before they begin trading. If you are not sure when this food business will open, it may be too early to be registering this business.
+            </p>
+          </div>
+        </div>
+        <div
+          className="bold emotion-17"
+        >
           During this registration, you may come across a few specialist terms, which we have described below:
-        </p>
-        <h3
-          className="emotion-13"
-          size={undefined}
+        </div>
+        <div
+          className="emotion-15 emotion-16"
         >
-          Food business operator
-        </h3>
-        <p>
-          The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
-        </p>
-        <h3
-          className="emotion-13"
-          size={undefined}
+          <h3
+            className="emotion-18"
+            mb={1}
+            size={undefined}
+          >
+            Food business operator
+          </h3>
+          <div
+            className="emotion-14"
+          >
+            <p>
+              The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
+            </p>
+          </div>
+        </div>
+        <div
+          className="emotion-15 emotion-16"
         >
-          Establishment
-        </h3>
-        <p>
-          The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
-        </p>
+          <h3
+            className="emotion-18"
+            mb={1}
+            size={undefined}
+          >
+            Establishment
+          </h3>
+          <div
+            className="emotion-14"
+          >
+            <p>
+              The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
+            </p>
+          </div>
+        </div>
         <form
           action="/continue/index"
           method="post"
         >
           <button
-            className="emotion-15"
+            className="emotion-26"
             disabled={false}
             id="begin-button"
             start={false}

@@ -496,7 +496,9 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           >
             Your reference number
             <br />
-            <strong />
+            <span
+              className="bold"
+            />
           </div>
         </div>
         <div
