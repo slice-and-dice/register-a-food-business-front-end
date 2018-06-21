@@ -18,6 +18,7 @@ if (typeof window !== "undefined" && typeof __NEXT_DATA__ !== "undefined") {
 
 injectGlobal`
   html, body {
+    font-family: sans-serif;
     font-size: 19px;
     color: #0b0c0c;
   }

@@ -22,7 +22,7 @@ const EstablishmentAddress = props => (
         <InputField
           input={{
             name: "establishment_first_line",
-            defaultValue: props.cumulativeAnswers.establishment_first_line.B_30,
+            defaultValue: props.cumulativeAnswers.establishment_first_line,
             autoComplete: "address-line1"
           }}
           id="establishment_first_line"
