@@ -666,6 +666,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               First Line of address
             </span>
             <input
+              autoComplete="address-line1"
               className="emotion-18"
               defaultValue={undefined}
               name="establishment_first_line"
@@ -683,6 +684,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               Street
             </span>
             <input
+              autoComplete="address-line2"
               className="emotion-18"
               defaultValue={undefined}
               name="establishment_street"
@@ -700,6 +702,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               Town or city
             </span>
             <input
+              autoComplete="locality"
               className="emotion-18"
               defaultValue={undefined}
               name="establishment_town"
@@ -717,6 +720,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
               Postcode
             </span>
             <input
+              autoComplete="postal-code"
               className="emotion-18"
               defaultValue={undefined}
               name="establishment_postcode"

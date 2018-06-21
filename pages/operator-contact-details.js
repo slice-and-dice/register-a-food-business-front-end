@@ -16,7 +16,8 @@ const OperatorContactDetails = props => (
       <InputField
         input={{
           name: "operator_primary_number",
-          defaultValue: props.cumulativeAnswers.operator_primary_number
+          defaultValue: props.cumulativeAnswers.operator_primary_number,
+          autoComplete: "tel"
         }}
         id="operator_primary_number"
         meta={{
@@ -30,7 +31,8 @@ const OperatorContactDetails = props => (
       <InputField
         input={{
           name: "operator_secondary_number",
-          defaultValue: props.cumulativeAnswers.operator_secondary_number
+          defaultValue: props.cumulativeAnswers.operator_secondary_number,
+          autoComplete: "off"
         }}
         id="operator_secondary_number"
         meta={{
@@ -44,7 +46,8 @@ const OperatorContactDetails = props => (
       <InputField
         input={{
           name: "operator_email",
-          defaultValue: props.cumulativeAnswers.operator_email
+          defaultValue: props.cumulativeAnswers.operator_email,
+          autoComplete: "email"
         }}
         id="operator_email"
         hint={[
