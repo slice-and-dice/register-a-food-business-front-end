@@ -38,6 +38,11 @@ describe("path.service moveAlongPath()", () => {
 
 describe("path.service editPath()", () => {
   describe("Given valid input", () => {
+    it("does not reassign the input object", () => {
+      const result = editPath(pathJSON, [], "/index");
+      expect(result).not.toBe(pathJSON);
+    });
+
     it("returns a valid JavaScipt object", () => {
       const result = editPath(pathJSON, ["A1"], "/index");
       expect(typeof result).toBe("object");

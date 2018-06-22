@@ -33,18 +33,20 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
   }
 
   const newPath = JSON.parse(JSON.stringify(originalPath));
+
   let pagesToSwitch = {};
 
   const allSwitches = {};
-  for (let page in originalPath) {
-    Object.assign(allSwitches, originalPath[page].switches);
+  for (let page in newPath) {
+    Object.assign(allSwitches, newPath[page].switches);
   }
-  // const referenceOrder = Object.keys(originalPath[currentPage].switches);
+
   answerArray.sort((a, b) => {
     return (
       Object.keys(allSwitches).indexOf(a) - Object.keys(allSwitches).indexOf(b)
     );
   });
+
   answerArray.forEach(answerID => {
     if (allSwitches[answerID]) {
       pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[answerID]);
@@ -56,6 +58,7 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
       newPath[eachPage].on = pagesToSwitch[eachPage];
     }
   }
+  // console.log(pagesToSwitch, newPath);
 
   return newPath;
 };

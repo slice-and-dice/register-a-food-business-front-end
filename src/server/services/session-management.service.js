@@ -16,7 +16,6 @@ const cleanSessionAnswers = (answers, path) => {
       delete cleanedAnswers[answer];
     }
   }
-
   return cleanedAnswers;
 };
 
