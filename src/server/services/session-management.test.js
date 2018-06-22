@@ -31,6 +31,16 @@ const pathObject = {
   }
 };
 
+const testSessionAnswers_Invalid = {
+  not_a_valid_answer: "Example",
+  operator_first_name: "John"
+};
+
+const testSessionAnswers_Valid = {
+  example_exists_in_schema_but_not_in_path: "Example",
+  operator_first_name: "John"
+};
+
 const testSessionAnswers_Correct = {
   operator_first_name: "John",
   operator_last_name: "Appleseed",
@@ -60,6 +70,26 @@ describe("session-management.service cleanSession()", () => {
         pathObject
       );
       expect(result).toEqual(testSessionAnswers_Correct);
+    });
+
+    describe("when an answer does not exist in the schema", () => {
+      it("returns the same data object as it was passed", () => {
+        const result = cleanSessionAnswers(
+          testSessionAnswers_Invalid,
+          pathObject
+        );
+        expect(result).toEqual(testSessionAnswers_Invalid);
+      });
+    });
+
+    describe("when the page of an answer does not exist in the path", () => {
+      it("returns the same data object as it was passed", () => {
+        const result = cleanSessionAnswers(
+          testSessionAnswers_Valid,
+          pathObject
+        );
+        expect(result).toEqual(testSessionAnswers_Valid);
+      });
     });
   });
 

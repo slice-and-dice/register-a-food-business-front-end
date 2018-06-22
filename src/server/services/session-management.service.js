@@ -12,7 +12,7 @@ const cleanSessionAnswers = (answers, path) => {
       }
     }
 
-    if (path[pageOfAnswer].on !== true) {
+    if (path[pageOfAnswer] && path[pageOfAnswer].on === false) {
       delete cleanedAnswers[answer];
     }
   }

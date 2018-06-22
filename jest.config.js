@@ -3,7 +3,8 @@ module.exports = {
   testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
   moduleNameMapper: {
     "\\.(css)$": "<rootDir>/src/__mocks__/styleMock.js",
-    "path.json": "<rootDir>/src/__mocks__/pathMock.json"
+    "path.json": "<rootDir>/src/__mocks__/pathMock.json",
+    "schema.js": "<rootDir>/src/__mocks__/schemaMock.js"
   },
   collectCoverage: true,
   collectCoverageFrom: [

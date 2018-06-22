@@ -1,6 +1,9 @@
 const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
+const {
+  cleanSessionAnswers
+} = require("../services/session-management.service");
 
 const continueController = (currentPage, previousAnswers, newAnswers) => {
   const controllerResponse = {
@@ -36,6 +39,11 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     ).filter(answer => answer.startsWith("answer-"));
     const newPath = editPath(pathJSON, cumulativePathAnswers, currentPage);
     const nextPage = moveAlongPath(newPath, currentPage, 1);
+
+    controllerResponse.cumulativeAnswers = cleanSessionAnswers(
+      controllerResponse.cumulativeAnswers,
+      pathJSON
+    );
 
     controllerResponse.redirectRoute = nextPage;
   }
