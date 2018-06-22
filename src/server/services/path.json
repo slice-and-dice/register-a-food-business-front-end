@@ -7,6 +7,10 @@
     "on": true,
     "switches": {}
   },
+  "/operator-company-details": {
+    "on": true,
+    "switches": {}
+  },
   "/operator-name": {
     "on": true,
     "switches": {}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
+exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,14 +218,14 @@ exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-15 {
+.emotion-22 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-22 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-14 {
+.emotion-21 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-14 {
+  .emotion-21 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-20 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-20 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-13:first-child {
+  .emotion-20:first-child {
     margin-left: 0;
   }
 
-  .emotion-13:last-child {
+  .emotion-20:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-20 {
     width: 66.6667%;
   }
 }
@@ -306,6 +306,202 @@ exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
 @media print {
   .emotion-12 {
     font-size: 18px;
+  }
+}
+
+.emotion-17 {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-17 {
+    padding-bottom: 15px;
+  }
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.emotion-16:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-13 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  clear: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-14 {
+  display: block;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-15 {
+  box-sizing: border-box;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
+}
+
+.emotion-15:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-19 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-19:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-19:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-19:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-19:visited {
+  color: #00823b;
+}
+
+.emotion-19 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 20px;
   }
 }
 
@@ -390,20 +586,61 @@ exports[`<LimitedCompanyDetails /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-15"
+    className="emotion-22"
   >
     <div
-      className="emotion-14"
+      className="emotion-21"
     >
       <div
-        className="emotion-13"
+        className="emotion-20"
       >
         <h2
           className="emotion-12"
           size={undefined}
         >
-          Limited company details
+          Company details
         </h2>
+        <form
+          action="/continue/operator-company-details"
+          method="post"
+        >
+          <div
+            className="emotion-17 emotion-18"
+          >
+            <label
+              className="emotion-16"
+              id="operator_company_name"
+            >
+              <span
+                className="emotion-13"
+              >
+                Registered company name
+              </span>
+              <span
+                className="emotion-14"
+              >
+                The name of the registered company which is acting as the operator of this food business.
+              </span>
+              <input
+                autoComplete="organization"
+                className="emotion-15"
+                defaultValue={undefined}
+                maxLength="50"
+                name="operator_company_name"
+                type="text"
+              />
+            </label>
+          </div>
+          <button
+            className="emotion-19"
+            disabled={false}
+            id="continue-button"
+            start={false}
+            type="submit"
+          >
+            Continue
+          </button>
+        </form>
       </div>
     </div>
   </div>

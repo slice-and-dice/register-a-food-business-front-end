@@ -12,6 +12,17 @@ const OperatorDetailsTable = props => (
       </Table.Cell>
     </Table.Row>
 
+    {props.operator_company_name ? (
+      <Table.Row id="operatorCompanyNameRow">
+        <Table.CellHeader>Company name</Table.CellHeader>
+        <Table.Cell>
+          <div id="operator_company_name" className="bold">
+            {props.operator_company_name}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
     {props.operator_first_name ? (
       <Table.Row id="operatorNameRow">
         <Table.CellHeader>Name</Table.CellHeader>
