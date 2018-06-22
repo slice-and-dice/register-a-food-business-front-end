@@ -3,9 +3,9 @@ import { Validator } from "jsonschema";
 
 jest.unmock("./path.json");
 
-var v = new Validator();
+const v = new Validator();
 
-var schema = {
+const schema = {
   type: "object",
   properties: {
     on: { type: "boolean" },

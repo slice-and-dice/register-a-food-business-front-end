@@ -14,6 +14,7 @@ module.exports = {
     "!**/next.config.js",
     "!**/coverage/**/*.{js}",
     "!**/pages/_document.js",
+    "!**/services/schema.js",
     "!**/.next/**/*.{js}",
     "!**/vars.js"
   ],
