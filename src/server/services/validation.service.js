@@ -12,7 +12,7 @@ const {
   validatePhoneNumber,
   validatePhoneNumberOptional,
   validateEmail
-} = require("./validationFunctions");
+} = require("@slice-and-dice/register-a-food-business-validation");
 
 const errorMessages = {
   declaration1: "You must tick all the declarations before continuing",

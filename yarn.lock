@@ -1112,6 +1112,12 @@
     "@govuk-react/icons" "^0.2.4"
     govuk-colours "^1.0.3"
 
+"@slice-and-dice/register-a-food-business-validation@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/@slice-and-dice/register-a-food-business-validation/-/register-a-food-business-validation-1.1.2.tgz#af270af6864400947c9c7da5dd131698a9a9f06c"
+  dependencies:
+    validator "^10.4.0"
+
 "@storybook/addons@3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.3.0.tgz#b99d0e14a03ceeee2807318aa597e919c03a2165"
@@ -7927,6 +7933,10 @@ validate-npm-package-license@^3.0.1:
 validator@^10.3.0:
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/validator/-/validator-10.3.0.tgz#157a8c0981858cff381f59aabcdb8f83b57317cc"
+
+validator@^10.4.0:
+  version "10.4.0"
+  resolved "https://registry.npmjs.org/validator/-/validator-10.4.0.tgz#ee99a44afb3bb5ed350a159f056ca72a204cfc3c"
 
 value-equal@^0.4.0:
   version "0.4.0"

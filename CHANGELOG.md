@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.8.1 - 21st June 2018 (unreleased)
+
+### Added
+
+* Refactor validation service to use register-a-food-business-validation library
+
 ## v1.8.0 - 21st June 2018 (unreleased)
 
 ### Added
