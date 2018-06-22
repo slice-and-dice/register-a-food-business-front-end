@@ -34,10 +34,10 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     controllerResponse.redirectRoute = "/submit";
   } else {
     // else move to the next page in the path
-    const cumulativePathAnswers = Object.values(
+    const cumulativeAnswersArray = Object.values(
       controllerResponse.cumulativeAnswers
-    ).filter(answer => answer.startsWith("answer-"));
-    const newPath = editPath(pathJSON, cumulativePathAnswers, currentPage);
+    );
+    const newPath = editPath(pathJSON, cumulativeAnswersArray, currentPage);
     const nextPage = moveAlongPath(newPath, currentPage, 1);
 
     controllerResponse.cumulativeAnswers = cleanSessionAnswers(

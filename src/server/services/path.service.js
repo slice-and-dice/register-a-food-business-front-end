@@ -48,12 +48,6 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
   answerArray.forEach(answerID => {
     if (allSwitches[answerID]) {
       pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[answerID]);
-    } else {
-      throw new Error(`
-          path.service.js editPath(): The answer "${answerID}" does not exist in the path JSON.
-          If "${answerID}" is intended to change the path of the registration form, update the path JSON.
-          Else, remove the prefix from the name to make it a non-path answer ID.
-        `);
     }
   });
 

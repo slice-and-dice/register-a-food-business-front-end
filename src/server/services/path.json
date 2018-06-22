@@ -9,7 +9,9 @@
   },
   "/operator-contact-details": {
     "on": true,
-    "switches": {}
+    "switches": {
+      "07500058253": { "/establishment-trading-name": false }
+    }
   },
   "/establishment-trading-name": {
     "on": true,
