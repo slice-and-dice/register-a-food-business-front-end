@@ -1,4 +1,4 @@
-var { Validator } = require("jsonschema");
+const { Validator } = require("jsonschema");
 const winston = require("winston");
 const schema = require("./schema");
 

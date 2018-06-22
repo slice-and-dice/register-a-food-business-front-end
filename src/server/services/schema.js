@@ -12,44 +12,6 @@ const {
 } = require("@slice-and-dice/register-a-food-business-validation");
 
 const schema = {
-  "/declaration": {
-    type: "object",
-    properties: {
-      declaration1: { type: "string", validation: validateDeclaration },
-      declaration2: { type: "string", validation: validateDeclaration },
-      declaration3: { type: "string", validation: validateDeclaration }
-    }
-  },
-  "/establishment-address": {
-    type: "object",
-    properties: {
-      establishment_postcode: {
-        type: "string",
-        validation: validatePostCode
-      },
-      establishment_first_line: {
-        type: "string",
-        validation: validateEstablishmentFirstLine
-      },
-      establishment_street: {
-        type: "string",
-        validation: validateStreet
-      },
-      establishment_town: {
-        type: "string",
-        validation: validateTown
-      }
-    }
-  },
-  "/establishment-trading-name": {
-    type: "object",
-    properties: {
-      establishment_trading_name: {
-        type: "string",
-        validation: validateEstablishmentTradingName
-      }
-    }
-  },
   "/operator-name": {
     type: "object",
     properties: {
@@ -78,6 +40,44 @@ const schema = {
         type: "string",
         validation: validateEmail
       }
+    }
+  },
+  "/establishment-trading-name": {
+    type: "object",
+    properties: {
+      establishment_trading_name: {
+        type: "string",
+        validation: validateEstablishmentTradingName
+      }
+    }
+  },
+  "/establishment-address": {
+    type: "object",
+    properties: {
+      establishment_postcode: {
+        type: "string",
+        validation: validatePostCode
+      },
+      establishment_first_line: {
+        type: "string",
+        validation: validateEstablishmentFirstLine
+      },
+      establishment_street: {
+        type: "string",
+        validation: validateStreet
+      },
+      establishment_town: {
+        type: "string",
+        validation: validateTown
+      }
+    }
+  },
+  "/declaration": {
+    type: "object",
+    properties: {
+      declaration1: { type: "string", validation: validateDeclaration },
+      declaration2: { type: "string", validation: validateDeclaration },
+      declaration3: { type: "string", validation: validateDeclaration }
     }
   }
 };
