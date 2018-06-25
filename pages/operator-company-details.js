@@ -29,6 +29,37 @@ const LimitedCompanyDetails = props => (
         </InputField>
       </ContentItem.B_30_15>
 
+      <ContentItem.B_30_15>
+        <InputField
+          input={{
+            name: "operator_company_house_number",
+            defaultValue: props.cumulativeAnswers.operator_company_house_number,
+            autoComplete: "organization",
+            maxLength: "50"
+          }}
+          hint={
+            <span>
+              Every registered company will have a Companies House reference
+              number. Search for a reference number on the{" "}
+              <a
+                href="https://beta.companieshouse.gov.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Companies House website
+              </a>.
+            </span>
+          }
+          id="operator_company_house_number"
+          meta={{
+            touched: true,
+            error: props.validatorErrors["operator_company_house_number"]
+          }}
+        >
+          Companies House number
+        </InputField>
+      </ContentItem.B_30_15>
+
       <Button id="continue-button" type="submit">
         Continue
       </Button>

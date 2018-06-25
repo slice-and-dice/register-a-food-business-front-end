@@ -62,4 +62,52 @@ describe("<OperatorCompanyDetails />", () => {
       expect(operatorCompanyName.props().input.defaultValue).toBe("default");
     });
   });
+
+  describe("Companies House reference number input field", () => {
+    it("renders", () => {
+      const wrapper = mount(
+        <OperatorCompanyDetails validatorErrors cumulativeAnswers />
+      );
+      const operatorCompaniesHouseNumber = wrapper.find(
+        "InputField#operator_company_house_number"
+      );
+      expect(operatorCompaniesHouseNumber.length).toBe(1);
+    });
+
+    it("gets given the correct error prop", () => {
+      const validatorErrors = {
+        operator_company_house_number: "test error"
+      };
+      const wrapper = mount(
+        <OperatorCompanyDetails
+          validatorErrors={validatorErrors}
+          cumulativeAnswers
+        />
+      );
+      const operatorCompaniesHouseNumber = wrapper.find(
+        "InputField#operator_company_house_number"
+      );
+      expect(operatorCompaniesHouseNumber.props().meta.error).toBe(
+        "test error"
+      );
+    });
+
+    it("gets given the correct default value", () => {
+      const cumulativeAnswers = {
+        operator_company_house_number: "default"
+      };
+      const wrapper = mount(
+        <OperatorCompanyDetails
+          validatorErrors
+          cumulativeAnswers={cumulativeAnswers}
+        />
+      );
+      const operatorCompaniesHouseNumber = wrapper.find(
+        "InputField#operator_company_house_number"
+      );
+      expect(operatorCompaniesHouseNumber.props().input.defaultValue).toBe(
+        "default"
+      );
+    });
+  });
 });
