@@ -34,8 +34,8 @@ const LimitedCompanyDetails = props => (
           input={{
             name: "operator_company_house_number",
             defaultValue: props.cumulativeAnswers.operator_company_house_number,
-            autoComplete: "organization",
-            maxLength: "50"
+            autoComplete: "off",
+            maxLength: "8"
           }}
           hint={
             <span>
