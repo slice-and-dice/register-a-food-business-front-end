@@ -12,7 +12,8 @@ const allTableRows = [
   "establishmentTradingNameRow",
   "operatorNameRow",
   "operatorTypeRow",
-  "operatorCompanyNameRow"
+  "operatorCompanyNameRow",
+  "operatorCompaniesHouseRow"
 ];
 
 // the complete set of possible mandatory answer fields with example data
@@ -23,7 +24,8 @@ const testMandatoryAnswers = {
   operator_first_name: "John",
   operator_last_name: "Appleseed",
   operator_type: "partnership",
-  operator_company_name: "Company name"
+  operator_company_name: "Company name",
+  operator_company_house_number: "AA123456"
 };
 
 // a supplementary set of all optional answer fields with example data

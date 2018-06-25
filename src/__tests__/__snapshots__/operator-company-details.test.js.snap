@@ -660,10 +660,10 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
                 </span>
               </span>
               <input
-                autoComplete="organization"
+                autoComplete="off"
                 className="emotion-15"
                 defaultValue={undefined}
-                maxLength="50"
+                maxLength="8"
                 name="operator_company_house_number"
                 type="text"
               />
