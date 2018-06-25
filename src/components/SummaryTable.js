@@ -28,8 +28,8 @@ const OperatorDetailsTable = props => (
       <Table.Row id="operatorTypeRow">
         <Table.CellHeader>Operator Type</Table.CellHeader>
         <Table.Cell>
-          <div className="bold">
-            <span id="operator_type">{props.operator_type}</span>
+          <div className="bold" id="operator_type">
+            {props.operator_type}
           </div>
         </Table.Cell>
       </Table.Row>
