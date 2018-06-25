@@ -2,7 +2,8 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
-  cleanSessionAnswers
+  cleanInactivePathAnswers,
+  cleanEmptiedAnswers
 } = require("../services/session-management.service");
 
 const continueController = (currentPage, previousAnswers, newAnswers) => {
@@ -12,9 +13,18 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     cumulativeAnswers: {}
   };
 
+  const newAnswersArray = Object.values(newAnswers);
+
+  // remove any answers that were previously given a truthy value but have since been emptied
+  const cleanedPreviousAnswers = cleanEmptiedAnswers(
+    previousAnswers,
+    newAnswersArray,
+    currentPage
+  );
+
   controllerResponse.cumulativeAnswers = Object.assign(
     {},
-    previousAnswers,
+    cleanedPreviousAnswers,
     newAnswers
   );
 
@@ -36,7 +46,7 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
   const newPath = editPath(pathJSON, cumulativeAnswersArray, currentPage);
 
   // remove any answers that are associated with an inactive page on the path
-  controllerResponse.cumulativeAnswers = cleanSessionAnswers(
+  controllerResponse.cumulativeAnswers = cleanInactivePathAnswers(
     controllerResponse.cumulativeAnswers,
     newPath
   );

@@ -1,4 +1,7 @@
-import { cleanSessionAnswers } from "./session-management.service";
+import {
+  cleanInactivePathAnswers,
+  cleanEmptiedAnswers
+} from "./session-management.service";
 
 const pathObject = {
   "/index": {
@@ -65,7 +68,7 @@ const testSessionAnswers_MoreThanNeeded = Object.assign(
 describe("session-management.service cleanSession()", () => {
   describe("given a path/data match", () => {
     it("returns the same data object as it was passed", () => {
-      const result = cleanSessionAnswers(
+      const result = cleanInactivePathAnswers(
         testSessionAnswers_Correct,
         pathObject
       );
@@ -74,7 +77,7 @@ describe("session-management.service cleanSession()", () => {
 
     describe("when an answer does not exist in the schema", () => {
       it("returns the same data object as it was passed", () => {
-        const result = cleanSessionAnswers(
+        const result = cleanInactivePathAnswers(
           testSessionAnswers_Invalid,
           pathObject
         );
@@ -84,7 +87,7 @@ describe("session-management.service cleanSession()", () => {
 
     describe("when the page of an answer does not exist in the path", () => {
       it("returns the same data object as it was passed", () => {
-        const result = cleanSessionAnswers(
+        const result = cleanInactivePathAnswers(
           testSessionAnswers_Valid,
           pathObject
         );
@@ -94,7 +97,7 @@ describe("session-management.service cleanSession()", () => {
   });
 
   describe("given a path/data mismatch", () => {
-    const result = cleanSessionAnswers(
+    const result = cleanInactivePathAnswers(
       testSessionAnswers_MoreThanNeeded,
       pathObject
     );
@@ -111,6 +114,32 @@ describe("session-management.service cleanSession()", () => {
       for (let answer in answersBelongingToInactivePage) {
         expect(result[answer]).toBe(undefined);
       }
+    });
+  });
+
+  describe("given an input field that did have an previously entered value but is now null or empty", () => {
+    const someExistingAnswers = {
+      declaration1: "My declaration",
+      declaration2: "My declaration",
+      example_field_from_another_page: "example"
+    };
+
+    const oneDeclarationCheckbox = ["declaration1"];
+
+    const currentPage = "/declaration";
+
+    const result = cleanEmptiedAnswers(
+      someExistingAnswers,
+      oneDeclarationCheckbox,
+      currentPage
+    );
+
+    it("does not return the previously entered value", () => {
+      expect(result.declaration2).toBe(undefined);
+      expect(result).toEqual({
+        declaration1: "My declaration",
+        example_field_from_another_page: "example"
+      });
     });
   });
 });

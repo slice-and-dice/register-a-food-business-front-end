@@ -1,12 +1,22 @@
 jest.mock("../services/path.service");
 jest.mock("../services/validation.service");
+jest.mock("../services/session-management.service");
 
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
+const {
+  cleanInactivePathAnswers,
+  cleanEmptiedAnswers
+} = require("../services/session-management.service");
 
 const continueController = require("./continue.controller");
 
 describe("Function: continueController: ", () => {
+  beforeEach(() => {
+    cleanInactivePathAnswers.mockImplementation(input => input);
+    cleanEmptiedAnswers.mockImplementation(input => input);
+  });
+
   let response;
   describe("When there are no validator errors: ", () => {
     describe("When the current page is at the end of the path", () => {
