@@ -3,6 +3,10 @@
     "on": true,
     "switches": {}
   },
+  "/operator-type": {
+    "on": true,
+    "switches": {}
+  },
   "/operator-name": {
     "on": true,
     "switches": {}
