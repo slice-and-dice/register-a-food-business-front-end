@@ -6,7 +6,7 @@ import { Header, Radio, Button, MultiChoice } from "govuk-react";
 const OperatorType = props => (
   <FsaLayout>
     <form action="/continue/operator-type" method="post">
-      <Header level={3}>What is your role in this food business?</Header>
+      <Header level={2}>What is your role in this food business?</Header>
       <ContentItem.B_30_15>
         <MultiChoice
           meta={{
