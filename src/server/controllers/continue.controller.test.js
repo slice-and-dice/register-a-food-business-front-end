@@ -14,7 +14,23 @@ describe("Function: continueController: ", () => {
         validate.mockImplementation(() => ({
           errors: {}
         }));
-        response = continueController("/mock-page-3", {}, {});
+        editPath.mockImplementation(() => ({
+          "/some-page": {
+            on: true,
+            switches: {}
+          },
+          "/final-page": {
+            on: true,
+            switches: {}
+          }
+        }));
+        response = continueController(
+          "/final-page",
+          {},
+          {
+            answer: "answer-pathAnswer"
+          }
+        );
       });
 
       it("Should set redirect route to /submit", () => {
@@ -29,10 +45,17 @@ describe("Function: continueController: ", () => {
         }));
         moveAlongPath.mockImplementation(() => "/nextPage");
         editPath.mockImplementation(() => ({
-          path: "/somePath"
+          "/some-page": {
+            on: true,
+            switches: {}
+          },
+          "/final-page": {
+            on: true,
+            switches: {}
+          }
         }));
         response = continueController(
-          "/",
+          "/some-page",
           {},
           {
             answer: "answer-pathAnswer"
@@ -62,9 +85,24 @@ describe("Function: continueController: ", () => {
         validate.mockImplementation(() => ({
           errors: { some: "error" }
         }));
-        response = continueController("/mock-page-1", {}, {});
+        editPath.mockImplementation(() => ({
+          "/some-page": {
+            on: true,
+            switches: {}
+          },
+          "/final-page": {
+            on: true,
+            switches: {}
+          }
+        }));
+        response = continueController(
+          "/mock-page-1",
+          {},
+          {
+            answer: "answer-pathAnswer"
+          }
+        );
       });
-
       it("should set redirectRoute to the currentPage", () => {
         expect(response.redirectRoute).toBe("/mock-page-1");
       });

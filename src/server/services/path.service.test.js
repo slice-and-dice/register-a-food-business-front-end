@@ -38,6 +38,11 @@ describe("path.service moveAlongPath()", () => {
 
 describe("path.service editPath()", () => {
   describe("Given valid input", () => {
+    it("does not reassign the input object", () => {
+      const result = editPath(pathJSON, [], "/index");
+      expect(result).not.toBe(pathJSON);
+    });
+
     it("returns a valid JavaScipt object", () => {
       const result = editPath(pathJSON, ["A1"], "/index");
       expect(typeof result).toBe("object");
@@ -108,10 +113,9 @@ describe("path.service editPath()", () => {
       expect(() => editPath(pathJSON, ["A4", "A6"], true)).toThrow(Error);
     });
 
-    it("throws an error if a sent answer ID does not exist within that page in the JSON", () => {
-      expect(() =>
-        editPath(pathJSON, ["example-Invalid-Answer"], "/index")
-      ).toThrow(Error);
+    it("does not change the path if a sent an answer ID that does not exist within that page in the JSON", () => {
+      const result = editPath(pathJSON, ["example-Invalid-Answer"], "/index");
+      expect(result).toEqual(pathJSON);
     });
 
     it("does not deactivate or reactivate the current page", () => {

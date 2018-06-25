@@ -7,12 +7,13 @@ const ApplicationComplete = props => (
     <Panel
       panelTitle="Application complete"
       panelBody={[
-        "Your reference number",
+        "Your reference number is",
         <br />,
         <span className="bold">{props.referenceNumber}</span>
       ]}
     />
-    <Paragraph>We have sent you a confirmation email.</Paragraph>
+    <Paragraph mb={5}>We have sent you a confirmation email.</Paragraph>
+
     <Header level={3}>What happens next</Header>
     <Paragraph>
       We've sent your application to **Islington Borough Council**.

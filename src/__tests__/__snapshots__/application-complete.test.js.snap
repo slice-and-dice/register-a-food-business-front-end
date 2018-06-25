@@ -355,7 +355,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 
 @media only screen and (min-width:641px) {
   .emotion-15 {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
 }
 
@@ -379,6 +379,31 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 @media print {
   .emotion-16 {
     font-size: 16px;
+  }
+}
+
+.emotion-17 {
+  font-family: "nta",Arial,sans-serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 15px;
+}
+
+.emotion-17 > p {
+  margin: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 20px;
   }
 }
 
@@ -494,7 +519,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           <div
             className="emotion-13"
           >
-            Your reference number
+            Your reference number is
             <br />
             <span
               className="bold"
@@ -515,7 +540,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           What happens next
         </h3>
         <div
-          className="emotion-15"
+          className="emotion-17"
         >
           <p>
             We've sent your application to 
@@ -526,14 +551,14 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           </p>
         </div>
         <div
-          className="emotion-15"
+          className="emotion-17"
         >
           <p>
             They will contact you either to confirm your registration, or to ask for more information.
           </p>
         </div>
         <div
-          className="emotion-15"
+          className="emotion-17"
         >
           <p>
             <a
