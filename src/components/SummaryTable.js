@@ -23,6 +23,17 @@ const OperatorDetailsTable = props => (
         </Table.Cell>
       </Table.Row>
     ) : null}
+
+    {props.operator_type ? (
+      <Table.Row id="operatorTypeRow">
+        <Table.CellHeader>Operator Type</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold">
+            <span id="operator_type">{props.operator_type}</span>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
   </React.Fragment>
 );
 
