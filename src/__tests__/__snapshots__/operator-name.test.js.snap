@@ -218,14 +218,14 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-34 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-34 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-33 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-32 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-32 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-30:first-child {
+  .emotion-32:first-child {
     margin-left: 0;
   }
 
-  .emotion-30:last-child {
+  .emotion-32:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-32 {
     width: 66.6667%;
   }
 }
@@ -478,7 +478,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-31 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -513,34 +513,34 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-29:hover {
+.emotion-31:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-29:focus {
+.emotion-31:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-29:active {
+.emotion-31:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-29:visited {
+.emotion-31:visited {
   color: #00823b;
 }
 
-.emotion-29 svg {
+.emotion-31 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-31 {
     margin-bottom: 20px;
   }
 }
@@ -626,13 +626,13 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-32"
+    className="emotion-34"
   >
     <div
-      className="emotion-31"
+      className="emotion-33"
     >
       <div
-        className="emotion-30"
+        className="emotion-32"
       >
         <h2
           className="emotion-12"
@@ -673,47 +673,51 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
           <div
             className="emotion-17 emotion-18"
           >
-            <label
-              className="emotion-21"
-              id="operator_first_name"
+            <div
+              className="emotion-17 emotion-18"
             >
-              <span
-                className="emotion-19"
+              <label
+                className="emotion-21"
+                id="operator_first_name"
               >
-                First and middle names
-              </span>
-              <input
-                autoComplete="given-name"
-                className="emotion-20"
-                defaultValue={undefined}
-                name="operator_first_name"
-                type="text"
-              />
-            </label>
-          </div>
-          <div
-            className="emotion-17 emotion-18"
-          >
-            <label
-              className="emotion-21"
-              id="operator_last_name"
+                <span
+                  className="emotion-19"
+                >
+                  First and middle names
+                </span>
+                <input
+                  autoComplete="given-name"
+                  className="emotion-20"
+                  defaultValue={undefined}
+                  name="operator_first_name"
+                  type="text"
+                />
+              </label>
+            </div>
+            <div
+              className="emotion-17 emotion-18"
             >
-              <span
-                className="emotion-19"
+              <label
+                className="emotion-21"
+                id="operator_last_name"
               >
-                Last name
-              </span>
-              <input
-                autoComplete="family-name"
-                className="emotion-20"
-                defaultValue={undefined}
-                name="operator_last_name"
-                type="text"
-              />
-            </label>
+                <span
+                  className="emotion-19"
+                >
+                  Last name
+                </span>
+                <input
+                  autoComplete="family-name"
+                  className="emotion-20"
+                  defaultValue={undefined}
+                  name="operator_last_name"
+                  type="text"
+                />
+              </label>
+            </div>
           </div>
           <button
-            className="emotion-29"
+            className="emotion-31"
             disabled={false}
             id="continue-button"
             start={false}

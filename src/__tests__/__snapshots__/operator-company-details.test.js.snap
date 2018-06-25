@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OperatorType /> matches the previous snapshot 1`] = `
+exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,14 +218,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-31 {
+.emotion-35 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-35 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-34 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-34 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-33 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-33 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-29:first-child {
+  .emotion-33:first-child {
     margin-left: 0;
   }
 
-  .emotion-29:last-child {
+  .emotion-33:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-33 {
     width: 66.6667%;
   }
 }
@@ -309,33 +309,44 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-24 {
+.emotion-17 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-24 {
+  .emotion-17 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-23 {
-  padding: 0;
-  margin: 0;
-  border: 0;
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.emotion-23:after {
+.emotion-16:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-16 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-16 {
     margin-bottom: 0;
   }
 }
@@ -367,84 +378,108 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-16 {
-  display: block;
-  position: relative;
-  padding: 0 0 0 38px;
-  margin-right: 0px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-16 {
-    margin-bottom: 10px;
-  }
-}
-
 .emotion-14 {
-  position: absolute;
-  cursor: pointer;
-  left: 0;
-  top: 0;
-  width: 38px;
-  height: 38px;
-  z-index: 1;
-  margin: 0;
-  zoom: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.emotion-14:checked + span::after {
-  opacity: 1;
-}
-
-.emotion-14:focus + span::before {
-  box-shadow: 0 0 0 4px #ffbf47;
-}
-
-.emotion-14 + span {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.emotion-15 {
+  display: block;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
   line-height: 1.25;
-  cursor: pointer;
-  padding: 8px 10px 9px 12px;
-  display: block;
+  color: #6f777b;
+  margin-bottom: 0;
 }
 
-.emotion-15:before {
-  content: '';
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-15 {
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.10526em;
-  height: 2.10526em;
-  border: 2px solid black;
-  border-radius: 50%;
-  background: transparent;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
 }
 
-.emotion-15:after {
-  content: '';
-  position: absolute;
-  top: 0.52632em;
-  left: 0.52632em;
-  width: 0;
-  height: 0;
-  border: 0.52632em solid;
-  border-radius: 50%;
-  opacity: 0;
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
 }
 
-.emotion-28 {
+.emotion-15:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-26 {
+  display: inline-block;
+  cursor: pointer;
+  color: #005ea5;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.emotion-26:hover {
+  color: #2b8cc4;
+}
+
+.emotion-26:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: -1px;
+}
+
+.emotion-25 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+.emotion-27 {
+  box-sizing: border-box;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-color: #bfc1c3;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-27 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-32 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -479,34 +514,34 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-28:hover {
+.emotion-32:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-28:focus {
+.emotion-32:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-28:active {
+.emotion-32:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-28:visited {
+.emotion-32:visited {
   color: #00823b;
 }
 
-.emotion-28 svg {
+.emotion-32 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-32 {
     margin-bottom: 20px;
   }
 }
@@ -592,92 +627,113 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-31"
+    className="emotion-35"
   >
     <div
-      className="emotion-30"
+      className="emotion-34"
     >
       <div
-        className="emotion-29"
+        className="emotion-33"
       >
+        <h2
+          className="emotion-12"
+          size={undefined}
+        >
+          Company details
+        </h2>
         <form
-          action="/continue/operator-type"
+          action="/continue/operator-company-details"
           method="post"
         >
-          <h2
-            className="emotion-12"
-            size={undefined}
-          >
-            What is your role in this food business?
-          </h2>
           <div
-            className="emotion-24 emotion-25"
+            className="emotion-17 emotion-18"
           >
             <div
-              className="emotion-24 emotion-25"
+              className="emotion-17 emotion-18"
             >
-              <div
-                className="emotion-23"
+              <label
+                className="emotion-16"
+                id="operator_company_name"
               >
                 <span
                   className="emotion-13"
+                >
+                  Registered company name
+                </span>
+                <span
+                  className="emotion-14"
+                >
+                  The name of the registered company which is acting as the operator of this food business.
+                </span>
+                <input
+                  autoComplete="organization"
+                  className="emotion-15"
+                  defaultValue={undefined}
+                  name="operator_company_name"
+                  type="text"
                 />
-                <label
-                  className="emotion-16"
+              </label>
+            </div>
+            <div
+              className="emotion-17 emotion-18"
+            >
+              <label
+                className="emotion-16"
+                id="operator_company_house_number"
+              >
+                <span
+                  className="emotion-13"
                 >
-                  <input
-                    className="emotion-14"
-                    defaultChecked={false}
-                    id="operator_type_sole_trader"
-                    name="operator_type"
-                    type="radio"
-                    value="Sole trader"
-                  />
-                  <span
-                    className="emotion-15"
-                  >
-                    I operate it as a sole trader
-                  </span>
-                </label>
-                <label
-                  className="emotion-16"
+                  Companies House number
+                </span>
+                <span
+                  className="emotion-14"
                 >
-                  <input
-                    className="emotion-14"
-                    defaultChecked={false}
-                    id="operator_type_partnership"
-                    name="operator_type"
-                    type="radio"
-                    value="Partnership"
-                  />
-                  <span
-                    className="emotion-15"
-                  >
-                    I operate it in a partnership
-                  </span>
-                </label>
-                <label
-                  className="emotion-16"
+                  Every registered company will have a Companies House reference number.
+                </span>
+                <input
+                  autoComplete="off"
+                  className="emotion-15"
+                  defaultValue={undefined}
+                  name="operator_company_house_number"
+                  type="text"
+                />
+              </label>
+            </div>
+            <div
+              className="emotion-17 emotion-18"
+            >
+              <details>
+                <summary
+                  className="emotion-26"
                 >
-                  <input
-                    className="emotion-14"
-                    defaultChecked={false}
-                    id="operator_type_representative"
-                    name="operator_type"
-                    type="radio"
-                    value="Representative"
-                  />
                   <span
-                    className="emotion-15"
+                    className="emotion-25"
                   >
-                    I represent a person, charity or company which operates it
+                    Questions about Companies House numbers
                   </span>
-                </label>
-              </div>
+                </summary>
+                <div
+                  className="emotion-27"
+                >
+                  <span>
+                    Every limited company has to be registered with Companies House, and will have a company reference number. You can find your company reference number by visiting the
+                     
+                    <a
+                      href="https://beta.companieshouse.gov.uk/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Companies House website
+                    </a>
+                    .
+                  </span>
+                </div>
+              </details>
             </div>
           </div>
           <button
-            className="emotion-28"
+            className="emotion-32"
             disabled={false}
             id="continue-button"
             start={false}

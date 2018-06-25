@@ -218,14 +218,14 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-38 {
+.emotion-40 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-38 {
+  .emotion-40 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-37 {
+.emotion-39 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-37 {
+  .emotion-39 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-36 {
+.emotion-38 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-36 {
+  .emotion-38 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-36:first-child {
+  .emotion-38:first-child {
     margin-left: 0;
   }
 
-  .emotion-36:last-child {
+  .emotion-38:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-36 {
+  .emotion-38 {
     width: 66.6667%;
   }
 }
@@ -504,7 +504,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -539,34 +539,34 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-35:hover {
+.emotion-37:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-35:focus {
+.emotion-37:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-35:active {
+.emotion-37:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-35:visited {
+.emotion-37:visited {
   color: #00823b;
 }
 
-.emotion-35 svg {
+.emotion-37 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-37 {
     margin-bottom: 20px;
   }
 }
@@ -652,13 +652,13 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-38"
+    className="emotion-40"
   >
     <div
-      className="emotion-37"
+      className="emotion-39"
     >
       <div
-        className="emotion-36"
+        className="emotion-38"
       >
         <h2
           className="emotion-12"
@@ -699,73 +699,77 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
           <div
             className="emotion-17 emotion-18"
           >
-            <label
-              className="emotion-21"
-              id="operator_primary_number"
+            <div
+              className="emotion-17 emotion-18"
             >
-              <span
-                className="emotion-19"
+              <label
+                className="emotion-21"
+                id="operator_primary_number"
               >
-                Primary phone number
-              </span>
-              <input
-                autoComplete="tel"
-                className="emotion-20"
-                defaultValue={undefined}
-                name="operator_primary_number"
-                type="text"
-              />
-            </label>
-          </div>
-          <div
-            className="emotion-17 emotion-18"
-          >
-            <label
-              className="emotion-21"
-              id="operator_secondary_number"
+                <span
+                  className="emotion-19"
+                >
+                  Primary phone number
+                </span>
+                <input
+                  autoComplete="tel"
+                  className="emotion-20"
+                  defaultValue={undefined}
+                  name="operator_primary_number"
+                  type="text"
+                />
+              </label>
+            </div>
+            <div
+              className="emotion-17 emotion-18"
             >
-              <span
-                className="emotion-19"
+              <label
+                className="emotion-21"
+                id="operator_secondary_number"
               >
-                Secondary phone number (optional)
-              </span>
-              <input
-                autoComplete="off"
-                className="emotion-20"
-                defaultValue={undefined}
-                name="operator_secondary_number"
-                type="text"
-              />
-            </label>
-          </div>
-          <div
-            className="emotion-17 emotion-18"
-          >
-            <label
-              className="emotion-21"
-              id="operator_email"
+                <span
+                  className="emotion-19"
+                >
+                  Secondary phone number (optional)
+                </span>
+                <input
+                  autoComplete="off"
+                  className="emotion-20"
+                  defaultValue={undefined}
+                  name="operator_secondary_number"
+                  type="text"
+                />
+              </label>
+            </div>
+            <div
+              className="emotion-17 emotion-18"
             >
-              <span
-                className="emotion-19"
+              <label
+                className="emotion-21"
+                id="operator_email"
               >
-                Email address
-              </span>
-              <span
-                className="emotion-30"
-              >
-                Your email address will be used to update you regarding policy or legal changes which could affect your food business.
-              </span>
-              <input
-                autoComplete="email"
-                className="emotion-20"
-                defaultValue={undefined}
-                name="operator_email"
-                type="text"
-              />
-            </label>
+                <span
+                  className="emotion-19"
+                >
+                  Email address
+                </span>
+                <span
+                  className="emotion-30"
+                >
+                  Your email address will be used to update you regarding policy or legal changes which could affect your food business.
+                </span>
+                <input
+                  autoComplete="email"
+                  className="emotion-20"
+                  defaultValue={undefined}
+                  name="operator_email"
+                  type="text"
+                />
+              </label>
+            </div>
           </div>
           <button
-            className="emotion-35"
+            className="emotion-37"
             disabled={false}
             id="continue-button"
             start={false}
