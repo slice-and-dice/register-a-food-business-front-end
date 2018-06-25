@@ -19,37 +19,39 @@ const OperatorName = props => (
 
     <form action="/continue/operator-name" method="post">
       <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "operator_first_name",
-            defaultValue: props.cumulativeAnswers.operator_first_name,
-            autoComplete: "given-name"
-          }}
-          id="operator_first_name"
-          meta={{
-            touched: true,
-            error: props.validatorErrors["operator_first_name"]
-          }}
-        >
-          First and middle names
-        </InputField>
-      </ContentItem.B_30_15>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "operator_first_name",
+              defaultValue: props.cumulativeAnswers.operator_first_name,
+              autoComplete: "given-name"
+            }}
+            id="operator_first_name"
+            meta={{
+              touched: true,
+              error: props.validatorErrors["operator_first_name"]
+            }}
+          >
+            First and middle names
+          </InputField>
+        </ContentItem.B_30_15>
 
-      <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "operator_last_name",
-            defaultValue: props.cumulativeAnswers.operator_last_name,
-            autoComplete: "family-name"
-          }}
-          id="operator_last_name"
-          meta={{
-            touched: true,
-            error: props.validatorErrors["operator_last_name"]
-          }}
-        >
-          Last name
-        </InputField>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "operator_last_name",
+              defaultValue: props.cumulativeAnswers.operator_last_name,
+              autoComplete: "family-name"
+            }}
+            id="operator_last_name"
+            meta={{
+              touched: true,
+              error: props.validatorErrors["operator_last_name"]
+            }}
+          >
+            Last name
+          </InputField>
+        </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
       <Button id="continue-button" type="submit">

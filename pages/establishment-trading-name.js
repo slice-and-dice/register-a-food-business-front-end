@@ -19,22 +19,24 @@ const EstablishmentTradingName = props => (
 
     <form action="/continue/establishment-trading-name" method="post">
       <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "establishment_trading_name",
-            defaultValue: props.cumulativeAnswers.establishment_trading_name
-          }}
-          id="establishment_trading_name"
-          hint={[
-            "A trading name is what your customers will call your business."
-          ]}
-          meta={{
-            touched: true,
-            error: props.validatorErrors["establishment_trading_name"]
-          }}
-        >
-          What is the trading name of this establishment?
-        </InputField>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "establishment_trading_name",
+              defaultValue: props.cumulativeAnswers.establishment_trading_name
+            }}
+            id="establishment_trading_name"
+            hint={[
+              "A trading name is what your customers will call your business."
+            ]}
+            meta={{
+              touched: true,
+              error: props.validatorErrors["establishment_trading_name"]
+            }}
+          >
+            What is the trading name of this establishment?
+          </InputField>
+        </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
       <Button id="continue-button" type="submit">
