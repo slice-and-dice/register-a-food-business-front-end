@@ -6,3 +6,5 @@ deploy:
     verbose: true
     on: feature/travis-deploy
     site: register-a-food-business-test
+after-deploy:
+  - yarn start
