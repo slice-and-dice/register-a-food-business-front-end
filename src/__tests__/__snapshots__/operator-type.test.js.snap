@@ -218,14 +218,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-31 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-31 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-30 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-30 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
+.emotion-29 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-29 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-27:first-child {
+  .emotion-29:first-child {
     margin-left: 0;
   }
 
-  .emotion-27:last-child {
+  .emotion-29:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-29 {
     width: 66.6667%;
   }
 }
@@ -290,22 +290,22 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.0416666666666667;
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-12 {
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 36px;
+    line-height: 1.1111111111111112;
     margin-bottom: 20px;
   }
 }
 
 @media print {
   .emotion-12 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -444,7 +444,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
-.emotion-26 {
+.emotion-28 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -479,34 +479,34 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-26:hover {
+.emotion-28:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-26:focus {
+.emotion-28:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-26:active {
+.emotion-28:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-26:visited {
+.emotion-28:visited {
   color: #00823b;
 }
 
-.emotion-26 svg {
+.emotion-28 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-28 {
     margin-bottom: 20px;
   }
 }
@@ -592,88 +592,92 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-29"
+    className="emotion-31"
   >
     <div
-      className="emotion-28"
+      className="emotion-30"
     >
       <div
-        className="emotion-27"
+        className="emotion-29"
       >
         <form
           action="/continue/operator-type"
           method="post"
         >
-          <h3
+          <h2
             className="emotion-12"
             size={undefined}
           >
             What is your role in this food business?
-          </h3>
+          </h2>
           <div
             className="emotion-24 emotion-25"
           >
             <div
-              className="emotion-23"
+              className="emotion-24 emotion-25"
             >
-              <span
-                className="emotion-13"
-              />
-              <label
-                className="emotion-16"
+              <div
+                className="emotion-23"
               >
-                <input
-                  className="emotion-14"
-                  defaultChecked={false}
-                  id="operator_type_sole_trader"
-                  name="operator_type"
-                  type="radio"
-                  value="Sole trader"
-                />
                 <span
-                  className="emotion-15"
-                >
-                  I operate it as a sole trader
-                </span>
-              </label>
-              <label
-                className="emotion-16"
-              >
-                <input
-                  className="emotion-14"
-                  defaultChecked={false}
-                  id="operator_type_partnership"
-                  name="operator_type"
-                  type="radio"
-                  value="Partnership"
+                  className="emotion-13"
                 />
-                <span
-                  className="emotion-15"
+                <label
+                  className="emotion-16"
                 >
-                  I operate it in a partnership
-                </span>
-              </label>
-              <label
-                className="emotion-16"
-              >
-                <input
-                  className="emotion-14"
-                  defaultChecked={false}
-                  id="operator_type_representative"
-                  name="operator_type"
-                  type="radio"
-                  value="Representative"
-                />
-                <span
-                  className="emotion-15"
+                  <input
+                    className="emotion-14"
+                    defaultChecked={false}
+                    id="operator_type_sole_trader"
+                    name="operator_type"
+                    type="radio"
+                    value="Sole trader"
+                  />
+                  <span
+                    className="emotion-15"
+                  >
+                    I operate it as a sole trader
+                  </span>
+                </label>
+                <label
+                  className="emotion-16"
                 >
-                  I represent a person, charity or company which operates it
-                </span>
-              </label>
+                  <input
+                    className="emotion-14"
+                    defaultChecked={false}
+                    id="operator_type_partnership"
+                    name="operator_type"
+                    type="radio"
+                    value="Partnership"
+                  />
+                  <span
+                    className="emotion-15"
+                  >
+                    I operate it in a partnership
+                  </span>
+                </label>
+                <label
+                  className="emotion-16"
+                >
+                  <input
+                    className="emotion-14"
+                    defaultChecked={false}
+                    id="operator_type_representative"
+                    name="operator_type"
+                    type="radio"
+                    value="Representative"
+                  />
+                  <span
+                    className="emotion-15"
+                  >
+                    I represent a person, charity or company which operates it
+                  </span>
+                </label>
+              </div>
             </div>
           </div>
           <button
-            className="emotion-26"
+            className="emotion-28"
             disabled={false}
             id="continue-button"
             start={false}

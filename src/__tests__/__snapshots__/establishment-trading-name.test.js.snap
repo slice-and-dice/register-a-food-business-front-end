@@ -218,14 +218,14 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-30 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-30 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
+.emotion-29 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-29 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-26 {
+.emotion-28 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-28 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-26:first-child {
+  .emotion-28:first-child {
     margin-left: 0;
   }
 
-  .emotion-26:last-child {
+  .emotion-28:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-28 {
     width: 66.6667%;
   }
 }
@@ -504,7 +504,7 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-25 {
+.emotion-27 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -539,34 +539,34 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-25:hover {
+.emotion-27:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-25:focus {
+.emotion-27:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-25:active {
+.emotion-27:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-25:visited {
+.emotion-27:visited {
   color: #00823b;
 }
 
-.emotion-25 svg {
+.emotion-27 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-27 {
     margin-bottom: 20px;
   }
 }
@@ -652,13 +652,13 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-28"
+    className="emotion-30"
   >
     <div
-      className="emotion-27"
+      className="emotion-29"
     >
       <div
-        className="emotion-26"
+        className="emotion-28"
       >
         <h2
           className="emotion-12"
@@ -699,30 +699,34 @@ exports[`<EstablishmentTradingName /> matches the previous snapshot 1`] = `
           <div
             className="emotion-17 emotion-18"
           >
-            <label
-              className="emotion-22"
-              id="establishment_trading_name"
+            <div
+              className="emotion-17 emotion-18"
             >
-              <span
-                className="emotion-19"
+              <label
+                className="emotion-22"
+                id="establishment_trading_name"
               >
-                What is the trading name of this establishment?
-              </span>
-              <span
-                className="emotion-20"
-              >
-                A trading name is what your customers will call your business.
-              </span>
-              <input
-                className="emotion-21"
-                defaultValue={undefined}
-                name="establishment_trading_name"
-                type="text"
-              />
-            </label>
+                <span
+                  className="emotion-19"
+                >
+                  What is the trading name of this establishment?
+                </span>
+                <span
+                  className="emotion-20"
+                >
+                  A trading name is what your customers will call your business.
+                </span>
+                <input
+                  className="emotion-21"
+                  defaultValue={undefined}
+                  name="establishment_trading_name"
+                  type="text"
+                />
+              </label>
+            </div>
           </div>
           <button
-            className="emotion-25"
+            className="emotion-27"
             disabled={false}
             id="continue-button"
             start={false}
