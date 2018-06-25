@@ -23,8 +23,10 @@ const Index = props => (
     </ContentItem.B_30_15>
 
     <InsetText className="bold">
-      During this registration, you may come across a few specialist terms,
-      which we have described below:
+      <Paragraph mb={0}>
+        During this registration, you may come across a few specialist terms,
+        which we have described below:
+      </Paragraph>
     </InsetText>
 
     <ContentItem.B_30_15>

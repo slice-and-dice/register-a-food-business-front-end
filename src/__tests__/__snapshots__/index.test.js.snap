@@ -218,14 +218,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-30 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-30 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-28 {
+.emotion-29 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-29 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
+.emotion-28 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-28 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-27:first-child {
+  .emotion-28:first-child {
     margin-left: 0;
   }
 
-  .emotion-27:last-child {
+  .emotion-28:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-28 {
     width: 66.6667%;
   }
 }
@@ -369,7 +369,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-18 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 10px;
@@ -379,12 +379,12 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-17 {
+  .emotion-18 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -395,7 +395,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 24px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -403,18 +403,18 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-18 {
+  .emotion-19 {
     font-size: 16px;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-18 {
+  .emotion-19 {
     margin-bottom: 5px;
   }
 }
 
-.emotion-26 {
+.emotion-27 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -449,34 +449,34 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-26:hover {
+.emotion-27:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-26:focus {
+.emotion-27:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-26:active {
+.emotion-27:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-26:visited {
+.emotion-27:visited {
   color: #00823b;
 }
 
-.emotion-26 svg {
+.emotion-27 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-27 {
     margin-bottom: 20px;
   }
 }
@@ -562,13 +562,13 @@ exports[`<Index /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-29"
+    className="emotion-30"
   >
     <div
-      className="emotion-28"
+      className="emotion-29"
     >
       <div
-        className="emotion-27"
+        className="emotion-28"
       >
         <h1
           className="emotion-12"
@@ -599,15 +599,21 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           </div>
         </div>
         <div
-          className="bold emotion-17"
+          className="bold emotion-18"
         >
-          During this registration, you may come across a few specialist terms, which we have described below:
+          <div
+            className="emotion-14"
+          >
+            <p>
+              During this registration, you may come across a few specialist terms, which we have described below:
+            </p>
+          </div>
         </div>
         <div
           className="emotion-15 emotion-16"
         >
           <h3
-            className="emotion-18"
+            className="emotion-19"
             mb={1}
             size={undefined}
           >
@@ -625,7 +631,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           className="emotion-15 emotion-16"
         >
           <h3
-            className="emotion-18"
+            className="emotion-19"
             mb={1}
             size={undefined}
           >
@@ -644,7 +650,7 @@ exports[`<Index /> matches the previous snapshot 1`] = `
           method="post"
         >
           <button
-            className="emotion-26"
+            className="emotion-27"
             disabled={false}
             id="begin-button"
             start={false}
