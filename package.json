@@ -10,8 +10,7 @@
     "test:watch": "jest --watch",
     "lint": "eslint ./src ./pages",
     "format:verify": "prettier --list-different '{./src,./pages,./docs}/**/*'",
-    "format": "prettier --write '{./src,./pages,./docs}/**/*'",
-    "postinstall": "next build"
+    "format": "prettier --write '{./src,./pages,./docs}/**/*'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
