@@ -25,7 +25,7 @@ const OperatorDetailsTable = props => (
 
     {props.operator_company_house_number ? (
       <Table.Row id="operatorCompaniesHouseRow">
-        <Table.CellHeader>Companies House number</Table.CellHeader>
+        <Table.CellHeader>Company number</Table.CellHeader>
         <Table.Cell>
           <div id="operator_company_house_number" className="bold">
             {props.operator_company_house_number}
