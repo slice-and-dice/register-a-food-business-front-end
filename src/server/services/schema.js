@@ -13,10 +13,10 @@ const {
 } = require("@slice-and-dice/register-a-food-business-validation");
 
 const schema = {
-  "/operator-type": {
+  "/registration-role": {
     type: "object",
     properties: {
-      operator_type: {
+      registration_role: {
         type: "string",
         validation: validateOperatorType
       }

@@ -19,7 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* SDB-55 Operator type
+* SDB-54 Registration Role (note: misnamed as operator type in commits)
 
 ## v1.9.0 - 25th June 2018 (unreleased)
 

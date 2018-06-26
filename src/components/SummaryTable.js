@@ -46,12 +46,12 @@ const OperatorDetailsTable = props => (
       </Table.Row>
     ) : null}
 
-    {props.operator_type ? (
-      <Table.Row id="operatorTypeRow">
-        <Table.CellHeader>Operator Type</Table.CellHeader>
+    {props.registration_role ? (
+      <Table.Row id="registrationRoleRow">
+        <Table.CellHeader>Registration role</Table.CellHeader>
         <Table.Cell>
-          <div className="bold" id="operator_type">
-            {props.operator_type}
+          <div className="bold" id="registration_role">
+            {props.registration_role}
           </div>
         </Table.Cell>
       </Table.Row>

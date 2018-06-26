@@ -188,19 +188,19 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
-      id="operatorTypeRow"
+      id="registrationRoleRow"
     >
       <th
         className="emotion-2"
       >
-        Operator Type
+        Registration role
       </th>
       <td
         className="emotion-2"
       >
         <div
           className="bold"
-          id="operator_type"
+          id="registration_role"
         >
           partnership
         </div>

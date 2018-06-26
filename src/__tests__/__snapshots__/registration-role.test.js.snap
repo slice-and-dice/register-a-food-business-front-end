@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OperatorType /> matches the previous snapshot 1`] = `
+exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -601,7 +601,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
         className="emotion-29"
       >
         <form
-          action="/continue/operator-type"
+          action="/continue/registration-role"
           method="post"
         >
           <h2
@@ -628,8 +628,8 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
                   <input
                     className="emotion-14"
                     defaultChecked={false}
-                    id="operator_type_sole_trader"
-                    name="operator_type"
+                    id="registration_role_sole_trader"
+                    name="registration_role"
                     type="radio"
                     value="Sole trader"
                   />
@@ -645,8 +645,8 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
                   <input
                     className="emotion-14"
                     defaultChecked={false}
-                    id="operator_type_partnership"
-                    name="operator_type"
+                    id="registration_role_partnership"
+                    name="registration_role"
                     type="radio"
                     value="Partnership"
                   />
@@ -662,8 +662,8 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
                   <input
                     className="emotion-14"
                     defaultChecked={false}
-                    id="operator_type_representative"
-                    name="operator_type"
+                    id="registration_role_representative"
+                    name="registration_role"
                     type="radio"
                     value="Representative"
                   />

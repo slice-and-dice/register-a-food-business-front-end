@@ -3,6 +3,10 @@
     "on": true,
     "switches": {}
   },
+  "/registration-role": {
+    "on": true,
+    "switches": {}
+  },
   "/operator-type": {
     "on": true,
     "switches": {}
