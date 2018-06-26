@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const { handle } = require("./next");
+const { info } = require("winston");
 
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
@@ -16,7 +17,6 @@ module.exports = () => {
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
-
     res.redirect(response.redirectRoute);
   });
 
@@ -26,7 +26,7 @@ module.exports = () => {
 
   router.get("/submit", async (req, res) => {
     const response = await submitController(req.session.cumulativeAnswers);
-
+    info(`submit route finished with route ${response.redirectRotue}`);
     res.redirect(response.redirectRoute);
   });
 

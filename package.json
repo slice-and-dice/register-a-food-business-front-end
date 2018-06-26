@@ -4,14 +4,13 @@
   "scripts": {
     "dev": "node src/server/index.js",
     "build": "next build",
-    "start": "node src/server/index.js",
-    "start:prod": "NODE_ENV=production node src/server/index.js",
+    "start": "NODE_ENV=production node src/server/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ./src ./pages",
     "format:verify": "prettier --list-different '{./src,./pages,./docs}/**/*'",
     "format": "prettier --write '{./src,./pages,./docs}/**/*'"
-  },
+},
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
     "@govuk-react/icon-crown": "0.0.5",
