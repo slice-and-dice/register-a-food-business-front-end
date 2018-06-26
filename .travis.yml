@@ -3,6 +3,7 @@ node_js:
 - "8.9.4"
 git:
    depth: 9999999
+script: echo "npm test temporarily disabled"
 deploy:
 - provider: azure_web_apps
   verbose: true
