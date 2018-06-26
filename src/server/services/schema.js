@@ -4,7 +4,7 @@ const {
   validateEstablishmentFirstLine,
   validateStreet,
   validateName,
-  validateOperatorType,
+  validateRadioButtons,
   validateTown,
   validateEstablishmentTradingName,
   validatePhoneNumber,
@@ -18,7 +18,7 @@ const schema = {
     properties: {
       registration_role: {
         type: "string",
-        validation: validateOperatorType
+        validation: validateRadioButtons
       }
     }
   },
@@ -27,7 +27,7 @@ const schema = {
     properties: {
       operator_type: {
         type: "string",
-        validation: validateOperatorType
+        validation: validateRadioButtons
       }
     }
   },
