@@ -4,7 +4,8 @@
     "switches": {
       "A1": { "/mock-page-1": false },
       "A2": { "/mock-page-1": false, "/mock-page-2": false },
-      "A3": { "/mock-page-2": true }
+      "A3": { "/mock-page-2": true },
+      "turnOnCurrentPageTest": { "/mock-page-off": true }
     }
   },
   "/mock-page-off": {

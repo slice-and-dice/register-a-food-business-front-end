@@ -96,6 +96,15 @@ describe("path.service editPath()", () => {
       const result2 = editPath(pathJSON, ["A6", "A4"], "/index");
       expect(result2["/mock-page-2"]["on"]).toBe(true);
     });
+
+    it("can activate the current page", () => {
+      const result = editPath(
+        pathJSON,
+        ["turnOnCurrentPageTest"],
+        "/mock-page-off"
+      );
+      expect(result["/mock-page-off"]["on"]).toBe(true);
+    });
   });
   describe("Given invalid input", () => {
     it("throws an error if an object (path) is not provided", () => {
@@ -118,7 +127,7 @@ describe("path.service editPath()", () => {
       expect(result).toEqual(pathJSON);
     });
 
-    it("does not deactivate or reactivate the current page", () => {
+    it("does not deactivate the current page", () => {
       const result = editPath(pathJSON, ["A6"], "/mock-page-2");
       expect(result["/mock-page-2"]["on"]).toBe(true);
     });
