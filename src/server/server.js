@@ -3,7 +3,6 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
 const { Next } = require("./next");
-const { info } = require("winston");
 
 module.exports = async () => {
   const app = express();
@@ -20,13 +19,6 @@ module.exports = async () => {
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded());
-
-  const hello = () => {
-    console.log("Console running");
-    info("Winston Running");
-    setTimeout(hello, 5000);
-  };
-  hello();
 
   await Next.prepare();
 
