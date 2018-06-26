@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## v1.11.0 - 25st June 2018 (unreleased)
+## v1.11.1 - 26th June 2018 (unreleased)
+
+### Modified
+
+* Fix persistence of answers that have been removed since previous submit
+
+## v1.11.0 - 25th June 2018 (unreleased)
 
 ### Added
 
