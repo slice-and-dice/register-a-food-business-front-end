@@ -2,6 +2,7 @@
   "name": "register_a_food_business_front_end",
   "version": "1.11.1",
   "scripts": {
+    "debug": "node --inspect src/server/index.js",
     "dev": "node src/server/index.js",
     "build": "next build",
     "start": "node src/server/index.js",
