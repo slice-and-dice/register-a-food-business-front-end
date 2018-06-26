@@ -7,4 +7,5 @@ script:
 deploy:
   provider: azure_web_apps
   verbose: true
+  on: develop
   site: register-a-food-business-dev
