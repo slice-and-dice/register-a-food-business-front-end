@@ -22,7 +22,7 @@ const errorMessages = {
   establishment_trading_name: "Not a valid establishment trading name"
 };
 
-const nonValidatedPages = ["/index"];
+const nonValidatedPages = ["/index", "/registration-summary"];
 
 const validator = new Validator();
 
