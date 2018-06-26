@@ -1,7 +1,7 @@
 const schema = require("./schema");
 
-const cleanSessionAnswers = (answers, path) => {
-  const cleanedAnswers = Object.assign({}, answers);
+const cleanInactivePathAnswers = (cumulativeAnswers, path) => {
+  const cleanedAnswers = Object.assign({}, cumulativeAnswers);
 
   for (let answer in cleanedAnswers) {
     let pageOfAnswer;
@@ -19,4 +19,23 @@ const cleanSessionAnswers = (answers, path) => {
   return cleanedAnswers;
 };
 
-module.exports = { cleanSessionAnswers };
+const cleanEmptiedAnswers = (
+  cumulativeAnswers,
+  newAnswersArray,
+  currentPage
+) => {
+  const cleanedAnswers = Object.assign({}, cumulativeAnswers);
+
+  for (let schemaDefinedAnswer in schema[currentPage].properties) {
+    if (
+      cleanedAnswers[schemaDefinedAnswer] &&
+      newAnswersArray.indexOf(schemaDefinedAnswer) === -1
+    ) {
+      delete cleanedAnswers[schemaDefinedAnswer];
+    }
+  }
+
+  return cleanedAnswers;
+};
+
+module.exports = { cleanInactivePathAnswers, cleanEmptiedAnswers };

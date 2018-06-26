@@ -19,57 +19,59 @@ const OperatorContactDetails = props => (
 
     <form action="/continue/operator-contact-details" method="post">
       <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "operator_primary_number",
-            defaultValue: props.cumulativeAnswers.operator_primary_number,
-            autoComplete: "tel"
-          }}
-          id="operator_primary_number"
-          meta={{
-            touched: true,
-            error: props.validatorErrors["operator_primary_number"]
-          }}
-        >
-          Primary phone number
-        </InputField>
-      </ContentItem.B_30_15>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "operator_primary_number",
+              defaultValue: props.cumulativeAnswers.operator_primary_number,
+              autoComplete: "tel"
+            }}
+            id="operator_primary_number"
+            meta={{
+              touched: true,
+              error: props.validatorErrors["operator_primary_number"]
+            }}
+          >
+            Primary phone number
+          </InputField>
+        </ContentItem.B_30_15>
 
-      <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "operator_secondary_number",
-            defaultValue: props.cumulativeAnswers.operator_secondary_number,
-            autoComplete: "off"
-          }}
-          id="operator_secondary_number"
-          meta={{
-            touched: true,
-            error: props.validatorErrors["operator_secondary_number"]
-          }}
-        >
-          Secondary phone number (optional)
-        </InputField>
-      </ContentItem.B_30_15>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "operator_secondary_number",
+              defaultValue: props.cumulativeAnswers.operator_secondary_number,
+              autoComplete: "off"
+            }}
+            id="operator_secondary_number"
+            meta={{
+              touched: true,
+              error: props.validatorErrors["operator_secondary_number"]
+            }}
+          >
+            Secondary phone number (optional)
+          </InputField>
+        </ContentItem.B_30_15>
 
-      <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "operator_email",
-            defaultValue: props.cumulativeAnswers.operator_email,
-            autoComplete: "email"
-          }}
-          id="operator_email"
-          hint={[
-            "Your email address will be used to update you regarding policy or legal changes which could affect your food business."
-          ]}
-          meta={{
-            touched: true,
-            error: props.validatorErrors["operator_email"]
-          }}
-        >
-          Email address
-        </InputField>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "operator_email",
+              defaultValue: props.cumulativeAnswers.operator_email,
+              autoComplete: "email"
+            }}
+            id="operator_email"
+            hint={[
+              "Your email address will be used to update you regarding policy or legal changes which could affect your food business."
+            ]}
+            meta={{
+              touched: true,
+              error: props.validatorErrors["operator_email"]
+            }}
+          >
+            Email address
+          </InputField>
+        </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
       <Button id="continue-button" type="submit">

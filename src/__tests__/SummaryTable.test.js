@@ -10,7 +10,10 @@ expect.addSnapshotSerializer(createSerializer(emotion));
 const allTableRows = [
   "establishmentAddressRow",
   "establishmentTradingNameRow",
-  "operatorNameRow"
+  "operatorNameRow",
+  "operatorTypeRow",
+  "operatorCompanyNameRow",
+  "operatorCompaniesHouseRow"
 ];
 
 // the complete set of possible mandatory answer fields with example data
@@ -19,10 +22,14 @@ const testMandatoryAnswers = {
   establishment_postcode: "AA11 1AA",
   establishment_trading_name: "Example trading name",
   operator_first_name: "John",
-  operator_last_name: "Appleseed"
+  operator_last_name: "Appleseed",
+  operator_type: "partnership",
+  operator_company_name: "Company name",
+  operator_company_house_number: "AA123456"
 };
 
 // a supplementary set of all optional answer fields with example data
+// (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
 const testOptionalAnswers = {
   establishment_street: "Street name",
   establishment_town: "Town"

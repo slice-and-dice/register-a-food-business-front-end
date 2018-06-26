@@ -12,6 +12,28 @@ const OperatorDetailsTable = props => (
       </Table.Cell>
     </Table.Row>
 
+    {props.operator_company_name ? (
+      <Table.Row id="operatorCompanyNameRow">
+        <Table.CellHeader>Company name</Table.CellHeader>
+        <Table.Cell>
+          <div id="operator_company_name" className="bold">
+            {props.operator_company_name}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.operator_company_house_number ? (
+      <Table.Row id="operatorCompaniesHouseRow">
+        <Table.CellHeader>Company number</Table.CellHeader>
+        <Table.Cell>
+          <div id="operator_company_house_number" className="bold">
+            {props.operator_company_house_number}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
     {props.operator_first_name ? (
       <Table.Row id="operatorNameRow">
         <Table.CellHeader>Name</Table.CellHeader>
@@ -19,6 +41,17 @@ const OperatorDetailsTable = props => (
           <div className="bold">
             <span id="operator_first_name">{props.operator_first_name}</span>{" "}
             <span id="operator_last_name">{props.operator_last_name}</span>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.operator_type ? (
+      <Table.Row id="operatorTypeRow">
+        <Table.CellHeader>Operator Type</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold" id="operator_type">
+            {props.operator_type}
           </div>
         </Table.Cell>
       </Table.Row>
