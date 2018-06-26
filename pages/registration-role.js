@@ -5,9 +5,9 @@ import { Header, Radio, Button, MultiChoice } from "govuk-react";
 
 const RegistrationRole = props => (
   <FsaLayout>
-    <form action="/continue/registration-role" method="post">
-      <Header level={2}>What is your role in this food business?</Header>
+    <Header level={2}>What is your role in this food business?</Header>
 
+    <form action="/continue/registration-role" method="post">
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <MultiChoice

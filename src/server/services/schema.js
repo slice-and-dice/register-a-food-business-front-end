@@ -22,6 +22,15 @@ const schema = {
       }
     }
   },
+  "/operator-type": {
+    type: "object",
+    properties: {
+      operator_type: {
+        type: "string",
+        validation: validateOperatorType
+      }
+    }
+  },
   "/operator-name": {
     type: "object",
     properties: {
