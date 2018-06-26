@@ -14,33 +14,52 @@ const continueController = require("./continue.controller");
 describe("Function: continueController: ", () => {
   beforeEach(() => {
     cleanInactivePathAnswers.mockImplementation(input => input);
-    cleanEmptiedAnswers.mockImplementation(input => input);
+    cleanEmptiedAnswers.mockImplementation(
+      (previousAnswers, newAnswersArray) =>
+        newAnswersArray.length > 0 ? previousAnswers : null
+    );
+    editPath.mockImplementation(() => ({
+      "/some-page": {
+        on: true,
+        switches: {}
+      },
+      "/final-page": {
+        on: true,
+        switches: {}
+      }
+    }));
   });
 
   let response;
+
+  const exampleAnswers = {
+    answer: "answer-pathAnswer"
+  };
+
+  describe("When there are no new answers on the originator page: ", () => {
+    beforeEach(() => {
+      validate.mockImplementation(() => ({
+        errors: {}
+      }));
+      response = continueController("/some-page", exampleAnswers, {});
+    });
+
+    it("Should return the same answers as input", () => {
+      expect(response.cumulativeAnswers).toEqual(exampleAnswers);
+    });
+
+    it("Should return an empty validatorErrors object", () => {
+      expect(response.validatorErrors).toEqual({});
+    });
+  });
+
   describe("When there are no validator errors: ", () => {
     describe("When the current page is at the end of the path", () => {
       beforeEach(() => {
         validate.mockImplementation(() => ({
           errors: {}
         }));
-        editPath.mockImplementation(() => ({
-          "/some-page": {
-            on: true,
-            switches: {}
-          },
-          "/final-page": {
-            on: true,
-            switches: {}
-          }
-        }));
-        response = continueController(
-          "/final-page",
-          {},
-          {
-            answer: "answer-pathAnswer"
-          }
-        );
+        response = continueController("/final-page", {}, exampleAnswers);
       });
 
       it("Should set redirect route to /submit", () => {
@@ -54,23 +73,7 @@ describe("Function: continueController: ", () => {
           errors: {}
         }));
         moveAlongPath.mockImplementation(() => "/nextPage");
-        editPath.mockImplementation(() => ({
-          "/some-page": {
-            on: true,
-            switches: {}
-          },
-          "/final-page": {
-            on: true,
-            switches: {}
-          }
-        }));
-        response = continueController(
-          "/some-page",
-          {},
-          {
-            answer: "answer-pathAnswer"
-          }
-        );
+        response = continueController("/some-page", {}, exampleAnswers);
       });
 
       it("Should return a controllerResponse", () => {
@@ -95,23 +98,7 @@ describe("Function: continueController: ", () => {
         validate.mockImplementation(() => ({
           errors: { some: "error" }
         }));
-        editPath.mockImplementation(() => ({
-          "/some-page": {
-            on: true,
-            switches: {}
-          },
-          "/final-page": {
-            on: true,
-            switches: {}
-          }
-        }));
-        response = continueController(
-          "/mock-page-1",
-          {},
-          {
-            answer: "answer-pathAnswer"
-          }
-        );
+        response = continueController("/mock-page-1", {}, exampleAnswers);
       });
       it("should set redirectRoute to the currentPage", () => {
         expect(response.redirectRoute).toBe("/mock-page-1");

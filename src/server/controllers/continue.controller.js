@@ -15,12 +15,16 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
 
   const newAnswersArray = Object.values(newAnswers);
 
-  // remove any answers that were previously given a truthy value but have since been emptied
-  const cleanedPreviousAnswers = cleanEmptiedAnswers(
-    previousAnswers,
-    newAnswersArray,
-    currentPage
-  );
+  let cleanedPreviousAnswers = Object.assign({}, previousAnswers);
+
+  if (newAnswersArray.length > 0) {
+    // remove any answers that were previously given a truthy value but have since been emptied
+    cleanedPreviousAnswers = cleanEmptiedAnswers(
+      previousAnswers,
+      newAnswersArray,
+      currentPage
+    );
+  }
 
   controllerResponse.cumulativeAnswers = Object.assign(
     {},
