@@ -105,6 +105,11 @@ describe("path.service editPath()", () => {
       );
       expect(result["/mock-page-off"]["on"]).toBe(true);
     });
+
+    it("can deactivate the current page", () => {
+      const result = editPath(pathJSON, ["A6"], "/mock-page-2");
+      expect(result["/mock-page-2"]["on"]).toBe(false);
+    });
   });
   describe("Given invalid input", () => {
     it("throws an error if an object (path) is not provided", () => {
@@ -125,11 +130,6 @@ describe("path.service editPath()", () => {
     it("does not change the path if a sent an answer ID that does not exist within that page in the JSON", () => {
       const result = editPath(pathJSON, ["example-Invalid-Answer"], "/index");
       expect(result).toEqual(pathJSON);
-    });
-
-    it("does not deactivate the current page", () => {
-      const result = editPath(pathJSON, ["A6"], "/mock-page-2");
-      expect(result["/mock-page-2"]["on"]).toBe(true);
     });
   });
 });

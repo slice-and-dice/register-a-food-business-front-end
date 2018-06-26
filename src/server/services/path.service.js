@@ -57,9 +57,7 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
   });
 
   for (let eachPage in pagesToSwitch) {
-    if (pagesToSwitch[eachPage] === true || eachPage !== currentPage) {
-      newPath[eachPage].on = pagesToSwitch[eachPage];
-    }
+    newPath[eachPage].on = pagesToSwitch[eachPage];
   }
 
   return newPath;
