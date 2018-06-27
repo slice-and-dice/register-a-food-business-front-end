@@ -1,10 +1,12 @@
 import FsaLayout from "../src/components/FsaLayout";
+import BackButton from "../src/components/BackButton";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
 import { Header, Button, InputField, Paragraph, HiddenText } from "govuk-react";
 
 const OperatorName = props => (
   <FsaLayout>
+    <BackButton originator="operator-name" />
     <Header level={2}>What is the operator's name?</Header>
 
     <ContentItem.B_30_15>

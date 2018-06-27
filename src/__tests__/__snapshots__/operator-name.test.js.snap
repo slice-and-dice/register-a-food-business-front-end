@@ -634,6 +634,12 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
       <div
         className="emotion-32"
       >
+        <a
+          href="/back/operator-name"
+          id="back-link"
+        >
+          Back
+        </a>
         <h2
           className="emotion-12"
           size={undefined}

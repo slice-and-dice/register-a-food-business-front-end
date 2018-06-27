@@ -10,10 +10,12 @@ jest.mock("express", () => ({
 }));
 
 jest.mock("./controllers/continue.controller");
+jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
+const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
 const routes = require("./routes");
 
@@ -37,15 +39,15 @@ describe("Router: ", () => {
     });
 
     it("should set up back route", () => {
-      expect(router.post.mock.calls[1][0]).toBe("/back/:originator");
+      expect(router.get.mock.calls[0][0]).toBe("/back/:originator");
     });
 
     it("should set up submit route", () => {
-      expect(router.get.mock.calls[0][0]).toBe("/submit");
+      expect(router.get.mock.calls[1][0]).toBe("/submit");
     });
 
     it("should set up generic Next route", () => {
-      expect(router.get.mock.calls[1][0]).toBe("*");
+      expect(router.get.mock.calls[2][0]).toBe("*");
     });
   });
 
@@ -97,13 +99,37 @@ describe("Router: ", () => {
     });
   });
 
-  describe("POST to /back/:originator", () => {
+  describe("GET to /back/:originator", () => {
+    let req, res;
+
     beforeEach(async () => {
-      handler = router.post.mock.calls[1][1];
-      handler("request", "response");
+      backController.mockImplementation(() => "/previousPage");
+
+      handler = router.get.mock.calls[0][1];
+
+      req = {
+        session: {
+          cumulativeAnswers: {}
+        },
+        params: {
+          originator: "originator"
+        }
+      };
+
+      res = {
+        redirect: jest.fn()
+      };
+
+      handler(req, res);
     });
 
-    it("Should do nothing", () => {});
+    it("Should call backController with currentPage, cumulativeAnswers", () => {
+      expect(backController).toHaveBeenCalledWith("/originator", {});
+    });
+
+    it("Should redirect to previous page", () => {
+      expect(res.redirect).toBeCalledWith("/previousPage");
+    });
   });
 
   describe("GET to /submit", () => {
@@ -114,7 +140,7 @@ describe("Router: ", () => {
         redirectRoute: "/application-complete"
       }));
 
-      handler = router.get.mock.calls[0][1];
+      handler = router.get.mock.calls[1][1];
 
       req = {
         session: {
@@ -142,7 +168,7 @@ describe("Router: ", () => {
 
   describe("GET to *", () => {
     beforeEach(async () => {
-      handler = router.get.mock.calls[1][1];
+      handler = router.get.mock.calls[2][1];
       handler("request", "response");
     });
 
