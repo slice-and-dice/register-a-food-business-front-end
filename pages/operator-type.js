@@ -1,50 +1,80 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
-import { Header, Radio, Button, MultiChoice } from "govuk-react";
+import {
+  Header,
+  Radio,
+  Button,
+  MultiChoice,
+  HiddenText,
+  Paragraph
+} from "govuk-react";
+import HintTextSmall from "../src/components/HintTextSmall";
 
 const OperatorType = props => (
   <FsaLayout>
-    <form action="/continue/operator-type" method="post">
-      <Header level={2}>What is your role in this food business?</Header>
+    <Header level={2}>Who operates this business?</Header>
 
+    <ContentItem.B_30_15>
+      <HiddenText summaryText={"What is a food business operator?"}>
+        <Paragraph mb={0}>
+          The food business operator is the person, charity or company who makes
+          the decisions about the food business, what it serves and how it
+          operates.
+        </Paragraph>
+      </HiddenText>
+    </ContentItem.B_30_15>
+
+    <form action="/continue/operator-type" method="post">
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <MultiChoice
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_type"]
+              error: props.validatorErrors.operator_type
             }}
           >
             <Radio
               name="operator_type"
-              value="Sole trader"
-              id="operator_type_sole_trader"
+              value="A person"
+              id="operator_type_person"
               defaultChecked={
-                props.cumulativeAnswers.operator_type === "Sole trader"
+                props.cumulativeAnswers.operator_type === "A person"
               }
             >
-              I operate it as a sole trader
+              A person
+              <HintTextSmall>
+                The food business is owned or operated by an individual person,
+                rather than any legal entity such as a business or charity.
+              </HintTextSmall>
             </Radio>
             <Radio
               name="operator_type"
-              value="Partnership"
-              id="operator_type_partnership"
+              value="A company"
+              id="operator_type_company"
               defaultChecked={
-                props.cumulativeAnswers.operator_type === "Partnership"
+                props.cumulativeAnswers.operator_type === "A company"
               }
             >
-              I operate it in a partnership
+              A company
+              <HintTextSmall>
+                The food business is owned or operated by a limited company
+                rather than a single person or partnership of people.
+              </HintTextSmall>
             </Radio>
             <Radio
               name="operator_type"
-              value="Representative"
-              id="operator_type_representative"
+              value="A charity"
+              id="operator_type_charity"
               defaultChecked={
-                props.cumulativeAnswers.operator_type === "Representative"
+                props.cumulativeAnswers.operator_type === "A charity"
               }
             >
-              I represent a person, charity or company which operates it
+              A charity
+              <HintTextSmall>
+                The food business is owned or operated by a charity rather than
+                a company, person or partnership of people.
+              </HintTextSmall>
             </Radio>
           </MultiChoice>
         </ContentItem.B_30_15>

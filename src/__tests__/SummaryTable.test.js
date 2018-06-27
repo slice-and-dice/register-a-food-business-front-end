@@ -11,7 +11,7 @@ const allTableRows = [
   "establishmentAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
-  "operatorTypeRow",
+  "registrationRoleRow",
   "operatorCompanyNameRow",
   "operatorCompaniesHouseRow"
 ];
@@ -23,7 +23,7 @@ const testMandatoryAnswers = {
   establishment_trading_name: "Example trading name",
   operator_first_name: "John",
   operator_last_name: "Appleseed",
-  operator_type: "partnership",
+  registration_role: "partnership",
   operator_company_name: "Company name",
   operator_company_house_number: "AA123456"
 };

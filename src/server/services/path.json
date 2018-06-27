@@ -3,16 +3,27 @@
     "on": true,
     "switches": {}
   },
-  "/operator-type": {
+  "/registration-role": {
     "on": true,
-    "switches": {}
+    "switches": {
+      "Sole trader": { "/operator-name": true },
+      "Partnership": { "/operator-name": true },
+      "Representative": { "/operator-type": true }
+    }
+  },
+  "/operator-type": {
+    "on": false,
+    "switches": {
+      "A company": { "/operator-company-details": true },
+      "A person": { "/operator-name": true }
+    }
   },
   "/operator-company-details": {
-    "on": true,
+    "on": false,
     "switches": {}
   },
   "/operator-name": {
-    "on": true,
+    "on": false,
     "switches": {}
   },
   "/operator-contact-details": {

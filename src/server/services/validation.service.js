@@ -6,7 +6,8 @@ const errorMessages = {
   declaration1: "You must tick all the declarations before continuing",
   declaration2: "You must tick all the declarations before continuing",
   declaration3: "You must tick all the declarations before continuing",
-  operator_type: "You must select an operator type",
+  registration_role: "You must select a role before continuing",
+  operator_type: "You must an operator type before continuing",
   operator_first_name: "Not a valid first name",
   operator_last_name: "Not a valid last name",
   operator_primary_number: "Not a valid phone number",
@@ -21,7 +22,7 @@ const errorMessages = {
   establishment_trading_name: "Not a valid establishment trading name"
 };
 
-const nonValidatedPages = ["/index"];
+const nonValidatedPages = ["/index", "/registration-summary"];
 
 const validator = new Validator();
 

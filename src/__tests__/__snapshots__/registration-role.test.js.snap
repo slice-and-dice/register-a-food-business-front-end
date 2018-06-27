@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OperatorType /> matches the previous snapshot 1`] = `
+exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,14 +218,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-43 {
+.emotion-31 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-43 {
+  .emotion-31 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-42 {
+.emotion-30 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-42 {
+  .emotion-30 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-41 {
+.emotion-29 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,22 +266,22 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-29 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-41:first-child {
+  .emotion-29:first-child {
     margin-left: 0;
   }
 
-  .emotion-41:last-child {
+  .emotion-29:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-29 {
     width: 66.6667%;
   }
 }
@@ -309,83 +309,17 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-24 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-17 {
+  .emotion-24 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-14 {
-  display: inline-block;
-  cursor: pointer;
-  color: #005ea5;
-  font-family: "nta",Arial,sans-serif;
-  font-size: 19px;
-  position: relative;
-  margin-bottom: 5px;
-}
-
-.emotion-14:hover {
-  color: #2b8cc4;
-}
-
-.emotion-14:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: -1px;
-}
-
-.emotion-13 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-}
-
-.emotion-16 {
-  box-sizing: border-box;
-  border-left-style: solid;
-  border-left-width: 5px;
-  border-color: #bfc1c3;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-16 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-15 {
-  font-family: "nta",Arial,sans-serif;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.25;
-  margin-bottom: 0;
-}
-
-.emotion-15 > p {
-  margin: 0;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-15 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-15 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-35 {
+.emotion-23 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -394,19 +328,19 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-35:after {
+.emotion-23:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-23 {
     margin-bottom: 0;
   }
 }
 
-.emotion-19 {
+.emotion-13 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -421,19 +355,19 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-13 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-13 {
     margin-bottom: 0;
   }
 }
 
-.emotion-24 {
+.emotion-16 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -442,12 +376,12 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-16 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-20 {
+.emotion-14 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -461,20 +395,20 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   cursor: pointer;
 }
 
-.emotion-20:checked + span::after {
+.emotion-14:checked + span::after {
   opacity: 1;
 }
 
-.emotion-20:focus + span::before {
+.emotion-14:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.emotion-20 + span {
+.emotion-14 + span {
   opacity: 1;
   pointer-events: auto;
 }
 
-.emotion-23 {
+.emotion-15 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -485,7 +419,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   display: block;
 }
 
-.emotion-23:before {
+.emotion-15:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -498,7 +432,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   background: transparent;
 }
 
-.emotion-23:after {
+.emotion-15:after {
   content: '';
   position: absolute;
   top: 0.52632em;
@@ -510,40 +444,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
-.emotion-22 {
-  display: block;
-  font-family: "nta",Arial,sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #6f777b;
-  margin-bottom: 0;
-  font-size: 16px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-22 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-22 {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-22 {
-    font-size: 16px;
-  }
-}
-
-.emotion-40 {
+.emotion-28 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -578,34 +479,34 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-40:hover {
+.emotion-28:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-40:focus {
+.emotion-28:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-40:active {
+.emotion-28:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-40:visited {
+.emotion-28:visited {
   color: #00823b;
 }
 
-.emotion-40 svg {
+.emotion-28 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-40 {
+  .emotion-28 {
     margin-bottom: 20px;
   }
 }
@@ -691,133 +592,92 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-43"
+    className="emotion-31"
   >
     <div
-      className="emotion-42"
+      className="emotion-30"
     >
       <div
-        className="emotion-41"
+        className="emotion-29"
       >
         <h2
           className="emotion-12"
           size={undefined}
         >
-          Who operates this business?
+          What is your role in this food business?
         </h2>
-        <div
-          className="emotion-17 emotion-18"
-        >
-          <details>
-            <summary
-              className="emotion-14"
-            >
-              <span
-                className="emotion-13"
-              >
-                What is a food business operator?
-              </span>
-            </summary>
-            <div
-              className="emotion-16"
-            >
-              <div
-                className="emotion-15"
-              >
-                <p>
-                  The food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
-                </p>
-              </div>
-            </div>
-          </details>
-        </div>
         <form
-          action="/continue/operator-type"
+          action="/continue/registration-role"
           method="post"
         >
           <div
-            className="emotion-17 emotion-18"
+            className="emotion-24 emotion-25"
           >
             <div
-              className="emotion-17 emotion-18"
+              className="emotion-24 emotion-25"
             >
               <div
-                className="emotion-35"
+                className="emotion-23"
               >
                 <span
-                  className="emotion-19"
+                  className="emotion-13"
                 />
                 <label
-                  className="emotion-24"
+                  className="emotion-16"
                 >
                   <input
-                    className="emotion-20"
+                    className="emotion-14"
                     defaultChecked={false}
-                    id="operator_type_person"
-                    name="operator_type"
+                    id="registration_role_sole_trader"
+                    name="registration_role"
                     type="radio"
-                    value="A person"
+                    value="Sole trader"
                   />
                   <span
-                    className="emotion-23"
+                    className="emotion-15"
                   >
-                    A person
-                    <span
-                      className="emotion-21 emotion-22"
-                    >
-                      The food business is owned or operated by an individual person, rather than any legal entity such as a business or charity.
-                    </span>
+                    I operate it as a sole trader
                   </span>
                 </label>
                 <label
-                  className="emotion-24"
+                  className="emotion-16"
                 >
                   <input
-                    className="emotion-20"
+                    className="emotion-14"
                     defaultChecked={false}
-                    id="operator_type_company"
-                    name="operator_type"
+                    id="registration_role_partnership"
+                    name="registration_role"
                     type="radio"
-                    value="A company"
+                    value="Partnership"
                   />
                   <span
-                    className="emotion-23"
+                    className="emotion-15"
                   >
-                    A company
-                    <span
-                      className="emotion-21 emotion-22"
-                    >
-                      The food business is owned or operated by a limited company rather than a single person or partnership of people.
-                    </span>
+                    I operate it in a partnership
                   </span>
                 </label>
                 <label
-                  className="emotion-24"
+                  className="emotion-16"
                 >
                   <input
-                    className="emotion-20"
+                    className="emotion-14"
                     defaultChecked={false}
-                    id="operator_type_charity"
-                    name="operator_type"
+                    id="registration_role_representative"
+                    name="registration_role"
                     type="radio"
-                    value="A charity"
+                    value="Representative"
                   />
                   <span
-                    className="emotion-23"
+                    className="emotion-15"
                   >
-                    A charity
-                    <span
-                      className="emotion-21 emotion-22"
-                    >
-                      The food business is owned or operated by a charity rather than a company, person or partnership of people.
-                    </span>
+                    I represent a person, charity or company which operates it
                   </span>
                 </label>
               </div>
             </div>
           </div>
           <button
-            className="emotion-40"
+            className="emotion-28"
             disabled={false}
             id="continue-button"
             start={false}

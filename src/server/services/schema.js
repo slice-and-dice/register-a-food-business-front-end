@@ -4,21 +4,32 @@ const {
   validateEstablishmentFirstLine,
   validateStreet,
   validateName,
-  validateOperatorType,
+  validateRadioButtons,
   validateTown,
   validateEstablishmentTradingName,
   validatePhoneNumber,
   validatePhoneNumberOptional,
+  validateCompaniesHouseNumber,
+  validateCompanyName,
   validateEmail
 } = require("@slice-and-dice/register-a-food-business-validation");
 
 const schema = {
+  "/registration-role": {
+    type: "object",
+    properties: {
+      registration_role: {
+        type: "string",
+        validation: validateRadioButtons
+      }
+    }
+  },
   "/operator-type": {
     type: "object",
     properties: {
       operator_type: {
         type: "string",
-        validation: validateOperatorType
+        validation: validateRadioButtons
       }
     }
   },
@@ -49,6 +60,19 @@ const schema = {
       operator_email: {
         type: "string",
         validation: validateEmail
+      }
+    }
+  },
+  "/operator-company-details": {
+    type: "object",
+    properties: {
+      operator_company_house_number: {
+        type: "string",
+        validation: validateCompaniesHouseNumber
+      },
+      operator_company_name: {
+        type: "string",
+        validation: validateCompanyName
       }
     }
   },

@@ -1,7 +1,10 @@
 module.exports.moveAlongPath = (path, currentPage, movement) => {
   const activePath = Object.keys(path).filter(entry => path[entry].on === true);
+
   const currentIndex = activePath.indexOf(currentPage);
+
   const nextPage = activePath[currentIndex + (movement || 0)];
+
   if (nextPage) {
     return nextPage;
   } else {
@@ -54,9 +57,7 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
   });
 
   for (let eachPage in pagesToSwitch) {
-    if (eachPage !== currentPage) {
-      newPath[eachPage].on = pagesToSwitch[eachPage];
-    }
+    newPath[eachPage].on = pagesToSwitch[eachPage];
   }
 
   return newPath;
