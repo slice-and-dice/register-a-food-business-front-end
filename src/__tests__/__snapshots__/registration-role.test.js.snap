@@ -600,6 +600,12 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
       <div
         className="emotion-29"
       >
+        <a
+          href="/back/registration-role"
+          id="back-link"
+        >
+          Back
+        </a>
         <h2
           className="emotion-12"
           size={undefined}

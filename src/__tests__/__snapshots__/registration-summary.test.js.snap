@@ -560,6 +560,12 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
       <div
         className="emotion-31"
       >
+        <a
+          href="/back/registration-summary"
+          id="back-link"
+        >
+          Back
+        </a>
         <h3
           className="emotion-12"
           size={undefined}

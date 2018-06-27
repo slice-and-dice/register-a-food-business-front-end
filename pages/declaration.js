@@ -1,11 +1,13 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
+import BackButton from "../src/components/BackButton";
 import { Header, Checkbox, Button, MultiChoice, Paragraph } from "govuk-react";
 
 const Declaration = props => (
   <FsaLayout>
     <form action="/continue/declaration" method="post">
+      <BackButton originator="declaration" />
       <Header level={2}>Declaration</Header>
 
       <ContentItem.B_30_15>

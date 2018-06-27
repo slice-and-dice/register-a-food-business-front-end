@@ -640,6 +640,12 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
           action="/continue/declaration"
           method="post"
         >
+          <a
+            href="/back/declaration"
+            id="back-link"
+          >
+            Back
+          </a>
           <h2
             className="emotion-12"
             size={undefined}

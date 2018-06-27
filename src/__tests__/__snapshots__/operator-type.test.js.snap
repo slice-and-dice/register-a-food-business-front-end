@@ -699,6 +699,12 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
       <div
         className="emotion-41"
       >
+        <a
+          href="/back/operator-type"
+          id="back-link"
+        >
+          Back
+        </a>
         <h2
           className="emotion-12"
           size={undefined}

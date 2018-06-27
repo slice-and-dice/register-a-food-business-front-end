@@ -659,6 +659,12 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
       <div
         className="emotion-43"
       >
+        <a
+          href="/back/establishment-address"
+          id="back-link"
+        >
+          Back
+        </a>
         <h2
           className="emotion-12"
           size={undefined}

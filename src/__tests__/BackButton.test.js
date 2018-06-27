@@ -21,7 +21,8 @@ describe("<BackButton />", () => {
     const originator = "previous-page";
 
     const wrapper = mount(<BackButton originator />);
-    const backButton = wrapper.find("BackButton#back-link");
+    const backButton = wrapper.find("BackButton");
+    console.log(backButton.props());
     expect(backButton.props().originator).toBe("previous-page");
   });
 });
