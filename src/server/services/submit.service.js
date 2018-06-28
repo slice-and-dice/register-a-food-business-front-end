@@ -23,5 +23,8 @@ module.exports.submit = async cumulativeAnswers => {
   });
 
   const response = await sendRequest(requestBody);
+
+  console.log(response);
+
   return response;
 };
