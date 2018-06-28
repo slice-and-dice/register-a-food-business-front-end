@@ -23,6 +23,12 @@ describe("<ContinueButton />", () => {
     expect(continueButton.props().type).toBe("test");
   });
 
+  it("passes the prop 'start' as 'false' by default for the Button component", () => {
+    const wrapper = mount(<ContinueButton />);
+    const GovUkButton = wrapper.find("Button");
+    expect(GovUkButton.props().start).toBe(false);
+  });
+
   describe("when not given a type prop", () => {
     const wrapper = mount(<ContinueButton />);
 
@@ -33,8 +39,14 @@ describe("<ContinueButton />", () => {
 
   describe("given a type of 'begin'", () => {
     const wrapper = mount(<ContinueButton type="begin" />);
+
     it("has 'Begin registration' as the button text", () => {
       expect(wrapper.text()).toContain("Begin registration");
+    });
+
+    it("passes the prop 'start' as 'true' for the Button component", () => {
+      const GovUkButton = wrapper.find("Button");
+      expect(GovUkButton.props().start).toBe(true);
     });
 
     it("contains a <ButtonArrow> component", () => {

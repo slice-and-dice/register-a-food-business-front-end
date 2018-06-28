@@ -6,6 +6,7 @@ const ContinueButton = props => (
     id="continue-button"
     type="submit"
     icon={props.type === "begin" ? <ButtonArrow /> : null}
+    start={props.type === "begin"}
   >
     {props.type === "begin"
       ? "Begin registration"
