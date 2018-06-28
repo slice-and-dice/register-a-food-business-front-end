@@ -10,7 +10,7 @@ import { Header, Button, InputField, HiddenText, Paragraph } from "govuk-react";
 const OperatorAddress = props => (
   <FsaLayout>
     <BackButton originator="operator-address" />
-    <Header level={2}>What is the operator's address</Header>
+    <Header level={2}>What is the operator's address?</Header>
 
     <ContentItem.B_30_15>
       <HiddenText summaryText={"What is a food business operator?"}>
@@ -39,7 +39,7 @@ const OperatorAddress = props => (
               error: props.validatorErrors["operator_first_line"]
             }}
           >
-            First Line of address
+            First line of address
           </InputField>
         </ContentItem.B_30_15>
 

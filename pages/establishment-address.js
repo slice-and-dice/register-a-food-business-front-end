@@ -39,7 +39,7 @@ const EstablishmentAddress = props => (
               error: props.validatorErrors["establishment_first_line"]
             }}
           >
-            First Line of address
+            First line of address
           </InputField>
         </ContentItem.B_30_15>
 

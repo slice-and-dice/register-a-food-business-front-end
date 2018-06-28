@@ -658,7 +658,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
           className="emotion-14"
           size={undefined}
         >
-          What is the operator's address
+          What is the operator's address?
         </h2>
         <div
           className="emotion-19 emotion-20"
@@ -703,7 +703,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                 <span
                   className="emotion-21"
                 >
-                  First Line of address
+                  First line of address
                 </span>
                 <input
                   autoComplete="address-line1"

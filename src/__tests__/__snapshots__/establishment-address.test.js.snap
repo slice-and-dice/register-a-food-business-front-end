@@ -728,7 +728,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
                 <span
                   className="emotion-21"
                 >
-                  First Line of address
+                  First line of address
                 </span>
                 <input
                   autoComplete="address-line1"
