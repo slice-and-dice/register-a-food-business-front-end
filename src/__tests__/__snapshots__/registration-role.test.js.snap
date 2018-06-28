@@ -218,14 +218,14 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-33 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-32 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-32 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-31 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,27 +266,37 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-31 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-29:first-child {
+  .emotion-31:first-child {
     margin-left: 0;
   }
 
-  .emotion-29:last-child {
+  .emotion-31:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-31 {
     width: 66.6667%;
   }
 }
 
 .emotion-12 {
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-12 {
+    padding-bottom: 30px;
+  }
+}
+
+.emotion-14 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -296,7 +306,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 36px;
     line-height: 1.1111111111111112;
     margin-bottom: 20px;
@@ -304,22 +314,22 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 18px;
   }
 }
 
-.emotion-24 {
+.emotion-26 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-24 {
+  .emotion-26 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-23 {
+.emotion-25 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -328,19 +338,19 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-23:after {
+.emotion-25:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-25 {
     margin-bottom: 0;
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -355,19 +365,19 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-15 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-13 {
+  .emotion-15 {
     margin-bottom: 0;
   }
 }
 
-.emotion-16 {
+.emotion-18 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -376,12 +386,12 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-18 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -395,20 +405,20 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   cursor: pointer;
 }
 
-.emotion-14:checked + span::after {
+.emotion-16:checked + span::after {
   opacity: 1;
 }
 
-.emotion-14:focus + span::before {
+.emotion-16:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.emotion-14 + span {
+.emotion-16 + span {
   opacity: 1;
   pointer-events: auto;
 }
 
-.emotion-15 {
+.emotion-17 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -419,7 +429,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   display: block;
 }
 
-.emotion-15:before {
+.emotion-17:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -432,7 +442,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   background: transparent;
 }
 
-.emotion-15:after {
+.emotion-17:after {
   content: '';
   position: absolute;
   top: 0.52632em;
@@ -444,7 +454,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
-.emotion-28 {
+.emotion-30 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -479,34 +489,34 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-28:hover {
+.emotion-30:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-28:focus {
+.emotion-30:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-28:active {
+.emotion-30:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-28:visited {
+.emotion-30:visited {
   color: #00823b;
 }
 
-.emotion-28 svg {
+.emotion-30 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-30 {
     margin-bottom: 20px;
   }
 }
@@ -592,16 +602,26 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-31"
+    className="emotion-33"
   >
     <div
-      className="emotion-30"
+      className="emotion-32"
     >
       <div
-        className="emotion-29"
+        className="emotion-31"
       >
+        <div
+          className="emotion-12 emotion-13"
+        >
+          <a
+            href="/back/registration-role"
+            id="back-link"
+          >
+            Back
+          </a>
+        </div>
         <h2
-          className="emotion-12"
+          className="emotion-14"
           size={undefined}
         >
           What is your role in this food business?
@@ -611,22 +631,22 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
           method="post"
         >
           <div
-            className="emotion-24 emotion-25"
+            className="emotion-26 emotion-27"
           >
             <div
-              className="emotion-24 emotion-25"
+              className="emotion-26 emotion-27"
             >
               <div
-                className="emotion-23"
+                className="emotion-25"
               >
                 <span
-                  className="emotion-13"
+                  className="emotion-15"
                 />
                 <label
-                  className="emotion-16"
+                  className="emotion-18"
                 >
                   <input
-                    className="emotion-14"
+                    className="emotion-16"
                     defaultChecked={false}
                     id="registration_role_sole_trader"
                     name="registration_role"
@@ -634,16 +654,16 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
                     value="Sole trader"
                   />
                   <span
-                    className="emotion-15"
+                    className="emotion-17"
                   >
                     I operate it as a sole trader
                   </span>
                 </label>
                 <label
-                  className="emotion-16"
+                  className="emotion-18"
                 >
                   <input
-                    className="emotion-14"
+                    className="emotion-16"
                     defaultChecked={false}
                     id="registration_role_partnership"
                     name="registration_role"
@@ -651,16 +671,16 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
                     value="Partnership"
                   />
                   <span
-                    className="emotion-15"
+                    className="emotion-17"
                   >
                     I operate it in a partnership
                   </span>
                 </label>
                 <label
-                  className="emotion-16"
+                  className="emotion-18"
                 >
                   <input
-                    className="emotion-14"
+                    className="emotion-16"
                     defaultChecked={false}
                     id="registration_role_representative"
                     name="registration_role"
@@ -668,7 +688,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
                     value="Representative"
                   />
                   <span
-                    className="emotion-15"
+                    className="emotion-17"
                   >
                     I represent a person, charity or company which operates it
                   </span>
@@ -677,7 +697,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
             </div>
           </div>
           <button
-            className="emotion-28"
+            className="emotion-30"
             disabled={false}
             id="continue-button"
             start={false}

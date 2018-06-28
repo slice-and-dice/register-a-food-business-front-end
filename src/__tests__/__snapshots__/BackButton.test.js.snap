@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackButton /> matches the previous snapshot 1`] = `
+.emotion-0 {
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-0 {
+    padding-bottom: 30px;
+  }
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  <a
+    href="/back/undefined"
+    id="back-link"
+  >
+    Back
+  </a>
+</div>
+`;

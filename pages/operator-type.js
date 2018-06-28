@@ -1,6 +1,7 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
+import BackButton from "../src/components/BackButton";
 import {
   Header,
   Radio,
@@ -13,6 +14,7 @@ import HintTextSmall from "../src/components/HintTextSmall";
 
 const OperatorType = props => (
   <FsaLayout>
+    <BackButton originator="operator-type" />
     <Header level={2}>Who operates this business?</Header>
 
     <ContentItem.B_30_15>

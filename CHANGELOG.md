@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.12.0 - 28th June 2018 (unreleased)
+
+### Added
+
+* SDB-232 Back link routing and addition to all pages
+
 ## v1.11.1 - 26th June 2018 (unreleased)
 
 ### Modified

@@ -1,10 +1,12 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
+import BackButton from "../src/components/BackButton";
 import { Header, Button, InputField, HiddenText, Paragraph } from "govuk-react";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
+    <BackButton originator="establishment-address" />
     <Header level={2}>Establishment address</Header>
 
     <ContentItem.B_30_15>

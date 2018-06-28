@@ -1,10 +1,12 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
+import BackButton from "../src/components/BackButton";
 import { Header, Button, InputField, HiddenText } from "govuk-react";
 
 const LimitedCompanyDetails = props => (
   <FsaLayout>
+    <BackButton originator="operator-company-details" />
     <Header level={2}>Company details</Header>
 
     <form action="/continue/operator-company-details" method="post">

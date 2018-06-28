@@ -218,14 +218,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-43 {
+.emotion-45 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-43 {
+  .emotion-45 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-42 {
+.emotion-44 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-42 {
+  .emotion-44 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-41 {
+.emotion-43 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,27 +266,37 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-43 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-41:first-child {
+  .emotion-43:first-child {
     margin-left: 0;
   }
 
-  .emotion-41:last-child {
+  .emotion-43:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-43 {
     width: 66.6667%;
   }
 }
 
 .emotion-12 {
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-12 {
+    padding-bottom: 30px;
+  }
+}
+
+.emotion-14 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -296,7 +306,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 36px;
     line-height: 1.1111111111111112;
     margin-bottom: 20px;
@@ -304,22 +314,22 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 18px;
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-17 {
+  .emotion-19 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   display: inline-block;
   cursor: pointer;
   color: #005ea5;
@@ -329,23 +339,23 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 5px;
 }
 
-.emotion-14:hover {
+.emotion-16:hover {
   color: #2b8cc4;
 }
 
-.emotion-14:focus {
+.emotion-16:focus {
   outline: 3px solid #ffbf47;
   outline-offset: -1px;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
-.emotion-16 {
+.emotion-18 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -355,12 +365,12 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-18 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-15 {
+.emotion-17 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -368,24 +378,24 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-15 > p {
+.emotion-17 > p {
   margin: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-17 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-17 {
     margin-bottom: 0;
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -394,19 +404,19 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-35:after {
+.emotion-37:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-37 {
     margin-bottom: 0;
   }
 }
 
-.emotion-19 {
+.emotion-21 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -421,19 +431,19 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-21 {
     margin-bottom: 0;
   }
 }
 
-.emotion-24 {
+.emotion-26 {
   display: block;
   position: relative;
   padding: 0 0 0 38px;
@@ -442,12 +452,12 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-26 {
     margin-bottom: 10px;
   }
 }
 
-.emotion-20 {
+.emotion-22 {
   position: absolute;
   cursor: pointer;
   left: 0;
@@ -461,20 +471,20 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   cursor: pointer;
 }
 
-.emotion-20:checked + span::after {
+.emotion-22:checked + span::after {
   opacity: 1;
 }
 
-.emotion-20:focus + span::before {
+.emotion-22:focus + span::before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
-.emotion-20 + span {
+.emotion-22 + span {
   opacity: 1;
   pointer-events: auto;
 }
 
-.emotion-23 {
+.emotion-25 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -485,7 +495,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   display: block;
 }
 
-.emotion-23:before {
+.emotion-25:before {
   content: '';
   box-sizing: border-box;
   position: absolute;
@@ -498,7 +508,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   background: transparent;
 }
 
-.emotion-23:after {
+.emotion-25:after {
   content: '';
   position: absolute;
   top: 0.52632em;
@@ -510,7 +520,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
-.emotion-22 {
+.emotion-24 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -525,25 +535,25 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-24 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 16px;
   }
 }
 
-.emotion-40 {
+.emotion-42 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -578,34 +588,34 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-40:hover {
+.emotion-42:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-40:focus {
+.emotion-42:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-40:active {
+.emotion-42:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-40:visited {
+.emotion-42:visited {
   color: #00823b;
 }
 
-.emotion-40 svg {
+.emotion-42 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-40 {
+  .emotion-42 {
     margin-bottom: 20px;
   }
 }
@@ -691,38 +701,48 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-43"
+    className="emotion-45"
   >
     <div
-      className="emotion-42"
+      className="emotion-44"
     >
       <div
-        className="emotion-41"
+        className="emotion-43"
       >
+        <div
+          className="emotion-12 emotion-13"
+        >
+          <a
+            href="/back/operator-type"
+            id="back-link"
+          >
+            Back
+          </a>
+        </div>
         <h2
-          className="emotion-12"
+          className="emotion-14"
           size={undefined}
         >
           Who operates this business?
         </h2>
         <div
-          className="emotion-17 emotion-18"
+          className="emotion-19 emotion-20"
         >
           <details>
             <summary
-              className="emotion-14"
+              className="emotion-16"
             >
               <span
-                className="emotion-13"
+                className="emotion-15"
               >
                 What is a food business operator?
               </span>
             </summary>
             <div
-              className="emotion-16"
+              className="emotion-18"
             >
               <div
-                className="emotion-15"
+                className="emotion-17"
               >
                 <p>
                   The food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
@@ -736,22 +756,22 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
           method="post"
         >
           <div
-            className="emotion-17 emotion-18"
+            className="emotion-19 emotion-20"
           >
             <div
-              className="emotion-17 emotion-18"
+              className="emotion-19 emotion-20"
             >
               <div
-                className="emotion-35"
+                className="emotion-37"
               >
                 <span
-                  className="emotion-19"
+                  className="emotion-21"
                 />
                 <label
-                  className="emotion-24"
+                  className="emotion-26"
                 >
                   <input
-                    className="emotion-20"
+                    className="emotion-22"
                     defaultChecked={false}
                     id="operator_type_person"
                     name="operator_type"
@@ -759,21 +779,21 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
                     value="A person"
                   />
                   <span
-                    className="emotion-23"
+                    className="emotion-25"
                   >
                     A person
                     <span
-                      className="emotion-21 emotion-22"
+                      className="emotion-23 emotion-24"
                     >
                       The food business is owned or operated by an individual person, rather than any legal entity such as a business or charity.
                     </span>
                   </span>
                 </label>
                 <label
-                  className="emotion-24"
+                  className="emotion-26"
                 >
                   <input
-                    className="emotion-20"
+                    className="emotion-22"
                     defaultChecked={false}
                     id="operator_type_company"
                     name="operator_type"
@@ -781,21 +801,21 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
                     value="A company"
                   />
                   <span
-                    className="emotion-23"
+                    className="emotion-25"
                   >
                     A company
                     <span
-                      className="emotion-21 emotion-22"
+                      className="emotion-23 emotion-24"
                     >
                       The food business is owned or operated by a limited company rather than a single person or partnership of people.
                     </span>
                   </span>
                 </label>
                 <label
-                  className="emotion-24"
+                  className="emotion-26"
                 >
                   <input
-                    className="emotion-20"
+                    className="emotion-22"
                     defaultChecked={false}
                     id="operator_type_charity"
                     name="operator_type"
@@ -803,11 +823,11 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
                     value="A charity"
                   />
                   <span
-                    className="emotion-23"
+                    className="emotion-25"
                   >
                     A charity
                     <span
-                      className="emotion-21 emotion-22"
+                      className="emotion-23 emotion-24"
                     >
                       The food business is owned or operated by a charity rather than a company, person or partnership of people.
                     </span>
@@ -817,7 +837,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
             </div>
           </div>
           <button
-            className="emotion-40"
+            className="emotion-42"
             disabled={false}
             id="continue-button"
             start={false}

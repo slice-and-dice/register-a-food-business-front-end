@@ -2,9 +2,11 @@ import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
 import ContentItem from "../src/components/ContentItem";
 import { Header, Button, InputField, Paragraph, HiddenText } from "govuk-react";
+import BackButton from "../src/components/BackButton";
 
 const OperatorContactDetails = props => (
   <FsaLayout>
+    <BackButton originator="operator-contact-details" />
     <Header level={2}>Operator contact details</Header>
 
     <ContentItem.B_30_15>

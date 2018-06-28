@@ -1,10 +1,12 @@
 import FsaLayout from "../src/components/FsaLayout";
 import SessionWrapper from "../src/components/SessionWrapper";
+import BackButton from "../src/components/BackButton";
 import ContentItem from "../src/components/ContentItem";
 import { Header, Radio, Button, MultiChoice } from "govuk-react";
 
 const RegistrationRole = props => (
   <FsaLayout>
+    <BackButton originator="registration-role" />
     <Header level={2}>What is your role in this food business?</Header>
 
     <form action="/continue/registration-role" method="post">
