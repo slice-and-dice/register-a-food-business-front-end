@@ -739,11 +739,11 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
           <button
             className="emotion-31"
             disabled={false}
-            id="submit-button"
+            id="continue-button"
             start={false}
             type="submit"
           >
-            Submit registration
+            Submit
           </button>
         </form>
       </div>

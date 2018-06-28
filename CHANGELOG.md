@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.12.1 - 28th June 2018 (unreleased)
+
+### Modified
+
+* Make all 'Continue' green buttons re-usable from a new component, with consistent IDs
+* Add ID to link for testing
+
 ## v1.12.0 - 28th June 2018 (unreleased)
 
 ### Added

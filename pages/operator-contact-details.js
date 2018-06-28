@@ -1,8 +1,11 @@
-import FsaLayout from "../src/components/FsaLayout";
-import SessionWrapper from "../src/components/SessionWrapper";
-import ContentItem from "../src/components/ContentItem";
-import { Header, Button, InputField, Paragraph, HiddenText } from "govuk-react";
-import BackButton from "../src/components/BackButton";
+import {
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  BackButton,
+  ContinueButton
+} from "../src/components";
+import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
 
 const OperatorContactDetails = props => (
   <FsaLayout>
@@ -76,9 +79,7 @@ const OperatorContactDetails = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <Button id="continue-button" type="submit">
-        Continue
-      </Button>
+      <ContinueButton />
     </form>
   </FsaLayout>
 );

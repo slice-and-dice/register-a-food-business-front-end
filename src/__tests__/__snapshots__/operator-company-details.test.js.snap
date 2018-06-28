@@ -741,6 +741,7 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
                      
                     <a
                       href="https://beta.companieshouse.gov.uk/"
+                      id="link-companies-house"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
