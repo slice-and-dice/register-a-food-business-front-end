@@ -1,16 +1,12 @@
-import FsaLayout from "../src/components/FsaLayout";
-import SessionWrapper from "../src/components/SessionWrapper";
-import ContentItem from "../src/components/ContentItem";
-import BackButton from "../src/components/BackButton";
 import {
-  Header,
-  Radio,
-  Button,
-  MultiChoice,
-  HiddenText,
-  Paragraph
-} from "govuk-react";
-import HintTextSmall from "../src/components/HintTextSmall";
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  BackButton,
+  ContinueButton,
+  HintTextSmall
+} from "../src/components";
+import { Header, Radio, MultiChoice, HiddenText, Paragraph } from "govuk-react";
 
 const OperatorType = props => (
   <FsaLayout>
@@ -82,9 +78,7 @@ const OperatorType = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <Button id="continue-button" type="submit">
-        Continue
-      </Button>
+      <ContinueButton />
     </form>
   </FsaLayout>
 );

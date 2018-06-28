@@ -1,8 +1,11 @@
-import FsaLayout from "../src/components/FsaLayout";
-import SessionWrapper from "../src/components/SessionWrapper";
-import BackButton from "../src/components/BackButton";
-import ContentItem from "../src/components/ContentItem";
-import { Header, Radio, Button, MultiChoice } from "govuk-react";
+import {
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  BackButton,
+  ContinueButton
+} from "../src/components";
+import { Header, Radio, MultiChoice } from "govuk-react";
 
 const RegistrationRole = props => (
   <FsaLayout>
@@ -52,9 +55,7 @@ const RegistrationRole = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <Button id="continue-button" type="submit">
-        Continue
-      </Button>
+      <ContinueButton />
     </form>
   </FsaLayout>
 );

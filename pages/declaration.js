@@ -1,8 +1,11 @@
-import FsaLayout from "../src/components/FsaLayout";
-import SessionWrapper from "../src/components/SessionWrapper";
-import ContentItem from "../src/components/ContentItem";
-import BackButton from "../src/components/BackButton";
-import { Header, Checkbox, Button, MultiChoice, Paragraph } from "govuk-react";
+import {
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  BackButton,
+  ContinueButton
+} from "../src/components";
+import { Header, Checkbox, MultiChoice, Paragraph } from "govuk-react";
 
 const Declaration = props => (
   <FsaLayout>
@@ -66,9 +69,7 @@ const Declaration = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <Button id="submit-button" type="submit">
-        Submit registration
-      </Button>
+      <ContinueButton type="submit" />
     </form>
   </FsaLayout>
 );

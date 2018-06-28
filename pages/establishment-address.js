@@ -1,8 +1,11 @@
-import FsaLayout from "../src/components/FsaLayout";
-import SessionWrapper from "../src/components/SessionWrapper";
-import ContentItem from "../src/components/ContentItem";
-import BackButton from "../src/components/BackButton";
-import { Header, Button, InputField, HiddenText, Paragraph } from "govuk-react";
+import {
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  BackButton,
+  ContinueButton
+} from "../src/components";
+import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
@@ -92,9 +95,7 @@ const EstablishmentAddress = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <Button id="continue-button" type="submit">
-        Continue
-      </Button>
+      <ContinueButton />
     </form>
     <Paragraph>
       If you are registering a mobile food business, please use the location
