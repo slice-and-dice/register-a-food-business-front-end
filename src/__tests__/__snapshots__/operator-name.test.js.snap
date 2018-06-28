@@ -218,14 +218,14 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-34 {
+.emotion-36 {
   padding: 10px;
   min-width: 320px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-36 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -240,14 +240,14 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-33 {
+.emotion-35 {
   width: 100%;
   clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-35 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-34 {
   background-color: transparent;
   background-image: none;
   margin: 0;
@@ -266,27 +266,37 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-34 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-32:first-child {
+  .emotion-34:first-child {
     margin-left: 0;
   }
 
-  .emotion-32:last-child {
+  .emotion-34:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-34 {
     width: 66.6667%;
   }
 }
 
 .emotion-12 {
+  padding-bottom: 60px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-12 {
+    padding-bottom: 30px;
+  }
+}
+
+.emotion-14 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
@@ -296,7 +306,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 36px;
     line-height: 1.1111111111111112;
     margin-bottom: 20px;
@@ -304,22 +314,22 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media print {
-  .emotion-12 {
+  .emotion-14 {
     font-size: 18px;
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-17 {
+  .emotion-19 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   display: inline-block;
   cursor: pointer;
   color: #005ea5;
@@ -329,23 +339,23 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   margin-bottom: 5px;
 }
 
-.emotion-14:hover {
+.emotion-16:hover {
   color: #2b8cc4;
 }
 
-.emotion-14:focus {
+.emotion-16:focus {
   outline: 3px solid #ffbf47;
   outline-offset: -1px;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
-.emotion-16 {
+.emotion-18 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -355,12 +365,12 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-16 {
+  .emotion-18 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-15 {
+.emotion-17 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -368,24 +378,24 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-15 > p {
+.emotion-17 > p {
   margin: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-17 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-17 {
     margin-bottom: 0;
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -399,25 +409,25 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-21:after {
+.emotion-23:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-23 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-23 {
     margin-bottom: 0;
   }
 }
 
-.emotion-19 {
+.emotion-21 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -432,19 +442,19 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-19 {
+  .emotion-21 {
     margin-bottom: 0;
   }
 }
 
-.emotion-20 {
+.emotion-22 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -460,25 +470,25 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-20:focus {
+.emotion-22:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-20 {
+  .emotion-22 {
     margin-bottom: 0;
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -513,34 +523,34 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-31:hover {
+.emotion-33:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-31:focus {
+.emotion-33:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-31:active {
+.emotion-33:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-31:visited {
+.emotion-33:visited {
   color: #00823b;
 }
 
-.emotion-31 svg {
+.emotion-33 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-33 {
     margin-bottom: 20px;
   }
 }
@@ -626,44 +636,48 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-34"
+    className="emotion-36"
   >
     <div
-      className="emotion-33"
+      className="emotion-35"
     >
       <div
-        className="emotion-32"
+        className="emotion-34"
       >
-        <a
-          href="/back/operator-name"
-          id="back-link"
+        <div
+          className="emotion-12 emotion-13"
         >
-          Back
-        </a>
+          <a
+            href="/back/operator-name"
+            id="back-link"
+          >
+            Back
+          </a>
+        </div>
         <h2
-          className="emotion-12"
+          className="emotion-14"
           size={undefined}
         >
           What is the operator's name?
         </h2>
         <div
-          className="emotion-17 emotion-18"
+          className="emotion-19 emotion-20"
         >
           <details>
             <summary
-              className="emotion-14"
+              className="emotion-16"
             >
               <span
-                className="emotion-13"
+                className="emotion-15"
               >
                 What is a food business operator?
               </span>
             </summary>
             <div
-              className="emotion-16"
+              className="emotion-18"
             >
               <div
-                className="emotion-15"
+                className="emotion-17"
               >
                 <p>
                   The food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
@@ -677,23 +691,23 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
           method="post"
         >
           <div
-            className="emotion-17 emotion-18"
+            className="emotion-19 emotion-20"
           >
             <div
-              className="emotion-17 emotion-18"
+              className="emotion-19 emotion-20"
             >
               <label
-                className="emotion-21"
+                className="emotion-23"
                 id="operator_first_name"
               >
                 <span
-                  className="emotion-19"
+                  className="emotion-21"
                 >
                   First and middle names
                 </span>
                 <input
                   autoComplete="given-name"
-                  className="emotion-20"
+                  className="emotion-22"
                   defaultValue={undefined}
                   name="operator_first_name"
                   type="text"
@@ -701,20 +715,20 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
               </label>
             </div>
             <div
-              className="emotion-17 emotion-18"
+              className="emotion-19 emotion-20"
             >
               <label
-                className="emotion-21"
+                className="emotion-23"
                 id="operator_last_name"
               >
                 <span
-                  className="emotion-19"
+                  className="emotion-21"
                 >
                   Last name
                 </span>
                 <input
                   autoComplete="family-name"
-                  className="emotion-20"
+                  className="emotion-22"
                   defaultValue={undefined}
                   name="operator_last_name"
                   type="text"
@@ -723,7 +737,7 @@ exports[`<OperatorName /> matches the previous snapshot 1`] = `
             </div>
           </div>
           <button
-            className="emotion-31"
+            className="emotion-33"
             disabled={false}
             id="continue-button"
             start={false}

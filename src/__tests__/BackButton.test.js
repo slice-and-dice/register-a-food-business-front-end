@@ -20,9 +20,8 @@ describe("<BackButton />", () => {
   it("gets given the correct originator props", () => {
     const originator = "previous-page";
 
-    const wrapper = mount(<BackButton originator />);
+    const wrapper = mount(<BackButton originator={originator} />);
     const backButton = wrapper.find("BackButton");
-    console.log(backButton.props());
-    expect(backButton.props().originator).toBe("previous-page");
+    expect(backButton.props().originator).toBe(originator);
   });
 });
