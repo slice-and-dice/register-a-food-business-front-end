@@ -1,8 +1,11 @@
-import FsaLayout from "../src/components/FsaLayout";
-import SessionWrapper from "../src/components/SessionWrapper";
-import ContentItem from "../src/components/ContentItem";
-import BackButton from "../src/components/BackButton";
-import { Header, Button, InputField, HiddenText } from "govuk-react";
+import {
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  BackButton,
+  ContinueButton
+} from "../src/components";
+import { Header, InputField, HiddenText } from "govuk-react";
 
 const LimitedCompanyDetails = props => (
   <FsaLayout>
@@ -63,6 +66,7 @@ const LimitedCompanyDetails = props => (
                 href="https://beta.companieshouse.gov.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                id="link-companies-house"
               >
                 Companies House website
               </a>.
@@ -71,9 +75,7 @@ const LimitedCompanyDetails = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <Button id="continue-button" type="submit">
-        Continue
-      </Button>
+      <ContinueButton />
     </form>
   </FsaLayout>
 );

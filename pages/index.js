@@ -1,8 +1,10 @@
-import SessionWrapper from "../src/components/SessionWrapper";
-import FsaLayout from "../src/components/FsaLayout";
-import ContentItem from "../src/components/ContentItem";
-import { Header, Button, Paragraph, InsetText } from "govuk-react";
-import { ButtonArrow } from "@govuk-react/icons";
+import {
+  FsaLayout,
+  SessionWrapper,
+  ContentItem,
+  ContinueButton
+} from "../src/components";
+import { Header, Paragraph, InsetText } from "govuk-react";
 
 const Index = props => (
   <FsaLayout>
@@ -53,9 +55,7 @@ const Index = props => (
     </ContentItem.B_30_15>
 
     <form action="/continue/index" method="post">
-      <Button id="begin-button" type="submit" icon={<ButtonArrow />}>
-        Begin registration
-      </Button>
+      <ContinueButton type="begin" />
     </form>
   </FsaLayout>
 );
