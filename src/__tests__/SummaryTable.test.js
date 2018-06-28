@@ -9,6 +9,7 @@ expect.addSnapshotSerializer(createSerializer(emotion));
 // a complete list of the summary table row IDs
 const allTableRows = [
   "establishmentAddressRow",
+  "operatorAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
   "registrationRoleRow",
@@ -20,6 +21,8 @@ const allTableRows = [
 const testMandatoryAnswers = {
   establishment_first_line: "Example first line",
   establishment_postcode: "AA11 1AA",
+  operator_first_line: "Example first line",
+  operator_postcode: "AA11 1AA",
   establishment_trading_name: "Example trading name",
   operator_first_name: "John",
   operator_last_name: "Appleseed",
@@ -32,7 +35,9 @@ const testMandatoryAnswers = {
 // (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
 const testOptionalAnswers = {
   establishment_street: "Street name",
-  establishment_town: "Town"
+  establishment_town: "Town",
+  operator_street: "Street name",
+  operator_town: "Town"
 };
 
 // the complete set of possible answer fields with example data
