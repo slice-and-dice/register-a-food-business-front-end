@@ -1,14 +1,14 @@
 import FsaHeader from "./FsaHeader";
-import { GridRow, GridCol, Layout } from "govuk-react";
+import { GridRow, GridCol, Main } from "govuk-react";
 
 const FsaLayout = props => (
   <div>
     <FsaHeader />
-    <Layout>
+    <Main>
       <GridRow>
         <GridCol columnTwoThirds>{props.children}</GridCol>
       </GridRow>
-    </Layout>
+    </Main>
   </div>
 );
 

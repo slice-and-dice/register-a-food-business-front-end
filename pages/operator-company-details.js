@@ -55,24 +55,22 @@ const LimitedCompanyDetails = props => (
           </InputField>
         </ContentItem.B_30_15>
 
-        <ContentItem.B_30_15>
-          <HiddenText summaryText={"Questions about Companies House numbers"}>
-            {/* TODO JMB: replace the span with a paragraph once it's possible to pass an array or similar to Paragraph for the link */}
-            <span>
-              Every limited company has to be registered with Companies House,
-              and will have a company reference number. You can find your
-              company reference number by visiting the{" "}
-              <a
-                href="https://beta.companieshouse.gov.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="link-companies-house"
-              >
-                Companies House website
-              </a>.
-            </span>
-          </HiddenText>
-        </ContentItem.B_30_15>
+        <HiddenText summaryText={"Questions about Companies House numbers"}>
+          {/* TODO JMB: replace the span with a paragraph once it's possible to pass an array or similar to Paragraph for the link */}
+          <span>
+            Every limited company has to be registered with Companies House, and
+            will have a company reference number. You can find your company
+            reference number by visiting the{" "}
+            <a
+              href="https://beta.companieshouse.gov.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="link-companies-house"
+            >
+              Companies House website
+            </a>.
+          </span>
+        </HiddenText>
       </ContentItem.B_30_15>
 
       <ContinueButton />
