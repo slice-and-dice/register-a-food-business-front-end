@@ -65,7 +65,7 @@ const OperatorContactDetails = props => (
             }}
             id="operator_email"
             hint={[
-              "Your email address will be used to update you regarding policy or legal changes which could affect your food business."
+              "Your email address will be used to update you regarding policy or legal changes that could affect your food business."
             ]}
             meta={{
               touched: true,

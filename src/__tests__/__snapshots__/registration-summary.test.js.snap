@@ -218,9 +218,29 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-36 {
+  padding-top: 30px;
+  text-align: center;
+}
+
 .emotion-35 {
-  padding: 10px;
-  box-sizing: border-box;
+  max-width: 960px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-35 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width:1020px) {
+  .emotion-35 {
+    margin: 0 auto;
+  }
 }
 
 .emotion-34 {
@@ -273,7 +293,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 }
 
 .emotion-12 {
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 }
 
 @media only screen and (max-width:641px) {
@@ -575,124 +595,128 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-35"
+    className="emotion-36"
   >
     <div
-      className="emotion-34"
+      className="emotion-35"
     >
       <div
-        className="emotion-33"
+        className="emotion-34"
       >
         <div
-          className="emotion-12 emotion-13"
+          className="emotion-33"
         >
-          <a
-            href="/back/registration-summary"
-            id="back-link"
+          <div
+            className="emotion-12 emotion-13"
           >
-            Back
-          </a>
-        </div>
-        <h3
-          className="emotion-14"
-          size={undefined}
-        >
-          Please check that the details you entered are correct.
-        </h3>
-        <div
-          className="emotion-30 emotion-31"
-        >
-          <table
-            className="emotion-29"
-          >
-            <caption
-              className="emotion-15"
-            />
-            <tbody
-              className="emotion-19"
+            <a
+              href="/back/registration-summary"
+              id="back-link"
             >
-              <tr
-                className="emotion-19"
-              >
-                <th
-                  className="emotion-17"
-                >
-                  <div
-                    className="emotion-16"
-                  >
-                    <p>
-                      <strong>
-                        Operator details
-                      </strong>
-                    </p>
-                  </div>
-                </th>
-                <td
-                  className="emotion-17"
-                >
-                  <div />
-                </td>
-              </tr>
-              <tr
-                className="emotion-19"
-              >
-                <th
-                  className="emotion-17"
-                >
-                  <div
-                    className="emotion-16"
-                  >
-                    <p>
-                      <strong>
-                        Establishment details
-                      </strong>
-                    </p>
-                  </div>
-                </th>
-                <td
-                  className="emotion-17"
-                >
-                  <div />
-                </td>
-              </tr>
-              <tr
-                className="emotion-19"
-              >
-                <th
-                  className="emotion-17"
-                >
-                  <div
-                    className="emotion-16"
-                  >
-                    <p>
-                      <strong>
-                        Food activities
-                      </strong>
-                    </p>
-                  </div>
-                </th>
-                <td
-                  className="emotion-17"
-                >
-                  <div />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <form
-          action="/continue/registration-summary"
-          method="post"
-        >
-          <button
-            className="emotion-32"
-            disabled={false}
-            id="continue-button"
-            type="submit"
+              Back
+            </a>
+          </div>
+          <h3
+            className="emotion-14"
+            size={undefined}
           >
-            Continue
-          </button>
-        </form>
+            Please check that the details you entered are correct.
+          </h3>
+          <div
+            className="emotion-30 emotion-31"
+          >
+            <table
+              className="emotion-29"
+            >
+              <caption
+                className="emotion-15"
+              />
+              <tbody
+                className="emotion-19"
+              >
+                <tr
+                  className="emotion-19"
+                >
+                  <th
+                    className="emotion-17"
+                  >
+                    <div
+                      className="emotion-16"
+                    >
+                      <p>
+                        <strong>
+                          Operator details
+                        </strong>
+                      </p>
+                    </div>
+                  </th>
+                  <td
+                    className="emotion-17"
+                  >
+                    <div />
+                  </td>
+                </tr>
+                <tr
+                  className="emotion-19"
+                >
+                  <th
+                    className="emotion-17"
+                  >
+                    <div
+                      className="emotion-16"
+                    >
+                      <p>
+                        <strong>
+                          Establishment details
+                        </strong>
+                      </p>
+                    </div>
+                  </th>
+                  <td
+                    className="emotion-17"
+                  >
+                    <div />
+                  </td>
+                </tr>
+                <tr
+                  className="emotion-19"
+                >
+                  <th
+                    className="emotion-17"
+                  >
+                    <div
+                      className="emotion-16"
+                    >
+                      <p>
+                        <strong>
+                          Food activities
+                        </strong>
+                      </p>
+                    </div>
+                  </th>
+                  <td
+                    className="emotion-17"
+                  >
+                    <div />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <form
+            action="/continue/registration-summary"
+            method="post"
+          >
+            <button
+              className="emotion-32"
+              disabled={false}
+              id="continue-button"
+              type="submit"
+            >
+              Continue
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
