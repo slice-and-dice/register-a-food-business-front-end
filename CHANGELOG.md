@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.13.1 - 28th June 2018 (unreleased)
+
+### Added
+
+* SDB-244 Added special route for QA test data injection for Registration Summary
+
 ## v1.13.0 - 28th June 2018 (unreleased)
 
 ### Added
