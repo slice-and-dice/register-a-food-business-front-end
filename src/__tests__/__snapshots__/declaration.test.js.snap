@@ -218,12 +218,12 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-35 {
+.emotion-33 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-34 {
+.emotion-32 {
   max-width: 960px;
   margin-left: 15px;
   margin-right: 15px;
@@ -231,19 +231,19 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-32 {
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
 @media only screen and (min-width:1020px) {
-  .emotion-34 {
+  .emotion-32 {
     margin: 0 auto;
   }
 }
 
-.emotion-33 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-31 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -264,7 +264,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-30 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -272,22 +272,22 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-30 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-32:first-child {
+  .emotion-30:first-child {
     margin-left: 0;
   }
 
-  .emotion-32:last-child {
+  .emotion-30:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-30 {
     width: 66.6667%;
   }
 }
@@ -322,16 +322,6 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
 @media print {
   .emotion-14 {
     font-size: 18px;
-  }
-}
-
-.emotion-27 {
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width:641px) {
-  .emotion-27 {
-    padding-bottom: 15px;
   }
 }
 
@@ -523,7 +513,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
-.emotion-31 {
+.emotion-29 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -558,34 +548,34 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-31:hover {
+.emotion-29:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-31:focus {
+.emotion-29:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-31:active {
+.emotion-29:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-31:visited {
+.emotion-29:visited {
   color: #00823b;
 }
 
-.emotion-31 svg {
+.emotion-29 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-29 {
     margin-bottom: 20px;
   }
 }
@@ -671,16 +661,16 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-35"
+    className="emotion-33"
   >
     <div
-      className="emotion-34"
+      className="emotion-32"
     >
       <div
-        className="emotion-33"
+        className="emotion-31"
       >
         <div
-          className="emotion-32"
+          className="emotion-30"
         >
           <form
             action="/continue/declaration"
@@ -703,77 +693,73 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
               Declaration
             </h2>
             <div
-              className="emotion-27 emotion-28"
+              className="emotion-15"
+            >
+              <p>
+                Before submitting this food business registration, please review these statements. Tick each box to agree.
+              </p>
+            </div>
+            <div
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-15"
+                className="emotion-26"
               >
-                <p>
-                  Before submitting this food business registration, please review these statements. Tick each box to agree.
-                </p>
-              </div>
-              <div
-                className="emotion-27 emotion-28"
-              >
-                <div
-                  className="emotion-26"
+                <span
+                  className="emotion-16"
+                />
+                <label
+                  className="emotion-19"
                 >
-                  <span
-                    className="emotion-16"
+                  <input
+                    className="emotion-17"
+                    defaultChecked={undefined}
+                    name="declaration1"
+                    type="checkbox"
+                    value="I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief."
                   />
-                  <label
-                    className="emotion-19"
+                  <span
+                    className="emotion-18"
                   >
-                    <input
-                      className="emotion-17"
-                      defaultChecked={undefined}
-                      name="declaration1"
-                      type="checkbox"
-                      value="I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief."
-                    />
-                    <span
-                      className="emotion-18"
-                    >
-                      I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief.
-                    </span>
-                  </label>
-                  <label
-                    className="emotion-19"
+                    I declare that the information I have given on this form is correct and complete to the best of my knowledge and belief.
+                  </span>
+                </label>
+                <label
+                  className="emotion-19"
+                >
+                  <input
+                    className="emotion-17"
+                    defaultChecked={undefined}
+                    name="declaration2"
+                    type="checkbox"
+                    value="I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening."
+                  />
+                  <span
+                    className="emotion-18"
                   >
-                    <input
-                      className="emotion-17"
-                      defaultChecked={undefined}
-                      name="declaration2"
-                      type="checkbox"
-                      value="I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening."
-                    />
-                    <span
-                      className="emotion-18"
-                    >
-                      I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening.
-                    </span>
-                  </label>
-                  <label
-                    className="emotion-19"
+                    I, or the operator, will notify food authorities of any significant changes to the business activity, including closure, within 28 days of the change happening.
+                  </span>
+                </label>
+                <label
+                  className="emotion-19"
+                >
+                  <input
+                    className="emotion-17"
+                    defaultChecked={undefined}
+                    name="declaration3"
+                    type="checkbox"
+                    value="I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment."
+                  />
+                  <span
+                    className="emotion-18"
                   >
-                    <input
-                      className="emotion-17"
-                      defaultChecked={undefined}
-                      name="declaration3"
-                      type="checkbox"
-                      value="I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment."
-                    />
-                    <span
-                      className="emotion-18"
-                    >
-                      I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment.
-                    </span>
-                  </label>
-                </div>
+                    I, or the operator, understands the operator is legally responsible for the safety and authenticity of the food being produced or served at this establishment.
+                  </span>
+                </label>
               </div>
             </div>
             <button
-              className="emotion-31"
+              className="emotion-29"
               disabled={false}
               id="continue-button"
               type="submit"

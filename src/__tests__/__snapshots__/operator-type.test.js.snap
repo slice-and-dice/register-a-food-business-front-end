@@ -428,16 +428,6 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-37 {
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width:641px) {
-  .emotion-37 {
-    padding-bottom: 15px;
-  }
-}
-
 .emotion-36 {
   padding: 0;
   margin: 0;
@@ -800,7 +790,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
             method="post"
           >
             <div
-              className="emotion-37 emotion-38"
+              className="emotion-12 emotion-13"
             >
               <div
                 className="emotion-36"

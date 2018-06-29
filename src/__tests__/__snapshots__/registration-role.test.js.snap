@@ -325,16 +325,6 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-26 {
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width:641px) {
-  .emotion-26 {
-    padding-bottom: 15px;
-  }
-}
-
 .emotion-25 {
   padding: 0;
   margin: 0;
@@ -640,7 +630,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
             method="post"
           >
             <div
-              className="emotion-26 emotion-27"
+              className="emotion-12 emotion-13"
             >
               <div
                 className="emotion-25"
