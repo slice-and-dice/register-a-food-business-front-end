@@ -23,6 +23,17 @@ const OperatorDetailsTable = props => (
       </Table.Row>
     ) : null}
 
+    {props.operator_company_house_number ? (
+      <Table.Row id="operatorCompaniesHouseRow">
+        <Table.CellHeader>Company number</Table.CellHeader>
+        <Table.Cell>
+          <div id="operator_company_house_number" className="bold">
+            {props.operator_company_house_number}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
     {props.operator_first_line ? (
       <Table.Row id="operatorAddressRow">
         <Table.CellHeader>Operator address</Table.CellHeader>
@@ -32,17 +43,6 @@ const OperatorDetailsTable = props => (
             <div id="operator_street">{props.operator_street || null}</div>
             <div id="operator_town">{props.operator_town || null}</div>
             <div id="operator_postcode">{props.operator_postcode}</div>
-          </div>
-        </Table.Cell>
-      </Table.Row>
-    ) : null}
-
-    {props.operator_company_house_number ? (
-      <Table.Row id="operatorCompaniesHouseRow">
-        <Table.CellHeader>Company number</Table.CellHeader>
-        <Table.Cell>
-          <div id="operator_company_house_number" className="bold">
-            {props.operator_company_house_number}
           </div>
         </Table.Cell>
       </Table.Row>
