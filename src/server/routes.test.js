@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 jest.mock("./next", () => ({
   handle: jest.fn()
 }));
@@ -46,8 +48,12 @@ describe("Router: ", () => {
       expect(router.get.mock.calls[1][0]).toBe("/submit");
     });
 
+    it("should set up QA summary route", () => {
+      expect(router.get.mock.calls[2][0]).toBe("/qa-registration-summary");
+    });
+
     it("should set up generic Next route", () => {
-      expect(router.get.mock.calls[2][0]).toBe("*");
+      expect(router.get.mock.calls[3][0]).toBe("*");
     });
   });
 
@@ -161,14 +167,71 @@ describe("Router: ", () => {
       });
     });
 
-    it("Should set redirect to resoinse", () => {
+    it("Should set redirect to response", () => {
       expect(res.redirect).toBeCalledWith("/application-complete");
+    });
+  });
+
+  describe("GET to /qa-registration-summary", () => {
+    describe("with QA_KEY", () => {
+      let res, req;
+      beforeEach(async () => {
+        handler = router.get.mock.calls[2][1];
+
+        req = {
+          session: {},
+          query: {
+            QA_KEY: process.env.QA_KEY,
+            registration_role: "Representative",
+            operator_type: "A company"
+          }
+        };
+        res = {
+          redirect: jest.fn()
+        };
+        handler(req, res);
+      });
+
+      it("Should set session to the request query", () => {
+        expect(req.session.cumulativeAnswers).toEqual(req.query);
+      });
+
+      it("Should redirect to registration summary page", () => {
+        expect(res.redirect).toBeCalledWith("/registration-summary");
+      });
+    });
+
+    describe("without QA_KEY", () => {
+      let res, req;
+      beforeEach(async () => {
+        handler = router.get.mock.calls[2][1];
+
+        req = {
+          session: {},
+          query: {
+            QA_KEY: null,
+            registration_role: "Representative",
+            operator_type: "A company"
+          }
+        };
+
+        res = {
+          status: jest.fn(),
+          send: jest.fn(),
+          redirect: jest.fn()
+        };
+        handler(req, res);
+      });
+
+      it("Should return a 403 status", () => {
+        expect(res.status).toBeCalledWith(403);
+      });
     });
   });
 
   describe("GET to *", () => {
     beforeEach(async () => {
-      handler = router.get.mock.calls[2][1];
+      handler = router.get.mock.calls[3][1];
       handler("request", "response");
     });
 

@@ -36,6 +36,17 @@ module.exports = () => {
     res.redirect(response.redirectRoute);
   });
 
+  router.get("/qa-registration-summary", (req, res) => {
+    if (req.query.QA_KEY && req.query.QA_KEY === process.env.QA_KEY) {
+      delete req.query.QA_KEY;
+      req.session.cumulativeAnswers = req.query;
+      res.redirect("/registration-summary");
+    } else {
+      res.status(403);
+      res.send("Not permitted");
+    }
+  });
+
   router.get("*", (req, res) => {
     handle(req, res);
   });

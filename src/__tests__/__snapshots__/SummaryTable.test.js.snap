@@ -139,6 +139,26 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
+      id="operatorCompaniesHouseRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Company number
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="bold"
+          id="operator_company_house_number"
+        >
+          AA123456
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
       id="operatorAddressRow"
     >
       <th
@@ -172,26 +192,6 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           >
             AA11 1AA
           </div>
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="emotion-4"
-      id="operatorCompaniesHouseRow"
-    >
-      <th
-        className="emotion-2"
-      >
-        Company number
-      </th>
-      <td
-        className="emotion-2"
-      >
-        <div
-          className="bold"
-          id="operator_company_house_number"
-        >
-          AA123456
         </div>
       </td>
     </tr>
