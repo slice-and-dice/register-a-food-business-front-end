@@ -22,7 +22,7 @@ const OperatorType = props => (
     </HiddenText>
 
     <form action="/continue/operator-type" method="post">
-      <ContentItem.B_30_15>
+      <ContentItem.B_45_30>
         <MultiChoice
           meta={{
             touched: true,
@@ -72,7 +72,7 @@ const OperatorType = props => (
             </HintTextSmall>
           </Radio>
         </MultiChoice>
-      </ContentItem.B_30_15>
+      </ContentItem.B_45_30>
 
       <ContinueButton />
     </form>

@@ -13,7 +13,7 @@ const RegistrationRole = props => (
     <Header level={2}>What is your role in this food business?</Header>
 
     <form action="/continue/registration-role" method="post">
-      <ContentItem.B_30_15>
+      <ContentItem.B_45_30>
         <MultiChoice
           meta={{
             touched: true,
@@ -51,7 +51,7 @@ const RegistrationRole = props => (
             I represent a person, charity or company which operates it
           </Radio>
         </MultiChoice>
-      </ContentItem.B_30_15>
+      </ContentItem.B_45_30>
 
       <ContinueButton />
     </form>
