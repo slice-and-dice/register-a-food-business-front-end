@@ -2,7 +2,7 @@
 
 exports[`<BackButton /> matches the previous snapshot 1`] = `
 .emotion-0 {
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 }
 
 @media only screen and (max-width:641px) {

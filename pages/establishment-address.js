@@ -12,15 +12,13 @@ const EstablishmentAddress = props => (
     <BackButton originator="establishment-address" />
     <Header level={2}>Establishment address</Header>
 
-    <ContentItem.B_30_15>
-      <HiddenText summaryText={"What is an establishment?"}>
-        <Paragraph mb={0}>
-          An establishment is the location of your food business, and the food
-          activities taking place there. If it is a mobile food business, please
-          use the location where it is normally stored overnight.
-        </Paragraph>
-      </HiddenText>
-    </ContentItem.B_30_15>
+    <HiddenText summaryText={"What is an establishment?"}>
+      <Paragraph mb={0}>
+        An establishment is the location of your food business, and the food
+        activities taking place there. If it is a mobile food business, please
+        use the location where it is normally stored overnight.
+      </Paragraph>
+    </HiddenText>
 
     <form action="/continue/establishment-address" method="post">
       <ContentItem.B_30_15>

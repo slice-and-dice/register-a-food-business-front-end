@@ -12,15 +12,13 @@ const OperatorAddress = props => (
     <BackButton originator="operator-address" />
     <Header level={2}>What is the operator's address?</Header>
 
-    <ContentItem.B_30_15>
-      <HiddenText summaryText={"What is a food business operator?"}>
-        <Paragraph mb={0}>
-          The food business operator is the person, charity or company who makes
-          the decisions about the food business, what it serves and how it
-          operates.
-        </Paragraph>
-      </HiddenText>
-    </ContentItem.B_30_15>
+    <HiddenText summaryText={"What is a food business operator?"}>
+      <Paragraph mb={0}>
+        The food business operator is the person, charity or company who makes
+        the decisions about the food business, what it serves and how it
+        operates.
+      </Paragraph>
+    </HiddenText>
 
     <form action="/continue/operator-address" method="post">
       <ContentItem.B_30_15>

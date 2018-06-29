@@ -218,49 +218,55 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-33 {
+  padding-top: 30px;
+  text-align: center;
+}
+
 .emotion-32 {
-  padding: 10px;
-  min-width: 320px;
-  box-sizing: border-box;
+  max-width: 960px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-32 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width:1020px) {
+  .emotion-32 {
+    margin: 0 auto;
   }
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-31 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 30px;
   }
 }
 
 .emotion-30 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }
@@ -331,6 +337,33 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   margin: 0;
 }
 
+.emotion-13 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-13 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-13 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-13 {
     font-size: 19px;
@@ -354,6 +387,33 @@ exports[`<Index /> matches the previous snapshot 1`] = `
 
 .emotion-14 > p {
   margin: 0;
+}
+
+.emotion-14 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-14 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-14 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
 }
 
 @media only screen and (min-width:641px) {
@@ -566,132 +626,135 @@ exports[`<Index /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-32"
+    className="emotion-33"
   >
     <div
-      className="emotion-31"
+      className="emotion-32"
     >
       <div
-        className="emotion-30"
+        className="emotion-31"
       >
-        <h1
-          className="emotion-12"
-          size={undefined}
-        >
-          Register a food business
-        </h1>
         <div
-          className="emotion-15 emotion-16"
+          className="emotion-30"
         >
+          <h1
+            className="emotion-12"
+            size={undefined}
+          >
+            Register a food business
+          </h1>
           <div
             className="emotion-15 emotion-16"
           >
             <div
-              className="emotion-13"
+              className="emotion-15 emotion-16"
             >
-              <p>
-                All food businesses which regularly produce or serve food to the public need to be registered with their Local Authority. This service will send your registration to the correct local authority based on your trading location.
-              </p>
+              <div
+                className="emotion-13"
+              >
+                <p>
+                  All food businesses which regularly produce or serve food to the public need to be registered with their Local Authority. This service will send your registration to the correct local authority based on your trading location.
+                </p>
+              </div>
+              <div
+                className="emotion-14"
+              >
+                <p>
+                  Food businesses should only register 
+                  <strong>
+                    28 days
+                  </strong>
+                   before they begin trading. If you are not sure when this food business will open, it may be too early to be registering this business.
+                </p>
+              </div>
             </div>
             <div
-              className="emotion-14"
+              className="bold emotion-18"
             >
-              <p>
-                Food businesses should only register 
-                <strong>
-                  28 days
-                </strong>
-                 before they begin trading. If you are not sure when this food business will open, it may be too early to be registering this business.
-              </p>
+              <div
+                className="emotion-14"
+              >
+                <p>
+                  During this registration, you may come across a few specialist terms, which we have described below:
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            className="bold emotion-18"
-          >
             <div
-              className="emotion-14"
+              className="emotion-15 emotion-16"
             >
-              <p>
-                During this registration, you may come across a few specialist terms, which we have described below:
-              </p>
+              <h3
+                className="emotion-19"
+                mb={1}
+                size={undefined}
+              >
+                Food business operator
+              </h3>
+              <div
+                className="emotion-14"
+              >
+                <p>
+                  The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            className="emotion-15 emotion-16"
-          >
-            <h3
-              className="emotion-19"
-              mb={1}
-              size={undefined}
-            >
-              Food business operator
-            </h3>
             <div
-              className="emotion-14"
+              className="emotion-15 emotion-16"
             >
-              <p>
-                The operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
-              </p>
+              <h3
+                className="emotion-19"
+                mb={1}
+                size={undefined}
+              >
+                Establishment
+              </h3>
+              <div
+                className="emotion-14"
+              >
+                <p>
+                  The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
+                </p>
+              </div>
             </div>
           </div>
-          <div
-            className="emotion-15 emotion-16"
+          <form
+            action="/continue/index"
+            method="post"
           >
-            <h3
-              className="emotion-19"
-              mb={1}
-              size={undefined}
+            <button
+              className="emotion-29"
+              disabled={false}
+              id="continue-button"
+              type="submit"
             >
-              Establishment
-            </h3>
-            <div
-              className="emotion-14"
-            >
-              <p>
-                The establishment is the location or site of your food business. If it is a mobile food business, please use the location where it is normally stored overnight.
-              </p>
-            </div>
-          </div>
-        </div>
-        <form
-          action="/continue/index"
-          method="post"
-        >
-          <button
-            className="emotion-29"
-            disabled={false}
-            id="continue-button"
-            start={true}
-            type="submit"
-          >
-            Begin registration
-            <svg
-              fill="currentColor"
-              height="100%"
-              style={
-                Object {
-                  "display": "block",
+              Begin registration
+              <svg
+                fill="currentColor"
+                height="100%"
+                style={
+                  Object {
+                    "display": "block",
+                  }
                 }
-              }
-              version="1.1"
-              viewBox="0 0 706 860"
-              width="100%"
-            >
-              <title>
-                ButtonArrow
-              </title>
-              <g>
-                <path
-                  d="M.152 0h252.993l452.108 430H452.261z"
-                />
-                <path
-                  d="M0 860h252.993L705.1 430H452.108z"
-                  fillOpacity="0.5"
-                />
-              </g>
-            </svg>
-          </button>
-        </form>
+                version="1.1"
+                viewBox="0 0 706 860"
+                width="100%"
+              >
+                <title>
+                  ButtonArrow
+                </title>
+                <g>
+                  <path
+                    d="M.152 0h252.993l452.108 430H452.261z"
+                  />
+                  <path
+                    d="M0 860h252.993L705.1 430H452.108z"
+                    fillOpacity="0.5"
+                  />
+                </g>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -218,76 +218,82 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-34 {
-  padding: 10px;
-  min-width: 320px;
-  box-sizing: border-box;
+.emotion-33 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.emotion-32 {
+  max-width: 960px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: left;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  .emotion-32 {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
-.emotion-33 {
+@media only screen and (min-width:1020px) {
+  .emotion-32 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  .emotion-31 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 30px;
   }
 }
 
-.emotion-32 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+.emotion-30 {
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-30 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-32:first-child {
+  .emotion-30:first-child {
     margin-left: 0;
   }
 
-  .emotion-32:last-child {
+  .emotion-30:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-30 {
     width: 66.6667%;
   }
 }
 
 .emotion-12 {
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 }
 
 @media only screen and (max-width:641px) {
@@ -319,16 +325,6 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width:641px) {
-  .emotion-27 {
-    padding-bottom: 15px;
-  }
-}
-
 .emotion-15 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
@@ -339,6 +335,33 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
 
 .emotion-15 > p {
   margin: 0;
+}
+
+.emotion-15 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-15 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-15 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
 }
 
 @media only screen and (min-width:641px) {
@@ -490,7 +513,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
-.emotion-31 {
+.emotion-29 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -525,34 +548,34 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-31:hover {
+.emotion-29:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-31:focus {
+.emotion-29:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-31:active {
+.emotion-29:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-31:visited {
+.emotion-29:visited {
   color: #00823b;
 }
 
-.emotion-31 svg {
+.emotion-29 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-29 {
     margin-bottom: 20px;
   }
 }
@@ -638,37 +661,37 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-34"
+    className="emotion-33"
   >
     <div
-      className="emotion-33"
+      className="emotion-32"
     >
       <div
-        className="emotion-32"
+        className="emotion-31"
       >
-        <form
-          action="/continue/declaration"
-          method="post"
+        <div
+          className="emotion-30"
         >
-          <div
-            className="emotion-12 emotion-13"
+          <form
+            action="/continue/declaration"
+            method="post"
           >
-            <a
-              href="/back/declaration"
-              id="back-link"
+            <div
+              className="emotion-12 emotion-13"
             >
-              Back
-            </a>
-          </div>
-          <h2
-            className="emotion-14"
-            size={undefined}
-          >
-            Declaration
-          </h2>
-          <div
-            className="emotion-27 emotion-28"
-          >
+              <a
+                href="/back/declaration"
+                id="back-link"
+              >
+                Back
+              </a>
+            </div>
+            <h2
+              className="emotion-14"
+              size={undefined}
+            >
+              Declaration
+            </h2>
             <div
               className="emotion-15"
             >
@@ -677,7 +700,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
               </p>
             </div>
             <div
-              className="emotion-27 emotion-28"
+              className="emotion-12 emotion-13"
             >
               <div
                 className="emotion-26"
@@ -735,17 +758,16 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
                 </label>
               </div>
             </div>
-          </div>
-          <button
-            className="emotion-31"
-            disabled={false}
-            id="continue-button"
-            start={false}
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
+            <button
+              className="emotion-29"
+              disabled={false}
+              id="continue-button"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.13.2 - 29th June 2018 (unreleased)
+
+### Modified
+
+* Updated to govuk-react 0.2.7 and adjusted front-end to account for the changes
+
 ## v1.13.1 - 28th June 2018 (unreleased)
 
 ### Added

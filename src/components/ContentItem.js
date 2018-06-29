@@ -1,4 +1,4 @@
-import { SPACING, BREAKPOINTS } from "@govuk-react/constants";
+import { BREAKPOINTS } from "@govuk-react/constants";
 import styled from "react-emotion";
 
 const ContentItem = {};
@@ -8,16 +8,16 @@ const MediaQueryLarge = `@media only screen and (max-width: ${
 })`;
 
 ContentItem.B_30_15 = styled("div")({
-  paddingBottom: SPACING.SCALE_5,
+  paddingBottom: "30px",
   [MediaQueryLarge]: {
-    paddingBottom: SPACING.SCALE_3
+    paddingBottom: "15px"
   }
 });
 
 ContentItem.B_45_30 = styled("div")({
-  paddingBottom: SPACING.SCALE_6,
+  paddingBottom: "45px",
   [MediaQueryLarge]: {
-    paddingBottom: SPACING.SCALE_5
+    paddingBottom: "30px"
   }
 });
 
