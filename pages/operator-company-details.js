@@ -22,7 +22,7 @@ const LimitedCompanyDetails = props => (
               autoComplete: "organization"
             }}
             hint={
-              "The name of the registered company which is acting as the operator of this food business."
+              "The name of the registered company that is acting as the operator of this food business."
             }
             id="operator_company_name"
             meta={{

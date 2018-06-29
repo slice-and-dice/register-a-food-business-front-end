@@ -686,7 +686,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
                   <span
                     className="emotion-17"
                   >
-                    I represent a person, charity or company which operates it
+                    I represent a person, charity or company that operates it
                   </span>
                 </label>
               </div>

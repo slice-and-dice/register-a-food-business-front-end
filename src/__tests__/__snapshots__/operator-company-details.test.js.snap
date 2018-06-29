@@ -702,7 +702,7 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
                   <span
                     className="emotion-16"
                   >
-                    The name of the registered company which is acting as the operator of this food business.
+                    The name of the registered company that is acting as the operator of this food business.
                   </span>
                   <input
                     autoComplete="organization"
