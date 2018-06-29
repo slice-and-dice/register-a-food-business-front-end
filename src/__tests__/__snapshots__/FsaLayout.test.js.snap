@@ -220,47 +220,33 @@ exports[`<FsaLayout /> matches the previous snapshot 1`] = `
 
 .emotion-14 {
   padding: 10px;
-  min-width: 320px;
   box-sizing: border-box;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-14 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
 .emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-13 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 30px;
   }
 }
 
 .emotion-12 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }

@@ -218,70 +218,56 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-37 {
+.emotion-38 {
   padding: 10px;
-  min-width: 320px;
   box-sizing: border-box;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-37 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-.emotion-36 {
+.emotion-37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-36 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  .emotion-37 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 30px;
   }
 }
 
-.emotion-35 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+.emotion-36 {
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-36 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-35:first-child {
+  .emotion-36:first-child {
     margin-left: 0;
   }
 
-  .emotion-35:last-child {
+  .emotion-36:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-36 {
     width: 66.6667%;
   }
 }
@@ -448,6 +434,16 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-30 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-30 {
+    margin-bottom: 30px;
+  }
+}
+
 .emotion-28 {
   display: inline-block;
   cursor: pointer;
@@ -463,8 +459,8 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 .emotion-28:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: -1px;
+  outline: 4px solid #ffbf47;
+  background: #ffbf47;
 }
 
 .emotion-27 {
@@ -480,16 +476,16 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   border-left-width: 5px;
   border-color: #bfc1c3;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-29 {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
-.emotion-34 {
+.emotion-35 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -524,34 +520,34 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-34:hover {
+.emotion-35:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-34:focus {
+.emotion-35:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-34:active {
+.emotion-35:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-34:visited {
+.emotion-35:visited {
   color: #00823b;
 }
 
-.emotion-34 svg {
+.emotion-35 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-35 {
     margin-bottom: 20px;
   }
 }
@@ -637,13 +633,13 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-37"
+    className="emotion-38"
   >
     <div
-      className="emotion-36"
+      className="emotion-37"
     >
       <div
-        className="emotion-35"
+        className="emotion-36"
       >
         <div
           className="emotion-12 emotion-13"
@@ -723,7 +719,9 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
             <div
               className="emotion-19 emotion-20"
             >
-              <details>
+              <details
+                className="emotion-30"
+              >
                 <summary
                   className="emotion-28"
                 >
@@ -754,10 +752,9 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
             </div>
           </div>
           <button
-            className="emotion-34"
+            className="emotion-35"
             disabled={false}
             id="continue-button"
-            start={false}
             type="submit"
           >
             Continue

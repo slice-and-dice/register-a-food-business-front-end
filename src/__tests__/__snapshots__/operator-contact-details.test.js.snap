@@ -218,70 +218,56 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-42 {
+.emotion-43 {
   padding: 10px;
-  min-width: 320px;
   box-sizing: border-box;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-42 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-.emotion-41 {
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  .emotion-42 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 30px;
   }
 }
 
-.emotion-40 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+.emotion-41 {
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-40 {
+  .emotion-41 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-40:first-child {
+  .emotion-41:first-child {
     margin-left: 0;
   }
 
-  .emotion-40:last-child {
+  .emotion-41:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-40 {
+  .emotion-41 {
     width: 66.6667%;
   }
 }
@@ -319,13 +305,23 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-19 {
+.emotion-20 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-19 {
+  .emotion-20 {
     padding-bottom: 15px;
+  }
+}
+
+.emotion-19 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 30px;
   }
 }
 
@@ -344,8 +340,8 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
 }
 
 .emotion-16:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: -1px;
+  outline: 4px solid #ffbf47;
+  background: #ffbf47;
 }
 
 .emotion-15 {
@@ -361,12 +357,12 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   border-left-width: 5px;
   border-color: #bfc1c3;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-18 {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -382,6 +378,33 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   margin: 0;
 }
 
+.emotion-17 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-17 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-17 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
 @media only screen and (min-width:641px) {
   .emotion-17 {
     font-size: 19px;
@@ -395,7 +418,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-23 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -409,25 +432,25 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-23:after {
+.emotion-24:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-24 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-24 {
     margin-bottom: 0;
   }
 }
 
-.emotion-21 {
+.emotion-22 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -442,19 +465,19 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-21 {
+  .emotion-22 {
     margin-bottom: 0;
   }
 }
 
-.emotion-22 {
+.emotion-23 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -470,25 +493,25 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-23 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-22:focus {
+.emotion-23:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-22 {
+  .emotion-23 {
     margin-bottom: 0;
   }
 }
 
-.emotion-32 {
+.emotion-33 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -502,19 +525,19 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-33 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-33 {
     margin-bottom: 0;
   }
 }
 
-.emotion-39 {
+.emotion-40 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -549,34 +572,34 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-39:hover {
+.emotion-40:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-39:focus {
+.emotion-40:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-39:active {
+.emotion-40:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-39:visited {
+.emotion-40:visited {
   color: #00823b;
 }
 
-.emotion-39 svg {
+.emotion-40 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-39 {
+  .emotion-40 {
     margin-bottom: 20px;
   }
 }
@@ -662,13 +685,13 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-42"
+    className="emotion-43"
   >
     <div
-      className="emotion-41"
+      className="emotion-42"
     >
       <div
-        className="emotion-40"
+        className="emotion-41"
       >
         <div
           className="emotion-12 emotion-13"
@@ -687,9 +710,11 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
           Operator contact details
         </h2>
         <div
-          className="emotion-19 emotion-20"
+          className="emotion-20 emotion-21"
         >
-          <details>
+          <details
+            className="emotion-19"
+          >
             <summary
               className="emotion-16"
             >
@@ -717,23 +742,23 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
           method="post"
         >
           <div
-            className="emotion-19 emotion-20"
+            className="emotion-20 emotion-21"
           >
             <div
-              className="emotion-19 emotion-20"
+              className="emotion-20 emotion-21"
             >
               <label
-                className="emotion-23"
+                className="emotion-24"
                 id="operator_primary_number"
               >
                 <span
-                  className="emotion-21"
+                  className="emotion-22"
                 >
                   Primary phone number
                 </span>
                 <input
                   autoComplete="tel"
-                  className="emotion-22"
+                  className="emotion-23"
                   defaultValue={undefined}
                   name="operator_primary_number"
                   type="text"
@@ -741,20 +766,20 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               </label>
             </div>
             <div
-              className="emotion-19 emotion-20"
+              className="emotion-20 emotion-21"
             >
               <label
-                className="emotion-23"
+                className="emotion-24"
                 id="operator_secondary_number"
               >
                 <span
-                  className="emotion-21"
+                  className="emotion-22"
                 >
                   Secondary phone number (optional)
                 </span>
                 <input
                   autoComplete="off"
-                  className="emotion-22"
+                  className="emotion-23"
                   defaultValue={undefined}
                   name="operator_secondary_number"
                   type="text"
@@ -762,25 +787,25 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
               </label>
             </div>
             <div
-              className="emotion-19 emotion-20"
+              className="emotion-20 emotion-21"
             >
               <label
-                className="emotion-23"
+                className="emotion-24"
                 id="operator_email"
               >
                 <span
-                  className="emotion-21"
+                  className="emotion-22"
                 >
                   Email address
                 </span>
                 <span
-                  className="emotion-32"
+                  className="emotion-33"
                 >
                   Your email address will be used to update you regarding policy or legal changes which could affect your food business.
                 </span>
                 <input
                   autoComplete="email"
-                  className="emotion-22"
+                  className="emotion-23"
                   defaultValue={undefined}
                   name="operator_email"
                   type="text"
@@ -789,10 +814,9 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
             </div>
           </div>
           <button
-            className="emotion-39"
+            className="emotion-40"
             disabled={false}
             id="continue-button"
-            start={false}
             type="submit"
           >
             Continue

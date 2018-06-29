@@ -220,47 +220,33 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 
 .emotion-35 {
   padding: 10px;
-  min-width: 320px;
   box-sizing: border-box;
 }
 
-@media only screen and (min-width:641px) {
-  .emotion-35 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
 .emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  clear: left;
   margin: 0 0 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-34 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin-bottom: 30px;
   }
 }
 
 .emotion-33 {
-  background-color: transparent;
-  background-image: none;
-  margin: 0;
-  margin-bottom: 15px;
+  background: transparent;
+  margin: 0 0 15px;
   text-indent: 0px;
   box-sizing: border-box;
 }
@@ -399,6 +385,33 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 
 .emotion-16 > p {
   margin: 0;
+}
+
+.emotion-16 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-16 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-16 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
 }
 
 @media only screen and (min-width:641px) {
@@ -675,7 +688,6 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
             className="emotion-32"
             disabled={false}
             id="continue-button"
-            start={false}
             type="submit"
           >
             Continue
