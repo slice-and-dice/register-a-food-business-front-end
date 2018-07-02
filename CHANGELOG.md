@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.13.3 - 29th June 2018 (unreleased)
+
+### Modified
+
+* Modified deploy script to include start command
+
 ## v1.13.2 - 29th June 2018 (unreleased)
 
 ### Modified
