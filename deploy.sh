@@ -128,6 +128,16 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd - > /dev/null
 fi
 
+# 5. Check the versions
+
+if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
+  cd "$DEPLOYMENT_TARGET"
+  echo "Checking the version"
+  eval $NPM_CMD run version
+  exitWithMessageOnError "npm start failed"
+  cd - > /dev/null
+fi
+
 # 5. Start the app
 
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
