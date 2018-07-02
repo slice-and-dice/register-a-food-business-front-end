@@ -36,11 +36,12 @@ module.exports = () => {
     res.redirect(response.redirectRoute);
   });
 
-  router.get("/qa-registration-summary", (req, res) => {
+  router.get("/qa/:target", (req, res) => {
     if (req.query.QA_KEY && req.query.QA_KEY === process.env.QA_KEY) {
+      const target = req.params.target;
       delete req.query.QA_KEY;
       req.session.cumulativeAnswers = req.query;
-      res.redirect("/registration-summary");
+      res.redirect(`/${target}`);
     } else {
       res.status(403);
       res.send("Not permitted");
