@@ -15,6 +15,7 @@ const RegistrationRole = props => (
     <form action="/continue/registration-role" method="post">
       <ContentItem.B_45_30>
         <MultiChoice
+          label=""
           meta={{
             touched: true,
             error: props.validatorErrors.registration_role

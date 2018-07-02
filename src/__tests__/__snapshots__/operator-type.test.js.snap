@@ -797,7 +797,9 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
               >
                 <span
                   className="emotion-20"
-                />
+                >
+                  
+                </span>
                 <label
                   className="emotion-25"
                 >

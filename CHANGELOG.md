@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.14.1 - 2nd July 2018 (unreleased)
+
+### Modified
+
+* Enabled QA route to be flexible - can redirect to any page following injection
+
+## v1.14.0 - 2nd July 2018 (unreleased)
+
+### Added
+
+* SDB-40 Charity details
+
+### Modified
+
+* Bypassed console errors for MultiChoice component
+
 ## v1.13.3 - 29th June 2018 (unreleased)
 
 ### Modified

@@ -707,7 +707,9 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
               >
                 <span
                   className="emotion-16"
-                />
+                >
+                  
+                </span>
                 <label
                   className="emotion-19"
                 >

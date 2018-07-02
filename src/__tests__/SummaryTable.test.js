@@ -7,15 +7,22 @@ import { createSerializer } from "jest-emotion";
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 // a complete list of the summary table row IDs
-const allTableRows = [
+
+const mandatoryTableRows = [
   "establishmentAddressRow",
   "operatorAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
   "registrationRoleRow",
   "operatorCompanyNameRow",
-  "operatorCompaniesHouseRow"
+  "operatorCompaniesHouseRow",
+  "operatorCharityNameRow"
 ];
+
+// (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
+const optionalTableRows = ["operatorCharityNumberRow"];
+
+const allTableRows = mandatoryTableRows.concat(optionalTableRows);
 
 // the complete set of possible mandatory answer fields with example data
 const testMandatoryAnswers = {
@@ -28,7 +35,8 @@ const testMandatoryAnswers = {
   operator_last_name: "Appleseed",
   registration_role: "partnership",
   operator_company_name: "Company name",
-  operator_company_house_number: "AA123456"
+  operator_company_house_number: "AA123456",
+  operator_charity_name: "Charity name"
 };
 
 // a supplementary set of all optional answer fields with example data
@@ -37,7 +45,8 @@ const testOptionalAnswers = {
   establishment_street: "Street name",
   establishment_town: "Town",
   operator_street: "Street name",
-  operator_town: "Town"
+  operator_town: "Town",
+  operator_charity_number: "123456"
 };
 
 // the complete set of possible answer fields with example data
@@ -107,8 +116,8 @@ describe("<SummaryTable />", () => {
   });
 
   describe("when given a minimum set of answers", () => {
-    it("renders all table rows with at least one piece of data", () => {
-      allTableRows.forEach(tableRowName => {
+    it("renders all mandatory table rows with at least one piece of data", () => {
+      mandatoryTableRows.forEach(tableRowName => {
         const row = wrapperMinimum.find(`Row#${tableRowName}`);
         expect(row.length).toBe(1);
 
@@ -117,10 +126,12 @@ describe("<SummaryTable />", () => {
       });
     });
 
-    it("contains empty strings for every optional answer", () => {
+    it("contains empty strings or does not find the element for every optional answer", () => {
       for (let answerID in testOptionalAnswers) {
-        const text = wrapperMinimum.find(`#${answerID}`).text();
-        expect(text).toBe("");
+        const element = wrapperMinimum.find(`#${answerID}`);
+        if (element.length !== 0) {
+          expect(element.text()).toBe("");
+        }
       }
     });
   });
