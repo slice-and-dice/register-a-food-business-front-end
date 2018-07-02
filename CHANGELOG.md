@@ -9,6 +9,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * SDB-40 Charity details
 
+### Modified
+
+* Bypassed console errors for MultiChoice component
+
 ## v1.13.3 - 29th June 2018 (unreleased)
 
 ### Modified
