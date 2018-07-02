@@ -108,7 +108,7 @@ fi
 
 # 2. Select node version
 selectNodeVersion
-echo "Running $NPM_CMD config set scripts-prepend-node-path true"
+echo "Running $NPM_CMD config set scripts-prepend-node-path"
 eval $NPM_CMD config set scripts-prepend-node-path true
 
 # 3. Install npm packages
