@@ -4,7 +4,10 @@ node_js: "8.9.4"
 #   - yarn format:verify
 #   - yarn lint
 #   - yarn test
+script: echo "npm test temporarily disabled"
 deploy:
   provider: azure_web_apps
   verbose: true
   site: register-a-food-business-dev
+  on:
+    all_branches: true
