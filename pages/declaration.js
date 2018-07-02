@@ -20,6 +20,7 @@ const Declaration = props => (
 
       <ContentItem.B_45_30>
         <MultiChoice
+          label=""
           meta={{
             touched: true,
             error:

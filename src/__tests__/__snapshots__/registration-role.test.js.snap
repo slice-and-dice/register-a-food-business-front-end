@@ -637,7 +637,9 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
               >
                 <span
                   className="emotion-15"
-                />
+                >
+                  
+                </span>
                 <label
                   className="emotion-18"
                 >

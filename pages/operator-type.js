@@ -24,6 +24,7 @@ const OperatorType = props => (
     <form action="/continue/operator-type" method="post">
       <ContentItem.B_45_30>
         <MultiChoice
+          label=""
           meta={{
             touched: true,
             error: props.validatorErrors.operator_type
