@@ -30,10 +30,11 @@ module.exports = () => {
     res.redirect(response);
   });
 
-  router.get("/submit", async (req, res) => {
-    const response = await submitController(req.session.cumulativeAnswers);
-    info(`submit route finished with route ${response.redirectRotue}`);
-    res.redirect(response.redirectRoute);
+  router.get("/submit", (req, res) => {
+    submitController(req.session.cumulativeAnswers).then(response => {
+      info(`submit route finished with route ${response.redirectRotue}`);
+      res.redirect(response.redirectRoute);
+    });
   });
 
   router.get("/qa-registration-summary", (req, res) => {
