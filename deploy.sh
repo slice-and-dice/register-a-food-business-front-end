@@ -133,6 +133,8 @@ fi
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   echo "Starting app using npm start"
+  eval $NODE_EXE -v
+  eval $NPM_CMD -v
   eval $NPM_CMD start
   exitWithMessageOnError "npm start failed"
   cd - > /dev/null
