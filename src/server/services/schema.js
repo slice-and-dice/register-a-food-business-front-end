@@ -1,12 +1,14 @@
 const {
   validateDeclaration,
   validatePostCode,
-  validateEstablishmentFirstLine,
+  validateFirstLine,
   validateStreet,
   validateName,
   validateRadioButtons,
   validateTown,
   validateEstablishmentTradingName,
+  validateCharityNumber,
+  validateCharityName,
   validatePhoneNumber,
   validatePhoneNumberOptional,
   validateCompaniesHouseNumber,
@@ -55,7 +57,7 @@ const schema = {
       },
       operator_first_line: {
         type: "string",
-        validation: validateEstablishmentFirstLine
+        validation: validateFirstLine
       },
       operator_street: {
         type: "string",
@@ -97,6 +99,19 @@ const schema = {
       }
     }
   },
+  "/operator-charity-details": {
+    type: "object",
+    properties: {
+      operator_charity_name: {
+        type: "string",
+        validation: validateCharityName
+      },
+      operator_charity_number: {
+        type: "string",
+        validation: validateCharityNumber
+      }
+    }
+  },
   "/establishment-trading-name": {
     type: "object",
     properties: {
@@ -115,7 +130,7 @@ const schema = {
       },
       establishment_first_line: {
         type: "string",
-        validation: validateEstablishmentFirstLine
+        validation: validateFirstLine
       },
       establishment_street: {
         type: "string",

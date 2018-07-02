@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
+exports[`<OperatorCharityDetails /> matches the previous snapshot 1`] = `
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,12 +218,12 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-32 {
+.emotion-41 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-31 {
+.emotion-40 {
   max-width: 960px;
   margin-left: 15px;
   margin-right: 15px;
@@ -231,19 +231,19 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-31 {
+  .emotion-40 {
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
 @media only screen and (min-width:1020px) {
-  .emotion-31 {
+  .emotion-40 {
     margin: 0 auto;
   }
 }
 
-.emotion-30 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,7 +256,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-39 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -264,7 +264,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-38 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -272,22 +272,22 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-38 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-29:first-child {
+  .emotion-38:first-child {
     margin-left: 0;
   }
 
-  .emotion-29:last-child {
+  .emotion-38:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-38 {
     width: 66.6667%;
   }
 }
@@ -325,28 +325,152 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-25 {
-  padding: 0;
-  margin: 0;
-  border: 0;
+.emotion-19 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-19 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-16 {
+  display: inline-block;
+  cursor: pointer;
+  color: #005ea5;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.emotion-16:hover {
+  color: #2b8cc4;
+}
+
+.emotion-16:focus {
+  outline: 4px solid #ffbf47;
+  background: #ffbf47;
+}
+
+.emotion-15 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+
+.emotion-18 {
   box-sizing: border-box;
-  width: 100%;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-color: #bfc1c3;
+  padding: 15px;
   margin-bottom: 0;
 }
 
-.emotion-25:after {
+@media only screen and (min-width:641px) {
+  .emotion-18 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-17 {
+  font-family: "nta",Arial,sans-serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.emotion-17 > p {
+  margin: 0;
+}
+
+.emotion-17 > p > code {
+  padding: 0.2em 0.4em;
+  margin: 0px;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+.emotion-17 > pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+.emotion-17 > pre > code {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-17 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-23 {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-23 {
+    padding-bottom: 15px;
+  }
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 0;
+}
+
+.emotion-22:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-22 {
     margin-bottom: 0;
   }
 }
 
-.emotion-15 {
+@media only screen and (min-width:641px) {
+  .emotion-22 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-20 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -361,96 +485,53 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-20 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-15 {
+  .emotion-20 {
     margin-bottom: 0;
   }
 }
 
-.emotion-18 {
-  display: block;
-  position: relative;
-  padding: 0 0 0 38px;
-  margin-right: 0px;
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-18 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-16 {
-  position: absolute;
-  cursor: pointer;
-  left: 0;
-  top: 0;
-  width: 38px;
-  height: 38px;
-  z-index: 1;
-  margin: 0;
-  zoom: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.emotion-16:checked + span::after {
-  opacity: 1;
-}
-
-.emotion-16:focus + span::before {
-  box-shadow: 0 0 0 4px #ffbf47;
-}
-
-.emotion-16 + span {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.emotion-17 {
+.emotion-21 {
+  box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   text-transform: none;
   font-size: 16px;
   line-height: 1.25;
-  cursor: pointer;
-  padding: 8px 10px 9px 12px;
-  display: block;
+  width: 100%;
+  padding: 5px 4px 4px;
+  border: 2px solid #0b0c0c;
+  margin-bottom: 0;
 }
 
-.emotion-17:before {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.10526em;
-  height: 2.10526em;
-  border: 2px solid black;
-  border-radius: 50%;
-  background: transparent;
+@media only screen and (min-width:641px) {
+  .emotion-21 {
+    font-size: 19px;
+    line-height: 1.3;
+    width: 50%;
+  }
 }
 
-.emotion-17:after {
-  content: '';
-  position: absolute;
-  top: 0.52632em;
-  left: 0.52632em;
-  width: 0;
-  height: 0;
-  border: 0.52632em solid;
-  border-radius: 50%;
-  opacity: 0;
+.emotion-21:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0;
 }
 
-.emotion-28 {
+@media only screen and (min-width:641px) {
+  .emotion-21 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-37 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -485,34 +566,34 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-28:hover {
+.emotion-37:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-28:focus {
+.emotion-37:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-28:active {
+.emotion-37:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-28:visited {
+.emotion-37:visited {
   color: #00823b;
 }
 
-.emotion-28 svg {
+.emotion-37 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-37 {
     margin-bottom: 20px;
   }
 }
@@ -598,22 +679,22 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
-    className="emotion-32"
+    className="emotion-41"
   >
     <div
-      className="emotion-31"
+      className="emotion-40"
     >
       <div
-        className="emotion-30"
+        className="emotion-39"
       >
         <div
-          className="emotion-29"
+          className="emotion-38"
         >
           <div
             className="emotion-12 emotion-13"
           >
             <a
-              href="/back/registration-role"
+              href="/back/operator-charity-details"
               id="back-link"
             >
               Back
@@ -623,78 +704,104 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
             className="emotion-14"
             size={undefined}
           >
-            What is your role in this food business?
+            Details of the operating charity
           </h2>
+          <details
+            className="emotion-19"
+          >
+            <summary
+              className="emotion-16"
+            >
+              <span
+                className="emotion-15"
+              >
+                What is a food business operator?
+              </span>
+            </summary>
+            <div
+              className="emotion-18"
+            >
+              <div
+                className="emotion-17"
+              >
+                <p>
+                  A food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
+                </p>
+              </div>
+            </div>
+          </details>
           <form
-            action="/continue/registration-role"
+            action="/continue/operator-charity-details"
             method="post"
           >
             <div
-              className="emotion-12 emotion-13"
+              className="emotion-23 emotion-24"
             >
               <div
-                className="emotion-25"
+                className="emotion-23 emotion-24"
               >
-                <span
-                  className="emotion-15"
-                >
-                  
-                </span>
                 <label
-                  className="emotion-18"
+                  className="emotion-22"
+                  id="operator_charity_name"
                 >
-                  <input
-                    className="emotion-16"
-                    defaultChecked={false}
-                    id="registration_role_sole_trader"
-                    name="registration_role"
-                    type="radio"
-                    value="Sole trader"
-                  />
                   <span
-                    className="emotion-17"
+                    className="emotion-20"
                   >
-                    I operate it as a sole trader
+                    Charity name
                   </span>
-                </label>
-                <label
-                  className="emotion-18"
-                >
                   <input
-                    className="emotion-16"
-                    defaultChecked={false}
-                    id="registration_role_partnership"
-                    name="registration_role"
-                    type="radio"
-                    value="Partnership"
+                    autoComplete="off"
+                    className="emotion-21"
+                    defaultValue={undefined}
+                    name="operator_charity_name"
+                    type="text"
                   />
-                  <span
-                    className="emotion-17"
-                  >
-                    I operate it in a partnership
-                  </span>
-                </label>
-                <label
-                  className="emotion-18"
-                >
-                  <input
-                    className="emotion-16"
-                    defaultChecked={false}
-                    id="registration_role_representative"
-                    name="registration_role"
-                    type="radio"
-                    value="Representative"
-                  />
-                  <span
-                    className="emotion-17"
-                  >
-                    I represent a person, charity or company that operates it
-                  </span>
                 </label>
               </div>
+              <div
+                className="emotion-23 emotion-24"
+              >
+                <label
+                  className="emotion-22"
+                  id="operator_charity_number"
+                >
+                  <span
+                    className="emotion-20"
+                  >
+                    Charity reference number
+                  </span>
+                  <input
+                    autoComplete="off"
+                    className="emotion-21"
+                    defaultValue={undefined}
+                    name="operator_charity_number"
+                    type="text"
+                  />
+                </label>
+              </div>
+              <details
+                className="emotion-19"
+              >
+                <summary
+                  className="emotion-16"
+                >
+                  <span
+                    className="emotion-15"
+                  >
+                    Questions about charity reference numbers
+                  </span>
+                </summary>
+                <div
+                  className="emotion-18"
+                >
+                  <div
+                    className="emotion-17"
+                  />
+                </div>
+              </details>
             </div>
             <button
-              className="emotion-28"
+              className="emotion-37"
               disabled={false}
               id="continue-button"
               type="submit"

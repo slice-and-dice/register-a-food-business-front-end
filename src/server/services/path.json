@@ -14,11 +14,16 @@
   "/operator-type": {
     "on": false,
     "switches": {
+      "A person": { "/operator-name": true },
       "A company": { "/operator-company-details": true },
-      "A person": { "/operator-name": true }
+      "A charity": { "/operator-charity-details": true }
     }
   },
   "/operator-company-details": {
+    "on": false,
+    "switches": {}
+  },
+  "/operator-charity-details": {
     "on": false,
     "switches": {}
   },
