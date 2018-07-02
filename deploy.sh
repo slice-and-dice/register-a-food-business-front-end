@@ -108,6 +108,7 @@ fi
 
 # 2. Select node version
 selectNodeVersion
+eval $NPM_CMD config set scripts-prepend-node-path true
 
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
