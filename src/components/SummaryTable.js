@@ -34,6 +34,28 @@ const OperatorDetailsTable = props => (
       </Table.Row>
     ) : null}
 
+    {props.operator_charity_name ? (
+      <Table.Row id="operatorCharityNameRow">
+        <Table.CellHeader>Charity name</Table.CellHeader>
+        <Table.Cell>
+          <div id="operator_charity_name" className="bold">
+            {props.operator_charity_name}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.operator_charity_number ? (
+      <Table.Row id="operatorCharityNumberRow">
+        <Table.CellHeader>Charity number</Table.CellHeader>
+        <Table.Cell>
+          <div id="operator_charity_number" className="bold">
+            {props.operator_charity_number}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
     {props.operator_first_line ? (
       <Table.Row id="operatorAddressRow">
         <Table.CellHeader>Operator address</Table.CellHeader>

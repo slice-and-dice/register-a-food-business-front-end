@@ -14,7 +14,9 @@ const allTableRows = [
   "operatorNameRow",
   "registrationRoleRow",
   "operatorCompanyNameRow",
-  "operatorCompaniesHouseRow"
+  "operatorCompaniesHouseRow",
+  "operatorCharityNameRow",
+  "operatorCharityNumberRow"
 ];
 
 // the complete set of possible mandatory answer fields with example data
@@ -28,7 +30,9 @@ const testMandatoryAnswers = {
   operator_last_name: "Appleseed",
   registration_role: "partnership",
   operator_company_name: "Company name",
-  operator_company_house_number: "AA123456"
+  operator_company_house_number: "AA123456",
+  operator_charity_name: "Charity name",
+  operator_charity_number: "123456"
 };
 
 // a supplementary set of all optional answer fields with example data
