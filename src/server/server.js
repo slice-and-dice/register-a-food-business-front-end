@@ -6,27 +6,25 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 const { Next } = require("./next");
 
-module.exports = () => {
-  return new Promise(resolve => {
-    const app = express();
-    ////////////////
-    // WARNING: the below uses in-memory session storage and must be replaced.
-    app.use(
-      session({
-        secret: "TEMPORARYSECRET",
-        resave: false,
-        saveUninitialized: true
-      })
-    );
-    ////////////////
+module.exports = async () => {
+  const app = express();
+  ////////////////
+  // WARNING: the below uses in-memory session storage and must be replaced.
+  app.use(
+    session({
+      secret: "TEMPORARYSECRET",
+      resave: false,
+      saveUninitialized: true
+    })
+  );
+  ////////////////
 
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded());
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded());
 
-    Next.prepare().then(() => {
-      app.use(routes());
+  await Next.prepare();
 
-      resolve(app);
-    });
-  });
+  app.use(routes());
+
+  return app;
 };
