@@ -51,7 +51,7 @@ const OperatorCharityDetails = props => (
               error: props.validatorErrors["operator_charity_number"]
             }}
           >
-            Charity reference number
+            Charity reference number (optional)
           </InputField>
         </ContentItem.B_30_15>
 

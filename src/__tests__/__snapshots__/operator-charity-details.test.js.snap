@@ -768,7 +768,7 @@ exports[`<OperatorCharityDetails /> matches the previous snapshot 1`] = `
                   <span
                     className="emotion-20"
                   >
-                    Charity reference number
+                    Charity reference number (optional)
                   </span>
                   <input
                     autoComplete="off"
