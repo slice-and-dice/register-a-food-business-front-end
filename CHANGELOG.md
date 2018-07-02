@@ -7,7 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Modified
 
-* Modified deploy script to include start command
+* Modified deploy script to include start command.
+* Modifed index.js to remove async reference
 
 ## v1.13.2 - 29th June 2018 (unreleased)
 
