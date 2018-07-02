@@ -7,6 +7,8 @@ const {
   validateRadioButtons,
   validateTown,
   validateEstablishmentTradingName,
+  validateCharityNumber,
+  validateCharityName,
   validatePhoneNumber,
   validatePhoneNumberOptional,
   validateCompaniesHouseNumber,
@@ -94,6 +96,19 @@ const schema = {
       operator_company_name: {
         type: "string",
         validation: validateCompanyName
+      }
+    }
+  },
+  "/operator-charity-details": {
+    type: "object",
+    properties: {
+      operator_charity_name: {
+        type: "string",
+        validation: validateCharityName
+      },
+      operator_charity_number: {
+        type: "string",
+        validation: validateCharityNumber
       }
     }
   },
