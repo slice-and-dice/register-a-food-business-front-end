@@ -8,7 +8,7 @@ import { Header, Paragraph, InsetText } from "govuk-react";
 
 const Index = props => (
   <FsaLayout>
-    <Header level={1}>Register a food business</Header>
+    <Header level={1}>Register a food business CHANGED</Header>
 
     <ContentItem.B_30_15>
       <ContentItem.B_30_15>
