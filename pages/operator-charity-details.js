@@ -13,7 +13,7 @@ const OperatorCharityDetails = props => (
     <Header level={2}>Details of the operating charity</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>
-      <Paragraph>
+      <Paragraph mb={0}>
         A food business operator is the person, charity or company who makes the
         decisions about the food business, what it serves and how it operates.
       </Paragraph>
@@ -54,6 +54,10 @@ const OperatorCharityDetails = props => (
             Charity reference number
           </InputField>
         </ContentItem.B_30_15>
+
+        <HiddenText summaryText={"Questions about charity reference numbers"}>
+          <Paragraph mb={0}>{/* TODO JMB */}</Paragraph>
+        </HiddenText>
       </ContentItem.B_30_15>
 
       <ContinueButton />
