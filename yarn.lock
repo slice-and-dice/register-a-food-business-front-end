@@ -1120,9 +1120,9 @@
     "@govuk-react/icons" "^0.2.7"
     govuk-colours "^1.0.3"
 
-"@slice-and-dice/register-a-food-business-validation@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@slice-and-dice/register-a-food-business-validation/-/register-a-food-business-validation-1.5.0.tgz#a184abd4d786d859971836dbee2d6cb15b087f69"
+"@slice-and-dice/register-a-food-business-validation@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@slice-and-dice/register-a-food-business-validation/-/register-a-food-business-validation-1.5.1.tgz#cf5486585b40ac6395e7555e3245d9a6a237a340"
   dependencies:
     validator "^10.4.0"
 
