@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { handle } = require("./next");
 const { info } = require("winston");
+const { QA_KEY } = require("./config");
 
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
@@ -32,15 +33,16 @@ module.exports = () => {
 
   router.get("/submit", async (req, res) => {
     const response = await submitController(req.session.cumulativeAnswers);
-    info(`submit route finished with route ${response.redirectRotue}`);
+    info(`submit route finished with route ${response.redirectRoute}`);
     res.redirect(response.redirectRoute);
   });
 
-  router.get("/qa-registration-summary", (req, res) => {
-    if (req.query.QA_KEY && req.query.QA_KEY === process.env.QA_KEY) {
+  router.get("/qa/:target", (req, res) => {
+    if (req.query.QA_KEY && req.query.QA_KEY === QA_KEY) {
+      const target = req.params.target;
       delete req.query.QA_KEY;
       req.session.cumulativeAnswers = req.query;
-      res.redirect("/registration-summary");
+      res.redirect(`/${target}`);
     } else {
       res.status(403);
       res.send("Not permitted");

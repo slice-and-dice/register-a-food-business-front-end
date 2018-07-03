@@ -1,7 +1,9 @@
 const fetch = require("node-fetch");
+const winston = require("winston");
+const { SUBMIT_URL } = require("../config");
 
 const sendRequest = async body => {
-  const res = await fetch("http://localhost:4000/graphql", {
+  const res = await fetch(SUBMIT_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: body
@@ -23,8 +25,7 @@ module.exports.submit = async cumulativeAnswers => {
   });
 
   const response = await sendRequest(requestBody);
-
-  console.log(response);
+  winston.info(JSON.stringify(response));
 
   return response;
 };

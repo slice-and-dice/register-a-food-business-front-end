@@ -8,7 +8,7 @@
     "switches": {
       "Sole trader": { "/operator-name": true },
       "Partnership": { "/operator-name": true },
-      "Representative": { "/operator-type": true, "/operator-address": false }
+      "Representative": { "/operator-type": true }
     }
   },
   "/operator-type": {

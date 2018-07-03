@@ -3,11 +3,23 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## v1.14.1 - 3rd July 2018 (unreleased)
+## v1.14.3 - 3rd July 2018 (unreleased)
 
 ### Modified
 
 * Adding summary text to operator charity details page
+
+## v1.14.2 - 3rd July 2018 (unreleased)
+
+### Modified
+
+* Added config.js file to set application variables from environment variables, which enables isolating units for testing
+
+## v1.14.1 - 2nd July 2018 (unreleased)
+
+### Modified
+
+* Enabled QA route to be flexible - can redirect to any page following injection
 
 ## v1.14.0 - 2nd July 2018 (unreleased)
 
@@ -23,7 +35,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Modified
 
-* Modified deploy script to include start command
+* Modified deploy script to include start command.
+* Modifed index.js to remove async reference
 
 ## v1.13.2 - 29th June 2018 (unreleased)
 

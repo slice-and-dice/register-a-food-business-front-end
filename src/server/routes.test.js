@@ -11,6 +11,10 @@ jest.mock("express", () => ({
   }))
 }));
 
+jest.mock("./config", () => ({
+  QA_KEY: "abcd"
+}));
+
 jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
@@ -48,8 +52,8 @@ describe("Router: ", () => {
       expect(router.get.mock.calls[1][0]).toBe("/submit");
     });
 
-    it("should set up QA summary route", () => {
-      expect(router.get.mock.calls[2][0]).toBe("/qa-registration-summary");
+    it("should set up QA route", () => {
+      expect(router.get.mock.calls[2][0]).toBe("/qa/:target");
     });
 
     it("should set up generic Next route", () => {
@@ -172,7 +176,7 @@ describe("Router: ", () => {
     });
   });
 
-  describe("GET to /qa-registration-summary", () => {
+  describe("GET to /qa/:target", () => {
     describe("with QA_KEY", () => {
       let res, req;
       beforeEach(async () => {
@@ -181,9 +185,12 @@ describe("Router: ", () => {
         req = {
           session: {},
           query: {
-            QA_KEY: process.env.QA_KEY,
+            QA_KEY: "abcd",
             registration_role: "Representative",
             operator_type: "A company"
+          },
+          params: {
+            target: "registration-summary"
           }
         };
         res = {
