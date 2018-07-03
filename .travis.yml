@@ -10,4 +10,5 @@ deploy:
   provider: azure_web_apps
   verbose: true
   site: register-a-food-business-dev
-  on: develop
+  on:
+    all_branches: true
