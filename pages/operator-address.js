@@ -5,7 +5,7 @@ import {
   BackButton,
   ContinueButton
 } from "../src/components";
-import { Header, Button, InputField, HiddenText, Paragraph } from "govuk-react";
+import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
 
 const OperatorAddress = props => (
   <FsaLayout>
