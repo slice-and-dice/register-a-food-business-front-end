@@ -32,7 +32,7 @@ module.exports = () => {
 
   router.get("/submit", async (req, res) => {
     const response = await submitController(req.session.cumulativeAnswers);
-    info(`submit route finished with route ${response.redirectRotue}`);
+    info(`submit route finished with route ${response.redirectRoute}`);
     res.redirect(response.redirectRoute);
   });
 

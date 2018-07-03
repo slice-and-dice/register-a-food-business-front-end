@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const winston = require("winston");
 
 const sendRequest = async body => {
   const res = await fetch("http://localhost:4000/graphql", {
@@ -23,8 +24,7 @@ module.exports.submit = async cumulativeAnswers => {
   });
 
   const response = await sendRequest(requestBody);
-
-  console.log(response);
+  winston.info(JSON.stringify(response));
 
   return response;
 };
