@@ -11,6 +11,7 @@ module.exports = () => {
   const router = Router();
 
   router.post("/continue/:originator", (req, res) => {
+    info(`Routes: /continue route called`);
     const response = continueController(
       `/${req.params.originator}`,
       req.session.cumulativeAnswers,
@@ -19,21 +20,26 @@ module.exports = () => {
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
+    info(
+      `Routes: /continue route finished with route ${response.redirectRoute}`
+    );
     res.redirect(response.redirectRoute);
   });
 
   router.get("/back/:originator", (req, res) => {
+    info(`Routes: /back route called`);
     const response = backController(
       `/${req.params.originator}`,
       req.session.cumulativeAnswers
     );
-
+    info(`Routes: /back route finished with route ${response.redirectRoute}`);
     res.redirect(response);
   });
 
   router.get("/submit", async (req, res) => {
+    info(`Routes: /submit route called`);
     const response = await submitController(req.session.cumulativeAnswers);
-    info(`submit route finished with route ${response.redirectRoute}`);
+    info(`Routes: /submit route finished with route ${response.redirectRoute}`);
     res.redirect(response.redirectRoute);
   });
 
