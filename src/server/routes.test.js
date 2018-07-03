@@ -11,6 +11,10 @@ jest.mock("express", () => ({
   }))
 }));
 
+jest.mock("./config", () => ({
+  QA_KEY: "abcd"
+}));
+
 jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
@@ -181,7 +185,7 @@ describe("Router: ", () => {
         req = {
           session: {},
           query: {
-            QA_KEY: process.env.QA_KEY,
+            QA_KEY: "abcd",
             registration_role: "Representative",
             operator_type: "A company"
           },

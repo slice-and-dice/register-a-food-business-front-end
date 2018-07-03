@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { handle } = require("./next");
 const { info } = require("winston");
+const { QA_KEY } = require("./config");
 
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
@@ -37,7 +38,7 @@ module.exports = () => {
   });
 
   router.get("/qa/:target", (req, res) => {
-    if (req.query.QA_KEY && req.query.QA_KEY === process.env.QA_KEY) {
+    if (req.query.QA_KEY && req.query.QA_KEY === QA_KEY) {
       const target = req.params.target;
       delete req.query.QA_KEY;
       req.session.cumulativeAnswers = req.query;
