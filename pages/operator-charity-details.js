@@ -56,7 +56,19 @@ const OperatorCharityDetails = props => (
         </ContentItem.B_30_15>
 
         <HiddenText summaryText={"Questions about charity reference numbers"}>
-          <Paragraph mb={0}>{/* TODO JMB */}</Paragraph>
+          <span>
+            Charities that are registered with the Charities Commission will
+            have a charity reference number. You can find your charity reference
+            number by visiting the{" "}
+            <a
+              href="https://beta.charitycommission.gov.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="link-charity-commission"
+            >
+              Charity Commission website
+            </a>.
+          </span>
         </HiddenText>
       </ContentItem.B_30_15>
 
