@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.14.3 - 3rd July 2018 (unreleased)
+
+### Modified
+
+* Adding summary text to operator charity details page
+
 ## v1.14.2 - 3rd July 2018 (unreleased)
 
 ### Modified
