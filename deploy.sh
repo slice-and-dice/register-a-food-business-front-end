@@ -102,7 +102,7 @@ echo Handling node.js deployment.
 
 # 1. KuduSync
 if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
-  "$KUDU_SYNC_CMD" -v 999 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
+  "$KUDU_SYNC_CMD" -v 999 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh;coverage;docs;.vscode"
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
@@ -129,18 +129,6 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   exitWithMessageOnError "npm build failed"
   cd - > /dev/null
 fi
-
-# # 5. Start the app
-
-# if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
-#   cd "$DEPLOYMENT_TARGET"
-#   echo "Starting app using npm start"
-#   eval $NODE_EXE -v
-#   eval $NPM_CMD -v
-#   eval $NPM_CMD start
-#   exitWithMessageOnError "npm start failed"
-#   cd - > /dev/null
-# fi
 
 ##################################################################################################################################
 echo "Finished successfully."
