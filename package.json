@@ -5,6 +5,7 @@
     "debug": "node --inspect src/server/index.js",
     "dev": "node src/server/index.js",
     "build": "next build",
+    "version": "NODE_ENV=production node -v",
     "start": "NODE_ENV=production node src/server/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
