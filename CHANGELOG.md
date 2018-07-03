@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.14.2 - 3rd July 2018 (unreleased)
+
+### Modified
+
+* Added config.js file to set application variables from environment variables, which enables isolating units for testing
+
 ## v1.14.1 - 2nd July 2018 (unreleased)
 
 ### Modified
