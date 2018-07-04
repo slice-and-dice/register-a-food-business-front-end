@@ -38,4 +38,7 @@ const cleanEmptiedAnswers = (
   return cleanedAnswers;
 };
 
-module.exports = { cleanInactivePathAnswers, cleanEmptiedAnswers };
+module.exports = {
+  cleanInactivePathAnswers,
+  cleanEmptiedAnswers
+};
