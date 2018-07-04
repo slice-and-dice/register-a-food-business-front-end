@@ -2,6 +2,9 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
+  transformAnswersForSubmit
+} = require("../services/data-transform.service");
+const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers
 } = require("../services/session-management.service");
@@ -64,6 +67,24 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
   } else {
     // else move to the next page in the path
     const nextPage = moveAlongPath(newPath, currentPage, 1);
+
+    let requiresSubmissionData = false;
+
+    const indexOfSummaryPage = Object.keys(newPath).indexOf(
+      "/registration-summary"
+    );
+
+    if (indexOfSummaryPage !== -1) {
+      const indexOfNextPage = Object.keys(newPath).indexOf(nextPage);
+
+      requiresSubmissionData = indexOfNextPage >= indexOfSummaryPage;
+    }
+
+    if (requiresSubmissionData) {
+      controllerResponse.submissionData = transformAnswersForSubmit(
+        controllerResponse.cumulativeAnswers
+      );
+    }
 
     controllerResponse.redirectRoute = nextPage;
   }
