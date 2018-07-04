@@ -17,9 +17,10 @@ module.exports = {
     "!**/pages/_document.js",
     "!**/services/schema.js",
     "!**/.next/**/*.{js}",
-    "!**/vars.js"
+    "!**/vars.js",
+    "!src/server/index.js",
+    "!src/components/index.js"
   ],
-  coveragePathIgnorePatterns: ["src/server/index.js"],
   coverageThreshold: {
     global: {
       branches: 100,
