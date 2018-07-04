@@ -1,5 +1,6 @@
 import React from "react";
 import { Table, Paragraph } from "govuk-react";
+import PropTypes from "prop-types";
 
 const OperatorDetailsTable = props => (
   <React.Fragment>
@@ -167,3 +168,23 @@ const SummaryTable = props => (
 );
 
 export default SummaryTable;
+
+SummaryTable.propTypes = {
+  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  operator_company_name: PropTypes.string,
+  operator_company_house_number: PropTypes.string,
+  operator_charity_name: PropTypes.string,
+  operator_charity_number: PropTypes.string,
+  operator_first_line: PropTypes.string,
+  operator_street: PropTypes.string,
+  operator_town: PropTypes.string,
+  operator_postcode: PropTypes.string,
+  operator_first_name: PropTypes.string,
+  operator_last_name: PropTypes.string,
+  registration_role: PropTypes.string,
+  establishment_trading_name: PropTypes.string,
+  establishment_first_line: PropTypes.string,
+  establishment_street: PropTypes.string,
+  establishment_town: PropTypes.string,
+  establishmentr_postcode: PropTypes.string
+};

@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<EstablishmentAddress />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<EstablishmentAddress />);
@@ -14,7 +22,12 @@ describe("<EstablishmentAddress />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<EstablishmentAddress validatorErrors cumulativeAnswers />)
+      .create(
+        <EstablishmentAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +35,10 @@ describe("<EstablishmentAddress />", () => {
   describe("establishment first line input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <EstablishmentAddress validatorErrors cumulativeAnswers />
+        <EstablishmentAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const establishmentFirstLine = wrapper.find(
         "InputField#establishment_first_line"
@@ -37,7 +53,7 @@ describe("<EstablishmentAddress />", () => {
       const wrapper = mount(
         <EstablishmentAddress
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const establishmentFirstLine = wrapper.find(
@@ -52,7 +68,7 @@ describe("<EstablishmentAddress />", () => {
       };
       const wrapper = mount(
         <EstablishmentAddress
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );

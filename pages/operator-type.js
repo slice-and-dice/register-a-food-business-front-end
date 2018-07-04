@@ -7,6 +7,7 @@ import {
   HintTextSmall
 } from "../src/components";
 import { Header, Radio, MultiChoice, HiddenText, Paragraph } from "govuk-react";
+import PropTypes from "prop-types";
 
 const OperatorType = props => (
   <FsaLayout>
@@ -81,3 +82,8 @@ const OperatorType = props => (
 );
 
 export default SessionWrapper(OperatorType);
+
+OperatorType.propTypes = {
+  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};

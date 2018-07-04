@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<OperatorCharityDetails />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorCharityDetails />);
@@ -14,7 +22,12 @@ describe("<OperatorCharityDetails />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<OperatorCharityDetails validatorErrors cumulativeAnswers />)
+      .create(
+        <OperatorCharityDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +35,10 @@ describe("<OperatorCharityDetails />", () => {
   describe("charity name input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorCharityDetails validatorErrors cumulativeAnswers />
+        <OperatorCharityDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorCharityName = wrapper.find(
         "InputField#operator_charity_name"
@@ -37,7 +53,7 @@ describe("<OperatorCharityDetails />", () => {
       const wrapper = mount(
         <OperatorCharityDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorCharityName = wrapper.find(
@@ -52,7 +68,7 @@ describe("<OperatorCharityDetails />", () => {
       };
       const wrapper = mount(
         <OperatorCharityDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -66,7 +82,10 @@ describe("<OperatorCharityDetails />", () => {
   describe("charity reference number input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorCharityDetails validatorErrors cumulativeAnswers />
+        <OperatorCharityDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorCharityNumber = wrapper.find(
         "InputField#operator_charity_number"
@@ -81,7 +100,7 @@ describe("<OperatorCharityDetails />", () => {
       const wrapper = mount(
         <OperatorCharityDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorCharityNumber = wrapper.find(
@@ -96,7 +115,7 @@ describe("<OperatorCharityDetails />", () => {
       };
       const wrapper = mount(
         <OperatorCharityDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );

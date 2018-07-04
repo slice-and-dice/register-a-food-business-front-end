@@ -6,6 +6,7 @@ import {
   ContinueButton
 } from "../src/components";
 import { Header, InputField, HiddenText } from "govuk-react";
+import PropTypes from "prop-types";
 
 const LimitedCompanyDetails = props => (
   <FsaLayout>
@@ -79,3 +80,8 @@ const LimitedCompanyDetails = props => (
 );
 
 export default SessionWrapper(LimitedCompanyDetails);
+
+LimitedCompanyDetails.propTypes = {
+  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};

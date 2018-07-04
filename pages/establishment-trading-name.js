@@ -6,6 +6,7 @@ import {
   ContinueButton
 } from "../src/components";
 import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
+import PropTypes from "prop-types";
 
 const EstablishmentTradingName = props => (
   <FsaLayout>
@@ -48,3 +49,8 @@ const EstablishmentTradingName = props => (
 );
 
 export default SessionWrapper(EstablishmentTradingName);
+
+EstablishmentTradingName.propTypes = {
+  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};

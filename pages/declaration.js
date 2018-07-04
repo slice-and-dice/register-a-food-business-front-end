@@ -6,6 +6,7 @@ import {
   ContinueButton
 } from "../src/components";
 import { Header, Checkbox, MultiChoice, Paragraph } from "govuk-react";
+import PropTypes from "prop-types";
 
 const Declaration = props => (
   <FsaLayout>
@@ -74,3 +75,8 @@ const Declaration = props => (
 );
 
 export default SessionWrapper(Declaration);
+
+Declaration.propTypes = {
+  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};
