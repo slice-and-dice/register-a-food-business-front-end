@@ -57,20 +57,6 @@ const OperatorDetailsTable = props => (
       </Table.Row>
     ) : null}
 
-    {props.operator_first_line ? (
-      <Table.Row id="operatorAddressRow">
-        <Table.CellHeader>Operator address</Table.CellHeader>
-        <Table.Cell>
-          <div className="bold">
-            <div id="operator_first_line">{props.operator_first_line}</div>
-            <div id="operator_street">{props.operator_street || null}</div>
-            <div id="operator_town">{props.operator_town || null}</div>
-            <div id="operator_postcode">{props.operator_postcode}</div>
-          </div>
-        </Table.Cell>
-      </Table.Row>
-    ) : null}
-
     {props.operator_first_name ? (
       <Table.Row id="operatorNameRow">
         <Table.CellHeader>Name</Table.CellHeader>
@@ -89,6 +75,47 @@ const OperatorDetailsTable = props => (
         <Table.Cell>
           <div className="bold" id="registration_role">
             {props.registration_role}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.operator_first_line ? (
+      <Table.Row id="operatorAddressRow">
+        <Table.CellHeader>Operator address</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold">
+            <div id="operator_first_line">{props.operator_first_line}</div>
+            <div id="operator_street">{props.operator_street || null}</div>
+            <div id="operator_town">{props.operator_town || null}</div>
+            <div id="operator_postcode">{props.operator_postcode}</div>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.operator_primary_number ? (
+      <Table.Row id="operatorContactDetailsRow">
+        <Table.CellHeader>Contact number</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold">
+            <div id="operator_primary_number">
+              {props.operator_primary_number}
+            </div>
+            <div id="operator_secondary_number">
+              {props.operator_secondary_number || null}
+            </div>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.operator_email ? (
+      <Table.Row id="operatorEmailRow">
+        <Table.CellHeader>Email address</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold" id="operator_email">
+            {props.operator_email}
           </div>
         </Table.Cell>
       </Table.Row>
@@ -135,6 +162,33 @@ const EstablishmentDetailsTable = props => (
             <div id="establishment_postcode">
               {props.establishment_postcode}
             </div>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.establishment_primary_number ? (
+      <Table.Row id="establishmentContactDetailsRow">
+        <Table.CellHeader>Contact number</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold">
+            <div id="establishment_primary_number">
+              {props.establishment_primary_number}
+            </div>
+            <div id="establishment_secondary_number">
+              {props.establishment_secondary_number || null}
+            </div>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
+    {props.establishment_email ? (
+      <Table.Row id="establishmentEmailRow">
+        <Table.CellHeader>Email address</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold" id="establishment_email">
+            {props.establishment_email}
           </div>
         </Table.Cell>
       </Table.Row>
