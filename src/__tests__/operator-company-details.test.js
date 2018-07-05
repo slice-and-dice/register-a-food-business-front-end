@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<OperatorCompanyDetails />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorCompanyDetails />);
@@ -14,7 +22,12 @@ describe("<OperatorCompanyDetails />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<OperatorCompanyDetails validatorErrors cumulativeAnswers />)
+      .create(
+        <OperatorCompanyDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +35,10 @@ describe("<OperatorCompanyDetails />", () => {
   describe("company name input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorCompanyDetails validatorErrors cumulativeAnswers />
+        <OperatorCompanyDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorCompanyName = wrapper.find(
         "InputField#operator_company_name"
@@ -37,7 +53,7 @@ describe("<OperatorCompanyDetails />", () => {
       const wrapper = mount(
         <OperatorCompanyDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorCompanyName = wrapper.find(
@@ -52,7 +68,7 @@ describe("<OperatorCompanyDetails />", () => {
       };
       const wrapper = mount(
         <OperatorCompanyDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -66,7 +82,10 @@ describe("<OperatorCompanyDetails />", () => {
   describe("Companies House reference number input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorCompanyDetails validatorErrors cumulativeAnswers />
+        <OperatorCompanyDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorCompaniesHouseNumber = wrapper.find(
         "InputField#operator_company_house_number"
@@ -81,7 +100,7 @@ describe("<OperatorCompanyDetails />", () => {
       const wrapper = mount(
         <OperatorCompanyDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorCompaniesHouseNumber = wrapper.find(
@@ -98,7 +117,7 @@ describe("<OperatorCompanyDetails />", () => {
       };
       const wrapper = mount(
         <OperatorCompanyDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );

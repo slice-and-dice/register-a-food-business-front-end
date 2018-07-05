@@ -6,6 +6,10 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<RegistrationSummary />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<RegistrationSummary />);
@@ -31,7 +35,9 @@ describe("<RegistrationSummary />", () => {
 
   describe("SummaryTable component", () => {
     it("renders", () => {
-      const wrapper = mount(<RegistrationSummary cumulativeAnswers />);
+      const wrapper = mount(
+        <RegistrationSummary cumulativeAnswers={testCumulativeAnswers} />
+      );
       const summaryTable = wrapper.find("SummaryTable");
       expect(summaryTable.length).toBe(1);
     });

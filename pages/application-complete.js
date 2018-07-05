@@ -1,6 +1,7 @@
 import SessionWrapper from "../src/components/SessionWrapper";
 import FsaLayout from "../src/components/FsaLayout";
 import { Header, Panel, Paragraph } from "govuk-react";
+import PropTypes from "prop-types";
 
 const ApplicationComplete = props => (
   <FsaLayout>
@@ -31,3 +32,7 @@ const ApplicationComplete = props => (
 );
 
 export default SessionWrapper(ApplicationComplete);
+
+ApplicationComplete.propTypes = {
+  referenceNumber: PropTypes.string
+};

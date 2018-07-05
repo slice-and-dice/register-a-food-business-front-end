@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<OperatorName />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorName />);
@@ -14,14 +22,24 @@ describe("<OperatorName />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<OperatorName validatorErrors cumulativeAnswers />)
+      .create(
+        <OperatorName
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   describe("operator first name input field", () => {
     it("renders", () => {
-      const wrapper = mount(<OperatorName validatorErrors cumulativeAnswers />);
+      const wrapper = mount(
+        <OperatorName
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
       expect(operatorFirstName.length).toBe(1);
     });
@@ -31,7 +49,10 @@ describe("<OperatorName />", () => {
         operator_first_name: "test error"
       };
       const wrapper = mount(
-        <OperatorName validatorErrors={validatorErrors} cumulativeAnswers />
+        <OperatorName
+          validatorErrors={validatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
       expect(operatorFirstName.props().meta.error).toBe("test error");
@@ -42,7 +63,10 @@ describe("<OperatorName />", () => {
         operator_first_name: "default"
       };
       const wrapper = mount(
-        <OperatorName validatorErrors cumulativeAnswers={cumulativeAnswers} />
+        <OperatorName
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={cumulativeAnswers}
+        />
       );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
       expect(operatorFirstName.props().input.defaultValue).toBe("default");
@@ -51,7 +75,12 @@ describe("<OperatorName />", () => {
 
   describe("operator last name input field", () => {
     it("renders", () => {
-      const wrapper = mount(<OperatorName validatorErrors cumulativeAnswers />);
+      const wrapper = mount(
+        <OperatorName
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      );
       const operatorLastName = wrapper.find("InputField#operator_last_name");
       expect(operatorLastName.length).toBe(1);
     });
@@ -61,7 +90,10 @@ describe("<OperatorName />", () => {
         operator_last_name: "test error"
       };
       const wrapper = mount(
-        <OperatorName validatorErrors={validatorErrors} cumulativeAnswers />
+        <OperatorName
+          validatorErrors={validatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorLastName = wrapper.find("InputField#operator_last_name");
       expect(operatorLastName.props().meta.error).toBe("test error");
@@ -72,7 +104,10 @@ describe("<OperatorName />", () => {
         operator_last_name: "default"
       };
       const wrapper = mount(
-        <OperatorName validatorErrors cumulativeAnswers={cumulativeAnswers} />
+        <OperatorName
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={cumulativeAnswers}
+        />
       );
       const operatorLastName = wrapper.find("InputField#operator_last_name");
       expect(operatorLastName.props().input.defaultValue).toBe("default");

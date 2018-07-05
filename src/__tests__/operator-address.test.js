@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<OperatorAddress />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorAddress />);
@@ -14,7 +22,12 @@ describe("<OperatorAddress />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<OperatorAddress validatorErrors cumulativeAnswers />)
+      .create(
+        <OperatorAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +35,10 @@ describe("<OperatorAddress />", () => {
   describe("Operator first line input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorAddress validatorErrors cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorFirstLine = wrapper.find("InputField#operator_first_line");
       expect(operatorFirstLine.length).toBe(1);
@@ -33,7 +49,10 @@ describe("<OperatorAddress />", () => {
         operator_first_line: "test error"
       };
       const wrapper = mount(
-        <OperatorAddress validatorErrors={validatorErrors} cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={validatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorFirstLine = wrapper.find("InputField#operator_first_line");
       expect(operatorFirstLine.props().meta.error).toBe("test error");
@@ -45,7 +64,7 @@ describe("<OperatorAddress />", () => {
       };
       const wrapper = mount(
         <OperatorAddress
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -57,7 +76,10 @@ describe("<OperatorAddress />", () => {
   describe("Operator street input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorAddress validatorErrors cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorStreet = wrapper.find("InputField#operator_street");
       expect(operatorStreet.length).toBe(1);
@@ -68,7 +90,10 @@ describe("<OperatorAddress />", () => {
         operator_street: "test error"
       };
       const wrapper = mount(
-        <OperatorAddress validatorErrors={validatorErrors} cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={validatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorStreet = wrapper.find("InputField#operator_street");
       expect(operatorStreet.props().meta.error).toBe("test error");
@@ -80,7 +105,7 @@ describe("<OperatorAddress />", () => {
       };
       const wrapper = mount(
         <OperatorAddress
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -92,7 +117,10 @@ describe("<OperatorAddress />", () => {
   describe("Operator town input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorAddress validatorErrors cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorTown = wrapper.find("InputField#operator_town");
       expect(operatorTown.length).toBe(1);
@@ -103,7 +131,10 @@ describe("<OperatorAddress />", () => {
         operator_town: "test error"
       };
       const wrapper = mount(
-        <OperatorAddress validatorErrors={validatorErrors} cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={validatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorTown = wrapper.find("InputField#operator_town");
       expect(operatorTown.props().meta.error).toBe("test error");
@@ -115,7 +146,7 @@ describe("<OperatorAddress />", () => {
       };
       const wrapper = mount(
         <OperatorAddress
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -127,7 +158,10 @@ describe("<OperatorAddress />", () => {
   describe("Operator postcode input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorAddress validatorErrors cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorPostcode = wrapper.find("InputField#operator_postcode");
       expect(operatorPostcode.length).toBe(1);
@@ -138,7 +172,10 @@ describe("<OperatorAddress />", () => {
         operator_postcode: "test error"
       };
       const wrapper = mount(
-        <OperatorAddress validatorErrors={validatorErrors} cumulativeAnswers />
+        <OperatorAddress
+          validatorErrors={validatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorPostcode = wrapper.find("InputField#operator_postcode");
       expect(operatorPostcode.props().meta.error).toBe("test error");
@@ -150,7 +187,7 @@ describe("<OperatorAddress />", () => {
       };
       const wrapper = mount(
         <OperatorAddress
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );

@@ -7,6 +7,7 @@ import {
   SummaryTable
 } from "../src/components";
 import { Header } from "govuk-react";
+import PropTypes from "prop-types";
 
 const RegistrationSummary = props => (
   <FsaLayout>
@@ -26,3 +27,7 @@ const RegistrationSummary = props => (
 );
 
 export default SessionWrapper(RegistrationSummary);
+
+RegistrationSummary.propTypes = {
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string)
+};

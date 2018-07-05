@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<Declaration />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<Declaration />);
@@ -14,7 +22,12 @@ describe("<Declaration />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<Declaration validatorErrors cumulativeAnswers />)
+      .create(
+        <Declaration
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

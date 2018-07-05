@@ -6,12 +6,12 @@ import {
   ContinueButton
 } from "../src/components";
 import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
+import PropTypes from "prop-types";
 
 const OperatorName = props => (
   <FsaLayout>
     <BackButton originator="operator-name" />
     <Header level={2}>What is the operator's name?</Header>
-
     <HiddenText summaryText={"What is a food business operator?"}>
       <Paragraph mb={0}>
         The food business operator is the person, charity or company who makes
@@ -19,7 +19,6 @@ const OperatorName = props => (
         operates.
       </Paragraph>
     </HiddenText>
-
     <form action="/continue/operator-name" method="post">
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
@@ -49,17 +48,21 @@ const OperatorName = props => (
             id="operator_last_name"
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_last_name"]
+              error: props.validatorErrors.operator_last_name
             }}
           >
             Last name
           </InputField>
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
-
       <ContinueButton />
     </form>
   </FsaLayout>
 );
 
 export default SessionWrapper(OperatorName);
+
+OperatorName.propTypes = {
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};

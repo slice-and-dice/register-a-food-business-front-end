@@ -6,6 +6,7 @@ import {
   ContinueButton
 } from "../src/components";
 import { Header, Radio, MultiChoice } from "govuk-react";
+import PropTypes from "prop-types";
 
 const RegistrationRole = props => (
   <FsaLayout>
@@ -60,3 +61,8 @@ const RegistrationRole = props => (
 );
 
 export default SessionWrapper(RegistrationRole);
+
+RegistrationRole.propTypes = {
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};

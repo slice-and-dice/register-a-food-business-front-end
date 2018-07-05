@@ -6,6 +6,7 @@ import {
   ContinueButton
 } from "../src/components";
 import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
+import PropTypes from "prop-types";
 
 const OperatorContactDetails = props => (
   <FsaLayout>
@@ -83,3 +84,8 @@ const OperatorContactDetails = props => (
 );
 
 export default SessionWrapper(OperatorContactDetails);
+
+OperatorContactDetails.propTypes = {
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
+};

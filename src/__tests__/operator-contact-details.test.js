@@ -6,6 +6,14 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
+const testValidatorErrors = {
+  example: "test error"
+};
+
+const testCumulativeAnswers = {
+  example: "test answer"
+};
+
 describe("<OperatorContactDetails />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorContactDetails />);
@@ -14,7 +22,12 @@ describe("<OperatorContactDetails />", () => {
 
   it("matches the previous snapshot", () => {
     const tree = renderer
-      .create(<OperatorContactDetails validatorErrors cumulativeAnswers />)
+      .create(
+        <OperatorContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +35,10 @@ describe("<OperatorContactDetails />", () => {
   describe("operator primary phone number input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorContactDetails validatorErrors cumulativeAnswers />
+        <OperatorContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorPrimaryContact = wrapper.find(
         "InputField#operator_primary_number"
@@ -37,7 +53,7 @@ describe("<OperatorContactDetails />", () => {
       const wrapper = mount(
         <OperatorContactDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorPrimaryContact = wrapper.find(
@@ -52,7 +68,7 @@ describe("<OperatorContactDetails />", () => {
       };
       const wrapper = mount(
         <OperatorContactDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -66,7 +82,10 @@ describe("<OperatorContactDetails />", () => {
   describe("operator secondary contact details input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorContactDetails validatorErrors cumulativeAnswers />
+        <OperatorContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorSecondaryContact = wrapper.find(
         "InputField#operator_secondary_number"
@@ -81,7 +100,7 @@ describe("<OperatorContactDetails />", () => {
       const wrapper = mount(
         <OperatorContactDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorSecondaryContact = wrapper.find(
@@ -96,7 +115,7 @@ describe("<OperatorContactDetails />", () => {
       };
       const wrapper = mount(
         <OperatorContactDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
@@ -112,7 +131,10 @@ describe("<OperatorContactDetails />", () => {
   describe("operator email input field", () => {
     it("renders", () => {
       const wrapper = mount(
-        <OperatorContactDetails validatorErrors cumulativeAnswers />
+        <OperatorContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+        />
       );
       const operatorEmail = wrapper.find("InputField#operator_email");
       expect(operatorEmail.length).toBe(1);
@@ -125,7 +147,7 @@ describe("<OperatorContactDetails />", () => {
       const wrapper = mount(
         <OperatorContactDetails
           validatorErrors={validatorErrors}
-          cumulativeAnswers
+          cumulativeAnswers={testCumulativeAnswers}
         />
       );
       const operatorEmail = wrapper.find("InputField#operator_email");
@@ -138,7 +160,7 @@ describe("<OperatorContactDetails />", () => {
       };
       const wrapper = mount(
         <OperatorContactDetails
-          validatorErrors
+          validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
         />
       );
