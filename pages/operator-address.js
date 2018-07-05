@@ -101,6 +101,6 @@ const OperatorAddress = props => (
 export default SessionWrapper(OperatorAddress);
 
 OperatorAddress.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

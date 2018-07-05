@@ -86,6 +86,6 @@ const OperatorContactDetails = props => (
 export default SessionWrapper(OperatorContactDetails);
 
 OperatorContactDetails.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

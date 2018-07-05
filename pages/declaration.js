@@ -77,6 +77,6 @@ const Declaration = props => (
 export default SessionWrapper(Declaration);
 
 Declaration.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

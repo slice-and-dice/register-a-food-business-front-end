@@ -170,7 +170,6 @@ const SummaryTable = props => (
 export default SummaryTable;
 
 SummaryTable.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
   operator_company_name: PropTypes.string,
   operator_company_house_number: PropTypes.string,
   operator_charity_name: PropTypes.string,
@@ -186,5 +185,5 @@ SummaryTable.propTypes = {
   establishment_first_line: PropTypes.string,
   establishment_street: PropTypes.string,
   establishment_town: PropTypes.string,
-  establishmentr_postcode: PropTypes.string
+  establishment_postcode: PropTypes.string
 };

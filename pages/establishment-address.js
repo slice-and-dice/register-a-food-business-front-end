@@ -106,6 +106,6 @@ const EstablishmentAddress = props => (
 export default SessionWrapper(EstablishmentAddress);
 
 EstablishmentAddress.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

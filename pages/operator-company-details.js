@@ -82,6 +82,6 @@ const LimitedCompanyDetails = props => (
 export default SessionWrapper(LimitedCompanyDetails);
 
 LimitedCompanyDetails.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

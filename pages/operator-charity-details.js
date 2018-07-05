@@ -81,6 +81,6 @@ const OperatorCharityDetails = props => (
 export default SessionWrapper(OperatorCharityDetails);
 
 OperatorCharityDetails.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

@@ -51,6 +51,6 @@ const EstablishmentTradingName = props => (
 export default SessionWrapper(EstablishmentTradingName);
 
 EstablishmentTradingName.propTypes = {
-  cumalativeAnswers: PropTypes.objectOf(PropTypes.string),
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
   validatorErrors: PropTypes.objectOf(PropTypes.string)
 };
