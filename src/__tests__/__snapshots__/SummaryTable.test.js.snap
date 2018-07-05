@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-41 {
+.emotion-53 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-53 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -114,7 +114,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 <table
-  className="emotion-41"
+  className="emotion-53"
 >
   <caption
     className="emotion-0"
@@ -226,6 +226,35 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
+      id="operatorNameRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Name
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="bold"
+        >
+          <span
+            id="operator_first_name"
+          >
+            John
+          </span>
+           
+          <span
+            id="operator_last_name"
+          >
+            Appleseed
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
       id="operatorAddressRow"
     >
       <th
@@ -264,12 +293,12 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
-      id="operatorNameRow"
+      id="operatorContactDetailsRow"
     >
       <th
         className="emotion-2"
       >
-        Name
+        Contact number
       </th>
       <td
         className="emotion-2"
@@ -277,17 +306,16 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         <div
           className="bold"
         >
-          <span
-            id="operator_first_name"
+          <div
+            id="operator_primary_number"
           >
-            John
-          </span>
-           
-          <span
-            id="operator_last_name"
+            1234567
+          </div>
+          <div
+            id="operator_secondary_number"
           >
-            Appleseed
-          </span>
+            7654321
+          </div>
         </div>
       </td>
     </tr>
@@ -308,6 +336,26 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           id="operator_type"
         >
           Sole trader
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
+      id="operatorEmailRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Email address
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="bold"
+          id="operator_email"
+        >
+          operator@email.com
         </div>
       </td>
     </tr>
@@ -388,6 +436,54 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           >
             AA11 1AA
           </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
+      id="establishmentContactDetailsRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Contact number
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="bold"
+        >
+          <div
+            id="establishment_primary_number"
+          >
+            1234567
+          </div>
+          <div
+            id="establishment_secondary_number"
+          >
+            7654321
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
+      id="establishmentEmailRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Email address
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="bold"
+          id="establishment_email"
+        >
+          establishment@email.com
         </div>
       </td>
     </tr>
