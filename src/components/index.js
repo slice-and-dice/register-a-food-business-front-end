@@ -6,6 +6,7 @@ import BackButton from "./BackButton";
 import ContinueButton from "./ContinueButton";
 import HintTextSmall from "./HintTextSmall";
 import SummaryTable from "./SummaryTable";
+import CheckboxButton from "./CheckboxButton";
 
 export {
   SessionWrapper,
@@ -15,5 +16,6 @@ export {
   BackButton,
   ContinueButton,
   HintTextSmall,
-  SummaryTable
+  SummaryTable,
+  CheckboxButton
 };
