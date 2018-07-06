@@ -142,6 +142,15 @@ const schema = {
       }
     }
   },
+  "/establishment-opening-status": {
+    type: "object",
+    properties: {
+      establishment_opening_status: {
+        type: "string",
+        validation: validateRadioButtons
+      }
+    }
+  },
   "/declaration": {
     type: "object",
     properties: {

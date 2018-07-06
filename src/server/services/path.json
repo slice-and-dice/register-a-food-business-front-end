@@ -47,6 +47,10 @@
     "on": true,
     "switches": {}
   },
+  "/establishment-opening-status": {
+    "on": true,
+    "switches": {}
+  },
   "/registration-summary": {
     "on": true,
     "switches": {}

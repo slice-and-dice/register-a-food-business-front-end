@@ -25,7 +25,9 @@ const errorMessages = {
   establishment_first_line: "Not a valid first line of address",
   establishment_street: "Not a valid street name",
   establishment_town: "Not a valid town name",
-  establishment_postcode: "Not a valid postcode"
+  establishment_postcode: "Not a valid postcode",
+  establishment_opening_status:
+    "You must select a trading status before continuing"
 };
 
 const nonValidatedPages = ["/index", "/registration-summary"];
