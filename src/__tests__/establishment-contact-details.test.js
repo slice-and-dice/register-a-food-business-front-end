@@ -14,6 +14,10 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {
+  example: true
+};
+
 describe("<EstablishmentContactDetails />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<EstablishmentContactDetails />);
@@ -26,6 +30,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +43,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentPrimaryContact = wrapper.find(
@@ -54,6 +60,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentPrimaryContact = wrapper.find(
@@ -70,6 +77,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentPrimaryContact = wrapper.find(
@@ -87,6 +95,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentSecondaryContact = wrapper.find(
@@ -103,6 +112,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentSecondaryContact = wrapper.find(
@@ -121,6 +131,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentSecondaryContact = wrapper.find(
@@ -138,6 +149,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");
@@ -152,6 +164,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");
@@ -166,6 +179,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");

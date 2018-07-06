@@ -58,8 +58,12 @@ describe("Router: ", () => {
       expect(router.get.mock.calls[2][0]).toBe("/qa/:target");
     });
 
+    it("should set up switches route", () => {
+      expect(router.get.mock.calls[3][0]).toBe("/switches/:switchType");
+    });
+
     it("should set up generic Next route", () => {
-      expect(router.get.mock.calls[3][0]).toBe("*");
+      expect(router.get.mock.calls[4][0]).toBe("*");
     });
   });
 
@@ -238,6 +242,83 @@ describe("Router: ", () => {
     });
   });
 
+  describe("GET to /switches/:switchType", () => {
+    const req = {
+      session: {},
+      params: {
+        switchType: "exampleSwitch"
+      }
+    };
+    const res = {
+      redirect: jest.fn()
+    };
+
+    beforeEach(async () => {
+      handler = router.get.mock.calls[3][1];
+      req.session.switches = undefined;
+    });
+
+    describe("given no existing switches object", () => {
+      beforeEach(async () => {
+        req.session.switches = undefined;
+        handler(req, res);
+      });
+
+      it("Should set the switch to true", () => {
+        expect(req.session.switches.exampleSwitch).toEqual(true);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
+      });
+    });
+
+    describe("given no previous state of the specified switch", () => {
+      beforeEach(async () => {
+        req.session = { switches: {} };
+        handler(req, res);
+      });
+
+      it("Should set the switch to true", () => {
+        expect(req.session.switches.exampleSwitch).toEqual(true);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
+      });
+    });
+
+    describe("given the specified switch previously had a state of true", () => {
+      beforeEach(async () => {
+        req.session = { switches: { exampleSwitch: true } };
+        handler(req, res);
+      });
+
+      it("Should set the switch to false", () => {
+        expect(req.session.switches.exampleSwitch).toEqual(false);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
+      });
+    });
+
+    describe("given the specified switch previously had a state of false", () => {
+      beforeEach(async () => {
+        req.session = { switches: { exampleSwitch: false } };
+        handler(req, res);
+      });
+
+      it("Should set the switch to true", () => {
+        expect(req.session.switches.exampleSwitch).toEqual(true);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
+      });
+    });
+  });
+
   describe("GET to *", () => {
     handleController.mockImplementation(() => ({
       submissionData: { new: "answers" }
@@ -250,7 +331,7 @@ describe("Router: ", () => {
     };
 
     beforeEach(async () => {
-      handler = router.get.mock.calls[3][1];
+      handler = router.get.mock.calls[4][1];
 
       handler(req, "response");
     });

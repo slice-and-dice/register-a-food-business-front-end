@@ -69,17 +69,6 @@ const OperatorDetailsTable = props => (
       </Table.Row>
     ) : null}
 
-    {props.registration_role ? (
-      <Table.Row id="registrationRoleRow">
-        <Table.CellHeader>Registration role</Table.CellHeader>
-        <Table.Cell>
-          <div className="bold" id="registration_role">
-            {props.registration_role}
-          </div>
-        </Table.Cell>
-      </Table.Row>
-    ) : null}
-
     {props.operator_first_line ? (
       <Table.Row id="operatorAddressRow">
         <Table.CellHeader>Operator address</Table.CellHeader>

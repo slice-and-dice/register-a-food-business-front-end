@@ -58,6 +58,18 @@ module.exports = () => {
     }
   });
 
+  router.get("/switches/:switchType", (req, res) => {
+    const switchType = req.params.switchType;
+
+    if (!req.session.switches) {
+      req.session.switches = {};
+    }
+
+    req.session.switches[switchType] = !req.session.switches[switchType];
+
+    res.redirect("back");
+  });
+
   router.get("*", (req, res) => {
     const response = handleController(req);
 

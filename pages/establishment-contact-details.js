@@ -6,13 +6,7 @@ import {
   ContinueButton,
   CheckboxButton
 } from "../src/components";
-import {
-  Header,
-  InputField,
-  Checkbox,
-  Paragraph,
-  HiddenText
-} from "govuk-react";
+import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
 import PropTypes from "prop-types";
 
 const EstablishmentContactDetails = props => (
@@ -28,7 +22,7 @@ const EstablishmentContactDetails = props => (
       </Paragraph>
     </HiddenText>
 
-    <form method="post" action="/switches/reuseOperatorContactDetails">
+    <form method="get" action="/switches/reuseOperatorContactDetails">
       <CheckboxButton
         type="submit"
         className={
@@ -45,8 +39,9 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_primary_number",
-              defaultValue:
-                props.cumulativeAnswers.establishment_primary_number,
+              defaultValue: props.switches.reuseOperatorContactDetails
+                ? props.cumulativeAnswers.operator_primary_number
+                : props.cumulativeAnswers.establishment_primary_number,
               autoComplete: "tel"
             }}
             id="establishment_primary_number"
@@ -63,8 +58,9 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_secondary_number",
-              defaultValue:
-                props.cumulativeAnswers.establishment_secondary_number,
+              defaultValue: props.switches.reuseOperatorContactDetails
+                ? props.cumulativeAnswers.operator_secondary_number
+                : props.cumulativeAnswers.establishment_secondary_number,
               autoComplete: "off"
             }}
             id="establishment_secondary_number"
@@ -81,7 +77,9 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_email",
-              defaultValue: props.cumulativeAnswers.establishment_email,
+              defaultValue: props.switches.reuseOperatorContactDetails
+                ? props.cumulativeAnswers.operator_email
+                : props.cumulativeAnswers.establishment_email,
               autoComplete: "email"
             }}
             id="establishment_email"
@@ -90,7 +88,7 @@ const EstablishmentContactDetails = props => (
             ]}
             meta={{
               touched: true,
-              error: props.validatorErrors["establishment_email"]
+              error: props.validatorErrors.establishment_email
             }}
           >
             Email address
@@ -107,5 +105,6 @@ export default SessionWrapper(EstablishmentContactDetails);
 
 EstablishmentContactDetails.propTypes = {
   cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
-  validatorErrors: PropTypes.objectOf(PropTypes.string)
+  validatorErrors: PropTypes.objectOf(PropTypes.string),
+  switches: PropTypes.objectOf(PropTypes.bool)
 };
