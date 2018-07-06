@@ -28,8 +28,13 @@ const EstablishmentContactDetails = props => (
       </Paragraph>
     </HiddenText>
 
-    <form method="post" action="/page2">
-      <CheckboxButton type="submit">
+    <form method="post" action="/switches/reuseOperatorContactDetails">
+      <CheckboxButton
+        type="submit"
+        className={
+          props.switches.reuseOperatorContactDetails ? "checked" : null
+        }
+      >
         Re-use operator contact details
       </CheckboxButton>
     </form>

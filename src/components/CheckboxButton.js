@@ -82,13 +82,18 @@ const StyledLabel = styled("span")({
     transform: "rotate(-45deg)",
     zoom: 1,
     opacity: 0
+  },
+  "&.checked": {
+    "::after": {
+      opacity: 1
+    }
   }
 });
 
 const CheckboxButton = ({ children, className, ...props }) => (
   <StyledCheckbox className={className}>
-    <StyledInput type="button" {...props} />
-    <StyledLabel>{children}</StyledLabel>
+    <StyledInput {...props} />
+    <StyledLabel className={className}>{children}</StyledLabel>
   </StyledCheckbox>
 );
 
