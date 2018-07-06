@@ -3,7 +3,8 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  ContinueButton
+  ContinueButton,
+  CheckboxButton
 } from "../src/components";
 import {
   Header,
@@ -27,15 +28,11 @@ const EstablishmentContactDetails = props => (
       </Paragraph>
     </HiddenText>
 
-    <Checkbox
-      readonly
-      name="re-use"
-      value="1"
-      defaultChecked={false}
-      type="submit"
-    >
-      Re-use operator contact details
-    </Checkbox>
+    <form method="post" action="/page2">
+      <CheckboxButton type="submit">
+        Re-use operator contact details
+      </CheckboxButton>
+    </form>
 
     <form action="/continue/establishment-contact-details" method="post">
       <ContentItem.B_30_15>
