@@ -1,39 +1,35 @@
 const transformAnswersForSubmit = cumulativeAnswers => {
-  let transformedData = Object.assign({}, cumulativeAnswers);
+  const data = Object.assign({}, cumulativeAnswers);
 
-  const transformStepsInOrder = [operatorTypeTransform];
+  data.operator_type = combineOperatorTypes(
+    data.operator_type,
+    data.registration_role
+  );
 
-  transformStepsInOrder.forEach(transformFunction => {
-    transformedData = Object.assign({}, transformFunction(transformedData));
-  });
+  delete data.registration_role;
 
-  return transformedData;
+  return data;
 };
 
-const operatorTypeTransform = data => {
-  const transformedData = Object.assign({}, data);
-  if (transformedData.registration_role) {
-    if (
-      transformedData.registration_role === "Representative" &&
-      transformedData.operator_type
-    ) {
-      transformedData.operator_type = `${
-        transformedData.operator_type
-      } (registered by a representative)`;
-      delete transformedData.registration_role;
-    } else if (transformedData.registration_role !== "Representative") {
-      transformedData.operator_type = transformedData.registration_role;
-      delete transformedData.registration_role;
+const combineOperatorTypes = (operator_type, registration_role) => {
+  let newOperatorType;
+
+  if (registration_role) {
+    if (registration_role === "Representative" && operator_type) {
+      newOperatorType = `${operator_type} (registered by a representative)`;
+    } else if (registration_role !== "Representative") {
+      newOperatorType = registration_role;
     } else {
       throw new Error(`
       data-transform.service.js operatorTypeTransform():
-      The registration_role value was ${transformedData.registration_role}.
-      The operator_type value was ${transformedData.operator_type}.
+      The registration_role value was ${registration_role}.
+      The operator_type value was ${operator_type}.
       This combination of values is not valid.
       `);
     }
   }
-  return transformedData;
+
+  return newOperatorType;
 };
 
 module.exports = {
