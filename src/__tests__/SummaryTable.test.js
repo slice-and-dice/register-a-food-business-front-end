@@ -13,7 +13,7 @@ const mandatoryTableRows = [
   "operatorAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
-  "registrationRoleRow",
+  "operatorTypeRow",
   "operatorCompanyNameRow",
   "operatorCompaniesHouseRow",
   "operatorCharityNameRow"
@@ -26,6 +26,7 @@ const allTableRows = mandatoryTableRows.concat(optionalTableRows);
 
 // the complete set of possible mandatory answer fields with example data
 const testMandatoryAnswers = {
+  operator_type: "Sole trader",
   establishment_first_line: "Example first line",
   establishment_postcode: "AA11 1AA",
   operator_first_line: "Example first line",
@@ -33,7 +34,6 @@ const testMandatoryAnswers = {
   establishment_trading_name: "Example trading name",
   operator_first_name: "John",
   operator_last_name: "Appleseed",
-  registration_role: "partnership",
   operator_company_name: "Company name",
   operator_company_house_number: "AA123456",
   operator_charity_name: "Charity name"

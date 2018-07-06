@@ -18,11 +18,13 @@ jest.mock("./config", () => ({
 jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
+jest.mock("./controllers/handle.controller");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
+const handleController = require("./controllers/handle.controller");
 const routes = require("./routes");
 
 describe("Router: ", () => {
@@ -237,13 +239,33 @@ describe("Router: ", () => {
   });
 
   describe("GET to *", () => {
+    handleController.mockImplementation(() => ({
+      submissionData: { new: "answers" }
+    }));
+
+    handle.mockImplementation();
+
+    const req = {
+      session: {}
+    };
+
     beforeEach(async () => {
       handler = router.get.mock.calls[3][1];
-      handler("request", "response");
+
+      handler(req, "response");
     });
 
     it("Should call getRequestHandler", () => {
-      expect(handle).toHaveBeenCalledWith("request", "response");
+      expect(handle).toHaveBeenCalledWith(
+        {
+          session: { submissionData: { new: "answers" } }
+        },
+        "response"
+      );
+    });
+
+    it("Should update session", () => {
+      expect(req.session.submissionData).toEqual({ new: "answers" });
     });
   });
 });

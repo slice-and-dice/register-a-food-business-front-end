@@ -2,6 +2,9 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
+  transformAnswersForSubmit
+} = require("../services/data-transform.service");
+const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers
 } = require("../services/session-management.service");

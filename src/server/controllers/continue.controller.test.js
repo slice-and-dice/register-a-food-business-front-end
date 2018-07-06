@@ -93,16 +93,14 @@ describe("Function: continueController: ", () => {
   });
 
   describe("When there are validator errors: ", () => {
-    describe("When there are validator errors: ", () => {
-      beforeEach(() => {
-        validate.mockImplementation(() => ({
-          errors: { some: "error" }
-        }));
-        response = continueController("/mock-page-1", {}, exampleAnswers);
-      });
-      it("should set redirectRoute to the currentPage", () => {
-        expect(response.redirectRoute).toBe("/mock-page-1");
-      });
+    beforeEach(() => {
+      validate.mockImplementation(() => ({
+        errors: { some: "error" }
+      }));
+      response = continueController("/mock-page-1", {}, exampleAnswers);
+    });
+    it("should set redirectRoute to the currentPage", () => {
+      expect(response.redirectRoute).toBe("/mock-page-1");
     });
   });
 });

@@ -1,11 +1,12 @@
 const { Router } = require("express");
-const { handle } = require("./next");
 const { info } = require("winston");
 const { QA_KEY } = require("./config");
+const { handle } = require("./next");
 
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
+const handleController = require("./controllers/handle.controller");
 
 module.exports = () => {
   const router = Router();
@@ -20,6 +21,8 @@ module.exports = () => {
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
+    req.session.submissionData = response.submissionData;
+
     info(
       `Routes: /continue route finished with route ${response.redirectRoute}`
     );
@@ -32,7 +35,7 @@ module.exports = () => {
       `/${req.params.originator}`,
       req.session.cumulativeAnswers
     );
-    info(`Routes: /back route finished with route ${response.redirectRoute}`);
+    info(`Routes: /back route finished with route ${response}`);
     res.redirect(response);
   });
 
@@ -56,6 +59,10 @@ module.exports = () => {
   });
 
   router.get("*", (req, res) => {
+    const response = handleController(req);
+
+    req.session.submissionData = response.submissionData;
+
     handle(req, res);
   });
 

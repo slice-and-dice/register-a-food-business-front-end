@@ -41,11 +41,20 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.validatorErrors).toBe("object");
     });
 
-    it("returns 'validatorErrors' and 'cumulativeAnswers' even if req is undefined", () => {
+    it("returns a 'submissionData' object as part of the initial props", () => {
+      const WrappedComponent = SessionWrapper(ExampleComponent);
+      const initialProps = WrappedComponent.getInitialProps({
+        req: { session: {} }
+      });
+      expect(typeof initialProps.submissionData).toBe("object");
+    });
+
+    it("returns 'validatorErrors', 'cumulativeAnswers', and 'submissionData even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
       expect(typeof initialProps.validatorErrors).toBe("object");
       expect(typeof initialProps.cumulativeAnswers).toBe("object");
+      expect(typeof initialProps.submissionData).toBe("object");
     });
   });
 
@@ -72,6 +81,17 @@ describe("<SessionWrapper />", () => {
       });
     });
 
+    describe("given that req.session.submissionData is undefined", () => {
+      it("props.submissionData is an empty object", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: {} }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.submissionData).toEqual({});
+      });
+    });
+
     describe("given that req.session.cumulativeAnswers is defined", () => {
       it("props.cumulativeAnswers is the same as the session.cumulativeAnswers", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
@@ -93,6 +113,18 @@ describe("<SessionWrapper />", () => {
         });
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.validatorErrors).toBe(exampleValidatorErrors);
+      });
+    });
+
+    describe("given that req.session.submissionData is defined", () => {
+      it("props.submissionData is the same as the session.submissionData", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const exampleValidatorErrors = { test: "value" };
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: { submissionData: exampleValidatorErrors } }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.submissionData).toBe(exampleValidatorErrors);
       });
     });
   });

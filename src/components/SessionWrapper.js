@@ -11,6 +11,10 @@ const SessionWrapper = Page => {
         req && req.session && req.session.validatorErrors
           ? req.session.validatorErrors
           : {},
+      submissionData:
+        req && req.session && req.session.submissionData
+          ? req.session.submissionData
+          : {},
       referenceNumber: "34672462"
     };
   };

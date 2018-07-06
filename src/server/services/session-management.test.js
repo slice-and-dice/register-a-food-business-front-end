@@ -65,7 +65,7 @@ const testSessionAnswers_MoreThanNeeded = Object.assign(
   answersBelongingToInactivePage
 );
 
-describe("session-management.service cleanSession()", () => {
+describe("session-management.service cleanInactivePathAnswers()", () => {
   describe("given a path/data match", () => {
     it("returns the same data object as it was passed", () => {
       const result = cleanInactivePathAnswers(
@@ -116,7 +116,9 @@ describe("session-management.service cleanSession()", () => {
       }
     });
   });
+});
 
+describe("session-management.service cleanEmptiedAnswers()", () => {
   describe("given an input field that did have an previously entered value but is now null or empty", () => {
     const someExistingAnswers = {
       declaration1: "My declaration",
