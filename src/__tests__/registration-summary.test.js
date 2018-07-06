@@ -6,8 +6,8 @@ import { createSerializer } from "jest-emotion";
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
-const testCumulativeAnswers = {
-  example: "test answer"
+const submissionData = {
+  establishment_first_line: "Example first line"
 };
 
 describe("<RegistrationSummary />", () => {
@@ -22,13 +22,10 @@ describe("<RegistrationSummary />", () => {
   });
 
   it("gets given props", () => {
-    const cumulativeAnswers = {
-      establishment_first_line: "Example first line"
-    };
     const wrapper = mount(
-      <RegistrationSummary cumulativeAnswers={cumulativeAnswers} />
+      <RegistrationSummary submissionData={submissionData} />
     );
-    const establishmentFirstLine = wrapper.props().cumulativeAnswers
+    const establishmentFirstLine = wrapper.props().submissionData
       .establishment_first_line;
     expect(establishmentFirstLine).toBe("Example first line");
   });
@@ -36,7 +33,7 @@ describe("<RegistrationSummary />", () => {
   describe("SummaryTable component", () => {
     it("renders", () => {
       const wrapper = mount(
-        <RegistrationSummary cumulativeAnswers={testCumulativeAnswers} />
+        <RegistrationSummary submissionData={submissionData} />
       );
       const summaryTable = wrapper.find("SummaryTable");
       expect(summaryTable.length).toBe(1);

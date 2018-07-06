@@ -293,21 +293,21 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
-      id="registrationRoleRow"
+      id="operatorTypeRow"
     >
       <th
         className="emotion-2"
       >
-        Registration role
+        Operator type
       </th>
       <td
         className="emotion-2"
       >
         <div
           className="bold"
-          id="registration_role"
+          id="operator_type"
         >
-          partnership
+          Sole trader
         </div>
       </td>
     </tr>

@@ -1,13 +1,9 @@
 jest.mock("../services/path.service");
 jest.mock("../services/validation.service");
 jest.mock("../services/session-management.service");
-jest.mock("../services/data-transform.service");
 
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
-const {
-  transformAnswersForSubmit
-} = require("../services/data-transform.service");
 const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers
@@ -105,63 +101,6 @@ describe("Function: continueController: ", () => {
     });
     it("should set redirectRoute to the currentPage", () => {
       expect(response.redirectRoute).toBe("/mock-page-1");
-    });
-  });
-
-  describe("Submission data tests", () => {
-    let response;
-
-    beforeEach(() => {
-      transformAnswersForSubmit.mockImplementation(() => ({
-        example_answer: "example"
-      }));
-
-      validate.mockImplementation(() => ({
-        errors: {}
-      }));
-
-      editPath.mockImplementation(() => ({
-        "/earlier-page": {
-          on: true,
-          switches: {}
-        },
-        "/example-page": {
-          on: true,
-          switches: {}
-        },
-        "/registration-summary": {
-          on: true,
-          switches: {}
-        },
-        "/declaration": {
-          on: true,
-          switches: {}
-        }
-      }));
-    });
-
-    describe("When the next page is /registration-summary or after: ", () => {
-      beforeEach(() => {
-        moveAlongPath.mockImplementation(() => "/registration-summary");
-
-        response = continueController("/example-page", exampleAnswers, {});
-      });
-
-      it("should return a submissionData object", () => {
-        expect(typeof response.submissionData).toBe("object");
-      });
-    });
-
-    describe("When the next page is not /registration-summary or after: ", () => {
-      beforeEach(() => {
-        moveAlongPath.mockImplementation(() => "/example-page");
-
-        response = continueController("/earlier-page", exampleAnswers, {});
-      });
-
-      it("should not return a submissionData object", () => {
-        expect(response.submissionData).toBe(undefined);
-      });
     });
   });
 });

@@ -17,7 +17,7 @@ const RegistrationSummary = props => (
     </Header>
 
     <ContentItem.B_30_15>
-      <SummaryTable {...props.cumulativeAnswers} />
+      <SummaryTable {...props.submissionData} />
     </ContentItem.B_30_15>
 
     <form action="/continue/registration-summary" method="post">

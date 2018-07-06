@@ -68,24 +68,6 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     // else move to the next page in the path
     const nextPage = moveAlongPath(newPath, currentPage, 1);
 
-    let requiresSubmissionData = false;
-
-    const indexOfSummaryPage = Object.keys(newPath).indexOf(
-      "/registration-summary"
-    );
-
-    if (indexOfSummaryPage !== -1) {
-      const indexOfNextPage = Object.keys(newPath).indexOf(nextPage);
-
-      requiresSubmissionData = indexOfNextPage >= indexOfSummaryPage;
-    }
-
-    if (requiresSubmissionData) {
-      controllerResponse.submissionData = transformAnswersForSubmit(
-        controllerResponse.cumulativeAnswers
-      );
-    }
-
     controllerResponse.redirectRoute = nextPage;
   }
   return controllerResponse;
