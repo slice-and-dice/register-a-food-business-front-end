@@ -18,12 +18,14 @@ jest.mock("./config", () => ({
 jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
+jest.mock("./controllers/switches.controller");
 jest.mock("./controllers/handle.controller");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
+const switchesController = require("./controllers/switches.controller");
 const handleController = require("./controllers/handle.controller");
 const routes = require("./routes");
 
@@ -60,7 +62,7 @@ describe("Router: ", () => {
 
     it("should set up switches route", () => {
       expect(router.post.mock.calls[1][0]).toBe(
-        "/switches/:switchType/:action"
+        "/switches/:switchType/:action/:originator"
       );
     });
 
@@ -248,12 +250,13 @@ describe("Router: ", () => {
     });
   });
 
-  describe("GET to /switches/:switchType/:action", () => {
+  describe("POST to /switches/:switchType/:action/:originator", () => {
     const req = {
-      session: {},
+      session: { switches: {} },
       params: {
         switchType: "exampleSwitch",
-        action: "on"
+        action: "on",
+        originator: "/mock-page-1"
       }
     };
     const res = {
@@ -261,97 +264,27 @@ describe("Router: ", () => {
     };
 
     beforeEach(async () => {
+      switchesController.mockImplementation(() => ({
+        cumulativeAnswers: { example: "answer" },
+        newSwitchState: true
+      }));
       handler = router.post.mock.calls[1][1];
-      req.session.switches = undefined;
+      handler(req, res);
     });
 
-    describe("given no existing switches object", () => {
+    it("Should redirect to the previous page", () => {
+      expect(res.redirect).toBeCalledWith("back");
+    });
+
+    it("Should update session", () => {
+      expect(req.session.cumulativeAnswers).toEqual({ example: "answer" });
+      expect(req.session.switches).toEqual({ exampleSwitch: true });
+    });
+
+    describe("Given there is no switches object", () => {
       beforeEach(async () => {
         req.session.switches = undefined;
         handler(req, res);
-      });
-
-      it("Should set the switch to true", () => {
-        expect(req.session.switches.exampleSwitch).toEqual(true);
-      });
-
-      it("Should redirect to the previous page", () => {
-        expect(res.redirect).toBeCalledWith("back");
-      });
-    });
-
-    describe("given no previous state of the specified switch", () => {
-      beforeEach(async () => {
-        req.session = { switches: {} };
-        handler(req, res);
-      });
-
-      it("Should set the switch to true", () => {
-        expect(req.session.switches.exampleSwitch).toEqual(true);
-      });
-
-      it("Should redirect to the previous page", () => {
-        expect(res.redirect).toBeCalledWith("back");
-      });
-    });
-
-    describe("given the specified action is 'off'", () => {
-      beforeEach(async () => {
-        req.params.action = "off";
-        req.session = { switches: { exampleSwitch: true } };
-        handler(req, res);
-      });
-
-      it("Should set the switch to false", () => {
-        expect(req.session.switches.exampleSwitch).toEqual(false);
-      });
-
-      it("Should redirect to the previous page", () => {
-        expect(res.redirect).toBeCalledWith("back");
-      });
-    });
-
-    describe("given the specified action is 'on'", () => {
-      beforeEach(async () => {
-        req.params.action = "on";
-        req.session = { switches: { exampleSwitch: false } };
-        handler(req, res);
-      });
-
-      it("Should set the switch to true", () => {
-        expect(req.session.switches.exampleSwitch).toEqual(true);
-      });
-
-      it("Should redirect to the previous page", () => {
-        expect(res.redirect).toBeCalledWith("back");
-      });
-    });
-
-    describe("given the specified action is 'toggle'", () => {
-      beforeEach(async () => {
-        req.params.action = "toggle";
-        req.session = { switches: { exampleSwitch: false } };
-        handler(req, res);
-      });
-
-      it("Should set the switch to true when it was previously false", () => {
-        expect(req.session.switches.exampleSwitch).toEqual(true);
-      });
-
-      it("Should redirect to the previous page", () => {
-        expect(res.redirect).toBeCalledWith("back");
-      });
-    });
-
-    describe("given the specified action is not handled", () => {
-      beforeEach(async () => {
-        req.params.action = undefined;
-        req.session = { switches: { exampleSwitch: false } };
-        handler(req, res);
-      });
-
-      it("Should set the switch to undefined", () => {
-        expect(req.session.switches.exampleSwitch).toEqual(undefined);
       });
 
       it("Should redirect to the previous page", () => {
