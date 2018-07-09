@@ -10,4 +10,9 @@ deploy:
   provider: azure_web_apps
   verbose: true
   site: register-a-food-business-dev
-  on: develop
+  on:  develop
+deploy:
+  provider: azure_web_apps
+  verbose: true
+  site: TEST-REGISTER-A-FOOD-BUSINESS
+  on:  master
