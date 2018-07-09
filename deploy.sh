@@ -110,6 +110,7 @@ fi
 selectNodeVersion
 #echo "Running yarn config set scripts-prepend-node-path"
 #eval yarn config set scripts-prepend-node-path true
+echo "Installing yarn"
 eval $NPM_CMD i -g yarn
 
 # 3. Install npm packages
