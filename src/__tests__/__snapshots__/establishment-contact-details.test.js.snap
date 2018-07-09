@@ -868,7 +868,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
               >
                 <button
                   className="emotion-20 emotion-21"
-                  formAction="/switches/reuseOperatorContactDetails/toggle"
+                  formAction="/switches/reuseOperatorContactDetails/toggle/establishment-contact-details"
                   type="submit"
                 />
                 <span

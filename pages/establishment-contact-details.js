@@ -26,7 +26,7 @@ const EstablishmentContactDetails = props => (
       <ContentItem.B_30_15>
         <CheckboxButton
           type="submit"
-          formAction="/switches/reuseOperatorContactDetails/toggle"
+          formAction="/switches/reuseOperatorContactDetails/toggle/establishment-contact-details"
           className={
             props.switches.reuseOperatorContactDetails ? "checked" : null
           }

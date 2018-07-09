@@ -6,6 +6,7 @@ const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
+const switchesController = require("./controllers/switches.controller");
 const handleController = require("./controllers/handle.controller");
 
 module.exports = () => {
@@ -63,23 +64,28 @@ module.exports = () => {
     }
   });
 
-  router.post("/switches/:switchType/:action", (req, res) => {
+  router.post("/switches/:switchType/:action/:originator", (req, res) => {
     info(`Routes: /switches/:switchType/:action route called`);
-    const switchType = req.params.switchType;
-    const newState =
-      req.params.action === "on"
-        ? true
-        : req.params.action === "off"
-          ? false
-          : req.params.action === "toggle"
-            ? !req.session.switches[switchType]
-            : undefined;
 
     if (!req.session.switches) {
       req.session.switches = {};
     }
 
-    req.session.switches[switchType] = newState;
+    const switchType = req.params.switchType;
+    const action = req.params.action;
+
+    const currentSwitchState = req.session.switches[switchType];
+
+    const response = switchesController(
+      currentSwitchState,
+      action,
+      req.session.cumulativeAnswers,
+      req.body,
+      `/${req.params.originator}`
+    );
+
+    req.session.switches[switchType] = response.newSwitchState;
+    req.session.cumulativeAnswers = response.cumulativeAnswers;
 
     info(`Routes: /switches/:switchType/:action route finished`);
     res.redirect("back");
