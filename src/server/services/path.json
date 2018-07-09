@@ -1,0 +1,58 @@
+{
+  "/index": {
+    "on": true,
+    "switches": {}
+  },
+  "/registration-role": {
+    "on": true,
+    "switches": {
+      "Sole trader": { "/operator-name": true },
+      "Partnership": { "/operator-name": true },
+      "Representative": { "/operator-type": true }
+    }
+  },
+  "/operator-type": {
+    "on": false,
+    "switches": {
+      "A person": { "/operator-name": true },
+      "A company": { "/operator-company-details": true },
+      "A charity": { "/operator-charity-details": true }
+    }
+  },
+  "/operator-company-details": {
+    "on": false,
+    "switches": {}
+  },
+  "/operator-charity-details": {
+    "on": false,
+    "switches": {}
+  },
+  "/operator-name": {
+    "on": false,
+    "switches": {}
+  },
+  "/operator-address": {
+    "on": true,
+    "switches": {}
+  },
+  "/operator-contact-details": {
+    "on": true,
+    "switches": {}
+  },
+  "/establishment-trading-name": {
+    "on": true,
+    "switches": {}
+  },
+  "/establishment-address": {
+    "on": true,
+    "switches": {}
+  },
+  "/registration-summary": {
+    "on": true,
+    "switches": {}
+  },
+  "/declaration": {
+    "on": true,
+    "switches": {}
+  }
+}

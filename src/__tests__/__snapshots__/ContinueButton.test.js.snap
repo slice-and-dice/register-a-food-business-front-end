@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Index /> matches the previous snapshot 1`] = `
+exports[`<ContinueButton /> matches the previous snapshot 1`] = `
 .emotion-0 {
   background-color: #00823b;
   border: none;
@@ -36,8 +36,25 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
+.emotion-0:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
 .emotion-0:focus {
+  color: #ffffff;
+  background-color: #00692f;
   outline: 3px solid #ffbf47;
+}
+
+.emotion-0:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-0:visited {
+  color: #00823b;
 }
 
 .emotion-0 svg {
@@ -51,19 +68,12 @@ exports[`<Index /> matches the previous snapshot 1`] = `
   }
 }
 
-<div>
-  <div>
-    <h1>
-      Header
-    </h1>
-  </div>
-  <p>
-    Hello world!
-  </p>
-  <button
-    className="emotion-0"
-  >
-    GOV.UK styled button
-  </button>
-</div>
+<button
+  className="emotion-0"
+  disabled={false}
+  id="continue-button"
+  type="submit"
+>
+  Continue
+</button>
 `;
