@@ -82,10 +82,9 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_email",
-              defaultValue:
-                props.switches.reuseOperatorContactDetails === undefined
-                  ? props.cumulativeAnswers.establishment_email
-                  : props.cumulativeAnswers.operator_email,
+              defaultValue: props.switches.reuseOperatorContactDetails
+                ? props.cumulativeAnswers.operator_email
+                : props.cumulativeAnswers.establishment_email,
               autoComplete: "email"
             }}
             id="establishment_email"

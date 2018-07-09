@@ -69,10 +69,15 @@ describe("<EstablishmentContactDetails />", () => {
       expect(establishmentPrimaryContact.props().meta.error).toBe("test error");
     });
 
-    it("gets given the correct default value", () => {
-      const cumulativeAnswers = {
-        establishment_primary_number: "default"
+    it("gets given the correct default value when reuseOperatorContactDetails switch is true ", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: true
       };
+      const cumulativeAnswers = {
+        operator_primary_number: "operator primary number",
+        establishment_primary_number: "establishment primary number"
+      };
+
       const wrapper = mount(
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
@@ -80,11 +85,35 @@ describe("<EstablishmentContactDetails />", () => {
           switches={testSwitches}
         />
       );
-      const establishmentPrimaryContact = wrapper.find(
+      const establishmentSecondaryNumber = wrapper.find(
         "InputField#establishment_primary_number"
       );
-      expect(establishmentPrimaryContact.props().input.defaultValue).toBe(
-        "default"
+      expect(establishmentSecondaryNumber.props().input.defaultValue).toBe(
+        "operator primary number"
+      );
+    });
+
+    it("gets given the correct default value reuseOperatorContactDetails switch is false", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: false
+      };
+      const cumulativeAnswers = {
+        establishment_primary_number: "establishment primary number",
+        operator_primary_number: "operator primary number"
+      };
+
+      const wrapper = mount(
+        <EstablishmentContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
+        />
+      );
+      const establishmentSecondaryNumber = wrapper.find(
+        "InputField#establishment_primary_number"
+      );
+      expect(establishmentSecondaryNumber.props().input.defaultValue).toBe(
+        "establishment primary number"
       );
     });
   });
@@ -123,10 +152,15 @@ describe("<EstablishmentContactDetails />", () => {
       );
     });
 
-    it("gets given the correct default value", () => {
-      const cumulativeAnswers = {
-        establishment_secondary_number: "default"
+    it("gets given the correct default value when reuseOperatorContactDetails switch is true ", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: true
       };
+      const cumulativeAnswers = {
+        operator_secondary_number: "operator secondary number",
+        establishment_secondary_number: "establishment secondary number"
+      };
+
       const wrapper = mount(
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
@@ -134,11 +168,35 @@ describe("<EstablishmentContactDetails />", () => {
           switches={testSwitches}
         />
       );
-      const establishmentSecondaryContact = wrapper.find(
+      const establishmentSecondaryNumber = wrapper.find(
         "InputField#establishment_secondary_number"
       );
-      expect(establishmentSecondaryContact.props().input.defaultValue).toBe(
-        "default"
+      expect(establishmentSecondaryNumber.props().input.defaultValue).toBe(
+        "operator secondary number"
+      );
+    });
+
+    it("gets given the correct default value reuseOperatorContactDetails switch is false", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: false
+      };
+      const cumulativeAnswers = {
+        establishment_secondary_number: "establishment secondary number",
+        operator_secondary_number: "operator secondary number"
+      };
+
+      const wrapper = mount(
+        <EstablishmentContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
+        />
+      );
+      const establishmentSecondaryNumber = wrapper.find(
+        "InputField#establishment_secondary_number"
+      );
+      expect(establishmentSecondaryNumber.props().input.defaultValue).toBe(
+        "establishment secondary number"
       );
     });
   });
@@ -171,10 +229,15 @@ describe("<EstablishmentContactDetails />", () => {
       expect(establishmentEmail.props().meta.error).toBe("test error");
     });
 
-    it("gets given the correct default value", () => {
-      const cumulativeAnswers = {
-        establishment_email: "default"
+    it("gets given the correct default value when reuseOperatorContactDetails switch is true ", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: true
       };
+      const cumulativeAnswers = {
+        operator_email: "operator email",
+        establishment_email: "establishment email"
+      };
+
       const wrapper = mount(
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
@@ -183,7 +246,65 @@ describe("<EstablishmentContactDetails />", () => {
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");
-      expect(establishmentEmail.props().input.defaultValue).toBe("default");
+      expect(establishmentEmail.props().input.defaultValue).toBe(
+        "operator email"
+      );
+    });
+
+    it("gets given the correct default value reuseOperatorContactDetails switch is false", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: false
+      };
+      const cumulativeAnswers = {
+        establishment_email: "establishment email",
+        operator_email: "operator email"
+      };
+
+      const wrapper = mount(
+        <EstablishmentContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
+        />
+      );
+      const establishmentEmail = wrapper.find("InputField#establishment_email");
+      expect(establishmentEmail.props().input.defaultValue).toBe(
+        "establishment email"
+      );
+    });
+  });
+
+  describe("The classname of CheckboxButton gets passed the switch props", () => {
+    it("its classname is 'checked' when reuseOperatorContactDetails switch is true", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: true
+      };
+
+      const wrapper = mount(
+        <EstablishmentContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
+        />
+      );
+      const checkboxButton = wrapper.find("CheckboxButton");
+      expect(checkboxButton.props().className).toContain("checked");
+    });
+
+    it("its classname is null when reuseOperatorContactDetails switch is false", () => {
+      const testSwitches = {
+        reuseOperatorContactDetails: false
+      };
+
+      const wrapper = mount(
+        <EstablishmentContactDetails
+          validatorErrors={testValidatorErrors}
+          cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
+        />
+      );
+      const checkboxButton = wrapper.find("CheckboxButton");
+      expect(checkboxButton.props().className).toContain("");
     });
   });
 });

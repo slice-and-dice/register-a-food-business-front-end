@@ -69,20 +69,6 @@ const OperatorDetailsTable = props => (
       </Table.Row>
     ) : null}
 
-<<<<<<< HEAD
-    {props.registration_role ? (
-      <Table.Row id="registrationRoleRow">
-        <Table.CellHeader>Registration role</Table.CellHeader>
-        <Table.Cell>
-          <div className="bold" id="registration_role">
-            {props.registration_role}
-          </div>
-        </Table.Cell>
-      </Table.Row>
-    ) : null}
-
-=======
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     {props.operator_first_line ? (
       <Table.Row id="operatorAddressRow">
         <Table.CellHeader>Operator address</Table.CellHeader>
@@ -108,8 +94,6 @@ const OperatorDetailsTable = props => (
             <div id="operator_secondary_number">
               {props.operator_secondary_number || null}
             </div>
-<<<<<<< HEAD
-=======
           </div>
         </Table.Cell>
       </Table.Row>
@@ -121,7 +105,6 @@ const OperatorDetailsTable = props => (
         <Table.Cell>
           <div className="bold" id="operator_type">
             {props.operator_type}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
           </div>
         </Table.Cell>
       </Table.Row>

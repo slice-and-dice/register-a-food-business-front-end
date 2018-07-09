@@ -255,29 +255,6 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
-<<<<<<< HEAD
-      id="registrationRoleRow"
-    >
-      <th
-        className="emotion-2"
-      >
-        Registration role
-      </th>
-      <td
-        className="emotion-2"
-      >
-        <div
-          className="bold"
-          id="registration_role"
-        >
-          partnership
-        </div>
-      </td>
-    </tr>
-    <tr
-      className="emotion-4"
-=======
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
       id="operatorAddressRow"
     >
       <th
@@ -339,8 +316,6 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           >
             7654321
           </div>
-<<<<<<< HEAD
-=======
         </div>
       </td>
     </tr>
@@ -361,7 +336,6 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           id="operator_type"
         >
           Sole trader
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         </div>
       </td>
     </tr>
