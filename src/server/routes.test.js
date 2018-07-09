@@ -59,11 +59,13 @@ describe("Router: ", () => {
     });
 
     it("should set up switches route", () => {
-      expect(router.get.mock.calls[3][0]).toBe("/switches/:switchType");
+      expect(router.post.mock.calls[1][0]).toBe(
+        "/switches/:switchType/:action"
+      );
     });
 
     it("should set up generic Next route", () => {
-      expect(router.get.mock.calls[4][0]).toBe("*");
+      expect(router.get.mock.calls[3][0]).toBe("*");
     });
   });
 
@@ -84,7 +86,8 @@ describe("Router: ", () => {
 
       req = {
         session: {
-          cumulativeAnswers: {}
+          cumulativeAnswers: {},
+          switches: {}
         },
         body: "body",
         params: {
@@ -103,7 +106,8 @@ describe("Router: ", () => {
       expect(continueController).toHaveBeenCalledWith(
         "/originator",
         {},
-        "body"
+        "body",
+        {}
       );
     });
 
@@ -244,11 +248,12 @@ describe("Router: ", () => {
     });
   });
 
-  describe("GET to /switches/:switchType", () => {
+  describe("GET to /switches/:switchType/:action", () => {
     const req = {
       session: {},
       params: {
-        switchType: "exampleSwitch"
+        switchType: "exampleSwitch",
+        action: "on"
       }
     };
     const res = {
@@ -256,7 +261,7 @@ describe("Router: ", () => {
     };
 
     beforeEach(async () => {
-      handler = router.get.mock.calls[3][1];
+      handler = router.post.mock.calls[1][1];
       req.session.switches = undefined;
     });
 
@@ -290,8 +295,9 @@ describe("Router: ", () => {
       });
     });
 
-    describe("given the specified switch previously had a state of true", () => {
+    describe("given the specified action is 'off'", () => {
       beforeEach(async () => {
+        req.params.action = "off";
         req.session = { switches: { exampleSwitch: true } };
         handler(req, res);
       });
@@ -305,14 +311,47 @@ describe("Router: ", () => {
       });
     });
 
-    describe("given the specified switch previously had a state of false", () => {
+    describe("given the specified action is 'on'", () => {
       beforeEach(async () => {
+        req.params.action = "on";
         req.session = { switches: { exampleSwitch: false } };
         handler(req, res);
       });
 
       it("Should set the switch to true", () => {
         expect(req.session.switches.exampleSwitch).toEqual(true);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
+      });
+    });
+
+    describe("given the specified action is 'toggle'", () => {
+      beforeEach(async () => {
+        req.params.action = "toggle";
+        req.session = { switches: { exampleSwitch: false } };
+        handler(req, res);
+      });
+
+      it("Should set the switch to true when it was previously false", () => {
+        expect(req.session.switches.exampleSwitch).toEqual(true);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
+      });
+    });
+
+    describe("given the specified action is not handled", () => {
+      beforeEach(async () => {
+        req.params.action = undefined;
+        req.session = { switches: { exampleSwitch: false } };
+        handler(req, res);
+      });
+
+      it("Should set the switch to undefined", () => {
+        expect(req.session.switches.exampleSwitch).toEqual(undefined);
       });
 
       it("Should redirect to the previous page", () => {
@@ -333,7 +372,7 @@ describe("Router: ", () => {
     };
 
     beforeEach(async () => {
-      handler = router.get.mock.calls[4][1];
+      handler = router.get.mock.calls[3][1];
 
       handler(req, "response");
     });

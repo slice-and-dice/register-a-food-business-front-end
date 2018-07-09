@@ -42,27 +42,24 @@ const cleanSwitches = (cumulativeAnswers, switches) => {
   const cleanedSwitches = Object.assign({}, switches);
 
   if (switches) {
-    const operatorContactDetails = [
-      cumulativeAnswers.operator_primary_number,
-      cumulativeAnswers.operator_secondary_number,
-      cumulativeAnswers.operator_email
-    ];
+    if (cleanedSwitches.reuseOperatorContactDetails !== undefined) {
+      const operatorContactDetails = [
+        cumulativeAnswers.operator_primary_number,
+        cumulativeAnswers.operator_secondary_number,
+        cumulativeAnswers.operator_email
+      ];
 
-    const establishmentContactDetails = [
-      cumulativeAnswers.establishment_primary_number,
-      cumulativeAnswers.establishment_secondary_number,
-      cumulativeAnswers.establishment_email
-    ];
+      const establishmentContactDetails = [
+        cumulativeAnswers.establishment_primary_number,
+        cumulativeAnswers.establishment_secondary_number,
+        cumulativeAnswers.establishment_email
+      ];
 
-    const operatorEstablishmentDetailsMatch =
-      JSON.stringify(operatorContactDetails) ===
-      JSON.stringify(establishmentContactDetails);
+      const operatorEstablishmentDetailsAreDifferent =
+        JSON.stringify(operatorContactDetails) !==
+        JSON.stringify(establishmentContactDetails);
 
-    if (switches.reuseOperatorContactDetails !== undefined) {
-      const detailsAreDifferent =
-        cleanedSwitches.reuseOperatorContactDetails !==
-        operatorEstablishmentDetailsMatch;
-      if (detailsAreDifferent) {
+      if (operatorEstablishmentDetailsAreDifferent) {
         cleanedSwitches.reuseOperatorContactDetails = false;
       }
     }

@@ -16,7 +16,8 @@ module.exports = () => {
     const response = continueController(
       `/${req.params.originator}`,
       req.session.cumulativeAnswers,
-      req.body
+      req.body,
+      req.session.switches
     );
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
@@ -62,17 +63,25 @@ module.exports = () => {
     }
   });
 
-  router.get("/switches/:switchType", (req, res) => {
-    info(`Routes: /switches/:switchType route called`);
+  router.post("/switches/:switchType/:action", (req, res) => {
+    info(`Routes: /switches/:switchType/:action route called`);
     const switchType = req.params.switchType;
+    const newState =
+      req.params.action === "on"
+        ? true
+        : req.params.action === "off"
+          ? false
+          : req.params.action === "toggle"
+            ? !req.session.switches[switchType]
+            : undefined;
 
     if (!req.session.switches) {
       req.session.switches = {};
     }
 
-    req.session.switches[switchType] = !req.session.switches[switchType];
+    req.session.switches[switchType] = newState;
 
-    info(`Routes: /switches/:switchType route finished`);
+    info(`Routes: /switches/:switchType/:action route finished`);
     res.redirect("back");
   });
 

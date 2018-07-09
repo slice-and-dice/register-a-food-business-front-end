@@ -22,19 +22,18 @@ const EstablishmentContactDetails = props => (
       </Paragraph>
     </HiddenText>
 
-    <form method="get" action="/switches/reuseOperatorContactDetails">
-      <CheckboxButton
-        type="submit"
-        className={
-          props.switches.reuseOperatorContactDetails ? "checked" : null
-        }
-      >
-        Re-use operator contact details
-      </CheckboxButton>
-    </form>
-
     <form action="/continue/establishment-contact-details" method="post">
       <ContentItem.B_30_15>
+        <CheckboxButton
+          type="submit"
+          formAction="/switches/reuseOperatorContactDetails/toggle"
+          className={
+            props.switches.reuseOperatorContactDetails ? "checked" : null
+          }
+        >
+          Re-use operator contact details
+        </CheckboxButton>
+
         <ContentItem.B_30_15>
           <InputField
             input={{
@@ -77,9 +76,10 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_email",
-              defaultValue: props.switches.reuseOperatorContactDetails
-                ? props.cumulativeAnswers.operator_email
-                : props.cumulativeAnswers.establishment_email,
+              defaultValue:
+                props.switches.reuseOperatorContactDetails === undefined
+                  ? props.cumulativeAnswers.establishment_email
+                  : props.cumulativeAnswers.operator_email,
               autoComplete: "email"
             }}
             id="establishment_email"

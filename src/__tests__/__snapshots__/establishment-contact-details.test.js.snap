@@ -441,6 +441,16 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-29 {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-29 {
+    padding-bottom: 15px;
+  }
+}
+
 .emotion-20 {
   position: absolute;
   left: 0;
@@ -525,16 +535,6 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 @media only screen and (min-width:641px) {
   .emotion-22 {
     margin-bottom: 30px;
-  }
-}
-
-.emotion-29 {
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width:641px) {
-  .emotion-29 {
-    padding-bottom: 15px;
   }
 }
 
@@ -857,30 +857,26 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
             </div>
           </details>
           <form
-            action="/switches/reuseOperatorContactDetails"
-            method="get"
-          >
-            <label
-              className="emotion-24 emotion-25"
-            >
-              <button
-                className="emotion-20 emotion-21"
-                type="submit"
-              />
-              <span
-                className="emotion-22 emotion-23"
-              >
-                Re-use operator contact details
-              </span>
-            </label>
-          </form>
-          <form
             action="/continue/establishment-contact-details"
             method="post"
           >
             <div
               className="emotion-29 emotion-30"
             >
+              <label
+                className="emotion-24 emotion-25"
+              >
+                <button
+                  className="emotion-20 emotion-21"
+                  formAction="/switches/reuseOperatorContactDetails/toggle"
+                  type="submit"
+                />
+                <span
+                  className="emotion-22 emotion-23"
+                >
+                  Re-use operator contact details
+                </span>
+              </label>
               <div
                 className="emotion-29 emotion-30"
               >
