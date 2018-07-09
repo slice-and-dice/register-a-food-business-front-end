@@ -15,33 +15,24 @@ const StyledCheckbox = styled("label")({
   padding: "0 0 0 38px"
 });
 
-const StyledInput = styled("button")(
-  {
-    position: "absolute",
-    left: 0,
-    top: 0,
-    width: "38px",
-    height: "38px",
-    zIndex: 1,
-    margin: 0,
-    zoom: 1,
-    opacity: 0,
-    ":focus + span:before": {
-      boxShadow: `0 0 0 4px ${YELLOW}`
-    },
-    ":visited": {
-      background: `${RED}`,
-      color: `${RED}`
-    }
+const StyledInput = styled("button")({
+  position: "absolute",
+  left: 0,
+  top: 0,
+  width: "38px",
+  height: "38px",
+  zIndex: 1,
+  margin: 0,
+  zoom: 1,
+  opacity: 0,
+  ":focus + span:before": {
+    boxShadow: `0 0 0 4px ${YELLOW}`
   },
-  ({ disabled }) => ({
-    cursor: disabled ? "auto" : "pointer",
-    " + span": {
-      opacity: disabled ? ".4" : "1",
-      pointerEvents: disabled ? "none" : "auto"
-    }
-  })
-);
+  ":visited": {
+    background: `${RED}`,
+    color: `${RED}`
+  }
+});
 
 const StyledLabel = styled("span")({
   fontFamily: NTA_LIGHT,

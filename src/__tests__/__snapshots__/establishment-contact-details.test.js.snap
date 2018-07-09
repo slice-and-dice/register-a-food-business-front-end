@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
+.emotion-20 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  z-index: 1;
+  margin: 0;
+  zoom: 1;
+  opacity: 0;
+}
+
+.emotion-20:focus + span:before {
+  box-shadow: 0 0 0 4px #ffbf47;
+}
+
+.emotion-20:visited {
+  background: #b10e1e;
+  color: #b10e1e;
+}
+
 .emotion-24 {
   display: block;
   position: relative;
@@ -449,33 +470,6 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   .emotion-29 {
     padding-bottom: 15px;
   }
-}
-
-.emotion-20 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 38px;
-  height: 38px;
-  z-index: 1;
-  margin: 0;
-  zoom: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.emotion-20:focus + span:before {
-  box-shadow: 0 0 0 4px #ffbf47;
-}
-
-.emotion-20:visited {
-  background: #b10e1e;
-  color: #b10e1e;
-}
-
-.emotion-20 + span {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .emotion-22 {
