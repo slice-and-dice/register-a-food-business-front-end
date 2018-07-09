@@ -108,8 +108,9 @@ fi
 
 # 2. Select node version
 selectNodeVersion
-echo "Running yarn config set scripts-prepend-node-path"
-eval yarn config set scripts-prepend-node-path true
+#echo "Running yarn config set scripts-prepend-node-path"
+#eval yarn config set scripts-prepend-node-path true
+eval $NPM_CMD i -g yarn
 
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
