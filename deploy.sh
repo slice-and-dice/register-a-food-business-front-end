@@ -108,15 +108,15 @@ fi
 
 # 2. Select node version
 selectNodeVersion
-echo "Running $NPM_CMD config set scripts-prepend-node-path"
-eval $NPM_CMD config set scripts-prepend-node-path true
+echo "Running yarn config set scripts-prepend-node-path"
+eval yarn config set scripts-prepend-node-path true
 
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   echo "Running $NPM_CMD install --production"
-  eval $NPM_CMD install --production
-  exitWithMessageOnError "npm install failed"
+  eval yarn install --production
+  exitWithMessageOnError "yarn install failed"
   cd - > /dev/null
 fi
 
@@ -124,9 +124,9 @@ fi
 
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
-  echo "Building app using npm run build"
-  eval $NPM_CMD run build
-  exitWithMessageOnError "npm build failed"
+  echo "Building app using yarn build"
+  eval yarn build
+  exitWithMessageOnError "yarn build failed"
   cd - > /dev/null
 fi
 

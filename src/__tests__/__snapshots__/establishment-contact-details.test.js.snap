@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
+<<<<<<< HEAD
+=======
+.emotion-24 {
+  display: block;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 30px;
+  }
+}
+
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,12 +234,20 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
+<<<<<<< HEAD
 .emotion-45 {
+=======
+.emotion-48 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   padding-top: 30px;
   text-align: center;
 }
 
+<<<<<<< HEAD
 .emotion-44 {
+=======
+.emotion-47 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   max-width: 960px;
   margin-left: 15px;
   margin-right: 15px;
@@ -231,19 +255,31 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-44 {
+=======
+  .emotion-47 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
 @media only screen and (min-width:1020px) {
+<<<<<<< HEAD
   .emotion-44 {
+=======
+  .emotion-47 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin: 0 auto;
   }
 }
 
+<<<<<<< HEAD
 .emotion-43 {
+=======
+.emotion-46 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,7 +292,11 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-43 {
+=======
+  .emotion-46 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -264,7 +304,11 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
+<<<<<<< HEAD
 .emotion-42 {
+=======
+.emotion-45 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -272,22 +316,38 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-42 {
+=======
+  .emotion-45 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     width: 100%;
     margin: 0 15px;
   }
 
+<<<<<<< HEAD
   .emotion-42:first-child {
     margin-left: 0;
   }
 
   .emotion-42:last-child {
+=======
+  .emotion-45:first-child {
+    margin-left: 0;
+  }
+
+  .emotion-45:last-child {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-42 {
+=======
+  .emotion-45 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     width: 66.6667%;
   }
 }
@@ -428,6 +488,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   }
 }
 
+<<<<<<< HEAD
 .emotion-22 {
   display: block;
   position: relative;
@@ -438,6 +499,15 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 @media only screen and (min-width:641px) {
   .emotion-22 {
     margin-bottom: 10px;
+=======
+.emotion-29 {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-29 {
+    padding-bottom: 15px;
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   }
 }
 
@@ -454,20 +524,35 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .emotion-20:checked + span:after {
   opacity: 1;
 }
 
+=======
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
 .emotion-20:focus + span:before {
   box-shadow: 0 0 0 4px #ffbf47;
 }
 
+<<<<<<< HEAD
+=======
+.emotion-20:visited {
+  background: #b10e1e;
+  color: #b10e1e;
+}
+
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
 .emotion-20 + span {
   opacity: 1;
   pointer-events: auto;
 }
 
+<<<<<<< HEAD
 .emotion-21 {
+=======
+.emotion-22 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -477,16 +562,28 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   padding: 8px 10px 9px 12px;
   display: block;
   color: #0b0c0c;
+<<<<<<< HEAD
 }
 
 @media only screen and (min-width:641px) {
   .emotion-21 {
+=======
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-22 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
+<<<<<<< HEAD
 .emotion-21::before {
+=======
+.emotion-22::before {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   content: '';
   display: block;
   border: 2px solid #0b0c0c;
@@ -498,7 +595,11 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   left: 0;
 }
 
+<<<<<<< HEAD
 .emotion-21::after {
+=======
+.emotion-22::after {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   content: '';
   border: solid;
   border-width: 0 0 5px 5px;
@@ -516,6 +617,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   opacity: 0;
 }
 
+<<<<<<< HEAD
 .emotion-26 {
   padding-bottom: 30px;
 }
@@ -527,6 +629,19 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 .emotion-25 {
+=======
+.emotion-22.checked::after {
+  opacity: 1;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-22 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-28 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,25 +655,41 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
+<<<<<<< HEAD
 .emotion-25:after {
+=======
+.emotion-28:after {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-25 {
+=======
+  .emotion-28 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-25 {
+=======
+  .emotion-28 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-bottom: 0;
   }
 }
 
+<<<<<<< HEAD
 .emotion-23 {
+=======
+.emotion-26 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -573,19 +704,31 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-23 {
+=======
+  .emotion-26 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-23 {
+=======
+  .emotion-26 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-bottom: 0;
   }
 }
 
+<<<<<<< HEAD
 .emotion-24 {
+=======
+.emotion-27 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -601,25 +744,41 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-24 {
+=======
+  .emotion-27 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
+<<<<<<< HEAD
 .emotion-24:focus {
+=======
+.emotion-27:focus {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-24 {
+=======
+  .emotion-27 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-bottom: 0;
   }
 }
 
+<<<<<<< HEAD
 .emotion-34 {
+=======
+.emotion-37 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -633,19 +792,31 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-34 {
+=======
+  .emotion-37 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-34 {
+=======
+  .emotion-37 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-bottom: 0;
   }
 }
 
+<<<<<<< HEAD
 .emotion-41 {
+=======
+.emotion-44 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -680,34 +851,58 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .emotion-41:hover {
+=======
+.emotion-44:hover {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   background-color: #00692f;
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 .emotion-41:focus {
+=======
+.emotion-44:focus {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
+<<<<<<< HEAD
 .emotion-41:active {
+=======
+.emotion-44:active {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
+<<<<<<< HEAD
 .emotion-41:visited {
   color: #00823b;
 }
 
 .emotion-41 svg {
+=======
+.emotion-44:visited {
+  color: #00823b;
+}
+
+.emotion-44 svg {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
+<<<<<<< HEAD
   .emotion-41 {
+=======
+  .emotion-44 {
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
     margin-bottom: 20px;
   }
 }
@@ -793,6 +988,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
     className="emotion-11"
   />
   <div
+<<<<<<< HEAD
     className="emotion-45"
   >
     <div
@@ -803,6 +999,18 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
       >
         <div
           className="emotion-42"
+=======
+    className="emotion-48"
+  >
+    <div
+      className="emotion-47"
+    >
+      <div
+        className="emotion-46"
+      >
+        <div
+          className="emotion-45"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         >
           <div
             className="emotion-12 emotion-13"
@@ -844,6 +1052,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
               </div>
             </div>
           </details>
+<<<<<<< HEAD
           <label
             className="emotion-22"
           >
@@ -860,11 +1069,14 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
               Re-use operator contact details
             </span>
           </label>
+=======
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
           <form
             action="/continue/establishment-contact-details"
             method="post"
           >
             <div
+<<<<<<< HEAD
               className="emotion-26 emotion-27"
             >
               <div
@@ -876,12 +1088,43 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
                 >
                   <span
                     className="emotion-23"
+=======
+              className="emotion-29 emotion-30"
+            >
+              <label
+                className="emotion-24 emotion-25"
+              >
+                <button
+                  className="emotion-20 emotion-21"
+                  formAction="/switches/reuseOperatorContactDetails/toggle"
+                  type="submit"
+                />
+                <span
+                  className="emotion-22 emotion-23"
+                >
+                  Re-use operator contact details
+                </span>
+              </label>
+              <div
+                className="emotion-29 emotion-30"
+              >
+                <label
+                  className="emotion-28"
+                  id="establishment_primary_number"
+                >
+                  <span
+                    className="emotion-26"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                   >
                     Main phone number
                   </span>
                   <input
                     autoComplete="tel"
+<<<<<<< HEAD
                     className="emotion-24"
+=======
+                    className="emotion-27"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                     defaultValue={undefined}
                     name="establishment_primary_number"
                     type="text"
@@ -889,6 +1132,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
+<<<<<<< HEAD
                 className="emotion-26 emotion-27"
               >
                 <label
@@ -897,12 +1141,26 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
                 >
                   <span
                     className="emotion-23"
+=======
+                className="emotion-29 emotion-30"
+              >
+                <label
+                  className="emotion-28"
+                  id="establishment_secondary_number"
+                >
+                  <span
+                    className="emotion-26"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                   >
                     Secondary phone number (optional)
                   </span>
                   <input
                     autoComplete="off"
+<<<<<<< HEAD
                     className="emotion-24"
+=======
+                    className="emotion-27"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                     defaultValue={undefined}
                     name="establishment_secondary_number"
                     type="text"
@@ -910,6 +1168,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
+<<<<<<< HEAD
                 className="emotion-26 emotion-27"
               >
                 <label
@@ -918,17 +1177,35 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
                 >
                   <span
                     className="emotion-23"
+=======
+                className="emotion-29 emotion-30"
+              >
+                <label
+                  className="emotion-28"
+                  id="establishment_email"
+                >
+                  <span
+                    className="emotion-26"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                   >
                     Email address
                   </span>
                   <span
+<<<<<<< HEAD
                     className="emotion-34"
+=======
+                    className="emotion-37"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                   >
                     Your email address will be used to update you regarding policy or legal changes that could affect your food business.
                   </span>
                   <input
                     autoComplete="email"
+<<<<<<< HEAD
                     className="emotion-24"
+=======
+                    className="emotion-27"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
                     defaultValue={undefined}
                     name="establishment_email"
                     type="text"
@@ -937,7 +1214,11 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
               </div>
             </div>
             <button
+<<<<<<< HEAD
               className="emotion-41"
+=======
+              className="emotion-44"
+>>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
               disabled={false}
               id="continue-button"
               type="submit"

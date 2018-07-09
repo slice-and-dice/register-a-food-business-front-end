@@ -28,20 +28,25 @@ const EstablishmentContactDetails = props => (
       </Paragraph>
     </HiddenText>
 
-    <form method="post" action="/page2">
-      <CheckboxButton type="submit">
-        Re-use operator contact details
-      </CheckboxButton>
-    </form>
-
     <form action="/continue/establishment-contact-details" method="post">
       <ContentItem.B_30_15>
+        <CheckboxButton
+          type="submit"
+          formAction="/switches/reuseOperatorContactDetails/toggle"
+          className={
+            props.switches.reuseOperatorContactDetails ? "checked" : null
+          }
+        >
+          Re-use operator contact details
+        </CheckboxButton>
+
         <ContentItem.B_30_15>
           <InputField
             input={{
               name: "establishment_primary_number",
-              defaultValue:
-                props.cumulativeAnswers.establishment_primary_number,
+              defaultValue: props.switches.reuseOperatorContactDetails
+                ? props.cumulativeAnswers.operator_primary_number
+                : props.cumulativeAnswers.establishment_primary_number,
               autoComplete: "tel"
             }}
             id="establishment_primary_number"
@@ -58,8 +63,9 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_secondary_number",
-              defaultValue:
-                props.cumulativeAnswers.establishment_secondary_number,
+              defaultValue: props.switches.reuseOperatorContactDetails
+                ? props.cumulativeAnswers.operator_secondary_number
+                : props.cumulativeAnswers.establishment_secondary_number,
               autoComplete: "off"
             }}
             id="establishment_secondary_number"
@@ -76,7 +82,10 @@ const EstablishmentContactDetails = props => (
           <InputField
             input={{
               name: "establishment_email",
-              defaultValue: props.cumulativeAnswers.establishment_email,
+              defaultValue:
+                props.switches.reuseOperatorContactDetails === undefined
+                  ? props.cumulativeAnswers.establishment_email
+                  : props.cumulativeAnswers.operator_email,
               autoComplete: "email"
             }}
             id="establishment_email"
@@ -85,7 +94,7 @@ const EstablishmentContactDetails = props => (
             ]}
             meta={{
               touched: true,
-              error: props.validatorErrors["establishment_email"]
+              error: props.validatorErrors.establishment_email
             }}
           >
             Email address
@@ -102,5 +111,6 @@ export default SessionWrapper(EstablishmentContactDetails);
 
 EstablishmentContactDetails.propTypes = {
   cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
-  validatorErrors: PropTypes.objectOf(PropTypes.string)
+  validatorErrors: PropTypes.objectOf(PropTypes.string),
+  switches: PropTypes.objectOf(PropTypes.bool)
 };

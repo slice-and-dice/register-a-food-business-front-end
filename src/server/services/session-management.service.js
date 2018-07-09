@@ -38,4 +38,38 @@ const cleanEmptiedAnswers = (
   return cleanedAnswers;
 };
 
-module.exports = { cleanInactivePathAnswers, cleanEmptiedAnswers };
+const cleanSwitches = (cumulativeAnswers, switches) => {
+  const cleanedSwitches = Object.assign({}, switches);
+
+  if (switches) {
+    if (cleanedSwitches.reuseOperatorContactDetails !== undefined) {
+      const operatorContactDetails = [
+        cumulativeAnswers.operator_primary_number,
+        cumulativeAnswers.operator_secondary_number,
+        cumulativeAnswers.operator_email
+      ];
+
+      const establishmentContactDetails = [
+        cumulativeAnswers.establishment_primary_number,
+        cumulativeAnswers.establishment_secondary_number,
+        cumulativeAnswers.establishment_email
+      ];
+
+      const operatorEstablishmentDetailsAreDifferent =
+        JSON.stringify(operatorContactDetails) !==
+        JSON.stringify(establishmentContactDetails);
+
+      if (operatorEstablishmentDetailsAreDifferent) {
+        cleanedSwitches.reuseOperatorContactDetails = false;
+      }
+    }
+  }
+
+  return cleanedSwitches;
+};
+
+module.exports = {
+  cleanInactivePathAnswers,
+  cleanEmptiedAnswers,
+  cleanSwitches
+};

@@ -1,6 +1,7 @@
 import {
   cleanInactivePathAnswers,
-  cleanEmptiedAnswers
+  cleanEmptiedAnswers,
+  cleanSwitches
 } from "./session-management.service";
 
 const pathObject = {
@@ -65,7 +66,7 @@ const testSessionAnswers_MoreThanNeeded = Object.assign(
   answersBelongingToInactivePage
 );
 
-describe("session-management.service cleanSession()", () => {
+describe("session-management.service cleanInactivePathAnswers()", () => {
   describe("given a path/data match", () => {
     it("returns the same data object as it was passed", () => {
       const result = cleanInactivePathAnswers(
@@ -116,7 +117,9 @@ describe("session-management.service cleanSession()", () => {
       }
     });
   });
+});
 
+describe("session-management.service cleanEmptiedAnswers()", () => {
   describe("given an input field that did have an previously entered value but is now null or empty", () => {
     const someExistingAnswers = {
       declaration1: "My declaration",
@@ -139,6 +142,83 @@ describe("session-management.service cleanSession()", () => {
       expect(result).toEqual({
         declaration1: "My declaration",
         example_field_from_another_page: "example"
+      });
+    });
+  });
+});
+
+describe("session-management.service cleanSwitches()", () => {
+  describe("reuseOperatorContactDetails switch", () => {
+    describe("given that switches is undefined", () => {
+      it("returns an empty object", () => {
+        const result = cleanSwitches({ example: "answer" });
+
+        expect(result).toEqual({});
+      });
+    });
+
+    describe("given the operator contact details are the same as the establishment contact details", () => {
+      const answers = {
+        operator_primary_number: "01234567890",
+        operator_email: "email@email.com",
+        establishment_primary_number: "01234567890",
+        establishment_email: "email@email.com"
+      };
+
+      it("does not modify the switch state", () => {
+        const switchesPossibilities = [
+          {
+            reuseOperatorContactDetails: true
+          },
+          {
+            reuseOperatorContactDetails: false
+          },
+          {},
+          { anotherSwitchName: true }
+        ];
+
+        switchesPossibilities.forEach(switchesObject => {
+          const result = cleanSwitches(answers, switchesObject);
+
+          expect(result.reuseOperatorContactDetails).toEqual(
+            switchesObject.reuseOperatorContactDetails
+          );
+        });
+      });
+    });
+
+    describe("given the operator contact details are different in any way to the establishment contact details", () => {
+      const answers = {
+        operator_primary_number: "01234567890",
+        operator_email: "email@email.com",
+        establishment_primary_number: "01234567890",
+        establishment_email: "test@example.com"
+      };
+
+      describe("given switch exists", () => {
+        const switchesPossibilities = [
+          {
+            reuseOperatorContactDetails: true
+          },
+          {
+            reuseOperatorContactDetails: false
+          }
+        ];
+
+        it("turns the switch off", () => {
+          switchesPossibilities.forEach(switchesObject => {
+            const result = cleanSwitches(answers, switchesObject);
+
+            expect(result.reuseOperatorContactDetails).toBe(false);
+          });
+        });
+      });
+      describe("given the switch does not exist", () => {
+        it("does not create the switch", () => {
+          const result = cleanSwitches(answers, { anotherSwitchName: true });
+
+          expect(result.reuseOperatorContactDetails).toBe(undefined);
+        });
       });
     });
   });

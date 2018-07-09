@@ -26,5 +26,17 @@ describe("Function: backController: ", () => {
     it("Should set the redirectRoute to the response of moveAlongPath", () => {
       expect(response).toBe("/previous-page");
     });
+
+    describe("When previousAnswers is undefined", () => {
+      const response = backController("/current-page");
+
+      it("Should return a response", () => {
+        expect(response).toBeDefined();
+      });
+
+      it("Should set the redirectRoute to the response of moveAlongPath", () => {
+        expect(response).toBe("/previous-page");
+      });
+    });
   });
 });

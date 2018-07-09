@@ -17,7 +17,7 @@ const RegistrationSummary = props => (
     </Header>
 
     <ContentItem.B_30_15>
-      <SummaryTable {...props.cumulativeAnswers} />
+      <SummaryTable {...props.submissionData} />
     </ContentItem.B_30_15>
 
     <form action="/continue/registration-summary" method="post">
@@ -29,5 +29,6 @@ const RegistrationSummary = props => (
 export default SessionWrapper(RegistrationSummary);
 
 RegistrationSummary.propTypes = {
-  cumulativeAnswers: PropTypes.objectOf(PropTypes.string)
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
+  submissionData: PropTypes.object
 };

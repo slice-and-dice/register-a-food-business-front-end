@@ -1,11 +1,12 @@
 const { Router } = require("express");
-const { handle } = require("./next");
 const { info } = require("winston");
 const { QA_KEY } = require("./config");
+const { handle } = require("./next");
 
 const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
+const handleController = require("./controllers/handle.controller");
 
 module.exports = () => {
   const router = Router();
@@ -15,11 +16,15 @@ module.exports = () => {
     const response = continueController(
       `/${req.params.originator}`,
       req.session.cumulativeAnswers,
-      req.body
+      req.body,
+      req.session.switches
     );
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
+    req.session.submissionData = response.submissionData;
+    req.session.switches = response.switches;
+
     info(
       `Routes: /continue route finished with route ${response.redirectRoute}`
     );
@@ -32,7 +37,7 @@ module.exports = () => {
       `/${req.params.originator}`,
       req.session.cumulativeAnswers
     );
-    info(`Routes: /back route finished with route ${response.redirectRoute}`);
+    info(`Routes: /back route finished with route ${response}`);
     res.redirect(response);
   });
 
@@ -44,18 +49,47 @@ module.exports = () => {
   });
 
   router.get("/qa/:target", (req, res) => {
+    info(`Routes: /qa/:target route called`);
     if (req.query.QA_KEY && req.query.QA_KEY === QA_KEY) {
       const target = req.params.target;
       delete req.query.QA_KEY;
       req.session.cumulativeAnswers = req.query;
+      info(`Routes: /qa/:target route finished with route /${target}`);
       res.redirect(`/${target}`);
     } else {
+      info(`Routes: /qa/:target route finished with 403 not permitted`);
       res.status(403);
       res.send("Not permitted");
     }
   });
 
+  router.post("/switches/:switchType/:action", (req, res) => {
+    info(`Routes: /switches/:switchType/:action route called`);
+    const switchType = req.params.switchType;
+    const newState =
+      req.params.action === "on"
+        ? true
+        : req.params.action === "off"
+          ? false
+          : req.params.action === "toggle"
+            ? !req.session.switches[switchType]
+            : undefined;
+
+    if (!req.session.switches) {
+      req.session.switches = {};
+    }
+
+    req.session.switches[switchType] = newState;
+
+    info(`Routes: /switches/:switchType/:action route finished`);
+    res.redirect("back");
+  });
+
   router.get("*", (req, res) => {
+    const response = handleController(req);
+
+    req.session.submissionData = response.submissionData;
+
     handle(req, res);
   });
 
