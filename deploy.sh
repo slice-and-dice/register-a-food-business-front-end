@@ -115,7 +115,7 @@ eval yarn config set scripts-prepend-node-path true
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   echo "Running yarn"
-  yarn -v
+  eval yarn -v
   eval yarn
   exitWithMessageOnError "yarn install failed"
   cd - > /dev/null
