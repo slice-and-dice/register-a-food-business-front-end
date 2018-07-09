@@ -114,8 +114,9 @@ eval yarn config set scripts-prepend-node-path true
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
-  echo "Running $NPM_CMD install --production"
-  eval yarn install --production
+  echo "Running yarn"
+  yarn -v
+  eval yarn
   exitWithMessageOnError "yarn install failed"
   cd - > /dev/null
 fi
