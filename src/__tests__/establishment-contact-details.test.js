@@ -14,13 +14,10 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
-<<<<<<< HEAD
-=======
 const testSwitches = {
   example: true
 };
 
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
 describe("<EstablishmentContactDetails />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<EstablishmentContactDetails />);
@@ -33,10 +30,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       )
       .toJSON();
@@ -49,10 +43,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentPrimaryContact = wrapper.find(
@@ -69,10 +60,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentPrimaryContact = wrapper.find(
@@ -89,10 +77,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentPrimaryContact = wrapper.find(
@@ -110,10 +95,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentSecondaryContact = wrapper.find(
@@ -130,10 +112,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentSecondaryContact = wrapper.find(
@@ -152,10 +131,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentSecondaryContact = wrapper.find(
@@ -173,10 +149,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");
@@ -191,10 +164,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");
@@ -209,10 +179,7 @@ describe("<EstablishmentContactDetails />", () => {
         <EstablishmentContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
-<<<<<<< HEAD
-=======
           switches={testSwitches}
->>>>>>> 178fe553bec121bdf6eb908fcd660fdd4bfc4778
         />
       );
       const establishmentEmail = wrapper.find("InputField#establishment_email");
