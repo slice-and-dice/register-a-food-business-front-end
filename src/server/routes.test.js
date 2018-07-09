@@ -76,7 +76,8 @@ describe("Router: ", () => {
         redirectRoute: "/newPage",
         cumulativeAnswers: {
           new: "answers"
-        }
+        },
+        switches: { exampleSwitch: true }
       }));
 
       handler = router.post.mock.calls[0][1];
@@ -108,6 +109,7 @@ describe("Router: ", () => {
 
     it("Should update session", () => {
       expect(req.session.cumulativeAnswers).toEqual({ new: "answers" });
+      expect(req.session.switches).toEqual({ exampleSwitch: true });
     });
 
     it("Should redirect to next page", () => {

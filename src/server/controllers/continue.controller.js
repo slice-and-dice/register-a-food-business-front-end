@@ -6,14 +6,21 @@ const {
 } = require("../services/data-transform.service");
 const {
   cleanInactivePathAnswers,
-  cleanEmptiedAnswers
+  cleanEmptiedAnswers,
+  cleanSwitches
 } = require("../services/session-management.service");
 
-const continueController = (currentPage, previousAnswers, newAnswers) => {
+const continueController = (
+  currentPage,
+  previousAnswers,
+  newAnswers,
+  switches
+) => {
   const controllerResponse = {
     validatorErrors: {},
     redirectRoute: null,
-    cumulativeAnswers: {}
+    cumulativeAnswers: {},
+    switches: {}
   };
 
   const newAnswersArray = Object.values(newAnswers);
@@ -33,6 +40,11 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     {},
     cleanedPreviousAnswers,
     newAnswers
+  );
+
+  controllerResponse.switches = Object.assign(
+    {},
+    cleanSwitches(controllerResponse.cumulativeAnswers, switches)
   );
 
   controllerResponse.validatorErrors = Object.assign(
