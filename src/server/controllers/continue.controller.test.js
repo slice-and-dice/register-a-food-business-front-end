@@ -102,7 +102,7 @@ describe("Function: continueController: ", () => {
       });
 
       it("Should use cumulativePathAnswers to create the newPath", () => {
-        expect(editPath.mock.calls[0][1]).toEqual(["answer-pathAnswer"]);
+        expect(editPath.mock.calls[0][0]).toEqual(["answer-pathAnswer"]);
       });
 
       it("Should set the redirectRoute to the response of moveAlongPath", () => {
