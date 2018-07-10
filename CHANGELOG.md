@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.16.0 - 10th July 2018 (unreleased)
+
+### Added
+
+* Modified session storage to use database
+
 ## v1.15.0 - 10th July 2018 (unreleased)
 
 ### Added
