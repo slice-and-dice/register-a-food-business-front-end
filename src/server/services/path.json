@@ -51,6 +51,10 @@
     "on": true,
     "switches": {}
   },
+  "/establishment-opening-date": {
+    "on": true,
+    "switches": {}
+  },
   "/registration-summary": {
     "on": true,
     "switches": {}

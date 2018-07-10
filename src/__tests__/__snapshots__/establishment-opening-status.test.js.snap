@@ -794,7 +794,7 @@ exports[`<EstablishmentOpeningStatus /> matches the previous snapshot 1`] = `
             <span
               className="emotion-20"
             >
-              It has been trading if it has been producing or serving food since it opened or the new operator took control.
+              It has been trading if it has been producing or serving food since it opened or since the new operator took control.
             </span>
           </div>
           <form
