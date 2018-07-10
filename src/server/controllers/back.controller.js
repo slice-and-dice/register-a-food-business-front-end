@@ -1,11 +1,10 @@
 const { moveAlongPath, editPath } = require("../services/path.service");
 
-const backController = (currentPage, previousAnswers) => {
+const backController = (currentPage, previousAnswers = {}) => {
   let previousPage;
   let newPath;
-  const previousAnswersWithFallback = previousAnswers || {};
 
-  const answersArray = Object.values(previousAnswersWithFallback);
+  const answersArray = Object.values(previousAnswers);
   newPath = editPath(answersArray, currentPage);
   previousPage = moveAlongPath(newPath, currentPage, -1);
 
