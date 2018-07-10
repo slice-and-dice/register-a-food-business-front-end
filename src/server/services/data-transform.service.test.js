@@ -109,13 +109,13 @@ describe("session-management.service transformAnswersForPage()", () => {
 
       describe("Given the transform type is customerType", () => {
         describe("Given that neither supply_other nor supply_directly are part of cumulative answers", () => {
-          it("Should throw an error", () => {
-            expect(() =>
-              transformAnswersForPage(
-                customerTypeTransform,
-                testCumulativeAnswers
-              )
-            ).toThrow(Error);
+          it("Should return customer_type value of undefined", () => {
+            const result = transformAnswersForPage(
+              customerTypeTransform,
+              testCumulativeAnswers
+            );
+
+            expect(result.customer_type).toBe(undefined);
           });
         });
 

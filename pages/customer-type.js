@@ -19,13 +19,13 @@ const CustomerType = props => (
         <MultiChoice
           label=""
           meta={{
-            touched: true
+            touched: true,
+            error: props.validatorErrors.customer_type
           }}
         >
           <Checkbox
             name="supply_other"
             value="It will supply food to other businesses to process, sell or serve"
-            error={props.validatorErrors.supply_other}
             defaultChecked={props.cumulativeAnswers.supply_other}
           >
             It will supply food to other businesses to process, sell or serve
@@ -34,7 +34,6 @@ const CustomerType = props => (
           <Checkbox
             name="supply_directly"
             value="It will supply food directly to end consumer"
-            error={props.validatorErrors.supply_directly}
             defaultChecked={props.cumulativeAnswers.supply_directly}
           >
             It will supply food directly to end consumer

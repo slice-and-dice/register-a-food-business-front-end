@@ -145,13 +145,15 @@ const schema = {
   "/customer-type": {
     type: "object",
     properties: {
-      supply_directly: {
+      customer_type: {
         type: "string",
-        validation: validateRadioButtons
+        validation: validateDeclaration
       },
       supply_other: {
-        type: "string",
-        validation: validateRadioButtons
+        type: "string"
+      },
+      supply_directly: {
+        type: "string"
       }
     }
   },

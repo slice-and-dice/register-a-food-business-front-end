@@ -22,7 +22,16 @@ const continueController = (
     cumulativeAnswers: {}
   };
 
-  const newAnswersArray = Object.values(newAnswers);
+  let newAnswersWithTransform = Object.assign({}, newAnswers);
+
+  if (transformType) {
+    newAnswersWithTransform = Object.assign(
+      newAnswersWithTransform,
+      transformAnswersForPage(transformType, newAnswersWithTransform)
+    );
+  }
+
+  const newAnswersArray = Object.values(newAnswersWithTransform);
 
   let cleanedPreviousAnswers = Object.assign({}, previousAnswers);
 
@@ -38,12 +47,12 @@ const continueController = (
   controllerResponse.cumulativeAnswers = Object.assign(
     {},
     cleanedPreviousAnswers,
-    newAnswers
+    newAnswersWithTransform
   );
 
   controllerResponse.validatorErrors = Object.assign(
     {},
-    validate(currentPage, newAnswers).errors
+    validate(currentPage, newAnswersWithTransform).errors
   );
 
   if (Object.keys(controllerResponse.validatorErrors).length > 0) {
@@ -63,16 +72,6 @@ const continueController = (
     controllerResponse.cumulativeAnswers,
     newPath
   );
-
-  if (transformType) {
-    controllerResponse.cumulativeAnswers = Object.assign(
-      controllerResponse.cumulativeAnswers,
-      transformAnswersForPage(
-        transformType,
-        controllerResponse.cumulativeAnswers
-      )
-    );
-  }
 
   if (
     Object.keys(newPath).indexOf(currentPage) ===

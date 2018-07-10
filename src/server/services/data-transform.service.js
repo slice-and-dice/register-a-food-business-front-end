@@ -27,10 +27,7 @@ const transformAnswersForPage = (transformType, cumulativeAnswers) => {
     else if (cumulativeAnswers.supply_other)
       return { customer_type: "Other businesses" };
     else {
-      throw new Error(`
-        data-transform.service.js transformAnswersForPage():
-        Unhandled answer combination for customerType transform.
-      `);
+      return { customer_type: undefined };
     }
   } else {
     throw new Error(`
