@@ -1,4 +1,3 @@
-const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
@@ -62,7 +61,7 @@ const continueController = (
     controllerResponse.cumulativeAnswers
   );
 
-  const newPath = editPath(pathJSON, cumulativeAnswersArray, currentPage);
+  const newPath = editPath(cumulativeAnswersArray, currentPage);
 
   // remove any answers that are associated with an inactive page on the path
   controllerResponse.cumulativeAnswers = cleanInactivePathAnswers(

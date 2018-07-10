@@ -1,3 +1,5 @@
+const pathJSON = require("../services/path.json");
+
 module.exports.moveAlongPath = (path, currentPage, movement) => {
   const activePath = Object.keys(path).filter(entry => path[entry].on === true);
 
@@ -16,13 +18,7 @@ module.exports.moveAlongPath = (path, currentPage, movement) => {
   }
 };
 
-module.exports.editPath = (originalPath, answerArray, currentPage) => {
-  if (!originalPath || typeof originalPath !== "object") {
-    throw new Error(`
-    path.service.js editPath(): the originalPath argument is either missing or is not a valid object.
-  `);
-  }
-
+module.exports.editPath = (answerArray, currentPage) => {
   if (!answerArray || Array.isArray(answerArray) === false) {
     throw new Error(`
     path.service.js editPath(): the answerArray argument is either missing or is not an array.
@@ -35,7 +31,7 @@ module.exports.editPath = (originalPath, answerArray, currentPage) => {
   `);
   }
 
-  const newPath = JSON.parse(JSON.stringify(originalPath));
+  const newPath = JSON.parse(JSON.stringify(pathJSON));
 
   let pagesToSwitch = {};
 

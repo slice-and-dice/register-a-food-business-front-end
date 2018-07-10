@@ -39,17 +39,17 @@ describe("path.service moveAlongPath()", () => {
 describe("path.service editPath()", () => {
   describe("Given valid input", () => {
     it("does not reassign the input object", () => {
-      const result = editPath(pathJSON, [], "/index");
+      const result = editPath([], "/index");
       expect(result).not.toBe(pathJSON);
     });
 
     it("returns a valid JavaScipt object", () => {
-      const result = editPath(pathJSON, ["A1"], "/index");
+      const result = editPath(["A1"], "/index");
       expect(typeof result).toBe("object");
     });
 
     it("does not change any of the object keys", () => {
-      const result = editPath(pathJSON, ["A1"], "/index");
+      const result = editPath(["A1"], "/index");
       const getObjectKeys = json => {
         const arrayOfKeys = Object.keys(json);
         arrayOfKeys.forEach(key => {
@@ -70,65 +70,56 @@ describe("path.service editPath()", () => {
     });
 
     it("deactivates pages based on the input from the given page", () => {
-      const result1 = editPath(pathJSON, ["A1"], "/index");
+      const result1 = editPath(["A1"], "/index");
       expect(result1["/mock-page-1"]["on"]).toBe(false);
 
-      const result2 = editPath(pathJSON, ["A1", "A2"], "/index");
+      const result2 = editPath(["A1", "A2"], "/index");
       expect(result2["/mock-page-1"]["on"]).toBe(false);
       expect(result2["/mock-page-2"]["on"]).toBe(false);
 
       // activate mock-page-2 with A3 then deactivate it with A5
-      const result3 = editPath(pathJSON, ["A3", "A5", "A6"], "/index");
+      const result3 = editPath(["A3", "A5", "A6"], "/index");
       expect(result3["/mock-page-2"]["on"]).toBe(false);
       expect(result3["/mock-page-3"]["on"]).toBe(false);
     });
 
     it("re-activates pages based on the input from the given page", () => {
-      const result1 = editPath(pathJSON, ["A2", "A4"], "/index");
+      const result1 = editPath(["A2", "A4"], "/index");
       expect(result1["/mock-page-2"]["on"]).toBe(true);
     });
 
     it("prioritises switches in the order that they appear in the JSON", () => {
-      const result1 = editPath(pathJSON, ["A4", "A6"], "/index");
+      const result1 = editPath(["A4", "A6"], "/index");
       expect(result1["/mock-page-2"]["on"]).toBe(true);
 
       // same test but with array order reversed
-      const result2 = editPath(pathJSON, ["A6", "A4"], "/index");
+      const result2 = editPath(["A6", "A4"], "/index");
       expect(result2["/mock-page-2"]["on"]).toBe(true);
     });
 
     it("can activate the current page", () => {
-      const result = editPath(
-        pathJSON,
-        ["turnOnCurrentPageTest"],
-        "/mock-page-off"
-      );
+      const result = editPath(["turnOnCurrentPageTest"], "/mock-page-off");
       expect(result["/mock-page-off"]["on"]).toBe(true);
     });
 
     it("can deactivate the current page", () => {
-      const result = editPath(pathJSON, ["A6"], "/mock-page-2");
+      const result = editPath(["A6"], "/mock-page-2");
       expect(result["/mock-page-2"]["on"]).toBe(false);
     });
   });
   describe("Given invalid input", () => {
-    it("throws an error if an object (path) is not provided", () => {
-      expect(() => editPath(null, ["A4", "A6"], "/mock-page-2")).toThrow(Error);
-      expect(() => editPath(true, ["A4", "A6"], "/mock-page-2")).toThrow(Error);
-    });
-
     it("throws an error if an answer array is not provided", () => {
-      expect(() => editPath(pathJSON, null, "/mock-page-2")).toThrow(Error);
-      expect(() => editPath(pathJSON, true, "/mock-page-2")).toThrow(Error);
+      expect(() => editPath(null, "/mock-page-2")).toThrow(Error);
+      expect(() => editPath(true, "/mock-page-2")).toThrow(Error);
     });
 
     it("throws an error if a current page is not provided", () => {
-      expect(() => editPath(pathJSON, ["A4", "A6"], null)).toThrow(Error);
-      expect(() => editPath(pathJSON, ["A4", "A6"], true)).toThrow(Error);
+      expect(() => editPath(["A4", "A6"], null)).toThrow(Error);
+      expect(() => editPath(["A4", "A6"], true)).toThrow(Error);
     });
 
     it("does not change the path if a sent an answer ID that does not exist within that page in the JSON", () => {
-      const result = editPath(pathJSON, ["example-Invalid-Answer"], "/index");
+      const result = editPath(["example-Invalid-Answer"], "/index");
       expect(result).toEqual(pathJSON);
     });
   });
