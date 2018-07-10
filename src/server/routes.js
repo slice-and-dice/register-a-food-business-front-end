@@ -16,7 +16,8 @@ module.exports = () => {
     const response = continueController(
       `/${req.params.originator}`,
       req.session.cumulativeAnswers,
-      req.body
+      req.body,
+      req.query.transform
     );
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;

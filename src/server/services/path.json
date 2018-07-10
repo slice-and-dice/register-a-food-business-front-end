@@ -47,6 +47,10 @@
     "on": true,
     "switches": {}
   },
+  "/customer-type": {
+    "on": true,
+    "switches": {}
+  },
   "/registration-summary": {
     "on": true,
     "switches": {}

@@ -142,6 +142,19 @@ const schema = {
       }
     }
   },
+  "/customer-type": {
+    type: "object",
+    properties: {
+      supply_directly: {
+        type: "string",
+        validation: validateRadioButtons
+      },
+      supply_other: {
+        type: "string",
+        validation: validateRadioButtons
+      }
+    }
+  },
   "/declaration": {
     type: "object",
     properties: {

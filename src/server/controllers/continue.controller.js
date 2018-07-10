@@ -2,14 +2,20 @@ const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
-  transformAnswersForSubmit
+  transformAnswersForSubmit,
+  transformAnswersForPage
 } = require("../services/data-transform.service");
 const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers
 } = require("../services/session-management.service");
 
-const continueController = (currentPage, previousAnswers, newAnswers) => {
+const continueController = (
+  currentPage,
+  previousAnswers,
+  newAnswers,
+  transformType
+) => {
   const controllerResponse = {
     validatorErrors: {},
     redirectRoute: null,
@@ -57,6 +63,16 @@ const continueController = (currentPage, previousAnswers, newAnswers) => {
     controllerResponse.cumulativeAnswers,
     newPath
   );
+
+  if (transformType) {
+    controllerResponse.cumulativeAnswers = Object.assign(
+      controllerResponse.cumulativeAnswers,
+      transformAnswersForPage(
+        transformType,
+        controllerResponse.cumulativeAnswers
+      )
+    );
+  }
 
   if (
     Object.keys(newPath).indexOf(currentPage) ===

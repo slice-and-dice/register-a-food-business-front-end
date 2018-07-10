@@ -152,6 +152,17 @@ const FoodActivitiesTable = props => (
         <div />
       </Table.Cell>
     </Table.Row>
+
+    {props.customer_type ? (
+      <Table.Row id="activitiesCustomersRow">
+        <Table.CellHeader>Customers</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold" id="customer_type">
+            {props.customer_type}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
   </React.Fragment>
 );
 
@@ -185,5 +196,6 @@ SummaryTable.propTypes = {
   establishment_first_line: PropTypes.string,
   establishment_street: PropTypes.string,
   establishment_town: PropTypes.string,
-  establishment_postcode: PropTypes.string
+  establishment_postcode: PropTypes.string,
+  customer_type: PropTypes.string
 };

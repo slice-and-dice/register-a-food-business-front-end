@@ -16,7 +16,8 @@ const mandatoryTableRows = [
   "operatorTypeRow",
   "operatorCompanyNameRow",
   "operatorCompaniesHouseRow",
-  "operatorCharityNameRow"
+  "operatorCharityNameRow",
+  "activitiesCustomersRow"
 ];
 
 // (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
@@ -36,7 +37,8 @@ const testMandatoryAnswers = {
   operator_last_name: "Appleseed",
   operator_company_name: "Company name",
   operator_company_house_number: "AA123456",
-  operator_charity_name: "Charity name"
+  operator_charity_name: "Charity name",
+  customer_type: "End consumer and Other buisnesses"
 };
 
 // a supplementary set of all optional answer fields with example data
