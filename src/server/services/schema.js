@@ -17,6 +17,10 @@ const {
 } = require("@slice-and-dice/register-a-food-business-validation");
 
 const schema = {
+  "/index": {
+    type: "object",
+    properties: {}
+  },
   "/registration-role": {
     type: "object",
     properties: {
@@ -179,6 +183,22 @@ const schema = {
         validation: validateTown
       }
     }
+  },
+  "/customer-type": {
+    type: "object",
+    properties: {
+      supply_other: {
+        type: "string"
+      },
+      supply_directly: {
+        type: "string"
+      }
+    },
+    anyOf: [{ required: ["supply_other"] }, { required: ["supply_directly"] }]
+  },
+  "/registration-summary": {
+    type: "object",
+    properties: {}
   },
   "/declaration": {
     type: "object",

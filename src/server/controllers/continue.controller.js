@@ -1,9 +1,6 @@
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
-  transformAnswersForSubmit
-} = require("../services/data-transform.service");
-const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers,
   cleanSwitches
@@ -12,7 +9,7 @@ const {
 const continueController = (
   currentPage,
   previousAnswers,
-  newAnswers,
+  newAnswers = {},
   switches
 ) => {
   const controllerResponse = {
@@ -26,14 +23,12 @@ const continueController = (
 
   let cleanedPreviousAnswers = Object.assign({}, previousAnswers);
 
-  if (newAnswersArray.length > 0) {
-    // remove any answers that were previously given a truthy value but have since been emptied
-    cleanedPreviousAnswers = cleanEmptiedAnswers(
-      previousAnswers,
-      newAnswersArray,
-      currentPage
-    );
-  }
+  // remove any answers that were previously given a truthy value but have since been emptied
+  cleanedPreviousAnswers = cleanEmptiedAnswers(
+    previousAnswers,
+    newAnswersArray,
+    currentPage
+  );
 
   controllerResponse.cumulativeAnswers = Object.assign(
     {},

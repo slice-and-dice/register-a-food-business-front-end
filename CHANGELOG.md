@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.17.0 - 11th July 2018 (unreleased)
+
+### Added
+
+* SDB-117 Customer Type
+
 ## v1.16.0 - 10th July 2018 (unreleased)
 
 ### Added
