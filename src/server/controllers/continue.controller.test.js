@@ -64,12 +64,30 @@ describe("Function: continueController: ", () => {
       );
     });
 
-    it("Should return the same answers as input", () => {
-      expect(response.cumulativeAnswers).toEqual(exampleAnswers);
+    it("Should clean the cumulativeAnswers", () => {
+      expect(response.cumulativeAnswers).toEqual({});
     });
 
     it("Should return an empty validatorErrors object", () => {
       expect(response.validatorErrors).toEqual({});
+    });
+  });
+
+  describe("When newAnswers is undefined", () => {
+    beforeEach(() => {
+      validate.mockImplementation(() => ({
+        errors: {}
+      }));
+      response = continueController(
+        "/some-page",
+        exampleAnswers,
+        undefined,
+        exampleSwitches
+      );
+    });
+
+    it("Should do something", () => {
+      console.log(response);
     });
   });
 
