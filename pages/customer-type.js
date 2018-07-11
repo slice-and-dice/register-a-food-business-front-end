@@ -25,6 +25,7 @@ const CustomerType = props => (
         >
           <Checkbox
             name="supply_other"
+            id="customer_type_supply_other"
             value="It will supply food to other businesses to process, sell or serve"
             defaultChecked={props.cumulativeAnswers.supply_other}
           >
@@ -33,6 +34,7 @@ const CustomerType = props => (
 
           <Checkbox
             name="supply_directly"
+            id="customer_type_supply_directly"
             value="It will supply food directly to end consumer"
             defaultChecked={props.cumulativeAnswers.supply_directly}
           >
