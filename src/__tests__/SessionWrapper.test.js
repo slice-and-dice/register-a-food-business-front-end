@@ -49,12 +49,21 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.submissionData).toBe("object");
     });
 
-    it("returns 'validatorErrors', 'cumulativeAnswers', and 'submissionData even if req is undefined", () => {
+    it("returns a 'switches' object as part of the initial props", () => {
+      const WrappedComponent = SessionWrapper(ExampleComponent);
+      const initialProps = WrappedComponent.getInitialProps({
+        req: { session: {} }
+      });
+      expect(typeof initialProps.switches).toBe("object");
+    });
+
+    it("returns 'validatorErrors', 'cumulativeAnswers', 'submissionData', and 'switches' even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
       expect(typeof initialProps.validatorErrors).toBe("object");
       expect(typeof initialProps.cumulativeAnswers).toBe("object");
       expect(typeof initialProps.submissionData).toBe("object");
+      expect(typeof initialProps.switches).toBe("object");
     });
   });
 
@@ -92,6 +101,17 @@ describe("<SessionWrapper />", () => {
       });
     });
 
+    describe("given that req.session.switches is undefined", () => {
+      it("props.submissionData is an empty object", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: {} }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.switches).toEqual({});
+      });
+    });
+
     describe("given that req.session.cumulativeAnswers is defined", () => {
       it("props.cumulativeAnswers is the same as the session.cumulativeAnswers", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
@@ -125,6 +145,18 @@ describe("<SessionWrapper />", () => {
         });
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.submissionData).toBe(exampleValidatorErrors);
+      });
+    });
+
+    describe("given that req.session.switches is defined", () => {
+      it("props.submissionData is the same as the session.submissionData", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const exampleSwitches = { test: true };
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: { switches: exampleSwitches } }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.switches).toBe(exampleSwitches);
       });
     });
   });

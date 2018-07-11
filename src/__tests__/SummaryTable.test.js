@@ -17,7 +17,11 @@ const mandatoryTableRows = [
   "operatorCompanyNameRow",
   "operatorCompaniesHouseRow",
   "operatorCharityNameRow",
-  "activitiesCustomersRow"
+  "activitiesCustomersRow",
+  "operatorContactDetailsRow",
+  "operatorEmailRow",
+  "establishmentContactDetailsRow",
+  "establishmentEmailRow"
 ];
 
 // (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
@@ -38,7 +42,11 @@ const testMandatoryAnswers = {
   operator_company_name: "Company name",
   operator_company_house_number: "AA123456",
   operator_charity_name: "Charity name",
-  customer_type: "End consumer and Other buisnesses"
+  customer_type: "End consumer and Other buisnesses",
+  operator_primary_number: "1234567",
+  operator_email: "operator@email.com",
+  establishment_primary_number: "1234567",
+  establishment_email: "establishment@email.com"
 };
 
 // a supplementary set of all optional answer fields with example data
@@ -48,7 +56,9 @@ const testOptionalAnswers = {
   establishment_town: "Town",
   operator_street: "Street name",
   operator_town: "Town",
-  operator_charity_number: "123456"
+  operator_charity_number: "123456",
+  establishment_secondary_number: "7654321",
+  operator_secondary_number: "7654321"
 };
 
 // the complete set of possible answer fields with example data

@@ -121,6 +121,23 @@ const schema = {
       }
     }
   },
+  "/establishment-contact-details": {
+    type: "object",
+    properties: {
+      establishment_primary_number: {
+        type: "string",
+        validation: validatePhoneNumber
+      },
+      establishment_secondary_number: {
+        type: "string",
+        validation: validatePhoneNumberOptional
+      },
+      establishment_email: {
+        type: "string",
+        validation: validateEmail
+      }
+    }
+  },
   "/establishment-address": {
     type: "object",
     properties: {

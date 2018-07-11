@@ -18,12 +18,14 @@ jest.mock("./config", () => ({
 jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
+jest.mock("./controllers/switches.controller");
 jest.mock("./controllers/handle.controller");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
+const switchesController = require("./controllers/switches.controller");
 const handleController = require("./controllers/handle.controller");
 const routes = require("./routes");
 
@@ -58,6 +60,12 @@ describe("Router: ", () => {
       expect(router.get.mock.calls[2][0]).toBe("/qa/:target");
     });
 
+    it("should set up switches route", () => {
+      expect(router.post.mock.calls[1][0]).toBe(
+        "/switches/:switchType/:action/:originator"
+      );
+    });
+
     it("should set up generic Next route", () => {
       expect(router.get.mock.calls[3][0]).toBe("*");
     });
@@ -72,14 +80,16 @@ describe("Router: ", () => {
         redirectRoute: "/newPage",
         cumulativeAnswers: {
           new: "answers"
-        }
+        },
+        switches: { exampleSwitch: true }
       }));
 
       handler = router.post.mock.calls[0][1];
 
       req = {
         session: {
-          cumulativeAnswers: {}
+          cumulativeAnswers: {},
+          switches: {}
         },
         body: "body",
         params: {
@@ -100,12 +110,14 @@ describe("Router: ", () => {
         "/originator",
         {},
         "body",
-        "examplePage"
+        "examplePage",
+        {}
       );
     });
 
     it("Should update session", () => {
       expect(req.session.cumulativeAnswers).toEqual({ new: "answers" });
+      expect(req.session.switches).toEqual({ exampleSwitch: true });
     });
 
     it("Should redirect to next page", () => {
@@ -236,6 +248,49 @@ describe("Router: ", () => {
 
       it("Should return a 403 status", () => {
         expect(res.status).toBeCalledWith(403);
+      });
+    });
+  });
+
+  describe("POST to /switches/:switchType/:action/:originator", () => {
+    const req = {
+      session: { switches: {} },
+      params: {
+        switchType: "exampleSwitch",
+        action: "on",
+        originator: "/mock-page-1"
+      }
+    };
+    const res = {
+      redirect: jest.fn()
+    };
+
+    beforeEach(async () => {
+      switchesController.mockImplementation(() => ({
+        cumulativeAnswers: { example: "answer" },
+        newSwitchState: true
+      }));
+      handler = router.post.mock.calls[1][1];
+      handler(req, res);
+    });
+
+    it("Should redirect to the previous page", () => {
+      expect(res.redirect).toBeCalledWith("back");
+    });
+
+    it("Should update session", () => {
+      expect(req.session.cumulativeAnswers).toEqual({ example: "answer" });
+      expect(req.session.switches).toEqual({ exampleSwitch: true });
+    });
+
+    describe("Given there is no switches object", () => {
+      beforeEach(async () => {
+        req.session.switches = undefined;
+        handler(req, res);
+      });
+
+      it("Should redirect to the previous page", () => {
+        expect(res.redirect).toBeCalledWith("back");
       });
     });
   });

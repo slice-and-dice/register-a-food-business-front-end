@@ -1,4 +1,3 @@
-const pathJSON = require("../services/path.json");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
@@ -7,19 +6,22 @@ const {
 } = require("../services/data-transform.service");
 const {
   cleanInactivePathAnswers,
-  cleanEmptiedAnswers
+  cleanEmptiedAnswers,
+  cleanSwitches
 } = require("../services/session-management.service");
 
 const continueController = (
   currentPage,
   previousAnswers,
   newAnswers,
-  transformType
+  transformType,
+  switches
 ) => {
   const controllerResponse = {
     validatorErrors: {},
     redirectRoute: null,
-    cumulativeAnswers: {}
+    cumulativeAnswers: {},
+    switches: {}
   };
 
   let newAnswersWithTransform = Object.assign({}, newAnswers);
@@ -50,6 +52,11 @@ const continueController = (
     newAnswersWithTransform
   );
 
+  controllerResponse.switches = Object.assign(
+    {},
+    cleanSwitches(controllerResponse.cumulativeAnswers, switches)
+  );
+
   controllerResponse.validatorErrors = Object.assign(
     {},
     validate(currentPage, newAnswersWithTransform).errors
@@ -65,7 +72,7 @@ const continueController = (
     controllerResponse.cumulativeAnswers
   );
 
-  const newPath = editPath(pathJSON, cumulativeAnswersArray, currentPage);
+  const newPath = editPath(cumulativeAnswersArray, currentPage);
 
   // remove any answers that are associated with an inactive page on the path
   controllerResponse.cumulativeAnswers = cleanInactivePathAnswers(
