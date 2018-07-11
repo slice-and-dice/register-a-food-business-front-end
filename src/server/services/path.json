@@ -14,9 +14,15 @@
   "/operator-type": {
     "on": false,
     "switches": {
-      "A person": { "/operator-name": true },
-      "A company": { "/operator-company-details": true },
-      "A charity": { "/operator-charity-details": true }
+      "A person": { "/operator-name": true, "/operator-contact-details": true },
+      "A company": {
+        "/operator-company-details": true,
+        "/contact-representative": true
+      },
+      "A charity": {
+        "/operator-charity-details": true,
+        "/contact-representative": true
+      }
     }
   },
   "/operator-company-details": {
@@ -35,8 +41,12 @@
     "on": true,
     "switches": {}
   },
+  "/contact-representative": {
+    "on": false,
+    "switches": {}
+  },
   "/operator-contact-details": {
-    "on": true,
+    "on": false,
     "switches": {}
   },
   "/establishment-contact-details": {

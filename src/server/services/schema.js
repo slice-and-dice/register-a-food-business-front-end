@@ -86,6 +86,27 @@ const schema = {
       }
     }
   },
+  "contact-representative": {
+    type: "object",
+    properties: {
+      contact_representative_name: {
+        type: "string",
+        validation: validateName
+      },
+      contact_representative_role: {
+        type: "string",
+        validation: validateName
+      },
+      contact_representative_number: {
+        type: "string",
+        validation: validatePhoneNumberOptional
+      },
+      contact_representative_email: {
+        type: "string",
+        validation: validateEmail
+      }
+    }
+  },
   "/operator-company-details": {
     type: "object",
     properties: {

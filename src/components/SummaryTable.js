@@ -120,6 +120,24 @@ const OperatorDetailsTable = props => (
         </Table.Cell>
       </Table.Row>
     ) : null}
+
+    {props.contact_representative_email ? (
+      <Table.Row id="operatorEmailRow">
+        <Table.CellHeader>Email address</Table.CellHeader>
+        <Table.Cell>
+          <div id="contact_representative_name">{props.contact_name}</div>
+          <div className="bold" id="contact_representative_role">
+            {props.contact_role || null}
+          </div>
+          <div className="bold" id="contact_representative_name">
+            "{props.contact_number}
+          </div>
+          <div className="bold" id="contact_representative_role">
+            {props.contact_email}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
   </React.Fragment>
 );
 
