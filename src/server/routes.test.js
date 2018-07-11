@@ -104,7 +104,7 @@ describe("Router: ", () => {
       handler(req, res);
     });
 
-    it("Should call continueController with currentPage, cumulativeAnswers, body", () => {
+    it("Should call continueController with currentPage, cumulativeAnswers and body", () => {
       expect(continueController).toHaveBeenCalledWith(
         "/originator",
         {},

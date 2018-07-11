@@ -5,10 +5,26 @@ const transformAnswersForSubmit = cumulativeAnswers => {
     data.operator_type,
     data.registration_role
   );
-
   delete data.registration_role;
 
+  data.customer_type = transformCustomerType(
+    data.supply_directly,
+    data.supply_other
+  );
+
   return data;
+};
+
+const transformCustomerType = (supply_directly, supply_other) => {
+  if (supply_directly && supply_other) {
+    return "End consumer and other businesses";
+  } else if (supply_directly) {
+    return "End consumer";
+  } else if (supply_other) {
+    return "Other businesses";
+  } else {
+    return undefined;
+  }
 };
 
 const combineOperatorTypes = (operator_type, registration_role) => {
