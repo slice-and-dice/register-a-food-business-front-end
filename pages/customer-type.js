@@ -12,7 +12,7 @@ const CustomerType = props => (
   <FsaLayout>
     <form action="/continue/customer-type?transform=customerType" method="post">
       <BackButton originator="customer-type" />
-      <Header level={3}>Who will this establishment supply food to?</Header>
+      <Header level={2}>Who will this establishment supply food to?</Header>
       <Paragraph>Select all that apply</Paragraph>
 
       <ContentItem.B_45_30>
@@ -36,7 +36,7 @@ const CustomerType = props => (
             value="It will supply food directly to end consumer"
             defaultChecked={props.cumulativeAnswers.supply_directly}
           >
-            It will supply food directly to end consumer
+            It will supply food directly to end consumers
           </Checkbox>
         </MultiChoice>
       </ContentItem.B_45_30>
