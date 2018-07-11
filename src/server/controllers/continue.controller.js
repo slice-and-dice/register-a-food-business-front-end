@@ -1,10 +1,6 @@
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
-  transformAnswersForSubmit,
-  transformAnswersForPage
-} = require("../services/data-transform.service");
-const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers,
   cleanSwitches
@@ -14,7 +10,6 @@ const continueController = (
   currentPage,
   previousAnswers,
   newAnswers,
-  transformType,
   switches
 ) => {
   const controllerResponse = {
@@ -24,16 +19,7 @@ const continueController = (
     switches: {}
   };
 
-  let newAnswersWithTransform = Object.assign({}, newAnswers);
-
-  if (transformType) {
-    newAnswersWithTransform = Object.assign(
-      newAnswersWithTransform,
-      transformAnswersForPage(transformType, newAnswersWithTransform)
-    );
-  }
-
-  const newAnswersArray = Object.values(newAnswersWithTransform);
+  const newAnswersArray = Object.values(newAnswers);
 
   let cleanedPreviousAnswers = Object.assign({}, previousAnswers);
 
@@ -49,7 +35,7 @@ const continueController = (
   controllerResponse.cumulativeAnswers = Object.assign(
     {},
     cleanedPreviousAnswers,
-    newAnswersWithTransform
+    newAnswers
   );
 
   controllerResponse.switches = Object.assign(
@@ -59,7 +45,7 @@ const continueController = (
 
   controllerResponse.validatorErrors = Object.assign(
     {},
-    validate(currentPage, newAnswersWithTransform).errors
+    validate(currentPage, newAnswers).errors
   );
 
   if (Object.keys(controllerResponse.validatorErrors).length > 0) {

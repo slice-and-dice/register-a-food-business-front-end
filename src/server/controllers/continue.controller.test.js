@@ -1,7 +1,6 @@
 jest.mock("../services/path.service");
 jest.mock("../services/validation.service");
 jest.mock("../services/session-management.service");
-jest.mock("../services/data-transform.service");
 
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
@@ -136,46 +135,6 @@ describe("Function: continueController: ", () => {
       });
       it("should set redirectRoute to the currentPage", () => {
         expect(response.redirectRoute).toBe("/mock-page-1");
-      });
-    });
-
-    describe("When there is a transformType ", () => {
-      const exampleTransformType = "customerType";
-      beforeEach(() => {
-        transformAnswersForPage.mockImplementation(() => ({
-          customer_type: "example"
-        }));
-        response = continueController(
-          "/mock-page-1",
-          exampleAnswers,
-          newAnswers,
-          exampleTransformType
-        );
-      });
-      it("Should call the transformAnswersForPage() function", () => {
-        expect(transformAnswersForPage).toHaveBeenCalled();
-      });
-
-      it("Should add the object the transformAnswersForPage() function returns to cumulative answers", () => {
-        expect(response.cumulativeAnswers.customer_type).toBe("example");
-      });
-    });
-
-    describe("When there is not a transformType ", () => {
-      const exampleTransformType = undefined;
-      beforeEach(() => {
-        transformAnswersForPage.mockImplementation(() => ({
-          customer_type: "example"
-        }));
-        response = continueController(
-          "/mock-page-1",
-          exampleAnswers,
-          newAnswers,
-          exampleTransformType
-        );
-      });
-      it("Shouldn't call the transformAnswersForPage() function", () => {
-        expect(transformAnswersForPage).not.toHaveBeenCalled();
       });
     });
 

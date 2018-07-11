@@ -5,35 +5,25 @@ const transformAnswersForSubmit = cumulativeAnswers => {
     data.operator_type,
     data.registration_role
   );
-
   delete data.registration_role;
+
+  data.customer_type = transformCustomerType(
+    data.supply_directly,
+    data.supply_other
+  );
 
   return data;
 };
 
-const transformAnswersForPage = (transformType, cumulativeAnswers) => {
-  if (!cumulativeAnswers) {
-    throw new Error(`
-    data-transform.service.js transformAnswersForPage():
-    Cumulative answers was undefined.
-  `);
-  }
-
-  if (transformType === "customerType") {
-    if (cumulativeAnswers.supply_directly && cumulativeAnswers.supply_other)
-      return { customer_type: "End consumer and other businesses" };
-    else if (cumulativeAnswers.supply_directly)
-      return { customer_type: "End consumer" };
-    else if (cumulativeAnswers.supply_other)
-      return { customer_type: "Other businesses" };
-    else {
-      return { customer_type: undefined };
-    }
+const transformCustomerType = (supply_directly, supply_other) => {
+  if (supply_directly && supply_other) {
+    return "End consumer and other businesses";
+  } else if (supply_directly) {
+    return "End consumer";
+  } else if (supply_other) {
+    return "Other businesses";
   } else {
-    throw new Error(`
-    data-transform.service.js transformAnswersForPage():
-    Unhandled transformType ${transformType}.
-  `);
+    return undefined;
   }
 };
 
@@ -59,6 +49,5 @@ const combineOperatorTypes = (operator_type, registration_role) => {
 };
 
 module.exports = {
-  transformAnswersForSubmit,
-  transformAnswersForPage
+  transformAnswersForSubmit
 };

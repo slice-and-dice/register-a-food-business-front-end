@@ -673,7 +673,7 @@ exports[`<CustomerType /> matches the previous snapshot 1`] = `
           className="emotion-27"
         >
           <form
-            action="/continue/customer-type?transform=customerType"
+            action="/continue/customer-type"
             method="post"
           >
             <div

@@ -18,7 +18,6 @@ module.exports = () => {
       `/${req.params.originator}`,
       req.session.cumulativeAnswers,
       req.body,
-      req.query.transform,
       req.session.switches
     );
 

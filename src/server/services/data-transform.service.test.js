@@ -3,7 +3,7 @@ import {
   transformAnswersForPage
 } from "./data-transform.service";
 
-describe("session-management.service transformAnswersForSubmit()", () => {
+describe("data-transform.service transformAnswersForSubmit()", () => {
   const testCumulativeAnswers = {
     operator_first_name: "John",
     operator_last_name: "Appleseed",
@@ -16,6 +16,38 @@ describe("session-management.service transformAnswersForSubmit()", () => {
     it("returns an object", () => {
       const result = transformAnswersForSubmit(testCumulativeAnswers);
       expect(typeof result).toBe("object");
+    });
+    describe("Given that supply_other and supply_directly are part of cumulative answers", () => {
+      const supplyBoth = {
+        supply_other: "True",
+        supply_directly: "True"
+      };
+      it("Should return a customer_type value of 'End consumer and other businesses'", () => {
+        const result = transformAnswersForSubmit(supplyBoth);
+        expect(result.customer_type).toBe("End consumer and other businesses");
+      });
+    });
+
+    describe("Given that only supply_other is part of cumulative answers", () => {
+      const supplyDirectlyOnly = {
+        supply_other: "True"
+      };
+
+      it("Should return a customer_type value of 'Other businesses'", () => {
+        const result = transformAnswersForSubmit(supplyDirectlyOnly);
+        expect(result.customer_type).toBe("Other businesses");
+      });
+    });
+
+    describe("Given that only supply_directly is part of cumulative answers", () => {
+      const supplyDirectlyOnly = {
+        supply_directly: "True"
+      };
+
+      it("Should return a customer_type value of 'End consumer'", () => {
+        const result = transformAnswersForSubmit(supplyDirectlyOnly);
+        expect(result.customer_type).toBe("End consumer");
+      });
     });
 
     describe("given the registration_role is not Representative and operator_type is not passed", () => {
@@ -97,101 +129,6 @@ describe("session-management.service transformAnswersForSubmit()", () => {
       it("throws an error", () => {
         expect(() => transformAnswersForSubmit(data)).toThrow(Error);
       });
-    });
-  });
-});
-
-describe("session-management.service transformAnswersForPage()", () => {
-  describe("Given a tranform type and cumulative answers", () => {
-    describe("Given the transform type is handled", () => {
-      const customerTypeTransform = "customerType";
-      const testCumulativeAnswers = { example: "value" };
-
-      describe("Given the transform type is customerType", () => {
-        describe("Given that neither supply_other nor supply_directly are part of cumulative answers", () => {
-          it("Should return customer_type value of undefined", () => {
-            const result = transformAnswersForPage(
-              customerTypeTransform,
-              testCumulativeAnswers
-            );
-
-            expect(result.customer_type).toBe(undefined);
-          });
-        });
-
-        describe("Given that supply_other and supply_directly are part of cumulative answers", () => {
-          const testCumulativeAnswers = {
-            supply_directly: "True",
-            supply_other: "True"
-          };
-
-          it("Should return an object with 1 key (customer_type)", () => {
-            const result = transformAnswersForPage(
-              customerTypeTransform,
-              testCumulativeAnswers
-            );
-            const length = Object.keys(result).length;
-            expect(length).toBe(1);
-          });
-
-          it("Should return a customer_type value of 'End consumer and other businesses'", () => {
-            const result = transformAnswersForPage(
-              customerTypeTransform,
-              testCumulativeAnswers
-            );
-            expect(result.customer_type).toBe(
-              "End consumer and other businesses"
-            );
-          });
-        });
-        describe("Given that only supply_other is part of cumulative answers", () => {
-          const testCumulativeAnswers = {
-            supply_other: "True"
-          };
-          it("Should return a customer_type value of 'Other businesses'", () => {
-            const result = transformAnswersForPage(
-              customerTypeTransform,
-              testCumulativeAnswers
-            );
-            expect(result.customer_type).toBe("Other businesses");
-          });
-        });
-        describe("Given that only supply_directly is part of cumulative answers", () => {
-          const testCumulativeAnswers = {
-            supply_directly: "True"
-          };
-          it("Should return a customer_type value of 'End consumer'", () => {
-            const result = transformAnswersForPage(
-              customerTypeTransform,
-              testCumulativeAnswers
-            );
-            expect(result.customer_type).toBe("End consumer");
-          });
-        });
-      });
-    });
-
-    describe("Given the transform type is not handled", () => {
-      const badTransformTypes = ["bad type", undefined];
-      const testCumulativeAnswers = { example: "value" };
-
-      it("Should throw an error", () => {
-        badTransformTypes.forEach(badType => {
-          expect(() =>
-            transformAnswersForPage(badType, testCumulativeAnswers)
-          ).toThrow(Error);
-        });
-      });
-    });
-  });
-
-  describe("Given an undefined cumulative answers", () => {
-    const testTransformType = "customerType";
-    const badCumulativeAnswers = undefined;
-    it("Should throw an error", () => {
-      expect(() =>
-        transformAnswersForPage(testTransformType, badCumulativeAnswers)
-      ).toThrow(Error);
     });
   });
 });

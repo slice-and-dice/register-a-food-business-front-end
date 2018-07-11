@@ -94,8 +94,7 @@ describe("Router: ", () => {
         body: "body",
         params: {
           originator: "originator"
-        },
-        query: { transform: "examplePage" }
+        }
       };
 
       res = {
@@ -105,12 +104,11 @@ describe("Router: ", () => {
       handler(req, res);
     });
 
-    it("Should call continueController with currentPage, cumulativeAnswers, body and a query.transform", () => {
+    it("Should call continueController with currentPage, cumulativeAnswers and body", () => {
       expect(continueController).toHaveBeenCalledWith(
         "/originator",
         {},
         "body",
-        "examplePage",
         {}
       );
     });
