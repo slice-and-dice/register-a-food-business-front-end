@@ -103,7 +103,7 @@ const schema = {
       },
       contact_representative_number: {
         type: "string",
-        validation: validatePhoneNumberOptional
+        validation: validatePhoneNumber
       },
       contact_representative_email: {
         type: "string",
