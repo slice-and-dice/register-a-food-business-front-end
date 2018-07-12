@@ -2,7 +2,7 @@ const {
   validateDeclaration,
   validatePostCode,
   validateFirstLine,
-  validateStreet,
+  validateOptionalString,
   validateName,
   validateRadioButtons,
   validateTown,
@@ -65,7 +65,7 @@ const schema = {
       },
       operator_street: {
         type: "string",
-        validation: validateStreet
+        validation: validateOptionalString
       },
       operator_town: {
         type: "string",
@@ -99,11 +99,11 @@ const schema = {
       },
       contact_representative_role: {
         type: "string",
-        validation: validateStreet
+        validation: validateOptionalString
       },
       contact_representative_number: {
         type: "string",
-        validation: validatePhoneNumberOptional
+        validation: validatePhoneNumber
       },
       contact_representative_email: {
         type: "string",
@@ -176,7 +176,7 @@ const schema = {
       },
       establishment_street: {
         type: "string",
-        validation: validateStreet
+        validation: validateOptionalString
       },
       establishment_town: {
         type: "string",

@@ -21,7 +21,7 @@ const errorMessages = {
   contact_representative_name: "Not a valid name",
   contact_representative_role: "Not a valid role",
   contact_representative_number: "Not a valid phone number",
-  contact_representative_email: "Not a valid e-mail",
+  contact_representative_email: "Not a valid email address",
   operator_company_name: "Not a valid company name",
   operator_company_house_number: "Not a valid Companies House reference number",
   operator_charity_name: "Not a valid charity name",

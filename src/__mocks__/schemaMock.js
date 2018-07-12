@@ -2,7 +2,7 @@ const {
   validateDeclaration,
   validatePostCode,
   validateFirstLine,
-  validateStreet,
+  validateoptionalString,
   validateName,
   validateTown,
   validateEstablishmentTradingName,
@@ -73,7 +73,7 @@ const schema = {
       },
       establishment_street: {
         type: "string",
-        validation: validateStreet
+        validation: validateoptionalString
       },
       establishment_town: {
         type: "string",
