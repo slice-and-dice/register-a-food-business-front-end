@@ -12,7 +12,10 @@ const ContactRepresentative = props => (
   <FsaLayout>
     <BackButton originator="contact-representative" />
     <Header level={2}>Operator contact details</Header>
-
+    <Paragraph>
+      Please give us the details of the person at this company or charity we
+      should speak to about food hygiene and safety.
+    </Paragraph>
     <HiddenText summaryText={"What is a food business operator?"}>
       <Paragraph mb={0}>
         The food business operator is the person, charity or company who makes
