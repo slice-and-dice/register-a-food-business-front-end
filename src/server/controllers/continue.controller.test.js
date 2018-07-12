@@ -85,6 +85,9 @@ describe("Function: continueController: ", () => {
         exampleSwitches
       );
     });
+    it("Should return a response", () => {
+      expect(response).toBeDefined();
+    });
   });
 
   describe("When there are no validator errors: ", () => {

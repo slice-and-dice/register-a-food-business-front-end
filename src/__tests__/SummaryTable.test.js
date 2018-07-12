@@ -46,8 +46,11 @@ const testMandatoryAnswers = {
   customer_type: "End consumer and Other buisnesses",
   operator_primary_number: "1234567",
   operator_email: "operator@email.com",
-  establishment_primary_number: "1234567",
-  establishment_email: "establishment@email.com"
+  establishment_primary_number: "12345678",
+  establishment_email: "establishment@email.com",
+  contact_representative_email: "representative@email.com",
+  contact_representative_number: "123456789",
+  contact_representative_name: "Jill"
 };
 
 // a supplementary set of all optional answer fields with example data
@@ -57,6 +60,7 @@ const testOptionalAnswers = {
   establishment_town: "Town",
   operator_street: "Street name",
   operator_town: "Town",
+  contact_representative_role: "Coder",
   operator_charity_number: "123456",
   establishment_secondary_number: "7654321",
   operator_secondary_number: "7654321"

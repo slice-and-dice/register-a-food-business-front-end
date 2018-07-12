@@ -15,7 +15,7 @@ const StyledTableRow = styled("div")({
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
   fontWeight: 400,
-  display: "inline",
+  display: "inline-flex",
   textTransform: "none",
   fontSize: FONT_SIZE.SIZE_16,
   lineHeight: LINE_HEIGHT.SIZE_16,
@@ -147,26 +147,24 @@ const OperatorDetailsTable = props => (
 
     {props.contact_representative_email ? (
       <Table.Row id="contactRepresentativeRow">
-        <Table.CellHeader>Email address</Table.CellHeader>
+        <Table.CellHeader>Designated contact</Table.CellHeader>
         <Table.Cell>
-          <StyledTableRow
-            className="contact_representative_name"
-            id="contact_representative_name"
-          >
-            {props.contact_representative_name}{" "}
+          <StyledTableRow>
+            <div display id="contact_representative_name">
+              {props.contact_representative_name}
+            </div>
           </StyledTableRow>
-          <StyledTableRow
-            className="contact_representative_role"
-            id="contact_representative_role"
-          >
-            {props.contact_representative_role
-              ? `\u2022 ${props.contact_representative_role}`
-              : null}
+          <StyledTableRow>
+            <div id="contact_representative_role">
+              {props.contact_representative_role
+                ? `\u2000\u2022 ${props.contact_representative_role}`
+                : null}
+            </div>
           </StyledTableRow>
-          <div className="bold" id="contact_representative_name">
+          <div className="bold" id="contact_representative_number">
             {props.contact_representative_number}
           </div>
-          <div className="bold" id="contact_representative_role">
+          <div className="bold" id="contact_representative_email">
             {props.contact_representative_email}
           </div>
         </Table.Cell>
@@ -240,7 +238,7 @@ const EstablishmentDetailsTable = props => (
         <Table.CellHeader>Email address</Table.CellHeader>
         <Table.Cell>
           <div className="bold" id="establishment_email">
-            {props.establishment_email || null}
+            {props.establishment_email}
           </div>
         </Table.Cell>
       </Table.Row>
