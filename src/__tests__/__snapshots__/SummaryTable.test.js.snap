@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-56 {
+.emotion-63 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-56 {
+  .emotion-63 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -113,8 +113,30 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-33 {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #6f777b;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-33 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
 <table
-  className="emotion-56"
+  className="emotion-63"
 >
   <caption
     className="emotion-0"
@@ -361,6 +383,51 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
     </tr>
     <tr
       className="emotion-4"
+      id="contactRepresentativeRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Designated contact
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="emotion-33 emotion-34"
+        >
+          <div
+            display={true}
+            id="contact_representative_name"
+          >
+            Jill
+          </div>
+        </div>
+        <div
+          className="emotion-33 emotion-34"
+        >
+          <div
+            id="contact_representative_role"
+          >
+             • Coder
+          </div>
+        </div>
+        <div
+          className="bold"
+          id="contact_representative_number"
+        >
+          123456789
+        </div>
+        <div
+          className="bold"
+          id="contact_representative_email"
+        >
+          representative@email.com
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
     >
       <th
         className="emotion-2"
@@ -457,7 +524,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           <div
             id="establishment_primary_number"
           >
-            1234567
+            12345678
           </div>
           <div
             id="establishment_secondary_number"

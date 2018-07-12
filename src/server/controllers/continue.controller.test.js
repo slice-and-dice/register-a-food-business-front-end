@@ -85,9 +85,8 @@ describe("Function: continueController: ", () => {
         exampleSwitches
       );
     });
-
-    it("Should do something", () => {
-      console.log(response);
+    it("Should return a response", () => {
+      expect(response).toBeDefined();
     });
   });
 

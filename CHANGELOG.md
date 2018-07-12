@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.18.0 - 12th July 2018 (unreleased)
+
+### Added
+
+* SDB-241 Contact representative
+
 ## v1.17.0 - 11th July 2018 (unreleased)
 
 ### Added
