@@ -18,6 +18,10 @@ const errorMessages = {
   operator_primary_number: "Not a valid phone number",
   operator_secondary_number: "Not a valid phone number",
   operator_email: "Not a valid email address",
+  contact_representative_name: "Not a valid name",
+  contact_representative_role: "Not a valid role",
+  contact_representative_number: "Not a valid phone number",
+  contact_representative_email: "Not a valid e-mail",
   operator_company_name: "Not a valid company name",
   operator_company_house_number: "Not a valid Companies House reference number",
   operator_charity_name: "Not a valid charity name",
@@ -28,7 +32,8 @@ const errorMessages = {
   establishment_first_line: "Not a valid first line of address",
   establishment_street: "Not a valid street name",
   establishment_town: "Not a valid town name",
-  establishment_postcode: "Not a valid postcode"
+  establishment_postcode: "Not a valid postcode",
+  customer_type: "You must select an option before continuing"
 };
 
 const nonValidatedPages = ["/index", "/registration-summary"];
@@ -50,13 +55,19 @@ module.exports.validate = (page, answers) => {
 
   if (schema[page]) {
     const validatorResult = validator.validate(answers, schema[page]);
+    if (
+      validatorResult.schema.properties.supply_other &&
+      validatorResult.errors.length > 0
+    ) {
+      result.errors.customer_type = errorMessages.customer_type;
+    }
 
     // turn errors into key:value pairs
     validatorResult.errors.forEach(error => {
       const key = error.property.split(".")[1];
       result.errors[key] = error.message;
     });
-  } else if (nonValidatedPages.indexOf(page) === -1) {
+  } else {
     winston.error(`Could not find schema for page: ${[page]}`);
     result.pageNotFound = page;
   }
