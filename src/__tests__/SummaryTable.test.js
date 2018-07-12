@@ -21,7 +21,8 @@ const mandatoryTableRows = [
   "operatorContactDetailsRow",
   "operatorEmailRow",
   "establishmentContactDetailsRow",
-  "establishmentEmailRow"
+  "establishmentEmailRow",
+  "contactRepresentativeRow"
 ];
 
 // (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)

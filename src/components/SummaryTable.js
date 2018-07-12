@@ -1,6 +1,30 @@
 import React from "react";
 import { Table, Paragraph } from "govuk-react";
 import PropTypes from "prop-types";
+import * as COLOUR from "govuk-colours";
+import styled from "react-emotion";
+import {
+  FONT_SIZE,
+  LINE_HEIGHT,
+  MEDIA_QUERIES,
+  NTA_LIGHT
+} from "@govuk-react/constants";
+
+const StyledTableRow = styled("div")({
+  fontFamily: NTA_LIGHT,
+  WebkitFontSmoothing: "antialiased",
+  MozOsxFontSmoothing: "grayscale",
+  fontWeight: 400,
+  display: "inline",
+  textTransform: "none",
+  fontSize: FONT_SIZE.SIZE_16,
+  lineHeight: LINE_HEIGHT.SIZE_16,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    fontSize: FONT_SIZE.SIZE_19,
+    lineHeight: LINE_HEIGHT.SIZE_19
+  },
+  color: `${COLOUR.GREY_1}`
+});
 
 const OperatorDetailsTable = props => (
   <React.Fragment>
@@ -122,18 +146,28 @@ const OperatorDetailsTable = props => (
     ) : null}
 
     {props.contact_representative_email ? (
-      <Table.Row id="operatorEmailRow">
+      <Table.Row id="contactRepresentativeRow">
         <Table.CellHeader>Email address</Table.CellHeader>
         <Table.Cell>
-          <div id="contact_representative_name">{props.contact_name}</div>
-          <div className="bold" id="contact_representative_role">
-            {props.contact_role || null}
-          </div>
+          <StyledTableRow
+            className="contact_representative_name"
+            id="contact_representative_name"
+          >
+            {props.contact_representative_name}{" "}
+          </StyledTableRow>
+          <StyledTableRow
+            className="contact_representative_role"
+            id="contact_representative_role"
+          >
+            {props.contact_representative_role
+              ? `\u2022 ${props.contact_representative_role}`
+              : null}
+          </StyledTableRow>
           <div className="bold" id="contact_representative_name">
-            "{props.contact_number}
+            {props.contact_representative_number}
           </div>
           <div className="bold" id="contact_representative_role">
-            {props.contact_email}
+            {props.contact_representative_email}
           </div>
         </Table.Cell>
       </Table.Row>
@@ -206,7 +240,7 @@ const EstablishmentDetailsTable = props => (
         <Table.CellHeader>Email address</Table.CellHeader>
         <Table.Cell>
           <div className="bold" id="establishment_email">
-            {props.establishment_email}
+            {props.establishment_email || null}
           </div>
         </Table.Cell>
       </Table.Row>
