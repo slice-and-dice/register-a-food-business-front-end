@@ -85,10 +85,6 @@ describe("Function: continueController: ", () => {
         exampleSwitches
       );
     });
-
-    it("Should do something", () => {
-      console.log(response);
-    });
   });
 
   describe("When there are no validator errors: ", () => {

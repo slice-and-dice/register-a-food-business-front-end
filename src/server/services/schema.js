@@ -90,7 +90,7 @@ const schema = {
       }
     }
   },
-  "contact-representative": {
+  "/contact-representative": {
     type: "object",
     properties: {
       contact_representative_name: {
@@ -99,7 +99,7 @@ const schema = {
       },
       contact_representative_role: {
         type: "string",
-        validation: validateName
+        validation: validateStreet
       },
       contact_representative_number: {
         type: "string",

@@ -41,11 +41,11 @@
     "on": true,
     "switches": {}
   },
-  "/contact-representative": {
+  "/operator-contact-details": {
     "on": false,
     "switches": {}
   },
-  "/operator-contact-details": {
+  "/contact-representative": {
     "on": false,
     "switches": {}
   },

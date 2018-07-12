@@ -6,13 +6,7 @@ import {
   ContinueButton,
   CheckboxButton
 } from "../src/components";
-import {
-  Header,
-  InputField,
-  Checkbox,
-  Paragraph,
-  HiddenText
-} from "govuk-react";
+import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
 import PropTypes from "prop-types";
 
 const EstablishmentContactDetails = props => (
@@ -45,7 +39,8 @@ const EstablishmentContactDetails = props => (
             input={{
               name: "establishment_primary_number",
               defaultValue: props.switches.reuseOperatorContactDetails
-                ? props.cumulativeAnswers.operator_primary_number
+                ? props.cumulativeAnswers.operator_primary_number ||
+                  props.cumulativeAnswers.contact_representative_number
                 : props.cumulativeAnswers.establishment_primary_number,
               autoComplete: "tel"
             }}
@@ -83,7 +78,8 @@ const EstablishmentContactDetails = props => (
             input={{
               name: "establishment_email",
               defaultValue: props.switches.reuseOperatorContactDetails
-                ? props.cumulativeAnswers.operator_email
+                ? props.cumulativeAnswers.operator_email ||
+                  props.cumulativeAnswers.contact_representative_email
                 : props.cumulativeAnswers.establishment_email,
               autoComplete: "email"
             }}
