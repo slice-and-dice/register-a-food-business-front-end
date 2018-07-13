@@ -9,6 +9,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * SDB-373 Adding Beta banner to all pages
 
+## v1.18.1 - 12th July 2018 (unreleased)
+
+### Modified
+
+* Modifield validateStreet to be validateOptionalString
+
 ## v1.18.0 - 12th July 2018 (unreleased)
 
 ### Added
