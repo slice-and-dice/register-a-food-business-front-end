@@ -13,7 +13,6 @@ const ProcessedErrorSummary = props => {
     return (
       <ErrorSummary
         heading="There is a problem"
-        description="description"
         onHandleErrorClick={props.onHandleErrorClick}
         errors={errors}
       />

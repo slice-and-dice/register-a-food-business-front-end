@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
-.emotion-7 {
+.emotion-6 {
   color: #0b0c0c;
   padding: 15px;
   border: 4px solid #b10e1e;
   margin-bottom: 20px;
 }
 
-.emotion-7:focus {
+.emotion-6:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-6 {
     padding: 20px;
     border: 5px solid #b10e1e;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-7 {
+  .emotion-6 {
     margin-bottom: 30px;
   }
 }
@@ -49,59 +49,7 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-1 {
-  font-family: "nta",Arial,sans-serif;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.25;
-  margin-bottom: 10px;
-}
-
-.emotion-1 > p {
-  margin: 0;
-}
-
-.emotion-1 > p > code {
-  padding: 0.2em 0.4em;
-  margin: 0px;
-  font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 3px;
-}
-
-.emotion-1 > pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.emotion-1 > pre > code {
-  display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-1 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-6 {
+.emotion-5 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -117,19 +65,19 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-5 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-6 {
+  .emotion-5 {
     margin-bottom: 0;
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
   text-transform: none;
@@ -140,7 +88,7 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-2 {
     font-size: 16px;
     line-height: 1.25;
     margin-bottom: 5px;
@@ -148,12 +96,12 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-3 {
+  .emotion-2 {
     margin-bottom: 0;
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   color: #005ea5;
   padding: 3px;
   margin: -3px;
@@ -179,28 +127,28 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
   padding-bottom: 2px;
 }
 
-.emotion-2:focus {
+.emotion-1:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-2:visited {
+.emotion-1:visited {
   color: #2e358b;
 }
 
-.emotion-2:visited {
+.emotion-1:visited {
   color: #b10e1e;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 <div
-  className="emotion-7"
+  className="emotion-6"
   tabIndex={-1}
 >
   <h2
@@ -209,21 +157,14 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
   >
     There is a problem
   </h2>
-  <div
-    className="emotion-1"
-  >
-    <p>
-      description
-    </p>
-  </div>
   <ul
-    className="emotion-6"
+    className="emotion-5"
   >
     <li
-      className="emotion-3"
+      className="emotion-2"
     >
       <a
-        className="emotion-2"
+        className="emotion-1"
         disabled={undefined}
         onClick={[Function]}
         tabIndex={-1}
@@ -232,10 +173,10 @@ exports[`<ProcessedErrorSummary /> matches the previous snapshot 1`] = `
       </a>
     </li>
     <li
-      className="emotion-3"
+      className="emotion-2"
     >
       <a
-        className="emotion-2"
+        className="emotion-1"
         disabled={undefined}
         onClick={[Function]}
         tabIndex={-1}

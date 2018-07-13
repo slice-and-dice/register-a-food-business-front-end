@@ -310,12 +310,12 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-62 {
+.emotion-61 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-60 {
+.emotion-59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-60 {
+  .emotion-59 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-59 {
+.emotion-58 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-59 {
+  .emotion-58 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-59:first-child {
+  .emotion-58:first-child {
     margin-left: 0;
   }
 
-  .emotion-59:last-child {
+  .emotion-58:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-59 {
+  .emotion-58 {
     width: 66.6667%;
   }
 }
@@ -374,37 +374,37 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-34 {
+.emotion-33 {
   margin-bottom: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-33 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   color: #0b0c0c;
   padding: 15px;
   border: 4px solid #b10e1e;
   margin-bottom: 20px;
 }
 
-.emotion-27:focus {
+.emotion-26:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-26 {
     padding: 20px;
     border: 5px solid #b10e1e;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
+  .emotion-26 {
     margin-bottom: 30px;
   }
 }
@@ -432,59 +432,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-23 {
-  font-family: "nta",Arial,sans-serif;
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.25;
-  margin-bottom: 10px;
-}
-
-.emotion-23 > p {
-  margin: 0;
-}
-
-.emotion-23 > p > code {
-  padding: 0.2em 0.4em;
-  margin: 0px;
-  font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 3px;
-}
-
-.emotion-23 > pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f6f8fa;
-  border-radius: 3px;
-}
-
-.emotion-23 > pre > code {
-  display: inline;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  overflow: visible;
-  line-height: inherit;
-  word-wrap: normal;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-23 {
-    font-size: 19px;
-    line-height: 1.3;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-23 {
-    margin-bottom: 10px;
-  }
-}
-
-.emotion-26 {
+.emotion-25 {
   margin: 0;
   padding: 0;
   padding-left: 20px;
@@ -500,33 +448,9 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-26 {
-    margin-bottom: 0;
-  }
-}
-
-.emotion-25 {
-  font-family: "nta",Arial,sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  width: 100%;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width:641px) {
   .emotion-25 {
     font-size: 16px;
     line-height: 1.25;
-    margin-bottom: 5px;
   }
 }
 
@@ -537,6 +461,30 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 .emotion-24 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-23 {
   color: #005ea5;
   padding: 3px;
   margin: -3px;
@@ -562,27 +510,27 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   padding-bottom: 2px;
 }
 
-.emotion-24:focus {
+.emotion-23:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-24:visited {
+.emotion-23:visited {
   color: #2e358b;
 }
 
-.emotion-24:visited {
+.emotion-23:visited {
   color: #b10e1e;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-23 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
-.emotion-29 {
+.emotion-28 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -590,11 +538,11 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-29 > p {
+.emotion-28 > p {
   margin: 0;
 }
 
-.emotion-29 > p > code {
+.emotion-28 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -602,7 +550,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-29 > pre {
+.emotion-28 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -611,7 +559,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-29 > pre > code {
+.emotion-28 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -622,19 +570,19 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-28 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-28 {
     margin-bottom: 20px;
   }
 }
 
-.emotion-31 {
+.emotion-30 {
   display: inline-block;
   cursor: pointer;
   color: #005ea5;
@@ -644,23 +592,23 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   margin-bottom: 5px;
 }
 
-.emotion-31:hover {
+.emotion-30:hover {
   color: #2b8cc4;
 }
 
-.emotion-31:focus {
+.emotion-30:focus {
   outline: 4px solid #ffbf47;
   background: #ffbf47;
 }
 
-.emotion-30 {
+.emotion-29 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
-.emotion-33 {
+.emotion-32 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -670,12 +618,12 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-32 {
     margin-bottom: 0;
   }
 }
 
-.emotion-32 {
+.emotion-31 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -683,11 +631,11 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-32 > p {
+.emotion-31 > p {
   margin: 0;
 }
 
-.emotion-32 > p > code {
+.emotion-31 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -695,7 +643,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-32 > pre {
+.emotion-31 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -704,7 +652,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-32 > pre > code {
+.emotion-31 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -715,29 +663,29 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-31 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-31 {
     margin-bottom: 0;
   }
 }
 
-.emotion-38 {
+.emotion-37 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-38 {
+  .emotion-37 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-37 {
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -751,25 +699,25 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-37:after {
+.emotion-36:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-37 {
+  .emotion-36 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-37 {
+  .emotion-36 {
     margin-bottom: 0;
   }
 }
 
-.emotion-35 {
+.emotion-34 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -784,19 +732,19 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-34 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-35 {
+  .emotion-34 {
     margin-bottom: 0;
   }
 }
 
-.emotion-36 {
+.emotion-35 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -812,25 +760,25 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-36 {
+  .emotion-35 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-36:focus {
+.emotion-35:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-36 {
+  .emotion-35 {
     margin-bottom: 0;
   }
 }
 
-.emotion-51 {
+.emotion-50 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -844,19 +792,19 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-51 {
+  .emotion-50 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-51 {
+  .emotion-50 {
     margin-bottom: 0;
   }
 }
 
-.emotion-58 {
+.emotion-57 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -891,34 +839,34 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-58:hover {
+.emotion-57:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-58:focus {
+.emotion-57:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-58:active {
+.emotion-57:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-58:visited {
+.emotion-57:visited {
   color: #00823b;
 }
 
-.emotion-58 svg {
+.emotion-57 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-58 {
+  .emotion-57 {
     margin-bottom: 20px;
   }
 }
@@ -1036,16 +984,16 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-62"
+    className="emotion-61"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-60"
+        className="emotion-59"
       >
         <div
-          className="emotion-59"
+          className="emotion-58"
         >
           <div
             className="emotion-20 emotion-21"
@@ -1058,7 +1006,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
             </a>
           </div>
           <div
-            className="emotion-27"
+            className="emotion-26"
             tabIndex={-1}
           >
             <h2
@@ -1067,21 +1015,14 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
             >
               There is a problem
             </h2>
-            <div
-              className="emotion-23"
-            >
-              <p>
-                description
-              </p>
-            </div>
             <ul
-              className="emotion-26"
+              className="emotion-25"
             >
               <li
-                className="emotion-25"
+                className="emotion-24"
               >
                 <a
-                  className="emotion-24"
+                  className="emotion-23"
                   disabled={undefined}
                   onClick={[Function]}
                   tabIndex={-1}
@@ -1098,29 +1039,29 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
              Operator contact details 
           </h2>
           <div
-            className="emotion-29"
+            className="emotion-28"
           >
             <p>
               Please give us the details of the person at this company or charity we should speak to about food hygiene and safety.
             </p>
           </div>
           <details
-            className="emotion-34"
+            className="emotion-33"
           >
             <summary
-              className="emotion-31"
+              className="emotion-30"
             >
               <span
-                className="emotion-30"
+                className="emotion-29"
               >
                 What is a food business operator?
               </span>
             </summary>
             <div
-              className="emotion-33"
+              className="emotion-32"
             >
               <div
-                className="emotion-32"
+                className="emotion-31"
               >
                 <p>
                   The food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
@@ -1133,23 +1074,23 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
             method="post"
           >
             <div
-              className="emotion-38 emotion-39"
+              className="emotion-37 emotion-38"
             >
               <div
-                className="emotion-38 emotion-39"
+                className="emotion-37 emotion-38"
               >
                 <label
-                  className="emotion-37"
+                  className="emotion-36"
                   id="contact_representative_name"
                 >
                   <span
-                    className="emotion-35"
+                    className="emotion-34"
                   >
                     Name of contact
                   </span>
                   <input
                     autoComplete="off"
-                    className="emotion-36"
+                    className="emotion-35"
                     defaultValue={undefined}
                     name="contact_representative_name"
                     type="text"
@@ -1157,20 +1098,20 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-38 emotion-39"
+                className="emotion-37 emotion-38"
               >
                 <label
-                  className="emotion-37"
+                  className="emotion-36"
                   id="contact_representative_role"
                 >
                   <span
-                    className="emotion-35"
+                    className="emotion-34"
                   >
                     Role(optional)
                   </span>
                   <input
                     autoComplete="off"
-                    className="emotion-36"
+                    className="emotion-35"
                     defaultValue={undefined}
                     name="contact_representative_role"
                     type="text"
@@ -1178,20 +1119,20 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-38 emotion-39"
+                className="emotion-37 emotion-38"
               >
                 <label
-                  className="emotion-37"
+                  className="emotion-36"
                   id="contact_representative_number"
                 >
                   <span
-                    className="emotion-35"
+                    className="emotion-34"
                   >
                     Phone number
                   </span>
                   <input
                     autoComplete="tel"
-                    className="emotion-36"
+                    className="emotion-35"
                     defaultValue={undefined}
                     name="contact_representative_number"
                     type="text"
@@ -1199,25 +1140,25 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-38 emotion-39"
+                className="emotion-37 emotion-38"
               >
                 <label
-                  className="emotion-37"
+                  className="emotion-36"
                   id="contact_representative_email"
                 >
                   <span
-                    className="emotion-35"
+                    className="emotion-34"
                   >
                     Email address
                   </span>
                   <span
-                    className="emotion-51"
+                    className="emotion-50"
                   >
                     Your email address will be used to update you regarding policy or legal changes that could affect your food business.
                   </span>
                   <input
                     autoComplete="email"
-                    className="emotion-36"
+                    className="emotion-35"
                     defaultValue={undefined}
                     name="contact_representative_email"
                     type="text"
@@ -1226,7 +1167,7 @@ exports[`<ContactRepresentative /> matches the previous snapshot 1`] = `
               </div>
             </div>
             <button
-              className="emotion-58"
+              className="emotion-57"
               disabled={false}
               id="continue-button"
               type="submit"
