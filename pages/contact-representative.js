@@ -7,13 +7,7 @@ import {
   ProcessedErrorSummary,
   OnHandleErrorClick
 } from "../src/components";
-import {
-  Header,
-  InputField,
-  Paragraph,
-  HiddenText,
-  ErrorSummary
-} from "govuk-react";
+import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
 import PropTypes from "prop-types";
 
 const ContactRepresentative = props => {

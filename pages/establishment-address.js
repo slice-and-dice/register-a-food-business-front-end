@@ -4,7 +4,8 @@ import {
   ContentItem,
   BackButton,
   ContinueButton,
-  ProcessedErrorSummary
+  ProcessedErrorSummary,
+  OnHandleErrorClick
 } from "../src/components";
 import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
 import PropTypes from "prop-types";
@@ -12,7 +13,10 @@ import PropTypes from "prop-types";
 const EstablishmentAddress = props => (
   <FsaLayout>
     <BackButton originator="establishment-address" />
-    <ProcessedErrorSummary validatorErrors={props.validatorErrors} />
+    <ProcessedErrorSummary
+      validatorErrors={props.validatorErrors}
+      onHandleErrorClick={OnHandleErrorClick}
+    />
     <Header level={2}>Establishment address</Header>
 
     <HiddenText summaryText={"What is an establishment?"}>
