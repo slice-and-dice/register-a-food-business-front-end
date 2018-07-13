@@ -5,12 +5,39 @@ import {
   BackButton,
   ContinueButton
 } from "../src/components";
-import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
+import {
+  Header,
+  InputField,
+  Paragraph,
+  HiddenText,
+  ErrorSummary
+} from "govuk-react";
 import PropTypes from "prop-types";
+
+export const errors = [
+  {
+    targetName: "contact_representative_role",
+    text: "National Insurance number error"
+  },
+  {
+    targetName: "contact_representative_name",
+    text: "Description of what you saw error"
+  }
+];
+const onHandleErrorClick = targetName => {
+  document.getElementsByName(targetName)[0].scrollIntoView();
+};
 
 const ContactRepresentative = props => (
   <FsaLayout>
     <BackButton originator="contact-representative" />
+    {}
+    <ErrorSummary
+      heading="There is a problem"
+      description="description"
+      onHandleErrorClick={onHandleErrorClick}
+      errors={errors}
+    />
     <Header level={2}>Operator contact details</Header>
     <Paragraph>
       Please give us the details of the person at this company or charity we
