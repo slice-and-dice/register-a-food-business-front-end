@@ -1,16 +1,15 @@
 import OnHandleErrorClick from "../components/OnHandleErrorClick";
 
-const a = () => {
-  return [{ scrollIntoView: jest.fn() }];
-};
-document.getElementsByName = jest.fn(a);
+const scrollIntoView = jest.fn();
+document.getElementsByName = jest.fn(() => {
+  return [{ scrollIntoView: scrollIntoView }];
+});
 
-describe("On Handle Error Click function"),
-  () => {
+describe("On Handle Error Click function", () => {
+  it("Uses target name props to run the getElementsByName function", () => {
     const targetName = "test";
-    it("Uses target name props to run the getElementsByName function"),
-      () => {
-        OnHandleErrorClick(targetName);
-        expect(document.getElementsByName).toHaveBeenCalled();
-      };
-  };
+    OnHandleErrorClick(targetName);
+    expect(document.getElementsByName).toHaveBeenCalledWith(targetName);
+    expect(scrollIntoView).toHaveBeenCalled();
+  });
+});
