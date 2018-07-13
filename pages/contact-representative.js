@@ -4,7 +4,8 @@ import {
   ContentItem,
   BackButton,
   ContinueButton,
-  ProcessedErrorSummary
+  ProcessedErrorSummary,
+  OnHandleErrorClick
 } from "../src/components";
 import {
   Header,
@@ -19,7 +20,10 @@ const ContactRepresentative = props => {
   return (
     <FsaLayout>
       <BackButton originator="contact-representative" />
-      <ProcessedErrorSummary validatorErrors={props.validatorErrors} />
+      <ProcessedErrorSummary
+        validatorErrors={props.validatorErrors}
+        onHandleErrorClick={OnHandleErrorClick}
+      />
       <Header level={2}> Operator contact details </Header>
       <Paragraph>
         Please give us the details of the person at this company or charity we

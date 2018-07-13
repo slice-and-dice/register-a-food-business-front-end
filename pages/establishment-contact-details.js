@@ -4,7 +4,8 @@ import {
   ContentItem,
   BackButton,
   ContinueButton,
-  CheckboxButton
+  CheckboxButton,
+  ProcessedErrorSummary
 } from "../src/components";
 import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
 import PropTypes from "prop-types";
@@ -12,6 +13,7 @@ import PropTypes from "prop-types";
 const EstablishmentContactDetails = props => (
   <FsaLayout>
     <BackButton originator="establishment-contact-details" />
+    <ProcessedErrorSummary validatorErrors={props.validatorErrors} />
     <Header level={2}>Establishment contact details</Header>
 
     <HiddenText summaryText={"What is an establishment?"}>

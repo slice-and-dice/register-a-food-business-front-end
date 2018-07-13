@@ -7,6 +7,7 @@ import ContinueButton from "./ContinueButton";
 import HintTextSmall from "./HintTextSmall";
 import SummaryTable from "./SummaryTable";
 import CheckboxButton from "./CheckboxButton";
+import OnHandleErrorClick from "./OnHandleErrorClick";
 import ProcessedErrorSummary from "./ProcessedErrorSummary";
 export {
   SessionWrapper,
@@ -18,5 +19,6 @@ export {
   HintTextSmall,
   SummaryTable,
   CheckboxButton,
-  ProcessedErrorSummary
+  ProcessedErrorSummary,
+  OnHandleErrorClick
 };

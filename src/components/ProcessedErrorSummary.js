@@ -2,11 +2,6 @@ import { ErrorSummary } from "govuk-react";
 import PropTypes from "prop-types";
 
 const ProcessedErrorSummary = props => {
-
-  const onHandleErrorClick = targetName => {
-  document.getElementsByName(targetName)[0].scrollIntoView();
-};
-
   const errors = [];
   for (let error in props.validatorErrors) {
     errors.push({
@@ -19,14 +14,14 @@ const ProcessedErrorSummary = props => {
       <ErrorSummary
         heading="There is a problem"
         description="description"
-        onHandleErrorClick={onHandleErrorClick}
+        onHandleErrorClick={props.onHandleErrorClick}
         errors={errors}
       />
     );
   } else {
     return null;
   }
-}
+};
 export default ProcessedErrorSummary;
 
 ProcessedErrorSummary.propTypes = {

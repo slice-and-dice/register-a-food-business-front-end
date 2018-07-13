@@ -3,7 +3,8 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  ContinueButton
+  ContinueButton,
+  ProcessedErrorSummary
 } from "../src/components";
 import { Header, InputField, HiddenText } from "govuk-react";
 import PropTypes from "prop-types";
@@ -11,6 +12,7 @@ import PropTypes from "prop-types";
 const LimitedCompanyDetails = props => (
   <FsaLayout>
     <BackButton originator="operator-company-details" />
+    <ProcessedErrorSummary validatorErrors={props.validatorErrors} />
     <Header level={2}>Company details</Header>
 
     <form action="/continue/operator-company-details" method="post">
