@@ -5,9 +5,6 @@ jest.mock("../services/session-management.service");
 const { moveAlongPath, editPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
-  transformAnswersForPage
-} = require("../services/data-transform.service");
-const {
   cleanInactivePathAnswers,
   cleanEmptiedAnswers,
   cleanSwitches
@@ -44,10 +41,6 @@ describe("Function: continueController: ", () => {
   const exampleSwitches = { switch1: true, switch2: false };
 
   const exampleAnswers = {
-    answer: "answer-pathAnswer"
-  };
-
-  const newAnswers = {
     answer: "answer-pathAnswer"
   };
 
