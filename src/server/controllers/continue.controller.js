@@ -1,4 +1,4 @@
-const { moveAlongPath, editPath } = require("../services/path.service");
+const { moveAlongPath, editPath, getPath } = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
   transformAnswersForSubmit
@@ -62,7 +62,9 @@ const continueController = (
   );
 
   const newPath = editPath(cumulativeAnswersArray, currentPage);
-
+  const newGetPath = getPath(cumulativeAnswersArray, currentPage);
+  console.log(newPath);
+  console.log(newGetPath);
   // remove any answers that are associated with an inactive page on the path
   controllerResponse.cumulativeAnswers = cleanInactivePathAnswers(
     controllerResponse.cumulativeAnswers,
