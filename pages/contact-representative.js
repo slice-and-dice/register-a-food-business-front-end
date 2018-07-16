@@ -63,7 +63,7 @@ const ContactRepresentative = props => {
                 error: props.validatorErrors.contact_representative_role
               }}
             >
-              Role(optional)
+              Role (optional)
             </InputField>
           </ContentItem.B_30_15>
           <ContentItem.B_30_15>

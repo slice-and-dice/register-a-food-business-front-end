@@ -932,7 +932,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
           >
             <a
               className="emotion-3"
-              href="https://gov.uk"
+              href="/index"
               target="new"
             >
               <div
@@ -979,7 +979,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
         >
           <a
             className="emotion-7"
-            href="https://gov.uk"
+            href="/index"
             target="new"
           >
             <h3
@@ -1020,7 +1020,7 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
             your feedback
           </a>
            
-          will help is improve it
+          will help us improve it
         </div>
       </div>
     </div>

@@ -19,6 +19,11 @@ const EstablishmentAddress = props => (
     />
     <Header level={2}>Establishment address</Header>
 
+    <Paragraph>
+      If you are registering a mobile food business, please use the location
+      where it is normally stored overnight.
+    </Paragraph>
+
     <HiddenText summaryText={"What is an establishment?"}>
       <Paragraph mb={0}>
         An establishment is the location of your food business, and the food
@@ -61,7 +66,7 @@ const EstablishmentAddress = props => (
               error: props.validatorErrors["establishment_street"]
             }}
           >
-            Street
+            Street (optional)
           </InputField>
         </ContentItem.B_30_15>
 
@@ -78,7 +83,7 @@ const EstablishmentAddress = props => (
               error: props.validatorErrors["establishment_town"]
             }}
           >
-            Town or city
+            Town or city (optional)
           </InputField>
         </ContentItem.B_30_15>
 
@@ -102,10 +107,6 @@ const EstablishmentAddress = props => (
 
       <ContinueButton />
     </form>
-    <Paragraph>
-      If you are registering a mobile food business, please use the location
-      where it is normally stored overnight.
-    </Paragraph>
   </FsaLayout>
 );
 

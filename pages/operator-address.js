@@ -61,7 +61,7 @@ const OperatorAddress = props => (
               error: props.validatorErrors["operator_street"]
             }}
           >
-            Street
+            Street (optional)
           </InputField>
         </ContentItem.B_30_15>
 
@@ -78,7 +78,7 @@ const OperatorAddress = props => (
               error: props.validatorErrors["operator_town"]
             }}
           >
-            Town or city
+            Town or city (optional)
           </InputField>
         </ContentItem.B_30_15>
 

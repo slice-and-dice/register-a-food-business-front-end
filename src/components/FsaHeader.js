@@ -6,7 +6,7 @@ import PhaseBanner from "@govuk-react/phase-banner";
 import styled from "react-emotion";
 
 const AnchorTag = asTopNavAnchor("a");
-const link = "https://gov.uk";
+const link = "/index";
 const feedbackLink = "https://goo.gl/forms/WB5adxvWQdDIfVvs2";
 
 const Company = (
@@ -40,7 +40,7 @@ const FsaHeader = () => (
         <AnchorTag href={feedbackLink} target="new">
           your feedback
         </AnchorTag>{" "}
-        will help is improve it
+        will help us improve it
       </PhaseBanner>
     </HeaderMain>
   </StyledHeader>
