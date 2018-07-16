@@ -55,10 +55,6 @@ const schema = {
   "/operator-address": {
     type: "object",
     properties: {
-      operator_postcode: {
-        type: "string",
-        validation: validatePostCode
-      },
       operator_first_line: {
         type: "string",
         validation: validateFirstLine
@@ -70,6 +66,10 @@ const schema = {
       operator_town: {
         type: "string",
         validation: validateTown
+      },
+      operator_postcode: {
+        type: "string",
+        validation: validatePostCode
       }
     }
   },
