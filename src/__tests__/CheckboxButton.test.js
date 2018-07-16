@@ -1,5 +1,5 @@
 import CheckboxButton from "../components/CheckboxButton";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";

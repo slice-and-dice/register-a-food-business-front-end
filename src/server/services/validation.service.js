@@ -36,8 +36,6 @@ const errorMessages = {
   customer_type: "You must select an option before continuing"
 };
 
-const nonValidatedPages = ["/index", "/registration-summary"];
-
 const validator = new Validator();
 
 // Set validation rules on validator

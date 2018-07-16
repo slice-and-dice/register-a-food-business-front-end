@@ -310,12 +310,12 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-45 {
+.emotion-50 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-43 {
+.emotion-48 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-43 {
+  .emotion-48 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-42 {
+.emotion-47 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-42 {
+  .emotion-47 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-42:first-child {
+  .emotion-47:first-child {
     margin-left: 0;
   }
 
-  .emotion-42:last-child {
+  .emotion-47:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-42 {
+  .emotion-47 {
     width: 66.6667%;
   }
 }
@@ -371,6 +371,41 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 @media only screen and (max-width:641px) {
   .emotion-20 {
     padding-bottom: 30px;
+  }
+}
+
+.emotion-43 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-43 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-26 {
+  color: #0b0c0c;
+  padding: 15px;
+  border: 4px solid #b10e1e;
+  margin-bottom: 20px;
+}
+
+.emotion-26:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-26 {
+    padding: 20px;
+    border: 5px solid #b10e1e;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-26 {
+    margin-bottom: 30px;
   }
 }
 
@@ -397,17 +432,115 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
+.emotion-25 {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-25 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-25 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-24 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-23 {
+  color: #005ea5;
+  padding: 3px;
+  margin: -3px;
+  outline-color: transparent;
+  display: inline-block;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  margin-bottom: 5px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-transform: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.emotion-23:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-23:visited {
+  color: #2e358b;
+}
+
+.emotion-23:visited {
+  color: #b10e1e;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-23 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-32 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-27 {
+  .emotion-32 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-26 {
+.emotion-31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -421,25 +554,25 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-26:after {
+.emotion-31:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-31 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-31 {
     margin-bottom: 0;
   }
 }
 
-.emotion-23 {
+.emotion-28 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -454,19 +587,19 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-28 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-23 {
+  .emotion-28 {
     margin-bottom: 0;
   }
 }
 
-.emotion-24 {
+.emotion-29 {
   display: block;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -480,19 +613,19 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-29 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-24 {
+  .emotion-29 {
     margin-bottom: 0;
   }
 }
 
-.emotion-25 {
+.emotion-30 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -508,35 +641,25 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-30 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-25:focus {
+.emotion-30:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-30 {
     margin-bottom: 0;
   }
 }
 
-.emotion-38 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width:641px) {
-  .emotion-38 {
-    margin-bottom: 30px;
-  }
-}
-
-.emotion-36 {
+.emotion-41 {
   display: inline-block;
   cursor: pointer;
   color: #005ea5;
@@ -546,23 +669,23 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 5px;
 }
 
-.emotion-36:hover {
+.emotion-41:hover {
   color: #2b8cc4;
 }
 
-.emotion-36:focus {
+.emotion-41:focus {
   outline: 4px solid #ffbf47;
   background: #ffbf47;
 }
 
-.emotion-35 {
+.emotion-40 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
-.emotion-37 {
+.emotion-42 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -572,12 +695,12 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-37 {
+  .emotion-42 {
     margin-bottom: 0;
   }
 }
 
-.emotion-41 {
+.emotion-46 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -612,34 +735,34 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-41:hover {
+.emotion-46:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-41:focus {
+.emotion-46:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-41:active {
+.emotion-46:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-41:visited {
+.emotion-46:visited {
   color: #00823b;
 }
 
-.emotion-41 svg {
+.emotion-46 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-41 {
+  .emotion-46 {
     margin-bottom: 20px;
   }
 }
@@ -757,16 +880,16 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-45"
+    className="emotion-50"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-43"
+        className="emotion-48"
       >
         <div
-          className="emotion-42"
+          className="emotion-47"
         >
           <div
             className="emotion-20 emotion-21"
@@ -777,6 +900,33 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
             >
               Back
             </a>
+          </div>
+          <div
+            className="emotion-26"
+            tabIndex={-1}
+          >
+            <h2
+              className="emotion-22"
+              size={undefined}
+            >
+              There is a problem
+            </h2>
+            <ul
+              className="emotion-25"
+            >
+              <li
+                className="emotion-24"
+              >
+                <a
+                  className="emotion-23"
+                  disabled={undefined}
+                  onClick={[Function]}
+                  tabIndex={-1}
+                >
+                  test error
+                </a>
+              </li>
+            </ul>
           </div>
           <h2
             className="emotion-22"
@@ -789,28 +939,28 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
             method="post"
           >
             <div
-              className="emotion-27 emotion-28"
+              className="emotion-32 emotion-33"
             >
               <div
-                className="emotion-27 emotion-28"
+                className="emotion-32 emotion-33"
               >
                 <label
-                  className="emotion-26"
+                  className="emotion-31"
                   id="operator_company_name"
                 >
                   <span
-                    className="emotion-23"
+                    className="emotion-28"
                   >
                     Registered company name
                   </span>
                   <span
-                    className="emotion-24"
+                    className="emotion-29"
                   >
                     The name of the registered company that is acting as the operator of this food business.
                   </span>
                   <input
                     autoComplete="organization"
-                    className="emotion-25"
+                    className="emotion-30"
                     defaultValue={undefined}
                     name="operator_company_name"
                     type="text"
@@ -818,25 +968,25 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-27 emotion-28"
+                className="emotion-32 emotion-33"
               >
                 <label
-                  className="emotion-26"
+                  className="emotion-31"
                   id="operator_company_house_number"
                 >
                   <span
-                    className="emotion-23"
+                    className="emotion-28"
                   >
                     Companies House number
                   </span>
                   <span
-                    className="emotion-24"
+                    className="emotion-29"
                   >
                     Every registered company will have a Companies House reference number.
                   </span>
                   <input
                     autoComplete="off"
-                    className="emotion-25"
+                    className="emotion-30"
                     defaultValue={undefined}
                     name="operator_company_house_number"
                     type="text"
@@ -844,19 +994,19 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <details
-                className="emotion-38"
+                className="emotion-43"
               >
                 <summary
-                  className="emotion-36"
+                  className="emotion-41"
                 >
                   <span
-                    className="emotion-35"
+                    className="emotion-40"
                   >
                     Questions about Companies House numbers
                   </span>
                 </summary>
                 <div
-                  className="emotion-37"
+                  className="emotion-42"
                 >
                   <span>
                     Every limited company has to be registered with Companies House, and will have a company reference number. You can find your company reference number by visiting the
@@ -875,7 +1025,7 @@ exports[`<OperatorCompanyDetails /> matches the previous snapshot 1`] = `
               </details>
             </div>
             <button
-              className="emotion-41"
+              className="emotion-46"
               disabled={false}
               id="continue-button"
               type="submit"

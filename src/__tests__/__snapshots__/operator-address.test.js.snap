@@ -310,12 +310,12 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-54 {
+.emotion-59 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-52 {
+.emotion-57 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-52 {
+  .emotion-57 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-51 {
+.emotion-56 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-51 {
+  .emotion-56 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-51:first-child {
+  .emotion-56:first-child {
     margin-left: 0;
   }
 
-  .emotion-51:last-child {
+  .emotion-56:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-51 {
+  .emotion-56 {
     width: 66.6667%;
   }
 }
@@ -371,6 +371,41 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 @media only screen and (max-width:641px) {
   .emotion-20 {
     padding-bottom: 30px;
+  }
+}
+
+.emotion-32 {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-32 {
+    margin-bottom: 30px;
+  }
+}
+
+.emotion-26 {
+  color: #0b0c0c;
+  padding: 15px;
+  border: 4px solid #b10e1e;
+  margin-bottom: 20px;
+}
+
+.emotion-26:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-26 {
+    padding: 20px;
+    border: 5px solid #b10e1e;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-26 {
+    margin-bottom: 30px;
   }
 }
 
@@ -397,17 +432,105 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-27 {
-  margin-bottom: 20px;
+.emotion-25 {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-27 {
-    margin-bottom: 30px;
+  .emotion-25 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-25 {
+    margin-bottom: 0;
   }
 }
 
 .emotion-24 {
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-24 {
+    margin-bottom: 0;
+  }
+}
+
+.emotion-23 {
+  color: #005ea5;
+  padding: 3px;
+  margin: -3px;
+  outline-color: transparent;
+  display: inline-block;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  margin-bottom: 5px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  text-transform: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #b10e1e;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.emotion-23:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-23:visited {
+  color: #2e358b;
+}
+
+.emotion-23:visited {
+  color: #b10e1e;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-23 {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+}
+
+.emotion-29 {
   display: inline-block;
   cursor: pointer;
   color: #005ea5;
@@ -417,23 +540,23 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 5px;
 }
 
-.emotion-24:hover {
+.emotion-29:hover {
   color: #2b8cc4;
 }
 
-.emotion-24:focus {
+.emotion-29:focus {
   outline: 4px solid #ffbf47;
   background: #ffbf47;
 }
 
-.emotion-23 {
+.emotion-28 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
-.emotion-26 {
+.emotion-31 {
   box-sizing: border-box;
   border-left-style: solid;
   border-left-width: 5px;
@@ -443,12 +566,12 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-26 {
+  .emotion-31 {
     margin-bottom: 0;
   }
 }
 
-.emotion-25 {
+.emotion-30 {
   font-family: "nta",Arial,sans-serif;
   margin: 0;
   font-size: 16px;
@@ -456,11 +579,11 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-25 > p {
+.emotion-30 > p {
   margin: 0;
 }
 
-.emotion-25 > p > code {
+.emotion-30 > p > code {
   padding: 0.2em 0.4em;
   margin: 0px;
   font-size: 85%;
@@ -468,7 +591,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-25 > pre {
+.emotion-30 > pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -477,7 +600,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   border-radius: 3px;
 }
 
-.emotion-25 > pre > code {
+.emotion-30 > pre > code {
   display: inline;
   padding: 0px;
   margin: 0px;
@@ -488,29 +611,29 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-30 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-25 {
+  .emotion-30 {
     margin-bottom: 0;
   }
 }
 
-.emotion-31 {
+.emotion-36 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-31 {
+  .emotion-36 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-30 {
+.emotion-35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -524,25 +647,25 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-30:after {
+.emotion-35:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-35 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-30 {
+  .emotion-35 {
     margin-bottom: 0;
   }
 }
 
-.emotion-28 {
+.emotion-33 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -557,19 +680,19 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-33 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-28 {
+  .emotion-33 {
     margin-bottom: 0;
   }
 }
 
-.emotion-29 {
+.emotion-34 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -585,25 +708,25 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-34 {
     font-size: 19px;
     line-height: 1.3;
     width: 50%;
   }
 }
 
-.emotion-29:focus {
+.emotion-34:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-29 {
+  .emotion-34 {
     margin-bottom: 0;
   }
 }
 
-.emotion-50 {
+.emotion-55 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -638,34 +761,34 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-50:hover {
+.emotion-55:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-50:focus {
+.emotion-55:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-50:active {
+.emotion-55:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-50:visited {
+.emotion-55:visited {
   color: #00823b;
 }
 
-.emotion-50 svg {
+.emotion-55 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-50 {
+  .emotion-55 {
     margin-bottom: 20px;
   }
 }
@@ -783,16 +906,16 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-54"
+    className="emotion-59"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-52"
+        className="emotion-57"
       >
         <div
-          className="emotion-51"
+          className="emotion-56"
         >
           <div
             className="emotion-20 emotion-21"
@@ -804,6 +927,33 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
               Back
             </a>
           </div>
+          <div
+            className="emotion-26"
+            tabIndex={-1}
+          >
+            <h2
+              className="emotion-22"
+              size={undefined}
+            >
+              There is a problem
+            </h2>
+            <ul
+              className="emotion-25"
+            >
+              <li
+                className="emotion-24"
+              >
+                <a
+                  className="emotion-23"
+                  disabled={undefined}
+                  onClick={[Function]}
+                  tabIndex={-1}
+                >
+                  test error
+                </a>
+              </li>
+            </ul>
+          </div>
           <h2
             className="emotion-22"
             size={undefined}
@@ -811,22 +961,22 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
             What is the operator's address?
           </h2>
           <details
-            className="emotion-27"
+            className="emotion-32"
           >
             <summary
-              className="emotion-24"
+              className="emotion-29"
             >
               <span
-                className="emotion-23"
+                className="emotion-28"
               >
                 What is a food business operator?
               </span>
             </summary>
             <div
-              className="emotion-26"
+              className="emotion-31"
             >
               <div
-                className="emotion-25"
+                className="emotion-30"
               >
                 <p>
                   The food business operator is the person, charity or company who makes the decisions about the food business, what it serves and how it operates.
@@ -839,23 +989,23 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
             method="post"
           >
             <div
-              className="emotion-31 emotion-32"
+              className="emotion-36 emotion-37"
             >
               <div
-                className="emotion-31 emotion-32"
+                className="emotion-36 emotion-37"
               >
                 <label
-                  className="emotion-30"
+                  className="emotion-35"
                   id="operator_first_line"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-33"
                   >
                     First line of address
                   </span>
                   <input
                     autoComplete="address-line1"
-                    className="emotion-29"
+                    className="emotion-34"
                     defaultValue={undefined}
                     name="operator_first_line"
                     type="text"
@@ -863,20 +1013,20 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-31 emotion-32"
+                className="emotion-36 emotion-37"
               >
                 <label
-                  className="emotion-30"
+                  className="emotion-35"
                   id="operator_street"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-33"
                   >
                     Street
                   </span>
                   <input
                     autoComplete="address-line2"
-                    className="emotion-29"
+                    className="emotion-34"
                     defaultValue={undefined}
                     name="operator_street"
                     type="text"
@@ -884,20 +1034,20 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-31 emotion-32"
+                className="emotion-36 emotion-37"
               >
                 <label
-                  className="emotion-30"
+                  className="emotion-35"
                   id="operator_town"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-33"
                   >
                     Town or city
                   </span>
                   <input
                     autoComplete="locality"
-                    className="emotion-29"
+                    className="emotion-34"
                     defaultValue={undefined}
                     name="operator_town"
                     type="text"
@@ -905,20 +1055,20 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                 </label>
               </div>
               <div
-                className="emotion-31 emotion-32"
+                className="emotion-36 emotion-37"
               >
                 <label
-                  className="emotion-30"
+                  className="emotion-35"
                   id="operator_postcode"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-33"
                   >
                     Postcode
                   </span>
                   <input
                     autoComplete="postal-code"
-                    className="emotion-29"
+                    className="emotion-34"
                     defaultValue={undefined}
                     name="operator_postcode"
                     type="text"
@@ -927,7 +1077,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
               </div>
             </div>
             <button
-              className="emotion-50"
+              className="emotion-55"
               disabled={false}
               id="continue-button"
               type="submit"

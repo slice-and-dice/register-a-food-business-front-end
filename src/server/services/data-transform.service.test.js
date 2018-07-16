@@ -1,7 +1,4 @@
-import {
-  transformAnswersForSubmit,
-  transformAnswersForPage
-} from "./data-transform.service";
+import { transformAnswersForSubmit } from "./data-transform.service";
 
 describe("data-transform.service transformAnswersForSubmit()", () => {
   const testCumulativeAnswers = {
