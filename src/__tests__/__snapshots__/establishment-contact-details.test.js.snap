@@ -736,7 +736,6 @@ exports[`<EstablishmentContactDetails /> matches the previous snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
-  width: 100%;
   margin-bottom: 0;
   margin-bottom: 0;
 }
