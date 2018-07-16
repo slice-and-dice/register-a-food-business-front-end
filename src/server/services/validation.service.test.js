@@ -52,4 +52,17 @@ describe("validator.service validate()", () => {
       expect(result).toEqual({ errors: {}, pageNotFound: "" });
     });
   });
+
+  describe("When given the customer type page with invalid data", () => {
+    it("should return the customer type error", () => {
+      const result = validate("/customer-type", {
+        supply_other: undefined,
+        supply_directly: undefined
+      });
+      console.log(result);
+      expect(result.errors.customer_type).toBe(
+        "You must select an option before continuing"
+      );
+    });
+  });
 });

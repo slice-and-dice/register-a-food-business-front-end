@@ -2,7 +2,7 @@ const {
   validateDeclaration,
   validatePostCode,
   validateFirstLine,
-  validateStreet,
+  validateOptionalString,
   validateName,
   validateRadioButtons,
   validateTown,
@@ -17,6 +17,10 @@ const {
 } = require("@slice-and-dice/register-a-food-business-validation");
 
 const schema = {
+  "/index": {
+    type: "object",
+    properties: {}
+  },
   "/registration-role": {
     type: "object",
     properties: {
@@ -51,21 +55,21 @@ const schema = {
   "/operator-address": {
     type: "object",
     properties: {
-      operator_postcode: {
-        type: "string",
-        validation: validatePostCode
-      },
       operator_first_line: {
         type: "string",
         validation: validateFirstLine
       },
       operator_street: {
         type: "string",
-        validation: validateStreet
+        validation: validateOptionalString
       },
       operator_town: {
         type: "string",
         validation: validateTown
+      },
+      operator_postcode: {
+        type: "string",
+        validation: validatePostCode
       }
     }
   },
@@ -81,6 +85,27 @@ const schema = {
         validation: validatePhoneNumberOptional
       },
       operator_email: {
+        type: "string",
+        validation: validateEmail
+      }
+    }
+  },
+  "/contact-representative": {
+    type: "object",
+    properties: {
+      contact_representative_name: {
+        type: "string",
+        validation: validateName
+      },
+      contact_representative_role: {
+        type: "string",
+        validation: validateOptionalString
+      },
+      contact_representative_number: {
+        type: "string",
+        validation: validatePhoneNumber
+      },
+      contact_representative_email: {
         type: "string",
         validation: validateEmail
       }
@@ -121,6 +146,23 @@ const schema = {
       }
     }
   },
+  "/establishment-contact-details": {
+    type: "object",
+    properties: {
+      establishment_primary_number: {
+        type: "string",
+        validation: validatePhoneNumber
+      },
+      establishment_secondary_number: {
+        type: "string",
+        validation: validatePhoneNumberOptional
+      },
+      establishment_email: {
+        type: "string",
+        validation: validateEmail
+      }
+    }
+  },
   "/establishment-address": {
     type: "object",
     properties: {
@@ -134,7 +176,7 @@ const schema = {
       },
       establishment_street: {
         type: "string",
-        validation: validateStreet
+        validation: validateOptionalString
       },
       establishment_town: {
         type: "string",
@@ -150,6 +192,22 @@ const schema = {
         validation: validateRadioButtons
       }
     }
+  },
+  "/customer-type": {
+    type: "object",
+    properties: {
+      supply_other: {
+        type: "string"
+      },
+      supply_directly: {
+        type: "string"
+      }
+    },
+    anyOf: [{ required: ["supply_other"] }, { required: ["supply_directly"] }]
+  },
+  "/registration-summary": {
+    type: "object",
+    properties: {}
   },
   "/declaration": {
     type: "object",

@@ -3,7 +3,9 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  ContinueButton
+  ContinueButton,
+  ProcessedErrorSummary,
+  OnHandleErrorClick
 } from "../src/components";
 import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
 import PropTypes from "prop-types";
@@ -11,6 +13,10 @@ import PropTypes from "prop-types";
 const OperatorCharityDetails = props => (
   <FsaLayout>
     <BackButton originator="operator-charity-details" />
+    <ProcessedErrorSummary
+      validatorErrors={props.validatorErrors}
+      onHandleErrorClick={OnHandleErrorClick}
+    />
     <Header level={2}>Details of the operating charity</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>

@@ -7,7 +7,13 @@ script:
   - yarn lint
   - yarn test
 deploy:
-  provider: azure_web_apps
-  verbose: true
-  site: register-a-food-business-dev
-  on: develop
+  - provider: azure_web_apps
+    verbose: true
+    site: register-a-food-business-dev
+    on: 
+      branch: develop
+  - provider: azure_web_apps
+    verbose: true
+    site: TEST-REGISTER-A-FOOD-BUSINESS
+    on: 
+      branch: master

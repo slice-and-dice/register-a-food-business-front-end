@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.20.0 - 13th July 2018 (unreleased)
+
+### Added
+
+* SDB-252 Adding Error summary boxes to all pages
+
+## v1.19.0 - 13th July 2018 (unreleased)
+
+### Added
+
+* SDB-373 Adding Beta banner to all pages
+
+## v1.18.1 - 12th July 2018 (unreleased)
+
+### Modified
+
+* Modifield validateStreet to be validateOptionalString
+
+## v1.18.0 - 12th July 2018 (unreleased)
+
+### Added
+
+* SDB-241 Contact representative
+
+## v1.17.0 - 11th July 2018 (unreleased)
+
+### Added
+
+* SDB-117 Customer Type
+
+## v1.16.0 - 10th July 2018 (unreleased)
+
+### Added
+
+* Modified session storage to use database
+
+## v1.15.0 - 10th July 2018 (unreleased)
+
+### Added
+
+* SDB-113 Added establishment contact details page with 'reuse operator contact details' button
+* Add switches route and controller
+
 ## v1.14.4 - 4th July 2018 (unreleased)
 
 ### Modified

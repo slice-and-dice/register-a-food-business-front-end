@@ -15,6 +15,8 @@ const SessionWrapper = Page => {
         req && req.session && req.session.submissionData
           ? req.session.submissionData
           : {},
+      switches:
+        req && req.session && req.session.switches ? req.session.switches : {},
       referenceNumber: "34672462"
     };
   };

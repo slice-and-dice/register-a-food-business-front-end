@@ -6,7 +6,9 @@ import BackButton from "./BackButton";
 import ContinueButton from "./ContinueButton";
 import HintTextSmall from "./HintTextSmall";
 import SummaryTable from "./SummaryTable";
-
+import CheckboxButton from "./CheckboxButton";
+import OnHandleErrorClick from "./OnHandleErrorClick";
+import ProcessedErrorSummary from "./ProcessedErrorSummary";
 export {
   SessionWrapper,
   FsaHeader,
@@ -15,5 +17,8 @@ export {
   BackButton,
   ContinueButton,
   HintTextSmall,
-  SummaryTable
+  SummaryTable,
+  CheckboxButton,
+  ProcessedErrorSummary,
+  OnHandleErrorClick
 };

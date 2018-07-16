@@ -3,7 +3,9 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  ContinueButton
+  ContinueButton,
+  ProcessedErrorSummary,
+  OnHandleErrorClick
 } from "../src/components";
 import { Header, InputField, Paragraph, HiddenText } from "govuk-react";
 import PropTypes from "prop-types";
@@ -11,6 +13,10 @@ import PropTypes from "prop-types";
 const OperatorContactDetails = props => (
   <FsaLayout>
     <BackButton originator="operator-contact-details" />
+    <ProcessedErrorSummary
+      validatorErrors={props.validatorErrors}
+      onHandleErrorClick={OnHandleErrorClick}
+    />
     <Header level={2}>Operator contact details</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>
@@ -33,7 +39,7 @@ const OperatorContactDetails = props => (
             id="operator_primary_number"
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_primary_number"]
+              error: props.validatorErrors.operator_primary_number
             }}
           >
             Primary phone number
@@ -50,7 +56,7 @@ const OperatorContactDetails = props => (
             id="operator_secondary_number"
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_secondary_number"]
+              error: props.validatorErrors.operator_secondary_number
             }}
           >
             Secondary phone number (optional)
@@ -70,7 +76,7 @@ const OperatorContactDetails = props => (
             ]}
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_email"]
+              error: props.validatorErrors.operator_email
             }}
           >
             Email address

@@ -14,9 +14,15 @@
   "/operator-type": {
     "on": false,
     "switches": {
-      "A person": { "/operator-name": true },
-      "A company": { "/operator-company-details": true },
-      "A charity": { "/operator-charity-details": true }
+      "A person": { "/operator-name": true, "/operator-contact-details": true },
+      "A company": {
+        "/operator-company-details": true,
+        "/contact-representative": true
+      },
+      "A charity": {
+        "/operator-charity-details": true,
+        "/contact-representative": true
+      }
     }
   },
   "/operator-company-details": {
@@ -36,6 +42,14 @@
     "switches": {}
   },
   "/operator-contact-details": {
+    "on": false,
+    "switches": {}
+  },
+  "/contact-representative": {
+    "on": false,
+    "switches": {}
+  },
+  "/establishment-contact-details": {
     "on": true,
     "switches": {}
   },
@@ -52,6 +66,10 @@
     "switches": {}
   },
   "/establishment-opening-date": {
+    "on": true,
+    "switches": {}
+  },
+  "/customer-type": {
     "on": true,
     "switches": {}
   },

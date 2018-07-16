@@ -1,6 +1,6 @@
 import { transformAnswersForSubmit } from "./data-transform.service";
 
-describe("session-management.service transformAnswersForSubmit()", () => {
+describe("data-transform.service transformAnswersForSubmit()", () => {
   const testCumulativeAnswers = {
     operator_first_name: "John",
     operator_last_name: "Appleseed",
@@ -13,6 +13,38 @@ describe("session-management.service transformAnswersForSubmit()", () => {
     it("returns an object", () => {
       const result = transformAnswersForSubmit(testCumulativeAnswers);
       expect(typeof result).toBe("object");
+    });
+    describe("Given that supply_other and supply_directly are part of cumulative answers", () => {
+      const supplyBoth = {
+        supply_other: "True",
+        supply_directly: "True"
+      };
+      it("Should return a customer_type value of 'End consumer and other businesses'", () => {
+        const result = transformAnswersForSubmit(supplyBoth);
+        expect(result.customer_type).toBe("End consumer and other businesses");
+      });
+    });
+
+    describe("Given that only supply_other is part of cumulative answers", () => {
+      const supplyDirectlyOnly = {
+        supply_other: "True"
+      };
+
+      it("Should return a customer_type value of 'Other businesses'", () => {
+        const result = transformAnswersForSubmit(supplyDirectlyOnly);
+        expect(result.customer_type).toBe("Other businesses");
+      });
+    });
+
+    describe("Given that only supply_directly is part of cumulative answers", () => {
+      const supplyDirectlyOnly = {
+        supply_directly: "True"
+      };
+
+      it("Should return a customer_type value of 'End consumer'", () => {
+        const result = transformAnswersForSubmit(supplyDirectlyOnly);
+        expect(result.customer_type).toBe("End consumer");
+      });
     });
 
     describe("given the registration_role is not Representative and operator_type is not passed", () => {
