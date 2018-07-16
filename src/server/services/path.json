@@ -6,8 +6,8 @@
   "/registration-role": {
     "on": true,
     "switches": {
-      "Sole trader": { "/operator-name": true },
-      "Partnership": { "/operator-name": true },
+      "Sole trader": { "/operator-name": true, "/operator-contact-details": true },
+      "Partnership": { "/operator-name": true, "/operator-contact-details": true },
       "Representative": { "/operator-type": true }
     }
   },
