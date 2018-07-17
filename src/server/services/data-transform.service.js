@@ -12,6 +12,12 @@ const transformAnswersForSubmit = cumulativeAnswers => {
     data.supply_other
   );
 
+  data.establishment_opening_date = combineDate(
+    data.day,
+    data.month,
+    data.year
+  );
+
   return data;
 };
 
@@ -48,6 +54,9 @@ const combineOperatorTypes = (operator_type, registration_role) => {
   return newOperatorType;
 };
 
+const combineDate = (day, month, year) => `${year}-${month}-${day}`;
+
 module.exports = {
-  transformAnswersForSubmit
+  transformAnswersForSubmit,
+  combineDate
 };
