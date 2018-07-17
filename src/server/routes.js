@@ -92,9 +92,8 @@ module.exports = () => {
 
   router.get("*", (req, res) => {
     const response = handleController(req);
-    if (response.submissionData) {
-      req.session.submissionData = response.submissionData;
-    }
+
+    req.session.submissionData = response.submissionData;
 
     handle(req, res);
   });

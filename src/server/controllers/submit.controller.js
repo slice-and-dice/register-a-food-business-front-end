@@ -1,5 +1,7 @@
 const { submit } = require("../services/submit.service");
-const { transformAnswersForSubmit } = require("../services/data-transform.service");
+const {
+  transformAnswersForSubmit
+} = require("../services/data-transform.service");
 
 const submitController = async submissionData => {
   const controllerResponse = {
