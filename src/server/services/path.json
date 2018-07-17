@@ -6,8 +6,14 @@
   "/registration-role": {
     "on": true,
     "switches": {
-      "Sole trader": { "/operator-name": true },
-      "Partnership": { "/operator-name": true },
+      "Sole trader": {
+        "/operator-name": true,
+        "/operator-contact-details": true
+      },
+      "Partnership": {
+        "/operator-name": true,
+        "/operator-contact-details": true
+      },
       "Representative": { "/operator-type": true }
     }
   },
@@ -59,6 +65,25 @@
   },
   "/establishment-address": {
     "on": true,
+    "switches": {}
+  },
+  "/establishment-opening-status": {
+    "on": true,
+    "switches": {
+      "Establishment is already trading": {
+        "/establishment-opening-date-retroactive": true
+      },
+      "Establishment is not trading yet": {
+        "/establishment-opening-date-proactive": true
+      }
+    }
+  },
+  "/establishment-opening-date-proactive": {
+    "on": false,
+    "switches": {}
+  },
+  "/establishment-opening-date-retroactive": {
+    "on": false,
     "switches": {}
   },
   "/customer-type": {

@@ -22,7 +22,8 @@ const mandatoryTableRows = [
   "operatorEmailRow",
   "establishmentContactDetailsRow",
   "establishmentEmailRow",
-  "contactRepresentativeRow"
+  "contactRepresentativeRow",
+  "establishmentOpeningDateRow"
 ];
 
 // (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
@@ -50,7 +51,8 @@ const testMandatoryAnswers = {
   establishment_email: "establishment@email.com",
   contact_representative_email: "representative@email.com",
   contact_representative_number: "123456789",
-  contact_representative_name: "Jill"
+  contact_representative_name: "Jill",
+  establishment_opening_date: "2018-12-06"
 };
 
 // a supplementary set of all optional answer fields with example data

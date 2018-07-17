@@ -1,4 +1,6 @@
-import { validate } from "./validation.service";
+const { validate } = require("./validation.service");
+const { combineDate } = require("./data-transform.service");
+jest.mock("./data-transform.service");
 
 describe("validator.service validate()", () => {
   describe("Given a correctly formatted input", () => {
@@ -59,10 +61,34 @@ describe("validator.service validate()", () => {
         supply_other: undefined,
         supply_directly: undefined
       });
-      console.log(result);
+
       expect(result.errors.customer_type).toBe(
         "You must select an option before continuing"
       );
+    });
+  });
+
+  describe("When given an opening date page ", () => {
+    describe("proactive to validate", () => {
+      it("should combine the date before validating", () => {
+        validate("/establishment-opening-date-proactive", {
+          day: "29",
+          month: "03",
+          year: "2018"
+        });
+        expect(combineDate).toHaveBeenCalled();
+      });
+    });
+
+    describe("retroactive to validate", () => {
+      it("should combine the date before validating", () => {
+        validate("/establishment-opening-date-retroactive", {
+          day: "29",
+          month: "03",
+          year: "2018"
+        });
+        expect(combineDate).toHaveBeenCalled();
+      });
     });
   });
 });

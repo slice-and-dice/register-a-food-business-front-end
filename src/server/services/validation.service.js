@@ -1,6 +1,7 @@
 const { Validator } = require("jsonschema");
 const winston = require("winston");
 const schema = require("./schema");
+const { combineDate } = require("./data-transform.service");
 
 const errorMessages = {
   declaration1: "You must tick all the declarations before continuing",
@@ -33,6 +34,9 @@ const errorMessages = {
   establishment_street: "Not a valid street name",
   establishment_town: "Not a valid town name",
   establishment_postcode: "Not a valid postcode",
+  establishment_opening_status:
+    "You must select a trading status before continuing",
+  establishment_opening_date: "Not a valid opening date",
   customer_type: "You must select an option before continuing"
 };
 
@@ -50,9 +54,21 @@ module.exports.validate = (page, answers) => {
     errors: {},
     pageNotFound: ""
   };
+  const answersToValidate = Object.assign({}, answers);
 
   if (schema[page]) {
-    const validatorResult = validator.validate(answers, schema[page]);
+    if (
+      page === "/establishment-opening-date-proactive" ||
+      page === "/establishment-opening-date-retroactive"
+    ) {
+      answersToValidate.establishment_opening_date = combineDate(
+        answers.day,
+        answers.month,
+        answers.year
+      );
+    }
+
+    const validatorResult = validator.validate(answersToValidate, schema[page]);
     if (
       validatorResult.schema.properties.supply_other &&
       validatorResult.errors.length > 0

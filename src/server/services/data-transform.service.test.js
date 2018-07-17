@@ -1,4 +1,7 @@
-import { transformAnswersForSubmit } from "./data-transform.service";
+import {
+  transformAnswersForSubmit,
+  combineDate
+} from "./data-transform.service";
 
 describe("data-transform.service transformAnswersForSubmit()", () => {
   const testCumulativeAnswers = {
@@ -127,5 +130,20 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
         expect(() => transformAnswersForSubmit(data)).toThrow(Error);
       });
     });
+  });
+});
+
+describe("data-transform.service combineDate()", () => {
+  it("combines inputs into single string", () => {
+    // Arrange
+    const day = "29";
+    const month = "03";
+    const year = "1993";
+
+    // Act
+    const result = combineDate(day, month, year);
+
+    // Assert
+    expect(result).toBe("1993-03-29");
   });
 });

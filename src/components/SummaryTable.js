@@ -2,6 +2,7 @@ import React from "react";
 import { Table, Paragraph } from "govuk-react";
 import PropTypes from "prop-types";
 import * as COLOUR from "govuk-colours";
+import moment from "moment";
 import styled from "react-emotion";
 import {
   FONT_SIZE,
@@ -239,6 +240,16 @@ const EstablishmentDetailsTable = props => (
         <Table.Cell>
           <div className="bold" id="establishment_email">
             {props.establishment_email}
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+    {props.establishment_opening_date ? (
+      <Table.Row id="establishmentOpeningDateRow">
+        <Table.CellHeader>Opening date</Table.CellHeader>
+        <Table.Cell>
+          <div className="bold" id="establishment_opening_date">
+            {moment(props.establishment_opening_date).format("DD MMM YYYY")}
           </div>
         </Table.Cell>
       </Table.Row>
