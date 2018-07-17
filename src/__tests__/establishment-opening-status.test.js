@@ -32,7 +32,7 @@ describe("<EstablishmentOpeningStatus />", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("renders 3 radio buttons with correct error props and default values", () => {
+  it("renders 2 radio buttons with correct error props and default values", () => {
     const wrapper = mount(
       <EstablishmentOpeningStatus
         validatorErrors={testValidatorErrors}
