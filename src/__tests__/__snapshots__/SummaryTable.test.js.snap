@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-63 {
+.emotion-66 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-63 {
+  .emotion-66 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -136,7 +136,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 <table
-  className="emotion-63"
+  className="emotion-66"
 >
   <caption
     className="emotion-0"
@@ -551,6 +551,26 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           id="establishment_email"
         >
           establishment@email.com
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="emotion-4"
+      id="establishmentOpeningDateRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Opening date
+      </th>
+      <td
+        className="emotion-2"
+      >
+        <div
+          className="bold"
+          id="establishment_opening_date"
+        >
+          06 Dec 2018
         </div>
       </td>
     </tr>
