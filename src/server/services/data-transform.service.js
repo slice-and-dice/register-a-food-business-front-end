@@ -5,18 +5,26 @@ const transformAnswersForSubmit = cumulativeAnswers => {
     data.operator_type,
     data.registration_role
   );
+
   delete data.registration_role;
 
   data.customer_type = transformCustomerType(
     data.supply_directly,
     data.supply_other
   );
+  delete data.supply_directly;
+  delete data.supply_other;
 
   data.establishment_opening_date = combineDate(
     data.day,
     data.month,
     data.year
   );
+
+  delete data.day;
+  delete data.month;
+  delete data.year;
+  delete data.establishment_opening_status;
 
   return data;
 };

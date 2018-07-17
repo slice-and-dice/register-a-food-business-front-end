@@ -1,4 +1,7 @@
 const { submit } = require("../services/submit.service");
+const {
+  transformAnswersForSubmit
+} = require("../services/data-transform.service");
 
 const submitController = async submissionData => {
   const controllerResponse = {
@@ -7,7 +10,8 @@ const submitController = async submissionData => {
   };
 
   if (submissionData && Object.getOwnPropertyNames(submissionData).length > 0) {
-    const response = await submit(submissionData);
+    const transformedData = transformAnswersForSubmit(submissionData);
+    const response = await submit(transformedData);
     if (response.errors && Object.keys(response.errors).length > 0) {
       // TODO JMB: add errors to the original page via session
       controllerResponse.redirectRoute = "back";

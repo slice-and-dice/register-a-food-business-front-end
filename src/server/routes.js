@@ -23,7 +23,6 @@ module.exports = () => {
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
-    req.session.submissionData = response.submissionData;
     req.session.switches = response.switches;
 
     info(

@@ -55,15 +55,15 @@
     "on": false,
     "switches": {}
   },
-  "/establishment-contact-details": {
-    "on": true,
-    "switches": {}
-  },
   "/establishment-trading-name": {
     "on": true,
     "switches": {}
   },
   "/establishment-address": {
+    "on": true,
+    "switches": {}
+  },
+  "/establishment-contact-details": {
     "on": true,
     "switches": {}
   },
