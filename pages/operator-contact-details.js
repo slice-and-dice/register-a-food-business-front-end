@@ -42,7 +42,7 @@ const OperatorContactDetails = props => (
               error: props.validatorErrors.operator_primary_number
             }}
           >
-            Primary phone number
+            Main phone number
           </InputField>
         </ContentItem.B_30_15>
 

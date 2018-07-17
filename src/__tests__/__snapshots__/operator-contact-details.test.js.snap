@@ -838,7 +838,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
           >
             <a
               className="emotion-3"
-              href="https://gov.uk"
+              href="/index"
               target="new"
             >
               <div
@@ -885,7 +885,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
         >
           <a
             className="emotion-7"
-            href="https://gov.uk"
+            href="/index"
             target="new"
           >
             <h3
@@ -926,7 +926,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
             your feedback
           </a>
            
-          will help is improve it
+          will help us improve it
         </div>
       </div>
     </div>
@@ -1027,7 +1027,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
                   <span
                     className="emotion-33"
                   >
-                    Primary phone number
+                    Main phone number
                   </span>
                   <input
                     autoComplete="tel"

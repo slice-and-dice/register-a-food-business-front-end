@@ -812,7 +812,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
           >
             <a
               className="emotion-3"
-              href="https://gov.uk"
+              href="/index"
               target="new"
             >
               <div
@@ -859,7 +859,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
         >
           <a
             className="emotion-7"
-            href="https://gov.uk"
+            href="/index"
             target="new"
           >
             <h3
@@ -900,7 +900,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
             your feedback
           </a>
            
-          will help is improve it
+          will help us improve it
         </div>
       </div>
     </div>
@@ -1022,7 +1022,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                   <span
                     className="emotion-33"
                   >
-                    Street
+                    Street (optional)
                   </span>
                   <input
                     autoComplete="address-line2"
@@ -1043,7 +1043,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                   <span
                     className="emotion-33"
                   >
-                    Town or city
+                    Town or city (optional)
                   </span>
                   <input
                     autoComplete="locality"
