@@ -13,7 +13,9 @@ const {
   validatePhoneNumberOptional,
   validateCompaniesHouseNumber,
   validateCompanyName,
-  validateEmail
+  validateEmail,
+  validatePastDate,
+  validateFutureDate
 } = require("@slice-and-dice/register-a-food-business-validation");
 
 const schema = {
@@ -190,6 +192,24 @@ const schema = {
       establishment_opening_status: {
         type: "string",
         validation: validateRadioButtons
+      }
+    }
+  },
+  "/establishment-opening-date-proactive": {
+    type: "object",
+    properties: {
+      establishment_opening_date: {
+        type: "string",
+        validation: validateFutureDate
+      }
+    }
+  },
+  "/establishment-opening-date-retroactive": {
+    type: "object",
+    properties: {
+      establishment_opening_date: {
+        type: "string",
+        validation: validatePastDate
       }
     }
   },
