@@ -23,7 +23,6 @@ module.exports = () => {
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
-    req.session.submissionData = response.submissionData;
     req.session.switches = response.switches;
 
     info(
@@ -93,8 +92,9 @@ module.exports = () => {
 
   router.get("*", (req, res) => {
     const response = handleController(req);
-
-    req.session.submissionData = response.submissionData;
+    if (response.submissionData) {
+      req.session.submissionData = response.submissionData;
+    }
 
     handle(req, res);
   });
