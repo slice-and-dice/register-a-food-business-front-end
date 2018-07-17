@@ -18,6 +18,10 @@ const transformAnswersForSubmit = cumulativeAnswers => {
     data.year
   );
 
+  delete data.day;
+  delete data.month;
+  delete data.year;
+
   return data;
 };
 
