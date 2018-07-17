@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.21.0 - 17th July 2018 (unreleased)
+
+### Added
+
+* SDB-114 Adding proactive establishment trading date
+* SDB-115 Adding retroactive establishment trading date
+
 ## v1.20.0 - 13th July 2018 (unreleased)
 
 ### Added

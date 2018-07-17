@@ -1,5 +1,6 @@
 import { FsaLayout, ContentItem, BackButton, ContinueButton } from "./";
 import { Header, HiddenText, Paragraph, DateInput } from "govuk-react";
+import moment from "moment";
 import PropTypes from "prop-types";
 
 const OpeningDate = props => {
@@ -37,7 +38,9 @@ const OpeningDate = props => {
             <div>
               <DateInput
                 inputNames={{ day: "day", month: "month", year: "year" }}
-                hintText="For example, 14 02 2018"
+                hintText={`For example, ${moment()
+                  .add(40, "d")
+                  .format("DD MM YYYY")}`}
                 errorText={props.validatorErrors.establishment_opening_date}
                 id="establishment_opening_date"
               >
