@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[
-  `<EstablishmentOpeningDateRetroactive /> matches the previous snapshot 1`
-] = `
+exports[`<EstablishmentOpeningDateRetroactive /> matches the previous snapshot 1`] = `
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;

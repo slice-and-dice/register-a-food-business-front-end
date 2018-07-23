@@ -11,6 +11,7 @@ import {
   NTA_LIGHT
 } from "@govuk-react/constants";
 
+
 const StyledTableRow = styled("div")({
   fontFamily: NTA_LIGHT,
   WebkitFontSmoothing: "antialiased",

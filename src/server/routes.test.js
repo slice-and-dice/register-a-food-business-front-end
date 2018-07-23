@@ -313,14 +313,10 @@ describe("Router: ", () => {
     it("Should call getRequestHandler", () => {
       expect(handle).toHaveBeenCalledWith(
         {
-          session: { submissionData: { new: "answers" } }
+          session: {}
         },
         "response"
       );
-    });
-
-    it("Should update session", () => {
-      expect(req.session.submissionData).toEqual({ new: "answers" });
     });
   });
 });
