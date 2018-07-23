@@ -62,7 +62,7 @@ describe("Router: ", () => {
 
     it("should set up switches route", () => {
       expect(router.post.mock.calls[1][0]).toBe(
-        "/switches/:switchType/:action/:originator"
+        "/switches/:switchName/:action/:originator"
       );
     });
 
@@ -250,11 +250,11 @@ describe("Router: ", () => {
     });
   });
 
-  describe("POST to /switches/:switchType/:action/:originator", () => {
+  describe("POST to /switches/:switchName/:action/:originator", () => {
     const req = {
       session: { switches: {} },
       params: {
-        switchType: "exampleSwitch",
+        switchName: "exampleSwitch",
         action: "on",
         originator: "/mock-page-1"
       }
