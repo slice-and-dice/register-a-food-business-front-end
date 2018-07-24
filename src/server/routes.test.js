@@ -19,12 +19,14 @@ jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
 jest.mock("./controllers/switches.controller");
+jest.mock("./services/switches.service");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
 const switchesController = require("./controllers/switches.controller");
+const { changeSwitch } = require("./services/switches.service");
 const routes = require("./routes");
 
 describe("Router: ", () => {
@@ -64,8 +66,12 @@ describe("Router: ", () => {
       );
     });
 
+    it("should set up edit route", () => {
+      expect(router.get.mock.calls[3][0]).toBe("/edit/:target");
+    });
+
     it("should set up generic Next route", () => {
-      expect(router.get.mock.calls[3][0]).toBe("*");
+      expect(router.get.mock.calls[4][0]).toBe("*");
     });
   });
 
@@ -291,13 +297,58 @@ describe("Router: ", () => {
     });
   });
 
+  describe("GET to /edit/:target", () => {
+    const req = {
+      session: { switches: {} },
+      params: { target: "examplePage" }
+    };
+    const res = {
+      redirect: jest.fn()
+    };
+
+    beforeEach(async () => {
+      changeSwitch.mockImplementation(() => true);
+      handler = router.get.mock.calls[3][1];
+      handler(req, res);
+    });
+
+    it("Should call changeSwitch function", () => {
+      expect(changeSwitch).toHaveBeenCalledWith(
+        "on"
+      );
+    });
+
+    it("Should call res.redirect with target of examplePage", () => {
+      expect(res.redirect).toHaveBeenCalledWith(
+        "/examplePage"
+      );
+    });
+
+    it("Should set editMode to true", () => {
+      expect(req.session.switches.editMode).toBe(true)
+    });
+
+    describe("Given there is no switches object", () => {
+      beforeEach(async () => {
+        req.session.switches = undefined;
+        handler(req, res);
+      });
+
+      it("Should call res.redirect with target of examplePage", () => {
+        expect(res.redirect).toHaveBeenCalledWith(
+          "/examplePage"
+        );
+      });
+    });
+  });
+
   describe("GET to *", () => {
     const req = {
       session: {}
     };
 
     beforeEach(async () => {
-      handler = router.get.mock.calls[3][1];
+      handler = router.get.mock.calls[4][1];
 
       handler(req, "response");
     });

@@ -7,6 +7,7 @@ const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
 const switchesController = require("./controllers/switches.controller");
+const { changeSwitch } = require("./services/switches.service");
 
 module.exports = () => {
   const router = Router();
@@ -89,9 +90,25 @@ module.exports = () => {
     res.redirect("back");
   });
 
+  router.get("/edit/:target", (req, res) => {
+    info(`Routes: /edit/:target route called`);
+
+    if (!req.session.switches) {
+      req.session.switches = {};
+    }
+    const switchValue = changeSwitch("on");
+    req.session.switches.editMode = switchValue;
+
+    info(`Routes: /edit/:target route finished`);
+    const target = req.params.target;
+    res.redirect(`/${target}`);
+  });
+
   router.get("*", (req, res) => {
     handle(req, res);
   });
 
   return router;
+
+
 };
