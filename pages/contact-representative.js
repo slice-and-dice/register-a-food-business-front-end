@@ -13,7 +13,10 @@ import PropTypes from "prop-types";
 const ContactRepresentative = props => {
   return (
     <FsaLayout>
-      <BackButton originator="contact-representative" />
+      <BackButton
+        editMode={props.switches.editMode}
+        originator="contact-representative"
+      />
       <ProcessedErrorSummary
         validatorErrors={props.validatorErrors}
         onHandleErrorClick={OnHandleErrorClick}

@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 
 const OperatorType = props => (
   <FsaLayout>
-    <BackButton originator="operator-type" />
+    <BackButton editMode={props.switches.editMode} originator="operator-type" />
     <Header level={2}>Who operates this business?</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>

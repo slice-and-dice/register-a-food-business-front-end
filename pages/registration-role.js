@@ -10,7 +10,10 @@ import PropTypes from "prop-types";
 
 const RegistrationRole = props => (
   <FsaLayout>
-    <BackButton originator="registration-role" />
+    <BackButton
+      editMode={props.switches.editMode}
+      originator="registration-role"
+    />
     <Header level={2}>What is your role in this food business?</Header>
 
     <form action="/continue/registration-role" method="post">

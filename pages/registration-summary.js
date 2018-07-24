@@ -14,7 +14,10 @@ const RegistrationSummary = props => {
   const transformedData = transformAnswersForSubmit(props.cumulativeAnswers);
   return (
     <FsaLayout>
-      <BackButton originator="registration-summary" />
+      <BackButton
+        editMode={props.switches.editMode}
+        originator="registration-summary"
+      />
       <Header level={3}>
         Please check that the details you entered are correct.
       </Header>

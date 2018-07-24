@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 
 const OperatorName = props => (
   <FsaLayout>
-    <BackButton originator="operator-name" />
+    <BackButton editMode={props.switches.editMode} originator="operator-name" />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}

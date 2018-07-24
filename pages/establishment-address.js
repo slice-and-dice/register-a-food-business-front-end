@@ -12,7 +12,10 @@ import PropTypes from "prop-types";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
-    <BackButton originator="establishment-address" />
+    <BackButton
+      editMode={props.switches.editMode}
+      originator="establishment-address"
+    />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}

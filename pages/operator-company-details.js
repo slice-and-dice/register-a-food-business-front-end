@@ -11,7 +11,10 @@ import PropTypes from "prop-types";
 
 const LimitedCompanyDetails = props => (
   <FsaLayout>
-    <BackButton originator="operator-company-details" />
+    <BackButton
+      editMode={props.switches.editMode}
+      originator="operator-company-details"
+    />
     <ProcessedErrorSummary validatorErrors={props.validatorErrors} />
     <Header level={2}>Company details</Header>
 

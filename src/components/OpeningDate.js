@@ -8,9 +8,15 @@ const OpeningDate = props => {
     <FsaLayout>
       {props.cumulativeAnswers.establishment_opening_status ===
       "Establishment is not trading yet" ? (
-        <BackButton originator="establishment-opening-date-proactive" />
+        <BackButton
+          editMode={props.switches.editMode}
+          originator="establishment-opening-date-proactive"
+        />
       ) : (
-        <BackButton originator="establishment-opening-date-retroactive" />
+        <BackButton
+          editMode={props.switches.editMode}
+          originator="establishment-opening-date-retroactive"
+        />
       )}
       <Header level={2}>Trading date</Header>
 
