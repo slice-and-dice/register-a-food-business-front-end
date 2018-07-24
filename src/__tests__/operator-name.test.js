@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<OperatorName />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorName />);
@@ -26,6 +28,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +41,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
@@ -52,6 +56,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
@@ -66,6 +71,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorFirstName = wrapper.find("InputField#operator_first_name");
@@ -79,6 +85,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorLastName = wrapper.find("InputField#operator_last_name");
@@ -93,6 +100,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorLastName = wrapper.find("InputField#operator_last_name");
@@ -107,6 +115,7 @@ describe("<OperatorName />", () => {
         <OperatorName
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorLastName = wrapper.find("InputField#operator_last_name");

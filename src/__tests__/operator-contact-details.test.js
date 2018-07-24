@@ -13,6 +13,7 @@ const testValidatorErrors = {
 const testCumulativeAnswers = {
   example: "test answer"
 };
+const testSwitches = {};
 
 describe("<OperatorContactDetails />", () => {
   it("renders without crashing", () => {
@@ -26,6 +27,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +40,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorPrimaryContact = wrapper.find(
@@ -54,6 +57,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorPrimaryContact = wrapper.find(
@@ -70,6 +74,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorPrimaryContact = wrapper.find(
@@ -85,6 +90,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorSecondaryContact = wrapper.find(
@@ -101,6 +107,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorSecondaryContact = wrapper.find(
@@ -117,6 +124,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorSecondaryContact = wrapper.find(
@@ -134,6 +142,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorEmail = wrapper.find("InputField#operator_email");
@@ -148,6 +157,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorEmail = wrapper.find("InputField#operator_email");
@@ -162,6 +172,7 @@ describe("<OperatorContactDetails />", () => {
         <OperatorContactDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorEmail = wrapper.find("InputField#operator_email");

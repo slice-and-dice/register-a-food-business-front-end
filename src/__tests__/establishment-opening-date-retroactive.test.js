@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<EstablishmentOpeningDateRetroactive />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<EstablishmentOpeningDateRetroactive />);
@@ -26,6 +28,7 @@ describe("<EstablishmentOpeningDateRetroactive />", () => {
         <EstablishmentOpeningDateRetroactive
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -37,6 +40,7 @@ describe("<EstablishmentOpeningDateRetroactive />", () => {
       <EstablishmentOpeningDateRetroactive
         validatorErrors={testValidatorErrors}
         cumulativeAnswers={testCumulativeAnswers}
+        switches={testSwitches}
       />
     );
     const openingDateProactive = wrapper.find("OpeningDate");

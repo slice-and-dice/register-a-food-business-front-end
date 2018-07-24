@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<OperatorAddress />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorAddress />);
@@ -26,6 +28,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +41,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorFirstLine = wrapper.find("InputField#operator_first_line");
@@ -52,6 +56,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorFirstLine = wrapper.find("InputField#operator_first_line");
@@ -66,6 +71,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorFirstLine = wrapper.find("InputField#operator_first_line");
@@ -79,6 +85,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorStreet = wrapper.find("InputField#operator_street");
@@ -93,6 +100,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorStreet = wrapper.find("InputField#operator_street");
@@ -107,6 +115,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorStreet = wrapper.find("InputField#operator_street");
@@ -120,6 +129,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorTown = wrapper.find("InputField#operator_town");
@@ -134,6 +144,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorTown = wrapper.find("InputField#operator_town");
@@ -148,6 +159,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorTown = wrapper.find("InputField#operator_town");
@@ -161,6 +173,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorPostcode = wrapper.find("InputField#operator_postcode");
@@ -175,6 +188,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorPostcode = wrapper.find("InputField#operator_postcode");
@@ -189,6 +203,7 @@ describe("<OperatorAddress />", () => {
         <OperatorAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorPostcode = wrapper.find("InputField#operator_postcode");

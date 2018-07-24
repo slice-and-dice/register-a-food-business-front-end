@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<OperatorCharityDetails />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorCharityDetails />);
@@ -26,6 +28,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +41,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCharityName = wrapper.find(
@@ -54,6 +58,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCharityName = wrapper.find(
@@ -70,6 +75,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCharityName = wrapper.find(
@@ -85,6 +91,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCharityNumber = wrapper.find(
@@ -101,6 +108,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCharityNumber = wrapper.find(
@@ -117,6 +125,7 @@ describe("<OperatorCharityDetails />", () => {
         <OperatorCharityDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCharityNumber = wrapper.find(

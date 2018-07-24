@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<ContactRepresentative />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<ContactRepresentative />);
@@ -26,6 +28,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +41,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeName = wrapper.find(
@@ -54,6 +58,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeName = wrapper.find(
@@ -70,6 +75,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeName = wrapper.find(
@@ -87,6 +93,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeRole = wrapper.find(
@@ -103,6 +110,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeRole = wrapper.find(
@@ -119,6 +127,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeRole = wrapper.find(
@@ -136,6 +145,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeEmail = wrapper.find(
@@ -152,6 +162,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeEmail = wrapper.find(
@@ -168,6 +179,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeEmail = wrapper.find(
@@ -185,6 +197,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeNumber = wrapper.find(
@@ -201,6 +214,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeNumber = wrapper.find(
@@ -217,6 +231,7 @@ describe("<ContactRepresentative />", () => {
         <ContactRepresentative
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const contactRepresentativeNumber = wrapper.find(

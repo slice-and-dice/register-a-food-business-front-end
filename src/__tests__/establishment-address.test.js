@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<EstablishmentAddress />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<EstablishmentAddress />);
@@ -26,6 +28,7 @@ describe("<EstablishmentAddress />", () => {
         <EstablishmentAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +41,7 @@ describe("<EstablishmentAddress />", () => {
         <EstablishmentAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentFirstLine = wrapper.find(
@@ -54,6 +58,7 @@ describe("<EstablishmentAddress />", () => {
         <EstablishmentAddress
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentFirstLine = wrapper.find(
@@ -70,6 +75,7 @@ describe("<EstablishmentAddress />", () => {
         <EstablishmentAddress
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentFirstLine = wrapper.find(

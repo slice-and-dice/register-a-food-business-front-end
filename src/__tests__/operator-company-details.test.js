@@ -13,6 +13,7 @@ const testValidatorErrors = {
 const testCumulativeAnswers = {
   example: "test answer"
 };
+const testSwitches = {};
 
 describe("<OperatorCompanyDetails />", () => {
   it("renders without crashing", () => {
@@ -26,6 +27,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -38,6 +40,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCompanyName = wrapper.find(
@@ -54,6 +57,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCompanyName = wrapper.find(
@@ -70,6 +74,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCompanyName = wrapper.find(
@@ -85,6 +90,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCompaniesHouseNumber = wrapper.find(
@@ -101,6 +107,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCompaniesHouseNumber = wrapper.find(
@@ -119,6 +126,7 @@ describe("<OperatorCompanyDetails />", () => {
         <OperatorCompanyDetails
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorCompaniesHouseNumber = wrapper.find(

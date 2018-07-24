@@ -14,11 +14,15 @@ describe("<OpeningDate />", () => {
   const testCumulativeAnswers = {
     example: "test answer"
   };
+
+  const testSwitches = {};
+
   it("renders without crashing", () => {
     const wrapper = shallow(
       <OpeningDate
         cumulativeAnswers={testCumulativeAnswers}
         validatorErrors={testValidatorErrors}
+        switches={testSwitches}
       />
     );
     expect(wrapper.length).toBe(1);
@@ -30,6 +34,7 @@ describe("<OpeningDate />", () => {
         <OpeningDate
           cumulativeAnswers={testCumulativeAnswers}
           validatorErrors={testValidatorErrors}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -45,6 +50,7 @@ describe("<OpeningDate />", () => {
         <OpeningDate
           cumulativeAnswers={proactiveCumulativeAnswers}
           validatorErrors={testValidatorErrors}
+          switches={testSwitches}
         />
       );
 
@@ -64,6 +70,7 @@ describe("<OpeningDate />", () => {
         <OpeningDate
           cumulativeAnswers={proactiveCumulativeAnswers}
           validatorErrors={testValidatorErrors}
+          switches={testSwitches}
         />
       );
 

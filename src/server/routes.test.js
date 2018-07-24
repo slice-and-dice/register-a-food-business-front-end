@@ -313,19 +313,15 @@ describe("Router: ", () => {
     });
 
     it("Should call changeSwitch function", () => {
-      expect(changeSwitch).toHaveBeenCalledWith(
-        "on"
-      );
+      expect(changeSwitch).toHaveBeenCalledWith("on");
     });
 
     it("Should call res.redirect with target of examplePage", () => {
-      expect(res.redirect).toHaveBeenCalledWith(
-        "/examplePage"
-      );
+      expect(res.redirect).toHaveBeenCalledWith("/examplePage");
     });
 
     it("Should set editMode to true", () => {
-      expect(req.session.switches.editMode).toBe(true)
+      expect(req.session.switches.editMode).toBe(true);
     });
 
     describe("Given there is no switches object", () => {
@@ -335,9 +331,7 @@ describe("Router: ", () => {
       });
 
       it("Should call res.redirect with target of examplePage", () => {
-        expect(res.redirect).toHaveBeenCalledWith(
-          "/examplePage"
-        );
+        expect(res.redirect).toHaveBeenCalledWith("/examplePage");
       });
     });
   });

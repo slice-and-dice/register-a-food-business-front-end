@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<RegistrationRole />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<RegistrationRole />);
@@ -26,6 +28,7 @@ describe("<RegistrationRole />", () => {
         <RegistrationRole
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -37,6 +40,7 @@ describe("<RegistrationRole />", () => {
       <RegistrationRole
         validatorErrors={testValidatorErrors}
         cumulativeAnswers={testCumulativeAnswers}
+        switches={testSwitches}
       />
     );
     const registrationRoleRadio = wrapper.find("Radio");
@@ -52,6 +56,7 @@ describe("<RegistrationRole />", () => {
         <RegistrationRole
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const registrationRole = wrapper.find("MultiChoice");
@@ -76,6 +81,7 @@ describe("<RegistrationRole />", () => {
           <RegistrationRole
             validatorErrors={testValidatorErrors}
             cumulativeAnswers={cumulativeAnswers}
+            switches={testSwitches}
           />
         );
 

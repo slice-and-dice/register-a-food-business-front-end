@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<Declaration />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<Declaration />);
@@ -26,6 +28,7 @@ describe("<Declaration />", () => {
         <Declaration
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();

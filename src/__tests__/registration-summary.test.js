@@ -12,6 +12,8 @@ const cumulativeAnswers = {
   establishment_first_line: "Example first line"
 };
 
+const testSwitches = {};
+
 describe("<RegistrationSummary />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<RegistrationSummary />);
@@ -19,13 +21,23 @@ describe("<RegistrationSummary />", () => {
   });
 
   it("matches the previous snapshot", () => {
-    const tree = renderer.create(<RegistrationSummary />).toJSON();
+    const tree = renderer
+      .create(
+        <RegistrationSummary
+          cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
+        />
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("gets given props", () => {
     const wrapper = mount(
-      <RegistrationSummary cumulativeAnswers={cumulativeAnswers} />
+      <RegistrationSummary
+        cumulativeAnswers={cumulativeAnswers}
+        switches={testSwitches}
+      />
     );
     const establishmentFirstLine = wrapper.props().cumulativeAnswers
       .establishment_first_line;
@@ -36,14 +48,20 @@ describe("<RegistrationSummary />", () => {
     it("Gets given transformedAnswers ", () => {
       transformAnswersForSubmit.mockImplementation(() => ({ test: "answer" }));
       const wrapper = mount(
-        <RegistrationSummary cumulativeAnswers={cumulativeAnswers} />
+        <RegistrationSummary
+          cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
+        />
       );
       const summaryTable = wrapper.find("SummaryTable");
       expect(summaryTable.props().test).toBe("answer");
     });
     it("renders", () => {
       const wrapper = mount(
-        <RegistrationSummary cumulativeAnswers={cumulativeAnswers} />
+        <RegistrationSummary
+          cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
+        />
       );
       const summaryTable = wrapper.find("SummaryTable");
       expect(summaryTable.length).toBe(1);
