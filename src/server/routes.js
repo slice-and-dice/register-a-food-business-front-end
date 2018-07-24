@@ -7,7 +7,6 @@ const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
 const switchesController = require("./controllers/switches.controller");
-const handleController = require("./controllers/handle.controller");
 
 module.exports = () => {
   const router = Router();

@@ -19,14 +19,12 @@ jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
 jest.mock("./controllers/switches.controller");
-jest.mock("./controllers/handle.controller");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
 const switchesController = require("./controllers/switches.controller");
-const handleController = require("./controllers/handle.controller");
 const routes = require("./routes");
 
 describe("Router: ", () => {
@@ -294,12 +292,6 @@ describe("Router: ", () => {
   });
 
   describe("GET to *", () => {
-    handleController.mockImplementation(() => ({
-      submissionData: { new: "answers" }
-    }));
-
-    handle.mockImplementation();
-
     const req = {
       session: {}
     };

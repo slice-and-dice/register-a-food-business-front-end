@@ -78,6 +78,5 @@ export default SessionWrapper(Declaration);
 
 Declaration.propTypes = {
   cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
-  validatorErrors: PropTypes.objectOf(PropTypes.string),
-  submissionData: PropTypes.object
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

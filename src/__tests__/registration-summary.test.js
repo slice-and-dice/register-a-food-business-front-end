@@ -1,19 +1,16 @@
-jest.mock("../server/services/data-transform.service");
 import RegistrationSummary from "../../pages/registration-summary";
 import { shallow, mount } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";
 import { createSerializer } from "jest-emotion";
 import { transformAnswersForSubmit } from "../server/services/data-transform.service";
-
-
+jest.mock("../server/services/data-transform.service");
 
 expect.addSnapshotSerializer(createSerializer(emotion));
 
 const cumulativeAnswers = {
   establishment_first_line: "Example first line"
 };
-
 
 describe("<RegistrationSummary />", () => {
   it("renders without crashing", () => {
@@ -37,9 +34,7 @@ describe("<RegistrationSummary />", () => {
 
   describe("SummaryTable component", () => {
     it("Gets given transformedAnswers ", () => {
-      transformAnswersForSubmit.mockImplementation(() => (
-        { test: "answer" }
-      ))
+      transformAnswersForSubmit.mockImplementation(() => ({ test: "answer" }));
       const wrapper = mount(
         <RegistrationSummary cumulativeAnswers={cumulativeAnswers} />
       );
@@ -54,6 +49,4 @@ describe("<RegistrationSummary />", () => {
       expect(summaryTable.length).toBe(1);
     });
   });
-
-
 });
