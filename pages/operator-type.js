@@ -76,7 +76,7 @@ const OperatorType = props => (
         </MultiChoice>
       </ContentItem.B_45_30>
 
-      <ContinueButton />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );

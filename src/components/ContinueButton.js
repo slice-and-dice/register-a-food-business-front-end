@@ -12,7 +12,9 @@ const ContinueButton = props => (
       ? "Begin registration"
       : props.type === "submit"
         ? "Submit"
-        : "Continue"}
+        : props.editMode
+          ? "Save"
+          : "Continue"}
   </Button>
 );
 

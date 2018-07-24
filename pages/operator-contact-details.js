@@ -87,7 +87,7 @@ const OperatorContactDetails = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <ContinueButton />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );

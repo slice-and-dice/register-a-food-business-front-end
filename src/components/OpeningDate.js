@@ -70,7 +70,7 @@ const OpeningDate = props => {
               </ContentItem.B_30_15>
             </div>
           </ContentItem.B_30_15>
-          <ContinueButton />
+          <ContinueButton editMode={props.switches.editMode} />
         </form>
       ) : (
         <form
@@ -89,7 +89,7 @@ const OpeningDate = props => {
               </span>
             </DateInput>
           </ContentItem.B_30_15>
-          <ContinueButton />
+          <ContinueButton editMode={props.switches.editMode} />
         </form>
       )}
     </FsaLayout>

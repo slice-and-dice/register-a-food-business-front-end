@@ -27,7 +27,7 @@ const RegistrationSummary = props => {
       </ContentItem.B_30_15>
 
       <form action="/continue/registration-summary" method="post">
-        <ContinueButton />
+        <ContinueButton editMode={props.switches.editMode} />
       </form>
     </FsaLayout>
   );
