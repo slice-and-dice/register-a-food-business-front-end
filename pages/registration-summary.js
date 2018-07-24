@@ -37,6 +37,5 @@ const RegistrationSummary = props => {
 export default SessionWrapper(RegistrationSummary);
 
 RegistrationSummary.propTypes = {
-  cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
-  submissionData: PropTypes.object
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string)
 };

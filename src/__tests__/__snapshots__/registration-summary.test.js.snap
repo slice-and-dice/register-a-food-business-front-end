@@ -310,12 +310,12 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-47 {
+.emotion-44 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-45 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-45 {
+  .emotion-42 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-44 {
+.emotion-41 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-44 {
+  .emotion-41 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-44:first-child {
+  .emotion-41:first-child {
     margin-left: 0;
   }
 
-  .emotion-44:last-child {
+  .emotion-41:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-44 {
+  .emotion-41 {
     width: 66.6667%;
   }
 }
@@ -397,17 +397,17 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-41 {
+.emotion-38 {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width:641px) {
-  .emotion-41 {
+  .emotion-38 {
     padding-bottom: 15px;
   }
 }
 
-.emotion-40 {
+.emotion-37 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -421,7 +421,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-40 {
+  .emotion-37 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -519,7 +519,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-43 {
+.emotion-40 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -554,34 +554,34 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-43:hover {
+.emotion-40:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-43:focus {
+.emotion-40:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-43:active {
+.emotion-40:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-43:visited {
+.emotion-40:visited {
   color: #00823b;
 }
 
-.emotion-43 svg {
+.emotion-40 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-43 {
+  .emotion-40 {
     margin-bottom: 20px;
   }
 }
@@ -699,16 +699,16 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-47"
+    className="emotion-44"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-45"
+        className="emotion-42"
       >
         <div
-          className="emotion-44"
+          className="emotion-41"
         >
           <div
             className="emotion-20 emotion-21"
@@ -727,10 +727,10 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
             Please check that the details you entered are correct.
           </h3>
           <div
-            className="emotion-41 emotion-42"
+            className="emotion-38 emotion-39"
           >
             <table
-              className="emotion-40"
+              className="emotion-37"
             >
               <caption
                 className="emotion-23"
@@ -784,26 +784,6 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
                 </tr>
                 <tr
                   className="emotion-18"
-                  id="establishmentOpeningDateRow"
-                >
-                  <th
-                    className="emotion-25"
-                  >
-                    Opening date
-                  </th>
-                  <td
-                    className="emotion-25"
-                  >
-                    <div
-                      className="bold"
-                      id="establishment_opening_date"
-                    >
-                      Invalid date
-                    </div>
-                  </td>
-                </tr>
-                <tr
-                  className="emotion-18"
                 >
                   <th
                     className="emotion-25"
@@ -832,7 +812,7 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
             method="post"
           >
             <button
-              className="emotion-43"
+              className="emotion-40"
               disabled={false}
               id="continue-button"
               type="submit"
