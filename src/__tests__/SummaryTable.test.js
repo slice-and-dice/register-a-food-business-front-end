@@ -26,6 +26,22 @@ const mandatoryTableRows = [
   "establishmentOpeningDateRow"
 ];
 
+const editableTableRows = [
+  "establishmentAddressRow",
+  "operatorAddressRow",
+  "establishmentTradingNameRow",
+  "operatorNameRow",
+  "operatorCompanyNameRow",
+  "operatorCompaniesHouseRow",
+  "operatorCharityNameRow",
+  "operatorCharityNumberRow",
+  "operatorContactDetailsRow",
+  "operatorEmailRow",
+  "establishmentContactDetailsRow",
+  "establishmentEmailRow",
+  "contactRepresentativeRow"
+];
+
 // (only optional if it's optional within that page. Does not apply to pages that are optional or could be skipped.)
 const optionalTableRows = ["operatorCharityNumberRow"];
 
@@ -119,6 +135,17 @@ describe("<SummaryTable />", () => {
       expect(rows.length).toEqual(allTableRows.length);
     });
 
+    it("renders a change button in all editable rows", () => {
+      editableTableRows.forEach(tableRowName => {
+        const row = wrapperComprehensive.find(`Row#${tableRowName}`);
+        const buttonId = `change${tableRowName.charAt(0).toUpperCase() +
+          tableRowName.substr(1)}`;
+        const button = row.find(`Anchor#${buttonId}`);
+
+        expect(button.length).toBe(1);
+      });
+    });
+
     it("renders all table rows", () => {
       allTableRows.forEach(tableRowName => {
         const row = wrapperComprehensive.find(`Row#${tableRowName}`);
@@ -140,7 +167,7 @@ describe("<SummaryTable />", () => {
         const row = wrapperMinimum.find(`Row#${tableRowName}`);
         expect(row.length).toBe(1);
 
-        const answerCells = row.find("td");
+        const answerCells = row.find("td.summaryTableDataCell");
         expect(answerCells.text()).not.toBe("");
       });
     });

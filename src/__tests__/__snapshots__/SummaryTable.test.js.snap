@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-66 {
+.emotion-94 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-66 {
+  .emotion-94 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -113,7 +113,26 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-33 {
+.emotion-8 {
+  color: #005ea5;
+  padding: 3px;
+  margin: -3px;
+  outline-color: transparent;
+  display: inline-block;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-8:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-8:visited {
+  color: #2e358b;
+}
+
+.emotion-50 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -129,23 +148,23 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-50 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 <table
-  className="emotion-66"
+  className="emotion-94"
 >
   <caption
     className="emotion-0"
   />
   <tbody
-    className="emotion-4"
+    className="emotion-5"
   >
     <tr
-      className="emotion-4"
+      className="emotion-5"
     >
       <th
         className="emotion-2"
@@ -165,9 +184,14 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       >
         <div />
       </td>
+      <td
+        className="emotion-2"
+      >
+        <div />
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorCompanyNameRow"
     >
       <th
@@ -176,7 +200,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Company name
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -185,9 +209,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           Company name
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-company-details"
+          id="changeOperatorCompanyNameRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorCompaniesHouseRow"
     >
       <th
@@ -196,7 +233,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Company number
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -205,9 +242,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           AA123456
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-company-details"
+          id="changeOperatorCompaniesHouseRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorCharityNameRow"
     >
       <th
@@ -216,7 +266,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Charity name
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -225,9 +275,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           Charity name
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-charity-details"
+          id="changeOperatorCharityNameRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorCharityNumberRow"
     >
       <th
@@ -236,7 +299,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Charity number
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -245,9 +308,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           123456
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-charity-details"
+          id="changeOperatorCharityNumberRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorNameRow"
     >
       <th
@@ -256,7 +332,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Name
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -274,9 +350,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </span>
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-name"
+          id="changeOperatorNameRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorAddressRow"
     >
       <th
@@ -285,7 +374,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Operator address
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -312,9 +401,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </div>
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-address"
+          id="changeOperatorAddressRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorContactDetailsRow"
     >
       <th
@@ -323,7 +425,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Contact number
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -340,9 +442,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </div>
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-contact-details"
+          id="changeOperatorContactDetailsRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorTypeRow"
     >
       <th
@@ -351,7 +466,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Operator type
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -362,7 +477,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="operatorEmailRow"
     >
       <th
@@ -371,7 +486,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Email address
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -380,9 +495,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           operator@email.com
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/operator-contact-details"
+          id="changeOperatorEmailRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="contactRepresentativeRow"
     >
       <th
@@ -391,10 +519,10 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Designated contact
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
-          className="emotion-33 emotion-34"
+          className="emotion-50 emotion-51"
         >
           <div
             display={true}
@@ -404,7 +532,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </div>
         </div>
         <div
-          className="emotion-33 emotion-34"
+          className="emotion-50 emotion-51"
         >
           <div
             id="contact_representative_role"
@@ -425,9 +553,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           representative@email.com
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/contact-representative"
+          id="changeContactRepresentativeRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
     >
       <th
         className="emotion-2"
@@ -447,9 +588,14 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       >
         <div />
       </td>
+      <td
+        className="emotion-2"
+      >
+        <div />
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="establishmentTradingNameRow"
     >
       <th
@@ -458,7 +604,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Establishment name
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -467,9 +613,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           Example trading name
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/establishment-trading-name"
+          id="changeEstablishmentTradingNameRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="establishmentAddressRow"
     >
       <th
@@ -478,7 +637,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Establishment address
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -505,9 +664,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </div>
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/establishment-address"
+          id="changeEstablishmentAddressRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="establishmentContactDetailsRow"
     >
       <th
@@ -516,7 +688,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Contact number
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -533,9 +705,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </div>
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/establishment-contact-details"
+          id="changeEstablishmentContactDetailsRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="establishmentEmailRow"
     >
       <th
@@ -544,7 +729,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Email address
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -553,9 +738,22 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           establishment@email.com
         </div>
       </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/establishment-contact-details"
+          id="changeEstablishmentEmailRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="establishmentOpeningDateRow"
     >
       <th
@@ -564,7 +762,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Opening date
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
@@ -575,7 +773,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
     >
       <th
         className="emotion-2"
@@ -597,7 +795,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       </td>
     </tr>
     <tr
-      className="emotion-4"
+      className="emotion-5"
       id="activitiesCustomersRow"
     >
       <th
@@ -606,7 +804,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         Customers
       </th>
       <td
-        className="emotion-2"
+        className="summaryTableDataCell emotion-2"
       >
         <div
           className="bold"
