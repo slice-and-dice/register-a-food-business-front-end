@@ -961,6 +961,7 @@ exports[`<OperatorCharityDetails /> matches the previous snapshot 1`] = `
           </h2>
           <details
             className="emotion-32"
+            id="hiddenTextFBO"
           >
             <summary
               className="emotion-29"
@@ -1034,6 +1035,7 @@ exports[`<OperatorCharityDetails /> matches the previous snapshot 1`] = `
               </div>
               <details
                 className="emotion-32"
+                id="hiddenTextCharityNumbers"
               >
                 <summary
                   className="emotion-29"
