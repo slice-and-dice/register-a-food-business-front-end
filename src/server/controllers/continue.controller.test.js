@@ -124,9 +124,6 @@ describe("Function: continueController: ", () => {
 
       describe("When editMode is true", () => {
         beforeEach(() => {
-          validate.mockImplementation(() => ({
-            errors: {}
-          }));
           response = continueController("/some-page", {}, exampleAnswers, {
             editMode: true
           });
