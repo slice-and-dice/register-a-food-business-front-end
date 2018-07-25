@@ -310,12 +310,12 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-59 {
+.emotion-44 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-57 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-57 {
+  .emotion-42 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-56 {
+.emotion-41 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-56 {
+  .emotion-41 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-56:first-child {
+  .emotion-41:first-child {
     margin-left: 0;
   }
 
-  .emotion-56:last-child {
+  .emotion-41:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-56 {
+  .emotion-41 {
     width: 66.6667%;
   }
 }
@@ -725,7 +725,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-55 {
+.emotion-38 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -760,34 +760,34 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-55:hover {
+.emotion-38:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-55:focus {
+.emotion-38:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-55:active {
+.emotion-38:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-55:visited {
+.emotion-38:visited {
   color: #00823b;
 }
 
-.emotion-55 svg {
+.emotion-38 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-55 {
+  .emotion-38 {
     margin-bottom: 20px;
   }
 }
@@ -889,12 +889,11 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
           >
             beta
           </strong>
-          This is a prototype -
+          This is a prototype-
            
           <a
             className="emotion-3"
             href="https://goo.gl/forms/WB5adxvWQdDIfVvs2"
-            id="feedbackLink"
             target="new"
           >
             your feedback
@@ -906,22 +905,22 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-59"
+    className="emotion-44"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-57"
+        className="emotion-42"
       >
         <div
-          className="emotion-56"
+          className="emotion-41"
         >
           <div
             className="emotion-20 emotion-21"
           >
             <a
-              href="/back/operator-address-manual"
+              href="/back/operator-address"
               id="back-link"
             >
               Back
@@ -985,105 +984,42 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
             </div>
           </details>
           <form
-            action="/continue/operator-address-manual/undefined"
+            action="/continue/operator-address"
             method="post"
           >
             <div
               className="emotion-36 emotion-37"
             >
-              <div
-                className="emotion-36 emotion-37"
+              <label
+                className="emotion-35"
+                id="operator_postcode"
               >
-                <label
-                  className="emotion-35"
-                  id="operator_first_line"
+                <span
+                  className="emotion-33"
                 >
-                  <span
-                    className="emotion-33"
-                  >
-                    First line of address
-                  </span>
-                  <input
-                    autoComplete="address-line1"
-                    className="emotion-34"
-                    defaultValue={undefined}
-                    name="operator_first_line"
-                    type="text"
-                  />
-                </label>
-              </div>
-              <div
-                className="emotion-36 emotion-37"
-              >
-                <label
-                  className="emotion-35"
-                  id="operator_street"
-                >
-                  <span
-                    className="emotion-33"
-                  >
-                    Street (optional)
-                  </span>
-                  <input
-                    autoComplete="address-line2"
-                    className="emotion-34"
-                    defaultValue={undefined}
-                    name="operator_street"
-                    type="text"
-                  />
-                </label>
-              </div>
-              <div
-                className="emotion-36 emotion-37"
-              >
-                <label
-                  className="emotion-35"
-                  id="operator_town"
-                >
-                  <span
-                    className="emotion-33"
-                  >
-                    Town or city (optional)
-                  </span>
-                  <input
-                    autoComplete="locality"
-                    className="emotion-34"
-                    defaultValue={undefined}
-                    name="operator_town"
-                    type="text"
-                  />
-                </label>
-              </div>
-              <div
-                className="emotion-36 emotion-37"
-              >
-                <label
-                  className="emotion-35"
-                  id="operator_postcode"
-                >
-                  <span
-                    className="emotion-33"
-                  >
-                    Postcode
-                  </span>
-                  <input
-                    autoComplete="postal-code"
-                    className="emotion-34"
-                    defaultValue={undefined}
-                    name="operator_postcode"
-                    type="text"
-                  />
-                </label>
-              </div>
+                  Postcode
+                </span>
+                <input
+                  autoComplete="postal-code"
+                  className="emotion-34"
+                  defaultValue={undefined}
+                  name="operator_postcode"
+                  type="text"
+                />
+              </label>
             </div>
-            <button
-              className="emotion-55"
-              disabled={false}
-              id="continue-button"
-              type="submit"
+            <div
+              className="emotion-20 emotion-21"
             >
-              Continue
-            </button>
+              <button
+                className="emotion-38"
+                disabled={false}
+                id="find-address"
+                type="submit"
+              >
+                Find address
+              </button>
+            </div>
           </form>
         </div>
       </div>

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FindAddressButton /> matches the previous snapshot 1`] = `
+.emotion-0 {
+  background-color: #00823b;
+  border: none;
+  box-shadow: 0 2px 0 #003618;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-family: "nta",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  padding: .526315em .789473em .263157em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  pointer-events: auto;
+  padding-right: .84211em;
+  margin-bottom: 15px;
+}
+
+.emotion-0:hover {
+  background-color: #00692f;
+  color: #ffffff;
+}
+
+.emotion-0:focus {
+  color: #ffffff;
+  background-color: #00692f;
+  outline: 3px solid #ffbf47;
+}
+
+.emotion-0:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 0 #003618;
+}
+
+.emotion-0:visited {
+  color: #00823b;
+}
+
+.emotion-0 svg {
+  max-width: 15px;
+  margin-left: 20px;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    margin-bottom: 20px;
+  }
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  id="find-address"
+  type="submit"
+>
+  Find address
+</button>
+`;

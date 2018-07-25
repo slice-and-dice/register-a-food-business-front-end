@@ -973,7 +973,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
             className="emotion-20 emotion-21"
           >
             <a
-              href="/back/establishment-address"
+              href="/back/establishment-address-manual"
               id="back-link"
             >
               Back

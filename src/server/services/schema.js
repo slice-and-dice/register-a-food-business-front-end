@@ -66,6 +66,15 @@ const schema = {
   "/operator-address-manual": {
     type: "object",
     properties: {
+      operator_postcode: {
+        type: "string",
+        validation: validatePostCode
+      }
+    }
+  },
+  "/operator-address-manual": {
+    type: "object",
+    properties: {
       operator_first_line: {
         type: "string",
         validation: validateFirstLine
@@ -171,6 +180,15 @@ const schema = {
       establishment_email: {
         type: "string",
         validation: validateEmail
+      }
+    }
+  },
+  "/establishment-address-manual": {
+    type: "object",
+    properties: {
+      establishment_postcode: {
+        type: "string",
+        validation: validatePostCode
       }
     }
   },

@@ -43,8 +43,12 @@
     "on": false,
     "switches": {}
   },
-  "/operator-address-manual": {
+  "/operator-address": {
     "on": true,
+    "switches": {}
+  },
+  "/operator-address-manual": {
+    "on": false,
     "switches": {}
   },
   "/operator-contact-details": {
@@ -59,8 +63,12 @@
     "on": true,
     "switches": {}
   },
-  "/establishment-address-manual": {
+  "/establishment-address": {
     "on": true,
+    "switches": {}
+  },
+  "/establishment-address-manual": {
+    "on": false,
     "switches": {}
   },
   "/establishment-address-type": {
