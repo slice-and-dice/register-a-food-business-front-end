@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.22.0 - 25th July 2018 (unreleased)
+
+### Added
+
+* SDB-157 Edit summary page - items not influencing registration flow
+
 ## v1.21.2 - 17th July 2018 (unreleased)
 
 ### Modified

@@ -12,7 +12,10 @@ import PropTypes from "prop-types";
 
 const OperatorAddress = props => (
   <FsaLayout>
-    <BackButton originator="operator-address" />
+    <BackButton
+      editMode={props.switches.editMode}
+      originator="operator-address"
+    />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}
@@ -99,7 +102,7 @@ const OperatorAddress = props => (
           </InputField>
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
-      <ContinueButton />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );

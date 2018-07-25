@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<OperatorType />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<OperatorType />);
@@ -26,6 +28,7 @@ describe("<OperatorType />", () => {
         <OperatorType
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -37,6 +40,7 @@ describe("<OperatorType />", () => {
       <OperatorType
         validatorErrors={testValidatorErrors}
         cumulativeAnswers={testCumulativeAnswers}
+        switches={testSwitches}
       />
     );
     const operatorTypeRadio = wrapper.find("Radio");
@@ -52,6 +56,7 @@ describe("<OperatorType />", () => {
         <OperatorType
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const operatorType = wrapper.find("MultiChoice");
@@ -76,6 +81,7 @@ describe("<OperatorType />", () => {
           <OperatorType
             validatorErrors={testValidatorErrors}
             cumulativeAnswers={cumulativeAnswers}
+            switches={testSwitches}
           />
         );
 

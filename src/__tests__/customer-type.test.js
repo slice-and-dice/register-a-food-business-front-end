@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<CustomerType />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<CustomerType />);
@@ -26,6 +28,7 @@ describe("<CustomerType />", () => {
         <CustomerType
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -37,6 +40,7 @@ describe("<CustomerType />", () => {
         <CustomerType
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const customerTypeCheckBox = wrapper.find("Checkbox");
@@ -51,6 +55,7 @@ describe("<CustomerType />", () => {
         <CustomerType
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const customerTypeCheckBox = wrapper.find(
@@ -67,6 +72,7 @@ describe("<CustomerType />", () => {
         <CustomerType
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={cumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const customerTypeCheckBox = wrapper.find(
@@ -85,6 +91,7 @@ describe("<CustomerType />", () => {
         <CustomerType
           validatorErrors={validatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const customerType = wrapper.find("MultiChoice");

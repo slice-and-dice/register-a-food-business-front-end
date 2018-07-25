@@ -14,6 +14,8 @@ const testCumulativeAnswers = {
   example: "test answer"
 };
 
+const testSwitches = {};
+
 describe("<EstablishmentOpeningStatus />", () => {
   it("renders without crashing", () => {
     const wrapper = shallow(<EstablishmentOpeningStatus />);
@@ -26,6 +28,7 @@ describe("<EstablishmentOpeningStatus />", () => {
         <EstablishmentOpeningStatus
           validatorErrors={testValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       )
       .toJSON();
@@ -37,6 +40,7 @@ describe("<EstablishmentOpeningStatus />", () => {
       <EstablishmentOpeningStatus
         validatorErrors={testValidatorErrors}
         cumulativeAnswers={testCumulativeAnswers}
+        switches={testSwitches}
       />
     );
     const establishmentTypeRadio = wrapper.find("Radio");
@@ -52,6 +56,7 @@ describe("<EstablishmentOpeningStatus />", () => {
         <EstablishmentOpeningStatus
           validatorErrors={actualValidatorErrors}
           cumulativeAnswers={testCumulativeAnswers}
+          switches={testSwitches}
         />
       );
       const establishmentTypeMultiChoice = wrapper.find("MultiChoice");
@@ -79,6 +84,7 @@ describe("<EstablishmentOpeningStatus />", () => {
           <EstablishmentOpeningStatus
             validatorErrors={testValidatorErrors}
             cumulativeAnswers={cumulativeAnswers}
+            switches={testSwitches}
           />
         );
 

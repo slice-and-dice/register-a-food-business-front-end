@@ -23,6 +23,14 @@ describe("<ContinueButton />", () => {
     expect(continueButton.props().type).toBe("test");
   });
 
+  it("is passed the 'editMode' props", () => {
+    const editMode = true;
+
+    const wrapper = mount(<ContinueButton editMode={editMode} />);
+    const continueButton = wrapper.find("ContinueButton");
+    expect(continueButton.props().editMode).toBe(editMode);
+  });
+
   it("passes the prop 'start' as 'false' by default for the Button component", () => {
     const wrapper = mount(<ContinueButton />);
     const GovUkButton = wrapper.find("Button");
@@ -52,6 +60,15 @@ describe("<ContinueButton />", () => {
     it("contains a <ButtonArrow> component", () => {
       const buttonArrow = wrapper.find("ButtonArrow");
       expect(buttonArrow.length).toBe(1);
+    });
+  });
+
+  describe("given that edit mode is true", () => {
+    const editMode = true;
+    const wrapper = mount(<ContinueButton editMode={editMode} />);
+
+    it("has 'Save' as the button text", () => {
+      expect(wrapper.text()).toContain("Save");
     });
   });
 

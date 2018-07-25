@@ -10,7 +10,10 @@ import PropTypes from "prop-types";
 
 const EstablishmentTradingName = props => (
   <FsaLayout>
-    <BackButton originator="establishment-trading-name" />
+    <BackButton
+      editMode={props.switches.editMode}
+      originator="establishment-trading-name"
+    />
     <Header level={2}>New food business establishment</Header>
 
     <HiddenText summaryText={"What is an establishment?"}>
@@ -43,7 +46,7 @@ const EstablishmentTradingName = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <ContinueButton />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );

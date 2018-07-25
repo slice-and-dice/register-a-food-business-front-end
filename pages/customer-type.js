@@ -11,7 +11,10 @@ import PropTypes from "prop-types";
 const CustomerType = props => (
   <FsaLayout>
     <form action="/continue/customer-type" method="post">
-      <BackButton originator="customer-type" />
+      <BackButton
+        editMode={props.switches.editMode}
+        originator="customer-type"
+      />
       <Header level={2}>Who will this establishment supply food to?</Header>
       <Paragraph>Select all that apply</Paragraph>
 
@@ -43,7 +46,7 @@ const CustomerType = props => (
         </MultiChoice>
       </ContentItem.B_45_30>
 
-      <ContinueButton type="continue" />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );

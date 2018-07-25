@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 const Declaration = props => (
   <FsaLayout>
     <form action="/continue/declaration" method="post">
-      <BackButton originator="declaration" />
+      <BackButton editMode={props.switches.editMode} originator="declaration" />
       <Header level={2}>Declaration</Header>
 
       <Paragraph>
@@ -78,6 +78,5 @@ export default SessionWrapper(Declaration);
 
 Declaration.propTypes = {
   cumulativeAnswers: PropTypes.objectOf(PropTypes.string),
-  validatorErrors: PropTypes.objectOf(PropTypes.string),
-  submissionData: PropTypes.object
+  validatorErrors: PropTypes.objectOf(PropTypes.string)
 };

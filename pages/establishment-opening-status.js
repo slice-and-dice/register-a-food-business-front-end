@@ -17,7 +17,10 @@ import PropTypes from "prop-types";
 
 const EstablishmentOpeningStatus = props => (
   <FsaLayout>
-    <BackButton originator="establishment-opening-status" />
+    <BackButton
+      editMode={props.switches.editMode}
+      originator="establishment-opening-status"
+    />
     <Header level={2}>Is this establishment already trading?</Header>
 
     <HiddenText summaryText={"What is an establishment?"}>
@@ -69,7 +72,7 @@ const EstablishmentOpeningStatus = props => (
         </MultiChoice>
       </ContentItem.B_45_30>
 
-      <ContinueButton />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );

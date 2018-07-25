@@ -1,6 +1,7 @@
 const {
   cleanEmptiedAnswers
 } = require("../services/session-management.service");
+const { changeSwitch } = require("../services/switches.service");
 
 const switchesController = (
   currentSwitchState,
@@ -14,14 +15,7 @@ const switchesController = (
     newSwitchState: undefined
   };
 
-  const newState =
-    action === "on"
-      ? true
-      : action === "off"
-        ? false
-        : action === "toggle"
-          ? !currentSwitchState
-          : undefined;
+  const newState = changeSwitch(action, currentSwitchState);
 
   controllerResponse.newSwitchState = newState;
 
