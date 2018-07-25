@@ -46,7 +46,7 @@ const CustomerType = props => (
         </MultiChoice>
       </ContentItem.B_45_30>
 
-      <ContinueButton type="continue" />
+      <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
 );
