@@ -52,9 +52,10 @@ const continueController = (
     return controllerResponse;
   }
 
-  if (switches.editMode === true) {
+  if (switches && switches.editMode === true) {
     // if edit mode is on, redirect to the summary page
     controllerResponse.redirectRoute = "/registration-summary";
+    controllerResponse.switches.editMode = false;
     return controllerResponse;
   }
 
