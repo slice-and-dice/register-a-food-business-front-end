@@ -102,6 +102,25 @@ describe("Function: continueController: ", () => {
       });
     });
 
+    describe("When the switches are undefined", () => {
+      beforeEach(() => {
+        validate.mockImplementation(() => ({
+          errors: {}
+        }));
+        moveAlongPath.mockImplementation(() => "/nextPage");
+        response = continueController(
+          "/some-page",
+          {},
+          exampleAnswers,
+          undefined
+        );
+      });
+
+      it("Should return a redirect route", () => {
+        expect(response.redirectRoute).toBeDefined();
+      });
+    });
+
     describe("When the current page is NOT at the end of the path", () => {
       beforeEach(() => {
         validate.mockImplementation(() => ({
@@ -131,6 +150,10 @@ describe("Function: continueController: ", () => {
 
         it("Should set redirect route to /registration-summary", () => {
           expect(response.redirectRoute).toBe("/registration-summary");
+        });
+
+        it("Should switch edit mode to false", () => {
+          expect(response.switches.editMode).toBe(false);
         });
       });
 
