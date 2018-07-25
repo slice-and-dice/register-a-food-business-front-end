@@ -15,16 +15,14 @@ const RegistrationSummary = props => {
   return (
     <FsaLayout>
       <BackButton editMode={props.editMode} originator="registration-summary" />
-      <Header level={3}>
-        Please check that the details you entered are correct.
-      </Header>
+      <Header level={2}>Check your answers</Header>
 
       <ContentItem.B_30_15>
         <SummaryTable {...transformedData} />
       </ContentItem.B_30_15>
 
       <form action="/continue/registration-summary" method="post">
-        <ContinueButton editMode={props.editMode} />
+        <ContinueButton />
       </form>
     </FsaLayout>
   );

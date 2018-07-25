@@ -39,9 +39,6 @@ const OperatorDetailsTable = props => (
       <Table.Cell>
         <div />
       </Table.Cell>
-      <Table.Cell>
-        <div />
-      </Table.Cell>
     </Table.Row>
 
     {props.operator_company_name ? (
@@ -258,9 +255,6 @@ const EstablishmentDetailsTable = props => (
       <Table.CellHeader>
         <Paragraph mb={0}>**Establishment details**</Paragraph>
       </Table.CellHeader>
-      <Table.Cell>
-        <div />
-      </Table.Cell>
       <Table.Cell>
         <div />
       </Table.Cell>
