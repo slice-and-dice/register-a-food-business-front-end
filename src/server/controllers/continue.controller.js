@@ -52,6 +52,12 @@ const continueController = (
     return controllerResponse;
   }
 
+  if (switches.editMode === true) {
+    // if edit mode is on, redirect to the summary page
+    controllerResponse.redirectRoute = "/registration-summary";
+    return controllerResponse;
+  }
+
   const cumulativeAnswersArray = Object.values(
     controllerResponse.cumulativeAnswers
   );

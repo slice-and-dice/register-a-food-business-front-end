@@ -122,6 +122,21 @@ describe("Function: continueController: ", () => {
         expect(response.cumulativeAnswers).toBeDefined();
       });
 
+      describe("When editMode is true", () => {
+        beforeEach(() => {
+          validate.mockImplementation(() => ({
+            errors: {}
+          }));
+          response = continueController("/some-page", {}, exampleAnswers, {
+            editMode: true
+          });
+        });
+
+        it("Should set redirect route to /registration-summary", () => {
+          expect(response.redirectRoute).toBe("/registration-summary");
+        });
+      });
+
       it("Should use cumulativePathAnswers to create the newPath", () => {
         expect(editPath.mock.calls[0][0]).toEqual(["answer-pathAnswer"]);
       });
@@ -130,47 +145,117 @@ describe("Function: continueController: ", () => {
         expect(response.redirectRoute).toBe("/nextPage");
       });
     });
+  });
 
-    describe("When there are validator errors: ", () => {
+  describe("When there are validator errors: ", () => {
+    beforeEach(() => {
+      validate.mockImplementation(() => ({
+        errors: { some: "error" }
+      }));
+      response = continueController(
+        "/mock-page-1",
+        {},
+        exampleAnswers,
+        exampleSwitches
+      );
+    });
+
+    it("should set redirectRoute to the currentPage", () => {
+      expect(response.redirectRoute).toBe("/mock-page-1");
+    });
+
+    describe("when there are switches and validator errors", () => {
       beforeEach(() => {
-        validate.mockImplementation(() => ({
-          errors: { some: "error" }
+        cleanSwitches.mockImplementation(() => ({
+          switch1: false,
+          switch2: true
         }));
+      });
+
+      it("should clean the switches as usual", () => {
         response = continueController(
           "/mock-page-1",
           {},
           exampleAnswers,
           exampleSwitches
         );
+        expect(response.switches).toEqual({ switch1: false, switch2: true });
       });
-      it("should set redirectRoute to the currentPage", () => {
-        expect(response.redirectRoute).toBe("/mock-page-1");
+
+      describe("When editMode is true", () => {
+        beforeEach(() => {
+          response = continueController("/some-page", {}, exampleAnswers, {
+            editMode: true
+          });
+        });
+
+        it("Should set redirect route to the same page", () => {
+          expect(response.redirectRoute).toBe("/some-page");
+        });
+      });
+    });
+  });
+
+  describe("When there are no switches: ", () => {
+    cleanSwitches.mockImplementation(() => {});
+
+    it("should return an empty switches object", () => {
+      const exampleEmptySwitches = [{}, undefined, null];
+
+      response = continueController(
+        "/mock-page-1",
+        {},
+        exampleAnswers,
+        exampleEmptySwitches
+      );
+
+      expect(response.switches).toEqual({});
+    });
+  });
+
+  describe("When switches are passed in: ", () => {
+    beforeEach(() => {
+      cleanSwitches.mockImplementation(() => exampleSwitches);
+    });
+
+    it("should return the same object keys", () => {
+      response = continueController(
+        "/mock-page-1",
+        {},
+        exampleAnswers,
+        exampleSwitches
+      );
+
+      const originalSwitchesKeyArray = Object.keys(exampleSwitches);
+      const responseSwitchesKeyArray = Object.keys(response.switches);
+
+      expect(originalSwitchesKeyArray).toEqual(responseSwitchesKeyArray);
+    });
+
+    it("should return boolean values", () => {
+      response = continueController(
+        "/mock-page-1",
+        {},
+        exampleAnswers,
+        exampleSwitches
+      );
+
+      const responseSwitchesValueArray = Object.values(response.switches);
+
+      responseSwitchesValueArray.forEach(value => {
+        expect(typeof value).toBe("boolean");
       });
     });
 
-    describe("When there are no switches: ", () => {
-      cleanSwitches.mockImplementation(() => {});
-
-      it("should return an empty switches object", () => {
-        const exampleEmptySwitches = [{}, undefined, null];
-
-        response = continueController(
-          "/mock-page-1",
-          {},
-          exampleAnswers,
-          exampleEmptySwitches
-        );
-
-        expect(response.switches).toEqual({});
-      });
-    });
-
-    describe("When switches are passed in: ", () => {
+    describe("when cleanSwitches changes the switches that were passed in", () => {
       beforeEach(() => {
-        cleanSwitches.mockImplementation(() => exampleSwitches);
+        cleanSwitches.mockImplementation(() => ({
+          switch1: false,
+          switch2: true
+        }));
       });
 
-      it("should return the same object keys", () => {
+      it("should return the result of cleanSwitches, not the original values", () => {
         response = continueController(
           "/mock-page-1",
           {},
@@ -178,64 +263,7 @@ describe("Function: continueController: ", () => {
           exampleSwitches
         );
 
-        const originalSwitchesKeyArray = Object.keys(exampleSwitches);
-        const responseSwitchesKeyArray = Object.keys(response.switches);
-
-        expect(originalSwitchesKeyArray).toEqual(responseSwitchesKeyArray);
-      });
-
-      it("should return boolean values", () => {
-        response = continueController(
-          "/mock-page-1",
-          {},
-          exampleAnswers,
-          exampleSwitches
-        );
-
-        const responseSwitchesValueArray = Object.values(response.switches);
-
-        responseSwitchesValueArray.forEach(value => {
-          expect(typeof value).toBe("boolean");
-        });
-      });
-
-      describe("when cleanSwitches changes the switches that were passed in", () => {
-        beforeEach(() => {
-          cleanSwitches.mockImplementation(() => ({
-            switch1: false,
-            switch2: true
-          }));
-        });
-
-        it("should return the result of cleanSwitches, not the original values", () => {
-          response = continueController(
-            "/mock-page-1",
-            {},
-            exampleAnswers,
-            exampleSwitches
-          );
-
-          expect(response.switches).toEqual({ switch1: false, switch2: true });
-        });
-      });
-
-      describe("when there are switches and validator errors", () => {
-        beforeEach(() => {
-          cleanSwitches.mockImplementation(() => ({
-            switch1: false,
-            switch2: true
-          }));
-        });
-
-        it("should process the switches as usual", () => {
-          response = continueController(
-            "/mock-page-1",
-            { errorName: "error" },
-            exampleAnswers,
-            exampleSwitches
-          );
-          expect(response.switches).toEqual({ switch1: false, switch2: true });
-        });
+        expect(response.switches).toEqual({ switch1: false, switch2: true });
       });
     });
   });
