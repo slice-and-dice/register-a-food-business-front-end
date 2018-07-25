@@ -43,7 +43,7 @@
     "on": false,
     "switches": {}
   },
-  "/operator-address": {
+  "/operator-address-manual": {
     "on": true,
     "switches": {}
   },
@@ -59,7 +59,7 @@
     "on": true,
     "switches": {}
   },
-  "/establishment-address": {
+  "/establishment-address-manual": {
     "on": true,
     "switches": {}
   },

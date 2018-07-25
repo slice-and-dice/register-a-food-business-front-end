@@ -33,7 +33,7 @@ const EstablishmentAddress = props => (
     </HiddenText>
 
     <form
-      action={`/continue/establishment-address/${props.editMode}`}
+      action={`/continue/establishment-address-manual/${props.editMode}`}
       method="post"
     >
       <ContentItem.B_30_15>

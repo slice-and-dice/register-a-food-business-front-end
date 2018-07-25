@@ -407,7 +407,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         <a
           className="emotion-8"
           disabled={undefined}
-          href="/edit/operator-address"
+          href="/edit/operator-address-manual"
           id="changeOperatorAddressRow"
           onClick={undefined}
         >
@@ -675,7 +675,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         <a
           className="emotion-8"
           disabled={undefined}
-          href="/edit/establishment-address"
+          href="/edit/establishment-address-manual"
           id="changeEstablishmentAddressRow"
           onClick={undefined}
         >

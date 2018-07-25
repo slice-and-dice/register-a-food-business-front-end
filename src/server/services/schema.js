@@ -63,7 +63,7 @@ const schema = {
       }
     }
   },
-  "/operator-address": {
+  "/operator-address-manual": {
     type: "object",
     properties: {
       operator_first_line: {
@@ -174,7 +174,7 @@ const schema = {
       }
     }
   },
-  "/establishment-address": {
+  "/establishment-address-manual": {
     type: "object",
     properties: {
       establishment_postcode: {

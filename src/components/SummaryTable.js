@@ -339,6 +339,7 @@ const EstablishmentDetailsTable = props => (
             </div>
           </div>
         </Table.Cell>
+<<<<<<< HEAD
         {props.hideChangeButtons ? null : (
           <Table.Cell className="summaryTableChangeCell">
             <AnchorTag
@@ -349,6 +350,16 @@ const EstablishmentDetailsTable = props => (
             </AnchorTag>
           </Table.Cell>
         )}
+=======
+        <Table.Cell className="summaryTableChangeCell">
+          <AnchorTag
+            id="changeEstablishmentAddressRow"
+            href="/edit/establishment-address-manual"
+          >
+            Change
+          </AnchorTag>
+        </Table.Cell>
+>>>>>>> Create manual address lookup for operator and establishment
       </Table.Row>
     ) : null}
 

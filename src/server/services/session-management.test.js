@@ -21,7 +21,7 @@ const pathObject = {
     on: true,
     switches: {}
   },
-  "/establishment-address": {
+  "/establishment-address-manual": {
     on: false,
     switches: {}
   },

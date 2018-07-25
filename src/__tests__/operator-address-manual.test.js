@@ -1,4 +1,4 @@
-import OperatorAddress from "../../pages/operator-address";
+import OperatorAddress from "../../pages/operator-address-manual";
 import { mount, shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";

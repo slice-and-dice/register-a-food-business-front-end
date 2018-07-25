@@ -27,7 +27,10 @@ const OperatorAddress = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action={`/continue/operator-address/${props.editMode}`} method="post">
+    <form
+      action={`/continue/operator-address-manual/${props.editMode}`}
+      method="post"
+    >
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField
