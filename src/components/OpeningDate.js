@@ -27,7 +27,10 @@ const OpeningDate = props => {
         </Paragraph>
       </ContentItem.B_30_15>
 
-      <HiddenText summaryText={"What is an establishment?"}>
+      <HiddenText
+        id="hiddenTextEstablishment"
+        summaryText={"What is an establishment?"}
+      >
         <Paragraph mb={0}>
           An establishment is the location of your food business, and the food
           activities taking place there. If it is a mobile food business, please
@@ -56,6 +59,7 @@ const OpeningDate = props => {
               </DateInput>
               <ContentItem.B_30_15>
                 <HiddenText
+                  id="hiddenTextTradingDate"
                   summaryText={
                     "I don't know when this establishment will begin trading"
                   }

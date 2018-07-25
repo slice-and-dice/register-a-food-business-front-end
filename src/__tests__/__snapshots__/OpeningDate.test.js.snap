@@ -869,6 +869,7 @@ exports[`<OpeningDate /> matches the previous snapshot 1`] = `
           </div>
           <details
             className="emotion-30"
+            id="hiddenTextEstablishment"
           >
             <summary
               className="emotion-27"

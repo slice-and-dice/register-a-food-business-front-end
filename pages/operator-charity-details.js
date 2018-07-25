@@ -22,7 +22,10 @@ const OperatorCharityDetails = props => (
     />
     <Header level={2}>Details of the operating charity</Header>
 
-    <HiddenText summaryText={"What is a food business operator?"}>
+    <HiddenText
+      id="hiddenTextFBO"
+      summaryText={"What is a food business operator?"}
+    >
       <Paragraph mb={0}>
         A food business operator is the person, charity or company who makes the
         decisions about the food business, what it serves and how it operates.
@@ -65,7 +68,10 @@ const OperatorCharityDetails = props => (
           </InputField>
         </ContentItem.B_30_15>
 
-        <HiddenText summaryText={"Questions about charity reference numbers"}>
+        <HiddenText
+          id="hiddenTextCharityNumbers"
+          summaryText={"Questions about charity reference numbers"}
+        >
           <span>
             Charities that are registered with the Charities Commission will
             have a charity reference number. You can find your charity reference
