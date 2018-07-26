@@ -55,7 +55,6 @@ const EstablishmentAddress = props => (
       <ContentItem.B_45_30>
         <FindAddressButton />
       </ContentItem.B_45_30>
-      {/* <ContinueButton editMode={props.switches.editMode} /> */}
     </form>
   </FsaLayout>
 );
