@@ -9,12 +9,12 @@ const OpeningDate = props => {
       {props.cumulativeAnswers.establishment_opening_status ===
       "Establishment is not trading yet" ? (
         <BackButton
-          editMode={props.switches.editMode}
+          editMode={props.editMode}
           originator="establishment-opening-date-proactive"
         />
       ) : (
         <BackButton
-          editMode={props.switches.editMode}
+          editMode={props.editMode}
           originator="establishment-opening-date-retroactive"
         />
       )}
@@ -40,7 +40,9 @@ const OpeningDate = props => {
       {props.cumulativeAnswers.establishment_opening_status ===
       "Establishment is not trading yet" ? (
         <form
-          action="/continue/establishment-opening-date-proactive"
+          action={`/continue/establishment-opening-date-proactive/${
+            props.editMode
+          }`}
           method="post"
         >
           <ContentItem.B_30_15>
@@ -74,11 +76,13 @@ const OpeningDate = props => {
               </ContentItem.B_30_15>
             </div>
           </ContentItem.B_30_15>
-          <ContinueButton editMode={props.switches.editMode} />
+          <ContinueButton editMode={props.editMode} />
         </form>
       ) : (
         <form
-          action="/continue/establishment-opening-date-retroactive"
+          action={`/continue/establishment-opening-date-retroactive/${
+            props.editMode
+          }`}
           method="post"
         >
           <ContentItem.B_30_15>
@@ -93,7 +97,7 @@ const OpeningDate = props => {
               </span>
             </DateInput>
           </ContentItem.B_30_15>
-          <ContinueButton editMode={props.switches.editMode} />
+          <ContinueButton editMode={props.editMode} />
         </form>
       )}
     </FsaLayout>

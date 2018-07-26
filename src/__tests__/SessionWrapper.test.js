@@ -50,22 +50,22 @@ describe("<SessionWrapper />", () => {
     });
 
     describe("given a url query that includes an edit value", () => {
-      it("returns an switches.editMode value that is true", () => {
+      it("returns an editMode value that is true", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
         const initialProps = WrappedComponent.getInitialProps({
           req: { session: {}, query: { edit: "on" } }
         });
-        expect(initialProps.switches.editMode).toBe(true);
+        expect(initialProps.editMode).toBe(true);
       });
     });
 
     describe("given a url query that does not include an edit value", () => {
-      it("returns an switches.editMode value that is false", () => {
+      it("returns an editMode value that is false", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
         const initialProps = WrappedComponent.getInitialProps({
           req: { session: {}, query: {} }
         });
-        expect(initialProps.switches.editMode).toBe(false);
+        expect(initialProps.editMode).toBe(false);
       });
     });
 
@@ -108,7 +108,7 @@ describe("<SessionWrapper />", () => {
           req: { session: {} }
         });
         const componentProps = WrappedComponent(initialProps).props;
-        expect(componentProps.switches.editMode).toBeDefined();
+        expect(componentProps.editMode).toBeDefined();
       });
     });
 
@@ -145,7 +145,7 @@ describe("<SessionWrapper />", () => {
         });
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.switches.test).toBe(true);
-        expect(componentProps.switches.editMode).toBeDefined();
+        expect(componentProps.editMode).toBeDefined();
       });
     });
   });

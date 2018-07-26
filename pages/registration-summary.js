@@ -14,10 +14,7 @@ const RegistrationSummary = props => {
   const transformedData = transformAnswersForSubmit(props.cumulativeAnswers);
   return (
     <FsaLayout>
-      <BackButton
-        editMode={props.switches.editMode}
-        originator="registration-summary"
-      />
+      <BackButton editMode={props.editMode} originator="registration-summary" />
       <Header level={3}>
         Please check that the details you entered are correct.
       </Header>
@@ -27,7 +24,7 @@ const RegistrationSummary = props => {
       </ContentItem.B_30_15>
 
       <form action="/continue/registration-summary" method="post">
-        <ContinueButton editMode={props.switches.editMode} />
+        <ContinueButton editMode={props.editMode} />
       </form>
     </FsaLayout>
   );

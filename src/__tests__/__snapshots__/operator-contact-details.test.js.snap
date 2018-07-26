@@ -1010,7 +1010,7 @@ exports[`<OperatorContactDetails /> matches the previous snapshot 1`] = `
             </div>
           </details>
           <form
-            action="/continue/operator-contact-details"
+            action="/continue/operator-contact-details/undefined"
             method="post"
           >
             <div

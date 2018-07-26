@@ -155,10 +155,6 @@ describe("Function: continueController: ", () => {
         it("Should set redirect route to /registration-summary", () => {
           expect(response.redirectRoute).toBe("/registration-summary");
         });
-
-        it("Should switch edit mode to false", () => {
-          expect(response.switches.editMode).toBe(false);
-        });
       });
 
       it("Should use cumulativePathAnswers to create the newPath", () => {

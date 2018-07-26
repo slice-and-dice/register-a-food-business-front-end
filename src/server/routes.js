@@ -11,7 +11,7 @@ const switchesController = require("./controllers/switches.controller");
 module.exports = () => {
   const router = Router();
 
-  router.post("/continue/:originator/:editMode", (req, res) => {
+  router.post("/continue/:originator/:editMode?", (req, res) => {
     info(`Routes: /continue route called`);
 
     const editMode = req.params.editMode === "true" ? true : false;

@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 
 const OperatorType = props => (
   <FsaLayout>
-    <BackButton editMode={props.switches.editMode} originator="operator-type" />
+    <BackButton editMode={props.editMode} originator="operator-type" />
     <Header level={2}>Who operates this business?</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>
@@ -22,7 +22,7 @@ const OperatorType = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action="/continue/operator-type" method="post">
+    <form action={`/continue/operator-type/${props.editMode}`} method="post">
       <ContentItem.B_45_30>
         <MultiChoice
           label=""
@@ -76,7 +76,7 @@ const OperatorType = props => (
         </MultiChoice>
       </ContentItem.B_45_30>
 
-      <ContinueButton editMode={props.switches.editMode} />
+      <ContinueButton editMode={props.editMode} />
     </form>
   </FsaLayout>
 );

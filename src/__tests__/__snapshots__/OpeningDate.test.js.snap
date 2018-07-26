@@ -893,7 +893,7 @@ exports[`<OpeningDate /> matches the previous snapshot 1`] = `
             </div>
           </details>
           <form
-            action="/continue/establishment-opening-date-retroactive"
+            action="/continue/establishment-opening-date-retroactive/undefined"
             method="post"
           >
             <div

@@ -44,7 +44,7 @@ describe("Router: ", () => {
 
     it("should set up continue route", () => {
       expect(router.post.mock.calls[0][0]).toBe(
-        "/continue/:originator/:editMode"
+        "/continue/:originator/:editMode?"
       );
     });
 
@@ -75,7 +75,7 @@ describe("Router: ", () => {
     });
   });
 
-  describe("POST to /continue/:originator/:editMode", () => {
+  describe("POST to /continue/:originator/:editMode?", () => {
     let req, res;
 
     beforeEach(async () => {

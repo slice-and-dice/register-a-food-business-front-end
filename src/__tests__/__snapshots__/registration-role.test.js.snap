@@ -730,7 +730,7 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
             What is your role in this food business?
           </h2>
           <form
-            action="/continue/registration-role"
+            action="/continue/registration-role/undefined"
             method="post"
           >
             <div

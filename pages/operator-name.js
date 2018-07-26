@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 
 const OperatorName = props => (
   <FsaLayout>
-    <BackButton editMode={props.switches.editMode} originator="operator-name" />
+    <BackButton editMode={props.editMode} originator="operator-name" />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}
@@ -25,7 +25,7 @@ const OperatorName = props => (
         operates.
       </Paragraph>
     </HiddenText>
-    <form action="/continue/operator-name" method="post">
+    <form action={`/continue/operator-name/${props.editMode}`} method="post">
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField
@@ -61,7 +61,7 @@ const OperatorName = props => (
           </InputField>
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
-      <ContinueButton editMode={props.switches.editMode} />
+      <ContinueButton editMode={props.editMode} />
     </form>
   </FsaLayout>
 );

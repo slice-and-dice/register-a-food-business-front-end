@@ -12,10 +12,7 @@ import PropTypes from "prop-types";
 
 const OperatorAddress = props => (
   <FsaLayout>
-    <BackButton
-      editMode={props.switches.editMode}
-      originator="operator-address"
-    />
+    <BackButton editMode={props.editMode} originator="operator-address" />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}
@@ -30,7 +27,7 @@ const OperatorAddress = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action="/continue/operator-address" method="post">
+    <form action={`/continue/operator-address/${props.editMode}`} method="post">
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField
@@ -102,7 +99,7 @@ const OperatorAddress = props => (
           </InputField>
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
-      <ContinueButton editMode={props.switches.editMode} />
+      <ContinueButton editMode={props.editMode} />
     </form>
   </FsaLayout>
 );

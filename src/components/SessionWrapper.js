@@ -15,9 +15,10 @@ const SessionWrapper = Page => {
         req && req.session && req.session.switches ? req.session.switches : {},
       referenceNumber: "34672462"
     };
+
     req && req.query && req.query.edit === "on"
-      ? (initialProps.switches.editMode = true)
-      : (initialProps.switches.editMode = false);
+      ? (initialProps.editMode = true)
+      : (initialProps.editMode = false);
 
     return initialProps;
   };
