@@ -143,9 +143,13 @@ describe("Function: continueController: ", () => {
 
       describe("When editMode is true", () => {
         beforeEach(() => {
-          response = continueController("/some-page", {}, exampleAnswers, {
-            editMode: true
-          });
+          response = continueController(
+            "/some-page",
+            {},
+            exampleAnswers,
+            {},
+            true
+          );
         });
 
         it("Should set redirect route to /registration-summary", () => {
@@ -204,13 +208,17 @@ describe("Function: continueController: ", () => {
 
       describe("When editMode is true", () => {
         beforeEach(() => {
-          response = continueController("/some-page", {}, exampleAnswers, {
-            editMode: true
-          });
+          response = continueController(
+            "/some-page",
+            {},
+            exampleAnswers,
+            {},
+            true
+          );
         });
 
-        it("Should set redirect route to the same page", () => {
-          expect(response.redirectRoute).toBe("/some-page");
+        it("Should set redirect route to the same page but with the edit=on query", () => {
+          expect(response.redirectRoute).toBe("/some-page?edit=on");
         });
       });
     });

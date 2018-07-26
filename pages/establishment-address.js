@@ -35,7 +35,10 @@ const EstablishmentAddress = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action="/continue/establishment-address" method="post">
+    <form
+      action={`/continue/establishment-address/${props.switches.editMode}`}
+      method="post"
+    >
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField

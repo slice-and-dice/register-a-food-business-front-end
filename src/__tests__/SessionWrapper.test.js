@@ -49,6 +49,26 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.switches).toBe("object");
     });
 
+    describe("given a url query that includes an edit value", () => {
+      it("returns an switches.editMode value that is true", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: {}, query: { edit: "on" } }
+        });
+        expect(initialProps.switches.editMode).toBe(true);
+      });
+    });
+
+    describe("given a url query that does not include an edit value", () => {
+      it("returns an switches.editMode value that is false", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: {}, query: {} }
+        });
+        expect(initialProps.switches.editMode).toBe(false);
+      });
+    });
+
     it("returns 'validatorErrors', 'cumulativeAnswers' and 'switches' even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
@@ -82,13 +102,13 @@ describe("<SessionWrapper />", () => {
     });
 
     describe("given that req.session.switches is undefined", () => {
-      it("props.switches is an empty object", () => {
+      it("props.switches is object with an editMode property", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
         const initialProps = WrappedComponent.getInitialProps({
           req: { session: {} }
         });
         const componentProps = WrappedComponent(initialProps).props;
-        expect(componentProps.switches).toEqual({});
+        expect(componentProps.switches.editMode).toBeDefined();
       });
     });
 
@@ -117,14 +137,15 @@ describe("<SessionWrapper />", () => {
     });
 
     describe("given that req.session.switches is defined", () => {
-      it("props.switches is the same as the session.switches", () => {
+      it("props.switches is the same as the session.switches but with an editMode property", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
         const exampleSwitches = { test: true };
         const initialProps = WrappedComponent.getInitialProps({
           req: { session: { switches: exampleSwitches } }
         });
         const componentProps = WrappedComponent(initialProps).props;
-        expect(componentProps.switches).toBe(exampleSwitches);
+        expect(componentProps.switches.test).toBe(true);
+        expect(componentProps.switches.editMode).toBeDefined();
       });
     });
   });

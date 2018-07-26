@@ -19,14 +19,12 @@ jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
 jest.mock("./controllers/switches.controller");
-jest.mock("./services/switches.service");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
 const switchesController = require("./controllers/switches.controller");
-const { changeSwitch } = require("./services/switches.service");
 const routes = require("./routes");
 
 describe("Router: ", () => {
@@ -45,7 +43,9 @@ describe("Router: ", () => {
     });
 
     it("should set up continue route", () => {
-      expect(router.post.mock.calls[0][0]).toBe("/continue/:originator");
+      expect(router.post.mock.calls[0][0]).toBe(
+        "/continue/:originator/:editMode"
+      );
     });
 
     it("should set up back route", () => {
@@ -75,7 +75,7 @@ describe("Router: ", () => {
     });
   });
 
-  describe("POST to /continue/:originator", () => {
+  describe("POST to /continue/:originator/:editMode", () => {
     let req, res;
 
     beforeEach(async () => {
@@ -97,7 +97,8 @@ describe("Router: ", () => {
         },
         body: "body",
         params: {
-          originator: "originator"
+          originator: "originator",
+          editMode: "false"
         }
       };
 
@@ -108,12 +109,13 @@ describe("Router: ", () => {
       handler(req, res);
     });
 
-    it("Should call continueController with currentPage, cumulativeAnswers and body", () => {
+    it("Should call continueController with currentPage, cumulativeAnswers, body, switches, and editMode", () => {
       expect(continueController).toHaveBeenCalledWith(
         "/originator",
         {},
         "body",
-        {}
+        {},
+        false
       );
     });
 
@@ -124,6 +126,60 @@ describe("Router: ", () => {
 
     it("Should redirect to next page", () => {
       expect(res.redirect).toBeCalledWith("/newPage");
+    });
+
+    describe("given that editMode is on", () => {
+      let req, res;
+
+      beforeEach(async () => {
+        continueController.mockImplementation(() => ({
+          validatorErrors: {},
+          redirectRoute: "/newPage",
+          cumulativeAnswers: {
+            new: "answers"
+          },
+          switches: { exampleSwitch: true }
+        }));
+
+        handler = router.post.mock.calls[0][1];
+
+        req = {
+          session: {
+            cumulativeAnswers: {},
+            switches: {}
+          },
+          body: "body",
+          params: {
+            originator: "originator",
+            editMode: "true"
+          }
+        };
+
+        res = {
+          redirect: jest.fn()
+        };
+
+        handler(req, res);
+      });
+
+      it("Should call continueController with editMode on", () => {
+        expect(continueController).toHaveBeenCalledWith(
+          "/originator",
+          {},
+          "body",
+          {},
+          true
+        );
+      });
+
+      it("Should update session", () => {
+        expect(req.session.cumulativeAnswers).toEqual({ new: "answers" });
+        expect(req.session.switches).toEqual({ exampleSwitch: true });
+      });
+
+      it("Should redirect to next page", () => {
+        expect(res.redirect).toBeCalledWith("/newPage");
+      });
     });
   });
 
@@ -299,7 +355,7 @@ describe("Router: ", () => {
 
   describe("GET to /edit/:target", () => {
     const req = {
-      session: { switches: {} },
+      session: {},
       params: { target: "examplePage" }
     };
     const res = {
@@ -307,32 +363,12 @@ describe("Router: ", () => {
     };
 
     beforeEach(async () => {
-      changeSwitch.mockImplementation(() => true);
       handler = router.get.mock.calls[3][1];
       handler(req, res);
     });
 
-    it("Should call changeSwitch function", () => {
-      expect(changeSwitch).toHaveBeenCalledWith("on");
-    });
-
-    it("Should call res.redirect with target of examplePage", () => {
-      expect(res.redirect).toHaveBeenCalledWith("/examplePage");
-    });
-
-    it("Should set editMode to true", () => {
-      expect(req.session.switches.editMode).toBe(true);
-    });
-
-    describe("Given there is no switches object", () => {
-      beforeEach(async () => {
-        req.session.switches = undefined;
-        handler(req, res);
-      });
-
-      it("Should call res.redirect with target of examplePage", () => {
-        expect(res.redirect).toHaveBeenCalledWith("/examplePage");
-      });
+    it("Should call res.redirect with target of examplePage and a query of edit=on", () => {
+      expect(res.redirect).toHaveBeenCalledWith("/examplePage?edit=on");
     });
   });
 

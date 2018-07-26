@@ -7,18 +7,21 @@ const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
 const switchesController = require("./controllers/switches.controller");
-const { changeSwitch } = require("./services/switches.service");
 
 module.exports = () => {
   const router = Router();
 
-  router.post("/continue/:originator", (req, res) => {
+  router.post("/continue/:originator/:editMode", (req, res) => {
     info(`Routes: /continue route called`);
+
+    const editMode = req.params.editMode === "true" ? true : false;
+
     const response = continueController(
       `/${req.params.originator}`,
       req.session.cumulativeAnswers,
       req.body,
-      req.session.switches
+      req.session.switches,
+      editMode
     );
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
@@ -93,15 +96,10 @@ module.exports = () => {
   router.get("/edit/:target", (req, res) => {
     info(`Routes: /edit/:target route called`);
 
-    if (!req.session.switches) {
-      req.session.switches = {};
-    }
-    const switchValue = changeSwitch("on");
-    req.session.switches.editMode = switchValue;
+    const target = req.params.target;
 
     info(`Routes: /edit/:target route finished`);
-    const target = req.params.target;
-    res.redirect(`/${target}`);
+    res.redirect(`/${target}?edit=on`);
   });
 
   router.get("*", (req, res) => {
