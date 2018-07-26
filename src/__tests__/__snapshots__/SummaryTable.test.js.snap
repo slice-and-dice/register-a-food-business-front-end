@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-94 {
+.emotion-98 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-94 {
+  .emotion-98 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -132,7 +132,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
   color: #2e358b;
 }
 
-.emotion-50 {
+.emotion-51 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -148,14 +148,14 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-50 {
+  .emotion-51 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 <table
-  className="emotion-94"
+  className="emotion-98"
 >
   <caption
     className="emotion-0"
@@ -475,6 +475,11 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           Sole trader
         </div>
       </td>
+      <td
+        className="emotion-2"
+      >
+        <div />
+      </td>
     </tr>
     <tr
       className="emotion-5"
@@ -522,7 +527,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         className="summaryTableDataCell emotion-2"
       >
         <div
-          className="emotion-50 emotion-51"
+          className="emotion-51 emotion-52"
         >
           <div
             display={true}
@@ -532,7 +537,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </div>
         </div>
         <div
-          className="emotion-50 emotion-51"
+          className="emotion-51 emotion-52"
         >
           <div
             id="contact_representative_role"
@@ -771,6 +776,11 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           06 Dec 2018
         </div>
       </td>
+      <td
+        className="emotion-2"
+      >
+        <div />
+      </td>
     </tr>
     <tr
       className="emotion-5"
@@ -788,6 +798,11 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           </p>
         </div>
       </th>
+      <td
+        className="emotion-2"
+      >
+        <div />
+      </td>
       <td
         className="emotion-2"
       >
@@ -812,6 +827,11 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
         >
           End consumer and Other buisnesses
         </div>
+      </td>
+      <td
+        className="emotion-2"
+      >
+        <div />
       </td>
     </tr>
   </tbody>
