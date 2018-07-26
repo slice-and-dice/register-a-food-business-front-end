@@ -3,8 +3,6 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  ProcessedErrorSummary,
-  OnHandleErrorClick,
   ContinueButton
 } from "../src/components";
 import { Header, HiddenText, Paragraph, Select, asAnchor } from "govuk-react";
@@ -18,10 +16,6 @@ const OperatorAddressLookup = props => (
       editMode={props.switches.editMode}
       originator="operator-address-select"
     />
-    <ProcessedErrorSummary
-      validatorErrors={props.validatorErrors}
-      onHandleErrorClick={OnHandleErrorClick}
-    />
     <Header level={2}>What is the operator's address?</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>
@@ -32,20 +26,20 @@ const OperatorAddressLookup = props => (
       </Paragraph>
     </HiddenText>
     <Header level={3}>Postcode</Header>
-    <Header level={4}>
-      {props.cumulativeAnswers.operator_postcode}
-      <AnchorTag id="changePostcode" href="/operator-address">
+    <Header id="operatorPostcodeDisplay" level={4}>
+      {`${props.cumulativeAnswers.operator_postcode} \u2007`}
+      <AnchorTag id="changeOperatorPostcode" href="/operator-address">
         Change
       </AnchorTag>
     </Header>
     <Header level={3}>Select an address</Header>
-    <Select name="address-lookup">
+    <Select id="operatorAddressDropdown" name="address-lookup">
       <option value="0">GOV.UK elements option 1</option>
       <option value="1">GOV.UK elements option 2</option>
       <option value="2">GOV.UK elements option 3</option>
     </Select>
     <ContentItem.B_30_15>
-      <AnchorTag id="cantFindAddress" href="/operator-address-select">
+      <AnchorTag id="cantFindAddress" href="/operator-address-manual">
         I can't find my address in the list
       </AnchorTag>
     </ContentItem.B_30_15>
