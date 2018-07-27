@@ -1,9 +1,10 @@
 import {
   transformAnswersForSubmit,
+  transformAnswersForSummary,
   combineDate
 } from "./data-transform.service";
 
-describe("data-transform.service transformAnswersForSubmit()", () => {
+describe("data-transform.service transformAnswersForSummary()", () => {
   const testCumulativeAnswers = {
     operator_first_name: "John",
     operator_last_name: "Appleseed",
@@ -14,7 +15,7 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
 
   describe("given a cumulative answers object", () => {
     it("returns an object", () => {
-      const result = transformAnswersForSubmit(testCumulativeAnswers);
+      const result = transformAnswersForSummary(testCumulativeAnswers);
       expect(typeof result).toBe("object");
     });
     describe("Given that supply_other and supply_directly are part of cumulative answers", () => {
@@ -23,7 +24,7 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
         supply_directly: "True"
       };
       it("Should return a customer_type value of 'End consumer and other businesses'", () => {
-        const result = transformAnswersForSubmit(supplyBoth);
+        const result = transformAnswersForSummary(supplyBoth);
         expect(result.customer_type).toBe("End consumer and other businesses");
       });
     });
@@ -34,7 +35,7 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
       };
 
       it("Should return a customer_type value of 'Other businesses'", () => {
-        const result = transformAnswersForSubmit(supplyDirectlyOnly);
+        const result = transformAnswersForSummary(supplyDirectlyOnly);
         expect(result.customer_type).toBe("Other businesses");
       });
     });
@@ -45,7 +46,7 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
       };
 
       it("Should return a customer_type value of 'End consumer'", () => {
-        const result = transformAnswersForSubmit(supplyDirectlyOnly);
+        const result = transformAnswersForSummary(supplyDirectlyOnly);
         expect(result.customer_type).toBe("End consumer");
       });
     });
@@ -57,14 +58,14 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
       };
 
       it("the transformed data contains a field called operator_type that equals the passed registration_role data", () => {
-        const result = transformAnswersForSubmit(registrationRoleOnly);
+        const result = transformAnswersForSummary(registrationRoleOnly);
         expect(result.operator_type).toEqual(
           registrationRoleOnly.registration_role
         );
       });
 
       it("the transformed data does not contain a field called registration_role", () => {
-        const result = transformAnswersForSubmit(registrationRoleOnly);
+        const result = transformAnswersForSummary(registrationRoleOnly);
         expect(result.registration_role).toBe(undefined);
       });
     });
@@ -77,7 +78,7 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
       };
 
       it("the transformed data contains a field called operator_type that does not equal the passed registration_role data", () => {
-        const result = transformAnswersForSubmit(
+        const result = transformAnswersForSummary(
           registrationRoleAndOperatorType
         );
         expect(result.operator_type).not.toEqual(
@@ -86,14 +87,14 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
       });
 
       it("the transformed data does not contain a field called registration_role", () => {
-        const result = transformAnswersForSubmit(
+        const result = transformAnswersForSummary(
           registrationRoleAndOperatorType
         );
         expect(result.registration_role).toBe(undefined);
       });
 
       it("the transformed data contains a field called operator_type that does not equal the original operator_type data", () => {
-        const result = transformAnswersForSubmit(
+        const result = transformAnswersForSummary(
           registrationRoleAndOperatorType
         );
         expect(result.operator_type).not.toEqual(
@@ -111,7 +112,7 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
             other_data: "example"
           };
 
-          const result = transformAnswersForSubmit(data);
+          const result = transformAnswersForSummary(data);
 
           expect(result.operator_type).toBe(
             `${operatorType} (registered by a representative)`
@@ -127,9 +128,54 @@ describe("data-transform.service transformAnswersForSubmit()", () => {
       };
 
       it("throws an error", () => {
-        expect(() => transformAnswersForSubmit(data)).toThrow(Error);
+        expect(() => transformAnswersForSummary(data)).toThrow(Error);
       });
     });
+  });
+});
+
+describe("data-transform.service transformAnswersForSubmit()", () => {
+  const testCumulativeAnswers = {
+    operator_first_name: "John",
+    operator_last_name: "Appleseed",
+    operator_primary_number: "01234 567890",
+    operator_email: "john@appleseed.com",
+    establishment_trading_name: "John's Apples",
+    establishment_postcode: "SW12 9RQ",
+    supply_directly: true,
+    declaration1: "Declaration"
+  };
+
+  it("turns flat data into structured data", () => {
+    const result = transformAnswersForSubmit(testCumulativeAnswers);
+    expect(
+      result.registration.establishment.operator.operator_first_name
+    ).toBeDefined();
+  });
+
+  it("should only add the data fields it is given", () => {
+    const result = transformAnswersForSubmit(testCumulativeAnswers);
+    expect(
+      result.registration.establishment.operator.operator_company_name
+    ).not.toBeDefined();
+  });
+
+  it("should combine data using the summary function", () => {
+    const testCumulativeAnswersDate = {
+      day: "28",
+      month: "03",
+      year: "2018",
+      operator_first_name: "John",
+      operator_last_name: "Appleseed",
+      operator_primary_number: "01234 567890",
+      operator_email: "john@appleseed.com",
+      establishment_trading_name: "John's Apples"
+    };
+    const result = transformAnswersForSubmit(testCumulativeAnswersDate);
+    expect(
+      result.registration.establishment.establishment_details
+        .establishment_opening_date
+    ).toBe("2018-03-28");
   });
 });
 

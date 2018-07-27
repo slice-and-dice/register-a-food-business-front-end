@@ -20,9 +20,7 @@ describe("Function: submitController: ", () => {
   describe("When submit returns an error", () => {
     beforeEach(async () => {
       submit.mockImplementation(() => ({
-        errors: {
-          random: "error"
-        }
+        status: "500"
       }));
       response = await submitController({ some: "data" });
     });
@@ -35,7 +33,7 @@ describe("Function: submitController: ", () => {
   describe("When submit does NOT return an error", () => {
     beforeEach(async () => {
       submit.mockImplementation(() => ({
-        errors: {}
+        status: 200
       }));
       response = await submitController({ some: "data" });
     });
