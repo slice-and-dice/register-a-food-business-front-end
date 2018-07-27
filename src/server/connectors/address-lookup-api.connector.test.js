@@ -72,6 +72,41 @@ describe("Connector: lookupAPI: ", () => {
       it("is in a valid format", () => {
         expect(v.validate(responseJSON, addressSchema).errors.length).toBe(0);
       });
+
+      describe("Given a UK postcode that returns at least 200 addresses, a specified limit of 200 addresses, and metadata in the final address:", () => {
+        const overTwoHundredAddressResponseJSON = JSON.parse(
+          JSON.stringify(largeAddressResponseJSON)
+        );
+
+        overTwoHundredAddressResponseJSON[99].totalresults = 250;
+
+        beforeEach(async () => {
+          fetch.mockImplementation(() => ({
+            json: jest.fn(() => overTwoHundredAddressResponseJSON)
+          }));
+
+          responseJSON = await getAddressesByPostcode("uk", "CV4 7AL", 200);
+        });
+
+        it("it returns 200 addresses", () => {
+          const correctResponse = JSON.parse(
+            JSON.stringify(overTwoHundredAddressResponseJSON)
+          );
+
+          delete correctResponse[99].morevalues;
+          delete correctResponse[99].nextpage;
+          delete correctResponse[99].totalresults;
+
+          // duplicate the contents of the array to give it 200 addresses
+          correctResponse.push(...correctResponse);
+
+          expect(responseJSON).toEqual(correctResponse);
+        });
+
+        it("is in a valid format", () => {
+          expect(v.validate(responseJSON, addressSchema).errors.length).toBe(0);
+        });
+      });
     });
   });
 
