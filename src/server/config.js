@@ -9,6 +9,6 @@ module.exports = {
   ADDRESS_API_URL_BASE:
     "http://ws.postcoder.com/pcw/" +
     (process.env.ADDRESS_API_KEY || "PCW45-12345-12345-1234X") +
-    "/address/uk",
+    "/address",
   ADDRESS_API_URL_QUERY: "format=json&lines=4"
 };

@@ -2,13 +2,19 @@ const fetch = require("node-fetch");
 const winston = require("winston");
 const { ADDRESS_API_URL_BASE, ADDRESS_API_URL_QUERY } = require("../config");
 
-const getAddressesByPostcode = async (postcode, addressCountLimit) => {
+const getAddressesByPostcode = async (
+  country,
+  postcode,
+  addressCountLimit = 100
+) => {
   winston.info(
     `lookupAPI.connector: getAddressesByPostcode: called with postcode: ${postcode}`
   );
 
+  const lowercaseCountryCode = country.toLowerCase();
+
   const res = await fetch(
-    `${ADDRESS_API_URL_BASE}/${postcode}?${ADDRESS_API_URL_QUERY}`,
+    `${ADDRESS_API_URL_BASE}/${lowercaseCountryCode}/${postcode}?${ADDRESS_API_URL_QUERY}`,
     {
       method: "GET"
     }
