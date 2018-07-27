@@ -52,7 +52,6 @@ describe("<ProcessedErrorSummary />", () => {
     );
 
     let timesClicked = 0;
-    console.log(wrapperProcessedErrorSummaryClickMock);
 
     wrapperProcessedErrorSummaryClickMock
       .find("UnorderedList")
