@@ -41,6 +41,15 @@ const schema = {
       }
     }
   },
+  "/establishment-address-type": {
+    type: "object",
+    properties: {
+      establishment_address_type: {
+        type: "string",
+        validation: validateRadioButtons
+      }
+    }
+  },
   "/operator-name": {
     type: "object",
     properties: {

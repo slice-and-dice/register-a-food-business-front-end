@@ -63,6 +63,10 @@
     "on": true,
     "switches": {}
   },
+  "/establishment-address-type": {
+    "on": true,
+    "switches": {}
+  },
   "/establishment-contact-details": {
     "on": true,
     "switches": {}
