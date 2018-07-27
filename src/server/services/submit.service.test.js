@@ -1,23 +1,42 @@
-import { submit } from "./submit.service";
-import fetch from "node-fetch";
-jest.mock("node-fetch");
+const { submit } = require("./submit.service");
+jest.mock("../connectors/registration/registration.connector");
+const {
+  sendRequest
+} = require("../connectors/registration/registration.connector");
 
-fetch.mockImplementation(() => ({
-  json: jest.fn(() => ({
-    id: 1
-  }))
-}));
+describe("Function: submit", () => {
+  let result;
+  describe("When sendRequest errors", () => {
+    beforeEach(async () => {
+      sendRequest.mockImplementation(() => {
+        throw new Error("FAIL");
+      });
+      result = await submit({ data: "data" });
+    });
 
-const sampleData = {
-  establishment_first_line: "Example first line",
-  establishment_street: "76 Example street",
-  establishment_town: "London",
-  establishment_postcode: "SW2 1AA"
-};
+    it("Should call sendRequest with stringified data", () => {
+      expect(sendRequest).toBeCalledWith('{"data":"data"}');
+    });
 
-describe("submit.service submit()", () => {
-  it("returns an object", async () => {
-    const result = await submit(sampleData);
-    expect(typeof result).toBe("object");
+    it("Should catch the error", () => {
+      expect(result.message).toBe("FAIL");
+    });
+  });
+
+  describe("When sendRequest succeeds", () => {
+    beforeEach(async () => {
+      sendRequest.mockImplementation(() => {
+        return { json: jest.fn() };
+      });
+      result = await submit({ data: "data" });
+    });
+
+    it("Should call sendRequest with stringified data", () => {
+      expect(sendRequest).toBeCalledWith('{"data":"data"}');
+    });
+
+    it("Should return the response", () => {
+      expect(result.json).toBeDefined();
+    });
   });
 });
