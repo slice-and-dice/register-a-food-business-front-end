@@ -777,7 +777,7 @@ exports[`<Declaration /> matches the previous snapshot 1`] = `
           className="emotion-38"
         >
           <form
-            action="/continue/declaration"
+            action="/continue/declaration/undefined"
             method="post"
           >
             <div

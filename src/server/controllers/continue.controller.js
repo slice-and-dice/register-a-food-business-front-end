@@ -10,7 +10,8 @@ const continueController = (
   currentPage,
   previousAnswers,
   newAnswers = {},
-  switches
+  switches,
+  editMode
 ) => {
   const controllerResponse = {
     validatorErrors: {},
@@ -49,13 +50,18 @@ const continueController = (
   if (Object.keys(controllerResponse.validatorErrors).length > 0) {
     // if there are errors, redirect back to the current page
     controllerResponse.redirectRoute = currentPage;
+
+    if (editMode === true) {
+      // if edit mode is on, persist the edit mode query when redirecting
+      controllerResponse.redirectRoute += "?edit=on";
+    }
+
     return controllerResponse;
   }
 
-  if (switches && switches.editMode === true) {
+  if (editMode === true) {
     // if edit mode is on, redirect to the summary page
     controllerResponse.redirectRoute = "/registration-summary";
-    controllerResponse.switches.editMode = false;
     return controllerResponse;
   }
 

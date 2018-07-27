@@ -12,10 +12,7 @@ import PropTypes from "prop-types";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
-    <BackButton
-      editMode={props.switches.editMode}
-      originator="establishment-address"
-    />
+    <BackButton editMode={props.editMode} originator="establishment-address" />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}
@@ -35,7 +32,10 @@ const EstablishmentAddress = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action="/continue/establishment-address" method="post">
+    <form
+      action={`/continue/establishment-address/${props.editMode}`}
+      method="post"
+    >
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField
@@ -108,7 +108,7 @@ const EstablishmentAddress = props => (
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
 
-      <ContinueButton editMode={props.switches.editMode} />
+      <ContinueButton editMode={props.editMode} />
     </form>
   </FsaLayout>
 );

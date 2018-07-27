@@ -890,7 +890,7 @@ exports[`<OperatorType /> matches the previous snapshot 1`] = `
             </div>
           </details>
           <form
-            action="/continue/operator-type"
+            action="/continue/operator-type/undefined"
             method="post"
           >
             <div

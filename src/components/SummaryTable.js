@@ -191,6 +191,9 @@ const OperatorDetailsTable = props => (
             {props.operator_type}
           </div>
         </Table.Cell>
+        <Table.Cell>
+          <div />
+        </Table.Cell>
       </Table.Row>
     ) : null}
 
@@ -363,6 +366,9 @@ const EstablishmentDetailsTable = props => (
             {moment(props.establishment_opening_date).format("DD MMM YYYY")}
           </div>
         </Table.Cell>
+        <Table.Cell>
+          <div />
+        </Table.Cell>
       </Table.Row>
     ) : null}
   </React.Fragment>
@@ -377,6 +383,9 @@ const FoodActivitiesTable = props => (
       <Table.Cell>
         <div />
       </Table.Cell>
+      <Table.Cell>
+        <div />
+      </Table.Cell>
     </Table.Row>
 
     {props.customer_type ? (
@@ -386,6 +395,9 @@ const FoodActivitiesTable = props => (
           <div className="bold" id="customer_type">
             {props.customer_type}
           </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div />
         </Table.Cell>
       </Table.Row>
     ) : null}

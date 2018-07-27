@@ -12,13 +12,16 @@ import PropTypes from "prop-types";
 const LimitedCompanyDetails = props => (
   <FsaLayout>
     <BackButton
-      editMode={props.switches.editMode}
+      editMode={props.editMode}
       originator="operator-company-details"
     />
     <ProcessedErrorSummary validatorErrors={props.validatorErrors} />
     <Header level={2}>Company details</Header>
 
-    <form action="/continue/operator-company-details" method="post">
+    <form
+      action={`/continue/operator-company-details/${props.editMode}`}
+      method="post"
+    >
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField
@@ -79,7 +82,7 @@ const LimitedCompanyDetails = props => (
         </HiddenText>
       </ContentItem.B_30_15>
 
-      <ContinueButton editMode={props.switches.editMode} />
+      <ContinueButton editMode={props.editMode} />
     </form>
   </FsaLayout>
 );
