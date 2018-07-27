@@ -7,13 +7,15 @@
     "build": "next build",
     "version": "NODE_ENV=production node -v",
     "start": "NODE_ENV=production node src/server/index.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
+    "test:integration": "jest tests/integration/*.js",
+    "test:contract": "jest tests/contract/*.js",
     "lint": "eslint ./src ./pages",
     "format:verify":
-      "prettier --list-different '{./src,./pages,./docs}/**/*' '!./src/__tests__/__snapshots__/**/*'",
+      "prettier --list-different '{./src,./pages,./docs,./tests}/**/*' '!./src/__tests__/__snapshots__/**/*'",
     "format":
-      "prettier --write '{./src,./pages,./docs}/**/*' '!./src/__tests__/__snapshots__/**/*'"
+      "prettier --write '{./src,./pages,./docs,./tests}/**/*' '!./src/__tests__/__snapshots__/**/*'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
