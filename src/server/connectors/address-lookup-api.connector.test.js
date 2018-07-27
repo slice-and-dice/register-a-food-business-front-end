@@ -1,7 +1,7 @@
 jest.mock("node-fetch");
 
 import { Validator } from "jsonschema";
-import { getAddressesByPostcode } from "./lookupAPI.connector";
+import { getAddressesByPostcode } from "./address-lookup-api.connector";
 import fetch from "node-fetch";
 import largeAddressResponseJSON from "./largeAddressResponseMock.json";
 
