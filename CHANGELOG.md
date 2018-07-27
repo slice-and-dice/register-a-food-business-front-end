@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.22.1 - 27th July 2018 (unreleased)
+
+### Modified
+
+* Bugfix for edit mode when clicking the browser back button
+
 ## v1.22.0 - 25th July 2018 (unreleased)
 
 ### Added
