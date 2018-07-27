@@ -79,22 +79,24 @@ describe("Connector: lookupAPI: ", () => {
     });
 
     describe("Given a postcode that returns MORE than 101 addresses and a specified limit of 101 addresses:", () => {
+      beforeEach(async () => {
+        fetch.mockImplementation(url => ({
+          json: jest.fn(() => {
+            if (url.includes("page=")) {
+              return exampleResponse;
+            } else {
+              return largeAddressResponseJSON;
+            }
+          })
+        }));
+
+        responseJSON = await getAddressesByPostcode("CV4 7AL", 101);
+      });
+
       it("it returns 101 addresses", () => {
-        beforeEach(async () => {
-          fetch.mockImplementation(url => ({
-            json: jest.fn(() => {
-              if (url.includes("?page=")) {
-                return exampleResponse;
-              } else {
-                return largeAddressResponseJSON;
-              }
-            })
-          }));
-
-          responseJSON = await getAddressesByPostcode("CV4 7AL", 101);
-        });
-
-        const correctResponse = Array.from(largeAddressResponseJSON);
+        const correctResponse = JSON.parse(
+          JSON.stringify(largeAddressResponseJSON)
+        );
 
         delete correctResponse[99].morevalues;
         delete correctResponse[99].nextpage;
