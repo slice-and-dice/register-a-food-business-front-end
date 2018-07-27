@@ -902,6 +902,7 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
             id="operatorPostcodeDisplay"
             size={undefined}
           >
+            undefined  
             <a
               className="emotion-29"
               disabled={undefined}
@@ -952,7 +953,7 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
             <a
               className="emotion-29"
               disabled={undefined}
-              href="/operator-address-select"
+              href="/operator-address-manual"
               id="cantFindAddress"
               onClick={undefined}
             >

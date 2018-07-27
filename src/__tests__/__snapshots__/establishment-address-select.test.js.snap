@@ -902,6 +902,7 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
             id="establishmentPostcodeDisplay"
             size={undefined}
           >
+            undefined  
             <a
               className="emotion-29"
               disabled={undefined}
@@ -952,7 +953,7 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
             <a
               className="emotion-29"
               disabled={undefined}
-              href="/establishment-address-select"
+              href="/establishment-address-manual"
               id="cantFindAddress"
               onClick={undefined}
             >
