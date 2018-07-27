@@ -8,10 +8,10 @@ import {
 } from "../src/components";
 import { Header } from "govuk-react";
 import PropTypes from "prop-types";
-import { transformAnswersForSubmit } from "../src/server/services/data-transform.service";
+import { transformAnswersForSummary } from "../src/server/services/data-transform.service";
 
 const RegistrationSummary = props => {
-  const transformedData = transformAnswersForSubmit(props.cumulativeAnswers);
+  const transformedData = transformAnswersForSummary(props.cumulativeAnswers);
   return (
     <FsaLayout>
       <BackButton editMode={props.editMode} originator="registration-summary" />
