@@ -315,6 +315,25 @@ const EstablishmentDetailsTable = props => (
       </Table.Row>
     ) : null}
 
+    {props.establishment_address_type ? (
+      <Table.Row id="establishmentAddressTypeRow">
+        <Table.CellHeader>Address type</Table.CellHeader>
+        <Table.Cell className="summaryTableDataCell">
+          <div className="bold" id="establishment_address_type">
+            {props.establishment_address_type}
+          </div>
+        </Table.Cell>
+        <Table.Cell className="summaryTableChangeCell">
+          <AnchorTag
+            id="changeEstablishmentAddressTypeRow"
+            href="/edit/establishment-address-type"
+          >
+            Change
+          </AnchorTag>
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
     {props.establishment_primary_number ? (
       <Table.Row id="establishmentContactDetailsRow">
         <Table.CellHeader>Contact number</Table.CellHeader>

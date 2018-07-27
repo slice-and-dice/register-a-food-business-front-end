@@ -38,33 +38,33 @@ const EstablishmentAddressType = props => (
         >
           <Radio
             name="establishment_address_type"
-            value="In a place of business or commerical premises"
+            value="Place of business or commerical premises"
             id="establishment_type_business_commercial"
             defaultChecked={
               props.cumulativeAnswers.establishment_address_type ===
-              "In a place of business or commerical premises"
+              "Place of business or commerical premises"
             }
           >
             In a place of business or commerical premises
           </Radio>
           <Radio
             name="establishment_address_type"
-            value="In a mobile or moveable premises"
+            value="Mobile or moveable premises"
             id="establishment_type_mobile_moveable"
             defaultChecked={
               props.cumulativeAnswers.establishment_address_type ===
-              "In a mobile or moveable premises"
+              "Mobile or moveable premises"
             }
           >
             In a mobile or moveable premises
           </Radio>
           <Radio
             name="establishment_address_type"
-            value="In a home or domestic premises"
+            value="Home or domestic premises"
             id="establishment_type_home_domestic"
             defaultChecked={
               props.cumulativeAnswers.establishment_address_type ===
-              "In a home or domestic premises"
+              "Home or domestic premises"
             }
           >
             In a home or domestic premises

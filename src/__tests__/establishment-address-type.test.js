@@ -68,9 +68,9 @@ describe("<EstablishmentAddressType />", () => {
     it("can be selected by default", () => {
       const radioButtonIdsAndValues = {
         establishment_type_business_commercial:
-          "In a place of business or commerical premises",
-        establishment_type_mobile_moveable: "In a mobile or moveable premises",
-        establishment_type_home_domestic: "In a home or domestic premises"
+          "Place of business or commerical premises",
+        establishment_type_mobile_moveable: "Mobile or moveable premises",
+        establishment_type_home_domestic: "Home or domestic premises"
       };
 
       for (let radioButtonId in radioButtonIdsAndValues) {
