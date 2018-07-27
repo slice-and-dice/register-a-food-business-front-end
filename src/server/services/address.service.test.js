@@ -1,10 +1,10 @@
-jest.mock("../connectors/address-lookup-api.connector");
-
 import { Validator } from "jsonschema";
 import { getUkAddressesByPostcode } from "./address.service";
 import { getAddressesByPostcode } from "../connectors/address-lookup-api.connector";
 import smallAddressResponseJSON from "../connectors/smallAddressResponseMock.json";
 import addressSchema from "../connectors/addressSchema.js";
+
+jest.mock("../connectors/address-lookup-api.connector");
 
 const v = new Validator();
 
