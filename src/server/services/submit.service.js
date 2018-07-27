@@ -10,7 +10,7 @@ module.exports.submit = async submissionData => {
     const response = await sendRequest(stringSubmissionData);
     info(
       `submit.service: submit: successful with response: ${JSON.stringify(
-        response
+        response.json()
       )}
       `
     );

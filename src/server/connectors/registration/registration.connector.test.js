@@ -21,15 +21,13 @@ describe("Function: sendRequest", () => {
   describe("When fetch succeeds", () => {
     beforeEach(async () => {
       fetch.mockImplementation(() => {
-        return {
-          json: jest.fn(() => "json response")
-        };
+        return "response";
       });
       result = await sendRequest();
     });
 
-    it("Should call res.json()", () => {
-      expect(result).toBe("json response");
+    it("Should return res", () => {
+      expect(result).toBe("response");
     });
   });
 });

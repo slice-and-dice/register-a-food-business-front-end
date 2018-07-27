@@ -10,9 +10,8 @@ const sendRequest = async body => {
       headers: { "Content-Type": "application/json" },
       body: body
     });
-    const response = res.json();
     info(`registration.connector: sendRequest: finished`);
-    return response;
+    return res;
   } catch (err) {
     info(`registration.connector: sendRequest: failed with error: ${err}`);
     return err;

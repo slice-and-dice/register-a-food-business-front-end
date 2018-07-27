@@ -26,7 +26,7 @@ describe("Function: submit", () => {
   describe("When sendRequest succeeds", () => {
     beforeEach(async () => {
       sendRequest.mockImplementation(() => {
-        return "success";
+        return { json: jest.fn() };
       });
       result = await submit({ data: "data" });
     });
@@ -36,7 +36,7 @@ describe("Function: submit", () => {
     });
 
     it("Should return the response", () => {
-      expect(result).toBe("success");
+      expect(result.json).toBeDefined();
     });
   });
 });
