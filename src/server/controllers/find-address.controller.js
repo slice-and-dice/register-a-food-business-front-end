@@ -4,7 +4,7 @@ import { validate } from "../services/validation.service";
 const findAddressController = async (
   currentPage,
   previousAnswers,
-  newAnswers = {}
+  newAnswers
 ) => {
   const controllerResponse = {
     validatorErrors: {},
