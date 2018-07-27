@@ -181,6 +181,10 @@ describe("Function: continueController: ", () => {
     });
 
     it("should set redirectRoute to the currentPage", () => {
+      expect(response.validatorErrors).toEqual({ some: "error" });
+    });
+
+    it("should set redirectRoute to the currentPage", () => {
       expect(response.redirectRoute).toBe("/mock-page-1");
     });
 
