@@ -19,12 +19,15 @@ jest.mock("./controllers/continue.controller");
 jest.mock("./controllers/back.controller");
 jest.mock("./controllers/submit.controller");
 jest.mock("./controllers/switches.controller");
+jest.mock("./controllers/find-address.controller");
 
 const { handle } = require("./next");
 const continueController = require("./controllers/continue.controller");
 const backController = require("./controllers/back.controller");
 const submitController = require("./controllers/submit.controller");
 const switchesController = require("./controllers/switches.controller");
+const findAddressController = require("./controllers/find-address.controller");
+
 const routes = require("./routes");
 
 describe("Router: ", () => {
@@ -70,6 +73,10 @@ describe("Router: ", () => {
       expect(router.get.mock.calls[3][0]).toBe("/edit/:target");
     });
 
+    it("should set up findaddress route", () => {
+      expect(router.post.mock.calls[2][0]).toBe("/findaddress/:originator");
+    });
+
     it("should set up generic Next route", () => {
       expect(router.get.mock.calls[4][0]).toBe("*");
     });
@@ -78,7 +85,7 @@ describe("Router: ", () => {
   describe("POST to /continue/:originator/:editMode?", () => {
     let req, res;
 
-    beforeEach(async () => {
+    beforeEach(() => {
       continueController.mockImplementation(() => ({
         validatorErrors: {},
         redirectRoute: "/newPage",
@@ -131,7 +138,7 @@ describe("Router: ", () => {
     describe("given that editMode is on", () => {
       let req, res;
 
-      beforeEach(async () => {
+      beforeEach(() => {
         continueController.mockImplementation(() => ({
           validatorErrors: {},
           redirectRoute: "/newPage",
@@ -186,7 +193,7 @@ describe("Router: ", () => {
   describe("GET to /back/:originator", () => {
     let req, res;
 
-    beforeEach(async () => {
+    beforeEach(() => {
       backController.mockImplementation(() => "/previousPage");
 
       handler = router.get.mock.calls[0][1];
@@ -218,7 +225,7 @@ describe("Router: ", () => {
 
   describe("GET to /submit", () => {
     let res, req;
-    beforeEach(async () => {
+    beforeEach(() => {
       submitController.mockImplementation(() => ({
         submissionErrors: {},
         redirectRoute: "/summary-confirmation"
@@ -253,7 +260,7 @@ describe("Router: ", () => {
   describe("GET to /qa/:target", () => {
     describe("with QA_KEY", () => {
       let res, req;
-      beforeEach(async () => {
+      beforeEach(() => {
         handler = router.get.mock.calls[2][1];
 
         req = {
@@ -284,7 +291,7 @@ describe("Router: ", () => {
 
     describe("without QA_KEY", () => {
       let res, req;
-      beforeEach(async () => {
+      beforeEach(() => {
         handler = router.get.mock.calls[2][1];
 
         req = {
@@ -323,7 +330,7 @@ describe("Router: ", () => {
       redirect: jest.fn()
     };
 
-    beforeEach(async () => {
+    beforeEach(() => {
       switchesController.mockImplementation(() => ({
         cumulativeAnswers: { example: "answer" },
         newSwitchState: true
@@ -342,7 +349,7 @@ describe("Router: ", () => {
     });
 
     describe("Given there is no switches object", () => {
-      beforeEach(async () => {
+      beforeEach(() => {
         req.session.switches = undefined;
         handler(req, res);
       });
@@ -362,7 +369,7 @@ describe("Router: ", () => {
       redirect: jest.fn()
     };
 
-    beforeEach(async () => {
+    beforeEach(() => {
       handler = router.get.mock.calls[3][1];
       handler(req, res);
     });
@@ -372,12 +379,49 @@ describe("Router: ", () => {
     });
   });
 
+  describe("POST to /findaddress/:originator", () => {
+    const req = {
+      session: {
+        cumulativeAnswers: {}
+      },
+      body: "body",
+      params: {
+        originator: "/some-page"
+      }
+    };
+
+    const res = {
+      redirect: jest.fn()
+    };
+
+    beforeEach(() => {
+      findAddressController.mockImplementation(() => ({
+        cumulativeAnswers: { example: "answer" },
+        validatorErrors: {},
+        addressLookup: { example: [] },
+        redirectRoute: "/another-page"
+      }));
+      handler = router.post.mock.calls[2][1];
+      handler(req, res);
+    });
+
+    it("Should redirect to the redirectRoute page", () => {
+      expect(res.redirect).toBeCalledWith("/another-page");
+    });
+
+    it("Should update session", () => {
+      expect(req.session.cumulativeAnswers).toEqual({ example: "answer" });
+      expect(req.session.validatorErrors).toEqual({});
+      expect(req.session.addressLookup).toEqual({ example: [] });
+    });
+  });
+
   describe("GET to *", () => {
     const req = {
       session: {}
     };
 
-    beforeEach(async () => {
+    beforeEach(() => {
       handler = router.get.mock.calls[4][1];
 
       handler(req, "response");
