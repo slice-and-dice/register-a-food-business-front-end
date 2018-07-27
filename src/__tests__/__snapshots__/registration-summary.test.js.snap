@@ -378,22 +378,22 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
   margin: 0;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.0416666666666667;
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width:641px) {
   .emotion-22 {
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 36px;
+    line-height: 1.1111111111111112;
     margin-bottom: 20px;
   }
 }
 
 @media print {
   .emotion-22 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -720,12 +720,12 @@ exports[`<RegistrationSummary /> matches the previous snapshot 1`] = `
               Back
             </a>
           </div>
-          <h3
+          <h2
             className="emotion-22"
             size={undefined}
           >
-            Please check that the details you entered are correct.
-          </h3>
+            Check your answers
+          </h2>
           <div
             className="emotion-41 emotion-42"
           >
