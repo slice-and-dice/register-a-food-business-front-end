@@ -31,7 +31,7 @@ const OperatorAddressLookup = props => (
         <ContentItem.B_30_15>
           <Header level={3}>Postcode</Header>
           <Header id="operatorPostcodeDisplay" level={4}>
-            {`${props.cumulativeAnswers.operator_postcode} \u2007`}
+            {`${props.cumulativeAnswers.operator_postcode_find} \u2007`}
             <AnchorTag id="changeOperatorPostcode" href="/operator-address">
               Change
             </AnchorTag>

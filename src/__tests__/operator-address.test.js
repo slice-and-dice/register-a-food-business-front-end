@@ -44,13 +44,15 @@ describe("<OperatorAddress />", () => {
           switches={testSwitches}
         />
       );
-      const operatorPostcode = wrapper.find("InputField#operator_postcode");
+      const operatorPostcode = wrapper.find(
+        "InputField#operator_postcode_find"
+      );
       expect(operatorPostcode.length).toBe(1);
     });
 
     it("gets given the correct error prop", () => {
       const validatorErrors = {
-        operator_postcode: "test error"
+        operator_postcode_find: "test error"
       };
       const wrapper = mount(
         <OperatorAddress
@@ -59,13 +61,15 @@ describe("<OperatorAddress />", () => {
           switches={testSwitches}
         />
       );
-      const operatorPostcode = wrapper.find("InputField#operator_postcode");
+      const operatorPostcode = wrapper.find(
+        "InputField#operator_postcode_find"
+      );
       expect(operatorPostcode.props().meta.error).toBe("test error");
     });
 
     it("gets given the correct default value", () => {
       const cumulativeAnswers = {
-        operator_postcode: "default"
+        operator_postcode_find: "default"
       };
       const wrapper = mount(
         <OperatorAddress
@@ -74,7 +78,9 @@ describe("<OperatorAddress />", () => {
           switches={testSwitches}
         />
       );
-      const operatorPostcode = wrapper.find("InputField#operator_postcode");
+      const operatorPostcode = wrapper.find(
+        "InputField#operator_postcode_find"
+      );
       expect(operatorPostcode.props().input.defaultValue).toBe("default");
     });
   });

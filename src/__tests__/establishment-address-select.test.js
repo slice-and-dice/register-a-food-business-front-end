@@ -50,8 +50,9 @@ describe("<EstablishmentAddressLookup />", () => {
 
     it("gets given the correct default value", () => {
       const cumulativeAnswers = {
-        establishment_postcode: "default"
+        establishment_postcode_find: "default"
       };
+
       const wrapper = mount(
         <EstablishmentAddressLookup
           cumulativeAnswers={cumulativeAnswers}
@@ -59,6 +60,7 @@ describe("<EstablishmentAddressLookup />", () => {
           addressLookups={testAddressLookup}
         />
       );
+
       const establishmentPostcode = wrapper.find(
         "Header#establishmentPostcodeDisplay"
       );
@@ -67,7 +69,7 @@ describe("<EstablishmentAddressLookup />", () => {
     });
 
     it("renders the dropdown according to the addressLookups object", () => {
-      const testAddressLookup = {
+      const exampleAddressLookup = {
         establishment_postcode_find: [
           {
             addressline1: "Allies Computing Ltd",
@@ -106,24 +108,25 @@ describe("<EstablishmentAddressLookup />", () => {
         <EstablishmentAddressLookup
           cumulativeAnswers={testCumulativeAnswers}
           switches={testSwitches}
-          addressLookups={testAddressLookup}
+          addressLookups={exampleAddressLookup}
         />
       );
+
       const establishmentAddressSelect = wrapper.find(
-        "Select#establishmentAddressDropdown"
+        "select#establishmentAddressDropdown"
       );
 
       const addressResults = establishmentAddressSelect.find("option");
 
       expect(addressResults.length).toBe(
-        testAddressLookup.establishment_postcode_find.length
+        exampleAddressLookup.establishment_postcode_find.length
       );
 
       expect(
         addressResults
           .get(0)
           .props.children.includes(
-            testAddressLookup.establishment_postcode_find[0].summaryline
+            exampleAddressLookup.establishment_postcode_find[0].summaryline
           )
       ).toBe(true);
     });

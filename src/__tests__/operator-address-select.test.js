@@ -48,7 +48,7 @@ describe("<OperatorAddressLookup />", () => {
 
     it("gets given the correct default value", () => {
       const cumulativeAnswers = {
-        operator_postcode: "default"
+        operator_postcode_find: "default"
       };
       const wrapper = mount(
         <OperatorAddressLookup
@@ -107,7 +107,7 @@ describe("<OperatorAddressLookup />", () => {
       );
 
       const operatorAddressSelect = wrapper.find(
-        "Select#operatorAddressDropdown"
+        "select#operatorAddressDropdown"
       );
 
       const addressResults = operatorAddressSelect.find("option");
