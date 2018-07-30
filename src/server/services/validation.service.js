@@ -30,6 +30,8 @@ const errorMessages = {
   establishment_primary_number: "Not a valid phone number",
   establishment_secondary_number: "Not a valid phone number",
   establishment_email: "Not a valid email address",
+  establishment_type:
+    "You must select an establishment address type before continuing",
   establishment_first_line: "Not a valid first line of address",
   establishment_street: "Not a valid street name",
   establishment_town: "Not a valid town name",

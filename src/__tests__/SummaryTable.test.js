@@ -10,6 +10,7 @@ expect.addSnapshotSerializer(createSerializer(emotion));
 
 const mandatoryTableRows = [
   "establishmentAddressRow",
+  "establishmentAddressTypeRow",
   "operatorAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
@@ -28,6 +29,7 @@ const mandatoryTableRows = [
 
 const editableTableRows = [
   "establishmentAddressRow",
+  "establishmentAddressTypeRow",
   "operatorAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
@@ -68,7 +70,8 @@ const testMandatoryAnswers = {
   contact_representative_email: "representative@email.com",
   contact_representative_number: "123456789",
   contact_representative_name: "Jill",
-  establishment_opening_date: "2018-12-06"
+  establishment_opening_date: "2018-12-06",
+  establishment_type: "Mobile or moveable premise"
 };
 
 // a supplementary set of all optional answer fields with example data

@@ -59,7 +59,8 @@ const transformAnswersForSubmit = cumulativeAnswers => {
     "establishment_postcode",
     "establishment_first_line",
     "establishment_street",
-    "establishment_town"
+    "establishment_town",
+    "establishment_type"
   ];
   const activities_keys = ["customer_type"];
   const metadata_keys = ["declaration1", "declaration2", "declaration3"];
