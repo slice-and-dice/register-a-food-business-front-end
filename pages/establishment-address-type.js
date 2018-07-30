@@ -45,7 +45,7 @@ const EstablishmentAddressType = props => (
               "Place of business or commerical premises"
             }
           >
-            In a place of business or commerical premises
+            In a place of business or commercial premises
           </Radio>
           <Radio
             name="establishment_type"
