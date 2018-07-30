@@ -878,7 +878,7 @@ exports[`<EstablishmentAddressType /> matches the previous snapshot 1`] = `
                     className="emotion-29"
                     defaultChecked={false}
                     id="establishment_type_business_commercial"
-                    name="establishment_address_type"
+                    name="establishment_type"
                     type="radio"
                     value="Place of business or commerical premises"
                   />
@@ -895,7 +895,7 @@ exports[`<EstablishmentAddressType /> matches the previous snapshot 1`] = `
                     className="emotion-29"
                     defaultChecked={false}
                     id="establishment_type_mobile_moveable"
-                    name="establishment_address_type"
+                    name="establishment_type"
                     type="radio"
                     value="Mobile or moveable premises"
                   />
@@ -912,7 +912,7 @@ exports[`<EstablishmentAddressType /> matches the previous snapshot 1`] = `
                     className="emotion-29"
                     defaultChecked={false}
                     id="establishment_type_home_domestic"
-                    name="establishment_address_type"
+                    name="establishment_type"
                     type="radio"
                     value="Home or domestic premises"
                   />

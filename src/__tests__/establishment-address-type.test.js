@@ -50,7 +50,7 @@ describe("<EstablishmentAddressType />", () => {
   describe("top-level MultiChoice element", () => {
     it("renders the correct error", () => {
       const validatorErrors = {
-        establishment_address_type: "test error"
+        establishment_type: "test error"
       };
       const wrapper = mount(
         <EstablishmentAddressType
@@ -75,7 +75,7 @@ describe("<EstablishmentAddressType />", () => {
 
       for (let radioButtonId in radioButtonIdsAndValues) {
         const cumulativeAnswers = {
-          establishment_address_type: radioButtonIdsAndValues[radioButtonId]
+          establishment_type: radioButtonIdsAndValues[radioButtonId]
         };
 
         const wrapper = mount(

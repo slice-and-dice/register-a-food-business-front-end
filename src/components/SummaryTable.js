@@ -315,12 +315,12 @@ const EstablishmentDetailsTable = props => (
       </Table.Row>
     ) : null}
 
-    {props.establishment_address_type ? (
+    {props.establishment_type ? (
       <Table.Row id="establishmentAddressTypeRow">
         <Table.CellHeader>Address type</Table.CellHeader>
         <Table.Cell className="summaryTableDataCell">
-          <div className="bold" id="establishment_address_type">
-            {props.establishment_address_type}
+          <div className="bold" id="establishment_type">
+            {props.establishment_type}
           </div>
         </Table.Cell>
         <Table.Cell className="summaryTableChangeCell">

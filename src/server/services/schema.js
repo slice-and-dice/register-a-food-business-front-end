@@ -44,7 +44,7 @@ const schema = {
   "/establishment-address-type": {
     type: "object",
     properties: {
-      establishment_address_type: {
+      establishment_type: {
         type: "string",
         validation: validateRadioButtons
       }

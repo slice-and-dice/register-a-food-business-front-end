@@ -33,37 +33,37 @@ const EstablishmentAddressType = props => (
           label=""
           meta={{
             touched: true,
-            error: props.validatorErrors.establishment_address_type
+            error: props.validatorErrors.establishment_type
           }}
         >
           <Radio
-            name="establishment_address_type"
+            name="establishment_type"
             value="Place of business or commerical premises"
             id="establishment_type_business_commercial"
             defaultChecked={
-              props.cumulativeAnswers.establishment_address_type ===
+              props.cumulativeAnswers.establishment_type ===
               "Place of business or commerical premises"
             }
           >
             In a place of business or commerical premises
           </Radio>
           <Radio
-            name="establishment_address_type"
+            name="establishment_type"
             value="Mobile or moveable premises"
             id="establishment_type_mobile_moveable"
             defaultChecked={
-              props.cumulativeAnswers.establishment_address_type ===
+              props.cumulativeAnswers.establishment_type ===
               "Mobile or moveable premises"
             }
           >
             In a mobile or moveable premises
           </Radio>
           <Radio
-            name="establishment_address_type"
+            name="establishment_type"
             value="Home or domestic premises"
             id="establishment_type_home_domestic"
             defaultChecked={
-              props.cumulativeAnswers.establishment_address_type ===
+              props.cumulativeAnswers.establishment_type ===
               "Home or domestic premises"
             }
           >
