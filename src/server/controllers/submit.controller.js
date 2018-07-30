@@ -13,7 +13,7 @@ const submitController = async submissionData => {
     const transformedData = transformAnswersForSubmit(submissionData);
     const response = await submit(transformedData);
     if (response.status === 200) {
-      controllerResponse.redirectRoute = "/application-complete";
+      controllerResponse.redirectRoute = "/summary-confirmation";
     } else {
       controllerResponse.redirectRoute = "back";
     }

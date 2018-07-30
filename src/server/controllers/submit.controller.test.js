@@ -38,8 +38,8 @@ describe("Function: submitController: ", () => {
       response = await submitController({ some: "data" });
     });
 
-    it("Should set redirectRoute to application-complete", () => {
-      expect(response.redirectRoute).toBe("/application-complete");
+    it("Should set redirectRoute to summary-confirmation", () => {
+      expect(response.redirectRoute).toBe("/summary-confirmation");
     });
   });
 });

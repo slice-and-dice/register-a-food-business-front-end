@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.24.1 - 30th July 2018 (unreleased)
+
+### Modified
+
+* Updated application-complete page to registration-summary page and reflect design
+
 ## v1.24.0 - 27th July 2018 (unreleased)
 
 ### Added

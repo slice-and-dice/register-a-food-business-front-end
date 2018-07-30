@@ -221,7 +221,7 @@ describe("Router: ", () => {
     beforeEach(async () => {
       submitController.mockImplementation(() => ({
         submissionErrors: {},
-        redirectRoute: "/application-complete"
+        redirectRoute: "/summary-confirmation"
       }));
 
       handler = router.get.mock.calls[1][1];
@@ -246,7 +246,7 @@ describe("Router: ", () => {
     });
 
     it("Should set redirect to response", () => {
-      expect(res.redirect).toBeCalledWith("/application-complete");
+      expect(res.redirect).toBeCalledWith("/summary-confirmation");
     });
   });
 

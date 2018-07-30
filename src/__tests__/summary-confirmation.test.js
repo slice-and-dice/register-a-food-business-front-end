@@ -1,4 +1,4 @@
-import ApplicationComplete from "../../pages/application-complete";
+import ApplicationComplete from "../../pages/summary-confirmation";
 import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import * as emotion from "emotion";
