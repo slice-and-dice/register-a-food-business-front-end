@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SummaryTable /> matches the previous snapshot 1`] = `
-.emotion-98 {
+.emotion-103 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -15,7 +15,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-98 {
+  .emotion-103 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -155,7 +155,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
 }
 
 <table
-  className="emotion-98"
+  className="emotion-103"
 >
   <caption
     className="emotion-0"
@@ -677,6 +677,39 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
           disabled={undefined}
           href="/edit/establishment-address"
           id="changeEstablishmentAddressRow"
+          onClick={undefined}
+        >
+          Change
+        </a>
+      </td>
+    </tr>
+    <tr
+      className="emotion-5"
+      id="establishmentAddressTypeRow"
+    >
+      <th
+        className="emotion-2"
+      >
+        Address type
+      </th>
+      <td
+        className="summaryTableDataCell emotion-2"
+      >
+        <div
+          className="bold"
+          id="establishment_address_type"
+        >
+          Mobile or moveable premise
+        </div>
+      </td>
+      <td
+        className="summaryTableChangeCell emotion-2"
+      >
+        <a
+          className="emotion-8"
+          disabled={undefined}
+          href="/edit/establishment-address-type"
+          id="changeEstablishmentAddressTypeRow"
           onClick={undefined}
         >
           Change
