@@ -13,7 +13,10 @@ const SessionWrapper = Page => {
           : {},
       switches:
         req && req.session && req.session.switches ? req.session.switches : {},
-      referenceNumber: "34672462"
+      referenceNumber: "34672462",
+      submissionDate: "18/03/2018",
+      localCouncil: "Rushmoor Borough Council",
+      localCouncilEmail: "food@rushmoorboroughcouncil.gov.uk"
     };
 
     req && req.query && req.query.edit === "on"

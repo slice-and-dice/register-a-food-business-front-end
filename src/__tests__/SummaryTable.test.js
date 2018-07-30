@@ -107,6 +107,10 @@ const wrapperComprehensive = mount(
   <SummaryTable {...testComprehensiveAnswers} />
 );
 
+const wrapperApplicationComplete = mount(
+  <SummaryTable {...testComprehensiveAnswers} hideChangeButtons={true} />
+);
+
 // the summary table mounted without any valid answers
 const wrapperMissing = mount(<SummaryTable {...testMissingAnswers} />);
 
@@ -136,6 +140,19 @@ describe("<SummaryTable />", () => {
         .find("Row");
 
       expect(rows.length).toEqual(allTableRows.length);
+    });
+
+    describe("when given a props of hideChangeButtons = true", () => {
+      it("It doesn't render a change button in all editable rows", () => {
+        editableTableRows.forEach(tableRowName => {
+          const row = wrapperApplicationComplete.find(`Row#${tableRowName}`);
+          const buttonId = `change${tableRowName.charAt(0).toUpperCase() +
+            tableRowName.substr(1)}`;
+          const button = row.find(`Anchor#${buttonId}`);
+
+          expect(button.length).toBe(0);
+        });
+      });
     });
 
     it("renders a change button in all editable rows", () => {

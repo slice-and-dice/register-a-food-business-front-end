@@ -21,4 +21,11 @@ ContentItem.B_45_30 = styled("div")({
   }
 });
 
+ContentItem.B_20_20 = styled("div")({
+  paddingBottom: "20px",
+  [MediaQueryLarge]: {
+    paddingBottom: "20px"
+  }
+});
+
 export default ContentItem;
