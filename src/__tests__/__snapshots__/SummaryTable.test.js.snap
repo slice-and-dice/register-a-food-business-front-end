@@ -697,7 +697,7 @@ exports[`<SummaryTable /> matches the previous snapshot 1`] = `
       >
         <div
           className="bold"
-          id="establishment_address_type"
+          id="establishment_type"
         >
           Mobile or moveable premise
         </div>
