@@ -686,11 +686,12 @@ exports[`<RegistrationRole /> matches the previous snapshot 1`] = `
           >
             beta
           </strong>
-          This is a prototype-
+          This is a prototype -
            
           <a
             className="emotion-3"
             href="https://goo.gl/forms/WB5adxvWQdDIfVvs2"
+            id="feedbackLink"
             target="new"
           >
             your feedback

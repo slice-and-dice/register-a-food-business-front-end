@@ -36,8 +36,8 @@ const FsaHeader = () => (
     <TopNav company={Company} serviceTitle={ServiceTitle} />
     <HeaderMain>
       <PhaseBanner level="beta">
-        This is a prototype-{" "}
-        <AnchorTag href={feedbackLink} target="new">
+        This is a prototype -{" "}
+        <AnchorTag id="feedbackLink" href={feedbackLink} target="new">
           your feedback
         </AnchorTag>{" "}
         will help us improve it
