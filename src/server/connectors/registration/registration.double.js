@@ -216,7 +216,7 @@ const schema = {
   }
 };
 
-const sendRequestDouble = body => {
+const registrationDouble = body => {
   const objectBody = JSON.parse(body);
   const validatorResult = validator.validate(
     objectBody.registration,
@@ -244,4 +244,4 @@ const sendRequestDouble = body => {
   }
 };
 
-module.exports = { sendRequestDouble };
+module.exports = { registrationDouble };
