@@ -5,10 +5,6 @@ jest.mock("../../src/server/config.js", () => ({
 const {
   sendRequest
 } = require("../../src/server/connectors/registration/registration.connector");
-const {
-  sendRequestDouble
-} = require("../../src/server/connectors/registration/registration.double");
-
 const validBody = {
   registration: {
     establishment: {
@@ -86,17 +82,20 @@ const invalidBody = {
     }
   }
 };
-
 describe("Registration contract", () => {
   describe("Valid requests", () => {
     it("Should return the same status", async () => {
+      process.env.DOUBLE_MODE = false;
       const realResponse = await sendRequest(JSON.stringify(validBody));
-      const doubleResponse = sendRequestDouble(JSON.stringify(validBody));
+      process.env.DOUBLE_MODE = true;
+      const doubleResponse = await sendRequest(JSON.stringify(validBody));
       expect(realResponse.status).toBe(doubleResponse.status);
     });
     it("should return the same result from res.json()", async () => {
+      process.env.DOUBLE_MODE = false;
       const realResponse = await sendRequest(JSON.stringify(validBody));
-      const doubleResponse = sendRequestDouble(JSON.stringify(validBody));
+      process.env.DOUBLE_MODE = true;
+      const doubleResponse = await sendRequest(JSON.stringify(validBody));
       const realJsonResponse = await realResponse.json();
       const doubleJsonResponse = doubleResponse.json();
       expect(typeof realJsonResponse.regId).toBe(
@@ -107,13 +106,17 @@ describe("Registration contract", () => {
 
   describe("Invalid requests", () => {
     it("Should return the same status", async () => {
+      process.env.DOUBLE_MODE = false;
       const realResponse = await sendRequest(JSON.stringify(invalidBody));
-      const doubleResponse = sendRequestDouble(JSON.stringify(invalidBody));
+      process.env.DOUBLE_MODE = true;
+      const doubleResponse = await sendRequest(JSON.stringify(invalidBody));
       expect(realResponse.status).toBe(doubleResponse.status);
     });
     it("should return the same result from res.json()", async () => {
+      process.env.DOUBLE_MODE = false;
       const realResponse = await sendRequest(JSON.stringify(invalidBody));
-      const doubleResponse = sendRequestDouble(JSON.stringify(invalidBody));
+      process.env.DOUBLE_MODE = true;
+      const doubleResponse = await sendRequest(JSON.stringify(invalidBody));
       const realJsonResponse = await realResponse.json();
       const doubleJsonResponse = doubleResponse.json();
       expect(realJsonResponse.error).toBe(doubleJsonResponse.error);

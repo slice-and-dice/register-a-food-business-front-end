@@ -1,6 +1,6 @@
 const {
-  sendRequestDouble
-} = require("../../src/server/connectors/registration/registration.double");
+  sendRequest
+} = require("../../src/server/connectors/registration/registration.connector");
 const validBody = {
   registration: {
     establishment: {
@@ -40,27 +40,28 @@ const validBody = {
   }
 };
 describe("Registration service", () => {
+  process.env.DOUBLE_MODE = true;
   describe("When given a valid request", () => {
-    it("should return 200 response", () => {
-      const result = sendRequestDouble(JSON.stringify(validBody));
+    it("should return 200 response", async () => {
+      const result = await sendRequest(JSON.stringify(validBody));
       expect(result.status).toBe(200);
     });
 
-    it("should return json function with Ids", () => {
-      const result = sendRequestDouble(JSON.stringify(validBody));
+    it("should return json function with Ids", async () => {
+      const result = await sendRequest(JSON.stringify(validBody));
       expect(result.json).toBeDefined();
       expect(result.json().regId).toBeDefined();
     });
   });
 
   describe("When given an invalid request", () => {
-    it("should return 500 response", () => {
-      const result = sendRequestDouble(JSON.stringify({ registration: {} }));
+    it("should return 500 response", async () => {
+      const result = await sendRequest(JSON.stringify({ registration: {} }));
       expect(result.status).toBe(500);
     });
 
-    it("should return json function with error", () => {
-      const result = sendRequestDouble(JSON.stringify({ registration: {} }));
+    it("should return json function with error", async () => {
+      const result = await sendRequest(JSON.stringify({ registration: {} }));
       expect(result.json().error).toBeDefined();
     });
   });
