@@ -45,14 +45,14 @@ describe("<EstablishmentAddress />", () => {
         />
       );
       const establishmentPostcode = wrapper.find(
-        "InputField#establishment_postcode"
+        "InputField#establishment_postcode_find"
       );
       expect(establishmentPostcode.length).toBe(1);
     });
 
     it("gets given the correct error prop", () => {
       const validatorErrors = {
-        establishment_postcode: "test error"
+        establishment_postcode_find: "test error"
       };
       const wrapper = mount(
         <EstablishmentAddress
@@ -62,14 +62,14 @@ describe("<EstablishmentAddress />", () => {
         />
       );
       const establishmentPostcode = wrapper.find(
-        "InputField#establishment_postcode"
+        "InputField#establishment_postcode_find"
       );
       expect(establishmentPostcode.props().meta.error).toBe("test error");
     });
 
     it("gets given the correct default value", () => {
       const cumulativeAnswers = {
-        establishment_postcode: "default"
+        establishment_postcode_find: "default"
       };
       const wrapper = mount(
         <EstablishmentAddress
@@ -79,7 +79,7 @@ describe("<EstablishmentAddress />", () => {
         />
       );
       const establishmentPostcode = wrapper.find(
-        "InputField#establishment_postcode"
+        "InputField#establishment_postcode_find"
       );
       expect(establishmentPostcode.props().input.defaultValue).toBe("default");
     });

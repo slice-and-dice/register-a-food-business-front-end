@@ -3,8 +3,6 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  ProcessedErrorSummary,
-  OnHandleErrorClick,
   FindAddressButton
 } from "../src/components";
 import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
@@ -16,10 +14,7 @@ const OperatorAddress = props => (
       editMode={props.switches.editMode}
       originator="operator-address"
     />
-    <ProcessedErrorSummary
-      validatorErrors={props.validatorErrors}
-      onHandleErrorClick={OnHandleErrorClick}
-    />
+
     <Header level={2}>What is the operator's address?</Header>
 
     <HiddenText summaryText={"What is a food business operator?"}>
@@ -32,25 +27,25 @@ const OperatorAddress = props => (
 
     <form action="/continue/operator-address" method="post">
       <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "operator_postcode",
-            defaultValue: props.cumulativeAnswers.operator_postcode,
-            autoComplete: "postal-code"
-          }}
-          id="operator_postcode"
-          meta={{
-            touched: true,
-            error: props.validatorErrors["operator_postcode"]
-          }}
-        >
-          Postcode
-        </InputField>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "operator_postcode_find",
+              defaultValue: props.cumulativeAnswers.operator_postcode_find,
+              autoComplete: "postal-code"
+            }}
+            id="operator_postcode_find"
+            meta={{
+              touched: true,
+              error: props.validatorErrors.operator_postcode_find
+            }}
+          >
+            Postcode
+          </InputField>
+        </ContentItem.B_30_15>
       </ContentItem.B_30_15>
-      <ContentItem.B_45_30>
-        <FindAddressButton />
-      </ContentItem.B_45_30>
-      {/* <ContinueButton editMode={props.switches.editMode} /> */}
+
+      <FindAddressButton />
     </form>
   </FsaLayout>
 );

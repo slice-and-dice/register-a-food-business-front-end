@@ -3,9 +3,7 @@ import {
   SessionWrapper,
   ContentItem,
   BackButton,
-  FindAddressButton,
-  ProcessedErrorSummary,
-  OnHandleErrorClick
+  FindAddressButton
 } from "../src/components";
 import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
 import PropTypes from "prop-types";
@@ -16,10 +14,7 @@ const EstablishmentAddress = props => (
       editMode={props.switches.editMode}
       originator="establishment-address"
     />
-    <ProcessedErrorSummary
-      validatorErrors={props.validatorErrors}
-      onHandleErrorClick={OnHandleErrorClick}
-    />
+
     <Header level={2}>Establishment address</Header>
 
     <Paragraph>
@@ -35,26 +30,27 @@ const EstablishmentAddress = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action="/continue/establishment-address" method="post">
+    <form action="/findaddress/establishment-address" method="post">
       <ContentItem.B_30_15>
-        <InputField
-          input={{
-            name: "establishment_postcode",
-            defaultValue: props.cumulativeAnswers.establishment_postcode,
-            autoComplete: "postal-code"
-          }}
-          id="establishment_postcode"
-          meta={{
-            touched: true,
-            error: props.validatorErrors["establishment_postcode"]
-          }}
-        >
-          Postcode
-        </InputField>
+        <ContentItem.B_30_15>
+          <InputField
+            input={{
+              name: "establishment_postcode_find",
+              defaultValue: props.cumulativeAnswers.establishment_postcode_find,
+              autoComplete: "postal-code"
+            }}
+            id="establishment_postcode_find"
+            meta={{
+              touched: true,
+              error: props.validatorErrors.establishment_postcode_find
+            }}
+          >
+            Postcode
+          </InputField>
+        </ContentItem.B_30_15>
       </ContentItem.B_30_15>
-      <ContentItem.B_45_30>
-        <FindAddressButton />
-      </ContentItem.B_45_30>
+
+      <FindAddressButton />
     </form>
   </FsaLayout>
 );

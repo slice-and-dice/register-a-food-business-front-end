@@ -47,7 +47,7 @@ const OperatorAddress = props => (
             // Work out why validator errors fails in test
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_first_line"]
+              error: props.validatorErrors.operator_first_line
             }}
           >
             First line of address
@@ -64,7 +64,7 @@ const OperatorAddress = props => (
             id="operator_street"
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_street"]
+              error: props.validatorErrors.operator_street
             }}
           >
             Street (optional)
@@ -81,7 +81,7 @@ const OperatorAddress = props => (
             id="operator_town"
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_town"]
+              error: props.validatorErrors.operator_town
             }}
           >
             Town or city (optional)
@@ -98,13 +98,14 @@ const OperatorAddress = props => (
             id="operator_postcode"
             meta={{
               touched: true,
-              error: props.validatorErrors["operator_postcode"]
+              error: props.validatorErrors.operator_postcode
             }}
           >
             Postcode
           </InputField>
         </ContentItem.B_30_15>
       </ContentItem.B_30_15>
+
       <ContinueButton editMode={props.editMode} />
     </form>
   </FsaLayout>

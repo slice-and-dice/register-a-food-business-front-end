@@ -52,7 +52,7 @@ const EstablishmentAddress = props => (
             // Work out why validator errors fails in test
             meta={{
               touched: true,
-              error: props.validatorErrors["establishment_first_line"]
+              error: props.validatorErrors.establishment_first_line
             }}
           >
             First line of address
@@ -69,7 +69,7 @@ const EstablishmentAddress = props => (
             id="establishment_street"
             meta={{
               touched: true,
-              error: props.validatorErrors["establishment_street"]
+              error: props.validatorErrors.establishment_street
             }}
           >
             Street (optional)
@@ -86,7 +86,7 @@ const EstablishmentAddress = props => (
             id="establishment_town"
             meta={{
               touched: true,
-              error: props.validatorErrors["establishment_town"]
+              error: props.validatorErrors.establishment_town
             }}
           >
             Town or city (optional)
@@ -103,7 +103,7 @@ const EstablishmentAddress = props => (
             id="establishment_postcode"
             meta={{
               touched: true,
-              error: props.validatorErrors["establishment_postcode"]
+              error: props.validatorErrors.establishment_postcode
             }}
           >
             Postcode

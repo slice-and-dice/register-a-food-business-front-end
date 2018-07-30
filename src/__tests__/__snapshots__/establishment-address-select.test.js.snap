@@ -310,12 +310,12 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-42 {
+.emotion-46 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-40 {
+.emotion-44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-40 {
+  .emotion-44 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-39 {
+.emotion-43 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-39 {
+  .emotion-43 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-39:first-child {
+  .emotion-43:first-child {
     margin-left: 0;
   }
 
-  .emotion-39:last-child {
+  .emotion-43:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-39 {
+  .emotion-43 {
     width: 66.6667%;
   }
 }
@@ -500,6 +500,16 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   }
 }
 
+.emotion-31 {
+  padding-bottom: 30px;
+}
+
+@media only screen and (max-width:641px) {
+  .emotion-31 {
+    padding-bottom: 15px;
+  }
+}
+
 .emotion-28 {
   font-family: "nta",Arial,sans-serif;
   font-weight: bold;
@@ -565,7 +575,7 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   color: #2e358b;
 }
 
-.emotion-34 {
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -578,25 +588,25 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-34:after {
+.emotion-36:after {
   content: '';
   display: table;
   clear: both;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-36 {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-34 {
+  .emotion-36 {
     margin-bottom: 30px;
   }
 }
 
-.emotion-32 {
+.emotion-34 {
   font-family: "nta",Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -611,19 +621,19 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-34 {
     font-size: 19px;
     line-height: 1.3;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-32 {
+  .emotion-34 {
     margin-bottom: 0;
   }
 }
 
-.emotion-33 {
+.emotion-35 {
   box-sizing: border-box;
   font-family: "nta",Arial,sans-serif;
   font-weight: 400;
@@ -637,7 +647,7 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-33 {
+  .emotion-35 {
     width: 50%;
     height: 38px;
     font-size: 19px;
@@ -645,22 +655,12 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-33:focus {
+.emotion-35:focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.emotion-36 {
-  padding-bottom: 30px;
-}
-
-@media only screen and (max-width:641px) {
-  .emotion-36 {
-    padding-bottom: 15px;
-  }
-}
-
-.emotion-38 {
+.emotion-42 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -695,34 +695,34 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-38:hover {
+.emotion-42:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-38:focus {
+.emotion-42:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-38:active {
+.emotion-42:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-38:visited {
+.emotion-42:visited {
   color: #00823b;
 }
 
-.emotion-38 svg {
+.emotion-42 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-38 {
+  .emotion-42 {
     margin-bottom: 20px;
   }
 }
@@ -840,16 +840,16 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-42"
+    className="emotion-46"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-40"
+        className="emotion-44"
       >
         <div
-          className="emotion-39"
+          className="emotion-43"
         >
           <div
             className="emotion-20 emotion-21"
@@ -891,81 +891,78 @@ exports[`<EstablishmentAddressLookup /> matches the previous snapshot 1`] = `
               </div>
             </div>
           </details>
-          <h3
-            className="emotion-28"
-            size={undefined}
-          >
-            Postcode
-          </h3>
-          <h4
-            className="emotion-30"
-            id="establishmentPostcodeDisplay"
-            size={undefined}
-          >
-            undefined  
-            <a
-              className="emotion-29"
-              disabled={undefined}
-              href="/establishment-address"
-              id="changeEstablishmentPostcode"
-              onClick={undefined}
-            >
-              Change
-            </a>
-          </h4>
-          <h3
-            className="emotion-28"
-            size={undefined}
-          >
-            Select an address
-          </h3>
-          <label
-            className="emotion-34"
-            id=" establishmentAddressDropdown"
-            name="address-lookup"
-          >
-            <span
-              className="emotion-32"
-            />
-            <select
-              className="emotion-33"
-            >
-              <option
-                value="0"
-              >
-                GOV.UK elements option 1
-              </option>
-              <option
-                value="1"
-              >
-                GOV.UK elements option 2
-              </option>
-              <option
-                value="2"
-              >
-                GOV.UK elements option 3
-              </option>
-            </select>
-          </label>
-          <div
-            className="emotion-36 emotion-37"
-          >
-            <a
-              className="emotion-29"
-              disabled={undefined}
-              href="/establishment-address-manual"
-              id="cantFindAddress"
-              onClick={undefined}
-            >
-              I can't find my address in the list
-            </a>
-          </div>
           <form
             action="/continue/establishment-address-select"
             method="post"
           >
+            <div
+              className="emotion-31 emotion-32"
+            >
+              <div
+                className="emotion-31 emotion-32"
+              >
+                <h3
+                  className="emotion-28"
+                  size={undefined}
+                >
+                  Postcode
+                </h3>
+                <h4
+                  className="emotion-30"
+                  id="establishmentPostcodeDisplay"
+                  size={undefined}
+                >
+                  undefined  
+                  <a
+                    className="emotion-29"
+                    disabled={undefined}
+                    href="/establishment-address"
+                    id="changeEstablishmentPostcode"
+                    onClick={undefined}
+                  >
+                    Change
+                  </a>
+                </h4>
+              </div>
+              <div
+                className="emotion-31 emotion-32"
+              >
+                <h3
+                  className="emotion-28"
+                  size={undefined}
+                >
+                  Select an address
+                </h3>
+                <label
+                  className="emotion-36"
+                >
+                  <span
+                    className="emotion-34"
+                  />
+                  <select
+                    className="emotion-35"
+                    defaultValue={0}
+                    id="establishmentAddressDropdown"
+                    name="establishment_address_selected"
+                  >
+                    <option>
+                      No addresses found
+                    </option>
+                  </select>
+                </label>
+                <a
+                  className="emotion-29"
+                  disabled={undefined}
+                  href="/establishment-address-manual"
+                  id="cantFindAddress"
+                  onClick={undefined}
+                >
+                  I can't find my address in the list
+                </a>
+              </div>
+            </div>
             <button
-              className="emotion-38"
+              className="emotion-42"
               disabled={false}
               id="continue-button"
               type="submit"

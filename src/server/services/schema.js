@@ -66,9 +66,17 @@ const schema = {
   "/operator-address": {
     type: "object",
     properties: {
-      operator_postcode: {
+      operator_postcode_find: {
         type: "string",
         validation: validatePostCode
+      }
+    }
+  },
+  "/operator-address-select": {
+    type: "object",
+    properties: {
+      operator_address_selected: {
+        type: "string"
       }
     }
   },
@@ -186,9 +194,17 @@ const schema = {
   "/establishment-address": {
     type: "object",
     properties: {
-      establishment_postcode: {
+      establishment_postcode_find: {
         type: "string",
         validation: validatePostCode
+      }
+    }
+  },
+  "/establishment-address-select": {
+    type: "object",
+    properties: {
+      establishment_address_selected: {
+        type: "string"
       }
     }
   },

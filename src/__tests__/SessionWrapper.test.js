@@ -49,6 +49,14 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.switches).toBe("object");
     });
 
+    it("returns an 'addressLookups object as part of the initial props", () => {
+      const WrappedComponent = SessionWrapper(ExampleComponent);
+      const initialProps = WrappedComponent.getInitialProps({
+        req: { session: {} }
+      });
+      expect(typeof initialProps.addressLookups).toBe("object");
+    });
+
     describe("given a url query that includes an edit value", () => {
       it("returns an editMode value that is true", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
@@ -69,12 +77,13 @@ describe("<SessionWrapper />", () => {
       });
     });
 
-    it("returns 'validatorErrors', 'cumulativeAnswers' and 'switches' even if req is undefined", () => {
+    it("returns 'validatorErrors', 'cumulativeAnswers', 'switches', and 'addressLookups' even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
       expect(typeof initialProps.validatorErrors).toBe("object");
       expect(typeof initialProps.cumulativeAnswers).toBe("object");
       expect(typeof initialProps.switches).toBe("object");
+      expect(typeof initialProps.addressLookups).toBe("object");
     });
   });
 
@@ -112,6 +121,17 @@ describe("<SessionWrapper />", () => {
       });
     });
 
+    describe("given that req.session.addressLookups is undefined", () => {
+      it("props.switches is object with an editMode property", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: {} }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.addressLookups).toEqual({});
+      });
+    });
+
     describe("given that req.session.cumulativeAnswers is defined", () => {
       it("props.cumulativeAnswers is the same as the session.cumulativeAnswers", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
@@ -146,6 +166,18 @@ describe("<SessionWrapper />", () => {
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.switches.test).toBe(true);
         expect(componentProps.editMode).toBeDefined();
+      });
+    });
+
+    describe("given that req.session.addressLookups is defined", () => {
+      it("props.validatorErrors is the same as the session.validatorErrors", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const exampleAddressLookup = { test: [] };
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: { addressLookups: exampleAddressLookup } }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.addressLookups).toBe(exampleAddressLookup);
       });
     });
   });

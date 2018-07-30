@@ -382,7 +382,8 @@ describe("Router: ", () => {
   describe("POST to /findaddress/:originator", () => {
     const req = {
       session: {
-        cumulativeAnswers: {}
+        cumulativeAnswers: {},
+        addressLookups: { some_page: [] }
       },
       body: "body",
       params: {
@@ -398,7 +399,7 @@ describe("Router: ", () => {
       findAddressController.mockImplementation(() => ({
         cumulativeAnswers: { example: "answer" },
         validatorErrors: {},
-        addressLookup: { example: [] },
+        addressLookups: { example: [] },
         redirectRoute: "/another-page"
       }));
       handler = router.post.mock.calls[2][1];
@@ -409,10 +410,13 @@ describe("Router: ", () => {
       expect(res.redirect).toBeCalledWith("/another-page");
     });
 
-    it("Should update session", () => {
+    it("Should update session without overwriting existing addressLookups values", () => {
       expect(req.session.cumulativeAnswers).toEqual({ example: "answer" });
       expect(req.session.validatorErrors).toEqual({});
-      expect(req.session.addressLookup).toEqual({ example: [] });
+      expect(req.session.addressLookups).toEqual({
+        some_page: [],
+        example: []
+      });
     });
   });
 

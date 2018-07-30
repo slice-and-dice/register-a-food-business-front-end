@@ -114,7 +114,12 @@ module.exports = () => {
 
     req.session.cumulativeAnswers = response.cumulativeAnswers;
     req.session.validatorErrors = response.validatorErrors;
-    req.session.addressLookup = response.addressLookup;
+
+    req.session.addressLookups = Object.assign(
+      {},
+      req.session.addressLookups,
+      response.addressLookups
+    );
 
     info(`Routes: /findaddress/:originator route finished`);
     res.redirect(response.redirectRoute);

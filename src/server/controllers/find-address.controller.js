@@ -1,5 +1,5 @@
-import { getUkAddressesByPostcode } from "../services/address.service";
-import { validate } from "../services/validation.service";
+const { getUkAddressesByPostcode } = require("../services/address.service");
+const { validate } = require("../services/validation.service");
 
 const findAddressController = async (
   currentPage,

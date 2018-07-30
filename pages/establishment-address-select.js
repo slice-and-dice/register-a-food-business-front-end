@@ -25,25 +25,49 @@ const EstablishmentAddressLookup = props => (
         stored overnight.
       </Paragraph>
     </HiddenText>
-    <Header level={3}>Postcode</Header>
-    <Header id="establishmentPostcodeDisplay" level={4}>
-      {`${props.cumulativeAnswers.establishment_postcode} \u2007`}
-      <AnchorTag id="changeEstablishmentPostcode" href="/establishment-address">
-        Change
-      </AnchorTag>
-    </Header>
-    <Header level={3}>Select an address</Header>
-    <Select id=" establishmentAddressDropdown" name="address-lookup">
-      <option value="0">GOV.UK elements option 1</option>
-      <option value="1">GOV.UK elements option 2</option>
-      <option value="2">GOV.UK elements option 3</option>
-    </Select>
-    <ContentItem.B_30_15>
-      <AnchorTag id="cantFindAddress" href="/establishment-address-manual">
-        I can't find my address in the list
-      </AnchorTag>
-    </ContentItem.B_30_15>
+
     <form action="/continue/establishment-address-select" method="post">
+      <ContentItem.B_30_15>
+        <ContentItem.B_30_15>
+          <Header level={3}>Postcode</Header>
+          <Header id="establishmentPostcodeDisplay" level={4}>
+            {`${props.cumulativeAnswers.establishment_postcode_find} \u2007`}
+            <AnchorTag
+              id="changeEstablishmentPostcode"
+              href="/establishment-address"
+            >
+              Change
+            </AnchorTag>
+          </Header>
+        </ContentItem.B_30_15>
+
+        <ContentItem.B_30_15>
+          <Header level={3}>Select an address</Header>
+          <Select
+            input={{
+              id: "establishmentAddressDropdown",
+              name: "establishment_address_selected",
+              defaultValue:
+                props.cumulativeAnswers.establishment_address_selected || 0
+            }}
+          >
+            {props.addressLookups.establishment_postcode_find ? (
+              props.addressLookups.establishment_postcode_find.map(
+                (address, index) => (
+                  <option key={address.summaryline} value={index}>
+                    {address.summaryline}
+                  </option>
+                )
+              )
+            ) : (
+              <option>No addresses found</option>
+            )}
+          </Select>
+          <AnchorTag id="cantFindAddress" href="/establishment-address-manual">
+            I can't find my address in the list
+          </AnchorTag>
+        </ContentItem.B_30_15>
+      </ContentItem.B_30_15>
       <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>
