@@ -26,7 +26,8 @@ const validBody = {
         establishment_postcode: "SW12 9RQ",
         establishment_first_line: "123",
         establishment_street: "Street",
-        establishment_town: "London"
+        establishment_town: "London",
+        establishment_type: "Somewhere"
       },
       activities: {
         customer_type: "End consumer"

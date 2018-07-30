@@ -185,9 +185,17 @@ const schema = {
               establishment_town: {
                 type: "string",
                 validation: validateTown
+              },
+              establishment_type: {
+                type: "string",
+                validation: validateRadioButtons
               }
             },
-            required: ["establishment_postcode", "establishment_first_line"]
+            required: [
+              "establishment_postcode",
+              "establishment_first_line",
+              "establishment_type"
+            ]
           },
           activities: {
             type: "object",
