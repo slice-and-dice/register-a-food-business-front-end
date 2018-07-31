@@ -13,10 +13,6 @@ const submitController = async submissionData => {
   if (submissionData && Object.getOwnPropertyNames(submissionData).length > 0) {
     const transformedData = transformAnswersForSubmit(submissionData);
     const response = await submit(transformedData);
-    // {
-    //   status: "500"
-    //   json: FUNCTION
-    // }
     const res = await response.json();
 
     if (response.status === 200) {
