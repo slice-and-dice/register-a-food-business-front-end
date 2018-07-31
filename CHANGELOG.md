@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.26.0 - 31st July 2018 (unreleased)
+
+### Added
+
+* SDB-47 Registration confirmation number
+
 ## v1.25.0 - 31st July 2018 (unreleased)
 
 ### Added
