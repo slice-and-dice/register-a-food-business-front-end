@@ -4,7 +4,7 @@ jest.mock("../services/address.service");
 
 const { getUkAddressesByPostcode } = require("../services/address.service");
 const { validate } = require("../services/validation.service");
-const smallAddressResponseJSON = require("../connectors/smallAddressResponseMock.json");
+const smallAddressResponseJSON = require("../connectors/address-lookup/smallAddressResponseMock.json");
 
 const findAddressController = require("./find-address.controller");
 

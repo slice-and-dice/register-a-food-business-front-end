@@ -1,6 +1,6 @@
 const {
   getAddressesByPostcode
-} = require("../connectors/address-lookup-api.connector");
+} = require("../connectors/address-lookup/address-lookup-api.connector");
 
 const getUkAddressesByPostcode = async postcode => {
   const addressLookupResponse = await getAddressesByPostcode(

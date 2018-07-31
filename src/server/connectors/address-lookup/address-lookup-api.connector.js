@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const winston = require("winston");
-const { ADDRESS_API_URL_BASE, ADDRESS_API_URL_QUERY } = require("../config");
+const { ADDRESS_API_URL_BASE, ADDRESS_API_URL_QUERY } = require("../../config");
 
 const getAddressesByPostcode = async (
   country,

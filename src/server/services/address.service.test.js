@@ -1,10 +1,10 @@
 import { Validator } from "jsonschema";
 import { getUkAddressesByPostcode } from "./address.service";
-import { getAddressesByPostcode } from "../connectors/address-lookup-api.connector";
-import smallAddressResponseJSON from "../connectors/smallAddressResponseMock.json";
-import addressSchema from "../connectors/addressSchema.js";
+import { getAddressesByPostcode } from "../connectors/address-lookup/address-lookup-api.connector";
+import smallAddressResponseJSON from "../connectors/address-lookup/smallAddressResponseMock.json";
+import addressSchema from "../connectors/address-lookup/addressSchema.js";
 
-jest.mock("../connectors/address-lookup-api.connector");
+jest.mock("../connectors/address-lookup/address-lookup-api.connector");
 
 const v = new Validator();
 
