@@ -17,7 +17,7 @@ const addressLookupDouble = (countryCode, postcode, query) => {
       //   else return {status: 500};
     } else return { status: 500 };
   } else {
-    return { status: 500 };
+    return { status: 404 };
   }
 };
 
