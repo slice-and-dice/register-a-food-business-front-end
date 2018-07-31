@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const winston = require("winston");
 const { ADDRESS_API_URL_BASE, ADDRESS_API_URL_QUERY } = require("../../config");
+const { addressLookupDouble } = require("./address-lookup-api.double");
 
 const getAddressesByPostcode = async (
   country,
@@ -11,16 +12,27 @@ const getAddressesByPostcode = async (
     `lookupAPI.connector: getAddressesByPostcode: called with postcode: ${postcode}`
   );
 
+  const DOUBLE_MODE = process.env.DOUBLE_MODE;
+
   const lowercaseCountryCode = country.toLowerCase();
 
-  const res = await fetch(
-    `${ADDRESS_API_URL_BASE}/${lowercaseCountryCode}/${postcode}?${ADDRESS_API_URL_QUERY}`,
-    {
-      method: "GET"
-    }
-  );
+  let firstJson;
+  if (DOUBLE_MODE === "true") {
+    firstJson = addressLookupDouble(
+      lowercaseCountryCode,
+      postcode,
+      ADDRESS_API_URL_QUERY
+    );
+  } else {
+    const res = await fetch(
+      `${ADDRESS_API_URL_BASE}/${lowercaseCountryCode}/${postcode}?${ADDRESS_API_URL_QUERY}`,
+      {
+        method: "GET"
+      }
+    );
 
-  const firstJson = res.json();
+    firstJson = res.json();
+  }
 
   if (firstJson.length === 100 && firstJson[99].morevalues) {
     let nextPage = 1;
@@ -36,12 +48,21 @@ const getAddressesByPostcode = async (
     const numberOfTotalRequestsToMake = Math.ceil(addressCountLimit / 100);
 
     while (totalRequestCount < numberOfTotalRequestsToMake) {
-      const loopResponse = await fetch(
-        `${ADDRESS_API_URL_BASE}/${postcode}?${ADDRESS_API_URL_QUERY}&page=${nextPage}`,
-        {
-          method: "GET"
-        }
-      );
+      let loopResponse;
+      if (DOUBLE_MODE === "true") {
+        loopResponse = addressLookupDouble(
+          lowercaseCountryCode,
+          postcode,
+          ADDRESS_API_URL_QUERY + "&page="
+        );
+      } else {
+        loopResponse = await fetch(
+          `${ADDRESS_API_URL_BASE}/${postcode}?${ADDRESS_API_URL_QUERY}&page=${nextPage}`,
+          {
+            method: "GET"
+          }
+        );
+      }
 
       const loopJson = loopResponse.json();
 

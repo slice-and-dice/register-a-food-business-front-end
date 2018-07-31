@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 const { sendRequest } = require("./registration.connector");
 const { registrationDouble } = require("./registration.double");
 
-fdescribe("Function: sendRequest", () => {
+describe("Function: sendRequest", () => {
   let result;
   describe("When fetch errors", () => {
     beforeEach(async () => {

@@ -3,9 +3,12 @@ import { getAddressesByPostcode } from "./address-lookup-api.connector";
 import fetch from "node-fetch";
 import largeAddressResponseJSON from "./largeAddressResponseMock.json";
 import smallAddressResponseJSON from "./smallAddressResponseMock.json";
+import regularIntegrationResponse from "./regularIntegrationResponse.json";
 import addressSchema from "./addressSchema";
+import { addressLookupDouble } from "./address-lookup-api.double";
 
 jest.mock("node-fetch");
+jest.mock("./address-lookup-api.double");
 
 const v = new Validator();
 
@@ -14,6 +17,7 @@ let responseJSON;
 describe("Connector: lookupAPI: ", () => {
   describe("Given a valid UK postcode:", () => {
     beforeEach(async () => {
+      process.env.DOUBLE_MODE = "false";
       fetch.mockImplementation(url => ({
         json: jest.fn(
           () =>
@@ -30,18 +34,35 @@ describe("Connector: lookupAPI: ", () => {
       expect(v.validate(responseJSON, addressSchema).errors.length).toBe(0);
     });
 
-    describe("Given an uppercase country code and a valid UK postcode:", () => {
+    describe("Given an uppercase country code (incorrect, should be lowercase but still handled) and a valid UK postcode:", () => {
       beforeEach(async () => {
+        process.env.DOUBLE_MODE = "false";
         responseJSON = await getAddressesByPostcode("UK", "NR14 7PZ");
       });
 
       it("is in a valid format", () => {
         expect(v.validate(responseJSON, addressSchema).errors.length).toBe(0);
       });
+
+      describe("When DOUBLE_MODE is set", () => {
+        beforeEach(async () => {
+          process.env.DOUBLE_MODE = "true";
+          addressLookupDouble.mockImplementation(() => {
+            return regularIntegrationResponse;
+          });
+
+          responseJSON = await getAddressesByPostcode("uk", "BS249ST");
+        });
+
+        it("should return the regular integration response", () => {
+          expect(responseJSON).toEqual(regularIntegrationResponse);
+        });
+      });
     });
 
     describe("Given a UK postcode that returns MORE than 101 addresses and a specified limit of 101 addresses:", () => {
       beforeEach(async () => {
+        process.env.DOUBLE_MODE = "false";
         fetch.mockImplementation(url => ({
           json: jest.fn(() => {
             if (url.includes("page=")) {
@@ -81,6 +102,7 @@ describe("Connector: lookupAPI: ", () => {
         overTwoHundredAddressResponseJSON[99].totalresults = 250;
 
         beforeEach(async () => {
+          process.env.DOUBLE_MODE = "false";
           fetch.mockImplementation(() => ({
             json: jest.fn(() => overTwoHundredAddressResponseJSON)
           }));
@@ -112,14 +134,31 @@ describe("Connector: lookupAPI: ", () => {
 
   describe("Given an invalid UK postcode:", () => {
     beforeEach(async () => {
+      process.env.DOUBLE_MODE = "false";
       fetch.mockImplementation(() => ({
         json: jest.fn(() => [])
       }));
 
       responseJSON = await getAddressesByPostcode("uk", "invalid postcode");
     });
-    it("Returns an empty array", () => {
+
+    it("should return an empty array", () => {
       expect(responseJSON).toEqual([]);
+    });
+
+    describe("When DOUBLE_MODE is set", () => {
+      beforeEach(async () => {
+        process.env.DOUBLE_MODE = "true";
+        addressLookupDouble.mockImplementation(() => {
+          return [];
+        });
+
+        responseJSON = await getAddressesByPostcode("uk", "invalid postcode");
+      });
+
+      it("should return an empty array", () => {
+        expect(responseJSON).toEqual([]);
+      });
     });
   });
 });
