@@ -35,7 +35,10 @@ describe("Function: submitController: ", () => {
     beforeEach(async () => {
       submit.mockImplementation(() => ({
         status: 200,
-        json: () => ({ reg_submission_date: "10 Jul 2018" })
+        json: () => ({
+          reg_submission_date: "10 Jul 2018",
+          fsa_rn: "D9YC4B-KFK5JE-PKR7VX"
+        })
       }));
       response = await submitController({ some: "data" });
     });
@@ -45,6 +48,9 @@ describe("Function: submitController: ", () => {
     });
     it("Should should return reg_submission_date", () => {
       expect(response.submissionDate).toBe("10 Jul 2018");
+    });
+    it("Should should return fsa_rn", () => {
+      expect(response.fsaRegistrationNumber).toBe("D9YC4B-KFK5JE-PKR7VX");
     });
   });
 });

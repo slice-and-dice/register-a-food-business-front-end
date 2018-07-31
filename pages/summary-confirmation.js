@@ -26,7 +26,7 @@ const ApplicationComplete = props => {
         panelBody={[
           "Your unique food business registration number is:",
           <br />,
-          <span className="bold">{props.referenceNumber}</span>
+          <span className="bold">{props.fsaRegistrationNumber}</span>
         ]}
       />
 
@@ -95,7 +95,7 @@ const ApplicationComplete = props => {
 export default SessionWrapper(ApplicationComplete);
 
 ApplicationComplete.propTypes = {
-  referenceNumber: PropTypes.string,
+  fsaRegistrationNumber: PropTypes.string,
   localCouncil: PropTypes.string,
   localCouncilEmail: PropTypes.string,
   submissionDate: PropTypes.string,
