@@ -14,7 +14,10 @@ const SessionWrapper = Page => {
       switches:
         req && req.session && req.session.switches ? req.session.switches : {},
       referenceNumber: "34672462",
-      submissionDate: "18/03/2018",
+      submissionDate:
+        req && req.session && req.session.submissionDate
+          ? req.session.submissionDate
+          : "",
       localCouncil: "Rushmoor Borough Council",
       localCouncilEmail: "food@rushmoorboroughcouncil.gov.uk",
       addressLookups:

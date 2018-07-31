@@ -3,6 +3,7 @@ import { FsaLayout, ContentItem, SummaryTable } from "../src/components";
 import { Header, Panel, Paragraph, InsetText, asAnchor } from "govuk-react";
 import PropTypes from "prop-types";
 import { transformAnswersForSummary } from "../src/server/services/data-transform.service";
+import moment from "moment";
 
 const AnchorTag = asAnchor("a");
 
@@ -30,7 +31,9 @@ const ApplicationComplete = props => {
       />
 
       <Paragraph mb={1}>**Submitted on**</Paragraph>
-      <Paragraph>{props.submissionDate}</Paragraph>
+      <Paragraph>
+        {moment(props.submissionDate).format("DD MMM YYYY")}
+      </Paragraph>
       <Paragraph mb={1}>**Responsible Local Authority**</Paragraph>
       <Paragraph>{props.localCouncil}</Paragraph>
       <Header level={2}>What's next?</Header>
