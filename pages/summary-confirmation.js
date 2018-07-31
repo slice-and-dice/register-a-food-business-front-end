@@ -51,6 +51,7 @@ const ApplicationComplete = props => {
         <AnchorTag
           id="foodSafetyLink"
           href="https://www.food.gov.uk/business-guidance"
+          target="new"
         >
           Food safety and how to run a food business (including Northern
           Ireland)
@@ -60,6 +61,7 @@ const ApplicationComplete = props => {
         <AnchorTag
           id="standardGuidanceLink"
           href="https://www.businesscompanion.info/en/in-depth-guides"
+          target="new"
         >
           Standards guidance for England and Wales
         </AnchorTag>
@@ -68,6 +70,7 @@ const ApplicationComplete = props => {
         <AnchorTag
           id="fhrsScoreLink"
           href="https://www.food.gov.uk/business-guidance/food-hygiene-ratings-for-businesses"
+          target="new"
         >
           How to achieve a high FHRS score and how to appeal
         </AnchorTag>
@@ -76,6 +79,7 @@ const ApplicationComplete = props => {
         <AnchorTag
           id="primaryAuthorityLink"
           href="https://www.gov.uk/guidance/local-regulation-primary-authority"
+          target="new"
         >
           Do you qualify for primary authority partnership and how to get one
         </AnchorTag>
@@ -88,5 +92,9 @@ const ApplicationComplete = props => {
 export default SessionWrapper(ApplicationComplete);
 
 ApplicationComplete.propTypes = {
-  referenceNumber: PropTypes.string
+  referenceNumber: PropTypes.string,
+  localCouncil: PropTypes.string,
+  localCouncilEmail: PropTypes.string,
+  submissionDate: PropTypes.string,
+  cumulativeAnswers: PropTypes.objectOf(PropTypes.string)
 };

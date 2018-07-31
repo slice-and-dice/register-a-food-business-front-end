@@ -925,6 +925,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
               href="https://www.food.gov.uk/business-guidance"
               id="foodSafetyLink"
               onClick={undefined}
+              target="new"
             >
               Food safety and how to run a food business (including Northern Ireland)
             </a>
@@ -938,6 +939,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
               href="https://www.businesscompanion.info/en/in-depth-guides"
               id="standardGuidanceLink"
               onClick={undefined}
+              target="new"
             >
               Standards guidance for England and Wales
             </a>
@@ -951,6 +953,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
               href="https://www.food.gov.uk/business-guidance/food-hygiene-ratings-for-businesses"
               id="fhrsScoreLink"
               onClick={undefined}
+              target="new"
             >
               How to achieve a high FHRS score and how to appeal
             </a>
@@ -964,6 +967,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
               href="https://www.gov.uk/guidance/local-regulation-primary-authority"
               id="primaryAuthorityLink"
               onClick={undefined}
+              target="new"
             >
               Do you qualify for primary authority partnership and how to get one
             </a>
