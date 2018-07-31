@@ -171,16 +171,9 @@ const OperatorDetailsTable = props => (
             <div id="operator_postcode">{props.operator_postcode}</div>
           </div>
         </Table.Cell>
-        {props.hideChangeButtons ? null : (
-          <Table.Cell className="summaryTableChangeCell">
-            <AnchorTag
-              id="changeOperatorAddressRow"
-              href="/edit/operator-address"
-            >
-              Change
-            </AnchorTag>
-          </Table.Cell>
-        )}
+        <Table.Cell>
+          <div />
+        </Table.Cell>
       </Table.Row>
     ) : null}
 
@@ -340,6 +333,7 @@ const EstablishmentDetailsTable = props => (
           </div>
         </Table.Cell>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {props.hideChangeButtons ? null : (
           <Table.Cell className="summaryTableChangeCell">
             <AnchorTag
@@ -358,6 +352,10 @@ const EstablishmentDetailsTable = props => (
           >
             Change
           </AnchorTag>
+=======
+        <Table.Cell>
+          <div />
+>>>>>>> Remove change buttons from Establishment Address and Operator Address rows
         </Table.Cell>
 >>>>>>> Create manual address lookup for operator and establishment
       </Table.Row>
