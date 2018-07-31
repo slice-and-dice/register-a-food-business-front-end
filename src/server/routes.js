@@ -47,6 +47,7 @@ module.exports = () => {
   router.get("/submit", async (req, res) => {
     info(`Routes: /submit route called`);
     const response = await submitController(req.session.cumulativeAnswers);
+    req.session.submissionDate = response.submissionDate;
     info(`Routes: /submit route finished with route ${response.redirectRoute}`);
     res.redirect(response.redirectRoute);
   });
