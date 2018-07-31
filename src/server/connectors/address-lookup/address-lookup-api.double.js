@@ -6,7 +6,7 @@ const addressLookupDouble = (countryCode, postcode, query) => {
       return { json: () => regularIntegrationResponse, status: 200 };
     } else if (postcode === "AA111AA") {
       return { json: () => [], status: 200 };
-      // TODO JMB - double for long responses
+      // TODO JMB - double for long responses. Requires testing.
       // } else if(postcode === "ADD > 100 ADDRESS POSTCODE HERE") {
       //   if(query === "?format=json&lines=4") {
       //     return "ADD FULL LENGTH RESPONSE HERE"

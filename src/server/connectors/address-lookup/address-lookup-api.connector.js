@@ -54,12 +54,13 @@ const getAddressesByPostcode = async (
 
     while (totalRequestCount < numberOfTotalRequestsToMake) {
       let loopResponse;
+      let loopJson;
 
       if (DOUBLE_MODE === "true") {
         loopResponse = addressLookupDouble(
           lowercaseCountryCode,
           postcode,
-          ADDRESS_API_URL_QUERY + "&page="
+          ADDRESS_API_URL_QUERY + "&page=2"
         );
       } else {
         loopResponse = await fetch(
@@ -71,12 +72,10 @@ const getAddressesByPostcode = async (
       }
 
       if (loopResponse.status === 200) {
-        firstJson = res.json();
+        loopJson = loopResponse.json();
       } else {
         throw new Error("Address lookup API is down");
       }
-
-      const loopJson = loopResponse.json();
 
       if (loopJson.length === 100 && loopJson[99].morevalues) {
         delete loopJson[99].morevalues;
