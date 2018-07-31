@@ -221,7 +221,8 @@ describe("Router: ", () => {
     beforeEach(async () => {
       submitController.mockImplementation(() => ({
         submissionErrors: {},
-        redirectRoute: "/summary-confirmation"
+        redirectRoute: "/summary-confirmation",
+        submissionDate: "date"
       }));
 
       handler = router.get.mock.calls[1][1];
@@ -243,6 +244,10 @@ describe("Router: ", () => {
       expect(submitController).toHaveBeenCalledWith({
         some: "answers"
       });
+    });
+
+    it("Should update session", () => {
+      expect(req.session.submissionDate).toEqual("date");
     });
 
     it("Should set redirect to response", () => {
