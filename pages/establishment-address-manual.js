@@ -7,14 +7,24 @@ import {
   ProcessedErrorSummary,
   OnHandleErrorClick
 } from "../src/components";
-import { Header, InputField, HiddenText, Paragraph } from "govuk-react";
+import {
+  Header,
+  InputField,
+  HiddenText,
+  Paragraph,
+  ErrorText
+} from "govuk-react";
 import PropTypes from "prop-types";
 
 const EstablishmentAddress = props => (
   <FsaLayout>
     <BackButton
       editMode={props.editMode}
-      href="/establishment-address-select"
+      href={
+        props.switches["/establishment-address-none-found"]
+          ? "/establishment-address"
+          : "/establishment-address-select"
+      }
     />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
@@ -40,6 +50,17 @@ const EstablishmentAddress = props => (
       method="post"
     >
       <ContentItem.B_30_15>
+        {props.switches["/establishment-address-none-found"] ? (
+          <ContentItem.B_30_15>
+            <ErrorText id="addressNotFoundByPostcodeMessage">
+              No addresses found for the postcode "{
+                props.cumulativeAnswers.establishment_postcode_find
+              }". Please enter your address manually or go back to try a
+              different postcode.
+            </ErrorText>
+          </ContentItem.B_30_15>
+        ) : null}
+
         <ContentItem.B_30_15>
           <InputField
             input={{

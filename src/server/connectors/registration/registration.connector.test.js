@@ -6,7 +6,12 @@ const { sendRequest } = require("./registration.connector");
 const { registrationDouble } = require("./registration.double");
 
 describe("Function: sendRequest", () => {
+  beforeEach(() => {
+    process.env.DOUBLE_MODE = "false";
+  });
+
   let result;
+
   describe("When fetch errors", () => {
     beforeEach(async () => {
       fetch.mockImplementation(() => {
@@ -40,6 +45,10 @@ describe("Function: sendRequest", () => {
         return "double response";
       });
       result = await sendRequest();
+    });
+
+    afterEach(() => {
+      process.env.DOUBLE_MODE = false;
     });
 
     it("should return double response", () => {

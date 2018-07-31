@@ -10,7 +10,8 @@ const findAddressController = async (
     validatorErrors: {},
     redirectRoute: null,
     cumulativeAnswers: {},
-    addressLookups: {}
+    addressLookups: {},
+    switches: {}
   };
 
   controllerResponse.cumulativeAnswers = Object.assign(
@@ -40,8 +41,10 @@ const findAddressController = async (
   ] = addressesForPostcode;
 
   if (addressesForPostcode.length > 0) {
+    controllerResponse.switches[`${currentPage}-none-found`] = false;
     controllerResponse.redirectRoute = `${currentPage}-select`;
   } else {
+    controllerResponse.switches[`${currentPage}-none-found`] = true;
     controllerResponse.redirectRoute = `${currentPage}-manual`;
   }
 

@@ -121,6 +121,12 @@ module.exports = () => {
       response.addressLookups
     );
 
+    req.session.switches = Object.assign(
+      {},
+      req.session.switches,
+      response.switches
+    );
+
     info(`Routes: /findaddress/:originator route finished`);
     res.redirect(response.redirectRoute);
   });

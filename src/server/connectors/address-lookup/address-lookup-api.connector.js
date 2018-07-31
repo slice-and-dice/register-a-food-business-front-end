@@ -16,22 +16,27 @@ const getAddressesByPostcode = async (
 
   const lowercaseCountryCode = country.toLowerCase();
 
+  let firstRes;
   let firstJson;
   if (DOUBLE_MODE === "true") {
-    firstJson = addressLookupDouble(
+    firstRes = addressLookupDouble(
       lowercaseCountryCode,
       postcode,
       ADDRESS_API_URL_QUERY
     );
   } else {
-    const res = await fetch(
+    firstRes = await fetch(
       `${ADDRESS_API_URL_BASE}/${lowercaseCountryCode}/${postcode}?${ADDRESS_API_URL_QUERY}`,
       {
         method: "GET"
       }
     );
+  }
 
-    firstJson = res.json();
+  if (firstRes.status === 200) {
+    firstJson = firstRes.json();
+  } else {
+    throw new Error("Address lookup API is down");
   }
 
   if (firstJson.length === 100 && firstJson[99].morevalues) {
@@ -49,6 +54,7 @@ const getAddressesByPostcode = async (
 
     while (totalRequestCount < numberOfTotalRequestsToMake) {
       let loopResponse;
+
       if (DOUBLE_MODE === "true") {
         loopResponse = addressLookupDouble(
           lowercaseCountryCode,
@@ -62,6 +68,12 @@ const getAddressesByPostcode = async (
             method: "GET"
           }
         );
+      }
+
+      if (loopResponse.status === 200) {
+        firstJson = res.json();
+      } else {
+        throw new Error("Address lookup API is down");
       }
 
       const loopJson = loopResponse.json();
