@@ -844,6 +844,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
           </div>
           <div
             className="emotion-24"
+            id="panelWithText"
           >
             <h2
               className="emotion-22"
@@ -853,11 +854,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
             <div
               className="emotion-23"
             >
-              Your unique food business registration number is:
-              <br />
-              <span
-                className="bold"
-              />
+              Awaiting registration number
             </div>
           </div>
           <div

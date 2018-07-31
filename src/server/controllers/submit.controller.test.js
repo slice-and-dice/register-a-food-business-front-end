@@ -37,7 +37,7 @@ describe("Function: submitController: ", () => {
         status: 200,
         json: () => ({
           reg_submission_date: "10 Jul 2018",
-          fsa_rn: "D9YC4B-KFK5JE-PKR7VX"
+          "fsa-rn": "D9YC4B-KFK5JE-PKR7VX"
         })
       }));
       response = await submitController({ some: "data" });
