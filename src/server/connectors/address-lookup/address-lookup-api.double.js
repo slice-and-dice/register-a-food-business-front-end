@@ -4,7 +4,7 @@ const addressLookupDouble = (countryCode, postcode, query) => {
   if (countryCode === "uk") {
     if (postcode === "BS249ST") {
       return regularIntegrationResponse;
-    } else if (postcode === "AA11 1AA") {
+    } else if (postcode === "AA111AA") {
       return [];
       // TODO JMB - double for long responses
       // } else if(postcode === "ADD > 100 ADDRESS POSTCODE HERE") {
