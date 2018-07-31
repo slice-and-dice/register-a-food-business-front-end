@@ -6,14 +6,22 @@ const {
 const submitController = async submissionData => {
   const controllerResponse = {
     submissionErrors: {},
-    redirectRoute: null
+    redirectRoute: null,
+    submissionDate: ""
   };
 
   if (submissionData && Object.getOwnPropertyNames(submissionData).length > 0) {
     const transformedData = transformAnswersForSubmit(submissionData);
     const response = await submit(transformedData);
+    // {
+    //   status: "500"
+    //   json: FUNCTION
+    // }
+    const res = await response.json();
+
     if (response.status === 200) {
       controllerResponse.redirectRoute = "/summary-confirmation";
+      controllerResponse.submissionDate = res.reg_submission_date;
     } else {
       controllerResponse.redirectRoute = "back";
     }

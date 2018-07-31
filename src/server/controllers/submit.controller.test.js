@@ -20,7 +20,8 @@ describe("Function: submitController: ", () => {
   describe("When submit returns an error", () => {
     beforeEach(async () => {
       submit.mockImplementation(() => ({
-        status: "500"
+        status: "500",
+        json: () => ({ reg_submission_date: "10 Jul 2018" })
       }));
       response = await submitController({ some: "data" });
     });
@@ -33,13 +34,17 @@ describe("Function: submitController: ", () => {
   describe("When submit does NOT return an error", () => {
     beforeEach(async () => {
       submit.mockImplementation(() => ({
-        status: 200
+        status: 200,
+        json: () => ({ reg_submission_date: "10 Jul 2018" })
       }));
       response = await submitController({ some: "data" });
     });
 
     it("Should set redirectRoute to summary-confirmation", () => {
       expect(response.redirectRoute).toBe("/summary-confirmation");
+    });
+    it("Should should return reg_submission_date", () => {
+      expect(response.submissionDate).toBe("10 Jul 2018");
     });
   });
 });

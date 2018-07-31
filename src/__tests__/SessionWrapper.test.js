@@ -49,6 +49,14 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.switches).toBe("object");
     });
 
+    it("returns a 'submissionDate' object as part of the initial props", () => {
+      const WrappedComponent = SessionWrapper(ExampleComponent);
+      const initialProps = WrappedComponent.getInitialProps({
+        req: { session: {} }
+      });
+      expect(typeof initialProps.submissionDate).toBe("string");
+    });
+
     describe("given a url query that includes an edit value", () => {
       it("returns an editMode value that is true", () => {
         const WrappedComponent = SessionWrapper(ExampleComponent);
@@ -69,12 +77,13 @@ describe("<SessionWrapper />", () => {
       });
     });
 
-    it("returns 'validatorErrors', 'cumulativeAnswers' and 'switches' even if req is undefined", () => {
+    it("returns 'validatorErrors', 'cumulativeAnswers', 'submissionDate' and 'switches' even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
       expect(typeof initialProps.validatorErrors).toBe("object");
       expect(typeof initialProps.cumulativeAnswers).toBe("object");
       expect(typeof initialProps.switches).toBe("object");
+      expect(typeof initialProps.submissionDate).toBe("string");
     });
   });
 
@@ -133,6 +142,18 @@ describe("<SessionWrapper />", () => {
         });
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.validatorErrors).toBe(exampleValidatorErrors);
+      });
+    });
+
+    describe("given that req.session.submissionDate is defined", () => {
+      it("props.submissionDate is the same as the session.submissionDate", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const exampleSubmissionDate = "Date";
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: { submissionDate: exampleSubmissionDate } }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.submissionDate).toBe(exampleSubmissionDate);
       });
     });
 
