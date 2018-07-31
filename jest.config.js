@@ -6,9 +6,9 @@ module.exports = {
     "path.json": "<rootDir>/src/__mocks__/pathMock.json",
     "schema.js": "<rootDir>/src/__mocks__/schemaMock.js"
   },
-  collectCoverage: true,
   collectCoverageFrom: [
-    "**/*.{js}",
+    "src/**/*.{js}",
+    "pages/**/*.{js}",
     "!**/node_modules/**",
     "!**/jest.config.js",
     "!**/jest.setup.js",
@@ -19,7 +19,9 @@ module.exports = {
     "!**/.next/**/*.{js}",
     "!**/vars.js",
     "!src/server/index.js",
-    "!src/components/index.js"
+    "!src/components/index.js",
+    "!src/**/*.double.js",
+    "!tests/**/*.js"
   ],
   coverageThreshold: {
     global: {
