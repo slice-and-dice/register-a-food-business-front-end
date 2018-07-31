@@ -171,9 +171,11 @@ const OperatorDetailsTable = props => (
             <div id="operator_postcode">{props.operator_postcode}</div>
           </div>
         </Table.Cell>
-        <Table.Cell>
-          <div />
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell>
+            <div />
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -287,9 +289,11 @@ const EstablishmentDetailsTable = props => (
       <Table.Cell>
         <div />
       </Table.Cell>
-      <Table.Cell>
-        <div />
-      </Table.Cell>
+      {props.hideChangeButtons ? null : (
+        <Table.Cell>
+          <div />
+        </Table.Cell>
+      )}
     </Table.Row>
 
     {props.establishment_trading_name ? (
@@ -332,32 +336,11 @@ const EstablishmentDetailsTable = props => (
             </div>
           </div>
         </Table.Cell>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {props.hideChangeButtons ? null : (
-          <Table.Cell className="summaryTableChangeCell">
-            <AnchorTag
-              id="changeEstablishmentAddressRow"
-              href="/edit/establishment-address"
-            >
-              Change
-            </AnchorTag>
+          <Table.Cell>
+            <div />
           </Table.Cell>
         )}
-=======
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeEstablishmentAddressRow"
-            href="/edit/establishment-address-manual"
-          >
-            Change
-          </AnchorTag>
-=======
-        <Table.Cell>
-          <div />
->>>>>>> Remove change buttons from Establishment Address and Operator Address rows
-        </Table.Cell>
->>>>>>> Create manual address lookup for operator and establishment
       </Table.Row>
     ) : null}
 
