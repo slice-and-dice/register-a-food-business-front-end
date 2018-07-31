@@ -32,6 +32,17 @@ const AnchorTag = asAnchor("a");
 
 const OperatorDetailsTable = props => (
   <React.Fragment>
+    {props.hideChangeButtons ? (
+      <Table.Row>
+        <Table.CellHeader>
+          <div />
+        </Table.CellHeader>
+        <Table.Cell>
+          <div />
+        </Table.Cell>
+      </Table.Row>
+    ) : null}
+
     <Table.Row TITLE>
       <Table.CellHeader>
         <Paragraph mb={0}>**Operator details**</Paragraph>
@@ -39,9 +50,11 @@ const OperatorDetailsTable = props => (
       <Table.Cell>
         <div />
       </Table.Cell>
-      <Table.Cell>
-        <div />
-      </Table.Cell>
+      {props.hideChangeButtons ? null : (
+        <Table.Cell>
+          <div />
+        </Table.Cell>
+      )}
     </Table.Row>
 
     {props.operator_company_name ? (
@@ -52,14 +65,16 @@ const OperatorDetailsTable = props => (
             {props.operator_company_name}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorCompanyNameRow"
-            href="/edit/operator-company-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorCompanyNameRow"
+              href="/edit/operator-company-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -71,14 +86,16 @@ const OperatorDetailsTable = props => (
             {props.operator_company_house_number}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorCompaniesHouseRow"
-            href="/edit/operator-company-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorCompaniesHouseRow"
+              href="/edit/operator-company-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -90,14 +107,16 @@ const OperatorDetailsTable = props => (
             {props.operator_charity_name}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorCharityNameRow"
-            href="/edit/operator-charity-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorCharityNameRow"
+              href="/edit/operator-charity-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -109,14 +128,16 @@ const OperatorDetailsTable = props => (
             {props.operator_charity_number}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorCharityNumberRow"
-            href="/edit/operator-charity-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorCharityNumberRow"
+              href="/edit/operator-charity-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -129,11 +150,13 @@ const OperatorDetailsTable = props => (
             <span id="operator_last_name">{props.operator_last_name}</span>
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag id="changeOperatorNameRow" href="/edit/operator-name">
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag id="changeOperatorNameRow" href="/edit/operator-name">
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -148,14 +171,16 @@ const OperatorDetailsTable = props => (
             <div id="operator_postcode">{props.operator_postcode}</div>
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorAddressRow"
-            href="/edit/operator-address"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorAddressRow"
+              href="/edit/operator-address"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -172,14 +197,16 @@ const OperatorDetailsTable = props => (
             </div>
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorContactDetailsRow"
-            href="/edit/operator-contact-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorContactDetailsRow"
+              href="/edit/operator-contact-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -191,9 +218,11 @@ const OperatorDetailsTable = props => (
             {props.operator_type}
           </div>
         </Table.Cell>
-        <Table.Cell>
-          <div />
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell>
+            <div />
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -205,14 +234,16 @@ const OperatorDetailsTable = props => (
             {props.operator_email}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeOperatorEmailRow"
-            href="/edit/operator-contact-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeOperatorEmailRow"
+              href="/edit/operator-contact-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -239,14 +270,16 @@ const OperatorDetailsTable = props => (
             {props.contact_representative_email}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeContactRepresentativeRow"
-            href="/edit/contact-representative"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeContactRepresentativeRow"
+              href="/edit/contact-representative"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
   </React.Fragment>
@@ -274,14 +307,16 @@ const EstablishmentDetailsTable = props => (
             {props.establishment_trading_name}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeEstablishmentTradingNameRow"
-            href="/edit/establishment-trading-name"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeEstablishmentTradingNameRow"
+              href="/edit/establishment-trading-name"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -304,14 +339,16 @@ const EstablishmentDetailsTable = props => (
             </div>
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeEstablishmentAddressRow"
-            href="/edit/establishment-address"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeEstablishmentAddressRow"
+              href="/edit/establishment-address"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -323,14 +360,16 @@ const EstablishmentDetailsTable = props => (
             {props.establishment_type}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeEstablishmentAddressTypeRow"
-            href="/edit/establishment-address-type"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeEstablishmentAddressTypeRow"
+              href="/edit/establishment-address-type"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -347,14 +386,16 @@ const EstablishmentDetailsTable = props => (
             </div>
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeEstablishmentContactDetailsRow"
-            href="/edit/establishment-contact-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeEstablishmentContactDetailsRow"
+              href="/edit/establishment-contact-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -366,14 +407,16 @@ const EstablishmentDetailsTable = props => (
             {props.establishment_email}
           </div>
         </Table.Cell>
-        <Table.Cell className="summaryTableChangeCell">
-          <AnchorTag
-            id="changeEstablishmentEmailRow"
-            href="/edit/establishment-contact-details"
-          >
-            Change
-          </AnchorTag>
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell className="summaryTableChangeCell">
+            <AnchorTag
+              id="changeEstablishmentEmailRow"
+              href="/edit/establishment-contact-details"
+            >
+              Change
+            </AnchorTag>
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
 
@@ -385,9 +428,11 @@ const EstablishmentDetailsTable = props => (
             {moment(props.establishment_opening_date).format("DD MMM YYYY")}
           </div>
         </Table.Cell>
-        <Table.Cell>
-          <div />
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell>
+            <div />
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
   </React.Fragment>
@@ -402,9 +447,11 @@ const FoodActivitiesTable = props => (
       <Table.Cell>
         <div />
       </Table.Cell>
-      <Table.Cell>
-        <div />
-      </Table.Cell>
+      {props.hideChangeButtons ? null : (
+        <Table.Cell>
+          <div />
+        </Table.Cell>
+      )}
     </Table.Row>
 
     {props.customer_type ? (
@@ -415,9 +462,11 @@ const FoodActivitiesTable = props => (
             {props.customer_type}
           </div>
         </Table.Cell>
-        <Table.Cell>
-          <div />
-        </Table.Cell>
+        {props.hideChangeButtons ? null : (
+          <Table.Cell>
+            <div />
+          </Table.Cell>
+        )}
       </Table.Row>
     ) : null}
   </React.Fragment>
