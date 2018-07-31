@@ -916,6 +916,7 @@ exports[`<EstablishmentAddress /> matches the previous snapshot 1`] = `
                     autoComplete="postal-code"
                     className="emotion-30"
                     defaultValue={undefined}
+                    id="establishment_postcode_find"
                     name="establishment_postcode_find"
                     type="text"
                   />

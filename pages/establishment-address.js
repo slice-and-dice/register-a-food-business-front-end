@@ -35,6 +35,7 @@ const EstablishmentAddress = props => (
         <ContentItem.B_30_15>
           <InputField
             input={{
+              id: "establishment_postcode_find",
               name: "establishment_postcode_find",
               defaultValue: props.cumulativeAnswers.establishment_postcode_find,
               autoComplete: "postal-code"

@@ -25,11 +25,12 @@ const OperatorAddress = props => (
       </Paragraph>
     </HiddenText>
 
-    <form action="/continue/operator-address" method="post">
+    <form action="/findaddress/operator-address" method="post">
       <ContentItem.B_30_15>
         <ContentItem.B_30_15>
           <InputField
             input={{
+              id: "operator_postcode_find",
               name: "operator_postcode_find",
               defaultValue: props.cumulativeAnswers.operator_postcode_find,
               autoComplete: "postal-code"

@@ -5,7 +5,8 @@
       "A1": { "/mock-page-1": false },
       "A2": { "/mock-page-1": false, "/mock-page-2": false },
       "A3": { "/mock-page-2": true },
-      "turnOnCurrentPageTest": { "/mock-page-off": true }
+      "turnOnCurrentPageTest": { "/mock-page-off": true },
+      "answer_name_that_affects_path": { "/mock-page-2": false }
     }
   },
   "/mock-page-off": {

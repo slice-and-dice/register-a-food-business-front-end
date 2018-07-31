@@ -14,7 +14,7 @@ const EstablishmentAddress = props => (
   <FsaLayout>
     <BackButton
       editMode={props.editMode}
-      originator="establishment-address-manual"
+      href="/establishment-address-select"
     />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}

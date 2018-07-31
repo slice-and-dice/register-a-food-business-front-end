@@ -18,7 +18,10 @@ const OperatorAddressLookup = props => (
     />
     <Header level={2}>What is the operator's address?</Header>
 
-    <HiddenText summaryText={"What is a food business operator?"}>
+    <HiddenText
+      id="hiddenTextFBO"
+      summaryText={"What is a food business operator?"}
+    >
       <Paragraph mb={0}>
         The food business operator is the person, charity or company who makes
         the decisions about the food business, what it serves and how it
@@ -38,35 +41,37 @@ const OperatorAddressLookup = props => (
           </Header>
         </ContentItem.B_30_15>
 
-        <ContentItem.B_30_15>
-          <Header level={3}>Select an address</Header>
-          <Select
-            input={{
-              id: "operatorAddressDropdown",
-              name: "operator_address_selected",
-              defaultValue:
-                props.cumulativeAnswers.operator_address_selected || 0
-            }}
-          >
-            {props.addressLookups.operator_postcode_find ? (
-              props.addressLookups.operator_postcode_find.map(
-                (address, index) => (
-                  <option key={address.summaryline} value={index}>
-                    {address.summaryline}
-                  </option>
-                )
+        <Header level={3}>Select an address</Header>
+        <Select
+          input={{
+            id: "operatorAddressDropdown",
+            name: "operator_address_selected",
+            defaultValue: props.cumulativeAnswers.operator_address_selected || 0
+          }}
+        >
+          {props.addressLookups.operator_postcode_find ? (
+            props.addressLookups.operator_postcode_find.map(
+              (address, index) => (
+                <option key={address.summaryline} value={index}>
+                  {address.summaryline}
+                </option>
               )
-            ) : (
-              <option>No addresses found</option>
-            )}
-          </Select>
-        </ContentItem.B_30_15>
+            )
+          ) : (
+            <option>No addresses found</option>
+          )}
+        </Select>
 
-        <ContentItem.B_30_15>
-          <AnchorTag id="cantFindAddress" href="/operator-address-manual">
-            I can't find my address in the list
-          </AnchorTag>
-        </ContentItem.B_30_15>
+        <HiddenText
+          id="hiddenTextCantFindAddress"
+          summaryText={"I can't find my address in the list"}
+        >
+          <Paragraph mb={0}>
+            If your postcode is correct but you can't find your address in the
+            list, you can [enter your address
+            manually](./operator-address-manual) instead.
+          </Paragraph>
+        </HiddenText>
       </ContentItem.B_30_15>
 
       <ContinueButton editMode={props.switches.editMode} />

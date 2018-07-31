@@ -12,10 +12,7 @@ import PropTypes from "prop-types";
 
 const OperatorAddress = props => (
   <FsaLayout>
-    <BackButton
-      editMode={props.editMode}
-      originator="operator-address-manual"
-    />
+    <BackButton editMode={props.editMode} href="/operator-address-select" />
     <ProcessedErrorSummary
       validatorErrors={props.validatorErrors}
       onHandleErrorClick={OnHandleErrorClick}

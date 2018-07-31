@@ -53,7 +53,9 @@
   },
   "/operator-address-manual": {
     "on": false,
-    "switches": {}
+    "switches": {
+      "operator_first_line": { "/operator-address-manual": true }
+    }
   },
   "/operator-contact-details": {
     "on": false,
@@ -77,7 +79,9 @@
   },
   "/establishment-address-manual": {
     "on": false,
-    "switches": {}
+    "switches": {
+      "establishment_first_line": { "/establishment-address-manual": true }
+    }
   },
   "/establishment-address-type": {
     "on": true,

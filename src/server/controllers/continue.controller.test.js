@@ -2,7 +2,11 @@ jest.mock("../services/path.service");
 jest.mock("../services/validation.service");
 jest.mock("../services/session-management.service");
 
-const { moveAlongPath, editPath } = require("../services/path.service");
+const {
+  moveAlongPath,
+  editPath,
+  switchOffManualAddressInput
+} = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
   cleanInactivePathAnswers,
@@ -22,6 +26,16 @@ describe("Function: continueController: ", () => {
     );
     cleanSwitches.mockImplementation(() => ({}));
     editPath.mockImplementation(() => ({
+      "/some-page": {
+        on: true,
+        switches: {}
+      },
+      "/final-page": {
+        on: true,
+        switches: {}
+      }
+    }));
+    switchOffManualAddressInput.mockImplementation(() => ({
       "/some-page": {
         on: true,
         switches: {}
@@ -158,7 +172,7 @@ describe("Function: continueController: ", () => {
       });
 
       it("Should use cumulativePathAnswers to create the newPath", () => {
-        expect(editPath.mock.calls[0][0]).toEqual(["answer-pathAnswer"]);
+        expect(editPath.mock.calls[0][0]).toEqual(exampleAnswers);
       });
 
       it("Should set the redirectRoute to the response of moveAlongPath", () => {

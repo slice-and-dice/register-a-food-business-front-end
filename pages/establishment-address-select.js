@@ -18,7 +18,10 @@ const EstablishmentAddressLookup = props => (
     />
     <Header level={2}>What is the establishment's address?</Header>
 
-    <HiddenText summaryText={"What is an establishment?"}>
+    <HiddenText
+      id="hiddenTextEstablishment"
+      summaryText={"What is an establishment?"}
+    >
       <Paragraph mb={0}>
         An establishment is the location of your food business. If it is a
         mobile food business, please use the location where it is normally
@@ -41,33 +44,40 @@ const EstablishmentAddressLookup = props => (
           </Header>
         </ContentItem.B_30_15>
 
-        <ContentItem.B_30_15>
-          <Header level={3}>Select an address</Header>
-          <Select
-            input={{
-              id: "establishmentAddressDropdown",
-              name: "establishment_address_selected",
-              defaultValue:
-                props.cumulativeAnswers.establishment_address_selected || 0
-            }}
-          >
-            {props.addressLookups.establishment_postcode_find ? (
-              props.addressLookups.establishment_postcode_find.map(
-                (address, index) => (
-                  <option key={address.summaryline} value={index}>
-                    {address.summaryline}
-                  </option>
-                )
+        <Header level={3}>Select an address</Header>
+        <Select
+          input={{
+            id: "establishmentAddressDropdown",
+            name: "establishment_address_selected",
+            defaultValue:
+              props.cumulativeAnswers.establishment_address_selected || 0
+          }}
+        >
+          {props.addressLookups.establishment_postcode_find ? (
+            props.addressLookups.establishment_postcode_find.map(
+              (address, index) => (
+                <option key={address.summaryline} value={index}>
+                  {address.summaryline}
+                </option>
               )
-            ) : (
-              <option>No addresses found</option>
-            )}
-          </Select>
-          <AnchorTag id="cantFindAddress" href="/establishment-address-manual">
-            I can't find my address in the list
-          </AnchorTag>
-        </ContentItem.B_30_15>
+            )
+          ) : (
+            <option>No addresses found</option>
+          )}
+        </Select>
+
+        <HiddenText
+          id="hiddenTextCantFindAddress"
+          summaryText={"I can't find my address in the list"}
+        >
+          <Paragraph mb={0}>
+            If your postcode is correct but you can't find your address in the
+            list, you can [enter your address
+            manually](./establishment-address-manual) instead.
+          </Paragraph>
+        </HiddenText>
       </ContentItem.B_30_15>
+
       <ContinueButton editMode={props.switches.editMode} />
     </form>
   </FsaLayout>

@@ -12,6 +12,8 @@ const cumulativeAnswers = {
   establishment_first_line: "Example first line"
 };
 
+const testAddressLookups = { example: [] };
+
 const testSwitches = {};
 
 describe("<RegistrationSummary />", () => {
@@ -45,17 +47,24 @@ describe("<RegistrationSummary />", () => {
   });
 
   describe("SummaryTable component", () => {
+    transformAnswersForSummary.mockImplementation(() => ({ test: "answer" }));
+
     it("Gets given transformedAnswers ", () => {
-      transformAnswersForSummary.mockImplementation(() => ({ test: "answer" }));
       const wrapper = mount(
         <RegistrationSummary
           cumulativeAnswers={cumulativeAnswers}
           switches={testSwitches}
+          addressLookups={testAddressLookups}
         />
       );
       const summaryTable = wrapper.find("SummaryTable");
+      expect(transformAnswersForSummary).toHaveBeenLastCalledWith(
+        cumulativeAnswers,
+        testAddressLookups
+      );
       expect(summaryTable.props().test).toBe("answer");
     });
+
     it("renders", () => {
       const wrapper = mount(
         <RegistrationSummary

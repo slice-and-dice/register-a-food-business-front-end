@@ -835,7 +835,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
             </div>
           </details>
           <form
-            action="/continue/operator-address"
+            action="/findaddress/operator-address"
             method="post"
           >
             <div
@@ -857,6 +857,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
                     autoComplete="postal-code"
                     className="emotion-29"
                     defaultValue={undefined}
+                    id="operator_postcode_find"
                     name="operator_postcode_find"
                     type="text"
                   />

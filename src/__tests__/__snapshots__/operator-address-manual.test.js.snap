@@ -921,7 +921,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
             className="emotion-20 emotion-21"
           >
             <a
-              href="/back/operator-address-manual"
+              href="/operator-address-select"
               id="back-link"
             >
               Back

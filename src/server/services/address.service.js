@@ -8,6 +8,7 @@ const getUkAddressesByPostcode = async postcode => {
     postcode,
     500
   );
+  console.log(addressLookupResponse);
   return addressLookupResponse;
 };
 

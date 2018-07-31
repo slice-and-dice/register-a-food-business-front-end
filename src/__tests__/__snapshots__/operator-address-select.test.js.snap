@@ -310,12 +310,12 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-48 {
+.emotion-49 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-46 {
+.emotion-47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-46 {
+  .emotion-47 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-45 {
+.emotion-46 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-45 {
+  .emotion-46 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-45:first-child {
+  .emotion-46:first-child {
     margin-left: 0;
   }
 
-  .emotion-45:last-child {
+  .emotion-46:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-45 {
+  .emotion-46 {
     width: 66.6667%;
   }
 }
@@ -660,7 +660,19 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
   outline-offset: 0;
 }
 
-.emotion-44 {
+.emotion-39 {
+  color: #005ea5;
+}
+
+.emotion-39:hover {
+  color: #2b8cc4;
+}
+
+.emotion-39:visited {
+  color: #4c2c92;
+}
+
+.emotion-45 {
   background-color: #00823b;
   border: none;
   box-shadow: 0 2px 0 #003618;
@@ -695,34 +707,34 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
   margin-bottom: 15px;
 }
 
-.emotion-44:hover {
+.emotion-45:hover {
   background-color: #00692f;
   color: #ffffff;
 }
 
-.emotion-44:focus {
+.emotion-45:focus {
   color: #ffffff;
   background-color: #00692f;
   outline: 3px solid #ffbf47;
 }
 
-.emotion-44:active {
+.emotion-45:active {
   position: relative;
   top: 2px;
   box-shadow: 0 0 0 #003618;
 }
 
-.emotion-44:visited {
+.emotion-45:visited {
   color: #00823b;
 }
 
-.emotion-44 svg {
+.emotion-45 svg {
   max-width: 15px;
   margin-left: 20px;
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-44 {
+  .emotion-45 {
     margin-bottom: 20px;
   }
 }
@@ -841,16 +853,16 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-48"
+    className="emotion-49"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-46"
+        className="emotion-47"
       >
         <div
-          className="emotion-45"
+          className="emotion-46"
         >
           <div
             className="emotion-20 emotion-21"
@@ -870,6 +882,7 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
           </h2>
           <details
             className="emotion-27"
+            id="hiddenTextFBO"
           >
             <summary
               className="emotion-24"
@@ -925,49 +938,64 @@ exports[`<OperatorAddressLookup /> matches the previous snapshot 1`] = `
                   </a>
                 </h4>
               </div>
-              <div
-                className="emotion-31 emotion-32"
+              <h3
+                className="emotion-28"
+                size={undefined}
               >
-                <h3
-                  className="emotion-28"
-                  size={undefined}
+                Select an address
+              </h3>
+              <label
+                className="emotion-36"
+              >
+                <span
+                  className="emotion-34"
+                />
+                <select
+                  className="emotion-35"
+                  defaultValue={0}
+                  id="operatorAddressDropdown"
+                  name="operator_address_selected"
                 >
-                  Select an address
-                </h3>
-                <label
-                  className="emotion-36"
+                  <option>
+                    No addresses found
+                  </option>
+                </select>
+              </label>
+              <details
+                className="emotion-27"
+                id="hiddenTextCantFindAddress"
+              >
+                <summary
+                  className="emotion-24"
                 >
                   <span
-                    className="emotion-34"
-                  />
-                  <select
-                    className="emotion-35"
-                    defaultValue={0}
-                    id="operatorAddressDropdown"
-                    name="operator_address_selected"
+                    className="emotion-23"
                   >
-                    <option>
-                      No addresses found
-                    </option>
-                  </select>
-                </label>
-              </div>
-              <div
-                className="emotion-31 emotion-32"
-              >
-                <a
-                  className="emotion-29"
-                  disabled={undefined}
-                  href="/operator-address-manual"
-                  id="cantFindAddress"
-                  onClick={undefined}
+                    I can't find my address in the list
+                  </span>
+                </summary>
+                <div
+                  className="emotion-26"
                 >
-                  I can't find my address in the list
-                </a>
-              </div>
+                  <div
+                    className="emotion-25"
+                  >
+                    <p>
+                      If your postcode is correct but you can't find your address in the list, you can 
+                      <a
+                        className="emotion-39"
+                        href="./operator-address-manual"
+                      >
+                        enter your address manually
+                      </a>
+                       instead.
+                    </p>
+                  </div>
+                </div>
+              </details>
             </div>
             <button
-              className="emotion-44"
+              className="emotion-45"
               disabled={false}
               id="continue-button"
               type="submit"

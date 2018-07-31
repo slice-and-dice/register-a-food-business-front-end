@@ -77,6 +77,9 @@ const schema = {
     properties: {
       operator_address_selected: {
         type: "string"
+      },
+      operator_address_manual: {
+        type: "string"
       }
     }
   },
@@ -204,6 +207,9 @@ const schema = {
     type: "object",
     properties: {
       establishment_address_selected: {
+        type: "string"
+      },
+      establishment_address_manual: {
         type: "string"
       }
     }

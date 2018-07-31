@@ -1,4 +1,4 @@
-const transformAnswersForSummary = cumulativeAnswers => {
+const transformAnswersForSummary = (cumulativeAnswers, addressLookups) => {
   const data = Object.assign({}, cumulativeAnswers);
 
   data.operator_type = combineOperatorTypes(
@@ -25,6 +25,48 @@ const transformAnswersForSummary = cumulativeAnswers => {
   delete data.month;
   delete data.year;
   delete data.establishment_opening_status;
+
+  if (data.operator_address_selected) {
+    if (data.operator_first_line) {
+      delete data.operator_address_selected;
+    } else {
+      const operatorAddressLookupData =
+        addressLookups.operator_postcode_find[data.operator_address_selected];
+
+      data.operator_first_line = operatorAddressLookupData["premise"];
+
+      data.operator_street = operatorAddressLookupData["street"];
+
+      data.operator_town = operatorAddressLookupData["posttown"];
+
+      data.operator_postcode = operatorAddressLookupData["postcode"];
+
+      delete data.operator_postcode_find;
+      delete data.operator_address_selected;
+    }
+  }
+
+  if (data.establishment_address_selected) {
+    if (data.establishment_first_line) {
+      delete data.establishment_address_selected;
+    } else {
+      const establishmentAddressLookupData =
+        addressLookups.establishment_postcode_find[
+          data.establishment_address_selected
+        ];
+
+      data.establishment_first_line = establishmentAddressLookupData["premise"];
+
+      data.establishment_street = establishmentAddressLookupData["street"];
+
+      data.establishment_town = establishmentAddressLookupData["posttown"];
+
+      data.establishment_postcode = establishmentAddressLookupData["postcode"];
+
+      delete data.establishment_postcode_find;
+      delete data.establishment_address_selected;
+    }
+  }
 
   return data;
 };
