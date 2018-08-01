@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.27.1 - 1st August 2018 (unreleased)
+
+### Modified
+
+* Update Next to 6.1.1
+
 ## v1.27.0 - 1st August 2018 (unreleased)
 
 ### Added
