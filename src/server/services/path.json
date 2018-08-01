@@ -47,6 +47,16 @@
     "on": true,
     "switches": {}
   },
+  "/operator-address-select": {
+    "on": true,
+    "switches": {}
+  },
+  "/operator-address-manual": {
+    "on": false,
+    "switches": {
+      "operator_first_line": { "/operator-address-manual": true }
+    }
+  },
   "/operator-contact-details": {
     "on": false,
     "switches": {}
@@ -62,6 +72,16 @@
   "/establishment-address": {
     "on": true,
     "switches": {}
+  },
+  "/establishment-address-select": {
+    "on": true,
+    "switches": {}
+  },
+  "/establishment-address-manual": {
+    "on": false,
+    "switches": {
+      "establishment_first_line": { "/establishment-address-manual": true }
+    }
   },
   "/establishment-address-type": {
     "on": true,

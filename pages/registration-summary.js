@@ -11,7 +11,11 @@ import PropTypes from "prop-types";
 import { transformAnswersForSummary } from "../src/server/services/data-transform.service";
 
 const RegistrationSummary = props => {
-  const transformedData = transformAnswersForSummary(props.cumulativeAnswers);
+  const transformedData = transformAnswersForSummary(
+    props.cumulativeAnswers,
+    props.addressLookups
+  );
+
   return (
     <FsaLayout>
       <BackButton editMode={props.editMode} originator="registration-summary" />

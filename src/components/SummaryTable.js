@@ -172,13 +172,8 @@ const OperatorDetailsTable = props => (
           </div>
         </Table.Cell>
         {props.hideChangeButtons ? null : (
-          <Table.Cell className="summaryTableChangeCell">
-            <AnchorTag
-              id="changeOperatorAddressRow"
-              href="/edit/operator-address"
-            >
-              Change
-            </AnchorTag>
+          <Table.Cell>
+            <div />
           </Table.Cell>
         )}
       </Table.Row>
@@ -294,9 +289,11 @@ const EstablishmentDetailsTable = props => (
       <Table.Cell>
         <div />
       </Table.Cell>
-      <Table.Cell>
-        <div />
-      </Table.Cell>
+      {props.hideChangeButtons ? null : (
+        <Table.Cell>
+          <div />
+        </Table.Cell>
+      )}
     </Table.Row>
 
     {props.establishment_trading_name ? (
@@ -340,13 +337,8 @@ const EstablishmentDetailsTable = props => (
           </div>
         </Table.Cell>
         {props.hideChangeButtons ? null : (
-          <Table.Cell className="summaryTableChangeCell">
-            <AnchorTag
-              id="changeEstablishmentAddressRow"
-              href="/edit/establishment-address"
-            >
-              Change
-            </AnchorTag>
+          <Table.Cell>
+            <div />
           </Table.Cell>
         )}
       </Table.Row>

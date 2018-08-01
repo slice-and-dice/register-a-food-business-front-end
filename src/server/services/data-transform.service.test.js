@@ -131,6 +131,163 @@ describe("data-transform.service transformAnswersForSummary()", () => {
         expect(() => transformAnswersForSummary(data)).toThrow(Error);
       });
     });
+
+    describe("given an addressLookups object with operator_postcode_find and establishment_postcode_find arrays", () => {
+      const testAddressLookups = {
+        operator_postcode_find: [
+          {
+            addressline1: "Allies Computing Ltd",
+            addressline2: "Manor Farm Barns",
+            addressline3: "Fox Road",
+            addressline4: "Framingham Pigot",
+            summaryline:
+              "Allies Computing Ltd, Manor Farm Barns, Fox Road, Framingham Pigot, Norwich, Norfolk, NR14 7PZ",
+            organisation: "Allies Computing Ltd",
+            buildingname: "Manor Farm Barns",
+            premise: "Manor Farm Barns",
+            street: "Fox Road",
+            dependentlocality: "Framingham Pigot",
+            posttown: "Norwich",
+            county: "Norfolk",
+            postcode: "NR14 7PZ"
+          },
+          {
+            addressline1: "Room 36",
+            addressline2: "Block 1 Arthur Vick",
+            addressline3: "Gibbet Hill Road",
+            summaryline:
+              "Room 36, Block 1 Arthur Vick, Gibbet Hill Road, Coventry, West Midlands, CV4 7AL",
+            subbuildingname: "Room 36",
+            buildingname: "Block 1 Arthur Vick",
+            premise: "Room 36, Block 1 Arthur Vick",
+            street: "Gibbet Hill Road",
+            posttown: "Norwich",
+            county: "Norfolk",
+            postcode: "NR14 7PZ"
+          }
+        ],
+        establishment_postcode_find: [
+          {
+            addressline1: "Example",
+            addressline2: "Example line 2",
+            addressline3: "Gibbet Hill Road",
+            summaryline:
+              "Room 36, Block 1 Arthur Vick, Gibbet Hill Road, Coventry, West Midlands, CV4 7AL",
+            subbuildingname: "Room 36",
+            buildingname: "Block 1 Arthur Vick",
+            premise: "Example premise line",
+            street: "Example street",
+            posttown: "Example town",
+            county: "Norfolk",
+            postcode: "AA11 1AA"
+          },
+          {
+            addressline1: "Allies Computing Ltd",
+            addressline2: "Manor Farm Barns",
+            addressline3: "Fox Road",
+            addressline4: "Framingham Pigot",
+            summaryline:
+              "Allies Computing Ltd, Manor Farm Barns, Fox Road, Framingham Pigot, Norwich, Norfolk, NR14 7PZ",
+            organisation: "Allies Computing Ltd",
+            buildingname: "Manor Farm Barns",
+            premise: "Manor Farm Barns",
+            street: "Fox Road",
+            dependentlocality: "Framingham Pigot",
+            posttown: "Norwich",
+            county: "Norfolk",
+            postcode: "NR14 7PZ"
+          }
+        ]
+      };
+
+      describe("given operator_address_selected is in cumulativeAnswers with a value of 1", () => {
+        const cumulativeAnswersOpAddSelected = {
+          operator_address_selected: "1"
+        };
+
+        const correctResponse = {
+          operator_first_line: "Room 36, Block 1 Arthur Vick",
+          operator_street: "Gibbet Hill Road",
+          operator_town: "Norwich",
+          operator_postcode: "NR14 7PZ"
+        };
+
+        it("returns correctly formatted operator address fields that match the second entry in the address lookup results", () => {
+          expect(
+            transformAnswersForSummary(
+              cumulativeAnswersOpAddSelected,
+              testAddressLookups
+            )
+          ).toMatchObject(correctResponse);
+        });
+
+        describe("given that operator_first_line already exists (showing that the manual address page has been filled out)", () => {
+          const cumulativeAnswersOpAddSelectedWithManual = {
+            operator_address_selected: "1",
+            operator_first_line: "Room 36, Block 1 Arthur Vick",
+            operator_postcode: "NR14 7PZ"
+          };
+
+          const manualAddressDataOnly = {
+            operator_first_line: "Room 36, Block 1 Arthur Vick",
+            operator_postcode: "NR14 7PZ"
+          };
+
+          it("returns the original manual address data and deletes the operator_address_selected value", () => {
+            expect(
+              transformAnswersForSummary(
+                cumulativeAnswersOpAddSelectedWithManual,
+                testAddressLookups
+              )
+            ).toMatchObject(manualAddressDataOnly);
+          });
+        });
+      });
+
+      describe("given establishment_address_selected is in cumulativeAnswers with a value of 0", () => {
+        const cumulativeAnswersEstAddSelected = {
+          establishment_address_selected: "0"
+        };
+
+        const correctResponse = {
+          establishment_first_line: "Example premise line",
+          establishment_street: "Example street",
+          establishment_town: "Example town",
+          establishment_postcode: "AA11 1AA"
+        };
+
+        it("returns correctly formatted establishment address fields that match the first entry in the address lookup results", () => {
+          expect(
+            transformAnswersForSummary(
+              cumulativeAnswersEstAddSelected,
+              testAddressLookups
+            )
+          ).toMatchObject(correctResponse);
+        });
+
+        describe("given that establishment_first_line already exists (showing that the manual address page has been filled out)", () => {
+          const cumulativeAnswersEstAddSelectedWithManual = {
+            establishment_address_selected: "0",
+            establishment_first_line: "Example premise line",
+            establishment_postcode: "AA11 1AA"
+          };
+
+          const manualAddressDataOnly = {
+            establishment_first_line: "Example premise line",
+            establishment_postcode: "AA11 1AA"
+          };
+
+          it("returns the original manual address data and deletes the establishment_address_selected value", () => {
+            expect(
+              transformAnswersForSummary(
+                cumulativeAnswersEstAddSelectedWithManual,
+                testAddressLookups
+              )
+            ).toMatchObject(manualAddressDataOnly);
+          });
+        });
+      });
+    });
   });
 });
 

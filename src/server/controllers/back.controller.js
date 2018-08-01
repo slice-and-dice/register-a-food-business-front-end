@@ -4,8 +4,7 @@ const backController = (currentPage, previousAnswers = {}) => {
   let previousPage;
   let newPath;
 
-  const answersArray = Object.values(previousAnswers);
-  newPath = editPath(answersArray, currentPage);
+  newPath = editPath(previousAnswers);
   previousPage = moveAlongPath(newPath, currentPage, -1);
 
   return previousPage;

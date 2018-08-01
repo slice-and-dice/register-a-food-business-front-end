@@ -49,6 +49,14 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.switches).toBe("object");
     });
 
+    it("returns an 'addressLookups object as part of the initial props", () => {
+      const WrappedComponent = SessionWrapper(ExampleComponent);
+      const initialProps = WrappedComponent.getInitialProps({
+        req: { session: {} }
+      });
+      expect(typeof initialProps.addressLookups).toBe("object");
+    });
+
     it("returns a 'submissionDate' object as part of the initial props", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({
@@ -77,12 +85,13 @@ describe("<SessionWrapper />", () => {
       });
     });
 
-    it("returns 'validatorErrors', 'cumulativeAnswers', 'submissionDate', 'fsaRegistrationNumber' and 'switches' even if req is undefined", () => {
+    it("returns 'validatorErrors', 'cumulativeAnswers', 'submissionDate', 'fsaRegistrationNumber', 'addressLookups', and 'switches' even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
       expect(typeof initialProps.validatorErrors).toBe("object");
       expect(typeof initialProps.cumulativeAnswers).toBe("object");
       expect(typeof initialProps.switches).toBe("object");
+      expect(typeof initialProps.addressLookups).toBe("object");
       expect(typeof initialProps.submissionDate).toBe("string");
       expect(typeof initialProps.fsaRegistrationNumber).toBe("string");
     });
@@ -119,6 +128,17 @@ describe("<SessionWrapper />", () => {
         });
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.editMode).toBeDefined();
+      });
+    });
+
+    describe("given that req.session.addressLookups is undefined", () => {
+      it("props.switches is object with an editMode property", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: {} }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.addressLookups).toEqual({});
       });
     });
 
@@ -184,6 +204,18 @@ describe("<SessionWrapper />", () => {
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.switches.test).toBe(true);
         expect(componentProps.editMode).toBeDefined();
+      });
+    });
+
+    describe("given that req.session.addressLookups is defined", () => {
+      it("props.validatorErrors is the same as the session.validatorErrors", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const exampleAddressLookup = { test: [] };
+        const initialProps = WrappedComponent.getInitialProps({
+          req: { session: { addressLookups: exampleAddressLookup } }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.addressLookups).toBe(exampleAddressLookup);
       });
     });
   });

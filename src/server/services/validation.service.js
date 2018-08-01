@@ -15,6 +15,7 @@ const errorMessages = {
   operator_street: "Not a valid street name",
   operator_town: "Not a valid town name",
   operator_postcode: "Not a valid postcode",
+  operator_postcode_find: "Not a valid postcode",
   establishment_trading_name: "Not a valid establishment trading name",
   operator_primary_number: "Not a valid phone number",
   operator_secondary_number: "Not a valid phone number",
@@ -36,6 +37,7 @@ const errorMessages = {
   establishment_street: "Not a valid street name",
   establishment_town: "Not a valid town name",
   establishment_postcode: "Not a valid postcode",
+  establishment_postcode_find: "Not a valid postcode",
   establishment_opening_status:
     "You must select a trading status before continuing",
   establishment_opening_date: "Not a valid opening date",

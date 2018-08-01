@@ -6,7 +6,10 @@ const BackButton = props =>
     <div />
   ) : (
     <ContentItem.B_45_30>
-      <a href={"/back/" + props.originator} id="back-link">
+      <a
+        href={props.href ? props.href : "/back/" + props.originator}
+        id="back-link"
+      >
         Back
       </a>
     </ContentItem.B_45_30>

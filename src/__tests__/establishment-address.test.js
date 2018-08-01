@@ -35,7 +35,7 @@ describe("<EstablishmentAddress />", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  describe("establishment first line input field", () => {
+  describe("Establishment postcode field", () => {
     it("renders", () => {
       const wrapper = mount(
         <EstablishmentAddress
@@ -44,15 +44,15 @@ describe("<EstablishmentAddress />", () => {
           switches={testSwitches}
         />
       );
-      const establishmentFirstLine = wrapper.find(
-        "InputField#establishment_first_line"
+      const establishmentPostcode = wrapper.find(
+        "InputField#establishment_postcode_find"
       );
-      expect(establishmentFirstLine.length).toBe(1);
+      expect(establishmentPostcode.length).toBe(1);
     });
 
     it("gets given the correct error prop", () => {
       const validatorErrors = {
-        establishment_first_line: "test error"
+        establishment_postcode_find: "test error"
       };
       const wrapper = mount(
         <EstablishmentAddress
@@ -61,15 +61,15 @@ describe("<EstablishmentAddress />", () => {
           switches={testSwitches}
         />
       );
-      const establishmentFirstLine = wrapper.find(
-        "InputField#establishment_first_line"
+      const establishmentPostcode = wrapper.find(
+        "InputField#establishment_postcode_find"
       );
-      expect(establishmentFirstLine.props().meta.error).toBe("test error");
+      expect(establishmentPostcode.props().meta.error).toBe("test error");
     });
 
     it("gets given the correct default value", () => {
       const cumulativeAnswers = {
-        establishment_first_line: "default"
+        establishment_postcode_find: "default"
       };
       const wrapper = mount(
         <EstablishmentAddress
@@ -78,10 +78,10 @@ describe("<EstablishmentAddress />", () => {
           switches={testSwitches}
         />
       );
-      const establishmentFirstLine = wrapper.find(
-        "InputField#establishment_first_line"
+      const establishmentPostcode = wrapper.find(
+        "InputField#establishment_postcode_find"
       );
-      expect(establishmentFirstLine.props().input.defaultValue).toBe("default");
+      expect(establishmentPostcode.props().input.defaultValue).toBe("default");
     });
   });
 });

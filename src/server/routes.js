@@ -7,6 +7,7 @@ const continueController = require("./controllers/continue.controller");
 const submitController = require("./controllers/submit.controller");
 const backController = require("./controllers/back.controller");
 const switchesController = require("./controllers/switches.controller");
+const findAddressController = require("./controllers/find-address.controller");
 
 module.exports = () => {
   const router = Router();
@@ -102,6 +103,34 @@ module.exports = () => {
 
     info(`Routes: /edit/:target route finished`);
     res.redirect(`/${target}?edit=on`);
+  });
+
+  router.post("/findaddress/:originator", async (req, res) => {
+    info(`Routes: /findaddress/:originator route called`);
+
+    const response = await findAddressController(
+      `/${req.params.originator}`,
+      req.session.cumulativeAnswers,
+      req.body
+    );
+
+    req.session.cumulativeAnswers = response.cumulativeAnswers;
+    req.session.validatorErrors = response.validatorErrors;
+
+    req.session.addressLookups = Object.assign(
+      {},
+      req.session.addressLookups,
+      response.addressLookups
+    );
+
+    req.session.switches = Object.assign(
+      {},
+      req.session.switches,
+      response.switches
+    );
+
+    info(`Routes: /findaddress/:originator route finished`);
+    res.redirect(response.redirectRoute);
   });
 
   router.get("*", (req, res) => {

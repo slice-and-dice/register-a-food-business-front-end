@@ -66,6 +66,26 @@ const schema = {
   "/operator-address": {
     type: "object",
     properties: {
+      operator_postcode_find: {
+        type: "string",
+        validation: validatePostCode
+      }
+    }
+  },
+  "/operator-address-select": {
+    type: "object",
+    properties: {
+      operator_address_selected: {
+        type: "string"
+      },
+      operator_address_manual: {
+        type: "string"
+      }
+    }
+  },
+  "/operator-address-manual": {
+    type: "object",
+    properties: {
       operator_first_line: {
         type: "string",
         validation: validateFirstLine
@@ -175,6 +195,26 @@ const schema = {
     }
   },
   "/establishment-address": {
+    type: "object",
+    properties: {
+      establishment_postcode_find: {
+        type: "string",
+        validation: validatePostCode
+      }
+    }
+  },
+  "/establishment-address-select": {
+    type: "object",
+    properties: {
+      establishment_address_selected: {
+        type: "string"
+      },
+      establishment_address_manual: {
+        type: "string"
+      }
+    }
+  },
+  "/establishment-address-manual": {
     type: "object",
     properties: {
       establishment_postcode: {
