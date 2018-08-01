@@ -8,7 +8,10 @@ import moment from "moment";
 const AnchorTag = asAnchor("a");
 
 const ApplicationComplete = props => {
-  const transformedData = transformAnswersForSummary(props.cumulativeAnswers);
+  const transformedData = transformAnswersForSummary(
+    props.cumulativeAnswers,
+    props.addressLookups
+  );
   return (
     <FsaLayout>
       <Header level={2}>Your food business registration confirmation</Header>

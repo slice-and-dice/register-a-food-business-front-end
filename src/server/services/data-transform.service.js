@@ -71,7 +71,7 @@ const transformAnswersForSummary = (cumulativeAnswers, addressLookups) => {
   return data;
 };
 
-const transformAnswersForSubmit = cumulativeAnswers => {
+const transformAnswersForSubmit = (cumulativeAnswers, addressLookups) => {
   const establishment_details_keys = [
     "establishment_trading_name",
     "establishment_primary_number",
@@ -117,7 +117,7 @@ const transformAnswersForSubmit = cumulativeAnswers => {
       metadata: {}
     }
   };
-  const data = transformAnswersForSummary(cumulativeAnswers);
+  const data = transformAnswersForSummary(cumulativeAnswers, addressLookups);
   establishment_details_keys.forEach(key => {
     if (data[key]) {
       submitObject.registration.establishment.establishment_details[key] =
