@@ -18,6 +18,7 @@ const submitController = async submissionData => {
     if (response.status === 200) {
       controllerResponse.redirectRoute = "/summary-confirmation";
       controllerResponse.submissionDate = res.reg_submission_date;
+      controllerResponse.fsaRegistrationNumber = res["fsa-rn"];
     } else {
       controllerResponse.redirectRoute = "back";
     }

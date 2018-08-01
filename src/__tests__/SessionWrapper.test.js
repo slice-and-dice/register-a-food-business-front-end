@@ -85,7 +85,7 @@ describe("<SessionWrapper />", () => {
       });
     });
 
-    it("returns 'validatorErrors', 'cumulativeAnswers', 'submissionDate', 'addressLookups', and 'switches' even if req is undefined", () => {
+    it("returns 'validatorErrors', 'cumulativeAnswers', 'submissionDate', 'fsaRegistrationNumber', 'addressLookups', and 'switches' even if req is undefined", () => {
       const WrappedComponent = SessionWrapper(ExampleComponent);
       const initialProps = WrappedComponent.getInitialProps({});
       expect(typeof initialProps.validatorErrors).toBe("object");
@@ -93,6 +93,7 @@ describe("<SessionWrapper />", () => {
       expect(typeof initialProps.switches).toBe("object");
       expect(typeof initialProps.addressLookups).toBe("object");
       expect(typeof initialProps.submissionDate).toBe("string");
+      expect(typeof initialProps.fsaRegistrationNumber).toBe("string");
     });
   });
 
@@ -174,6 +175,22 @@ describe("<SessionWrapper />", () => {
         });
         const componentProps = WrappedComponent(initialProps).props;
         expect(componentProps.submissionDate).toBe(exampleSubmissionDate);
+      });
+    });
+
+    describe("given that req.session.fsaRegistrationNumber is defined", () => {
+      it("props.fsaRegistrationNumber is the same as the session.fsaRegistrationNumber", () => {
+        const WrappedComponent = SessionWrapper(ExampleComponent);
+        const exampleFsaRegistrationNumber = "12345678";
+        const initialProps = WrappedComponent.getInitialProps({
+          req: {
+            session: { fsaRegistrationNumber: exampleFsaRegistrationNumber }
+          }
+        });
+        const componentProps = WrappedComponent(initialProps).props;
+        expect(componentProps.fsaRegistrationNumber).toBe(
+          exampleFsaRegistrationNumber
+        );
       });
     });
 
