@@ -1,6 +1,6 @@
 {
   "name": "register_a_food_business_front_end",
-  "version": "1.27.0",
+  "version": "1.27.1",
   "scripts": {
     "debug": "node --inspect src/server/index.js",
     "dev": "node src/server/index.js",
@@ -35,7 +35,7 @@
     "express-session": "1.15.6",
     "govuk-react": "0.2.9",
     "jsonschema": "^1.2.4",
-    "next": "6.0.3",
+    "next": "6.1.1",
     "node-fetch": "2.1.2",
     "normalize.css": "8.0.0",
     "prop-types": "15.6.1",
