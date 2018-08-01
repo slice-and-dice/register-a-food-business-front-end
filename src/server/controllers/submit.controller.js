@@ -3,7 +3,7 @@ const {
   transformAnswersForSubmit
 } = require("../services/data-transform.service");
 
-const submitController = async submissionData => {
+const submitController = async (submissionData, addressLookups) => {
   const controllerResponse = {
     submissionErrors: {},
     redirectRoute: null,
@@ -11,7 +11,10 @@ const submitController = async submissionData => {
   };
 
   if (submissionData && Object.getOwnPropertyNames(submissionData).length > 0) {
-    const transformedData = transformAnswersForSubmit(submissionData);
+    const transformedData = transformAnswersForSubmit(
+      submissionData,
+      addressLookups
+    );
     const response = await submit(transformedData);
     const res = await response.json();
 

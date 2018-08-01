@@ -239,7 +239,8 @@ describe("Router: ", () => {
         session: {
           cumulativeAnswers: {
             some: "answers"
-          }
+          },
+          addressLookups: ["1"]
         }
       };
       res = {
@@ -249,9 +250,12 @@ describe("Router: ", () => {
     });
 
     it("Should call submitController with cumulativeAnswers", () => {
-      expect(submitController).toHaveBeenCalledWith({
-        some: "answers"
-      });
+      expect(submitController).toHaveBeenCalledWith(
+        {
+          some: "answers"
+        },
+        ["1"]
+      );
     });
 
     it("Should update session", () => {
