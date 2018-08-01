@@ -21,14 +21,23 @@ const ApplicationComplete = props => {
           props.localCouncilEmail
         }.**`}
       </Paragraph>
-      <Panel
-        panelTitle="Registration submitted"
-        panelBody={[
-          "Your unique food business registration number is:",
-          <br />,
-          <span className="bold">{props.referenceNumber}</span>
-        ]}
-      />
+      {props.fsaRegistrationNumber ? (
+        <Panel
+          id="panelWithNumber"
+          panelTitle="Registration submitted"
+          panelBody={[
+            "Your unique food business registration number is:",
+            <br />,
+            <span className="bold">{props.fsaRegistrationNumber}</span>
+          ]}
+        />
+      ) : (
+        <Panel
+          id="panelWithText"
+          panelTitle="Registration submitted"
+          panelBody={"Awaiting registration number"}
+        />
+      )}
 
       <Paragraph mb={1}>**Submitted on**</Paragraph>
       <Paragraph>
@@ -95,7 +104,7 @@ const ApplicationComplete = props => {
 export default SessionWrapper(ApplicationComplete);
 
 ApplicationComplete.propTypes = {
-  referenceNumber: PropTypes.string,
+  fsaRegistrationNumber: PropTypes.string,
   localCouncil: PropTypes.string,
   localCouncilEmail: PropTypes.string,
   submissionDate: PropTypes.string,

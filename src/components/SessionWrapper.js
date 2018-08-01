@@ -13,7 +13,10 @@ const SessionWrapper = Page => {
           : {},
       switches:
         req && req.session && req.session.switches ? req.session.switches : {},
-      referenceNumber: "34672462",
+      fsaRegistrationNumber:
+        req && req.session && req.session.fsaRegistrationNumber
+          ? req.session.fsaRegistrationNumber
+          : "",
       submissionDate:
         req && req.session && req.session.submissionDate
           ? req.session.submissionDate

@@ -45,4 +45,28 @@ describe("<ApplicationComplete />", () => {
       expect(summaryTable.length).toBe(1);
     });
   });
+  describe("When given fsaRegistrationNumber", () => {
+    it("The panel renders the number when defined", () => {
+      const wrapper = mount(
+        <ApplicationComplete
+          cumulativeAnswers={cumulativeAnswers}
+          hideChangeButtons={true}
+          fsaRegistrationNumber="12345"
+        />
+      );
+      const panel = wrapper.find("Panel#panelWithNumber");
+      expect(panel.length).toBe(1);
+    });
+    it("The panel renders 'Awaiting registration number' text when not defined", () => {
+      const wrapper = mount(
+        <ApplicationComplete
+          cumulativeAnswers={cumulativeAnswers}
+          hideChangeButtons={true}
+          fsaRegistrationNumber={undefined}
+        />
+      );
+      const panel = wrapper.find("Panel#panelWithText");
+      expect(panel.length).toBe(1);
+    });
+  });
 });
