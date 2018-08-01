@@ -19,6 +19,7 @@ module.exports = {
     "!**/.next/**/*.{js}",
     "!**/vars.js",
     "!src/server/index.js",
+    "!src/server/config.js",
     "!src/components/index.js",
     "!src/**/*.double.js",
     "!tests/**/*.js"

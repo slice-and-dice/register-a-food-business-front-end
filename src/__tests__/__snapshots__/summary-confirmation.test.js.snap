@@ -310,12 +310,12 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-68 {
+.emotion-67 {
   padding-top: 30px;
   text-align: center;
 }
 
-.emotion-66 {
+.emotion-65 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,7 +328,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-66 {
+  .emotion-65 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -336,7 +336,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   }
 }
 
-.emotion-65 {
+.emotion-64 {
   background: transparent;
   margin: 0 0 15px;
   text-indent: 0px;
@@ -344,22 +344,22 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-65 {
+  .emotion-64 {
     width: 100%;
     margin: 0 15px;
   }
 
-  .emotion-65:first-child {
+  .emotion-64:first-child {
     margin-left: 0;
   }
 
-  .emotion-65:last-child {
+  .emotion-64:last-child {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-65 {
+  .emotion-64 {
     width: 66.6667%;
   }
 }
@@ -635,7 +635,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
   color: #2e358b;
 }
 
-.emotion-64 {
+.emotion-63 {
   border: 0;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -649,7 +649,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
 }
 
 @media only screen and (min-width:641px) {
-  .emotion-64 {
+  .emotion-63 {
     font-size: 16px;
     line-height: 1.25;
   }
@@ -809,16 +809,16 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
     </div>
   </div>
   <div
-    className="emotion-68"
+    className="emotion-67"
   >
     <div
       className="emotion-15"
     >
       <div
-        className="emotion-66"
+        className="emotion-65"
       >
         <div
-          className="emotion-65"
+          className="emotion-64"
         >
           <h2
             className="emotion-20"
@@ -873,7 +873,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
             className="emotion-21"
           >
             <p>
-              31 Jul 2018
+              01 Aug 2018
             </p>
           </div>
           <div
@@ -977,7 +977,7 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
             </a>
           </div>
           <table
-            className="emotion-64"
+            className="emotion-63"
           >
             <caption
               className="emotion-46"
@@ -1037,11 +1037,6 @@ exports[`<ApplicationComplete /> matches the previous snapshot 1`] = `
                     </p>
                   </div>
                 </th>
-                <td
-                  className="emotion-47"
-                >
-                  <div />
-                </td>
                 <td
                   className="emotion-47"
                 >

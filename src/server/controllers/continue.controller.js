@@ -1,4 +1,8 @@
-const { moveAlongPath, editPath } = require("../services/path.service");
+const {
+  moveAlongPath,
+  editPath,
+  switchOffManualAddressInput
+} = require("../services/path.service");
 const { validate } = require("../services/validation.service");
 const {
   cleanInactivePathAnswers,
@@ -65,27 +69,27 @@ const continueController = (
     return controllerResponse;
   }
 
-  const cumulativeAnswersArray = Object.values(
-    controllerResponse.cumulativeAnswers
-  );
+  // get the new path based on the answers that have been given
+  const newPath = editPath(controllerResponse.cumulativeAnswers);
 
-  const newPath = editPath(cumulativeAnswersArray, currentPage);
+  // update the new path to switch off manual address input pages if the originator (currentPage) is one of the address select pages
+  const updatedNewPath = switchOffManualAddressInput(newPath, currentPage);
 
   // remove any answers that are associated with an inactive page on the path
   controllerResponse.cumulativeAnswers = cleanInactivePathAnswers(
     controllerResponse.cumulativeAnswers,
-    newPath
+    updatedNewPath
   );
 
   if (
-    Object.keys(newPath).indexOf(currentPage) ===
-    Object.keys(newPath).length - 1
+    Object.keys(updatedNewPath).indexOf(currentPage) ===
+    Object.keys(updatedNewPath).length - 1
   ) {
     // else if the current page is at the end of the path, redirect to the submit route
     controllerResponse.redirectRoute = "/submit";
   } else {
     // else move to the next page in the path
-    const nextPage = moveAlongPath(newPath, currentPage, 1);
+    const nextPage = moveAlongPath(updatedNewPath, currentPage, 1);
 
     controllerResponse.redirectRoute = nextPage;
   }

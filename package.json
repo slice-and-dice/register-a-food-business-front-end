@@ -8,7 +8,7 @@
     "version": "NODE_ENV=production node -v",
     "start": "NODE_ENV=production node src/server/index.js",
     "test": "jest ./src --coverage",
-    "test:watch": "jest --watch",
+    "test:watch": "jest ./src --watch",
     "test:integration": "jest tests/integration/*.js",
     "test:contract": "jest tests/contract/*.js",
     "lint": "eslint ./src ./pages",

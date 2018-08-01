@@ -28,9 +28,7 @@ const mandatoryTableRows = [
 ];
 
 const editableTableRows = [
-  "establishmentAddressRow",
   "establishmentAddressTypeRow",
-  "operatorAddressRow",
   "establishmentTradingNameRow",
   "operatorNameRow",
   "operatorCompanyNameRow",

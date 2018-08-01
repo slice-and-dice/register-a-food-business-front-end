@@ -4,6 +4,7 @@ import FsaLayout from "./FsaLayout";
 import ContentItem from "./ContentItem";
 import BackButton from "./BackButton";
 import ContinueButton from "./ContinueButton";
+import FindAddressButton from "./FindAddressButton";
 import HintTextSmall from "./HintTextSmall";
 import SummaryTable from "./SummaryTable";
 import CheckboxButton from "./CheckboxButton";
@@ -16,6 +17,7 @@ export {
   ContentItem,
   BackButton,
   ContinueButton,
+  FindAddressButton,
   HintTextSmall,
   SummaryTable,
   CheckboxButton,

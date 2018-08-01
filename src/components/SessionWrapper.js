@@ -19,7 +19,11 @@ const SessionWrapper = Page => {
           ? req.session.submissionDate
           : "",
       localCouncil: "Rushmoor Borough Council",
-      localCouncilEmail: "food@rushmoorboroughcouncil.gov.uk"
+      localCouncilEmail: "food@rushmoorboroughcouncil.gov.uk",
+      addressLookups:
+        req && req.session && req.session.addressLookups
+          ? req.session.addressLookups
+          : {}
     };
 
     req && req.query && req.query.edit === "on"

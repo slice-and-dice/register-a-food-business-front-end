@@ -18,16 +18,10 @@ module.exports.moveAlongPath = (path, currentPage, movement) => {
   }
 };
 
-module.exports.editPath = (answerArray, currentPage) => {
-  if (!answerArray || Array.isArray(answerArray) === false) {
+module.exports.editPath = cumulativeAnswers => {
+  if (!cumulativeAnswers || typeof cumulativeAnswers !== "object") {
     throw new Error(`
-    path.service.js editPath(): the answerArray argument is either missing or is not an array.
-  `);
-  }
-
-  if (!currentPage || typeof currentPage !== "string") {
-    throw new Error(`
-    path.service.js editPath(): the currentPage argument is either missing or is not a string.
+    path.service.js editPath(): the cumulativeAnswers argument is either missing or is not an object.
   `);
   }
 
@@ -40,15 +34,26 @@ module.exports.editPath = (answerArray, currentPage) => {
     Object.assign(allSwitches, newPath[page].switches);
   }
 
-  answerArray.sort((a, b) => {
+  const allAnswerValues = Object.values(cumulativeAnswers);
+  const allAnswerKeys = [];
+
+  for (let key in cumulativeAnswers) {
+    if (cumulativeAnswers[key] !== "") {
+      allAnswerKeys.push(key);
+    }
+  }
+
+  const answerValuesAndTruthyKeys = allAnswerValues.concat(allAnswerKeys);
+
+  answerValuesAndTruthyKeys.sort((a, b) => {
     return (
       Object.keys(allSwitches).indexOf(a) - Object.keys(allSwitches).indexOf(b)
     );
   });
 
-  answerArray.forEach(answerID => {
-    if (allSwitches[answerID]) {
-      pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[answerID]);
+  answerValuesAndTruthyKeys.forEach(valueOrKey => {
+    if (allSwitches[valueOrKey]) {
+      pagesToSwitch = Object.assign(pagesToSwitch, allSwitches[valueOrKey]);
     }
   });
 
@@ -57,4 +62,18 @@ module.exports.editPath = (answerArray, currentPage) => {
   }
 
   return newPath;
+};
+
+module.exports.switchOffManualAddressInput = (newPath, currentPage) => {
+  const manualAddressSwitchedPath = JSON.parse(JSON.stringify(newPath));
+
+  if (currentPage === "/establishment-address-select") {
+    manualAddressSwitchedPath["/establishment-address-manual"].on = false;
+  }
+
+  if (currentPage === "/operator-address-select") {
+    manualAddressSwitchedPath["/operator-address-manual"].on = false;
+  }
+
+  return manualAddressSwitchedPath;
 };
