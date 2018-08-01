@@ -210,4 +210,36 @@ describe("<OperatorAddress />", () => {
       expect(operatorPostcode.props().input.defaultValue).toBe("default");
     });
   });
+
+  describe("back button", () => {
+    describe("given a truthy switch of '/operator-address-none-found'", () => {
+      it("has href of '/operator-address'", () => {
+        const wrapper = mount(
+          <OperatorAddress
+            validatorErrors={testValidatorErrors}
+            cumulativeAnswers={testCumulativeAnswers}
+            switches={{ "/operator-address-none-found": true }}
+          />
+        );
+        const operatorBackButton = wrapper.find("#back-link");
+        expect(operatorBackButton.props().href).toBe("/operator-address");
+      });
+    });
+
+    describe("given a falsy switch of '/operator-address-none-found'", () => {
+      it("has href of '/operator-address-select'", () => {
+        const wrapper = mount(
+          <OperatorAddress
+            validatorErrors={testValidatorErrors}
+            cumulativeAnswers={testCumulativeAnswers}
+            switches={{ "/operator-address-none-found": false }}
+          />
+        );
+        const operatorBackButton = wrapper.find("#back-link");
+        expect(operatorBackButton.props().href).toBe(
+          "/operator-address-select"
+        );
+      });
+    });
+  });
 });

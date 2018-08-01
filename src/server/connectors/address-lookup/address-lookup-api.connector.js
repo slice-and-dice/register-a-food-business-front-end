@@ -39,74 +39,87 @@ const getAddressesByPostcode = async (
     throw new Error("Address lookup API is down");
   }
 
-  if (firstJson.length === 100 && firstJson[99].morevalues) {
-    let nextPage = 1;
+  // TODO JMB: debug multi-call code
 
-    let totalRequestCount = 1;
+  // if (firstJson.length === 100 && firstJson[99].morevalues) {
+  //   let nextPage = 1;
 
-    let combinedResponses = JSON.parse(JSON.stringify(firstJson));
+  //   let totalRequestCount = 1;
 
-    delete combinedResponses[99].morevalues;
-    delete combinedResponses[99].nextpage;
-    delete combinedResponses[99].totalresults;
+  //   let combinedResponses = JSON.parse(JSON.stringify(firstJson));
 
-    const numberOfTotalRequestsToMake = Math.ceil(addressCountLimit / 100);
+  //   const totalResults = combinedResponses[99].totalresults;
 
-    while (totalRequestCount < numberOfTotalRequestsToMake) {
-      let loopResponse;
-      let loopJson;
+  //   const numberOfTotalRequestsToMake =
+  //     totalResults > addressCountLimit
+  //       ? Math.ceil(addressCountLimit / 100)
+  //       : Math.ceil(totalResults / 100);
 
-      if (DOUBLE_MODE === "true") {
-        loopResponse = addressLookupDouble(
-          lowercaseCountryCode,
-          postcode,
-          ADDRESS_API_URL_QUERY + "&page=2"
-        );
-      } else {
-        loopResponse = await fetch(
-          `${ADDRESS_API_URL_BASE}/${postcode}?${ADDRESS_API_URL_QUERY}&page=${nextPage}`,
-          {
-            method: "GET"
-          }
-        );
-      }
+  //       delete combinedResponses[99].morevalues;
+  //   delete combinedResponses[99].nextpage;
+  //   delete combinedResponses[99].totalresults;
 
-      if (loopResponse.status === 200) {
-        loopJson = loopResponse.json();
-      } else {
-        throw new Error("Address lookup API is down");
-      }
+  //   while (totalRequestCount < numberOfTotalRequestsToMake) {
+  //     let loopResponse;
+  //     let loopJson;
 
-      if (loopJson.length === 100 && loopJson[99].morevalues) {
-        delete loopJson[99].morevalues;
-        delete loopJson[99].nextpage;
-        delete loopJson[99].totalresults;
-      }
+  //     if (DOUBLE_MODE === "true") {
+  //       loopResponse = addressLookupDouble(
+  //         lowercaseCountryCode,
+  //         postcode,
+  //         ADDRESS_API_URL_QUERY + "&page=2"
+  //       );
+  //     } else {
+  //       loopResponse = await fetch(
+  //         `${ADDRESS_API_URL_BASE}/${postcode}?${ADDRESS_API_URL_QUERY}&page=${nextPage}`,
+  //         {
+  //           method: "GET"
+  //         }
+  //       );
+  //     }
 
-      combinedResponses.push(...loopJson);
+  //     console.log(postcode, loopResponse);
 
-      combinedResponses.splice(addressCountLimit, combinedResponses.length);
+  //     if (loopResponse.status === 200) {
+  //       loopJson = loopResponse.json();
+  //     } else {
+  //       throw new Error("Address lookup API is down");
+  //     }
 
-      nextPage++;
-      totalRequestCount++;
-    }
+  //     if (loopJson.length === 100 && loopJson[99].morevalues) {
+  //       delete loopJson[99].morevalues;
+  //       delete loopJson[99].nextpage;
+  //       delete loopJson[99].totalresults;
+  //     }
 
-    winston.info(
-      `lookupAPI.connector: getAddressesByPostcode: finished with ${totalRequestCount} API request`
-    );
+  //     combinedResponses.push(...loopJson);
 
-    return combinedResponses;
-  } else if (firstJson.length === 0) {
-    winston.info(
-      `lookupAPI.connector: getAddressesByPostcode: finished with one API request. No addresses were found for this postcode.`
-    );
-    return firstJson;
-  } else {
-    winston.info(
-      `lookupAPI.connector: getAddressesByPostcode: finished with one API request`
-    );
-    return firstJson;
-  }
+  //     combinedResponses.splice(addressCountLimit, combinedResponses.length);
+
+  //     nextPage++;
+  //     totalRequestCount++;
+  //   }
+
+  //   winston.info(
+  //     `lookupAPI.connector: getAddressesByPostcode: finished with ${totalRequestCount} API request`
+  //   );
+
+  //   return combinedResponses;
+  // } else if (firstJson.length === 0) {
+  //   winston.info(
+  //     `lookupAPI.connector: getAddressesByPostcode: finished with one API request. No addresses were found for this postcode.`
+  //   );
+  //   return firstJson;
+  // } else {
+  //   winston.info(
+  //     `lookupAPI.connector: getAddressesByPostcode: finished with one API request`
+  //   );
+  //   return firstJson;
+  // }
+  winston.info(
+    `lookupAPI.connector: getAddressesByPostcode: finished with one API request`
+  );
+  return firstJson;
 };
 
 module.exports = { getAddressesByPostcode };

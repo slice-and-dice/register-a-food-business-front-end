@@ -84,4 +84,38 @@ describe("<EstablishmentAddress />", () => {
       expect(establishmentFirstLine.props().input.defaultValue).toBe("default");
     });
   });
+
+  describe("back button", () => {
+    describe("given a truthy switch of '/establishment-address-none-found'", () => {
+      it("has href of '/establishment-address'", () => {
+        const wrapper = mount(
+          <EstablishmentAddress
+            validatorErrors={testValidatorErrors}
+            cumulativeAnswers={testCumulativeAnswers}
+            switches={{ "/establishment-address-none-found": true }}
+          />
+        );
+        const establishmentBackButton = wrapper.find("#back-link");
+        expect(establishmentBackButton.props().href).toBe(
+          "/establishment-address"
+        );
+      });
+    });
+
+    describe("given a falsy switch of '/establishment-address-none-found'", () => {
+      it("has href of '/establishment-address-select'", () => {
+        const wrapper = mount(
+          <EstablishmentAddress
+            validatorErrors={testValidatorErrors}
+            cumulativeAnswers={testCumulativeAnswers}
+            switches={{ "/establishment-address-none-found": false }}
+          />
+        );
+        const establishmentBackButton = wrapper.find("#back-link");
+        expect(establishmentBackButton.props().href).toBe(
+          "/establishment-address-select"
+        );
+      });
+    });
+  });
 });
