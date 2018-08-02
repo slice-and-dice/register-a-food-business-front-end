@@ -1,0 +1,1866 @@
+{
+  "Farm-Fruit and vegetable grower": {
+    "displayName": "Fruit and vegetable farm",
+    "searchTerms": ["fruit", "vegetable", "grower", "agriculture", "farm"],
+    "answerIds": ["TYPE-A0"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Farm-Livestock": {
+    "displayName": "Livestock farm",
+    "searchTerms": [
+      "farm",
+      "livestock",
+      "cow",
+      "pig",
+      "chicken",
+      "cattle",
+      "poultry",
+      "agriculture",
+      "sheep",
+      "buffalo"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A5"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Farm-Arable": {
+    "displayName": "Arable farm",
+    "searchTerms": ["farm", "crop", "agriculture"],
+    "answerIds": ["TYPE-A0"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Beekeeper": {
+    "displayName": "Beekeper",
+    "searchTerms": ["beekeper", "bee", "honey", "farmer", "hive"],
+    "answerIds": ["TYPE-A0", "TYPE-A3"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Honey maker": {
+    "displayName": "Honey maker",
+    "searchTerms": ["honey", "bee", "maker", "honeymaker"],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A10",
+      "TYPE-A11",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Hunting and trapping": {
+    "displayName": "Hunting and trapping",
+    "searchTerms": [
+      "hunting",
+      "trapping",
+      "wildlife",
+      "game",
+      "wild",
+      "fowl",
+      "deer"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A12", "TYPE-A3"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Egg processor": {
+    "displayName": "Egg processor",
+    "searchTerms": ["egg", "duck", "chicken", "quail", "processor"],
+    "answerIds": ["TYPE-A0", "TYPE-A12", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 0
+    }
+  },
+  "Egg producer": {
+    "displayName": "Egg producer or packer",
+    "searchTerms": ["egg", "producer", "duck", "quail", "chicken", "packer"],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Fishing vessel": {
+    "displayName": "Fishing boat",
+    "searchTerms": [
+      "fishing",
+      "fish",
+      "fisherman",
+      "vessel",
+      "boat",
+      "ship",
+      "seafood",
+      "shellfish",
+      "oyster",
+      "mussels",
+      "clams",
+      "prawns",
+      "lobster",
+      "crab",
+      "shrimp",
+      "seafood",
+      "scallop",
+      "trawler",
+      "angling"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A12", "TYPE-A13", "TYPE-A3", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Farmed fishing": {
+    "displayName": "Fish farm",
+    "searchTerms": [
+      "fishing",
+      "fish",
+      "fisherman",
+      "fishfarm",
+      "fisher",
+      "seafood",
+      "shellfish",
+      "oyster",
+      "mussels",
+      "clams",
+      "prawns",
+      "lobster",
+      "crab",
+      "shrimp",
+      "seafood",
+      "scallop",
+      "tilapia",
+      "salmon",
+      "carp",
+      "aquaculture",
+      "mariculture"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A12"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Processing and preserving of meat": {
+    "displayName": "Meat product manufacturer",
+    "searchTerms": [
+      "processing",
+      "preserving",
+      "meat",
+      "airdrying",
+      "salting",
+      "jerky",
+      "curing",
+      "beef",
+      "pork",
+      "mutton",
+      "lamb",
+      "chicken",
+      "insect",
+      "biltong",
+      "smoking",
+      "drying",
+      "mincing",
+      "ham",
+      "manufacturer"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A12", "TYPE-A3", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Abattoirs": {
+    "displayName": "Abattoir",
+    "searchTerms": [
+      "abattoir",
+      "slaughterhouse",
+      "slaughter",
+      "butcher",
+      "butchery",
+      "halal",
+      "cutting"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A12"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Processing and preserving of fish, crustaceans and molluscs": {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerms": [
+      "processing",
+      "preserving",
+      "fish",
+      "crustecean",
+      "manufacturer",
+      "crab",
+      "lobster",
+      "shrimp",
+      "prawn",
+      "mussel",
+      "scallop",
+      "clam",
+      "smoking",
+      "salting",
+      "smoked",
+      "drying",
+      "airdrying",
+      "brining",
+      "pickling"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Purification centres for shellfish": {
+    "displayName": "Shellfish purification centre",
+    "searchTerms": [
+      "purification",
+      "plant",
+      "shellfish",
+      "oyster",
+      "mussels",
+      "clams",
+      "prawns",
+      "lobster",
+      "crab",
+      "shrimp",
+      "scallop",
+      "depuration"
+    ],
+    "answerIds": [
+      "TYPE-A0",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A13",
+      "TYPE-A3",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Processing and preserving of potatoes": {
+    "displayName": "Potato product manufacturer",
+    "searchTerms": [
+      "processing",
+      "preserving",
+      "chip",
+      "potato",
+      "manufacturer",
+      "crisp",
+      "canning",
+      "freezing",
+      "mash"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture of fruit and vegetable juice": {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerms": [
+      "fruit",
+      "vegetable",
+      "juice",
+      "drink",
+      "manufacturer",
+      "factory",
+      "lassi",
+      "smoothie",
+      "bottling",
+      "blending"
+    ],
+    "answerIds": [
+      "TYPE-A0",
+      "TYPE-A10",
+      "TYPE-A11",
+      "TYPE-A2",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Other processing and preserving of fruit and vegetables": {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerms": [
+      "fruit",
+      "vegetable",
+      "processor",
+      "processing",
+      "manufacturer",
+      "factory",
+      "preserving",
+      "drying",
+      "pickling",
+      "jam",
+      "freezing",
+      "salting",
+      "canning",
+      "peanut butter"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A3", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture of oils and fats": {
+    "displayName": "Oil and/or fat manufacturer",
+    "searchTerms": [
+      "oil",
+      "fat",
+      "lard",
+      "butter",
+      "manufacturer",
+      "factory",
+      "margarine",
+      "suet",
+      "vegetable",
+      "rapeseed",
+      "olive",
+      "sunflower"
+    ],
+    "answerIds": ["TYPE-A6", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Operation of dairies and cheese making": {
+    "displayName": "Dairies and cheese manufacturer",
+    "searchTerms": [
+      "dairy",
+      "cheese",
+      "yoghurt",
+      "processing",
+      "manufacturer",
+      "factory",
+      "fromage",
+      "cream",
+      "cheddar",
+      "milk",
+      "whey"
+    ],
+    "answerIds": [
+      "TYPE-A0",
+      "TYPE-A10",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture of ice cream": {
+    "displayName": "Ice cream manufacturer",
+    "searchTerms": [
+      "ice",
+      "cream",
+      "icecream",
+      "processing",
+      "manufacturer",
+      "factory",
+      "frozen",
+      "gelato",
+      "yoghurt"
+    ],
+    "answerIds": [
+      "TYPE-A0",
+      "TYPE-A10",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Commercial bakery": {
+    "displayName": "Commercial bakery",
+    "searchTerms": [
+      "baker",
+      "bakery",
+      "patisserie",
+      "pastry",
+      "manufacturer",
+      "cake",
+      "bread",
+      "commercial"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A3"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture of prepared meals and dishes": {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerms": [
+      "ready made",
+      "meals",
+      "dishes",
+      "readymeal",
+      "manufacturer",
+      "factory",
+      "microwave meal",
+      "frozen",
+      "ready to eat"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A12", "TYPE-A3", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture of homogenised food preparations and dietetic food": {
+    "displayName": "TBC - Nathan will decide",
+    "searchTerms": [
+      "homogenised",
+      "dietic",
+      "nutrition",
+      "medical",
+      "manufacturer",
+      "diet",
+      "health",
+      "weaning"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A12", "TYPE-A3", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture of other food products n.e.c.": {
+    "displayName": "Manufacturer of other food products",
+    "searchTerms": [
+      "ice",
+      "mill",
+      "processor",
+      "processing",
+      "manufacturer",
+      "factory",
+      "make",
+      "produce"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 20,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture-Alcoholic drinks": {
+    "displayName": "Alcoholic drinks manufacturer",
+    "searchTerms": [
+      "brewing",
+      "microbrewery",
+      "brewery",
+      "distillery",
+      "manufacturer",
+      "alcohol",
+      "alcoholic",
+      "wine",
+      "liqour",
+      "spirit",
+      "drink",
+      "lager",
+      "ale",
+      "beer",
+      "draught",
+      "cider",
+      "perry",
+      "mead",
+      "winery",
+      "vineyard",
+      "moonshine",
+      "gin",
+      "cocktail",
+      "whiskey",
+      "vodka",
+      "rum",
+      "craft"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A3"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Manufacture-Soft drinks, mineral waters and other bottled waters": {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerms": [
+      "soft",
+      "drink",
+      "soda",
+      "water",
+      "manufacturer",
+      "factory",
+      "sparkling",
+      "mineral",
+      "carbonated",
+      "bottle",
+      "bottling",
+      "lemonade",
+      "spring",
+      "energy"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Packer-Mineral waters": {
+    "displayName": "Mineral water packer",
+    "searchTerms": [
+      "packer",
+      "mineral",
+      "sparkling",
+      "water",
+      "carbonated",
+      "bottle",
+      "bottling",
+      "spring"
+    ],
+    "answerIds": ["TYPE-A0", "TYPE-A2"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Packer-Contract packers": {
+    "displayName": "Contract packer",
+    "searchTerms": [
+      "packer",
+      "contract",
+      "cannery",
+      "canning",
+      "bottling",
+      "packing",
+      "flowrapping",
+      "cartoning",
+      "potting",
+      "mixing",
+      "blending",
+      "bottle"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 40,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Food delivery service-Deliver food to consumers": {
+    "displayName": "Food delivery service",
+    "searchTerms": ["delivery", "service", "meals on wheels", "order"],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Food delivery service-Process food order only for consumers, e.g. Just Eat": {
+    "displayName": "Food ordering service",
+    "searchTerms": [
+      "delivery",
+      "service",
+      "order",
+      "ordering",
+      "process",
+      "aggregator"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Storage provider": {
+    "displayName": "Food storage facility",
+    "searchTerms": [
+      "storage",
+      "cold",
+      "warehouse",
+      "coldstore",
+      "facility",
+      "unit",
+      "refrigerated"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 0
+    }
+  },
+  "Food broker": {
+    "displayName": "Food broker",
+    "searchTerms": [
+      "broker",
+      "agent",
+      "negotiator",
+      "intermediator",
+      "mediator",
+      "consultant",
+      "buying",
+      "selling",
+      "buyer"
+    ],
+    "answerIds": ["TYPE-A0"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Wholesaler": {
+    "displayName": "Wholesaler",
+    "searchTerms": [
+      "wholesaler",
+      "supplier",
+      "bulk",
+      "produce",
+      "trade",
+      "grocer"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 0
+    }
+  },
+  "Cash and carry": {
+    "displayName": "Cash and carry",
+    "searchTerms": [
+      "cash",
+      "carry",
+      "cash and carry",
+      "wholesale",
+      "supplier",
+      "membership",
+      "warehouse",
+      "bulk"
+    ],
+    "answerIds": [
+      "TYPE-A0",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A13",
+      "TYPE-A3",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 0
+    }
+  },
+  "Haulage company": {
+    "displayName": "Haulage company",
+    "searchTerms": [
+      "haulage",
+      "shipping",
+      "transport",
+      "freightage",
+      "shipment",
+      "logistics"
+    ],
+    "answerIds": ["TYPE-A0"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Internet only food": {
+    "displayName": "Online retailer",
+    "searchTerms": [
+      "online",
+      "internet",
+      "amazon",
+      "etsy",
+      "ebay",
+      "computer",
+      "web",
+      "distance",
+      "order",
+      "retail"
+    ],
+    "answerIds": [
+      "TYPE-A0",
+      "TYPE-A10",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 15,
+      "Vulnerable group": 0
+    }
+  },
+  "Supermarket": {
+    "displayName": "Supermarket",
+    "searchTerms": [
+      "supermarket",
+      "hypermarket",
+      "grocery",
+      "market",
+      "store",
+      "convenience",
+      "shop"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Convenience store/mini-market/corner shop": {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerms": [
+      "supermarket",
+      "convenience",
+      "local",
+      "corner",
+      "store",
+      "grocery",
+      "shop",
+      "license"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Farm-Gate sales": {
+    "displayName": "Farm gate sales",
+    "searchTerms": [
+      "farm",
+      "gate",
+      "sales",
+      "eggs",
+      "potatoes",
+      "farmshop",
+      "gatesale",
+      "retail"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Farm shop": {
+    "displayName": "Farm shop",
+    "searchTerms": ["farm", "retail", "shop", "farmshop"],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A11",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Confectionery/sweet shop": {
+    "displayName": "Sweet shop or Confectioner",
+    "searchTerms": [
+      "confectioner",
+      "confectionary",
+      "sweet",
+      "candy",
+      "shop",
+      "dessert",
+      "chocolatier",
+      "retail",
+      "bonbon",
+      "retail"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Butcher (retail only)": {
+    "displayName": "Butcher",
+    "searchTerms": [
+      "butcher",
+      "meat",
+      "halal",
+      "retail",
+      "consumer",
+      "cutting",
+      "butchery"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Fishmonger": {
+    "displayName": "Fishmonger",
+    "searchTerms": [
+      "fishmonger",
+      "fish",
+      "seafood",
+      "monger",
+      "grocer",
+      "retail",
+      "shellfish"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A12", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Greengrocer/fruiterer": {
+    "displayName": "Greengrocer",
+    "searchTerms": [
+      "greengrocer",
+      "fruiterer",
+      "fruit",
+      "vegetable",
+      "shop",
+      "grocer",
+      "retail"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Health food shop": {
+    "displayName": "Health food shop",
+    "searchTerms": [
+      "health",
+      "shop",
+      "vitamins",
+      "supplements",
+      "healthy",
+      "organic",
+      "freefrom",
+      "natural",
+      "homeopathic",
+      "goodness",
+      "wellness",
+      "nutrition",
+      "dietary"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Bakers shop (retail only)": {
+    "displayName": "Bakery",
+    "searchTerms": [
+      "bakery",
+      "baker",
+      "pastry",
+      "shop",
+      "patisserie",
+      "bread",
+      "retail",
+      "bread",
+      "cake",
+      "cookies"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A3", "TYPE-A4", "TYPE-A5", "TYPE-A6"],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Newsagent, post office": {
+    "displayName": "Newsagent or Post Office",
+    "searchTerms": [
+      "supermarket",
+      "newsagent",
+      "news",
+      "post",
+      "postoffice",
+      "convenience",
+      "shop",
+      "tobacconist",
+      "newsstand",
+      "retail",
+      "corner"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Market stalls": {
+    "displayName": "Market stalls with permanent pitch",
+    "searchTerms": ["stall", "pop up", "popup", "market", "bazar"],
+    "answerIds": ["TYPE-A1", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Off licence": {
+    "displayName": "Off licence",
+    "searchTerms": [
+      "licence",
+      "off",
+      "tobacconist",
+      "wine",
+      "alcohol",
+      "beer",
+      "spirits",
+      "retail"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Petrol station/Garage": {
+    "displayName": "Petrol station or garage",
+    "searchTerms": [
+      "supermarket",
+      "petrol",
+      "gas",
+      "garage",
+      "store",
+      "convenience",
+      "shop"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5", "TYPE-A9"],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 0
+    }
+  },
+  "Delicatessen": {
+    "displayName": "Delicatessen",
+    "searchTerms": [
+      "delicatessen",
+      "deli",
+      "ham",
+      "cold cut",
+      "kosher",
+      "retail",
+      "charcuterie"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A9"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Chemist": {
+    "displayName": "Chemist",
+    "searchTerms": [
+      "supermarket",
+      "chemist",
+      "pharmacy",
+      "retail",
+      "apothecary",
+      "shop"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Retailers": {
+    "displayName": "Any other retailer",
+    "searchTerms": [
+      "supermarket",
+      "retailer",
+      "grocery",
+      "market",
+      "store",
+      "convenience",
+      "shop",
+      "foodbank",
+      "tea",
+      "coffee",
+      "playground",
+      "softplay",
+      "museum",
+      "zoo",
+      "aquarium",
+      "charity",
+      "library",
+      "gym",
+      "offcie",
+      "church",
+      "mosque",
+      "synagogue",
+      "village hall",
+      "temple",
+      "community",
+      "theatre",
+      "cinema",
+      "stadium",
+      "cirkus",
+      "concert",
+      "music",
+      "bingo",
+      "lounge",
+      "racecoruse",
+      "racetrack",
+      "bowling",
+      "park",
+      "amusement",
+      "fairground",
+      "casino",
+      "attraction"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Vending machine": {
+    "displayName": "Vending machine",
+    "searchTerms": [
+      "vending",
+      "machine",
+      "drinks",
+      "snacks",
+      "sweets",
+      "prepacked",
+      "water fountain"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Restaurant/Cafe/Canteen/Fast food restaurant": {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerms": [
+      "restaurant",
+      "bistro",
+      "brunch",
+      "afternoon tea",
+      "breakfast",
+      "supper",
+      "dinner",
+      "diner",
+      "Buffet",
+      "cafe",
+      "canteen",
+      "fast food",
+      "coffee",
+      "dessert",
+      "espresso",
+      "fusion",
+      "greasy",
+      "hamburger",
+      "burger",
+      "kebab",
+      "lunch",
+      "pizzeria",
+      "playground",
+      "sandwich",
+      "softplay",
+      "sushi",
+      "tea",
+      "juice bar",
+      "museum",
+      "zoo",
+      "aquarium",
+      "brasserie",
+      "carvery",
+      "churreria",
+      "creperie",
+      "fish and chip",
+      "grill",
+      "cafeteria",
+      "shelter",
+      "halfway",
+      "prison",
+      "detention",
+      "spa",
+      "charity",
+      "library",
+      "gym",
+      "fast food",
+      "offcie",
+      "church",
+      "mosque",
+      "synagogue",
+      "village hall",
+      "temple",
+      "community",
+      "gastropub",
+      "theatre",
+      "cinema",
+      "stadium",
+      "cirkus",
+      "concert",
+      "music",
+      "bingo",
+      "lounge",
+      "racecoruse",
+      "racetrack",
+      "bowling",
+      "park",
+      "amusement",
+      "fairground",
+      "casino",
+      "attraction"
+    ]
+  },
+  "Hostel or B&B": {
+    "displayName": "Hostel or bed & breakfast ",
+    "searchTerms": [
+      "hostel",
+      "bed",
+      "breakfast",
+      "B&B",
+      "guesthouse",
+      "inn",
+      "motel",
+      "resort",
+      "accomodation",
+      "retreat",
+      "spa",
+      "airbnb"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Hotels": {
+    "displayName": "Hotel",
+    "searchTerms": [
+      "hotel",
+      "guesthouse",
+      "inn",
+      "motel",
+      "resort",
+      "accomodation",
+      "retreat",
+      "spa",
+      "airbnb"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A12",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Pubs - Meals": {
+    "displayName": "Pub serving meals",
+    "searchTerms": [
+      "pub",
+      "bar",
+      "alcohol",
+      "drinks",
+      "gastropub",
+      "cocktail",
+      "beer",
+      "theatre",
+      "cinema",
+      "nightclub",
+      "club",
+      "stadium",
+      "cirkus",
+      "concert",
+      "music",
+      "bartending",
+      "bingo",
+      "disco",
+      "lounge",
+      "racecoruse",
+      "racetrack",
+      "bowling",
+      "park",
+      "amusement",
+      "fairground",
+      "casino",
+      "attraction",
+      "winebar",
+      "brewery"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Pubs - snacks and drinks only": {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerms": [
+      "pub",
+      "bar",
+      "alcohol",
+      "drinks",
+      "cocktail",
+      "beer",
+      "theatre",
+      "cinema",
+      "nightclub",
+      "club",
+      "stadium",
+      "cirkus",
+      "concert",
+      "music",
+      "bartending",
+      "bingo",
+      "disco",
+      "lounge",
+      "racecoruse",
+      "racetrack",
+      "bowling",
+      "park",
+      "amusement",
+      "fairground",
+      "casino",
+      "attraction",
+      "winebar",
+      "brewery",
+      "wet pub"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A5", "TYPE-A6", "TYPE-A7"],
+    "baseScores": {
+      "Type of food and method of handling": 5,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Take away-No food consumed on site": {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerms": [
+      "takeaway",
+      "to go",
+      "take away",
+      "kiosk",
+      "drive through",
+      "restaurant",
+      "bistro",
+      "brunch",
+      "afternoon tea",
+      "breakfast",
+      "supper",
+      "dinner",
+      "diner",
+      "Buffet",
+      "cafe",
+      "canteen",
+      "fast food",
+      "coffee",
+      "dessert",
+      "espresso",
+      "fusion",
+      "greasy",
+      "hamburger",
+      "burger",
+      "kebab",
+      "lunch",
+      "pizzeria",
+      "playground",
+      "sandwich",
+      "softplay",
+      "sushi",
+      "tea",
+      "juice bar",
+      "museum",
+      "zoo",
+      "aquarium",
+      "brasserie",
+      "carvery",
+      "churreria",
+      "creperie",
+      "fish and chip",
+      "grill",
+      "cafeteria",
+      "shelter",
+      "halfway",
+      "prison",
+      "detention",
+      "spa",
+      "charity",
+      "library",
+      "gym",
+      "fast food",
+      "offcie",
+      "church",
+      "mosque",
+      "synagogue",
+      "village hall",
+      "temple",
+      "community",
+      "gastropub",
+      "theatre",
+      "cinema",
+      "stadium",
+      "cirkus",
+      "concert",
+      "music",
+      "bingo",
+      "lounge",
+      "racecoruse",
+      "racetrack",
+      "bowling",
+      "park",
+      "amusement",
+      "fairground",
+      "casino",
+      "attraction"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A11",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Nursing, care homes, day centres": {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerms": [
+      "nursing",
+      "care",
+      "home",
+      "elderly",
+      "sheltered",
+      "adult",
+      "residential",
+      "aged",
+      "retirement",
+      "day",
+      "centre"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 22
+    }
+  },
+  "Hospitals": {
+    "displayName": "Hospital",
+    "searchTerms": [
+      "hospital",
+      "GP",
+      "emergency",
+      "medical",
+      "health",
+      "clinic",
+      "infirmary",
+      "hospice"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 10,
+      "Vulnerable group": 22
+    }
+  },
+  "Childminder": {
+    "displayName": "Childminder",
+    "searchTerms": ["child", "minder", "childminder", "babysitter", "nanny"],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A10",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Childcare, Nursery; pre/after school care; play group etc-Meals": {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerms": [
+      "child",
+      "childcarer",
+      "care",
+      "nursery",
+      "babysitter",
+      "nanny",
+      "daycare",
+      "playgroup",
+      "play",
+      "au pair",
+      "breakfast club"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 22
+    }
+  },
+  "Educational establishment (schools, colleges, university)": {
+    "displayName": "Educational establishment",
+    "searchTerms": [
+      "school",
+      "college",
+      "university",
+      "canteen",
+      "academy",
+      "boarding",
+      "gymnasium",
+      "preparatory",
+      "preschool",
+      "primary"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Mobile retailer": {
+    "displayName": "Mobile retailer",
+    "searchTerms": [
+      "mobile",
+      "retailer",
+      "movable",
+      "market",
+      "bazar",
+      "foodtruck",
+      "food truck",
+      "pop up",
+      "popup",
+      "vehicle",
+      "stall",
+      "car",
+      "bike",
+      "ice cream van",
+      "van",
+      "festival",
+      "retail",
+      "street",
+      "vendor"
+    ],
+    "answerIds": ["TYPE-A1", "TYPE-A4", "TYPE-A8", "TYPE-A9", "TYPE-A12"],
+    "baseScores": {
+      "Type of food and method of handling": 10,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Mobile caterer": {
+    "displayName": "Mobile caterer",
+    "searchTerms": [
+      "mobile",
+      "caterer",
+      "movable",
+      "market",
+      "bazar",
+      "foodtruck",
+      "food truck",
+      "pop up",
+      "popup",
+      "vehicle",
+      "stall",
+      "car",
+      "bike",
+      "ice cream van",
+      "van",
+      "festival",
+      "event",
+      "party",
+      "function",
+      "burger van",
+      "hot dog stand",
+      "street",
+      "vendor"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A8",
+      "TYPE-A10",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Movable food establishment": {
+    "displayName": "Movable food establishment",
+    "searchTerms": [
+      "movable",
+      "train",
+      "locomotive",
+      "cruise",
+      "boat",
+      "ship",
+      "catamaran",
+      "airplane",
+      "plane",
+      "ferry",
+      "yacht",
+      "coach",
+      "bus"
+    ],
+    "answerIds": [
+      "TYPE-A1",
+      "TYPE-A3",
+      "TYPE-A4",
+      "TYPE-A5",
+      "TYPE-A6",
+      "TYPE-A7",
+      "TYPE-A8",
+      "TYPE-A12"
+    ],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Contract caterer": {
+    "displayName": "Contract caterer",
+    "searchTerms": [
+      "contract",
+      "caterer",
+      "wedding",
+      "event",
+      "party",
+      "occasion",
+      "function"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 30,
+      "Method of processing": 0,
+      "Consumers at risk": 5,
+      "Vulnerable group": 0
+    }
+  },
+  "Home caterer": {
+    "displayName": "Home caterer",
+    "searchTerms": [
+      "home",
+      "caterer",
+      "baker",
+      "cake",
+      "cupcake",
+      "house",
+      "domestic",
+      "cookie"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Meat cutting plant/catering butcher": {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerms": [
+      "butcher",
+      "meat",
+      "halal",
+      "commercial",
+      "cutting",
+      "butchery"
+    ],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  },
+  "Auction hall (fish)": {
+    "displayName": "Food auction hall",
+    "searchTerms": ["auction", "hall", "auctioneer", "bidding"],
+    "answerIds": [],
+    "baseScores": {
+      "Type of food and method of handling": 0,
+      "Method of processing": 0,
+      "Consumers at risk": 0,
+      "Vulnerable group": 0
+    }
+  }
+}

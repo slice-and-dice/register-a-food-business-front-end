@@ -10,6 +10,7 @@ import SummaryTable from "./SummaryTable";
 import CheckboxButton from "./CheckboxButton";
 import OnHandleErrorClick from "./OnHandleErrorClick";
 import ProcessedErrorSummary from "./ProcessedErrorSummary";
+import BusinessTypeLookup from "./BusinessTypeLookup";
 export {
   SessionWrapper,
   FsaHeader,
@@ -22,5 +23,6 @@ export {
   SummaryTable,
   CheckboxButton,
   ProcessedErrorSummary,
-  OnHandleErrorClick
+  OnHandleErrorClick,
+  BusinessTypeLookup
 };
