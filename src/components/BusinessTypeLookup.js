@@ -6,7 +6,10 @@ import {
   suggestionFunction,
   suggest
 } from "./BusinessTypeLookupFunctions";
-const Autocomplete = dynamic(import("accessible-autocomplete/react"));
+
+const Autocomplete = dynamic(import("accessible-autocomplete/react"), {
+  loading: () => <p>Loading business type search...</p>
+});
 
 const templates = {
   inputValue: inputValueFunction,
