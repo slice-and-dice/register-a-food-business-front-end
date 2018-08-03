@@ -12,8 +12,10 @@
     "test:integration": "jest tests/integration/*.js",
     "test:contract": "jest tests/contract/*.js",
     "lint": "eslint ./src ./pages",
-    "format:verify": "prettier --list-different '{./src,./pages,./docs,./tests}/**/*' '!./src/__tests__/__snapshots__/**/*'",
-    "format": "prettier --write '{./src,./pages,./docs,./tests}/**/*' '!./src/__tests__/__snapshots__/**/*'"
+    "format:verify":
+      "prettier --list-different '{./src,./pages,./docs,./tests}/**/*' '!./src/__tests__/__snapshots__/**/*'",
+    "format":
+      "prettier --write '{./src,./pages,./docs,./tests}/**/*' '!./src/__tests__/__snapshots__/**/*'"
   },
   "dependencies": {
     "@babel/core": "7.0.0-beta.47",
@@ -22,7 +24,7 @@
     "@slice-and-dice/register-a-food-business-validation": "1.8.0",
     "@storybook/addons": "3.3.0",
     "@zeit/next-css": "0.2.0",
-    "accessible-autocomplete": "^1.6.1",
+    "accessible-autocomplete": "1.6.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-plugin-emotion": "9.1.2",
     "body-parser": "1.18.3",

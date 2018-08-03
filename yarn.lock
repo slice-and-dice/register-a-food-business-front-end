@@ -1169,7 +1169,7 @@ accepts@~1.3.5:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
-accessible-autocomplete@^1.6.1:
+accessible-autocomplete@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/accessible-autocomplete/-/accessible-autocomplete-1.6.1.tgz#23edd14cab2abc39baa4f6168457166acefc17fe"
   dependencies:
