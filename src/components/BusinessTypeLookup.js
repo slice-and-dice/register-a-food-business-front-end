@@ -9,27 +9,45 @@ const suggest = (query, returnResultsArray) => {
     JSON.parse(JSON.stringify(businessTypesJSON))
   );
 
-  returnResultsArray(
-    query
-      ? businessTypesArray.filter(businessType => {
-          const displayNameLC = businessType.displayName.toLowerCase();
-          const searchTermLC = businessType.searchTerm.toLowerCase();
+  let displayNameMatchArray;
+  let searchTermMatchArray;
+  let resultsArray;
 
-          const matching =
-            displayNameLC.includes(query.toLowerCase()) ||
-            searchTermLC.includes(query.toLowerCase());
-          return matching;
-        })
-      : []
-  );
+  if (query) {
+    displayNameMatchArray = businessTypesArray
+      .filter(
+        (obj, pos, arr) =>
+          arr
+            .map(mapObj => mapObj["displayName"])
+            .indexOf(obj["displayName"]) === pos
+      )
+      .filter(entry => {
+        const displayNameLC = entry.displayName.toLowerCase();
+        return displayNameLC.includes(query.toLowerCase());
+      })
+      .map(entry => {
+        return { displayName: entry.displayName, searchTerm: undefined };
+      });
+
+    searchTermMatchArray = businessTypesArray.filter(entry => {
+      const searchTermLC = entry.searchTerm.toLowerCase();
+      return searchTermLC.includes(query.toLowerCase());
+    });
+
+    resultsArray = displayNameMatchArray.concat(searchTermMatchArray);
+  } else {
+    resultsArray = [];
+  }
+
+  returnResultsArray(resultsArray);
 };
 
 const suggestionFunction = suggestionToBeDisplayed => {
   return (
     suggestionToBeDisplayed.displayName +
-    " (" +
-    suggestionToBeDisplayed.searchTerm +
-    ")"
+    (suggestionToBeDisplayed.searchTerm
+      ? ` (${suggestionToBeDisplayed.searchTerm})`
+      : "")
   );
 };
 
