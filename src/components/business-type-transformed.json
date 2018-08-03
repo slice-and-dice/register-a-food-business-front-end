@@ -1,0 +1,1744 @@
+[
+  { "displayName": "Fruit and vegetable farm", "searchTerm": "fruit" },
+  { "displayName": "Fruit and vegetable farm", "searchTerm": "vegetable" },
+  { "displayName": "Fruit and vegetable farm", "searchTerm": "grower" },
+  { "displayName": "Fruit and vegetable farm", "searchTerm": "agriculture" },
+  { "displayName": "Fruit and vegetable farm", "searchTerm": "farm" },
+  { "displayName": "Livestock farm", "searchTerm": "farm" },
+  { "displayName": "Livestock farm", "searchTerm": "livestock" },
+  { "displayName": "Livestock farm", "searchTerm": "cow" },
+  { "displayName": "Livestock farm", "searchTerm": "pig" },
+  { "displayName": "Livestock farm", "searchTerm": "chicken" },
+  { "displayName": "Livestock farm", "searchTerm": "cattle" },
+  { "displayName": "Livestock farm", "searchTerm": "poultry" },
+  { "displayName": "Livestock farm", "searchTerm": "agriculture" },
+  { "displayName": "Livestock farm", "searchTerm": "sheep" },
+  { "displayName": "Livestock farm", "searchTerm": "buffalo" },
+  { "displayName": "Arable farm", "searchTerm": "farm" },
+  { "displayName": "Arable farm", "searchTerm": "crop" },
+  { "displayName": "Arable farm", "searchTerm": "agriculture" },
+  { "displayName": "Beekeper", "searchTerm": "beekeper" },
+  { "displayName": "Beekeper", "searchTerm": "bee" },
+  { "displayName": "Beekeper", "searchTerm": "honey" },
+  { "displayName": "Beekeper", "searchTerm": "farmer" },
+  { "displayName": "Beekeper", "searchTerm": "hive" },
+  { "displayName": "Honey maker", "searchTerm": "honey" },
+  { "displayName": "Honey maker", "searchTerm": "bee" },
+  { "displayName": "Honey maker", "searchTerm": "maker" },
+  { "displayName": "Honey maker", "searchTerm": "honeymaker" },
+  { "displayName": "Hunting and trapping", "searchTerm": "hunting" },
+  { "displayName": "Hunting and trapping", "searchTerm": "trapping" },
+  { "displayName": "Hunting and trapping", "searchTerm": "wildlife" },
+  { "displayName": "Hunting and trapping", "searchTerm": "game" },
+  { "displayName": "Hunting and trapping", "searchTerm": "wild" },
+  { "displayName": "Hunting and trapping", "searchTerm": "fowl" },
+  { "displayName": "Hunting and trapping", "searchTerm": "deer" },
+  { "displayName": "Egg processor", "searchTerm": "egg" },
+  { "displayName": "Egg processor", "searchTerm": "duck" },
+  { "displayName": "Egg processor", "searchTerm": "chicken" },
+  { "displayName": "Egg processor", "searchTerm": "quail" },
+  { "displayName": "Egg processor", "searchTerm": "processor" },
+  { "displayName": "Egg producer or packer", "searchTerm": "egg" },
+  { "displayName": "Egg producer or packer", "searchTerm": "producer" },
+  { "displayName": "Egg producer or packer", "searchTerm": "duck" },
+  { "displayName": "Egg producer or packer", "searchTerm": "quail" },
+  { "displayName": "Egg producer or packer", "searchTerm": "chicken" },
+  { "displayName": "Egg producer or packer", "searchTerm": "packer" },
+  { "displayName": "Fishing boat", "searchTerm": "fishing" },
+  { "displayName": "Fishing boat", "searchTerm": "fish" },
+  { "displayName": "Fishing boat", "searchTerm": "fisherman" },
+  { "displayName": "Fishing boat", "searchTerm": "vessel" },
+  { "displayName": "Fishing boat", "searchTerm": "boat" },
+  { "displayName": "Fishing boat", "searchTerm": "ship" },
+  { "displayName": "Fishing boat", "searchTerm": "seafood" },
+  { "displayName": "Fishing boat", "searchTerm": "shellfish" },
+  { "displayName": "Fishing boat", "searchTerm": "oyster" },
+  { "displayName": "Fishing boat", "searchTerm": "mussels" },
+  { "displayName": "Fishing boat", "searchTerm": "clams" },
+  { "displayName": "Fishing boat", "searchTerm": "prawns" },
+  { "displayName": "Fishing boat", "searchTerm": "lobster" },
+  { "displayName": "Fishing boat", "searchTerm": "crab" },
+  { "displayName": "Fishing boat", "searchTerm": "shrimp" },
+  { "displayName": "Fishing boat", "searchTerm": "seafood" },
+  { "displayName": "Fishing boat", "searchTerm": "scallop" },
+  { "displayName": "Fishing boat", "searchTerm": "trawler" },
+  { "displayName": "Fishing boat", "searchTerm": "angling" },
+  { "displayName": "Fish farm", "searchTerm": "fishing" },
+  { "displayName": "Fish farm", "searchTerm": "fish" },
+  { "displayName": "Fish farm", "searchTerm": "fisherman" },
+  { "displayName": "Fish farm", "searchTerm": "fishfarm" },
+  { "displayName": "Fish farm", "searchTerm": "fisher" },
+  { "displayName": "Fish farm", "searchTerm": "seafood" },
+  { "displayName": "Fish farm", "searchTerm": "shellfish" },
+  { "displayName": "Fish farm", "searchTerm": "oyster" },
+  { "displayName": "Fish farm", "searchTerm": "mussels" },
+  { "displayName": "Fish farm", "searchTerm": "clams" },
+  { "displayName": "Fish farm", "searchTerm": "prawns" },
+  { "displayName": "Fish farm", "searchTerm": "lobster" },
+  { "displayName": "Fish farm", "searchTerm": "crab" },
+  { "displayName": "Fish farm", "searchTerm": "shrimp" },
+  { "displayName": "Fish farm", "searchTerm": "seafood" },
+  { "displayName": "Fish farm", "searchTerm": "scallop" },
+  { "displayName": "Fish farm", "searchTerm": "tilapia" },
+  { "displayName": "Fish farm", "searchTerm": "salmon" },
+  { "displayName": "Fish farm", "searchTerm": "carp" },
+  { "displayName": "Fish farm", "searchTerm": "aquaculture" },
+  { "displayName": "Fish farm", "searchTerm": "mariculture" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "processing" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "preserving" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "meat" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "airdrying" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "salting" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "jerky" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "curing" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "beef" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "pork" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "mutton" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "lamb" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "chicken" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "insect" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "biltong" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "smoking" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "drying" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "mincing" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "ham" },
+  { "displayName": "Meat product manufacturer", "searchTerm": "manufacturer" },
+  { "displayName": "Abattoir", "searchTerm": "abattoir" },
+  { "displayName": "Abattoir", "searchTerm": "slaughterhouse" },
+  { "displayName": "Abattoir", "searchTerm": "slaughter" },
+  { "displayName": "Abattoir", "searchTerm": "butcher" },
+  { "displayName": "Abattoir", "searchTerm": "butchery" },
+  { "displayName": "Abattoir", "searchTerm": "halal" },
+  { "displayName": "Abattoir", "searchTerm": "cutting" },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "processing"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "preserving"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "fish"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "crustecean"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "crab"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "lobster"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "shrimp"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "prawn"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "mussel"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "scallop"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "clam"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "smoking"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "salting"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "smoked"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "drying"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "airdrying"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "brining"
+  },
+  {
+    "displayName": "Fish and shellfish product manufacturer",
+    "searchTerm": "pickling"
+  },
+  {
+    "displayName": "Shellfish purification centre",
+    "searchTerm": "purification"
+  },
+  { "displayName": "Shellfish purification centre", "searchTerm": "plant" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "shellfish" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "oyster" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "mussels" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "clams" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "prawns" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "lobster" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "crab" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "shrimp" },
+  { "displayName": "Shellfish purification centre", "searchTerm": "scallop" },
+  {
+    "displayName": "Shellfish purification centre",
+    "searchTerm": "depuration"
+  },
+  { "displayName": "Potato product manufacturer", "searchTerm": "processing" },
+  { "displayName": "Potato product manufacturer", "searchTerm": "preserving" },
+  { "displayName": "Potato product manufacturer", "searchTerm": "chip" },
+  { "displayName": "Potato product manufacturer", "searchTerm": "potato" },
+  {
+    "displayName": "Potato product manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  { "displayName": "Potato product manufacturer", "searchTerm": "crisp" },
+  { "displayName": "Potato product manufacturer", "searchTerm": "canning" },
+  { "displayName": "Potato product manufacturer", "searchTerm": "freezing" },
+  { "displayName": "Potato product manufacturer", "searchTerm": "mash" },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "fruit"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "vegetable"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "juice"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "drink"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "factory"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "lassi"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "smoothie"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "bottling"
+  },
+  {
+    "displayName": "Fruit and vegetable juice manufacturer",
+    "searchTerm": "blending"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "fruit"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "vegetable"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "processor"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "processing"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "factory"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "preserving"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "drying"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "pickling"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "jam"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "freezing"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "salting"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "canning"
+  },
+  {
+    "displayName": "Fruit and vegetable product manufacturer",
+    "searchTerm": "peanut butter"
+  },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "oil" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "fat" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "lard" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "butter" },
+  {
+    "displayName": "Oil and/or fat manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "factory" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "margarine" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "suet" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "vegetable" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "rapeseed" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "olive" },
+  { "displayName": "Oil and/or fat manufacturer", "searchTerm": "sunflower" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "dairy" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "cheese" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "yoghurt" },
+  {
+    "displayName": "Dairies and cheese manufacturer",
+    "searchTerm": "processing"
+  },
+  {
+    "displayName": "Dairies and cheese manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "factory" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "fromage" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "cream" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "cheddar" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "milk" },
+  { "displayName": "Dairies and cheese manufacturer", "searchTerm": "whey" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "ice" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "cream" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "icecream" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "processing" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "manufacturer" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "factory" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "frozen" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "gelato" },
+  { "displayName": "Ice cream manufacturer", "searchTerm": "yoghurt" },
+  { "displayName": "Commercial bakery", "searchTerm": "baker" },
+  { "displayName": "Commercial bakery", "searchTerm": "bakery" },
+  { "displayName": "Commercial bakery", "searchTerm": "patisserie" },
+  { "displayName": "Commercial bakery", "searchTerm": "pastry" },
+  { "displayName": "Commercial bakery", "searchTerm": "manufacturer" },
+  { "displayName": "Commercial bakery", "searchTerm": "cake" },
+  { "displayName": "Commercial bakery", "searchTerm": "bread" },
+  { "displayName": "Commercial bakery", "searchTerm": "commercial" },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "ready made"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "meals"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "dishes"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "readymeal"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "manufacturer"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "factory"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "microwave meal"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "frozen"
+  },
+  {
+    "displayName": "Ready to eat meals or food manufacturerr",
+    "searchTerm": "ready to eat"
+  },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "homogenised" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "dietic" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "nutrition" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "medical" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "manufacturer" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "diet" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "health" },
+  { "displayName": "TBC - Nathan will decide", "searchTerm": "weaning" },
+  { "displayName": "Manufacturer of other food products", "searchTerm": "ice" },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "mill"
+  },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "processor"
+  },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "processing"
+  },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "manufacturer"
+  },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "factory"
+  },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "make"
+  },
+  {
+    "displayName": "Manufacturer of other food products",
+    "searchTerm": "produce"
+  },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "brewing" },
+  {
+    "displayName": "Alcoholic drinks manufacturer",
+    "searchTerm": "microbrewery"
+  },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "brewery" },
+  {
+    "displayName": "Alcoholic drinks manufacturer",
+    "searchTerm": "distillery"
+  },
+  {
+    "displayName": "Alcoholic drinks manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "alcohol" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "alcoholic" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "wine" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "liqour" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "spirit" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "drink" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "lager" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "ale" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "beer" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "draught" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "cider" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "perry" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "mead" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "winery" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "vineyard" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "moonshine" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "gin" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "cocktail" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "whiskey" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "vodka" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "rum" },
+  { "displayName": "Alcoholic drinks manufacturer", "searchTerm": "craft" },
+  { "displayName": "Non alcoholic drinks manufacturer", "searchTerm": "soft" },
+  { "displayName": "Non alcoholic drinks manufacturer", "searchTerm": "drink" },
+  { "displayName": "Non alcoholic drinks manufacturer", "searchTerm": "soda" },
+  { "displayName": "Non alcoholic drinks manufacturer", "searchTerm": "water" },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "manufacturer"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "factory"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "sparkling"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "mineral"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "carbonated"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "bottle"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "bottling"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "lemonade"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "spring"
+  },
+  {
+    "displayName": "Non alcoholic drinks manufacturer",
+    "searchTerm": "energy"
+  },
+  { "displayName": "Mineral water packer", "searchTerm": "packer" },
+  { "displayName": "Mineral water packer", "searchTerm": "mineral" },
+  { "displayName": "Mineral water packer", "searchTerm": "sparkling" },
+  { "displayName": "Mineral water packer", "searchTerm": "water" },
+  { "displayName": "Mineral water packer", "searchTerm": "carbonated" },
+  { "displayName": "Mineral water packer", "searchTerm": "bottle" },
+  { "displayName": "Mineral water packer", "searchTerm": "bottling" },
+  { "displayName": "Mineral water packer", "searchTerm": "spring" },
+  { "displayName": "Contract packer", "searchTerm": "packer" },
+  { "displayName": "Contract packer", "searchTerm": "contract" },
+  { "displayName": "Contract packer", "searchTerm": "cannery" },
+  { "displayName": "Contract packer", "searchTerm": "canning" },
+  { "displayName": "Contract packer", "searchTerm": "bottling" },
+  { "displayName": "Contract packer", "searchTerm": "packing" },
+  { "displayName": "Contract packer", "searchTerm": "flowrapping" },
+  { "displayName": "Contract packer", "searchTerm": "cartoning" },
+  { "displayName": "Contract packer", "searchTerm": "potting" },
+  { "displayName": "Contract packer", "searchTerm": "mixing" },
+  { "displayName": "Contract packer", "searchTerm": "blending" },
+  { "displayName": "Contract packer", "searchTerm": "bottle" },
+  { "displayName": "Food delivery service", "searchTerm": "delivery" },
+  { "displayName": "Food delivery service", "searchTerm": "service" },
+  { "displayName": "Food delivery service", "searchTerm": "meals on wheels" },
+  { "displayName": "Food delivery service", "searchTerm": "order" },
+  { "displayName": "Food ordering service", "searchTerm": "delivery" },
+  { "displayName": "Food ordering service", "searchTerm": "service" },
+  { "displayName": "Food ordering service", "searchTerm": "order" },
+  { "displayName": "Food ordering service", "searchTerm": "ordering" },
+  { "displayName": "Food ordering service", "searchTerm": "process" },
+  { "displayName": "Food ordering service", "searchTerm": "aggregator" },
+  { "displayName": "Food storage facility", "searchTerm": "storage" },
+  { "displayName": "Food storage facility", "searchTerm": "cold" },
+  { "displayName": "Food storage facility", "searchTerm": "warehouse" },
+  { "displayName": "Food storage facility", "searchTerm": "coldstore" },
+  { "displayName": "Food storage facility", "searchTerm": "facility" },
+  { "displayName": "Food storage facility", "searchTerm": "unit" },
+  { "displayName": "Food storage facility", "searchTerm": "refrigerated" },
+  { "displayName": "Food broker", "searchTerm": "broker" },
+  { "displayName": "Food broker", "searchTerm": "agent" },
+  { "displayName": "Food broker", "searchTerm": "negotiator" },
+  { "displayName": "Food broker", "searchTerm": "intermediator" },
+  { "displayName": "Food broker", "searchTerm": "mediator" },
+  { "displayName": "Food broker", "searchTerm": "consultant" },
+  { "displayName": "Food broker", "searchTerm": "buying" },
+  { "displayName": "Food broker", "searchTerm": "selling" },
+  { "displayName": "Food broker", "searchTerm": "buyer" },
+  { "displayName": "Wholesaler", "searchTerm": "wholesaler" },
+  { "displayName": "Wholesaler", "searchTerm": "supplier" },
+  { "displayName": "Wholesaler", "searchTerm": "bulk" },
+  { "displayName": "Wholesaler", "searchTerm": "produce" },
+  { "displayName": "Wholesaler", "searchTerm": "trade" },
+  { "displayName": "Wholesaler", "searchTerm": "grocer" },
+  { "displayName": "Cash and carry", "searchTerm": "cash" },
+  { "displayName": "Cash and carry", "searchTerm": "carry" },
+  { "displayName": "Cash and carry", "searchTerm": "cash and carry" },
+  { "displayName": "Cash and carry", "searchTerm": "wholesale" },
+  { "displayName": "Cash and carry", "searchTerm": "supplier" },
+  { "displayName": "Cash and carry", "searchTerm": "membership" },
+  { "displayName": "Cash and carry", "searchTerm": "warehouse" },
+  { "displayName": "Cash and carry", "searchTerm": "bulk" },
+  { "displayName": "Haulage company", "searchTerm": "haulage" },
+  { "displayName": "Haulage company", "searchTerm": "shipping" },
+  { "displayName": "Haulage company", "searchTerm": "transport" },
+  { "displayName": "Haulage company", "searchTerm": "freightage" },
+  { "displayName": "Haulage company", "searchTerm": "shipment" },
+  { "displayName": "Haulage company", "searchTerm": "logistics" },
+  { "displayName": "Online retailer", "searchTerm": "online" },
+  { "displayName": "Online retailer", "searchTerm": "internet" },
+  { "displayName": "Online retailer", "searchTerm": "amazon" },
+  { "displayName": "Online retailer", "searchTerm": "etsy" },
+  { "displayName": "Online retailer", "searchTerm": "ebay" },
+  { "displayName": "Online retailer", "searchTerm": "computer" },
+  { "displayName": "Online retailer", "searchTerm": "web" },
+  { "displayName": "Online retailer", "searchTerm": "distance" },
+  { "displayName": "Online retailer", "searchTerm": "order" },
+  { "displayName": "Online retailer", "searchTerm": "retail" },
+  { "displayName": "Supermarket", "searchTerm": "supermarket" },
+  { "displayName": "Supermarket", "searchTerm": "hypermarket" },
+  { "displayName": "Supermarket", "searchTerm": "grocery" },
+  { "displayName": "Supermarket", "searchTerm": "market" },
+  { "displayName": "Supermarket", "searchTerm": "store" },
+  { "displayName": "Supermarket", "searchTerm": "convenience" },
+  { "displayName": "Supermarket", "searchTerm": "shop" },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "supermarket"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "convenience"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "local"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "corner"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "store"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "grocery"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "shop"
+  },
+  {
+    "displayName": "Local convenience store or corner shop",
+    "searchTerm": "license"
+  },
+  { "displayName": "Farm gate sales", "searchTerm": "farm" },
+  { "displayName": "Farm gate sales", "searchTerm": "gate" },
+  { "displayName": "Farm gate sales", "searchTerm": "sales" },
+  { "displayName": "Farm gate sales", "searchTerm": "eggs" },
+  { "displayName": "Farm gate sales", "searchTerm": "potatoes" },
+  { "displayName": "Farm gate sales", "searchTerm": "farmshop" },
+  { "displayName": "Farm gate sales", "searchTerm": "gatesale" },
+  { "displayName": "Farm gate sales", "searchTerm": "retail" },
+  { "displayName": "Farm shop", "searchTerm": "farm" },
+  { "displayName": "Farm shop", "searchTerm": "retail" },
+  { "displayName": "Farm shop", "searchTerm": "shop" },
+  { "displayName": "Farm shop", "searchTerm": "farmshop" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "confectioner" },
+  {
+    "displayName": "Sweet shop or Confectioner",
+    "searchTerm": "confectionary"
+  },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "sweet" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "candy" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "shop" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "dessert" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "chocolatier" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "retail" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "bonbon" },
+  { "displayName": "Sweet shop or Confectioner", "searchTerm": "retail" },
+  { "displayName": "Butcher", "searchTerm": "butcher" },
+  { "displayName": "Butcher", "searchTerm": "meat" },
+  { "displayName": "Butcher", "searchTerm": "halal" },
+  { "displayName": "Butcher", "searchTerm": "retail" },
+  { "displayName": "Butcher", "searchTerm": "consumer" },
+  { "displayName": "Butcher", "searchTerm": "cutting" },
+  { "displayName": "Butcher", "searchTerm": "butchery" },
+  { "displayName": "Fishmonger", "searchTerm": "fishmonger" },
+  { "displayName": "Fishmonger", "searchTerm": "fish" },
+  { "displayName": "Fishmonger", "searchTerm": "seafood" },
+  { "displayName": "Fishmonger", "searchTerm": "monger" },
+  { "displayName": "Fishmonger", "searchTerm": "grocer" },
+  { "displayName": "Fishmonger", "searchTerm": "retail" },
+  { "displayName": "Fishmonger", "searchTerm": "shellfish" },
+  { "displayName": "Greengrocer", "searchTerm": "greengrocer" },
+  { "displayName": "Greengrocer", "searchTerm": "fruiterer" },
+  { "displayName": "Greengrocer", "searchTerm": "fruit" },
+  { "displayName": "Greengrocer", "searchTerm": "vegetable" },
+  { "displayName": "Greengrocer", "searchTerm": "shop" },
+  { "displayName": "Greengrocer", "searchTerm": "grocer" },
+  { "displayName": "Greengrocer", "searchTerm": "retail" },
+  { "displayName": "Health food shop", "searchTerm": "health" },
+  { "displayName": "Health food shop", "searchTerm": "shop" },
+  { "displayName": "Health food shop", "searchTerm": "vitamins" },
+  { "displayName": "Health food shop", "searchTerm": "supplements" },
+  { "displayName": "Health food shop", "searchTerm": "healthy" },
+  { "displayName": "Health food shop", "searchTerm": "organic" },
+  { "displayName": "Health food shop", "searchTerm": "freefrom" },
+  { "displayName": "Health food shop", "searchTerm": "natural" },
+  { "displayName": "Health food shop", "searchTerm": "homeopathic" },
+  { "displayName": "Health food shop", "searchTerm": "goodness" },
+  { "displayName": "Health food shop", "searchTerm": "wellness" },
+  { "displayName": "Health food shop", "searchTerm": "nutrition" },
+  { "displayName": "Health food shop", "searchTerm": "dietary" },
+  { "displayName": "Bakery", "searchTerm": "bakery" },
+  { "displayName": "Bakery", "searchTerm": "baker" },
+  { "displayName": "Bakery", "searchTerm": "pastry" },
+  { "displayName": "Bakery", "searchTerm": "shop" },
+  { "displayName": "Bakery", "searchTerm": "patisserie" },
+  { "displayName": "Bakery", "searchTerm": "bread" },
+  { "displayName": "Bakery", "searchTerm": "retail" },
+  { "displayName": "Bakery", "searchTerm": "bread" },
+  { "displayName": "Bakery", "searchTerm": "cake" },
+  { "displayName": "Bakery", "searchTerm": "cookies" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "supermarket" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "newsagent" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "news" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "post" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "postoffice" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "convenience" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "shop" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "tobacconist" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "newsstand" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "retail" },
+  { "displayName": "Newsagent or Post Office", "searchTerm": "corner" },
+  {
+    "displayName": "Market stalls with permanent pitch",
+    "searchTerm": "stall"
+  },
+  {
+    "displayName": "Market stalls with permanent pitch",
+    "searchTerm": "pop up"
+  },
+  {
+    "displayName": "Market stalls with permanent pitch",
+    "searchTerm": "popup"
+  },
+  {
+    "displayName": "Market stalls with permanent pitch",
+    "searchTerm": "market"
+  },
+  {
+    "displayName": "Market stalls with permanent pitch",
+    "searchTerm": "bazar"
+  },
+  { "displayName": "Off licence", "searchTerm": "licence" },
+  { "displayName": "Off licence", "searchTerm": "off" },
+  { "displayName": "Off licence", "searchTerm": "tobacconist" },
+  { "displayName": "Off licence", "searchTerm": "wine" },
+  { "displayName": "Off licence", "searchTerm": "alcohol" },
+  { "displayName": "Off licence", "searchTerm": "beer" },
+  { "displayName": "Off licence", "searchTerm": "spirits" },
+  { "displayName": "Off licence", "searchTerm": "retail" },
+  { "displayName": "Petrol station or garage", "searchTerm": "supermarket" },
+  { "displayName": "Petrol station or garage", "searchTerm": "petrol" },
+  { "displayName": "Petrol station or garage", "searchTerm": "gas" },
+  { "displayName": "Petrol station or garage", "searchTerm": "garage" },
+  { "displayName": "Petrol station or garage", "searchTerm": "store" },
+  { "displayName": "Petrol station or garage", "searchTerm": "convenience" },
+  { "displayName": "Petrol station or garage", "searchTerm": "shop" },
+  { "displayName": "Delicatessen", "searchTerm": "delicatessen" },
+  { "displayName": "Delicatessen", "searchTerm": "deli" },
+  { "displayName": "Delicatessen", "searchTerm": "ham" },
+  { "displayName": "Delicatessen", "searchTerm": "cold cut" },
+  { "displayName": "Delicatessen", "searchTerm": "kosher" },
+  { "displayName": "Delicatessen", "searchTerm": "retail" },
+  { "displayName": "Delicatessen", "searchTerm": "charcuterie" },
+  { "displayName": "Chemist", "searchTerm": "supermarket" },
+  { "displayName": "Chemist", "searchTerm": "chemist" },
+  { "displayName": "Chemist", "searchTerm": "pharmacy" },
+  { "displayName": "Chemist", "searchTerm": "retail" },
+  { "displayName": "Chemist", "searchTerm": "apothecary" },
+  { "displayName": "Chemist", "searchTerm": "shop" },
+  { "displayName": "Any other retailer", "searchTerm": "supermarket" },
+  { "displayName": "Any other retailer", "searchTerm": "retailer" },
+  { "displayName": "Any other retailer", "searchTerm": "grocery" },
+  { "displayName": "Any other retailer", "searchTerm": "market" },
+  { "displayName": "Any other retailer", "searchTerm": "store" },
+  { "displayName": "Any other retailer", "searchTerm": "convenience" },
+  { "displayName": "Any other retailer", "searchTerm": "shop" },
+  { "displayName": "Any other retailer", "searchTerm": "foodbank" },
+  { "displayName": "Any other retailer", "searchTerm": "tea" },
+  { "displayName": "Any other retailer", "searchTerm": "coffee" },
+  { "displayName": "Any other retailer", "searchTerm": "playground" },
+  { "displayName": "Any other retailer", "searchTerm": "softplay" },
+  { "displayName": "Any other retailer", "searchTerm": "museum" },
+  { "displayName": "Any other retailer", "searchTerm": "zoo" },
+  { "displayName": "Any other retailer", "searchTerm": "aquarium" },
+  { "displayName": "Any other retailer", "searchTerm": "charity" },
+  { "displayName": "Any other retailer", "searchTerm": "library" },
+  { "displayName": "Any other retailer", "searchTerm": "gym" },
+  { "displayName": "Any other retailer", "searchTerm": "offcie" },
+  { "displayName": "Any other retailer", "searchTerm": "church" },
+  { "displayName": "Any other retailer", "searchTerm": "mosque" },
+  { "displayName": "Any other retailer", "searchTerm": "synagogue" },
+  { "displayName": "Any other retailer", "searchTerm": "village hall" },
+  { "displayName": "Any other retailer", "searchTerm": "temple" },
+  { "displayName": "Any other retailer", "searchTerm": "community" },
+  { "displayName": "Any other retailer", "searchTerm": "theatre" },
+  { "displayName": "Any other retailer", "searchTerm": "cinema" },
+  { "displayName": "Any other retailer", "searchTerm": "stadium" },
+  { "displayName": "Any other retailer", "searchTerm": "cirkus" },
+  { "displayName": "Any other retailer", "searchTerm": "concert" },
+  { "displayName": "Any other retailer", "searchTerm": "music" },
+  { "displayName": "Any other retailer", "searchTerm": "bingo" },
+  { "displayName": "Any other retailer", "searchTerm": "lounge" },
+  { "displayName": "Any other retailer", "searchTerm": "racecoruse" },
+  { "displayName": "Any other retailer", "searchTerm": "racetrack" },
+  { "displayName": "Any other retailer", "searchTerm": "bowling" },
+  { "displayName": "Any other retailer", "searchTerm": "park" },
+  { "displayName": "Any other retailer", "searchTerm": "amusement" },
+  { "displayName": "Any other retailer", "searchTerm": "fairground" },
+  { "displayName": "Any other retailer", "searchTerm": "casino" },
+  { "displayName": "Any other retailer", "searchTerm": "attraction" },
+  { "displayName": "Vending machine", "searchTerm": "vending" },
+  { "displayName": "Vending machine", "searchTerm": "machine" },
+  { "displayName": "Vending machine", "searchTerm": "drinks" },
+  { "displayName": "Vending machine", "searchTerm": "snacks" },
+  { "displayName": "Vending machine", "searchTerm": "sweets" },
+  { "displayName": "Vending machine", "searchTerm": "prepacked" },
+  { "displayName": "Vending machine", "searchTerm": "water fountain" },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "restaurant"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "bistro"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "brunch"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "afternoon tea"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "breakfast"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "supper"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "dinner"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "diner"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "Buffet"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "cafe"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "canteen"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "fast food"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "coffee"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "dessert"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "espresso"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "fusion"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "greasy"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "hamburger"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "burger"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "kebab"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "lunch"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "pizzeria"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "playground"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "sandwich"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "softplay"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "sushi"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "tea"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "juice bar"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "museum"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "zoo"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "aquarium"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "brasserie"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "carvery"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "churreria"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "creperie"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "fish and chip"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "grill"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "cafeteria"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "shelter"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "halfway"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "prison"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "detention"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "spa"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "charity"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "library"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "gym"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "fast food"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "offcie"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "church"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "mosque"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "synagogue"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "village hall"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "temple"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "community"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "gastropub"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "theatre"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "cinema"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "stadium"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "cirkus"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "concert"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "music"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "bingo"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "lounge"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "racecoruse"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "racetrack"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "bowling"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "park"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "amusement"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "fairground"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "casino"
+  },
+  {
+    "displayName": "Restaurant, cafe, canteen, or fast food restaurant",
+    "searchTerm": "attraction"
+  },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "hostel" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "bed" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "breakfast" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "B&B" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "guesthouse" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "inn" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "motel" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "resort" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "accomodation" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "retreat" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "spa" },
+  { "displayName": "Hostel or bed & breakfast ", "searchTerm": "airbnb" },
+  { "displayName": "Hotel", "searchTerm": "hotel" },
+  { "displayName": "Hotel", "searchTerm": "guesthouse" },
+  { "displayName": "Hotel", "searchTerm": "inn" },
+  { "displayName": "Hotel", "searchTerm": "motel" },
+  { "displayName": "Hotel", "searchTerm": "resort" },
+  { "displayName": "Hotel", "searchTerm": "accomodation" },
+  { "displayName": "Hotel", "searchTerm": "retreat" },
+  { "displayName": "Hotel", "searchTerm": "spa" },
+  { "displayName": "Hotel", "searchTerm": "airbnb" },
+  { "displayName": "Pub serving meals", "searchTerm": "pub" },
+  { "displayName": "Pub serving meals", "searchTerm": "bar" },
+  { "displayName": "Pub serving meals", "searchTerm": "alcohol" },
+  { "displayName": "Pub serving meals", "searchTerm": "drinks" },
+  { "displayName": "Pub serving meals", "searchTerm": "gastropub" },
+  { "displayName": "Pub serving meals", "searchTerm": "cocktail" },
+  { "displayName": "Pub serving meals", "searchTerm": "beer" },
+  { "displayName": "Pub serving meals", "searchTerm": "theatre" },
+  { "displayName": "Pub serving meals", "searchTerm": "cinema" },
+  { "displayName": "Pub serving meals", "searchTerm": "nightclub" },
+  { "displayName": "Pub serving meals", "searchTerm": "club" },
+  { "displayName": "Pub serving meals", "searchTerm": "stadium" },
+  { "displayName": "Pub serving meals", "searchTerm": "cirkus" },
+  { "displayName": "Pub serving meals", "searchTerm": "concert" },
+  { "displayName": "Pub serving meals", "searchTerm": "music" },
+  { "displayName": "Pub serving meals", "searchTerm": "bartending" },
+  { "displayName": "Pub serving meals", "searchTerm": "bingo" },
+  { "displayName": "Pub serving meals", "searchTerm": "disco" },
+  { "displayName": "Pub serving meals", "searchTerm": "lounge" },
+  { "displayName": "Pub serving meals", "searchTerm": "racecoruse" },
+  { "displayName": "Pub serving meals", "searchTerm": "racetrack" },
+  { "displayName": "Pub serving meals", "searchTerm": "bowling" },
+  { "displayName": "Pub serving meals", "searchTerm": "park" },
+  { "displayName": "Pub serving meals", "searchTerm": "amusement" },
+  { "displayName": "Pub serving meals", "searchTerm": "fairground" },
+  { "displayName": "Pub serving meals", "searchTerm": "casino" },
+  { "displayName": "Pub serving meals", "searchTerm": "attraction" },
+  { "displayName": "Pub serving meals", "searchTerm": "winebar" },
+  { "displayName": "Pub serving meals", "searchTerm": "brewery" },
+  { "displayName": "Pub serving only snacks and drinks", "searchTerm": "pub" },
+  { "displayName": "Pub serving only snacks and drinks", "searchTerm": "bar" },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "alcohol"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "drinks"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "cocktail"
+  },
+  { "displayName": "Pub serving only snacks and drinks", "searchTerm": "beer" },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "theatre"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "cinema"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "nightclub"
+  },
+  { "displayName": "Pub serving only snacks and drinks", "searchTerm": "club" },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "stadium"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "cirkus"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "concert"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "music"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "bartending"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "bingo"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "disco"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "lounge"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "racecoruse"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "racetrack"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "bowling"
+  },
+  { "displayName": "Pub serving only snacks and drinks", "searchTerm": "park" },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "amusement"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "fairground"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "casino"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "attraction"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "winebar"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "brewery"
+  },
+  {
+    "displayName": "Pub serving only snacks and drinks",
+    "searchTerm": "wet pub"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "takeaway"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "to go"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "take away"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "kiosk"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "drive through"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "restaurant"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "bistro"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "brunch"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "afternoon tea"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "breakfast"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "supper"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "dinner"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "diner"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "Buffet"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "cafe"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "canteen"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "fast food"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "coffee"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "dessert"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "espresso"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "fusion"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "greasy"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "hamburger"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "burger"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "kebab"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "lunch"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "pizzeria"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "playground"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "sandwich"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "softplay"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "sushi"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "tea"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "juice bar"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "museum"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "zoo"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "aquarium"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "brasserie"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "carvery"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "churreria"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "creperie"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "fish and chip"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "grill"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "cafeteria"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "shelter"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "halfway"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "prison"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "detention"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "spa"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "charity"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "library"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "gym"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "fast food"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "offcie"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "church"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "mosque"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "synagogue"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "village hall"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "temple"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "community"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "gastropub"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "theatre"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "cinema"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "stadium"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "cirkus"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "concert"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "music"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "bingo"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "lounge"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "racecoruse"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "racetrack"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "bowling"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "park"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "amusement"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "fairground"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "casino"
+  },
+  {
+    "displayName": "Take away with no food consumed on site",
+    "searchTerm": "attraction"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "nursing"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "care"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "home"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "elderly"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "sheltered"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "adult"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "residential"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "aged"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "retirement"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "day"
+  },
+  {
+    "displayName": "Nursing home, care home or day centre",
+    "searchTerm": "centre"
+  },
+  { "displayName": "Hospital", "searchTerm": "hospital" },
+  { "displayName": "Hospital", "searchTerm": "GP" },
+  { "displayName": "Hospital", "searchTerm": "emergency" },
+  { "displayName": "Hospital", "searchTerm": "medical" },
+  { "displayName": "Hospital", "searchTerm": "health" },
+  { "displayName": "Hospital", "searchTerm": "clinic" },
+  { "displayName": "Hospital", "searchTerm": "infirmary" },
+  { "displayName": "Hospital", "searchTerm": "hospice" },
+  { "displayName": "Childminder", "searchTerm": "child" },
+  { "displayName": "Childminder", "searchTerm": "minder" },
+  { "displayName": "Childminder", "searchTerm": "childminder" },
+  { "displayName": "Childminder", "searchTerm": "babysitter" },
+  { "displayName": "Childminder", "searchTerm": "nanny" },
+  { "displayName": "Childcare, nursery or play group", "searchTerm": "child" },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "childcarer"
+  },
+  { "displayName": "Childcare, nursery or play group", "searchTerm": "care" },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "nursery"
+  },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "babysitter"
+  },
+  { "displayName": "Childcare, nursery or play group", "searchTerm": "nanny" },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "daycare"
+  },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "playgroup"
+  },
+  { "displayName": "Childcare, nursery or play group", "searchTerm": "play" },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "au pair"
+  },
+  {
+    "displayName": "Childcare, nursery or play group",
+    "searchTerm": "breakfast club"
+  },
+  { "displayName": "Educational establishment", "searchTerm": "school" },
+  { "displayName": "Educational establishment", "searchTerm": "college" },
+  { "displayName": "Educational establishment", "searchTerm": "university" },
+  { "displayName": "Educational establishment", "searchTerm": "canteen" },
+  { "displayName": "Educational establishment", "searchTerm": "academy" },
+  { "displayName": "Educational establishment", "searchTerm": "boarding" },
+  { "displayName": "Educational establishment", "searchTerm": "gymnasium" },
+  { "displayName": "Educational establishment", "searchTerm": "preparatory" },
+  { "displayName": "Educational establishment", "searchTerm": "preschool" },
+  { "displayName": "Educational establishment", "searchTerm": "primary" },
+  { "displayName": "Mobile retailer", "searchTerm": "mobile" },
+  { "displayName": "Mobile retailer", "searchTerm": "retailer" },
+  { "displayName": "Mobile retailer", "searchTerm": "movable" },
+  { "displayName": "Mobile retailer", "searchTerm": "market" },
+  { "displayName": "Mobile retailer", "searchTerm": "bazar" },
+  { "displayName": "Mobile retailer", "searchTerm": "foodtruck" },
+  { "displayName": "Mobile retailer", "searchTerm": "food truck" },
+  { "displayName": "Mobile retailer", "searchTerm": "pop up" },
+  { "displayName": "Mobile retailer", "searchTerm": "popup" },
+  { "displayName": "Mobile retailer", "searchTerm": "vehicle" },
+  { "displayName": "Mobile retailer", "searchTerm": "stall" },
+  { "displayName": "Mobile retailer", "searchTerm": "car" },
+  { "displayName": "Mobile retailer", "searchTerm": "bike" },
+  { "displayName": "Mobile retailer", "searchTerm": "ice cream van" },
+  { "displayName": "Mobile retailer", "searchTerm": "van" },
+  { "displayName": "Mobile retailer", "searchTerm": "festival" },
+  { "displayName": "Mobile retailer", "searchTerm": "retail" },
+  { "displayName": "Mobile retailer", "searchTerm": "street" },
+  { "displayName": "Mobile retailer", "searchTerm": "vendor" },
+  { "displayName": "Mobile caterer", "searchTerm": "mobile" },
+  { "displayName": "Mobile caterer", "searchTerm": "caterer" },
+  { "displayName": "Mobile caterer", "searchTerm": "movable" },
+  { "displayName": "Mobile caterer", "searchTerm": "market" },
+  { "displayName": "Mobile caterer", "searchTerm": "bazar" },
+  { "displayName": "Mobile caterer", "searchTerm": "foodtruck" },
+  { "displayName": "Mobile caterer", "searchTerm": "food truck" },
+  { "displayName": "Mobile caterer", "searchTerm": "pop up" },
+  { "displayName": "Mobile caterer", "searchTerm": "popup" },
+  { "displayName": "Mobile caterer", "searchTerm": "vehicle" },
+  { "displayName": "Mobile caterer", "searchTerm": "stall" },
+  { "displayName": "Mobile caterer", "searchTerm": "car" },
+  { "displayName": "Mobile caterer", "searchTerm": "bike" },
+  { "displayName": "Mobile caterer", "searchTerm": "ice cream van" },
+  { "displayName": "Mobile caterer", "searchTerm": "van" },
+  { "displayName": "Mobile caterer", "searchTerm": "festival" },
+  { "displayName": "Mobile caterer", "searchTerm": "event" },
+  { "displayName": "Mobile caterer", "searchTerm": "party" },
+  { "displayName": "Mobile caterer", "searchTerm": "function" },
+  { "displayName": "Mobile caterer", "searchTerm": "burger van" },
+  { "displayName": "Mobile caterer", "searchTerm": "hot dog stand" },
+  { "displayName": "Mobile caterer", "searchTerm": "street" },
+  { "displayName": "Mobile caterer", "searchTerm": "vendor" },
+  { "displayName": "Movable food establishment", "searchTerm": "movable" },
+  { "displayName": "Movable food establishment", "searchTerm": "train" },
+  { "displayName": "Movable food establishment", "searchTerm": "locomotive" },
+  { "displayName": "Movable food establishment", "searchTerm": "cruise" },
+  { "displayName": "Movable food establishment", "searchTerm": "boat" },
+  { "displayName": "Movable food establishment", "searchTerm": "ship" },
+  { "displayName": "Movable food establishment", "searchTerm": "catamaran" },
+  { "displayName": "Movable food establishment", "searchTerm": "airplane" },
+  { "displayName": "Movable food establishment", "searchTerm": "plane" },
+  { "displayName": "Movable food establishment", "searchTerm": "ferry" },
+  { "displayName": "Movable food establishment", "searchTerm": "yacht" },
+  { "displayName": "Movable food establishment", "searchTerm": "coach" },
+  { "displayName": "Movable food establishment", "searchTerm": "bus" },
+  { "displayName": "Contract caterer", "searchTerm": "contract" },
+  { "displayName": "Contract caterer", "searchTerm": "caterer" },
+  { "displayName": "Contract caterer", "searchTerm": "wedding" },
+  { "displayName": "Contract caterer", "searchTerm": "event" },
+  { "displayName": "Contract caterer", "searchTerm": "party" },
+  { "displayName": "Contract caterer", "searchTerm": "occasion" },
+  { "displayName": "Contract caterer", "searchTerm": "function" },
+  { "displayName": "Home caterer", "searchTerm": "home" },
+  { "displayName": "Home caterer", "searchTerm": "caterer" },
+  { "displayName": "Home caterer", "searchTerm": "baker" },
+  { "displayName": "Home caterer", "searchTerm": "cake" },
+  { "displayName": "Home caterer", "searchTerm": "cupcake" },
+  { "displayName": "Home caterer", "searchTerm": "house" },
+  { "displayName": "Home caterer", "searchTerm": "domestic" },
+  { "displayName": "Home caterer", "searchTerm": "cookie" },
+  {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerm": "butcher"
+  },
+  {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerm": "meat"
+  },
+  {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerm": "halal"
+  },
+  {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerm": "commercial"
+  },
+  {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerm": "cutting"
+  },
+  {
+    "displayName": "Meat cutting plant or commercial butcher",
+    "searchTerm": "butchery"
+  },
+  { "displayName": "Food auction hall", "searchTerm": "auction" },
+  { "displayName": "Food auction hall", "searchTerm": "hall" },
+  { "displayName": "Food auction hall", "searchTerm": "auctioneer" },
+  { "displayName": "Food auction hall", "searchTerm": "bidding" }
+]

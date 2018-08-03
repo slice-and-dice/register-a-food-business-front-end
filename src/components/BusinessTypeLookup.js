@@ -1,13 +1,9 @@
 import dynamic from "next/dynamic";
 import "accessible-autocomplete/dist/accessible-autocomplete.min.css";
-import businessTypesJSON from "./business-type.json";
+import businessTypesJSON from "./business-type-transformed.json";
 
 const Autocomplete = dynamic(import("accessible-autocomplete/react"));
 
-// function suggest(query, syncResults) {
-//   var results = [{ displayName: "hi" }];
-//   syncResults(results);
-// }
 const suggest = (query, returnResultsArray) => {
   const businessTypesArray = Object.values(
     JSON.parse(JSON.stringify(businessTypesJSON))
@@ -17,14 +13,24 @@ const suggest = (query, returnResultsArray) => {
     query
       ? businessTypesArray.filter(businessType => {
           const displayNameLC = businessType.displayName.toLowerCase();
-          return displayNameLC.includes(query);
+          const searchTermLC = businessType.searchTerm.toLowerCase();
+
+          const matching =
+            displayNameLC.includes(query.toLowerCase()) ||
+            searchTermLC.includes(query.toLowerCase());
+          return matching;
         })
       : []
   );
 };
 
 const suggestionFunction = suggestionToBeDisplayed => {
-  return suggestionToBeDisplayed.displayName + " anisha is the best";
+  return (
+    suggestionToBeDisplayed.displayName +
+    " (" +
+    suggestionToBeDisplayed.searchTerm +
+    ")"
+  );
 };
 
 const inputValueFunction = selectedSuggestion =>
@@ -36,7 +42,9 @@ const templates = {
 };
 
 const BusinessTypeLookup = props => (
-  <Autocomplete source={suggest} templates={templates} />
+  <div>
+    <Autocomplete source={suggest} templates={templates} />
+  </div>
 );
 
 export default BusinessTypeLookup;
