@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BusinessTypeLookup /> matches the previous snapshot 1`] = `
+<div>
+  <div
+    aria-expanded="false"
+    className="autocomplete__wrapper"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <div
+      aria-atomic="true"
+      aria-live="polite"
+      role="status"
+      style={
+        Object {
+          "border": "0",
+          "clip": "rect(0 0 0 0)",
+          "height": "1px",
+          "marginBottom": "-1px",
+          "marginRight": "-1px",
+          "overflow": "hidden",
+          "padding": "0",
+          "position": "absolute",
+          "whiteSpace": "nowrap",
+          "width": "1px",
+        }
+      }
+    >
+      No search results.
+      <span>
+        ,,
+      </span>
+    </div>
+    
+    <input
+      aria-activedescendant={false}
+      aria-owns="undefined__listbox"
+      autoComplete="off"
+      className="autocomplete__input autocomplete__input--default"
+      id={undefined}
+      name="input-autocomplete"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      required={false}
+      role="textbox"
+      type="text"
+      value=""
+    />
+    <ul
+      className="autocomplete__menu autocomplete__menu--inline autocomplete__menu--hidden"
+      id="undefined__listbox"
+      role="listbox"
+    />
+  </div>
+</div>
+`;
