@@ -13,6 +13,29 @@ const suggest = (query, returnResultsArray) => {
   let searchTermMatchArray;
   let resultsArray;
 
+  const checkForMatch = (displayNameOrSearchTerm, query) => {
+    const displayNameOrSearchTermArray = displayNameOrSearchTerm
+      .toLowerCase()
+      .split(" ")
+      .filter(word => word !== "");
+    const queryArray = query
+      .toLowerCase()
+      .split(" ")
+      .filter(word => word !== "");
+
+    let matching = true;
+
+    queryArray.forEach(word => {
+      if (matching === true) {
+        matching =
+          displayNameOrSearchTermArray.findIndex(entry =>
+            entry.startsWith(word)
+          ) !== -1;
+      }
+    });
+    return matching;
+  };
+
   if (query) {
     displayNameMatchArray = businessTypesArray
       .filter(
@@ -21,18 +44,14 @@ const suggest = (query, returnResultsArray) => {
             .map(mapObj => mapObj["displayName"])
             .indexOf(obj["displayName"]) === pos
       )
-      .filter(entry => {
-        const displayNameLC = entry.displayName.toLowerCase();
-        return displayNameLC.includes(query.toLowerCase());
-      })
+      .filter(entry => checkForMatch(entry.displayName, query))
       .map(entry => {
         return { displayName: entry.displayName, searchTerm: undefined };
       });
 
-    searchTermMatchArray = businessTypesArray.filter(entry => {
-      const searchTermLC = entry.searchTerm.toLowerCase();
-      return searchTermLC.includes(query.toLowerCase());
-    });
+    searchTermMatchArray = businessTypesArray.filter(entry =>
+      checkForMatch(entry.searchTerm, query)
+    );
 
     resultsArray = displayNameMatchArray.concat(searchTermMatchArray);
   } else {
@@ -46,7 +65,9 @@ const suggestionFunction = suggestionToBeDisplayed => {
   return (
     suggestionToBeDisplayed.displayName +
     (suggestionToBeDisplayed.searchTerm
-      ? ` (${suggestionToBeDisplayed.searchTerm})`
+      ? ` <span style="color: #6f777b">(${
+          suggestionToBeDisplayed.searchTerm
+        })</span>`
       : "")
   );
 };
