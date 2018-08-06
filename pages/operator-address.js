@@ -35,7 +35,7 @@ const OperatorAddress = props => (
               defaultValue: props.cumulativeAnswers.operator_postcode_find,
               autoComplete: "postal-code"
             }}
-            id="operator_postcode_find"
+            id="operatorPostcodeFindComponent"
             meta={{
               touched: true,
               error: props.validatorErrors.operator_postcode_find

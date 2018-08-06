@@ -45,7 +45,7 @@ describe("<OperatorAddress />", () => {
         />
       );
       const operatorPostcode = wrapper.find(
-        "InputField#operator_postcode_find"
+        "InputField#operatorPostcodeFindComponent"
       );
       expect(operatorPostcode.length).toBe(1);
     });
@@ -62,7 +62,7 @@ describe("<OperatorAddress />", () => {
         />
       );
       const operatorPostcode = wrapper.find(
-        "InputField#operator_postcode_find"
+        "InputField#operatorPostcodeFindComponent"
       );
       expect(operatorPostcode.props().meta.error).toBe("test error");
     });
@@ -79,7 +79,7 @@ describe("<OperatorAddress />", () => {
         />
       );
       const operatorPostcode = wrapper.find(
-        "InputField#operator_postcode_find"
+        "InputField#operatorPostcodeFindComponent"
       );
       expect(operatorPostcode.props().input.defaultValue).toBe("default");
     });

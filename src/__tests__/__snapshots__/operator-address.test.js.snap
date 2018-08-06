@@ -846,7 +846,7 @@ exports[`<OperatorAddress /> matches the previous snapshot 1`] = `
               >
                 <label
                   className="emotion-30"
-                  id="operator_postcode_find"
+                  id="operatorPostcodeFindComponent"
                 >
                   <span
                     className="emotion-28"
